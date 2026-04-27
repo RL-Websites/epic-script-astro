@@ -1,0 +1,45 @@
+@use "../base/variables" as *;
+
+.list {
+	&__item {
+		display: flex;
+		align-items: center;
+		color: white;
+		font-size: $fs-18;
+
+		&__icon {
+			background-color: $primary;
+			width: 20px;
+			height: 20px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 10px;
+			color: $primary;
+			border-radius: 20px;
+			margin-right: 12px;
+		}
+
+		&__alt {
+			list-style: none;
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			font-size: $fs-18;
+			line-height: 1.4;
+
+			&-icon {
+				flex-shrink: 0;
+				width: 20px;
+				height: 20px;
+				font-size: 8px;
+				line-height: 1;
+				background-color: $primary;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}

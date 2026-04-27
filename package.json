@@ -1,0 +1,23 @@
+{
+	"name": "ze-peptides-astro",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "npm-run-all --parallel astro:dev watch",
+		"astro:dev": "astro dev --port 1080 --host --watch",
+		"watch": "sass --watch public/Themes/Thrivewellrx.Theme.ZePeptides/assets/scss/styles.scss:public/Themes/Thrivewellrx.Theme.ZePeptides/assets/css/style.css",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.3",
+		"sass": "^1.85.1"
+	},
+	"devDependencies": {
+		"astro": "^5.5.2",
+		"postcss-purgecss": "^5.0.0",
+		"npm-run-all": "^4.1.5"
+	}
+}

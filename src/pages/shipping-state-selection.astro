@@ -1,0 +1,236 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper">
+			<!--===|| Shipping State Start-->
+			<section class="assessment shipping__state">
+				<div class="container">
+					<h1
+						class="section__title fs-lg-56 text-center"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
+						<span>What Is Your State Of </span>
+						<br />
+						<span class="text-gold-gradient-1">Residence?</span>
+					</h1>
+					<div
+						class="assessment__form"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
+						<div class="state-btn">
+							<div class="zepeptides-search max-w-full">
+								<input
+									type="text"
+									class="zepeptides-search__input"
+									placeholder="Search State"
+								/>
+								<div class="zepeptides-search__icon">
+									<i class="icon-search"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-1"
+								type="radio"
+								name="state"
+								value="stateid"
+								data-toggle="modal"
+								data-target="#confirm"
+							/>
+							<label class="state-btn__label" for="state-1"
+								>Alabama
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-2"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-2"
+								>California
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-3"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-3"
+								>Delaware
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-4"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-4"
+								>Florida
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-5"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-5"
+								>Georgia
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-6"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-6"
+								>Hawaii
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-7"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-7"
+								>Idaho
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-8"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-8"
+								>New Hampshire
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+						<div class="state-btn">
+							<input
+								class="state-btn__input"
+								id="state-9"
+								type="radio"
+								name="state"
+								value="stateid"
+							/>
+							<label class="state-btn__label" for="state-9"
+								>New Hampshire
+								<span class="state-btn__tick"><i class="icon-tick"></i></span>
+							</label>
+						</div>
+					</div>
+
+					<!-- Assessment buttons start -->
+					<div
+						class="assessment__buttons assessment__buttons--wrapper-alt assessment__buttons--wrapper-alt mx-auto mt-20"
+						data-aos="flip-left"
+						data-aos-duration="1000"
+						data-aos-once="true"
+					>
+						<button class="theme-btn theme-btn-size-lg theme-btn__primary w-mob"
+							>Go Back</button
+						>
+					</div>
+				</div>
+			</section>
+			<!--===|| Shipping State Start-->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+
+	<Footer />
+</Layout>
+
+<!-- Confirm Modal Start -->
+<div
+	id="confirm"
+	class="modal fade confirm-modal"
+	tabindex="-1"
+	role="dialog"
+	data-aos="fade-up"
+	data-aos-duration="1000"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+			<div class="modal-body">
+				<div class="modal__icon">
+					<i class="icon-alert"></i>
+				</div>
+
+				<div class="modal__text">
+					<p>Confirm Your State Selection!</p>
+				</div>
+
+				<div class="modal__title">
+					<p
+						>You selected <span class="fw-700">California</span> as your state.
+						Are you sure you want to proceed?</p
+					>
+				</div>
+
+				<div class="modal__actions">
+					<button
+						class="modal__action modal__action--outline"
+						type="button"
+						data-dismiss="modal"
+					>
+						No
+					</button>
+					<button class="modal__action modal__action--primary" type="button">
+						Yes
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Confirm Modal End -->

@@ -1,0 +1,2005 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import OrderTable from "../components/OrderTable.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page page__alt">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| My Order Section Start ||== -->
+			<section class="my-order">
+				<div class="container">
+					<h2 class="cart-hero__heading text-left">
+						<span class="text-primary-grad-1 fw-700 fs-md-70">My Order</span>
+					</h2>
+
+					<div
+						class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
+					>
+						<div class="card-basic__body">
+							<div class="list-table">
+								<div class="table-responsive">
+									<table class="table order-list">
+										<thead>
+											<tr>
+												<th>Order ID</th>
+												<th>Date</th>
+												<th>Medication</th>
+												<th>Status</th>
+												<th>Payment Status</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>
+													<a
+														class="text-primary fw-500"
+														type="button"
+														data-bs-toggle="offcanvas"
+														data-bs-target="#offcanvasRight"
+														aria-controls="offcanvasRight"
+													>
+														#nx20250400010
+													</a>
+												</td>
+												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
+												<td>
+													2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)
+													<!-- <span
+														class="status-pill status-pill--primary d-inline-flex align-items-center gap-1"
+													>
+														<i class="icon-plus-circle"></i>
+														<span>R</span>
+													</span> -->
+												</td>
+												<td>
+													<a
+														href="#"
+														class="status-pill status-pill--outline d-flex align-items-center gap-2"
+													>
+														<button
+															data-bs-toggle="modal"
+															data-bs-target="#prescriptionModal"
+															class="bg-transparent border-0 p-0"
+														>
+															<span
+																class="text-decoration-underline text-primary"
+																>View All Status
+															</span>
+														</button>
+
+														<i class="icon-refresh"></i>
+													</a>
+												</td>
+												<td>
+													<button
+														class="status-pill status-pill--submitted d-flex align-items-center gap-2"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+														class="bg-transparent border-0 p-0"
+													>
+														<span class="fw-400">Paid</span>
+													</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
+												<td>
+													2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)
+													<button
+														class="status-pill status-pill--primary-light mb-0 text-dark border-0"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+													>
+														<span class="fw-500">+2</span>
+													</button>
+												</td>
+												<td>
+													<div class="d-flex align-items-center gap-2">
+														<button
+															class="text-primary text-decoration-underline bg-transparent border-0"
+															>P1</button
+														>
+														<button
+															class="text-primary text-decoration-underline bg-transparent border-0"
+															>P2</button
+														>
+														<button
+															class="text-primary text-decoration-underline bg-transparent border-0"
+															>S</button
+														>
+													</div>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="theme-btn theme-btn__icon-only statusTooltipBtn"
+														title="
+																<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Received:</span>
+																			<span class='value'>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Processing:</span>
+																			<span class='value'>Semaglutide</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Shipped:</span>
+																			<span class='value'>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+															"
+													>
+														<i class="icon-money text-primary fs-24 fw-500"></i>
+													</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td class="list-table__time">12/28/2024 03:37:02 PM</td>
+												<td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td>
+												<td>
+													<span class="status-pill status-pill--warning">
+														Processing
+													</span>
+												</td>
+												<td>
+													<button
+														class="status-pill status-pill--submitted d-flex align-items-center gap-2"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+														class="bg-transparent border-0 p-0"
+													>
+														<span class="fw-400">Paid</span>
+													</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td>12/28/2024</td>
+												<td>Kyzetrex</td>
+												<td>
+													<span class="status-pill status-pill--danger">
+														Declined
+													</span>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="theme-btn theme-btn__icon-only statusTooltipBtn"
+														title="
+																<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Received:</span>
+																			<span class='value'>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Processing:</span>
+																			<span class='value'>Semaglutide</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Shipped:</span>
+																			<span class='value'>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+															"
+													>
+														<i class="icon-money text-primary fs-24 fw-500"></i>
+													</button></td
+												>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td>12/28/2024</td>
+												<td>Kyzetrex</td>
+												<td>
+													<span class="status-pill status-pill--success">
+														Delivered
+													</span>
+												</td>
+												<td>
+													<button
+														class="status-pill status-pill--submitted d-flex align-items-center gap-2"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+														class="bg-transparent border-0 p-0"
+													>
+														<span class="fw-400">Paid</span>
+													</button></td
+												>
+											</tr>
+
+											<tr>
+												<td>
+													<a class="text-primary fw-500" href="">
+														#nx20250400010
+													</a>
+												</td>
+												<td>12/28/2024</td>
+												<td
+													>Kyzetrex <button
+														class="status-pill status-pill--primary-light mb-0 text-dark border-0"
+														title="
+																<div class='status-tooltip p-12'>
+																	<div class='text-left'>
+																		GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution
+																	</div>
+																	
+																</div>
+															"
+													>
+														<span class="fw-500">+4</span>
+													</button></td
+												>
+
+												<td>
+													<span class="status-pill status-pill--pending"
+														>Shipped</span
+													>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="theme-btn theme-btn__icon-only statusTooltipBtn"
+														title="
+																<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Received:</span>
+																			<span class='value'>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Processing:</span>
+																			<span class='value'>Semaglutide</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='text-blue-14 fs-12 d-block'>Shipped:</span>
+																			<span class='value'>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+															"
+													>
+														<i class="icon-money text-primary fs-24 fw-500"></i>
+													</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30 border-0 rounded-0"
+					>
+						<div class="card-basic__body">
+							<OrderTable />
+							<OrderTable />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| My Order Section End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+</Layout>
+
+<Footer />
+
+<!--OffCanvas UI Start -->
+<div class="faq faq__main">
+	<div
+		class="offcanvas offcanvas-end show"
+		tabindex="-1"
+		id="offcanvasRight"
+		aria-labelledby="offcanvasRightLabel"
+	>
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasRightLabel"
+				>#DV000832 Order Status</h5
+			>
+
+			<button
+				type="button"
+				class="btn btn-outline border-0"
+				data-bs-dismiss="offcanvas"
+				aria-label="Close"
+			>
+				<i class="icon-cross_filled btn-close-icon"></i>
+			</button>
+		</div>
+		<div class="offcanvas-body">
+			<div
+				class="offcanvas-body__wrapper"
+				id="accordion"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-once="false"
+			>
+				<!-- Panel 1: Fill -->
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
+					<div
+						class="panel-heading faq__md__heading"
+						role="button"
+						id="headingOne"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseOne"
+						aria-expanded="true"
+						aria-controls="collapseOne"
+					>
+						<p
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: Fill</span>
+							<span class="status-pill status-pill--active fs-12">
+								Active
+							</span>
+						</p>
+
+						<div class="faq__items__top">
+							<div class="custom-table">
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Order Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--pending fs-12">
+											Waiting for Doctor
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Payment Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--submitted fs-12">
+											Success
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Est. Bill Amount</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Product Price</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Lab Report</p>
+									</div>
+									<div class="custom-table__data">
+										<a class="text-primary fw-500" type="button">
+											View & Upload Lab (2)
+										</a>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Action</p>
+									</div>
+									<div class="custom-table__data"> -- </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Period</p>
+									</div>
+									<div class="custom-table__data">
+										29 Mar, 2026 - 03 Apr, 2026
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="collapseOne"
+						class="panel-collapse collapse show"
+						data-bs-parent=".offcanvas-body__wrapper"
+						aria-labelledby="headingOne"
+					>
+						<div class="faq__lg__body pb-0 mt-0">
+							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
+								<div class="custom-table__alt d-md-flex d-none">
+									<div class="list-table">
+										<div class="table-responsive">
+											<table class="table order-list">
+												<thead>
+													<tr>
+														<th>Medication</th>
+														<th>Strength</th>
+														<th>Direction</th>
+														<th>Qty</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td
+															>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML)
+															1 Vial</td
+														>
+														<td>5</td>
+														<td>Inject 1 mL intramuscularly once weekly</td>
+														<td class="text-nowrap">1 vial</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>ESTRADIOL (0.125 MG/ML-10 MG/ML)</td>
+														<td>N/A</td>
+														<td
+															>Apply a thin layer to the prescribed area once
+															daily or as directed. For external use only. Wash
+															hands after application. Do not exceed prescribed
+															dose</td
+														>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</td>
+														<td>N/A</td>
+														<td>Take 1 capsule by mouth once daily</td>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Panel 2: 1st Follow-up -->
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
+					<div
+						class="panel-heading faq__md__heading collapsed"
+						role="button"
+						id="headingTwo"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseTwo"
+						aria-expanded="false"
+						aria-controls="collapseTwo"
+					>
+						<p
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: 1st Follow-up</span>
+						</p>
+
+						<div class="faq__items__top">
+							<div class="custom-table">
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Order Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--pending fs-12">
+											Refill Pending
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Payment Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class=""> Not Initiated </span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Est. Bill Amount</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Product Price</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Lab Report</p>
+									</div>
+									<div class="custom-table__data"> - </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Action</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--success fs-12">
+											Refill Requested
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Period</p>
+									</div>
+									<div class="custom-table__data">
+										29 Mar, 2026 - 03 Apr, 2026
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="collapseTwo"
+						class="panel-collapse collapse"
+						data-bs-parent=".offcanvas-body__wrapper"
+						aria-labelledby="headingTwo"
+					>
+						<div class="faq__lg__body pb-0 mt-0">
+							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
+								<div class="custom-table__alt d-md-flex d-none">
+									<div class="list-table">
+										<div class="table-responsive">
+											<table class="table order-list">
+												<thead>
+													<tr>
+														<th>Medication</th>
+														<th>Strength</th>
+														<th>Direction</th>
+														<th>Qty</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td
+															>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML)
+															1 Vial</td
+														>
+														<td>5</td>
+														<td>Inject 1 mL intramuscularly once weekly</td>
+														<td class="text-nowrap">1 vial</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>ESTRADIOL (0.125 MG/ML-10 MG/ML)</td>
+														<td>N/A</td>
+														<td
+															>Apply a thin layer to the prescribed area once
+															daily or as directed. For external use only. Wash
+															hands after application. Do not exceed prescribed
+															dose</td
+														>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</td>
+														<td>N/A</td>
+														<td>Take 1 capsule by mouth once daily</td>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Panel 3: 2nd Follow-up -->
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
+					<div
+						class="panel-heading faq__md__heading collapsed"
+						id="headingThree"
+						role="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseThree"
+						aria-expanded="false"
+						aria-controls="collapseThree"
+					>
+						<p
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: 2nd Follow-up</span>
+						</p>
+
+						<div class="faq__items__top">
+							<div class="custom-table">
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Order Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--pending fs-12">
+											Refill Pending
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Payment Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class=""> Not Initiated </span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Est. Bill Amount</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Product Price</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Lab Report</p>
+									</div>
+									<div class="custom-table__data"> - </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Action</p>
+									</div>
+									<div class="custom-table__data">
+										<a class="text-primary fw-500" type="button">
+											Request Refill
+										</a>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Period</p>
+									</div>
+									<div class="custom-table__data">
+										29 Mar, 2026 - 03 Apr, 2026
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="collapseThree"
+						class="panel-collapse collapse"
+						data-bs-parent=".offcanvas-body__wrapper"
+						aria-labelledby="headingThree"
+					>
+						<div class="faq__lg__body pb-0 mt-0">
+							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
+								<div class="custom-table__alt d-md-flex d-none">
+									<div class="list-table">
+										<div class="table-responsive">
+											<table class="table order-list">
+												<thead>
+													<tr>
+														<th>Medication</th>
+														<th>Strength</th>
+														<th>Direction</th>
+														<th>Qty</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td
+															>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML)
+															1 Vial</td
+														>
+														<td>5</td>
+														<td>Inject 1 mL intramuscularly once weekly</td>
+														<td class="text-nowrap">1 vial</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>ESTRADIOL (0.125 MG/ML-10 MG/ML)</td>
+														<td>N/A</td>
+														<td
+															>Apply a thin layer to the prescribed area once
+															daily or as directed. For external use only. Wash
+															hands after application. Do not exceed prescribed
+															dose</td
+														>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</td>
+														<td>N/A</td>
+														<td>Take 1 capsule by mouth once daily</td>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Panel 4: 3rd Follow-up -->
+				<div class="panel panel-default faq__item pt-0 pb-0 border-0">
+					<div
+						class="panel-heading faq__md__heading collapsed"
+						role="button"
+						id="headingFour"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseFour"
+						aria-expanded="false"
+						aria-controls="collapseFour"
+					>
+						<p
+							class="custom-accordion-header justify-content-start align-items-center gap-2"
+						>
+							<span>Order Type: 3rd Follow-up</span>
+						</p>
+
+						<div class="faq__items__top">
+							<div class="custom-table">
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Order Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class="status-pill status-pill--pending fs-12">
+											Refill Pending
+										</span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Payment Status</p>
+									</div>
+									<div class="custom-table__data">
+										<span class=""> Not Initiated </span>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Est. Bill Amount</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Product Price</p>
+									</div>
+									<div class="custom-table__data"> $35 </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Lab Report</p>
+									</div>
+									<div class="custom-table__data"> - </div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Action</p>
+									</div>
+									<div class="custom-table__data">
+										<a class="text-primary fw-500" type="button">
+											Request Refill
+										</a>
+									</div>
+								</div>
+								<div class="custom-table__item">
+									<div class="custom-table__header">
+										<p class="custom-table__header__text">Period</p>
+									</div>
+									<div class="custom-table__data">
+										29 Mar, 2026 - 03 Apr, 2026
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="collapseFour"
+						class="panel-collapse collapse"
+						data-bs-parent=".offcanvas-body__wrapper"
+						aria-labelledby="headingFour"
+					>
+						<div class="faq__lg__body pb-0 mt-0">
+							<div class="faq__items__bottom">
+								<!-- Desktop medication table -->
+								<div class="custom-table__alt d-md-flex d-none">
+									<div class="list-table">
+										<div class="table-responsive">
+											<table class="table order-list">
+												<thead>
+													<tr>
+														<th>Medication</th>
+														<th>Strength</th>
+														<th>Direction</th>
+														<th>Qty</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td
+															>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML)
+															1 Vial</td
+														>
+														<td>5</td>
+														<td>Inject 1 mL intramuscularly once weekly</td>
+														<td class="text-nowrap">1 vial</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>ESTRADIOL (0.125 MG/ML-10 MG/ML)</td>
+														<td>N/A</td>
+														<td
+															>Apply a thin layer to the prescribed area once
+															daily or as directed. For external use only. Wash
+															hands after application. Do not exceed prescribed
+															dose</td
+														>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</td>
+														<td>N/A</td>
+														<td>Take 1 capsule by mouth once daily</td>
+														<td class="text-nowrap">1</td>
+														<td>
+															<span
+																class="status-pill status-pill--success fs-12"
+															>
+																Waiting for Doctor
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mobile medication rows (fixed) -->
+								<div class="d-md-none d-block">
+									<!-- Medication row 1 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>TESTOSTERONE CYPIONATE/DHEA GRAPESEED OIL (1 ML) 1 Vial</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">5</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Inject 1 mL intramuscularly once weekly</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1 vial</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 2 -->
+									<div class="custom-table border-bottom-mobile">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>ESTRADIOL (0.125 MG/ML-10 MG/ML)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Apply a thin layer to the prescribed area once daily or
+												as directed. For external use only. Wash hands after
+												application. Do not exceed prescribed dose</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+									<!-- Medication row 3 -->
+									<div class="custom-table">
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Medication</p>
+											</div>
+											<div class="custom-table__data"
+												>PROGESTERONE (CLEAR) MCC (25 MG-300 MG)</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Strength</p>
+											</div>
+											<div class="custom-table__data">N/A</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Direction</p>
+											</div>
+											<div class="custom-table__data"
+												>Take 1 capsule by mouth once daily</div
+											>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Qty</p>
+											</div>
+											<div class="custom-table__data">1</div>
+										</div>
+										<div class="custom-table__item">
+											<div class="custom-table__header">
+												<p class="custom-table__header__text">Status</p>
+											</div>
+											<div class="custom-table__data">
+												<span class="status-pill status-pill--success fs-12"
+													>Waiting for Doctor</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--OffCanvas UI End -->
+
+<div
+	class="modal p-0 fade prescription-modal"
+	id="prescriptionModal"
+	tabindex="-1"
+	aria-labelledby="prescriptionModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-header-title offcanvas-title w-100 text-start">
+					<p>Prescription</p>
+				</div>
+				<div class="btn-modal-close">
+					<button
+						type="button"
+						class="btn btn-outline border-0"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="icon-cross_filled btn-close-icon"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="modal-body p-3">
+				<!-- Prescriber Details -->
+				<div class="d-flex flex-column gap-3">
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
+						<div class="card-basic__header">
+							<p class="card-basic__title">Prescriber Details:</p>
+						</div>
+						<div class="card-basic__body card-basic--no-shadow">
+							<div class="medicine-info">
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Name:</p>
+									<p class="medicine-info__text">Mike Scott</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">DEA:</p>
+									<p class="medicine-info__text">N/A</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">NPI:</p>
+									<p class="medicine-info__text">N/A</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Patient Details -->
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="100"
+					>
+						<div class="card-basic__header">
+							<p class="card-basic__title">Patient Details:</p>
+						</div>
+						<div class="card-basic__body">
+							<div class="medicine-info">
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Name:</p>
+									<p class="medicine-info__text">Dorian Higgins</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Gender:</p>
+									<p class="medicine-info__text">Male</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Cell Phone:</p>
+									<p class="medicine-info__text">(929) 782-9239</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Email:</p>
+									<p class="medicine-info__text"
+										>rl_dorian.higgins@yopmail.com</p
+									>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Address:</p>
+									<p class="medicine-info__text"
+										>23 Farm to Market 2296, 8, Huntsville, Texas, 77340</p
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Prescription Details -->
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
+						<div class="card-basic__header">
+							<p class="card-basic__title">Prescription Details:</p>
+						</div>
+						<div class="card-basic__body">
+							<div class="medicine-info">
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Package Name:</p>
+									<p class="medicine-info__text">MI Package</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Preferred Pharmacy:</p>
+									<p class="medicine-info__text">Male</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Sent Pharmacy:</p>
+									<p class="medicine-info__text">(929) 782-9239</p>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">RX Number:</p>
+									<p class="medicine-info__text"
+										>rl_dorian.higgins@yopmail.com</p
+									>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Allergy Info:</p>
+									<p class="medicine-info__text"
+										>23 Farm to Market 2296, 8, Huntsville, Texas, 77340</p
+									>
+								</div>
+								<div class="medicine-info__item">
+									<p class="medicine-info__label">Created Date:</p>
+									<p class="medicine-info__text">03 March, 2026 10:03 AM</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Document Information -->
+					<div
+						class="card-basic card-basic--no-shadow"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+					>
+						<div class="card-basic__header">
+							<p class="card-basic__title">Document Information:</p>
+						</div>
+						<div class="card-basic__body">
+							<div class="document-info d-flex flex-row gap-4">
+								<div
+									class="document-info__item d-flex flex-column align-items-start"
+								>
+									<p class="document-info__label">Intake Form:</p>
+									<button type="button" class="view-button text-primary fw-500"
+										>View</button
+									>
+								</div>
+								<div
+									class="document-info__item d-flex flex-column align-items-start"
+								>
+									<p class="document-info__label">Driving License:</p>
+									<button type="button" class="view-button text-primary fw-500"
+										>View</button
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TRT Cycles -->
+					<div
+						class="mt-3"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="400"
+					>
+						<p class="card-basic__title mb-3">TRT Cycles</p>
+
+						<div class="card-basic__body">
+							<!-- Cycle 1 -->
+							<div class="card-basic mb-3 bg-white">
+								<div
+									class="card-basic__header d-flex flex-column align-items-start gap-1 border-0"
+								>
+									<div class="d-flex align-items-center gap-2">
+										<p class="card-basic__title mb-0">Cycle#1</p>
+										<span
+											class="status-pill status-pill--active fs-16 fw-700 text-black"
+											>FILL</span
+										>
+									</div>
+									<div
+										class="d-flex justify-content-start w-100 flex-md-row flex-column align-items-md-start align-items-start gap-128"
+									>
+										<p class="medicine-info__text mb-0"
+											>Period: 03 Mar, 2026 – 03 Apr, 2026</p
+										>
+										<div class="d-flex align-items-center gap-2">
+											<span class="fw-700 fs-16">Lab Reports:</span>
+											<a href="#" class="text-primary fw-500">Upload Report</a>
+											<i class="icon-upload text-primary"></i>
+											<div class="vr mx-1"></div>
+											<i class="icon-download-04 text-primary"></i>
+										</div>
+									</div>
+								</div>
+								<div class="card-basic__body p-0">
+									<!-- Desktop table -->
+									<div class="d-md-block d-none">
+										<div class="list-table">
+											<div class="table-responsive">
+												<table class="table order-list mb-0">
+													<thead>
+														<tr>
+															<th>Medication</th>
+															<th>Strength</th>
+															<th>Direction</th>
+															<th>Status</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Epic Chew</td>
+															<td>5</td>
+															<td
+																>1 tablet (5 mg) by mouth once daily as needed,
+																30–60 minutes before activity</td
+															>
+															<td
+																><span
+																	class="status-pill status-pill--pending fs-12 fw-700"
+																	>Waiting for Doctor</span
+																></td
+															>
+														</tr>
+														<tr>
+															<td>3 Month Tirzepatide</td>
+															<td>15</td>
+															<td>Inject 0.5 mL subcutaneously once weekly</td>
+															<td
+																><span
+																	class="status-pill status-pill--pending fs-12 fw-700"
+																	>Waiting for Doctor</span
+																></td
+															>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- Mobile stacked -->
+									<div class="d-md-none d-block px-3 py-md-3">
+										<div class="custom-table border-bottom-mobile">
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Medication</p
+													></div
+												>
+												<div class="custom-table__data">Epic Chew</div>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Strength</p
+													></div
+												>
+												<div class="custom-table__data">5</div>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Direction</p
+													></div
+												>
+												<div class="custom-table__data"
+													>1 tablet (5 mg) by mouth once daily as needed, 30–60
+													minutes before activity</div
+												>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Status</p></div
+												>
+												<div class="custom-table__data"
+													><span
+														class="status-pill status-pill--pending fs-12 fw-700"
+														>Waiting for Doctor</span
+													></div
+												>
+											</div>
+										</div>
+										<div class="custom-table border-bottom-mobile">
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Medication</p
+													></div
+												>
+												<div class="custom-table__data">3 Month Tirzepatide</div
+												>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Strength</p
+													></div
+												>
+												<div class="custom-table__data">15</div>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Direction</p
+													></div
+												>
+												<div class="custom-table__data"
+													>Inject 0.5 mL subcutaneously once weekly</div
+												>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Status</p></div
+												>
+												<div class="custom-table__data"
+													><span
+														class="status-pill status-pill--pending fs-12 fw-700"
+														>Waiting for Doctor</span
+													></div
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cycle 2 -->
+							<div class="card-basic mb-3 bg-white">
+								<div
+									class="card-basic__header d-flex flex-column align-items-start gap-1 border-0"
+								>
+									<div class="d-flex align-items-center gap-2">
+										<p class="card-basic__title mb-0">Cycle#2</p>
+										<span
+											class="status-pill status-pill--submitted fs-16 fw-700 text-black"
+											>REFILL</span
+										>
+									</div>
+									<p class="medicine-info__text mb-0"
+										>Period: 03 Mar, 2026 – 03 Apr, 2026</p
+									>
+								</div>
+								<div class="card-basic__body p-0">
+									<!-- Desktop table -->
+									<div class="d-md-block d-none">
+										<div class="list-table">
+											<div class="table-responsive">
+												<table class="table order-list mb-0">
+													<thead>
+														<tr>
+															<th>Medication</th>
+															<th>Strength</th>
+															<th>Direction</th>
+															<th>Status</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Epic Chew</td>
+															<td>5</td>
+															<td
+																>1 tablet (5 mg) by mouth once daily as needed,
+																30–60 minutes before activity</td
+															>
+															<td
+																><span
+																	class="status-pill status-pill--pending fs-12 fw-700"
+																	>Waiting for Doctor</span
+																></td
+															>
+														</tr>
+														<tr>
+															<td>3 Month Tirzepatide</td>
+															<td>15</td>
+															<td>Inject 0.5 mL subcutaneously once weekly</td>
+															<td
+																><span
+																	class="status-pill status-pill--pending fs-12 fw-700"
+																	>Waiting for Doctor</span
+																></td
+															>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- Mobile stacked -->
+									<div class="d-md-none d-block px-3 py-3">
+										<div class="custom-table border-bottom-mobile">
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Medication</p
+													></div
+												>
+												<div class="custom-table__data">Epic Chew</div>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Strength</p
+													></div
+												>
+												<div class="custom-table__data">5</div>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Direction</p
+													></div
+												>
+												<div class="custom-table__data"
+													>1 tablet (5 mg) by mouth once daily as needed, 30–60
+													minutes before activity</div
+												>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Status</p></div
+												>
+												<div class="custom-table__data"
+													><span
+														class="status-pill status-pill--pending fs-12 fw-700"
+														>Waiting for Doctor</span
+													></div
+												>
+											</div>
+										</div>
+										<div class="custom-table">
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Medication</p
+													></div
+												>
+												<div class="custom-table__data">3 Month Tirzepatide</div
+												>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Strength</p
+													></div
+												>
+												<div class="custom-table__data">15</div>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Direction</p
+													></div
+												>
+												<div class="custom-table__data"
+													>Inject 0.5 mL subcutaneously once weekly</div
+												>
+											</div>
+											<div class="custom-table__item">
+												<div class="custom-table__header"
+													><p class="custom-table__header__text">Status</p></div
+												>
+												<div class="custom-table__data"
+													><span
+														class="status-pill status-pill--pending fs-12 fw-700"
+														>Waiting for Doctor</span
+													></div
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Modal UI End -->
+</div>

@@ -1,0 +1,111 @@
+@media only screen and (max-width: 767px) {
+	.assessment {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&__title {
+			font-size: 24px;
+
+			margin-bottom: 20px !important;
+		}
+
+		&__progress-bar {
+			height: 8px;
+			width: 100%;
+		}
+
+		.progress {
+			&::after {
+				width: 6px;
+				height: 6px;
+			}
+		}
+
+		&__question {
+			font-size: 26px;
+			line-height: 36px;
+			margin-bottom: 20px !important;
+		}
+
+		&__label {
+			font-size: 18px;
+		}
+
+		&__form {
+			margin-bottom: 30px !important;
+
+			&-container {
+				width: 100% !important;
+			}
+
+			&_radio {
+				width: 100%;
+
+				label {
+					width: 100%;
+				}
+			}
+
+			&__checkbox {
+				width: 60%;
+
+				label {
+					width: 100%;
+				}
+			}
+
+			.textarea__wrapper,
+			.measurement {
+				width: 100%;
+			}
+
+			.all-images {
+				flex-direction: column;
+				text-align: center;
+				gap: 10px;
+				margin-bottom: 30px;
+			}
+
+			.dropdown--assessment {
+				width: 100%;
+			}
+
+			.date-viewer {
+				padding: 6px 20px;
+				width: 100%;
+				gap: 40px;
+
+				span {
+					&:after {
+						margin-left: 40px;
+					}
+				}
+			}
+		}
+
+		&__condition {
+			&-tag {
+				width: 100%;
+			}
+		}
+
+		&__buttons {
+			gap: 20px;
+			width: 100%;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+
+			button {
+				padding: 12px;
+				flex-grow: 1;
+			}
+
+			.theme-btn {
+				min-height: 40px;
+				font-size: 18px;
+				border-radius: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question title start -->
+				<div class="assessment__question mt-40">
+					State that you are eligible to work, not for marketing purposes.
+				</div>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-50">
+					How much decline in your work performance have you noticed?
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-20">
+					<div class="measurement measurement__flex">
+						<div class="measurement-input">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="00"
+								aria-describedby="basic-addon2"
+							/>
+							<span class="unit">Hr</span>
+						</div>
+						<div class="measurement-input">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="00"
+								aria-describedby="basic-addon2"
+							/>
+							<span class="unit">Min</span>
+						</div>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

@@ -1,0 +1,152 @@
+@use "../base/variables" as *;
+
+.product-action {
+	&__cart {
+		&.input-group {
+			border: 2px solid $primary;
+			border-radius: 8px;
+			flex-wrap: nowrap;
+
+			.form-control {
+				width: 100%;
+				height: 36px;
+				border: 0;
+				box-shadow: none;
+				background-color: transparent;
+				color: $primary;
+				font-size: 18px;
+				font-weight: 500;
+				text-align: center;
+			}
+
+			.input-group-btn {
+				width: 40px;
+				height: 36px;
+				font-size: $fs-18;
+				line-height: 1;
+
+				.btn {
+					width: 100%;
+					padding: 0px 15px;
+					height: 100%;
+					background-color: transparent;
+					border: 0;
+					font-size: $fs-18;
+					color: $primary;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					box-shadow: none;
+
+					i {
+						font-size: $fs-20;
+					}
+
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
+
+			// .input-group-btn:first-child {
+			// 	.btn {
+			// 		border-right: 0px;
+			// 		border-top-left-radius: 6px;
+			// 		border-bottom-left-radius: 6px;
+			// 		outline: 0;
+			// 	}
+			// }
+
+			// .input-group-btn:last-child {
+			// 	.btn {
+			// 		border-left: 0px;
+			// 		border-top-right-radius: 6px;
+			// 		border-bottom-right-radius: 6px;
+			// 		outline: 0;
+			// 	}
+			// }
+		}
+		&--md {
+			&.input-group {
+				.form-control {
+					height: 47px;
+					margin-top: 9.5px !important;
+				}
+				.input-group-btn {
+					height: 47px;
+					width: 74px;
+				}
+			}
+		}
+		&--lg {
+			&.input-group {
+				.form-control {
+					height: 70px;
+				}
+				.input-group-btn {
+					height: 70px;
+					width: 74px;
+				}
+			}
+		}
+		&--primary {
+			&.input-group {
+				background-color: $primary;
+				.form-control {
+					display: inline-block;
+					width: 28px;
+					height: 28px;
+					min-width: 28px;
+					max-width: 28px;
+					font-size: 16px;
+					padding: 0px;
+					background-color: $white;
+					color: $black;
+					margin: 4px auto;
+					margin-left: auto !important;
+					box-sizing: border-box;
+					border-radius: 4px !important;
+				}
+				.input-group-btn {
+					.btn {
+						background-color: $primary;
+						color: $white;
+						&:hover,
+						&:focus {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 20px;
+
+		.theme-btn {
+			flex-grow: 1;
+			flex-basis: 0;
+			height: 47px;
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.product-action {
+		max-width: 450px;
+
+		&__cart {
+			display: flex;
+			justify-content: center;
+
+			.input-group {
+				margin: 0 auto;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

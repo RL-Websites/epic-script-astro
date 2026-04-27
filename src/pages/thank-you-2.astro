@@ -1,0 +1,64 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- <Header /> -->
+
+  <main class="page">
+    <section class="thank-you">
+      <div class="container">
+        <div class="">
+          <div class="d-flex justify-content-center mb-20">
+            <i class="icon-tick-outlined fs-70 text-primary-grad-1"></i>
+          </div>
+          <h1
+            class="hero__title text-center text-primary fs-48"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            Thank you
+          </h1>
+          <h3 class="text-center mt-10 text-gray-dark"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400">Intake Form Already Submitted</h3>
+          <p
+            class="text-center mt-30 text-gray-dark"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            Our records show that your intake form for this medication has already been submitted within the last 30 days.
+            </p>
+            <p
+            class="text-center mt-10 text-gray-dark"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            To ensure safety and compliance, we do not require a new intake form during this period.
+            </p>
+            <p
+            class="text-center mt-10 text-gray-dark"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            If you need to update your information or report any changes in your health, please contact our support team.
+            </p>
+
+            <div class="d-flex justify-content-center mt-40" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+               <button type="button" class="theme-btn theme-btn__primary fw-400">
+              Back to Home
+            </button>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- <Footer /> -->
+</Layout>

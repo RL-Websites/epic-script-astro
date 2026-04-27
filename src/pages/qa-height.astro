@@ -1,0 +1,54 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-50"> Your height? </div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form assessment__form--alt mt-10">
+					<div class="measurement mt-md-25 mt-15">
+						<div class="measurement-input">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="0"
+								aria-describedby="basic-addon2"
+							/>
+							<span class="unit">Feet</span>
+						</div>
+						<div class="measurement-input">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="0"
+								aria-describedby="basic-addon2"
+							/>
+							<span class="unit">Inch</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Single Assessment form end -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

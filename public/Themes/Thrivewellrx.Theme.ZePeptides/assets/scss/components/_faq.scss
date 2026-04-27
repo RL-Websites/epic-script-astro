@@ -1,0 +1,40 @@
+@use "../base/variables" as *;
+
+.faq {
+    &__wrapper {
+        max-width: 970px;
+        margin: 0 auto;
+    }
+
+    &__top {
+        // max-width: 520px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    &__lg {
+        &__body {
+            background-color: $white;
+            color: #353E4A;
+        }
+
+        &__heading p {
+
+            border: 0;
+            background-color: transparent !important;
+            color: #1D242D;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .faq {
+        &__item {
+            padding: 16px;
+        }
+
+    }
+
+
+}

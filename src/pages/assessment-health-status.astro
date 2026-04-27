@@ -1,0 +1,49 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question title start -->
+				<div class="assessment__question mt-40">
+					Please provide details about your confidence level at work to help us
+					understand your current health status.
+				</div>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form all-questions mt-md-30 mt-20">
+					<div class="single-question">
+						<label class="assessment__label mb-sm-20 mb-10">
+							How much decline in your work performance have you noticed?
+						</label>
+						<input type="text" class="form-control" placeholder="Write here" />
+					</div>
+					<div class="single-question">
+						<label class="assessment__label mb-sm-20 mb-10">
+							And when did it start?
+						</label>
+						<input type="text" class="form-control" placeholder="Write here" />
+					</div>
+				</div>
+				<!-- Assessment form end -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

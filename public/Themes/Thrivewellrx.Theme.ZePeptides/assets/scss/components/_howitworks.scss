@@ -1,0 +1,263 @@
+@use "../base/variables" as *;
+
+// Background decorations for How It Works section
+.how-works {
+	position: relative;
+	// Two background images: top and bottom
+	background-image: url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-it-works-top-bg.png"),
+		url("/Themes/Thrivewellrx.Theme.ZePeptides/assets/img/bg/how-it-works-bottom-bg.png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: top center, bottom center;
+	background-size: 1920px auto, 1920px auto; // tune sizes as needed
+	z-index: 0;
+
+	// Keep main content above decorative backgrounds
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.step-title {
+	font-family: "sfuidisplay";
+	font-weight: 700;
+	font-style: bold;
+	font-size: 30px;
+}
+
+.step-title.active-title {
+	color: $primary;
+	/* Replace with your brand color */
+}
+
+.mobile-step-title.active-title {
+	color: $primary;
+}
+
+
+
+.timeline-description {
+	font-family: "sfuidisplay", serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 160%;
+	width: 370px;
+	color: #525252;
+}
+
+// Desktop Timeline
+.timeline-desktop {
+	position: relative;
+
+	// Remove the single vertical line
+	// &::before {
+	//   content: '';
+	//   position: absolute;
+	//   left: 50%;
+	//   top: 4rem;
+	//   bottom: calc(100vh - 16rem);
+	//   width: 1px;
+	//   background-color: $gray-border;
+	//   transform: translateX(-50%);
+	// }
+}
+
+// Timeline Step
+.timeline-step {
+	position: relative;
+	margin-bottom: 115px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	// // Add connecting line AFTER each dot (except the last one)
+	// &:not(:last-child)::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 2rem; // Start from the dot (2rem is dot's top position)
+	// 	height: calc(100% - 2rem); // Full height minus dot's top position
+	// 	width: 1px;
+	// 	background-color: $gray-border;
+	// 	transform: translateX(-50%);
+	// 	z-index: 1;
+	// }
+
+	// Alternative: Add gap in the line
+	&:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50px; // Start below the dot (12px dot + some gap)
+		height: calc(100% + 70px);
+		width: 1px;
+		background-color: $gray-border;
+		transform: translateX(-50%);
+
+		z-index: 1;
+	}
+}
+
+// Center Dot - updated for better positioning
+.timeline-dot {
+	position: absolute;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+
+	width: 12px;
+	height: 12px;
+	background-color: $gray-border;
+	border-radius: 50%;
+	z-index: 10; // Make sure dot is above the line
+	transition: all 0.3s ease;
+
+	&.active {
+		background-color: $primary;
+		transform: translateX(-50%) scale(1.25);
+	}
+}
+
+// Step Number
+.step-number {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-size: 140px;
+	line-height: 100%;
+	// text-transform: uppercase;
+	color: $black;
+	line-height: 1;
+	transition: color 0.3s ease;
+	flex-shrink: 0;
+
+	&.purple {
+		color: $primary;
+	}
+}
+
+// Images
+.timeline-img {
+	width: 440px;
+	border-radius: 0.75rem;
+	overflow: hidden;
+
+	position: relative;
+
+	&::after {
+		content: attr(data-size);
+		position: absolute;
+		bottom: 8px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #5a67d8;
+		color: white;
+		padding: 4px 12px;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+
+	img {
+		width: 100%;
+		height: 328px;
+		object-fit: cover;
+		display: block;
+	}
+}
+
+// Mobile Timeline
+.mobile-timeline-step {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		left: 6px;
+		top: 30px;
+		transform: translateX(-50%);
+		width: 1px;
+		height: calc(100% - 30px);
+		background-color: $gray-border;
+		transition: background-color 0.3s ease;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+
+		.mobile-dot::after {
+			display: none;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+// Mobile Step Number
+.mobile-step-number {
+	font-family: "Bebas Neue", sans-serif;
+	font-size: $fs-80;
+	font-weight: bold;
+	color: $black;
+	line-height: 1;
+	transition: color 0.3s ease;
+	flex-shrink: 0;
+
+	&.purple {
+		color: $primary;
+	}
+}
+
+// Mobile Dot
+.mobile-dot {
+	width: 16px;
+	height: 16px;
+	background-color: $gray-border;
+	border-radius: 50%;
+	position: relative;
+	top: 6px;
+	transition: all 0.3s ease;
+
+	&.active {
+		background-color: $primary;
+	}
+
+	// Vertical connecting line
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 24px;
+	// 	transform: translateX(-50%);
+	// 	width: 1px;
+	// 	height: 230px;
+	// 	background-color: $gray-border;
+	// 	transition: background-color 0.3s ease;
+	// }
+}
+
+// Mobile Image
+.mobile-img {
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin-bottom: 0.75rem;
+
+	img {
+		width: 100%;
+		height: 128px;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 768px) {
+	.timeline-img {
+		width: 250px;
+		margin-bottom: 1.5rem;
+
+		img {
+			width: 100%;
+		}
+	}
+}

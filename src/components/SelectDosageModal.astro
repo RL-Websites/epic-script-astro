@@ -1,0 +1,94 @@
+<div id="doses" class="modal fade dose-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+			<div class="modal-body">
+				<div class="modal__text mt-0">
+					<p>Select Program</p>
+				</div>
+				<p class="text-blue-6 text-center mb-20">
+					You can select any 1 program from below list
+				</p>
+				<div class="dose-modal__cta mt-20">
+					<button
+						class="theme-btn theme-btn-size-lg theme-btn__secondary min-w-206 fw-400"
+						>1 Month Programs</button
+					>
+					<button
+						class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary min-w-206"
+						>3 Month Programs</button
+					>
+				</div>
+				<div class="modal__radios mt-20">
+					<div class="modal__radios-item">
+						<label class="dose-radio">
+							<span class="dose-radio__input">
+								<input name="dose" type="radio" />
+								<span></span>
+							</span>
+							<span
+								class="dose-radio__label"
+								data-bind="text: dose.Dose +'/$'+dose.Price">2.5mg/$50</span
+							>
+						</label>
+					</div>
+					<div class="modal__radios-item">
+						<label class="dose-radio">
+							<span class="dose-radio__input">
+								<input name="dose" type="radio" />
+								<span></span>
+							</span>
+							<span
+								class="dose-radio__label"
+								data-bind="text: dose.Dose +'/$'+dose.Price">2.5mg/$50</span
+							>
+						</label>
+					</div>
+					<div class="modal__radios-item">
+						<label class="dose-radio">
+							<span class="dose-radio__input">
+								<input name="dose" type="radio" />
+								<span></span>
+							</span>
+							<span
+								class="dose-radio__label"
+								data-bind="text: dose.Dose +'/$'+dose.Price">2.5mg/$350</span
+							>
+						</label>
+					</div>
+					<div class="modal__radios-item">
+						<label class="dose-radio">
+							<span class="dose-radio__input">
+								<input name="dose" type="radio" />
+								<span></span>
+							</span>
+							<span
+								class="dose-radio__label"
+								data-bind="text: dose.Dose +'/$'+dose.Price">2.5mg/$350</span
+							>
+						</label>
+					</div>
+				</div>
+
+				<div class="dose-modal__selection">
+					<p class="fs-14">You have selected - 0.25mg - $299 </p>
+				</div>
+				<div class="modal__actions">
+					<button
+						class="modal__action modal__action--outline"
+						data-dismiss="modal"
+						type="button"
+					>
+						Cancel
+					</button>
+					<button class="modal__action modal__action--primary" type="button">
+						Confirm
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

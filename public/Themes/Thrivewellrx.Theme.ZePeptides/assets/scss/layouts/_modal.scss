@@ -1,0 +1,667 @@
+@use "../base/variables" as *;
+
+.modal-open .modal {
+	overflow-y: hidden !important;
+}
+
+.modal {
+	overflow-y: hidden !important;
+
+
+
+	&-dialog {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		width: 1024px;
+		max-width: 96%;
+		margin-top: 0;
+
+
+	}
+
+	&-content {
+		width: 100%;
+		border-radius: 12px;
+		max-height: calc(100% - 30px) !important;
+		overflow-y: auto !important;
+		background: $background-1;
+		background-size: cover;
+		background-position: center;
+		border: 1px solid $primary-lightest;
+
+
+	}
+
+	&-header {
+		display: flex;
+		align-items: center;
+		border-bottom: 2px solid $primary-light;
+
+		&-title {
+			display: inline-block;
+			margin: auto;
+			font-size: 30px;
+			padding: 14px;
+
+			@media all and (max-width: 768px) {
+				font-size: 18px;
+				padding: 0px;
+			}
+		}
+
+		h2 {
+			font-size: $fs-30;
+		}
+	}
+
+	&-body {
+		padding: 60px;
+
+		@media all and (max-width: 767px) {
+			padding: 25px 15px 30px 15px;
+		}
+
+		&__alt {
+			padding: 20px 15px;
+		}
+
+		&__alt2 {
+			padding: 60px 40px;
+
+			@media all and (max-width: 767px) {
+				padding: 25px 15px 30px 15px;
+			}
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+
+		@media all and (max-width: 767px) {
+			width: 80px;
+			height: 80px;
+		}
+
+		i {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 90px;
+			background: $primary;
+
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			@media all and (max-width: 767px) {
+				font-size: 64px;
+			}
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 10px;
+
+		p {
+			text-align: center;
+			font-size: 28px;
+			line-height: 1.4;
+			font-weight: 600;
+			text-transform: capitalize;
+			color: $black;
+
+			@media all and (max-width: 767px) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+		}
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+		flex-direction: column;
+		gap: 15px;
+
+		p {
+			text-align: center;
+			font-size: $fs-16;
+			font-weight: 400;
+			color: $black;
+			margin-bottom: 0px;
+		}
+	}
+
+	&__logo {
+		max-width: 200px;
+
+		&__img {
+			max-width: 90px;
+		}
+	}
+
+	&__long-text {
+		font-size: $fs-16;
+		line-height: 1.6;
+		text-align: center;
+		color: $light;
+	}
+
+	&__highlight-text {
+		margin-top: 30px;
+		margin-bottom: 40px;
+		padding: 24px 40px;
+		background-color: rgba($primary, 0.8);
+		box-shadow: 0px 12px 40px 8px #5c5c5c0d;
+		border-radius: 12px;
+		font-size: $fs-16;
+		line-height: 1.2;
+		text-align: center;
+		color: white;
+	}
+
+	&__radios {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-wrap: wrap;
+		gap: 10px 10px;
+
+		&-item {
+			min-width: 30%;
+
+			@media all and (max-width: 540px) {
+				width: 45%;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		margin-top: 30px;
+	}
+
+	&__action {
+		border: 0;
+		display: inline-block;
+		width: 230px;
+		padding: 10px 24px;
+		border-radius: 12px;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 25px;
+		text-align: center;
+		border: 1px solid $secondary;
+		transition: all 0.2s ease-in-out, border 0.1s ease-in-out;
+
+		@media all and (max-width: 767px) {
+			width: 50%;
+			padding: 8px 20px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&--primary {
+			background: $primary;
+			border: 1px solid $primary;
+			color: white;
+			transition: 0.3s;
+
+			&:hover,
+			&:focus,
+			.active {
+				color: white;
+			}
+		}
+
+		&--outline {
+			background-color: transparent;
+			color: $primary;
+			border: 1px solid $primary;
+			transition: 0.3s;
+
+			&:hover,
+			&:focus,
+			.active {
+				background-color: $primary-light;
+				color: $primary;
+			}
+		}
+
+		&__justify {
+			justify-content: end;
+		}
+	}
+
+	&-backdrop {
+		&.in {
+			opacity: 0.9;
+		}
+	}
+
+	.btn-close {
+		position: absolute;
+		z-index: 1;
+		right: 20px;
+		top: 10px;
+		border: 0;
+		outline: 0;
+		box-shadow: none;
+		padding: 0;
+		background-color: transparent;
+		color: white;
+		font-size: $fs-30;
+
+		@media all and (max-width: 767px) {
+			right: 10px;
+			top: 10px;
+		}
+	}
+
+	&__qa {
+		padding: 5px 0;
+	}
+
+	&__ques {
+		font-size: $fs-18;
+		color: rgba(white, 0.7);
+	}
+
+	&__ans {
+		font-size: $fs-18;
+		font-weight: 600;
+	}
+
+	p {
+		&.modal__primary-text {
+			font-size: 16px;
+			font-weight: 400;
+			text-align: center;
+			color: white;
+		}
+	}
+}
+
+.confirm-modal {
+	.modal-dialog {
+		width: 95%;
+		margin: 0 auto;
+
+		@media all and (min-width: 768px) {
+			max-width: 700px;
+		}
+	}
+}
+
+.lab-report-modal {
+	.modal {
+		&-content {
+			overflow: hidden;
+		}
+
+		&-header {
+			display: flex;
+			padding: 15px;
+			border-bottom: 2px solid $blue-3;
+		}
+
+		&-body {
+			padding: 15px;
+
+			.list-table .table__alt.table thead th:nth-child(1) {
+				padding-left: 15px !important;
+			}
+
+			.list-table .table__alt.table thead th {
+				padding: 15px !important;
+				color: white;
+			}
+
+			.list-table .table__alt.table tbody tr td:nth-child(1) {
+				padding-left: 15px !important;
+			}
+
+			.list-table .table__alt.table tbody tr:nth-child(odd) {
+				background-color: #223853 !important;
+			}
+		}
+	}
+}
+
+.intake-form-modal {
+	.modal-content {
+		overflow: hidden !important;
+	}
+
+	.modal-body {
+		overflow-y: auto;
+		max-height: calc(100vh - 155px);
+	}
+}
+
+.payment-modal {
+	.modal__action {
+		padding: 10px 24px;
+	}
+}
+
+.acknowledgement-modal {
+	.modal {
+		&-content {
+			@media all and (min-width: 768px) {
+				width: 600px;
+			}
+		}
+
+		&-body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+
+			.modal__long-text {
+				font-size: $fs-16;
+				line-height: $fs-24;
+			}
+		}
+	}
+}
+
+.dose-modal {
+	.modal {
+		&-content {
+			width: 600px;
+			max-width: 98%;
+		}
+
+		&-body {
+			padding: 40px 36px;
+		}
+	}
+
+	&__cta {
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	&__selection {
+		padding: 20px;
+		margin-top: 20px;
+		background-color: $background-3;
+		border-radius: 10px;
+
+		p {
+			font-size: $fs-14;
+			color: $secondary;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.terms-condition-modal {
+
+	.modal-body,
+	.modal-header {
+		padding: 20px;
+	}
+
+	.divider {
+		margin: 20px 0;
+
+		&__line {
+			border: 1px dashed $blue-3;
+			display: block;
+		}
+	}
+
+	.btn-close {
+		top: 25px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.modal {
+		&__primary-text {
+			font-size: 14px;
+		}
+
+		&-header {
+			h2 {
+				font-size: $fs-18;
+			}
+		}
+
+		&__actions {
+			margin: 20px 0 0;
+
+			&--alt {
+				max-width: 320px;
+				gap: 15px;
+				width: unset;
+			}
+
+			.min-w-206 {
+				width: 50% !important;
+				min-width: unset !important;
+			}
+		}
+	}
+
+	.dose-modal {
+		&__cta {
+			flex-direction: column;
+		}
+
+		&__selection {
+			padding: 10px;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.modal {
+		&__actions {
+			&__equal {
+				flex-direction: column-reverse;
+				margin-bottom: 50px !important;
+
+				button {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}
+
+
+
+.prescription-modal {
+	padding: 0 !important;
+
+	.table.order-list td {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+
+
+
+
+	.modal-body {
+		padding: 16px !important;
+		overflow-y: auto !important;
+	}
+
+	.document-info {
+		flex-direction: row !important;
+		height: auto !important;
+
+		&__item {
+			flex-direction: column !important;
+			align-items: flex-start !important;
+		}
+	}
+
+	.card-basic {
+
+		.card-basic__header {
+			padding: 12px 24px !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+
+			@media all and (max-width: 768px) {
+
+				padding-left: 16px !important;
+			}
+
+
+
+		}
+
+		.card-basic__title {
+			font-weight: 700;
+			color: #2D2D2D;
+			font-size: 30px;
+
+			@media all and (max-width: 768px) {
+				font-size: 18px;
+				padding-left: 0px;
+				margin-left: 0;
+			}
+		}
+
+		.card-basic__body {
+			padding-top: 0px;
+			padding-bottom: 0px;
+
+			.medicine-info__label {
+				font-weight: 700;
+				font-size: 18px;
+				color: #2D2D2D;
+			}
+
+			@media all and (max-width: 768px) {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	.order-list {
+		background: white !important;
+
+		thead tr {
+			background: white !important;
+
+		}
+
+		tbody tr {
+			background: white !important;
+
+
+
+		}
+
+		td,
+		th {
+			background: white !important;
+
+		}
+
+		td {
+			font-size: 16px !important;
+			font-weight: 500 !important;
+
+		}
+
+		th {
+			font-size: 18px !important;
+			font-weight: 700 !important;
+		}
+	}
+
+	.list-table {
+		padding: 0 9px !important;
+
+
+	}
+
+	.medicine-info {
+		padding: 0 !important;
+		gap: 0;
+
+		@media all and (max-width: 768px) {
+			padding: 8px 0px !important;
+		}
+
+		&__item {
+			padding-top: 0px !important;
+			padding-bottom: 24px !important;
+			padding-left: 24px !important;
+			padding-right: 24px !important;
+
+			@media all and (max-width: 768px) {
+				padding: 8px 16px !important;
+			}
+		}
+	}
+
+	.document-info {
+		flex-direction: row !important;
+		height: auto !important;
+		padding: 0 !important;
+
+		@media all and (max-width: 768px) {
+			padding: 8px 16px !important;
+		}
+
+		&__item {
+			padding-top: 0px !important;
+			padding-bottom: 24px !important;
+			padding-left: 24px !important;
+			padding-right: 24px !important;
+
+
+
+			@media all and (max-width: 768px) {
+				padding: 4px 0px !important;
+
+				p {
+					margin-top: 0px !important;
+				}
+			}
+		}
+	}
+
+}
+
+@keyframes aosLikeFadeUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+#prescriptionModal.show .modal-body .card-basic,
+#prescriptionModal.show .modal-body .mt-3 {
+	animation: aosLikeFadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s both;
+}

@@ -1,0 +1,80 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment group section start -->
+				<div class="assessment__group-info mt-40">
+					<div class="assessment__group-label">
+						<p class="assessment__group-title">Diabetes related questions</p>
+						<p class="assessment__group-count">
+							Question <span>1</span> of <span>3</span>
+						</p>
+					</div>
+				</div>
+				<!-- Assessment group section end -->
+
+				<!-- Assessment question title start -->
+				<div class="assessment__question mt-50">
+					We need your demographic information to better understand your health
+					profile and ensure the most accurate care.
+				</div>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-40">
+					What sex were you assigned at birth?
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-20">
+					<div class="assessment__form_radio mb-5">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio1"
+							value="yes"
+							checked
+						/>
+						<label for="answerRadio1"> Yes </label>
+					</div>
+
+					<div class="assessment__condition-tag mt-20">
+						<p class="assessment__condition-text">
+							If yes, another question will appear as it's a conditional answer.
+						</p>
+					</div>
+
+					<div class="assessment__form_radio mt-20 mb-0">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio2"
+							value="yes"
+						/>
+						<label for="answerRadio2"> No </label>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<div class="text-center mt-md-40 mt-sm-30 mt-20">
+					<img
+						src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/doctor-info-graphic.png"
+					/>
+				</div>
+
+				<div class="assessment__form-container">
+					<!-- Assessment question title start -->
+					<h2 class="site__heading-four fw-extrabold mt-md-30 mt-20"
+						>WHAT TREATMENT IS RIGHT FOR YOU</h2
+					>
+					<!-- Assessment question title end -->
+
+					<div class="assessment__sub-title fw-light text-left mt-24">
+						Discover the personalized path to your well-being with our quiz-
+						your journey to tailored healthcare starts here.
+					</div>
+
+					<!-- Assessment buttons start -->
+					<div class="assessment__buttons mx-auto mt-40 w-100 d-block">
+						<button class="theme-btn theme-btn__primary w-100 d-block"
+							>Take Quiz</button
+						>
+					</div>
+					<!-- Assessment buttons end -->
+				</div>
+			</div>
+		</div>
+		<AssesmentFooter />
+	</div>
+</Layout>

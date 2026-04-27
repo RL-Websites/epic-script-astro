@@ -1,0 +1,201 @@
+@use "../../base/variables" as *;
+
+.assessment {
+  &__form {
+    &_radio {
+      position: relative;
+
+      &--alt {
+        label {
+          max-width: 412px;
+          width: 100%;
+        }
+      }
+
+      label {
+        background-color: transparent;
+        width: 519px;
+        min-height: 74px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $red;
+        font-weight: 400;
+        padding: 16px 24px;
+        padding-right: 60px;
+        text-align: center;
+        border: 1px solid $red;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      input {
+        position: absolute;
+        right: 17px;
+        top: 50%;
+        transform: translateY(-75%);
+        display: none;
+
+        &~label {
+          &:after {
+            display: none;
+          }
+        }
+
+        &:checked~label {
+          color: $red;
+          border: 1px solid $red;
+
+          &:after {
+            content: '\e90a';
+            position: absolute;
+            right: 17px;
+            top: 46%;
+            transform: translateY(-50%);
+            font-family: 'icomoon';
+            font-size: 40px;
+            display: inline-flex;
+            height: 40px;
+            width: 40px;
+            line-height: 42px;
+            color: $primary;
+            border-radius: 50%;
+            transition: all 0.3s;
+
+          }
+        }
+      }
+
+      &--white {
+        input:checked~label {
+          color: white;
+
+          &::after {
+            color: $blue-2;
+          }
+        }
+      }
+
+      &--alt {
+        display: grid !important;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        max-width: 850px;
+        margin: 0 auto;
+
+        input:checked~label {
+          position: relative;
+        }
+
+        label {
+          width: unset;
+
+        }
+
+      }
+    }
+  }
+}
+
+.age-radio {
+  position: relative;
+  max-width: 100%;
+
+  label {
+    background-color: transparent;
+    width: 412px;
+    max-width: 100%;
+    min-height: 73px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 400;
+    padding: 16px 24px;
+    padding-right: 60px;
+    text-align: center;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @media all and (max-width: 880px) {
+      width: 519px;
+    }
+  }
+
+  input {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-75%);
+    display: none;
+
+    &~label {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:checked~label {
+      color: white;
+      border: 1px solid $blue-2 !important;
+
+      &:after {
+        position: absolute;
+        right: 17px;
+        top: 46%;
+        transform: translateY(-50%);
+        font-family: 'icomoon';
+        font-size: 40px;
+        display: inline-flex;
+        height: 40px;
+        width: 40px;
+        line-height: 42px;
+        color: $blue-2;
+        border-radius: 50%;
+        transition: all 0.3s;
+        content: '\e95e';
+      }
+    }
+  }
+
+  &--invalid input:checked~label {
+    transition: border 0.2s ease !important;
+    background: transparent;
+    color: $blue-2;
+    border: 3px solid $blue-2;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .assessment {
+    &__form {
+      &_radio {
+        label {
+          max-width: 320px;
+          min-height: 50px;
+          border-radius: 12px;
+        }
+      }
+
+      input:checked~label:after {
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        top: 22px;
+      }
+    }
+
+    &__condition-tag {
+      max-width: 320px;
+      border-radius: 12px;
+    }
+  }
+
+}

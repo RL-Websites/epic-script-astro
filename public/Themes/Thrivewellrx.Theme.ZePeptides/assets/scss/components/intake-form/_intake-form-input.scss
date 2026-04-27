@@ -1,0 +1,67 @@
+@use "../../base/variables" as *;
+
+.assessment {
+	&__form {
+		input.form-control {
+			height: 77px;
+			border-radius: 16px;
+			max-width: 519px;
+			width: 100%;
+			padding-inline: 24px;
+			font-size: 16px;
+			background-color: transparent;
+			border: 1px solid $red;
+			font-size: $fs-18;
+			color: $secondary;
+
+			&::placeholder {
+				font-size: 16px;
+				color: $secondary;
+			}
+		}
+
+		.textarea__wrapper {
+			width: 519px;
+
+			textarea.form-control {
+				background-color: transparent;
+				border: 1px solid $red;
+				border-radius: 16px;
+				display: block;
+				font-size: $fs-18;
+				color: $secondary;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.assessment {
+		&__form {
+			input.form-control {
+				height: 50px;
+				border-radius: 12px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.assessment {
+		&__form {
+			.textarea__wrapper {
+				max-width: 320px;
+
+				textarea.form-control {
+					padding: 15px;
+				}
+			}
+		}
+
+		input.form-control {
+			max-width: 320px;
+		}
+	}
+
+}

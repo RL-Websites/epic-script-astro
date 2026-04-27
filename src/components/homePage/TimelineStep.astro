@@ -1,0 +1,102 @@
+---
+// TimelineStep.astro
+interface Props {
+	stepNumber: number;
+	title: string;
+	description: string;
+	imageSrc: string;
+	imageAlt: string;
+	isActive?: boolean;
+	alignment?: "left" | "right";
+}
+
+const {
+	stepNumber,
+	title,
+	description,
+	imageSrc,
+	imageAlt,
+	isActive = false,
+	alignment = "left",
+} = Astro.props;
+
+// Use simple base classes here, JavaScript will handle the 'active' state on view
+const dotClass = "timeline-dot";
+const numberClass = "step-number";
+---
+
+<div class="timeline-step" data-observed>
+	<div class={dotClass}></div>
+
+	{
+		alignment === "left" ? (
+			<div class="row align-items-start justify-center">
+				<div class="col-6 pe-5">
+					<div class="timeline-img" data-aos="zoom-out" data-aos-duration="800">
+						<img src={imageSrc} alt={imageAlt} />
+					</div>
+				</div>
+
+				<div class="col-6 ps-5 pt-4">
+					<h3
+						class="step-title fw-bold mb-3"
+						data-aos="fade-up"
+						data-aos-duration="500"
+					>
+						{title}
+					</h3>
+
+					<div class="d-flex align-items-start justify-center gap-30">
+						<div class={numberClass} data-aos="fade-up" data-aos-duration="500">
+							{stepNumber}
+						</div>
+						<p
+							class="timeline-description small flex-grow-1  mb-0 "
+							style="line-height: 1.6;"
+							data-aos="fade-up"
+							data-aos-duration="500"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+			</div>
+		) : (
+			<div class="row align-items-start">
+				<div class="col-6 text-start pe-5 pt-4">
+					<h3
+						class="step-title fw-bold mb-3"
+						data-aos="fade-up"
+						data-aos-duration="500"
+					>
+						{title}
+					</h3>
+
+					<div class="d-flex align-items-start justify-center gap-30">
+						<div class={numberClass} data-aos="fade-up" data-aos-duration="500">
+							{stepNumber}
+						</div>
+						<p
+							class="timeline-description small flex-grow-1 pt-3 mb-0 "
+							style="line-height: 1.6;"
+							data-aos="fade-up"
+							data-aos-duration="500"
+						>
+							{description}
+						</p>
+					</div>
+				</div>
+
+				<div class="col-6 ">
+					<div
+						class="timeline-img ms-auto"
+						data-aos="zoom-out"
+						data-aos-duration="800"
+					>
+						<img src={imageSrc} alt={imageAlt} />
+					</div>
+				</div>
+			</div>
+		)
+	}
+</div>

@@ -1,0 +1,147 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Contact Section Start ||== -->
+			<section class="contact">
+				<div class="container">
+					<h1
+						class="text-center text-primary-grad-1"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
+						Contact Us!
+					</h1>
+					<div
+						class="contact__banner"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
+						<p class="fs-22 fw-medium mb-0">Message us:</p>
+						<!-- <button class="theme-btn theme-btn__outline">Fastest</button> -->
+					</div>
+					<p
+						class="mt-20 mb-40 text-center"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="300">Response typically under 24 hours.</p
+					>
+					<div
+						class="row"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="400"
+					>
+						<div class="d-none d-lg-flex col-lg-2">
+							<!-- <div class="contact__single">
+								<span
+									class="contact--widget-title"
+								>
+									Call Us</span
+								>
+								<p class="contact--text"
+									>We're available 24/7, 7 days a week.
+									<span class="fw-600">+1 (775) (xxx)-xxxx</span>
+								</p>
+							</div> -->
+						</div>
+						<div
+							class="col-sm-6 col-lg-4"
+							data-aos="fade-up"
+							data-aos-duration="1000"
+							data-aos-delay="500"
+						>
+							<div class="contact__single">
+								<span class="contact--widget-title"> Write Us</span>
+								<p class="contact--text"
+									>Fill out our form and we will contact you within 24 hours. <br
+									/>
+								</p>
+								<p class="fw-600 email-text">Email: info@vpeptides.com</p>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-lg-4">
+							<div class="contact__single">
+								<span class="contact--widget-title"> Mail Us</span>
+								<p class="contact--text email-text fw-600"
+									>10152 Indiantown Rd, #181 Jupiter, FL 33478</p
+								>
+							</div>
+						</div>
+						<div class="d-none d-lg-flex col-lg-2"></div>
+					</div>
+
+					<form
+						class="contact__form"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="600"
+					>
+						<div class="single-input">
+							<label class="single-input__label fs-16 fs-md-18" for="name"
+								>Your Name <span class="text-red">*</span></label
+							>
+							<input
+								class="basic-input single-input__field text-black"
+								type="text"
+								id="name"
+								name="name"
+								placeholder="Your name"
+								required
+							/>
+						</div>
+
+						<div class="single-input">
+							<label class="single-input__label fs-16 fs-md-18" for="email"
+								>Your Email <span class="text-red">*</span></label
+							>
+							<input
+								class="basic-input single-input__field text-black"
+								type="email"
+								id="email"
+								name="email"
+								placeholder="Email address"
+								required
+							/>
+						</div>
+
+						<div class="single-input">
+							<label class="single-input__label fs-16 fs-md-18" for="message"
+								>Message <span class="text-red">*</span></label
+							>
+							<textarea
+								class="single-input__field single-input__field--message text-black"
+								id="message"
+								name="message"
+								placeholder="Message"
+								required
+								rows="8"></textarea>
+						</div>
+
+						<button
+							class="theme-btn theme-btn-size-lg theme-btn__primary contact__form__btn"
+							type="submit"
+							data-aos="flip-left"
+							data-aos-duration="1000"
+							data-aos-once="true">Send</button
+						>
+					</form>
+				</div>
+			</section>
+			<!-- ==|| Contact Section End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+</Layout>
+
+<Footer />

@@ -1,0 +1,74 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question title start -->
+				<div class="assessment__question mt-50">
+					Phone number to reach you, <br />not for marketing purposes
+				</div>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form all-questions">
+					<div class="single-question">
+						<label class="assessment__label mb-sm-20 mb-10">
+							May we know your first name?
+						</label>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Short Answer"
+						/>
+					</div>
+					<div class="single-question">
+						<label class="assessment__label mb-sm-20 mb-10">
+							And your last name?
+						</label>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Short Answer"
+						/>
+					</div>
+					<div class="single-question">
+						<label class="assessment__label mb-sm-20 mb-10">
+							Could you provide your email address?
+						</label>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Short Answer"
+						/>
+					</div>
+					<div class="single-question">
+						<label class="assessment__label mb-sm-20 mb-10">
+							Phone number to reach you, not for marketing
+						</label>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Short Answer"
+						/>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

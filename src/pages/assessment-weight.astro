@@ -1,0 +1,53 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question title start -->
+				<div class="assessment__question mt-40">
+					We need your demographic information to better understand your health
+					profile and ensure the most accurate care.
+				</div>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-50">
+					What was your weight in pounds (LBS) the last time you weighed
+					yourself?
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-30">
+					<div class="measurement">
+						<div class="measurement-input">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="0"
+								aria-describedby="basic-addon2"
+							/>
+							<span class="unit">lb</span>
+						</div>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+				<CommonAction />
+				<!-- Assessment buttons start -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

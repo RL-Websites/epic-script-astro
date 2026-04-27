@@ -1,0 +1,55 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question title start -->
+				<div class="assessment__question mt-40">
+					Your medical history is crucial for us to provide you with the best
+					care. Please provide details about your health conditions and
+					products.
+				</div>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-50">
+					Please list any oral products or insulins you take (for diabetics). If
+					none, please answer 'none'.
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-30">
+					<div class="textarea__wrapper">
+						<textarea class="form-control" rows="5" placeholder="Write here"
+						></textarea>
+					</div>
+
+					<input
+						type="text"
+						class="form-control mt-20 text-start"
+						placeholder="None"
+					/>
+				</div>
+				<!-- Assessment form end -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

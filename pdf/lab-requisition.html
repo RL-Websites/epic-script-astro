@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lab Requisition - VPeptides</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Calibri, "Calibri", sans-serif;
+				font-size: 14px;
+				line-height: 1.4;
+				color: #000;
+				background: #fff;
+				padding: 40px;
+			}
+
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				background: #fff;
+			}
+
+			/* Header */
+			.header {
+				display: table;
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			.header-left {
+				display: table-cell;
+				vertical-align: top;
+				width: 50%;
+			}
+
+			.header-right {
+				display: table-cell;
+				vertical-align: top;
+				width: 50%;
+				text-align: right;
+			}
+
+			.title {
+				font-size: 24px;
+				font-weight: 600;
+				color: #6b46c1;
+				margin: 0;
+			}
+
+			.logo {
+				font-size: 20px;
+				font-weight: 600;
+				color: #000;
+				margin: 0;
+			}
+
+			.logo-accent {
+				color: #6b46c1;
+			}
+
+			/* Section */
+			.section {
+				margin-bottom: 24px;
+			}
+
+			.section-title {
+				font-size: 15px;
+				font-weight: 600;
+				color: #000;
+				margin-bottom: 12px;
+				padding-bottom: 4px;
+			}
+
+			/* Form Fields */
+			.form-row {
+				display: table;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			.form-group {
+				display: table-cell;
+				width: 50%;
+				padding-right: 20px;
+				vertical-align: top;
+			}
+
+			.form-group:last-child {
+				padding-right: 0;
+			}
+
+			.form-label {
+				font-size: 12px;
+				color: #666;
+				display: inline;
+				margin-bottom: 4px;
+				margin-right: 8px;
+			}
+
+			.form-label-alt {
+				font-size: 12px;
+				color: #666;
+				display: block;
+				margin-bottom: 4px;
+				margin-right: 8px;
+			}
+
+			.form-value {
+				font-size: 14px;
+				color: #000;
+				font-weight: 400;
+				display: inline;
+				min-height: 20px;
+			}
+
+			.form-input {
+				border: none;
+				border-bottom: 1px solid #ccc;
+				width: 250px;
+				padding: 4px 0;
+				font-size: 14px;
+				outline: none;
+				display: inline-block;
+			}
+
+			.form-input-alt {
+				border: none;
+				width: 250px;
+				padding: 10px 0;
+				font-size: 14px;
+				outline: none;
+				display: inline-block;
+			}
+
+			/* Diagnosis Section */
+			.diagnosis-title {
+				font-size: 15px;
+				font-weight: 600;
+				color: #000;
+				margin-bottom: 16px;
+			}
+
+			.tests-title {
+				font-size: 14px;
+				font-weight: 600;
+				color: #000;
+				margin-bottom: 8px;
+			}
+
+			.test-list {
+				list-style: none;
+				padding-left: 0;
+			}
+
+			.test-list li {
+				font-size: 13px;
+				color: #000;
+				margin-bottom: 0;
+				padding-left: 20px;
+				position: relative;
+			}
+
+			.test-list li:before {
+				content: "•";
+				position: absolute;
+				left: 8px;
+				color: #000;
+			}
+
+			/* Signature Section */
+			.signature-row {
+				display: table;
+				width: 100%;
+				margin-top: 20px;
+			}
+
+			.signature-group {
+				display: table-cell;
+				width: 50%;
+				padding-right: 20px;
+				vertical-align: bottom;
+			}
+
+			.signature-group:last-child {
+				padding-right: 0;
+			}
+
+			.signature-line {
+				border-bottom: 1px solid #ccc;
+				min-height: 60px;
+				margin-bottom: 4px;
+				position: relative;
+			}
+
+			.signature-image {
+				max-width: 150px;
+				height: auto;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.date-line {
+				border-bottom: 1px solid #ccc;
+				min-height: 40px;
+				margin-bottom: 4px;
+				padding-top: 20px;
+			}
+
+			/* Instructions */
+			.instructions {
+				font-size: 13px;
+				color: #000;
+				line-height: 1.6;
+				margin-top: 8px;
+			}
+
+			/* Print Optimization */
+			@media print {
+				body {
+					padding: 0;
+				}
+
+				.container {
+					max-width: 100%;
+				}
+			}
+
+			/* PDF Optimization */
+			@page {
+				margin: 1cm;
+				size: A4;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header -->
+			<div class="header">
+				<div class="header-left">
+					<h1 class="title">Lab Requisition</h1>
+				</div>
+				<div class="header-right">
+					<img
+						src="https://vpeptides.thrivewellrx.com/files/id/7"
+						alt="VPeptides"
+						width="80"
+						style="width: 80px; max-width: 80px; height: auto"
+					/>
+				</div>
+			</div>
+
+			<!-- Patient Information -->
+			<div class="section">
+				<h3 class="section-title">Patient Information</h3>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Full Name:</label>
+						<span class="form-value">Harry K Thomas</span>
+					</div>
+					<div class="form-group">
+						<label class="form-label">Date of Birth (DOB):</label>
+						<span class="form-value">7381</span>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Sex at Birth:</label>
+						<span class="form-value">Male</span>
+					</div>
+					<div class="form-group">
+						<label class="form-label">Phone Number:</label>
+						<span class="form-value">41151000</span>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Email (optional):</label>
+						<span class="form-value">harry.k.thomas@example.com</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+			</div>
+
+			<!-- Ordering Provider Information -->
+			<div class="section">
+				<h3 class="section-title">Ordering Provider Information</h3>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Provider Name:</label>
+						<span class="form-value">Dr. Jerry Cattelane</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">NPI Number:</label>
+						<input type="text" class="form-input" value="" />
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">License Number:</label>
+						<input type="text" class="form-input" value="" />
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Ordering Organization:</label>
+						<span class="form-value">Dosevana LLC</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Provider Contact:</label>
+						<span class="form-value">support@dosevana.com</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+			</div>
+
+			<!-- Diagnosis -->
+			<div class="section">
+				<h3 class="diagnosis-title"
+					>Diagnosis / Reason for Testing / Hormone Evaluation / Suspected
+					Hypogonadism</h3
+				>
+				<h4 class="tests-title">Requested Tests</h4>
+				<ul class="test-list">
+					<li>Total Testosterone</li>
+					<li>Free Testosterone</li>
+					<li>Estradiol (Sensitive / E2)</li>
+					<li>CBC (Hemoglobin & Hematocrit)</li>
+					<li>Comprehensive Metabolic Panel (CMP)</li>
+					<li>PSA (Age 40+ or per physician discretion)</li>
+					<li>Lipid Panel (Recommended)</li>
+				</ul>
+			</div>
+
+			<!-- Specimen Information -->
+			<div class="section">
+				<h3 class="section-title">Specimen Information</h3>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Specimen Type:</label>
+						<span class="form-value">Information</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Specimen Type:</label>
+						<span class="form-value">Blood</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label class="form-label">Fasting:</label>
+						<span class="form-value">As required by lab</span>
+					</div>
+					<div class="form-group"></div>
+				</div>
+			</div>
+
+			<!-- Provider Authorization -->
+			<div class="section">
+				<h3 class="section-title">Provider Authorization</h3>
+				<div class="signature-row">
+					<div class="signature-group">
+						<label class="form-label-alt">Provider Signature:</label>
+						<input type="text" class="form-input-alt" value="" />
+					</div>
+					<div class="signature-group">
+						<label class="form-label-alt">Date:</label>
+						<input type="text" class="form-input-alt" value="" />
+					</div>
+				</div>
+			</div>
+
+			<!-- Patient Instructions -->
+			<div class="section">
+				<h3 class="section-title">Patient Instructions</h3>
+				<p class="instructions">
+					Please take this requisition to a participating lab (Quest, LabCorp,
+					or local lab). Once completed, upload your lab report to the Dosevana
+					portal for doctor review.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

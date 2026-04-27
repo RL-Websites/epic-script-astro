@@ -1,0 +1,45 @@
+.assessment {
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		width: 519px;
+		position: relative;
+		z-index: 0;
+
+		&.justify-center {
+			justify-content: center;
+		}
+
+		// .theme-btn {
+		// 	min-width: 197px;
+		// 	min-height: 47px;
+		// 	box-sizing: border-box;
+		// 	font-size: 18px;
+		// 	font-weight: 700;
+		// 	border-radius: 50px;
+		// 	text-transform: uppercase;
+
+		// 	&__secondary {
+		// 		border-width: 3px;
+		// 	}
+
+		// 	&__outline {
+		// 		&:hover {
+		// 			border: 2px solid transparent;
+		// 		}
+		// 	}
+		// }
+
+		// .theme-btn--full-width {
+		// 	width: 100%;
+		// }
+
+		&--wrapper-alt {
+			max-width: 370px;
+
+			.theme-btn {
+				width: 100%;
+			}
+		}
+	}
+}

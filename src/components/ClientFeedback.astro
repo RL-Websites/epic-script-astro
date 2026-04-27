@@ -1,0 +1,33 @@
+---
+import ClientCard from "./ClientCard.astro";
+---
+
+<section class="client">
+	<div class="container">
+		<div class="section__title d-md-flex align-items-center gap-3">
+			<h2
+				class="site__heading-two text-secondary client__title text-md-start text-center"
+				>What People Say About Us</h2
+			>
+			<div class="d-md-block d-none">
+				<img
+					src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/frame/frame-with-title-green.svg"
+					alt="frame "
+				/>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mx-0 px-0 client__slider">
+		<div class="row mt-md-50">
+			<div class="col-md-3 client__arrow">
+				<div class="client__navigation">
+					<div class="prev-arrow"> <i class="icon-left-arrow"></i></div>
+					<div class="next-arrow"> <i class="icon-right-arrow"></i></div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<ClientCard />
+			</div>
+		</div>
+	</div>
+</section>

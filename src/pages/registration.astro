@@ -1,0 +1,295 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Registration Section Start ||== -->
+			<section class="registration pt-80 pt-md-120 mb-100">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-7 col-xxl-5 registration__wrapper">
+							<div
+								class="d-flex align-items-center gap-12 fs-md-18 mt-40 mb-20 mb-md-16 cursor-pointer"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
+								<i class="icon-left-arrow text-primary fs-md-18 fw-700"></i>
+								<h4>Back</h4>
+							</div>
+							<div
+								class="login__header text-center"
+								data-aos="zoom-out"
+								data-aos-duration="1000"
+							>
+								<div class="col-12 text-center mb-20">
+									<h2 class="text-primary-grad-1">Let's Get You</h2>
+								</div>
+
+								<div
+									class="col-12 text-center mb-4"
+									data-aos="fade-up"
+									data-aos-duration="1000"
+									data-aos-delay="100"
+								>
+									<h1 class="text-primary-grad-1 mb-0">Signed Up</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="row justify-content-center"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
+						<form
+							class="col-md-7 col-xxl-5 registration__wrapper mt-md-20 mt-10 rounded-10"
+							id="edit-profile"
+						>
+							<div class="form-group">
+								<label for="email" class="basic-label"
+									>Email Address <span class="icon-ellipse"></span></label
+								>
+								<input
+									id="email"
+									type="text"
+									class="basic-input"
+									placeholder="Email Address"
+									required=""
+								/>
+								<p class="basic-error">Email address is required</p>
+							</div>
+							<div class="form-group">
+								<label for="first-name" class="basic-label"
+									>First Name <span class="icon-ellipse"></span></label
+								>
+								<input
+									id="first-name"
+									type="text"
+									class="basic-input registration__input"
+									placeholder="First Name"
+									required=""
+								/>
+								<p class="basic-error">First Name is required</p>
+							</div>
+							<div class="form-group">
+								<label for="last-name" class="basic-label"
+									>Last Name <span class="icon-ellipse"></span></label
+								>
+								<input
+									id="last-name"
+									type="text"
+									class="basic-input registration__input"
+									placeholder="Last Name"
+									required=""
+								/>
+								<p class="basic-error">Last Name is required</p>
+							</div>
+							<div class="form-group">
+								<label for="display-name" class="basic-label"
+									>Display Name <span class="icon-ellipse"></span></label
+								>
+								<input
+									id="display-name"
+									type="text"
+									class="basic-input registration__input"
+									placeholder="Display Name"
+									required=""
+								/>
+								<p class="basic-error">Display Name is required</p>
+							</div>
+							<div class="form-group">
+								<label class="fw-bold mb-5" for="expiry">Date of Birth</label>
+								<div
+									class="dropdown__selection dropdown__selection__date dropdown__selection__date-md"
+								>
+									<div class="select__wrapper">
+										<select class="select__options">
+											<option disabled selected>Month</option>
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option>
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+										</select>
+									</div>
+									<div class="select__wrapper">
+										<select class="select__options">
+											<option disabled selected>Day</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+
+									<div class="select__wrapper">
+										<select class="select__options">
+											<option disabled selected>Year</option>
+											<option>2025</option>
+											<option>2024</option>
+											<option>2023</option>
+											<option>2022</option>
+											<option>2021</option>
+											<option>2020</option>
+											<option>2019</option>
+											<option>2018</option>
+											<option>2017</option>
+											<option>2016</option>
+											<option>2015</option>
+											<option>2014</option>
+											<option>2013</option>
+											<option>2012</option>
+											<option>2011</option>
+											<option>2010</option>
+											<option>2009</option>
+											<option>2008</option>
+											<option>2007</option>
+											<option>2006</option>
+										</select>
+									</div>
+								</div>
+								<p class="basic-error" id="dobError"
+									>Date of Birth is required</p
+								>
+							</div>
+							<div class="form-group">
+								<label class="basic-label d-block mb-2"
+									>Gender <span class="icon-ellipse"></span></label
+								>
+
+								<div class="form-check form-check-inline">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="gender"
+										id="genderMale"
+										value="male"
+										checked
+									/>
+									<label class="form-check-label" for="genderMale">Male</label>
+								</div>
+
+								<div class="form-check form-check-inline">
+									<input
+										class="form-check-input"
+										type="radio"
+										name="gender"
+										id="genderFemale"
+										value="female"
+									/>
+									<label class="form-check-label" for="genderFemale"
+										>Female</label
+									>
+								</div>
+								<p class="basic-error">Gender is required</p>
+							</div>
+							<div class="form-group">
+								<label for="phone-number" class="basic-label"
+									>Phone Number <span class="icon-ellipse"></span></label
+								>
+								<input
+									id="phone-number"
+									type="number"
+									class="basic-input registration__input"
+									placeholder="Phone Number"
+									required=""
+								/>
+								<p class="basic-error">Phone Number is required</p>
+							</div>
+							<!-- <div class="form-group">
+                                    <label for="password" class="basic-label">Password <span class="icon-ellipse"></span></label>
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        class="basic-input registration__input"
+                                        placeholder="Password"
+                                        required=""
+                                    />
+                                    <p class="basic-error">Password is required</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reset-password" class="basic-label">Reset Password<span class="icon-ellipse"></span></label>
+                                    <input
+                                        id="reset-password"
+                                        type="password"
+                                        class="basic-input registration__input"
+                                        placeholder="Reset Password"
+                                        required=""
+                                    />
+                                    <i class="icon-StateOn"></i>
+                                    <p class="basic-error">Reset Password is required</p>
+                                </div> -->
+							<div class="form-group mt-4">
+								<label for="password" class="basic-label">Password:</label>
+								<div class="login__password">
+									<input
+										id="password"
+										type="password"
+										name="Password"
+										placeholder="Password"
+										required=""
+										class="basic-input login__input"
+									/>
+									<button type="button" class="login__toggle-btn">
+										<i class="icon-StateOn"></i>
+										<!-- <i class="icon-password-encrypt"></i> -->
+									</button>
+								</div>
+								<p class="basic-error">Password is required</p>
+							</div>
+							<div class="form-group mt-4">
+								<label for="reset-password" class="basic-label"
+									>Reset Password:</label
+								>
+								<div class="login__password">
+									<input
+										id="reset-password"
+										type="password"
+										name="ResetPassword"
+										placeholder="Reset Password"
+										required=""
+										class="basic-input login__input"
+									/>
+									<button type="button" class="login__toggle-btn">
+										<i class="icon-StateOff"></i>
+										<!-- <i class="icon-password-encrypt"></i> -->
+									</button>
+								</div>
+								<p class="basic-error">Reset Password is required</p>
+							</div>
+
+							<button
+								id="reset-password"
+								type="submit"
+								class="theme-btn theme-btn__primary px-20 py-10 w-100"
+								data-aos-delay="100">Register & Login</button
+							>
+
+							<div>
+								<p class="text-center mt-20">
+									<span class="fs-16 fs-md-20">Already have an account?</span>
+									<a href="#" class="text-primary fs-16 fs-md-20">Log in</a>
+								</p>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- ==|| Registration Section End ||== -->
+			</section>
+		</div>
+	</main>
+</Layout>

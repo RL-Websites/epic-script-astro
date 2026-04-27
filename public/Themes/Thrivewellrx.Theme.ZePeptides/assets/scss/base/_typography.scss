@@ -1,0 +1,304 @@
+@use "variables" as *;
+
+// Base typography styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: "sfuidisplay", sans-serif;
+	color: $secondary;
+}
+
+
+
+p {
+	margin: 0;
+	font-family: "sfuidisplay", sans-serif;
+	color: $secondary;
+}
+
+span {
+	font-family: "sfuidisplay", sans-serif;
+}
+
+// H1 - 70px Bold, 120% line-height
+h1 {
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 120%;
+	letter-spacing: 0;
+}
+
+// H2 - 30px Bold, 100% line-height
+h2 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: 0;
+}
+
+// H3 - 24px Bold, 160% line-height
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+// H4 - 18px Bold, 160% line-height
+h4 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+// H5 - 16px Semibold, 160% line-height
+h5 {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 600;
+}
+
+a {
+	color: $primary;
+}
+
+// Body1 - 22px Medium, 160% line-height
+.body1,
+.text-body1 {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+// Body2 - 20px Medium, 160% line-height
+.body2,
+.text-body2 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+// Body3 - 18px Medium, 160% line-height
+.body3,
+.text-body3 {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+// Body4 - 16px Medium, 160% line-height
+.body4,
+.text-body4 {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+.text-md-body4 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: 0;
+
+	@media all and (min-width: 768px) {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 160%;
+		letter-spacing: 0;
+	}
+}
+
+// Small - 12px Bold, 160% line-height
+small,
+.text-small {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 160%;
+	letter-spacing: 0;
+}
+
+// Legacy utility classes (keeping for backward compatibility)
+.site {
+	&__heading {
+		&-one {
+			font-size: 70px;
+			font-weight: 700;
+			line-height: 120%;
+		}
+
+		&-two-lg {
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 100%;
+		}
+
+		&-two {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 100%;
+		}
+
+		&-three {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 160%;
+		}
+
+		&-four {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 160%;
+		}
+
+		&-five {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 160%;
+		}
+
+		&-img {
+			max-width: 330px;
+		}
+	}
+}
+
+.font-sfui {
+	font-family: "sfuidisplay", sans-serif;
+}
+
+.font-cabinet-grotesk {
+	font-family: "CabinetGrotesk", sans-serif;
+}
+
+.font-playfair {
+	font-family: "Playfair Display", serif;
+}
+
+.text-primary-grad-1 {
+	background: linear-gradient(90deg, #5100c2 0%, #b07bfa 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// Responsive typography
+@media only screen and (max-width: 992px) {
+
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+
+	h3 {
+		font-size: 22px;
+	}
+
+	.body1,
+	.text-body1 {
+		font-size: 20px;
+	}
+
+	.body2,
+	.text-body2 {
+		font-size: 18px;
+	}
+
+	.site {
+		&__heading {
+			&-one {
+				font-size: 48px;
+			}
+
+			&-two {
+				font-size: 28px;
+			}
+
+			&-three {
+				font-size: 22px;
+			}
+
+			&-four {
+				font-size: 18px;
+			}
+
+			&-five {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	.body1,
+	.text-body1 {
+		font-size: 18px;
+	}
+
+	.body2,
+	.text-body2 {
+		font-size: 16px;
+	}
+
+	.site {
+		&__heading {
+			&-one {
+				font-size: 30px;
+			}
+
+			&-two-lg {
+				font-size: 30px;
+			}
+
+			&-two {
+				font-size: 24px;
+			}
+
+			&-three {
+				font-size: 20px;
+			}
+
+			&-four {
+				font-size: 18px;
+			}
+
+			&-five {
+				font-size: 16px;
+			}
+		}
+	}
+
+}

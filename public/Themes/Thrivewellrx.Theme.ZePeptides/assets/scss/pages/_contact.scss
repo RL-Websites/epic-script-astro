@@ -1,0 +1,116 @@
+@use "../base/variables" as *;
+
+.contact {
+	padding: 130px 0 100px;
+
+	&__banner {
+		margin-top: 50px;
+		padding: 21px 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// border: 1px solid rgba($color: $red, $alpha: 0.5);
+		border-radius: 8px;
+		background: $primary-lighter;
+
+		button {
+			font-weight: 600;
+		}
+	}
+
+	&__single {
+		padding: 10px 60px;
+		text-align: center;
+	}
+
+	&--btn {
+		display: inline-block;
+		min-width: 143px;
+		border-radius: 10px;
+	}
+	&--widget {
+		&-title {
+			display: inline-flex;
+			height: 47px;
+			padding: 11px 38px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			border: 1px solid $black;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+
+	&--text {
+		margin-top: 26px;
+		line-height: 26px;
+	}
+
+	&__form {
+		max-width: 970px;
+		margin: 0 auto;
+		margin-top: 30px;
+
+		&__btn {
+			width: 143px;
+		}
+	}
+
+	&__img {
+		margin-top: 80px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.map {
+		margin-top: 80px;
+	}
+}
+
+.email-text {
+	font-size: $fs-16;
+	font-weight: 700;
+	font-family: "poppins", sans-serif;
+}
+
+@media only screen and (max-width: 992px) {
+	.contact {
+		padding: 150px 0 80px;
+
+		&__banner {
+			margin-top: 30px;
+			padding: 10px 20px;
+
+			p {
+				font-size: $fs-20 !important;
+			}
+		}
+
+		.my-30 {
+			margin: 20px 0 !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.contact {
+		padding: 110px 0 50px;
+
+		&__single {
+			padding: 10px 0;
+		}
+
+		.map {
+			margin-top: 40px;
+		}
+
+		&__form {
+			&__btn {
+				width: 100%;
+			}
+		}
+	}
+}

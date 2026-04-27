@@ -1,0 +1,85 @@
+@use "../../base/variables" as *;
+
+.assessment {
+	&__form {
+		&__checkbox {
+			position: relative;
+
+			&--alt {
+				label {
+					max-width: 412px;
+					width: 100%;
+				}
+			}
+
+			label {
+				background-color: transparent;
+				// box-shadow: 0px 12px 40px 8px rgba(92, 92, 92, 0.05);
+				width: 519px;
+				min-height: 74px;
+				border-radius: 16px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $red;
+				font-weight: 400;
+				padding: 16px 24px;
+				padding-right: 65px;
+				text-align: center;
+				border: 1px solid $red;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+
+			input {
+				position: absolute;
+				right: 17px;
+				top: 50%;
+				transform: translateY(-75%);
+				display: none;
+
+				&~label {
+					// &:after {
+					// 	content: "\e955";
+					// 	position: absolute;
+					// 	right: 17px;
+					// 	top: 46%;
+					// 	transform: translateY(-50%);
+					// 	// content: "\e915";
+					// 	font-family: "icomoon";
+					// 	font-size: 40px;
+					// 	display: inline-flex;
+					// 	height: 40px;
+					// 	width: 40px;
+					// 	line-height: 42px;
+					// 	color: white;
+					// 	transition: all 0.3s;
+					// }
+				}
+
+				&:checked~label {
+					// background-color: $primary;
+					color: $red;
+					border: 1px solid $red;
+
+					&:after {
+						content: "\e90a";
+						position: absolute;
+						right: 17px;
+						top: 46%;
+						transform: translateY(-50%);
+						// content: "\e915";
+						font-family: "icomoon";
+						font-size: 40px;
+						display: inline-flex;
+						height: 40px;
+						width: 40px;
+						line-height: 42px;
+						color: $primary;
+						transition: all 0.3s;
+					}
+				}
+			}
+		}
+	}
+}

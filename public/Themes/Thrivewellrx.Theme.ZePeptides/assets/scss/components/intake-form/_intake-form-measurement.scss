@@ -1,0 +1,77 @@
+@use "../../base/variables" as *;
+
+.assessment {
+	&__form {
+		.measurement {
+			width: 519px;
+
+			&.measurement__flex {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+			}
+
+			.measurement-input {
+				padding: 0 40px;
+				max-width: 100%;
+				display: flex;
+				align-items: center;
+				opacity: 1;
+				color: $secondary;
+				border: 1px solid $red;
+				border-radius: 16px;
+				position: relative;
+
+				input {
+					padding: 0;
+					border: 0;
+					box-shadow: none;
+					font-size: $fs-18;
+					padding-right: 20px;
+					text-align: center;
+					color: $secondary;
+
+					&::placeholder {
+						color: $gray;
+					}
+				}
+
+				.unit {
+					font-size: 16px;
+					border: 0;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					color: $secondary;
+					opacity: 1;
+					// border-left: 1px solid $grey-10;
+					padding: 8px 30px 8px 20px;
+					position: absolute;
+					right: 0;
+					font-size: $fs-18;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.assessment {
+		&__form {
+			.measurement {
+				max-width: 320px;
+
+				.measurement-input {
+					padding: 0 5px;
+					border-radius: 12px;
+
+					.unit {
+						background-color: #162333;
+						padding: 0 15px;
+						border-radius: 0 12px 12px 0;
+					}
+				}
+			}
+		}
+	}
+}

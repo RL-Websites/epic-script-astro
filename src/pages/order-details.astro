@@ -1,0 +1,747 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- =====|| Order Details Section Start ||====== -->
+			<section class="order-details">
+				<div class="container">
+					<div>
+						<div
+							class="order-heading"
+							data-aos="fade-up"
+							data-aos-duration="1000"
+						>
+							<i
+								class="icon-back text-primary-grad-1"
+								data-bind="click: function() { goToOrderList() }"></i>
+							<h1 class="hero__title text-primary-grad-1 fs-30 fs-md-48">
+								Order Details
+							</h1>
+						</div>
+						<div class="row col-equal-height mt-20">
+							<div class="col-md-12">
+								<div
+									class="card-basic h-100"
+									data-aos="fade-left"
+									data-aos-duration="1000"
+									data-aos-delay="300"
+								>
+									<div class="card-basic__header">
+										<p class="card-basic__title">Shipping Information</p>
+									</div>
+
+									<div class="card-basic__body">
+										<div class="medicine-info">
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Name:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingName"
+												>
+													Mike Scott
+												</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Address:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingAddress"
+												>
+													221B Baker Street
+												</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">State:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingState"
+												>
+													Alaska
+												</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">City:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text:ShippingCity"
+												>
+													Nebraska
+												</p>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Zip Code:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: ShippingZipcode"
+												>
+													1209
+												</p>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Email Address:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: ShippingEmailAddress"
+												>
+													mike@gmail.com
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="col-md-12 mt-24"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+								data-aos-delay="800"
+							>
+								<div class="card-basic card-basic__mt h-100">
+									<div class="card-basic__header">
+										<p class="card-basic__title">Billing Information</p>
+									</div>
+
+									<div class="card-basic__body">
+										<div class="medicine-info">
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Name:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingName"
+												>
+													Mike Scott
+												</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Address:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingAddress"
+												>
+													221B Baker Street
+												</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">State:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingState"
+												>
+													Alaska
+												</p>
+											</div>
+
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">City:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingCity"
+												>
+													Nebraska
+												</p>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Zip Code:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingZipcode"
+												>
+													1209
+												</p>
+											</div>
+											<div class="medicine-info__item">
+												<p class="medicine-info__label">Email Address:</p>
+												<p
+													class="medicine-info__text"
+													data-bind="text: BillingEmailAddress"
+												>
+													mike@gmail.com
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="card-basic mt-20"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+							data-aos-delay="1000"
+						>
+							<div class="card-basic__header">
+								<p class="card-basic__title">Shipping tracking number</p>
+								<!-- <a
+                  href=""
+                  class="text-red"
+                  data-bs-toggle="modal"
+                  data-bs-target="#confirm">Cancel Subscribe & Save</a
+                > -->
+							</div>
+
+							<div class="card-basic__body">
+								<div class="order">
+									<div class="order__info">
+										<p class="order__label">
+											Date: <span class="fw-400">12/28/2024</span>
+										</p>
+										<p class="order__label">
+											Product Name: <span class="fw-400">Kyzartrex</span>
+										</p>
+										<p class="order__label">
+											Order ID:<span class="fw-400">#7387</span>
+										</p>
+										<p class="order__label">
+											Tracking ID:<span class="fw-400">#7387</span>
+										</p>
+									</div>
+
+									<div class="order__status d-md-block d-none">
+										<div class="order__track">
+											<div class="tracker">
+												<span class="tracker__single active"></span>
+												<span class="tracker__single"></span>
+												<!-- <span class="tracker__single"></span> -->
+												<span class="tracker__single"></span>
+												<span class="tracker__single"></span>
+											</div>
+											<div class="order__step active">
+												<span class="order__step-label active">Received</span>
+											</div>
+											<div class="order__step active">
+												<span class="order__step-label active">Processing</span>
+											</div>
+											<div class="order__step">
+												<span class="order__step-label">Awaiting Shipment</span>
+											</div>
+											<div class="order__step">
+												<span class="order__step-label">Shipped</span>
+												<a
+													class="order__step-label order__step-label--bottom"
+													style="text-decoration:underline; font-size:15px;"
+													target="_blank">Track_ID_HG-003</a
+												>
+											</div>
+
+											<div class="order__step">
+												<span class="order__step-label">Delivered</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="timeline d-md-none">
+										<!-- <div class="timeline__tracker">
+											<span class="timeline__tracker__single"></span>
+											<span class="timeline__tracker__single"></span>
+											<span class="timeline__tracker__single"></span>
+										</div> -->
+										<div class="timeline__steps">
+											<div class="timeline__step completed">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Received</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step active">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Processing</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step active">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label active">Declined</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<p class="d-flex align-items-center gap-20">
+													<span class="timeline__label">Shipped</span>
+													<a class="" target="_blank">Track_ID_HG-003</a>
+												</p>
+
+												<span class="timeline__tracker"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Delivered</span>
+												<span class="timeline__tracker timeline__tracker--last"
+												></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-basic__header"></div>
+							<div class="card-basic__body">
+								<div class="medicine-info">
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Name:</p>
+										<p class="medicine-info__text">Kyzartrex</p>
+									</div>
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Type:</p>
+										<p class="medicine-info__text">Capsule</p>
+									</div>
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Quantity:</p>
+										<p class="medicine-info__text">3</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Price:</p>
+										<p class="medicine-info__text">$399</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Refill Course:</p>
+										<p class="medicine-info__text">3</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Refill Interval:</p>
+										<p class="medicine-info__text">40 Days</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Shipping State:</p>
+										<div class="medicine-info__states">
+											<span class="status-pill status-pill--state">
+												Texas
+											</span>
+											<!-- <span class="status-pill status-pill--state">
+                        California
+                      </span>
+                      <span class="status-pill status-pill--state">
+                        Texas
+                      </span>
+                      <span class="status-pill status-pill--state">
+                        Florida
+                      </span>
+                      <span class="status-pill status-pill--state"> Ohio </span>
+                      <span class="status-pill status-pill--state"> Ohio </span>
+                      <span class="status-pill status-pill--state">
+                        California
+                      </span>
+                      <span class="status-pill status-pill--state">
+                        Florida
+                      </span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="card-basic mt-20"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+							data-aos-delay="1000"
+						>
+							<div class="card-basic__header">
+								<p class="card-basic__title">Shipping tracking number</p>
+								<a
+									href=""
+									class="text-red"
+									data-bs-toggle="modal"
+									data-bs-target="#confirm">Cancel Subscribe & Save</a
+								>
+							</div>
+
+							<div class="card-basic__body">
+								<div class="order">
+									<div class="order__info">
+										<p class="order__label">
+											Date: <span class="fw-400">12/28/2024</span>
+										</p>
+										<p class="order__label">
+											Product Name: <span class="fw-400">Kyzartrex</span>
+										</p>
+										<p class="order__label">
+											Order ID:<span class="fw-400">#7387</span>
+										</p>
+										<p class="order__label">
+											Tracking ID:<span class="fw-400">#7387</span>
+										</p>
+									</div>
+
+									<div class="order__status d-md-block d-none">
+										<div class="order__track">
+											<div class="tracker">
+												<span class="tracker__single active"></span>
+												<span class="tracker__single"></span>
+												<!-- <span class="tracker__single"></span> -->
+												<span class="tracker__single"></span>
+												<span class="tracker__single"></span>
+											</div>
+											<div class="order__step active">
+												<span class="order__step-label active">Received</span>
+											</div>
+											<div class="order__step active">
+												<span class="order__step-label active">Processing</span>
+											</div>
+											<div class="order__step">
+												<span class="order__step-label">Awaiting Shipment</span>
+											</div>
+											<div class="order__step">
+												<span class="order__step-label">Shipped</span>
+												<a
+													class="order__step-label order__step-label--bottom"
+													style="text-decoration:underline; font-size:15px;"
+													target="_blank">Track_ID_HG-003</a
+												>
+											</div>
+
+											<div class="order__step">
+												<span class="order__step-label">Delivered</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="timeline d-md-none">
+										<!-- <div class="timeline__tracker">
+											<span class="timeline__tracker__single"></span>
+											<span class="timeline__tracker__single"></span>
+											<span class="timeline__tracker__single"></span>
+										</div> -->
+										<div class="timeline__steps">
+											<div class="timeline__step completed">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Received</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step active">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Processing</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step active">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label active">Declined</span>
+												<span class="timeline__tracker active"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<p class="d-flex align-items-center gap-20">
+													<span class="timeline__label">Shipped</span>
+													<a class="" target="_blank">Track_ID_HG-003</a>
+												</p>
+
+												<span class="timeline__tracker"></span>
+											</div>
+
+											<div class="timeline__step">
+												<span class="timeline__dot"></span>
+												<span class="timeline__label">Delivered</span>
+												<span class="timeline__tracker timeline__tracker--last"
+												></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-basic__header"></div>
+							<div class="card-basic__body">
+								<div class="medicine-info">
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Name:</p>
+										<p class="medicine-info__text">Kyzartrex</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Quantity:</p>
+										<p class="medicine-info__text">3</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Price:</p>
+										<p class="medicine-info__text">$399</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Refill Course:</p>
+										<p class="medicine-info__text">3</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Refill Interval:</p>
+										<p class="medicine-info__text">40 Days</p>
+									</div>
+
+									<div class="medicine-info__item">
+										<p class="medicine-info__label">Shipping State:</p>
+										<div class="medicine-info__states">
+											<span class="status-pill status-pill--state">
+												Texas
+											</span>
+											<!-- <span class="status-pill status-pill--state">
+                        California
+                      </span>
+                      <span class="status-pill status-pill--state">
+                        Texas
+                      </span>
+                      <span class="status-pill status-pill--state">
+                        Florida
+                      </span>
+                      <span class="status-pill status-pill--state"> Ohio </span>
+                      <span class="status-pill status-pill--state"> Ohio </span>
+                      <span class="status-pill status-pill--state">
+                        California
+                      </span>
+                      <span class="status-pill status-pill--state">
+                        Florida
+                      </span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="row col-equal-height mt-20"
+							data-aos="fade-up"
+							data-aos-duration="1000"
+							data-aos-delay="100"
+						>
+							<!-- <div class="col-lg-12">
+                <div class="card-basic h-100">
+                  <div class="card-basic__header">
+                    <p class="card-basic__title">Medicine information</p>
+                  </div>
+
+                  <div class="card-basic__body">
+                    <div class="medicine-info">
+                      <div class="medicine-info__item">
+                        <p class="medicine-info__label">Name:</p>
+                        <p class="medicine-info__text">Kyzartrex</p>
+                      </div>
+                      <div class="medicine-info__item">
+                        <p class="medicine-info__label">Quantity:</p>
+                        <p class="medicine-info__text">3</p>
+                      </div>
+
+                      <div class="medicine-info__item">
+                        <p class="medicine-info__label">Price:</p>
+                        <p class="medicine-info__text">$399</p>
+                      </div>
+
+                      <div class="medicine-info__item">
+                        <p class="medicine-info__label">Refill Course:</p>
+                        <p class="medicine-info__text">3</p>
+                      </div>
+
+                      <div class="medicine-info__item">
+                        <p class="medicine-info__label">Refill Interval:</p>
+                        <p class="medicine-info__text">40 Days</p>
+                      </div>
+
+                      <div class="medicine-info__item">
+                        <p class="medicine-info__label">States:</p>
+                        <div class="medicine-info__states">
+                          <span class="status-pill status-pill--state">
+                            Texas
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            California
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            Texas
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            Florida
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            Ohio
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            Ohio
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            California
+                          </span>
+                          <span class="status-pill status-pill--state">
+                            Florida
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+							<div class="col-md-12 mt-20">
+								<div class="card-basic h-100">
+									<div class="card-basic__header">
+										<p class="card-basic__title">Order Summary</p>
+									</div>
+
+									<div class="card-basic__body">
+										<div
+											class="document-info flex-md-row flex-col justify-content-between w-100"
+										>
+											<div class="document-info__item d-flex flex-column w-100">
+												<p class="document-info__label">Subtotal:</p>
+												<p class="medicine-info__text mt-md-3 mt-1">
+													$ <span>70.00</span>
+												</p>
+											</div>
+
+											<div class="document-info__item d-flex flex-column w-100">
+												<p class="document-info__label">Shipping:</p>
+												<p class="medicine-info__text mt-md-3 mt-1">
+													$ <span>20.00</span>
+												</p>
+											</div>
+
+											<div class="document-info__item d-flex flex-column w-100">
+												<p class="document-info__label text-primary">
+													Discount:
+												</p>
+												<p
+													class="medicine-info__text text-primary mt-md-3 mt-1"
+												>
+													$ <span>- $7.00</span>
+												</p>
+											</div>
+
+											<div class="document-info__item d-flex flex-column w-100">
+												<p class="document-info__label">Refund:</p>
+												<p class="medicine-info__text mt-md-3 mt-1">
+													$ <span>20.00</span>
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="card-basic__footer">
+										<p class="fs-md-22 fs-20 fw-bold">Total:</p>
+										<p class="fs-md-22 fs-20 fw-bold">$83.00</p>
+									</div>
+								</div>
+
+								<!-- <div class="card-basic h-100">
+									<div class="card-basic__header">
+										<p class="card-basic__title">Document Information</p>
+									</div>
+
+									<div class="card-basic__body">
+										<div class="document-info">
+											<div class="document-info__item">
+												<p class="document-info__label">Prescription:</p>
+
+												<button type="button" class="view-button">
+													View
+												</button>
+											</div>
+
+											<div class="document-info__item">
+												<p class="document-info__label">Lab Reports:</p>
+
+												<button type="button" class="view-button">
+													View (5)
+												</button>
+											</div>
+
+											<div class="document-info__item">
+												<p class="document-info__label">Driving License:</p>
+
+												<button type="button" class="view-button">
+													View
+												</button>
+											</div>
+
+											<div class="document-info__item">
+												<p class="document-info__label">Intake Form:</p>
+
+												<button type="button" class="view-button">
+													View
+												</button>
+											</div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =====|| Order Details Section end ||====== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+	<!-- Confirm Modal Start -->
+	<div
+		id="confirm"
+		class="modal fade confirm-modal"
+		tabindex="-1"
+		aria-labelledby="confirmLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-header-title">
+						<p class="text-center">Cancel Request</p>
+					</div>
+					<div class="btn-modal-close">
+						<button
+							type="button"
+							class="btn btn-outline border-0"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						>
+							<i class="icon-cross_filled btn-close-icon"></i>
+						</button>
+					</div>
+				</div>
+				<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+				<div class="modal-body">
+					<div class="modal__text">
+						<p class="fs-16 fs-md-22">
+							Are you sure you want to cancel this order?
+						</p>
+					</div>
+
+					<div class="modal__actions">
+						<button
+							class="modal__action modal__action--outline"
+							type="button"
+							data-bs-dismiss="modal"
+						>
+							No
+						</button>
+						<button class="modal__action modal__action--primary" type="button">
+							Yes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Confirm Modal End -->
+</Layout>
+
+<Footer />

@@ -1,0 +1,130 @@
+---
+interface Props {
+  id: string;
+  name?: string;
+  className?: string;
+}
+
+const { id, name, className = "" } = Astro.props;
+
+const states = [
+  "Alabama", "California",
+  "Colorado",  "Tennessee", "Texas", "Utah", "Vermont",
+  "Virginia", "Washington","Wyoming"
+];
+---
+
+<div class="autocomplete-wrapper">
+  <div class="dropdown">
+    <input
+      type="text"
+      class={`form-control autocomplete-input ${className}`}
+      id={id}
+      name={name}
+      placeholder="Search states..."
+      autocomplete="off"
+      aria-expanded="false"
+      role="button"
+    />
+    <span class="autocomplete-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </span>
+    <ul class="dropdown-menu autocomplete-dropdown" data-popper-placement="bottom-start">
+      {states.map((state) => (
+        <li>
+          <a class="dropdown-item" href="#" data-value={state}>
+            {state}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('.autocomplete-input');
+
+    inputs.forEach((input) => {
+      const wrapper = input.closest('.autocomplete-wrapper');
+      const dropdownMenu = wrapper.querySelector('.autocomplete-dropdown');
+      const icon = wrapper.querySelector('.autocomplete-icon');
+      const items = dropdownMenu.querySelectorAll('.dropdown-item');
+
+      // Function to filter items based on current input value
+      const filterItems = () => {
+        const searchTerm = input.value.toLowerCase();
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (searchTerm === '' || text.includes(searchTerm)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      };
+
+      // Function to show dropdown
+      const showDropdown = () => {
+        filterItems();
+        dropdownMenu.classList.add('show');
+      };
+
+      // Function to hide dropdown
+      const hideDropdown = () => {
+        dropdownMenu.classList.remove('show');
+      };
+
+      // Click on input to toggle dropdown
+      input.addEventListener('click', () => {
+        if (dropdownMenu.classList.contains('show')) {
+          hideDropdown();
+        } else {
+          showDropdown();
+        }
+      });
+
+      // Click on icon to toggle dropdown
+      icon.addEventListener('click', () => {
+        if (dropdownMenu.classList.contains('show')) {
+          hideDropdown();
+        } else {
+          showDropdown();
+        }
+      });
+
+      // Filter items as user types
+      input.addEventListener('input', (e) => {
+        filterItems();
+        // Ensure dropdown stays open while typing
+        if (!dropdownMenu.classList.contains('show')) {
+          showDropdown();
+        }
+      });
+
+      // Handle item selection
+      items.forEach((item) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          const value = item.getAttribute('data-value');
+          input.value = value;
+          
+          // Trigger change event for form validation
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+          
+          // Close dropdown
+          hideDropdown();
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!wrapper.contains(e.target)) {
+          hideDropdown();
+        }
+      });
+    });
+  });
+</script>

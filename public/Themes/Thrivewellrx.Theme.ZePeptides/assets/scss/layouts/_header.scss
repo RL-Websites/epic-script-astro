@@ -1,0 +1,498 @@
+@use "../base/variables" as *;
+
+.site {
+	&__header {
+		padding: 16px 0;
+		transition: all 0.3s ease;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999;
+		background: #FFFFFFCC;
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		box-shadow: 0 2px 10px rgba($black, 0.05);
+
+		&.sticky {
+			box-shadow: 0 4px 20px rgba($black, 0.1);
+		}
+
+		&.menu-open {
+			background-color: white;
+
+			.site__menu__list li a {
+				color: $white;
+			}
+
+			.theme-btn__outline--primary {
+				border-color: $white;
+				color: $white;
+
+				&:hover {
+					background-color: $white;
+					color: $primary;
+				}
+			}
+		}
+
+		.cart-icon {
+			color: $primary;
+			position: relative;
+		}
+
+		.cart__badge {
+			position: absolute;
+			z-index: 1;
+			width: 30px;
+			height: 16px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			font-size: $fs-13;
+			font-weight: 600;
+			background-color: $primary;
+			color: white;
+			border-radius: 10px;
+			top: -5px;
+			right: -10px;
+			transition: 0.3s;
+		}
+
+		@supports (-webkit-touch-callout: none) {
+			.cart__badge {
+				width: 18px;
+				font-size: 10px;
+				height: 16px;
+				top: -8px;
+				right: -5px;
+			}
+		}
+
+		@supports (-webkit-overflow-scrolling: touch) {
+			.cart__badge {
+				width: 26px;
+				font-size: 10px;
+				height: 16px;
+				top: -8px;
+				right: -5px;
+			}
+		}
+	}
+
+	&__navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__logo {
+		flex-shrink: 0;
+
+		&--img {
+			height: 56px;
+			width: auto;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		flex: 1;
+		justify-content: center;
+
+		&__list {
+			display: flex;
+			align-items: center;
+			gap: 32px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			@media all and (min-width: 992px) {
+				margin-left: auto;
+			}
+
+			li {
+				a {
+					font-size: 16px;
+					font-weight: 500;
+					color: $black;
+					text-decoration: none;
+					transition: all 0.3s ease;
+					position: relative;
+					padding-bottom: 4px;
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: -10px;
+						left: 0;
+						width: 0;
+						height: 0px;
+						background-color: $primary;
+						transition: width 0.3s ease;
+						border-radius: 2px;
+					}
+
+					&:hover,
+					&:focus,
+					&.active {
+						color: $primary;
+
+						&::after {
+							width: 100%;
+							height: 4px;
+						}
+					}
+				}
+			}
+		}
+
+		&--auth {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			flex-shrink: 0;
+
+			.theme-btn {
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+// Button styles for header
+// .theme-btn {
+
+// 	&__primary {
+// 		color: $white;
+// 		border: 1px solid $primary;
+// 		&:hover {
+// 			background-color: darken($primary, 10%);
+// 			border-color: darken($primary, 10%);
+// 			box-shadow: 0 4px 12px rgba($primary, 0.3);
+// 			color: $white;
+// 		}
+// 	}
+
+// 	&__outline {
+// 		background-color: transparent;
+// 		border: 1px solid $primary;
+// 		&--primary {
+// 			&:hover {
+// 				background-color: $primary;
+// 				color: $white;
+// 				box-shadow: 0 4px 12px rgba($primary, 0.3);
+// 			}
+// 		}
+// 	}
+// }
+
+// Hamburger menu (mobile)
+.hamburger-menu {
+	display: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 24px;
+	color: $black;
+	padding: 8px;
+	transition: all 0.3s ease;
+	color: $primary;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+// Header Icons
+.header-icon {
+	font-size: 30px;
+	color: $primary;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&.mobile-only {
+		display: none;
+	}
+}
+
+.user-profile-thumb {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid $primary;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	img {
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&:hover {
+		box-shadow: 0 2px 8px rgba($primary, 0.3);
+	}
+}
+
+// Mobile Header Elements Container
+.mobile-header-elements {
+	display: none;
+	align-items: center;
+	gap: 16px;
+}
+
+// User Dropdown
+.user-dropdown-container {
+	position: relative;
+
+	.user-dropdown {
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 0;
+		background: $white;
+		box-shadow: 0 4px 20px rgba($black, 0.1);
+		border-radius: 8px;
+		padding: 16px;
+		min-width: 200px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: all 0.3s ease;
+		z-index: 1000;
+
+		&.show {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		.user-name {
+			font-weight: 600;
+			color: $primary;
+			padding-bottom: 12px;
+			border-bottom: 1px solid rgba($black, 0.1);
+			margin-bottom: 12px;
+		}
+
+		.user-menu-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			li a {
+				color: $black;
+				text-decoration: none;
+				font-size: 14px;
+				transition: color 0.3s ease;
+				display: block;
+
+				padding: 4px 0;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+
+		@media all and (max-width: 768px) {
+			left: unset;
+			right: -46px;
+		}
+	}
+}
+
+// Responsive styles
+@media only screen and (max-width: 992px) {
+	.site {
+		&__navbar {
+			gap: 20px;
+		}
+
+		&__menu {
+			gap: 24px;
+
+			&__list {
+				gap: 24px;
+
+				li a {
+					font-size: 15px;
+				}
+			}
+		}
+
+		&__logo--img {
+			height: 36px;
+		}
+	}
+
+	// .theme-btn {
+	// 	padding: 10px 20px;
+	// 	font-size: 14px;
+	// }
+}
+
+@media only screen and (max-width: 768px) {
+	.site {
+		&__header {
+			padding: 16px 0;
+
+			.cart__badge {
+				top: -5px;
+			}
+
+			&.menu-open {
+				.hamburger-menu {
+					color: $primary;
+				}
+
+				.cart-icon .cart__badge {
+					color: $white;
+				}
+			}
+		}
+
+		&__navbar {
+			gap: 8px;
+		}
+
+		&__logo--img {
+			height: 28px;
+
+		}
+
+		&__menu {
+			&__list {
+				padding: 30px 0;
+				flex-direction: column;
+				gap: 50px;
+				justify-content: flex-start;
+				position: fixed;
+				z-index: 999;
+				top: 70px;
+				right: -100%;
+				width: 100%;
+				height: 100% !important;
+				transition: 0.3s;
+
+				&.show-menu {
+					top: 60px;
+					right: 0;
+					min-height: 100vh !important;
+					height: 100% !important;
+					background-color: rgba(255, 255, 255, 1);
+					z-index: 999;
+
+					.site__menu--auth.show-in-mobile {
+						display: inline-block;
+					}
+
+					.theme-btn__outline {
+						border: 1px solid #5708C6;
+						color: #5708C6;
+					}
+				}
+
+				li a {
+					color: $black !important;
+					font-size: 16px;
+					display: block;
+					width: 100%;
+					padding: 5px 0;
+					// border-bottom: 1px solid $primary-light;
+
+					&::after {
+						bottom: 0;
+					}
+
+					&:hover,
+					&:focus,
+					&.active {
+						color: $white;
+					}
+				}
+			}
+
+			&--auth {
+				display: none;
+			}
+		}
+	}
+
+	.hamburger-menu {
+		display: flex; // Keep it visible but handled in mobile-header-elements
+
+		.icon-cross,
+		.icon-hamburger-menu {
+			font-size: $fs-18;
+		}
+	}
+
+	// Mobile Header Layout Adjustments
+	.site__navbar {
+		justify-content: space-between;
+	}
+
+	.mobile-header-elements {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.header-icon {
+		font-size: 24px;
+	}
+
+	.user-profile-thumb {
+		width: 30px;
+		height: 30px;
+	}
+
+	.header-icon.mobile-only,
+	.user-dropdown-container.mobile-only {
+		display: block;
+	}
+
+	// Hide desktop cart icon
+	.site__menu--auth .cart-icon {
+		display: none;
+	}
+}
+
+body.header-open {
+	overflow: hidden;
+}
+
+.app-login-btn {
+	color: #000;
+	/* default color */
+	transition: color 0.3s ease;
+}
+
+.app-login-btn:hover {
+	color: #5607c5 !important;
+}

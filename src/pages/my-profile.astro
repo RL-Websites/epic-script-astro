@@ -1,0 +1,489 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| My Profile Section Start ||== -->
+			<section class="my-profile" id="profile">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-7 col-xxl-5">
+							<div
+								class="login__header text-center mb-60"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
+								<h1 class="text-primary-grad-1 mb-0">
+									My Profile
+								</h1>
+							</div>
+							<div
+								class="heading text-center"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+								data-aos-delay="600"
+							>
+								<p class="fs-18 fw-700 sub-heading mb-10">
+									Email Address
+								</p>
+								<p>Jhon_07@gmail.com</p>
+							</div>
+							<form
+								class="mt-md-20 mt-50 mb-40 form-wrapper rounded-10"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+								data-aos-delay="800"
+							>
+								<div class="d-flex justify-content-end mb-22">
+									<a href="#edit-profile" class="edit-button">Edit</a>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center gap-3 mt-24"
+								>
+									<img
+										src="./Themes/Thrivewellrx.Theme.ZePeptides/assets/img/default-avatar.png"
+										alt="Profile"
+										class="profile-picture border"
+									/>
+
+									<!-- <button type="button" class="btn btn-primary">
+										Upload
+									</button> -->
+								</div>
+								<div class="form-group">
+									<label for="first-name" class="basic-label"
+										>First Name</label
+									>
+									<p>Jhon</p>
+								</div>
+								<div class="form-group">
+									<label for="last-name" class="basic-label"
+										>Last Name</label
+									>
+									<p>Smith</p>
+								</div>
+								<div class="form-group">
+									<label
+										for="display-name"
+										class="basic-label">Display Name</label
+									>
+									<p>Smith</p>
+								</div>
+								<div class="form-group">
+									<label class="fw-bold mb-5" for="expiry"
+										>Date of Birth</label
+									>
+									<p>January 02, 2026</p>
+								</div>
+								<div class="form-group">
+									<label class="basic-label d-block mb-2"
+										>Gender</label
+									>
+									<p>Male</p>
+								</div>
+								<div class="form-group">
+									<label
+										for="phone-number"
+										class="basic-label">Phone Number</label
+									>
+									<p>0123456</p>
+								</div>
+							</form>
+
+							<form
+								class="mt-md-20 mt-50 form-wrapper rounded-10"
+								id="edit-profile"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+								data-aos-delay="600"
+								data-aos-once="true"
+							>
+								<div
+									class="profile d-flex align-items-center justify-content-center gap-3"
+								>
+									<div class="profile-picture-wrapper">
+										<img
+											id="profileAvatar"
+											src="./Themes/Thrivewellrx.Theme.ZePeptides/assets/img/default-avatar.png"
+											alt="Profile"
+											class="profile-picture border"
+										/>
+										<i
+											class="icon-edit profile-edit profile-edit__icon"
+										></i>
+										<p
+											class="profile-edit profile-edit__text"
+										>
+											Change image
+										</p>
+									</div>
+								</div>
+								<!-- <div class="d-flex gap-30 justify-content-end mb-22">
+									<button
+										class="text-decoration-underline theme-btn theme-btn__accent text-primary"
+										>Cancel</button
+									>
+									<button
+										class="text-decoration-underline theme-btn theme-btn__accent text-primary"
+										>Save</button
+									>
+								</div> -->
+								<div class="form-group">
+									<label for="first-name" class="basic-label"
+										>First Name</label
+									>
+									<input
+										id="first-name"
+										type="text"
+										class="basic-input my-profile__input"
+										placeholder="First Name"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label for="last-name" class="basic-label"
+										>Last Name</label
+									>
+									<input
+										id="last-name"
+										type="text"
+										class="basic-input my-profile__input"
+										placeholder="Last Name"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label
+										for="display-name"
+										class="basic-label">Display Name</label
+									>
+									<input
+										id="display-name"
+										type="text"
+										class="basic-input my-profile__input"
+										placeholder="Display Name"
+										required
+									/>
+								</div>
+								<div class="form-group">
+									<label class="fw-bold mb-5" for="expiry"
+										>Date of Birth</label
+									>
+									<div
+										class="dropdown__selection dropdown__selection__date dropdown__selection__date-md"
+									>
+										<div class="select__wrapper select__wrapper__alt">
+											<select class="select__options">
+												<option disabled selected
+													>Month</option
+												>
+												<option>January</option>
+												<option>February</option>
+												<option>March</option>
+												<option>April</option>
+												<option>May</option>
+												<option>June</option>
+												<option>July</option>
+												<option>August</option>
+												<option>September</option>
+												<option>October</option>
+												<option>November</option>
+												<option>December</option>
+											</select>
+										</div>
+										<div class="select__wrapper select__wrapper__alt">
+											<select class="select__options">
+												<option disabled selected
+													>Day</option
+												>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+											</select>
+										</div>
+
+										<div class="select__wrapper select__wrapper__alt">
+											<select class="select__options">
+												<option disabled selected
+													>Year</option
+												>
+												<option>2025</option>
+												<option>2024</option>
+												<option>2023</option>
+												<option>2022</option>
+												<option>2021</option>
+												<option>2020</option>
+												<option>2019</option>
+												<option>2018</option>
+												<option>2017</option>
+												<option>2016</option>
+												<option>2015</option>
+												<option>2014</option>
+												<option>2013</option>
+												<option>2012</option>
+												<option>2011</option>
+												<option>2010</option>
+												<option>2009</option>
+												<option>2008</option>
+												<option>2007</option>
+												<option>2006</option>
+											</select>
+										</div>
+									</div>
+									<p
+										class="basic-error"
+										id="myProfileDobError"
+									>
+										Date of Birth is required
+									</p>
+								</div>
+								<div class="form-group">
+									<label class="basic-label d-block mb-2"
+										>Gender</label
+									>
+
+									<div class="form-check form-check-inline">
+										<input
+											class="form-check-input"
+											type="radio"
+											name="gender"
+											id="genderMale"
+											value="male"
+											checked
+										/>
+										<label
+											class="form-check-label"
+											for="genderMale">Male</label
+										>
+									</div>
+
+									<div class="form-check form-check-inline">
+										<input
+											class="form-check-input"
+											type="radio"
+											name="gender"
+											id="genderFemale"
+											value="female"
+										/>
+										<label
+											class="form-check-label"
+											for="genderFemale">Female</label
+										>
+									</div>
+								</div>
+								<div class="form-group">
+									<label
+										for="phone-number"
+										class="basic-label">Phone Number</label
+									>
+									<input
+										inputmode="numeric"
+										id="phone-number"
+										type="number"
+										class="basic-input my-profile__input"
+										placeholder="Phone Number"
+										required
+									/>
+								</div>
+							</form>
+							<div
+								class="d-flex gap-16 justify-content-center mt-24 mb-22"
+							>
+								<button
+									class="theme-btn theme-btn__outline theme-btn__outline--primary theme-btn__min-w-210 px-20"
+									>Cancel</button
+								>
+								<button
+									class="theme-btn theme-btn__primary px-20 theme-btn__min-w-210"
+									>Save</button
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="modal fade"
+					id="avatarModal"
+					tabindex="-1"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<div class="modal-content modal-content--custom">
+							<div
+								class="modal-header border-0 d-flex justify-content-between align-items-center px-10 pt-20"
+							>
+								<h5 class="modal-title fs-20 fw-700">
+									<i class="fas fa-image me-2"></i>Change
+									Image
+								</h5>
+								<i class="icon-cross_filled fs-24 cursor-pointer" data-bs-dismiss="modal"></i>
+								<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+							</div>
+
+							<div class="modal-body p-20">
+								<!-- File input -->
+								<div class="mb-3">
+									<div
+										class="d-flex justify-content-between align-items-center mb-3"
+									>
+										<label
+											for="avatarFile"
+											class="form-label mb-0"
+										>
+											Label
+										</label>
+										<p class="text-danger mb-0">
+											Please fix the input format
+										</p>
+									</div>
+
+									<div
+										class="d-flex justify-between align-center position-relative"
+									>
+										<input
+											class="form-control"
+											type="file"
+											id="avatarFile"
+											accept="image/*"
+										/>
+										<i class="icon-upload upload-icon"></i>
+									</div>
+									<!-- <div class="form-text text-danger">
+                        <i class="fas fa-info-circle me-1"></i>
+                        PNG, JPG, or WebP recommended. Maximum size: 8MB. Minimum: 150×150 pixels.
+                    </div> -->
+								</div>
+
+								<!-- Drag & Drop Zone -->
+								<!-- <div class="drop-zone mb-3 p-4 border-2 border-dashed rounded text-center" id="dropZone">
+                    <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                    <p class="mb-0">Or drag and drop your image here</p>
+                </div> -->
+
+								<!-- Cropper preview area -->
+								<div
+									class="my-cropper-container border rounded p-2 bg-light"
+								>
+									<div class="cropper-wrapper">
+                        <img id="cropperImage" style="max-width: 100%; display: none;" />
+									</div>
+
+									<!-- Cropper Controls -->
+									<div
+										id="cropperControls"
+										class="mt-3 d-none"
+									>
+										<div class="row g-2">
+											<div class="col-md-8">
+												<div
+													class="btn-group flex-wrap w-100"
+													role="group"
+													aria-label="Cropper controls"
+												>
+													<!-- <button type="button" class="btn btn-outline-secondary btn-sm" id="zoomInBtn" title="Zoom In (+ key)">
+                                        <i class="fas fa-search-plus"></i> Zoom +
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" id="zoomOutBtn" title="Zoom Out (- key)">
+                                        <i class="fas fa-search-minus"></i> Zoom -
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" id="rotateLeftBtn" title="Rotate Left (Ctrl + ←)">
+                                        <i class="fas fa-undo"></i> Rotate -
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" id="rotateRightBtn" title="Rotate Right (Ctrl + →)">
+                                        <i class="fas fa-redo"></i> Rotate +
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" id="resetBtn" title="Reset (Ctrl + R)">
+                                        <i class="fas fa-refresh"></i> Reset
+                                    </button> -->
+												</div>
+											</div>
+											<div class="col-md-4">
+												<!-- Live Preview -->
+												<div class="preview-container">
+													<label
+														class="form-label small"
+														>Preview:</label
+													>
+													<div
+														class="preview-wrapper"
+													>
+														<!-- <img id="cropPreview" class="preview-image" alt="Crop preview" /> -->
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- <div class="mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-lightbulb me-1"></i>
+                                <strong>Tips:</strong> Drag to move, scroll to zoom (desktop), use keyboard shortcuts for quick adjustments.
+                            </small>
+                        </div> -->
+									</div>
+								</div>
+
+								<!-- Error/Success Messages -->
+								<div
+									id="avatarError"
+									class="alert alert-danger mt-3 d-none"
+								>
+								</div>
+								<div
+									id="avatarSuccess"
+									class="alert alert-success mt-3 d-none"
+								>
+								</div>
+
+								<!-- Progress Bar -->
+								<div id="uploadProgress" class="mt-3 d-none">
+									<div class="progress">
+										<div
+											class="progress-bar progress-bar-striped progress-bar-animated"
+											role="progressbar"
+											style="width: 0%"
+										>
+										</div>
+									</div>
+									<small class="text-muted"
+										>Uploading...</small
+									>
+								</div>
+							</div>
+
+							<div class="modal-footer justify-content-center">
+								<button
+									type="button"
+									class="theme-btn theme-btn__outline theme-btn__outline--primary theme-btn__min-w-210"
+									id="cancelAvatarBtn"
+									data-bs-dismiss="modal"
+								>
+									<i class="fas fa-times me-2"></i>Cancel
+								</button>
+								<button
+									type="button"
+									class="theme-btn theme-btn__primary px-20 theme-btn__min-w-210"
+									id="saveAvatarBtn"
+									disabled
+								>
+									<i class="fas fa-save me-2"></i>Save
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| My Profile Section End ||== -->
+		</div>
+	</main>
+
+	<Footer />
+</Layout>

@@ -1,0 +1,304 @@
+@use "../base/variables" as *;
+
+.my-profile {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.select__wrapper__alt {
+  .select__options{
+     padding: 15px 10px;
+    color: #525252;
+    min-width: unset;
+
+    @media screen and (max-width: 576px) {
+      padding: 12.5px 6px;
+    }
+  }
+  width: 100%;
+     
+  // padding: 15px 10px;
+  &::after {
+    right: 10px;
+    font-size: 16px;
+  }
+}
+
+.my-profile__input {
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: black !important;
+    /* THE REAL FIX */
+    box-shadow: 0 0 0 1000px #fbf9ff inset !important;
+    /* THE SECRET iOS TRICK */
+    transition: background-color 99999s ease-in-out 0s !important;
+    /* Helps but not required */
+    caret-color: black !important;
+    appearance: none !important;
+    background-color: rgba(167, 112, 245, 0.12) !important;
+  }
+}
+
+.rounded-10 {
+  border-radius: 10px !important;
+}
+
+.form-wrapper {
+  background-color: #fbf9ff;
+  padding: 40px 40px 20px;
+
+  @media all and (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+// .buttons {
+// 	display: flex;
+// 	justify-content: end;
+// 	margin-bottom: 22px;
+
+// 	a {
+// 		color: #5b0ec7;
+// 		font-weight: 500;
+// 	}
+// }
+
+.form-group {
+  margin-bottom: 24px;
+
+  input {
+    border-color: #aeaeae;
+  }
+}
+
+.profile-picture-wrapper {
+  position: relative;
+  width: 208px;
+  height: 208px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.6) 60%,
+        rgba(0, 0, 0, 0.6) 60%);
+    opacity: 0;
+    transition: opacity 160ms ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.profile-picture {
+  width: 208px;
+  height: 208px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-image: linear-gradient(#00000099);
+  margin-bottom: 30px;
+}
+
+.profile-edit {
+  position: absolute;
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  overflow: visible;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease-in-out;
+
+  &__icon {
+    top: 45%;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  &__text {
+    top: 60%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+.profile-picture-wrapper:hover .profile-edit {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content--custom {
+  max-width: 540px;
+  max-height: 785px;
+
+}
+
+.upload-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #0C0C0D;
+  pointer-events: none;
+}
+
+.edit-button{
+  color: #5607c5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* Hide native file input UI text in avatar modal but keep the element clickable
+   so the custom icon and area can be used to pick a file. */
+// #avatarModal .modal-body input[type="file"].form-control {
+//   position: absolute;
+//   inset: 0;
+//   width: 100%;
+//   height: 100%;
+//   opacity: 0; /* hide native UI text */
+//   cursor: pointer;
+//   z-index: 3; /* sit above icon so clicks register on input */
+// }
+
+// /* Ensure upload icon is visible under the transparent input */
+// #avatarModal .modal-body .upload-icon {
+//   z-index: 2;
+// }
+
+
+
+
+/* ===============================
+   AVATAR MODAL DESIGN OVERRIDES
+   =============================== */
+/* ==============================
+   AVATAR MODAL – MASKED CIRCLE
+   ============================== */
+
+#avatarModal {
+
+  /* Hide controls only when modal does not have an image loaded */
+  #avatarModal:not(.image-loaded) #cropperControls,
+  #avatarModal:not(.image-loaded) #dropZone,
+  #avatarModal:not(.image-loaded) .preview-container {
+    display: none;
+  }
+
+  /* Cropper background */
+  .my-cropper-container {
+    position: relative;
+    // background: #8f9796;
+    border-radius: 10px;
+    padding: 0;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  /* Image wrapper */
+  .cropper-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  #cropperImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ===== DARK OVERLAY ===== */
+  //   .cropper-container::before {
+  //     content: "";
+  //     position: absolute;
+  //     inset: 0;
+  //     background: rgba(0, 0, 0, 0.45);
+  //     z-index: 2;
+  //   }
+
+  /* ===== CIRCLE CUT-OUT ===== */
+  /* Only show the circular mask when an image is loaded and the modal has the
+     `image-loaded` class. This prevents the circle from showing before upload. */
+  /* ===== CIRCLE CUT-OUT ===== */
+  /* Show a circular mask over the cropper while keeping Cropper's
+     interactive controls visible and usable. */
+
+  /* Ensure image stays below mask */
+  .cropper-wrapper {
+    z-index: 1;
+  }
+
+  /* Circular mask (darkens area outside the circle) */
+  .my-cropper-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    /* keep under Cropper controls */
+    /* Use radial gradient to create circular transparent center while
+       darkening the outside. This avoids stacking issues with box-shadow. */
+    // background: radial-gradient(circle at 50% 50%,
+    //     rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.45) 50%);
+  }
+
+  /* Make the crop view appear circular, but avoid hiding cropper controls */
+  .my-cropper-container .cropper-view-box,
+  .my-cropper-container .cropper-face {
+    border-radius: 50%;
+  }
+
+  /* Circular preview image */
+  .preview-container img,
+  #cropPreview {
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Ensure Cropper's interactive controls render above the mask */
+  .my-cropper-container .cropper-crop-box,
+  .my-cropper-container .cropper-point,
+  .my-cropper-container .cropper-line {
+    z-index: 3;
+  }
+
+  /* Footer buttons styling (design match) */
+  .modal-footer {
+    border-top: 0;
+
+    .btn-outline-secondary {
+      border-radius: 8px;
+      padding: 8px 28px;
+    }
+
+    .btn-success {
+      background-color: #6a00ff;
+      border-color: #6a00ff;
+      border-radius: 8px;
+      padding: 8px 28px;
+    }
+  }
+}

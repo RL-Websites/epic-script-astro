@@ -1,0 +1,552 @@
+@use "../base/variables" as *;
+
+.my-order {
+	padding: 120px 0 100px;
+
+	// &__title,
+	// &__title a {
+	// 	// font-size: $fs-;
+	// 	// line-height: 1;
+	// 	font-weight: 500;
+	// 	color: white;
+	// 	text-decoration: none;
+	// 	margin-bottom: 30px;
+
+	// 	text-align: center;
+	// 	gap: 10px;
+
+	// 	i {
+	// 		font-size: 44px;
+	// 	}
+
+	// 	&:active {
+	// 		text-decoration: none;
+	// 	}
+	// }
+
+	.order-list {
+		&.table {
+			thead {
+				th {
+					padding: 10px 12px !important;
+					font-size: $fs-18;
+					font-weight: 600;
+					color: #2D2D2D;
+
+					&:first-child {
+						padding-left: 20px !important;
+					}
+
+					&:last-child {
+						padding-right: 20px !important;
+					}
+				}
+			}
+		}
+	}
+
+	.list-table .table tbody td {
+		padding: 20px 12px !important;
+	}
+}
+
+.order-heading {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+
+	i {
+		font-size: $fs-40;
+		cursor: pointer;
+	}
+}
+
+.view-button {
+	border: 0;
+	background-color: transparent !important;
+	font-weight: 400;
+	color: $black;
+	display: inline-block;
+	font-size: 16px;
+	white-space: nowrap;
+	text-decoration: underline;
+}
+
+
+.order {
+	padding: 20px 20px 50px;
+
+	&__info {
+		display: flex;
+		gap: 30px;
+		margin-bottom: 20px;
+	}
+
+	&__label {
+		font-family: "poppins", sans-serif;
+		font-size: $fs-18;
+		font-weight: 600;
+		color: #2D2D2D;
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+
+		span {
+			font-weight: 400;
+		}
+	}
+
+	&__status {
+		padding: 30px 26px;
+		padding-bottom: 0;
+	}
+
+	&__track {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+
+		.tracker {
+			position: absolute;
+			top: -6px;
+			width: 100%;
+
+			&__single {
+				height: 2px;
+				width: 24.6% !important;
+				background-color: $blue-3;
+				display: inline-block;
+
+				&.active {
+					background: $primary;
+				}
+			}
+		}
+	}
+
+	&__step {
+		width: 20px;
+		height: 20px;
+		background-color: #E6D4FF;
+		border-radius: 50%;
+		position: relative;
+		z-index: 2;
+
+		&.active {
+			border-color: $primary;
+			background: $primary;
+		}
+	}
+
+	&__step-label {
+		font-size: 14px;
+		font-weight: 500;
+		display: block;
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $gray-medium2;
+		white-space: nowrap;
+
+		&.active {
+			color: #2D2D2D;
+		}
+
+		&--bottom {
+			top: 30px;
+			color: $primary;
+			font-weight: 600;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+.medicine-info {
+	padding: 28px 20px 50px 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 32px;
+
+	&--3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	&__item {
+		// display: flex;
+		// align-items: start;
+		// justify-content: start;
+
+		p {
+			margin: 0;
+			line-height: 1;
+			margin-top: 20px;
+			color: $gray-dark;
+
+			@media (max-width: 768px) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__label {
+		min-width: 154px;
+		color: #2D2D2D;
+		font-weight: 700;
+	}
+}
+
+.document-info {
+	padding: 28px 20px 50px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+
+		p {
+			margin: 0;
+			line-height: 1;
+			margin-top: 20px;
+		}
+	}
+
+	&__label {
+		min-width: 154px;
+		color: #2D2D2D;
+		font-weight: 700;
+	}
+}
+
+.medicine-info {
+	&__states {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-wrap: wrap;
+		gap: 12px;
+		margin-top: 20px;
+	}
+}
+
+.document-info {
+	height: 100%;
+
+	&__label {
+		min-width: 170px;
+	}
+}
+
+.order-details {
+	padding: 140px 0 100px;
+}
+
+.col-equal-height {
+	display: flex;
+
+	.col-md-6 {
+		flex: 1;
+
+		.card-basic {
+			height: 100%;
+		}
+	}
+}
+
+// .table-striped>tbody> {
+// 	background-color: #DADADA !important;
+// }
+
+@media only screen and (max-width: 992px) {
+	.my-order {
+		padding: 150px 0 80px;
+
+		&__title,
+		&__title a {
+			font-size: $fs-40;
+			line-height: 1.2;
+			margin-bottom: 15px;
+		}
+	}
+
+	.order {
+		&__track {
+			.tracker {
+				top: -7px;
+
+				&__single {
+					width: 24.5% !important;
+				}
+			}
+		}
+
+		&__label {
+			font-size: $fs-16;
+
+			span {
+				font-size: $fs-14;
+			}
+		}
+
+		&__step {
+			width: 15px;
+			height: 15px;
+		}
+
+		.order-details {
+			padding: 150px 0 80px;
+		}
+	}
+
+	.order-details {
+		padding: 150px 0 80px;
+	}
+
+
+}
+
+@media only screen and (max-width: 768px) {
+	.order__info {
+		display: flex;
+		flex-direction: column;
+
+		&p {
+			span {
+				display: block;
+			}
+		}
+	}
+
+	.my-order {
+		padding: 100px 0 50px;
+
+		&__title,
+		&__title a {
+			font-size: $fs-30;
+			line-height: 1;
+
+			i {
+				font-size: $fs-30;
+			}
+		}
+
+		.col-equal-height {
+			margin-top: 20px !important;
+
+			.col-md-6 {
+				&:nth-child(2) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	.order {
+		&__track {
+			.tracker {
+				&__single {
+					width: 24.4%;
+				}
+			}
+		}
+
+		&__step-label {
+			font-size: $fs-14;
+			gap: 5px;
+		}
+	}
+
+
+	.timeline {
+		position: relative;
+		display: block;
+		margin-top: 30px;
+		margin-left: 5px;
+
+		&__steps {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+		}
+
+		&__step {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			&.active {
+				.timeline__dot {
+					background: #7b3ff2;
+				}
+
+				.timeline__label {
+					font-weight: 600;
+					color: #000;
+				}
+			}
+
+			&.completed {
+				.timeline__dot {
+					background: #7b3ff2;
+				}
+
+				.timeline__label {
+					font-weight: 600;
+					color: #000;
+				}
+			}
+
+
+		}
+
+		&__dot {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background: #c6a3ff;
+			position: absolute;
+			left: -6px;
+		}
+
+		&__label {
+			font-size: $fs-16;
+			line-height: 1;
+			color: #6f6f6f;
+			font-weight: 400;
+			margin-left: 20px;
+		}
+
+		&__tracker {
+			display: inline-block;
+			height: 50px;
+			width: 2px;
+			background-color: #c6a3ff;
+			position: absolute;
+			top: 5px;
+			left: 0;
+
+			&.active {
+				background-color: #7b3ff2;
+			}
+
+			&--last {
+				height: 0;
+				width: 0;
+			}
+		}
+	}
+
+	.px-15 {
+		padding: 15px;
+	}
+
+	.medicine-info,
+	.document-info {
+		padding: 15px;
+		gap: 10px;
+
+		&--3 {
+			padding: 15px 0;
+		}
+	}
+
+	.medicine-info__item,
+	.document-info__item {
+		display: flex !important;
+		flex-direction: column !important;
+		padding: 8px 0 8px 0;
+
+		p {
+			line-height: 1.6;
+		}
+	}
+
+	.order-details {
+		padding: 100px 0 50px;
+
+		.col-equal-height {
+			flex-direction: column;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.order {
+		overflow-x: scroll;
+
+		&__track {
+			.tracker {
+				&__single {
+					width: 24.1%;
+				}
+			}
+		}
+
+		&__label {
+			font-size: 14px;
+		}
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.order {
+		&__info {
+			gap: 20px;
+		}
+
+		&__track {
+			width: 400px;
+
+			.tracker__single {
+				width: 24%;
+			}
+		}
+
+		&__label {
+			font-size: 12px;
+			text-wrap: nowrap;
+		}
+
+		&__step-label {
+			font-size: 10px;
+		}
+	}
+
+	.medicine-info__label,
+	.document-info__label {
+		min-width: 120px;
+	}
+}
+
+.faq__items__bottom {
+	.order-list {
+		&.table {
+			thead th {
+				padding: 10px 12px !important;
+			}
+
+			tbody td {
+				color: #525252;
+			}
+		}
+	}
+}

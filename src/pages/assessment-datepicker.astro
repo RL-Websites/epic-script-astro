@@ -1,0 +1,106 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-50">
+					How much decline in your work performance have you noticed?
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<!-- <div class="assessment__form assessment__form-container mt-30">
+					<div class="input-group date" id="datetimepicker3">
+						<input type="text" class="form-control" />
+						<span class="date-viewer">
+							<span id="month">MM</span>
+							<span id="date">DD</span>
+							<span id="year">YYYY</span>
+						</span>
+					</div>
+				</div> -->
+				<!-- Assessment form end -->
+
+				<!-- Assessment form start -->
+				<div
+					class="assessment__form mt-20"
+					style="position: relative; z-index: 9;"
+				>
+					<div class="dropdown__selection dropdown__selection__date">
+						<div class="select__wrapper">
+							<select class="select__options">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+
+						<div class="select__wrapper">
+							<select class="select__options">
+								<option disabled selected>Month</option>
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+						</div>
+
+						<div class="select__wrapper">
+							<select class="select__options">
+								<option disabled selected>Year</option>
+								<option>2025</option>
+								<option>2024</option>
+								<option>2023</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+								<option>2019</option>
+								<option>2018</option>
+								<option>2017</option>
+								<option>2016</option>
+								<option>2015</option>
+								<option>2014</option>
+								<option>2013</option>
+								<option>2012</option>
+								<option>2011</option>
+								<option>2010</option>
+								<option>2009</option>
+								<option>2008</option>
+								<option>2007</option>
+								<option>2006</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- Assessment form End -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons  -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

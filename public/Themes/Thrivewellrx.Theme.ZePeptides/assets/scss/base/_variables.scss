@@ -1,0 +1,77 @@
+// ==== Colors
+// Primary Brand Colors
+$primary-deep: #141a33; // Deep Dark Blue
+$primary: #5607c5; // Primary Purple
+$primary-light: #e6d4ff; // Light Purple
+$primary-lighter: #f6efff; // Very Light Purple
+$primary-lightest: #fbf9ff; // Off White Purple
+// Neutrals
+$black: #2d2d2d; // Dark Gray/Black
+$black-deep: #1f1f1f; // Deep Black
+$gray-dark: #525252; // Medium Gray
+$gray-medium2: #878CA8;
+$gray-medium: #868686;
+$gray-normal: #e7f3ff; // Normal Gray
+$gray-light: #dadada; // Light Gray
+$gray-aeae: #dadada; // Light Gray
+$gray-light-2: #ffd4dd; // Light Gray
+$gray-lighter: #ffe9e9; // Light Gray
+$white: #ffffff; // Pure White
+$gray-border: #dee2e6;
+$gray-border-light: #AEAEAE;
+// Accent Colors
+$red: #ed3131; // Red Accent
+$red-light: #ffeee8; // Light Red/Pink
+$green-deep: #BDDCB6; // Deep Green
+$green: #8ddcb6; // Medium Green
+$green-light: #f2ffef; // Light Green
+$green-lighter: #fffcdb; // Lighter Green
+$orange: #f3be11; // Orange Accent
+$dark: #444444;
+// Legacy color mappings (for backward compatibility)
+$secondary: $black; // Map to new black
+$light: $gray-light; // Map to new light gray
+$gray: $gray-dark; // Map to gray-dark
+$background-1: $primary-lightest;
+$background-2: $primary-lighter;
+$background-3: $primary-light;
+$success: #28a745;
+$submitted: #EAFFE7;
+$warning: #ffc107;
+$saving: #D8FFCE;
+$yellow-light: #FDF2DC; // Medium Gray
+
+// Additional legacy colors (for utils.scss compatibility)
+$yellow: #ffd66d; // Legacy yellow
+$purple: $primary; // Map to primary purple
+$green-1: $green; // Map to new green
+$green-2: #bbcc46; // Legacy green-2
+$blue-1: #72b8d1; // Legacy blue-1
+$blue-2: #9bd0e3; // Legacy blue-2
+$blue-3: #9790d4; // Legacy blue-3
+$pink-1: #d47186; // Legacy pink-1
+$pink-2: #ffe0eb; // Legacy pink-2
+
+// ==== Font Sizes
+$fs-10: 10px;
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-17: 17px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-22: 22px;
+$fs-24: 24px;
+$fs-28: 28px;
+$fs-30: 30px;
+$fs-32: 32px;
+$fs-36: 36px;
+$fs-40: 40px;
+$fs-44: 44px;
+$fs-48: 48px;
+$fs-70: 70px;
+$fs-80: 80px;
+$fs-90: 90px;
+$fs-140: 140px;
+$fs-200: 200px;

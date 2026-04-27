@@ -1,0 +1,497 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Cart Hero Section Start ||== -->
+			<section class="cart-hero pt-md-130 pt-120">
+				<div class="container" data-aos="fade-up" data-aos-duration="1000">
+					<h1 class="text-center text-primary-grad-1"> Complete Your Order </h1>
+
+					<!-- <div class="text-center">
+						<p class="cart-hero__text">
+							Need Assistance? Contact us at info@nexgen-wellness.com
+						</p>
+					</div> -->
+				</div>
+			</section>
+			<!-- ==|| Cart Hero Section End ||== -->
+
+			<!--==|| Product Cart Items Status Start ||== -->
+			<section class="cart-flash">
+				<div class="container">
+					<div class="cart-flash__box" data-aos="fade" data-aos-duration="1000">
+						<!-- <div class="cart-flash__message">
+							<div class="cart-flash__icon">
+								<i class="icon-checked"></i>
+							</div>
+
+							<p class="cart-flash__text">
+								"Tadalafil" has been added to your cart
+							</p>
+						</div> -->
+
+						<button
+							type="button"
+							class="theme-btn theme-btn__accent fw-bold text-primary d-none d-md-block"
+						>
+							Continue Shopping
+						</button>
+					</div>
+				</div>
+			</section>
+			<!--==|| Product Cart Items Status End ||== -->
+
+			<!--==|| Cart Information Status Start ||== -->
+			<section class="cart-view pb-md-100 pb-50">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+							<div class="cart__items">
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="d-flex align-items-center flex-column">
+											<div class="cart__thumbnail cart__thumbnail--purple">
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
+													alt="Product Image"
+												/>
+											</div>
+											<button
+												type="button"
+												class="theme-btn theme-btn__accent fw-bold text-primary d-md-block mt-2"
+											>
+												Delete Item
+											</button>
+										</div>
+
+										<div class="cart__details mt-0">
+											<p class="cart__item-name">BPC-157-05MG</p>
+											<div
+												class="d-flex flex-md-row flex-column align-items-md-center align-items-start w-100 justify-content-between py-3 gap-2"
+											>
+												<div class="d-flex align-items-start gap-2 w-100">
+													<input
+														class="form-check-input fs-md-24 fs-20 mt-0"
+														type="radio"
+														name="gender"
+														id="oneTimePrice"
+														value="male"
+														checked=""
+													/>
+													<div class="d-flex flex-md-column flex-row">
+														<label
+															class="form-check-label fs-md-24 fs-16 fw-bold lh-1"
+															for="oneTimePrice">One Time Price:</label
+														>
+														<p class="fs-16 fw-medium">$<span>500</span></p>
+													</div>
+												</div>
+												<div class="input-group product-action__cart w-auto">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input
+														type="text"
+														inputmode="numeric"
+														class="form-control numeric-only text-dark"
+														id="quantity"
+														value="1"
+													/>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="border-solid"></div>
+											<div
+												class="d-flex align-items-center w-100 justify-content-between pt-3"
+											>
+												<div class="d-flex align-items-start gap-2 w-100">
+													<input
+														class="form-check-input fs-md-24 fs-20 mt-0"
+														type="radio"
+														name="gender"
+														id="oneTimePrice"
+														value="male"
+														checked=""
+													/>
+													<div>
+														<label
+															class="form-check-label fs-md-24 fs-16 fw-bold lh-1"
+														>
+															<span>Subscribe & Save</span>
+															<button
+																type="button"
+																class="statusTooltipBtn theme-btn theme-btn__icon-only cart-delete-btn fs-md-20 fs-16 p-0"
+																data-bs-toggle="tooltip"
+																data-bs-html="true"
+																data-bs-title='<ul
+															
+																>
+																	<li
+																		><i class="icon-tick"></i> A Quarter Billion+
+																		nights made (and counting)</li
+																	>
+																	<li
+																		><i class="icon-tick"></i> Easily charge or cancel
+																		any time</li
+																	>
+																	<li
+																		><i class="icon-tick"></i> Delivered every 30
+																		days</li
+																	>
+																</ul>'
+																data-bs-placement="top"
+																data-bs-trigger="click hover"
+															>
+																<i class="icon-info-circle text-primary"></i>
+															</button>
+														</label>
+														<div class="d-flex gap-2">
+															<p
+																class="text-gray-medium fs-16 text-decoration-line-through mb-0"
+																>$220</p
+															>
+															<p class="fs-16 fw-medium">$<span>500</span></p>
+															<span
+																class="status-pill status-pill--saving d-inline-block"
+																>16.67% Savings</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+												<span>Consult</span>
+											</p> -->
+										</div>
+									</div>
+									<!-- 
+									<div class="cart__action">
+										<button
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
+											data-bs-toggle="modal"
+											data-bs-target="#confirm"
+										>
+											<i class="icon-delete"></i>
+										</button>
+									</div> -->
+								</div>
+								<div class="cart__item">
+									<div class="cart__product">
+										<div class="d-flex align-items-center flex-column">
+											<div class="cart__thumbnail cart__thumbnail--purple">
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/products/product-1.png"
+													alt="Product Image"
+												/>
+											</div>
+											<button
+												type="button"
+												class="theme-btn theme-btn__accent fw-bold text-primary d-md-block mt-2"
+											>
+												Delete Item
+											</button>
+										</div>
+
+										<div class="cart__details mt-0">
+											<div
+												class="d-flex flex-md-row flex-column align-items-md-center align-items-start w-100 justify-content-between gap-2"
+											>
+												<div class="w-100">
+													<p class="cart__item-name"
+														>Cagrilintide Injectable Solution</p
+													>
+													<p class="fw-medium"><span>Duration:</span>1 month</p>
+													<p class="fw-medium"
+														>$<span>60</span>+ $<span>29.00</span> Physician
+														Consult</p
+													>
+												</div>
+												<div class="input-group product-action__cart w-auto">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input
+														type="text"
+														inputmode="numeric"
+														class="form-control numeric-only text-dark"
+														id="quantity"
+														value="1"
+													/>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+
+											<!-- <p class="cart__item-type">
+												<span>.5mg</span>
+												<span class="px-2">|</span>
+												<span>Consult</span>
+											</p> -->
+										</div>
+									</div>
+									<!-- 
+									<div class="cart__action">
+										<button
+											class="theme-btn theme-btn__icon-only cart-delete-btn"
+											data-bs-toggle="modal"
+											data-bs-target="#confirm"
+										>
+											<i class="icon-delete"></i>
+										</button>
+									</div> -->
+								</div>
+							</div>
+
+							<div class="promo">
+								<div class="promo__form">
+									<input
+										type="text"
+										placeholder="Coupon code"
+										class="promo__input"
+									/>
+									<button
+										class="theme-btn theme-btn__danger theme-btn__outline--primary promo__btn fs-md-18 fw-bold"
+									>
+										Apply Coupon
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-lg-5"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						>
+							<div class="cart-card">
+								<div class="cart-card__header">
+									<p class="fs-24 fw-extrabold mb-0"
+										>Cart Total <span class="fs-16 fw-normal ms-2"
+											>(1 Item)</span
+										></p
+									>
+								</div>
+								<div class="cart-card__body">
+									<div class="pricing__basic">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Subtotal</p>
+											<p class="pricing__item--value">$150.50</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">Shipping</p>
+											<p class="pricing__item--value-strike">$30.50</p>
+										</div>
+									</div>
+
+									<!-- <div class="coupon pricing__coupon">
+										<p class="coupon__label">Coupon Code</p>
+										<div class="theme-tag">
+											<i class="icon-promo-code theme-tag__icon"></i>
+											<span class="theme-tag__text">VRIC2024</span>
+											<button class="theme-tag__btn">
+												<i class="icon-cross"></i>
+											</button>
+										</div>
+									</div> -->
+
+									<div class="pricing__total">
+										<div class="pricing__item">
+											<p class="pricing__item--name">Discount</p>
+											<p class="pricing__item--value text-dark-red-2">
+												-$5.50
+											</p>
+										</div>
+
+										<div class="pricing__total-item">
+											<p class="pricing__total--name">Total</p>
+											<p class="pricing__total--value">$175.87</p>
+										</div>
+										<div
+											class="text-center mt-20 d-none d-md-block"
+											data-aos="flip-left"
+											data-aos-duration="1000"
+											data-aos-once="true"
+										>
+											<a
+												class="theme-btn theme-btn__primary d-block w-100"
+												href="/payment-method"
+											>
+												Proceed to Checkout
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div
+						class="attention mt-40"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
+						<div class="attention__box">
+							<div class="attention__title">
+								<i class="icon-info-circle text-secondary"></i>
+								<p>Attention: <span>Final Dosage Determined by Doctor</span></p>
+							</div>
+							<p class="attention__price-desc">
+								<span>Price:</span>
+								<span>$150.50</span> +
+								<span>Shipping</span> +
+								<span>Consultation fee</span>
+							</p>
+
+							<p class="attention__text">
+								The dosage you selected is not final and will be determined by
+								the doctor during your consultation. The doctor will assess your
+								intake form and appointment details to prescribe the appropriate
+								dosage. The final price will be adjusted based on the prescribed
+								dosage after the consultation.
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="text-center mt-30 d-none d-md-block"
+						data-aos="flip-left"
+						data-aos-duration="1000"
+						data-aos-delay="100"
+						data-aos-once="true"
+					>
+						<a
+							href="/payment-method"
+							class="theme-btn theme-btn__primary px-50"
+						>
+							Proceed to Checkout
+						</a>
+					</div> -->
+				</div>
+
+				<div class="floating__buttons d-md-none d-block">
+					<div class="floating__buttons__items">
+						<button
+							class="theme-btn theme-btn__accent fw-medium text-primary"
+							data-bind="click:goToHome"
+						>
+							Continue Shopping
+						</button>
+						<button
+							class="theme-btn theme-btn__primary text-center"
+							data-bind="click:loadPartialShippingView"
+						>
+							Proceed to Checkout
+						</button>
+					</div>
+				</div>
+			</section>
+			<!--==|| Cart Information Status End ||== -->
+
+			<!-- ==|| Empty Cart Status Start ||==
+			<section
+				class="cart-view pt-md-150 pb-md-100 pt-120 pb-50"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
+				<div class="container">
+					<div class="row">
+						<div class="text-center">
+							<div class="cart-empty__graphic mx-auto">
+								<img
+									class="cart-empty__img"
+									src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/empty-cart.svg"
+									alt="Empty Cart"
+								/>
+							</div>
+				
+							<p
+								class="cart-empty__text font-sfui fs-md-24 fs-20 text-secondary fw-bold mt-30"
+								>Your cart is currently empty!</p
+							>
+							<div class="mt-24" data-aos="flip-left" data-aos-duration="1000">
+								<a
+									href="/"
+									class="theme-btn theme-btn__primary theme-btn-size-md px-md-100 d-inline-block"
+								>
+									Continue Shopping
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+			<!--==|| Empty Cart Status End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+
+	<!-- Confirm Modal Start -->
+	<div
+		id="confirm"
+		class="modal fade confirm-modal"
+		tabindex="-1"
+		aria-labelledby="confirmLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+				<div class="modal-body">
+					<div class="modal__icon">
+						<i class="icon-alert"></i>
+					</div>
+					<div class="modal__title">
+						<p>Please Confirm</p>
+					</div>
+
+					<div class="modal__text">
+						<p>Do you want to delete this item?</p>
+					</div>
+
+					<div class="modal__actions">
+						<button
+							class="modal__action modal__action--primary"
+							type="button"
+							data-bs-dismiss="modal"
+						>
+							No
+						</button>
+						<button class="modal__action modal__action--outline" type="button">
+							Yes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<Footer />
+	<!-- Confirm Modal End -->
+</Layout>
+<script
+	src="../../public/Themes/Thrivewellrx.Theme.ZePeptides/assets/js/tooltip.js"
+></script>

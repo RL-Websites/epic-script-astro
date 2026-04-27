@@ -1,0 +1,56 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-40">
+					Are you new or an existing SlimOut customer?
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-30">
+					<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio1"
+							value="new"
+							checked
+						/>
+						<label for="answerRadio1"> New </label>
+					</div>
+
+					<div class="assessment__form_radio mt-sm-20 mb-0">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio2"
+							value="existing"
+						/>
+						<label for="answerRadio2"> Existing </label>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

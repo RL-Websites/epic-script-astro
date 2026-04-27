@@ -1,0 +1,175 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- =====|| document upload Section Start ||====== -->
+			<section class="upload-document">
+				<div class="container">
+					<div class="medical-documents">
+						<h2 class="section__title text-center mb-40">
+							Upload Your Medical <span class="text-gold-gradient-1"
+								>Documents and Driving License</span
+							>
+						</h2>
+						<div class="photo-dropzone">
+							<div class="dropzone">
+								<input type="file" id="dropzone-input" />
+								<label class="dropzone__area" for="dropzone-input">
+									<div class="dropzone__content">
+										<div class="pb-20">
+											<i class="icon-intake_form text-secondary"></i>
+										</div>
+										<p class="text-secondary fs-18 fw-bold mb-5">
+											Choose a file or drag and drop here
+										</p>
+										<p class="text-grey fs-18 fw-600">
+											JPEG, PNG & PDF, up to 50 MB.
+										</p>
+
+										<span
+											class="theme-btn theme-btn__primary py-10 w-full d-block fw-400 mt-30"
+										>
+											Browse Files
+										</span>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="generated-document completed">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="generated-document__status">
+										<div class="generated-document__status__info">
+											<div class="doc-icon">
+												<i class="icon-attachment"></i>
+											</div>
+											<div class="doc-content">
+												<p>CVC Reports.pdf</p>
+												<ul>
+													<li>30 KB of 90 KB <i class="icon-ellipse"></i></li>
+													<li><i class="icon-completed me-3"></i> Completed</li>
+												</ul>
+											</div>
+										</div>
+										<div class="generated-document__status__action">
+											<button
+												class="theme-btn theme-btn__icon-only"
+												data-toggle="modal"
+												data-target="#DocRemoveConfirm"
+												type="button"
+											>
+												<i class="icon-delete"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div
+									class="col-md-4 offset-md-1 d-flex align-items-center"
+									style="padding: 0"
+								>
+									<div class="dropdown dropdown__selection ml-auto mr-0 w-100">
+										<div class="select__wrapper">
+											<select class="select__options py-2">
+												<option value="prescription">Prescription</option>
+												<option value="report">Report</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="generated-document completed last">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="generated-document__status">
+										<div class="generated-document__status__info">
+											<div class="doc-icon">
+												<i class="icon-attachment"></i>
+											</div>
+											<div class="doc-content">
+												<p>CVC Reports.pdf</p>
+												<ul>
+													<li>30 KB of 90 KB <i class="icon-ellipse"></i></li>
+													<li><i class="icon-loader me-3"></i> Completed</li>
+												</ul>
+											</div>
+										</div>
+										<div class="generated-document__status__action">
+											<button
+												class="theme-btn theme-btn__icon-only"
+												data-toggle="modal"
+												data-target="#DocRemoveConfirm"
+												type="button"
+											>
+												<i class="icon-delete"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div
+									class="col-md-4 offset-md-1 d-flex align-items-center"
+									style="padding: 0"
+								>
+									<div class="dropdown dropdown__selection ml-auto mr-0 w-100">
+										<div class="select__wrapper">
+											<select class="select__options py-2">
+												<option value="prescription">Prescription</option>
+												<option value="report">Report</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mandatory-documents">
+							<div class="mandatory-documents__icon">
+								<i class="icon-info-circle"></i>
+							</div>
+							<div class="mandatory-documents__content">
+								<p class="mandatory-documents__content__title">
+									Mandatory Files to Upload:
+									<span class="fw-400">Driving license & Lab report</span>
+								</p>
+								<p class="mandatory-documents__content__description">
+									You can skip this process by clicking on save button, but
+									later on you have to upload these mandatory documents.
+								</p>
+							</div>
+						</div>
+
+						<div class="step-btn">
+							<button
+								type="button"
+								class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--primary"
+							>
+								Go Back
+							</button>
+							<button
+								data-toggle="modal"
+								data-target="#couponModal"
+								type="button"
+								class="theme-btn .theme-btn-size-lg theme-btn__primary"
+							>
+								Save
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =====|| document upload Section end ||====== -->
+		</div>
+	</main>
+
+	<Footer />
+</Layout>

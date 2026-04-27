@@ -1,0 +1,211 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label mt-40">
+					Are you interested in Semaglutide or Tirzepatide?
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-30">
+					<div class="assessment__form__checkbox">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox1"
+							value="yes"
+							checked
+						/>
+						<label for="answerCheckbox1"
+							>Medullary Thyroid Carcinoma (MTC)</label
+						>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox2"
+							value="yes"
+						/>
+						<label for="answerCheckbox2"
+							>Multiple Endocrine Neoplasia Type 2 (MEN2)</label
+						>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox3"
+							value="yes"
+						/>
+						<label for="answerCheckbox3">Pancreatitis</label>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox4"
+							value="yes"
+						/>
+						<label for="answerCheckbox4">Kidney disease (moderate/severe)</label
+						>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox5"
+							value="yes"
+						/>
+						<label for="answerCheckbox5">Liver disease (moderate/severe)</label>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox6"
+							value="yes"
+						/>
+						<label for="answerCheckbox6"
+							>Severe GI disorders (e.g., gastroparesis)</label
+						>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox7"
+							value="yes"
+						/>
+						<label for="answerCheckbox7">Diabetic retinopathy</label>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox8"
+							value="yes"
+						/>
+						<label for="answerCheckbox8">Type 1 Diabetes</label>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox9"
+							value="yes"
+						/>
+						<label for="answerCheckbox9"
+							>Active cancer (undergoing treatment)</label
+						>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox10"
+							value="yes"
+						/>
+						<label for="answerCheckbox10">History of eating disorders</label>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox11"
+							value="yes"
+						/>
+						<label for="answerCheckbox11"
+							>History of substance abuse or addiction</label
+						>
+					</div>
+
+					<div class="assessment__form__checkbox mt-30">
+						<input
+							type="checkbox"
+							name="answerCheckbox"
+							id="answerCheckbox12"
+							value="yes"
+						/>
+						<label for="answerCheckbox12">None of the above</label>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+
+				<!-- Assessment action buttons start -->
+				<CommonAction />
+				<!-- Assessment action buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>
+
+<!-- Question Answer Modal Start -->
+<div id="ques-ans" class="modal fade confirm-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+			<div class="modal-body">
+				<div class="modal__icon">
+					<i class="icon-alert bg-white"></i>
+				</div>
+				<div class="modal__text">
+					<p>We're Unable to Proceed with Treatment</p>
+				</div>
+				<div class="modal__text">
+					<p class="modal__primary-text">
+						<span>
+							Based on the medical information you’ve provided, it appears that
+							you may have a condition that makes treatment with GLP-1 products
+							unsafe at this time. For your safety, we recommend consulting with
+							your personal healthcare provider before pursuing any weight loss
+							treatments.
+						</span>
+					</p>
+				</div>
+
+				<div class="modal__actions modal__actions--alt">
+					<!-- Assessment buttons start -->
+					<button
+						class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--secondary min-w-206"
+						data-dismiss="modal">Back</button
+					>
+					<button
+						class="theme-btn theme-btn-size-lg theme-btn__secondary min-w-206"
+						>Next</button
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Question Answer Modal End -->

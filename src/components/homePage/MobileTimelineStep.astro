@@ -1,0 +1,69 @@
+---
+// MobileTimelineStep.astro
+interface Props {
+	stepNumber: number;
+	title: string;
+	description: string;
+	imageSrc: string;
+	imageAlt: string;
+	isActive?: boolean;
+	isLast?: boolean;
+}
+
+const {
+	stepNumber,
+	title,
+	description,
+	imageSrc,
+	imageAlt,
+	isLast = false,
+} = Astro.props;
+
+const dotClass = "mobile-dot";
+const numberClass = "mobile-step-number";
+---
+
+<div class="mobile-timeline-step" data-observed>
+	<div class="d-flex items-start gap-10">
+		<div
+			class="d-flex flex-column align-items-center"
+			style="position: relative;"
+		>
+			<div class={dotClass}></div>
+			<!-- Add line element that will be toggled -->
+			<div class="mobile-dot-line"></div>
+		</div>
+
+		<div class="d-flex align-items-start">
+			<div class="d-flex flex-column">
+				<h4
+					class="mobile-step-title fw-bold mb-3"
+					data-aos="fade-up"
+					data-aos-duration="500"
+				>
+					{title}
+				</h4>
+
+				<div class="d-flex gap-10 align-items-start">
+					<div
+						class=`${numberClass} mt-10 step-number-mobile`
+						data-aos="fade-up"
+						data-aos-duration="500">{stepNumber}</div
+					>
+
+					<div class="flex-grow-1" data-aos="fade-up" data-aos-duration="500">
+						<p
+							class="small mb-3 mobile-number-description"
+							style="line-height: 1.5; font-size: 0.875rem;"
+						>
+							{description}
+						</p>
+						<div class="mobile-img" data-aos="fade-up" data-aos-duration="500">
+							<img src={imageSrc} alt={imageAlt} hidden />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

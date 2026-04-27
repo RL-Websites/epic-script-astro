@@ -1,0 +1,1341 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Toast from "../components/Toast.astro";
+import Layout from "../layouts/Layout.astro";
+import StateAutocomplete from "../components/StateAutocomplete.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| Cart Hero Section Start ||== -->
+			<section class="cart-hero pt-md-130 pt-120">
+				<div
+					class="container"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
+					<h1 class="text-primary-grad-1 text-center">
+						Payment Method
+					</h1>
+				</div>
+			</section>
+			<!-- ==|| Cart Hero Section End ||== -->
+
+			<!-- ==|| Payment List Section Start ||== -->
+			<section class="payment__card">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-8">
+							<div
+								class="payment-card__body cart-card payment__card--cart-summary"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
+								<div class="cart-card__header">
+									<h3>Payment Details</h3>
+								</div>
+								<div
+									class="payment__form payment__form--body payment__form--card"
+									id="payment-form"
+								>
+									<div class="form-group">
+										<div class="d-flex items-start">
+											<label
+												class="fw-bold mb-5 basic-label"
+												for="cardNumber"
+												>Card Number<span
+													class="icon-ellipse"
+												></span></label
+											>
+											<div
+												class="card-icons d-md-none d-flex ml-auto"
+											>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/visa.png"
+													alt="Visa"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/master.png"
+													alt="Mastercard"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/amex.png"
+													alt="AMEX"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/jcb.png"
+													alt="JCB"
+												/>
+											</div>
+										</div>
+
+										<div
+											class="payment__form--card-variation"
+										>
+											<input
+												inputmode="numeric"
+												class="basic-input card-input"
+												type="text"
+												id="cardNumber"
+												placeholder="1234 1234 1234 1234"
+											/>
+											<div
+												class="card-icons d-md-flex d-none"
+											>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/visa.png"
+													alt="Visa"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/master.png"
+													alt="Mastercard"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/amex.png"
+													alt="AMEX"
+												/>
+												<img
+													src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/payment/jcb.png"
+													alt="JCB"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div
+										class="payment__form--inline-fields mt-20"
+									>
+										<div class="form-group">
+											<label
+												class="fw-bold mb-5 basic-label"
+												for="expiry"
+												>Expiration Date<span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												inputmode="numeric"
+												class="basic-input"
+												type="text"
+												id="expiry"
+												placeholder="MM/YY"
+											/>
+										</div>
+										<div class="form-group">
+											<label
+												class="fw-bold mb-5 basic-label"
+												for="cvc"
+												>Security Code<span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												inputmode="numeric"
+												class="basic-input"
+												type="text"
+												id="cvc"
+												placeholder="CVC"
+											/>
+										</div>
+									</div>
+
+									<div class="select__items mb-0">
+										<label
+											class="fw-bold mb-5 basic-label"
+											for="country"
+											>Country<span class="icon-ellipse"
+											></span></label
+										>
+										<select
+											class="select__options text-secondary fw-normal"
+											name="country"
+											id="country"
+										>
+											<option value=""
+												>Select a country</option
+											>
+											<option value="Afghanistan"
+												>Bangladesh</option
+											>
+											<option value="Albania"
+												>India</option
+											>
+											<option value="Algeria"
+												>Pakistan</option
+											>
+											<option value="Andorra">USA</option>
+											<option value="Angola"
+												>Canada</option
+											>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 payment__card--right">
+							<div
+								class="cart-card"
+								data-aos="fade-left"
+								data-aos-duration="1000"
+								data-aos-delay="200"
+							>
+								<div class="cart-card__header">
+									<h3 class="fs-md-24 fs-20 fw-bold">
+										Cart Total <span class="fs-16 fw-normal"
+											>(4 items)</span
+										>
+									</h3>
+								</div>
+								<div class="cart-card__body">
+									<div class="pricing__basic">
+										<div class="pricing__item">
+											<p class="pricing__item--name">
+												Subtotal
+											</p>
+											<p class="pricing__item--value">
+												$150.50
+											</p>
+										</div>
+										<div class="pricing__item">
+											<p class="pricing__item--name">
+												Shipping
+											</p>
+											<p class="pricing__item--value">
+												$30.50
+											</p>
+										</div>
+										<!-- <div class="pricing__item">
+											<p class="pricing__item--name">Consultancy Fee</p>
+											<p class="pricing__item--value">$30.50</p>
+										</div> -->
+									</div>
+
+									<div class="pricing__total">
+										<div class="pricing__item">
+											<p class="pricing__item--name">
+												Discount
+											</p>
+											<p
+												class="pricing__item--value text-dark-red-2"
+											>
+												-$5.50
+											</p>
+										</div>
+
+										<div class="pricing__total-item">
+											<p class="pricing__total--name">
+												Total
+											</p>
+											<p class="pricing__total--value">
+												$175.87
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- <div class="attention mt-20">
+								<div class="attention__box">
+									<p class="attention__title">
+													<i class="icon-alert"></i>
+													<span>Attention: This is not the final charge</span>
+												</p>
+
+									<div class="attention__title">
+										<i class="icon-alert text-secondary"></i>
+										<p
+											>Attention:
+											<span>Final Dosage Determined by Doctor</span></p
+										>
+									</div>
+
+									<p class="attention__price-desc">
+													<span>$150.50</span> + <span>Shipping</span> +
+													<span>Consultation fee</span>
+												</p>
+
+									<p class="attention__text">
+										The highest dosage price is only a credit card hold until
+										the doctor consultation. The final price will be adjusted
+										based on the prescribed dosage.
+									</p>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<!-- ALert section start -->
+					<!-- <div
+						class="attention pb-40 mt-40"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+					>
+						<div class="attention__box">
+							<div class="attention__title">
+								<i class="icon-alert"></i>
+								<p
+									>GLP-1, Peptides, TRT/HRT, and Other Prescription Treatments</p
+								>
+							</div>
+
+							<p class="attention__text">
+								Your card will not be charged at checkout. We securely store
+								your payment information and only process the charge once a
+								doctor reviews your intake form and issues your prescription. If
+								you are not approved, you will not be charged.
+							</p>
+							<div class="attention__title">
+								<i class="icon-alert"></i>
+								<p
+									>DotFit, Skin Care & Pain Relief Products (Non-Prescription)</p
+								>
+							</div>
+
+							<p class="attention__text">
+								These items do not require a doctor review or intake form. Your
+								card will be charged immediately at checkout, and your order
+								will proceed directly to fulfillment.
+							</p>
+						</div>
+					</div> -->
+					<!-- ALert section end -->
+				</div>
+			</section>
+			<!-- ==|| Payment List Section End ||== -->
+
+			<!-- ==|| Shipping info Section Start ||== -->
+			<section class="mt-40" data-aos="fade-up" data-aos-duration="1000">
+				<div class="container">
+					<div class="payment__card mt-0">
+						<div class="payment__header">
+							<h3 class="fs-md-24 fs-18 fw-bold">
+								Shipping Info
+							</h3>
+
+							<div>
+								<label
+									class="custom-check d-flex align-items-center"
+								>
+									<span
+										class="custom-check__input custom-check__input--alt"
+									>
+										<input type="checkbox" />
+										<span class="black-icon"></span>
+									</span>
+									<span class="custom-check__label">
+										Save this Information
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="payment__body">
+							<div class="payment__form">
+								<form>
+									<div class="payment__wrapper">
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingName"
+												>Name <span class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												name="shippingName"
+												id="shippingName"
+												placeholder=""
+											/>
+											<p class="basic-error">
+												Shipping name is required
+											</p>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingState"
+												>State <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<StateAutocomplete
+												id="shippingState"
+												name="shippingState"
+												className="select__options select__options--padding fs-16 text-secondary"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingAddress"
+												>Address <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingAddress"
+												id="shippingAddress"
+											/>
+										</div>
+
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingAddress"
+												>City <span class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingAddress"
+												id="shippingAddress"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingZipCode"
+												>Zip Code <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												inputmode="numeric"
+												class="basic-input"
+												type="text"
+												name="shippingZipCode"
+												id="shippingZipCode"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingEmail"
+												>Email Address <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="shippingEmail"
+												id="shippingEmail"
+											/>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| Shipping info Section End ||== -->
+
+			<!-- ==|| Billing Section Start ||== -->
+			<section
+				class="payment__billing mt-50 mt-md-100"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
+				<div class="container">
+					<div class="payment__card mt-0">
+						<div class="payment__header">
+							<h3 class="fs-md-24 fs-20 fw-bold">Billing Info</h3>
+
+							<div>
+								<label class="custom-check">
+									<span
+										class="custom-check__input custom-check__input--alt"
+									>
+										<input type="checkbox" />
+										<span class="black-icon"></span>
+									</span>
+									<span class="custom-check__label">
+										Same as shipping Information
+									</span>
+								</label>
+								<label class="custom-check ml-20">
+									<span
+										class="custom-check__input custom-check__input--alt"
+									>
+										<input type="checkbox" />
+										<span class="black-icon"></span>
+									</span>
+									<span class="custom-check__label">
+										Save this Information
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="payment__body">
+							<div class="payment__form">
+								<form>
+									<div class="payment__wrapper">
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="shippingName"
+												>Name <span class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="text"
+												name="shippingName"
+												id="shippingName"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="billingState"
+												>State <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<StateAutocomplete
+												id="billingState"
+												name="billingState"
+												className="select__options select__options--padding fs-16 text-secondary"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="billingAddress"
+												>Address <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="billingAddress"
+												id="billingAddress"
+											/>
+										</div>
+
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="billingCity"
+												>City <span class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="billingCity"
+												id="billingCity"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="billingZipCode"
+												>Zip Code <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												inputmode="numeric"
+												class="basic-input"
+												type="text"
+												name="billingZipCode"
+												id="billingZipCode"
+											/>
+										</div>
+										<div class="payment__input">
+											<label
+												class="basic-label"
+												for="billingEmail"
+												>Email Address <span
+													class="icon-ellipse"
+												></span></label
+											>
+											<input
+												class="basic-input"
+												type="email"
+												name="billingEmail"
+												id="billingEmail"
+											/>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="condition__highlight mt-50">
+						<p class="mb-0"
+							>This product is not dispensed without intake review and provider
+							clearance.</p
+						>
+					</div> -->
+					<!-- <div class="mt-30">
+						<label class="custom-check mt-15">
+							<span class="custom-check__input">
+								<input
+									type="checkbox"
+									data-bind="checked: hasAnsweredTruthfully"
+								/>
+								<span></span>
+							</span>
+
+							<span class="custom-check__label">
+								I confirm that all information associated with my treatment is
+								accurate and that I understand these products must be used only
+								under the supervision of a licensed healthcare provider.
+							</span>
+						</label>
+						<p
+							class="basic-error"
+							data-bind="visible: isSubmitted, validationMessage: hasAnsweredTruthfully"
+						></p>
+					</div> -->
+
+					<div>
+						<label class="custom-check mt-15">
+							<span class="custom-check__input">
+								<!--<input type="checkbox" data-bind="checked: agreedToTermsAndConditions" />-->
+								<input
+									type="checkbox"
+									data-bs-toggle="modal"
+									data-bs-target="#termCodition"
+									checked
+								/>
+								<span></span>
+							</span>
+
+							<span class="custom-check__label">
+								Please read the <span class="text-primary"
+									>Terms & Conditions</span
+								>—purchase cannot be completed without your
+								acknowledgment.
+							</span>
+						</label>
+						<p
+							class="basic-error"
+							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions"
+						>
+						</p>
+					</div>
+
+					<div class="step-btn text-end mt-40">
+						<button
+							type="button"
+							class="theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer theme-btn__min-w-210"
+						>
+							Go Back
+						</button>
+						<button
+							type="button"
+							class="theme-btn theme-btn__primary theme-btn__min-w-210 theme-btn__primary--signin theme-btn--with-loader"
+							data-bs-toggle="modal"
+							data-bs-target="#payment"
+						>
+							Next
+
+							<span class="theme-btn__loader spin"></span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| Billing Section End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+
+	<!-- =====|| Payment Successful Modal Start ||====== -->
+	<div
+		id="payment"
+		class="modal fade payment-modal confirm-modal"
+		tabindex="-1"
+		aria-labelledby="payment"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<!-- <button type="button" class="btn-close" data-dismiss="modal">
+					<i class="icon-cross_filled"></i>
+				</button> -->
+
+				<div class="modal-body">
+					<div class="modal__icon">
+						<i class="icon-tick-outlined"></i>
+					</div>
+					<div class="modal__text">
+						<h5
+							class="site__heading-five fw-bold text-secondary text-center"
+						>
+							Payment Successful
+						</h5>
+					</div>
+
+					<p
+						class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10"
+					>
+						Thank you for your payment. Your order is now being
+						processed. If necessary, a prescriber will contact you
+						to discuss the next steps in your treatment.
+					</p>
+					<p class="modal__highlight-text">
+						This product requires a lab test for proper evaluation.
+						We will send you a lab test kit, or you can choose to
+						visit our nearest lab for testing. Once the test results
+						are available, we will proceed with the next steps in
+						your treatment.
+					</p>
+
+					<div class="modal__actions">
+						<button
+							class="modal__action modal__action--outline"
+							type="button"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						>
+							I Will Do It Later
+						</button>
+						<button
+							class="modal__action modal__action--primary"
+							type="button"
+						>
+							Upload Documents
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =====|| Payment Successful Modal End ||====== -->
+
+	<!-- =====|| Toast Start ||====== -->
+	<Toast />
+	<!-- =====|| Toast Start ||====== -->
+
+	<!-- Terms & Condition Modal Start -->
+	<div
+		id="termCodition"
+		class="modal fade terms-condition-modal"
+		tabindex="-1"
+		role="dialog"
+	>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<!-- <button type="button" class="btn-close-filled" data-dismiss="modal">
+					<i class="icon-cross_filled"></i>
+				</button> -->
+
+				<div class="modal-header">
+					<h2 class="section__title">Terms and Conditions</h2>
+				</div>
+
+				<div class="modal-body">
+					<div class="container px-4">
+						<div class="mt-md-10 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								Important Legal Notice
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								By purchasing from PeptideLab, you acknowledge
+								that all products are for research purposes only
+								and agree to comply with all terms outlined
+								below. These terms constitute a legally binding
+								agreement.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								1. Acceptance of Terms
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								By accessing or using PeptideLab's website and
+								purchasing our products, you agree to be bound
+								by these Terms and Conditions. If you do not
+								agree with any part of these terms, you must not
+								use our website or purchase our products.
+							</p>
+
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								These terms constitute a legally binding
+								agreement between you and PeptideLab. We reserve
+								the right to modify these terms at any time, and
+								such modifications shall be effective
+								immediately upon posting on our website.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								2. Research Use Only
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								ALL PRODUCTS ARE SOLD STRICTLY FOR LABORATORY
+								AND RESEARCH PURPOSES ONLY.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Our peptides and research chemicals are NOT
+								intended for:
+							</p>
+							<ul class="list-disc">
+								<li>
+									Human consumption or self-administration
+								</li>
+								<li>Therapeutic, diagnostic, or medical use</li>
+								<li>
+									Administration to animals (in-vivo
+									applications)
+								</li>
+								<li>
+									Use as food additives or dietary supplements
+								</li>
+								<li>
+									Any application outside legitimate
+									scientific research
+								</li>
+							</ul>
+
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								By purchasing, you acknowledge and warrant that
+								you will use products exclusively for qualified
+								research purposes in appropriate laboratory
+								settings.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								3. Age Verification & Eligibility
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								You must be at least 18 years of age to purchase
+								from PeptideLab. By placing an order, you
+								represent and warrant that:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>You are 18 years of age or older</li>
+								<li>
+									You have the legal capacity to enter into
+									this agreement
+								</li>
+								<li>
+									You are not prohibited by law from
+									purchasing these products
+								</li>
+								<li>
+									All information you provide is accurate and
+									complete
+								</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								We reserve the right to refuse service or cancel
+								orders if we suspect misrepresentation of age or
+								eligibility.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								4. Product Information & Accuracy
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								We strive to provide accurate product
+								information, including descriptions,
+								specifications, purity levels, and pricing.
+								However:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>
+									Product images are for illustration purposes
+									and may not reflect exact appearance
+								</li>
+								<li>
+									Specifications are based on manufacturer
+									data and third-party testing
+								</li>
+								<li>
+									We reserve the right to correct errors in
+									product information or pricing
+								</li>
+								<li>
+									Certificates of Analysis (COAs) are provided
+									when available and reflect batch-specific
+									testing
+								</li>
+								<li>
+									Product availability is subject to change
+									without notice
+								</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								If a product is listed at an incorrect price due
+								to error, we reserve the right to cancel the
+								order and refund your payment.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								5. Orders & Payment
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Order Acceptance: All orders are subject to
+								acceptance by PeptideLab. We reserve the right
+								to refuse or cancel any order for any reason,
+								including but not limited to:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>Product availability</li>
+								<li>
+									Errors in pricing or product information
+								</li>
+								<li>Suspected fraudulent activity</li>
+								<li>
+									Failure to meet eligibility requirements
+								</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Payment: We accept major credit cards and other
+								payment methods as displayed at checkout.
+								Payment is due at the time of order placement.
+								All prices are in USD.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Order Confirmation: You will receive an email
+								confirmation once your order is placed. This
+								does not constitute acceptance of your
+								order—acceptance occurs when we ship your
+								products.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								6. Shipping & Delivery
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Shipping Terms:
+							</p>
+
+							<ul class="list-disc mt-20">
+								<li>
+									We ship to addresses within the United
+									States only
+								</li>
+								<li>
+									Shipping costs are calculated at checkout
+									based on weight and destination
+								</li>
+								<li>
+									Estimated delivery times are provided but
+									not guaranteed
+								</li>
+								<li>
+									Products are shipped in discreet, unmarked
+									packaging
+								</li>
+								<li>
+									Cold chain integrity is maintained for
+									temperature-sensitive products
+								</li>
+							</ul>
+
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Delivery: Once a package is shipped, risk of
+								loss transfers to you. We are not responsible
+								for:
+							</p>
+
+							<ul class="list-disc mt-20">
+								<li>Delays caused by shipping carriers</li>
+								<li>
+									Failed delivery attempts due to incorrect
+									addresses
+								</li>
+								<li>
+									Packages lost or stolen after delivery
+									confirmation
+								</li>
+								<li>
+									Damage during shipping (claims must be filed
+									with carrier)
+								</li>
+							</ul>
+							<p>
+								Tracking information will be provided once your
+								order ships.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								7. Returns, Refunds & Exchanges
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Due to the nature of research chemicals and
+								safety considerations:
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Non-Returnable Products: All sales are final for
+								opened, used, or reconstituted products.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Eligible Returns: Unopened, unused products in
+								original packaging may be returned within 14
+								days of delivery, subject to a 20% restocking
+								fee.
+							</p>
+							<p>
+								Damaged or Defective Products: If you receive
+								damaged or defective products:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>
+									Contact us within 48 hours of delivery with
+									photographic evidence
+								</li>
+								<li>
+									We will replace the product or issue a full
+									refund at our discretion
+								</li>
+								<li>
+									Return shipping costs for defective products
+									will be covered by us
+								</li>
+							</ul>
+							<p>
+								Refund Processing: Approved refunds will be
+								processed within 7-10 business days to your
+								original payment method.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								8. Quality & Testing
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								We are committed to providing research-grade
+								peptides of the highest quality:
+							</p>
+
+							<ul class="list-disc mt-20">
+								<li>
+									All products are sourced from reputable
+									manufacturers
+								</li>
+								<li>
+									Batch-specific third-party testing is
+									conducted when available
+								</li>
+								<li>
+									Certificates of Analysis (COAs) are provided
+									for verification
+								</li>
+								<li>
+									Purity specifications are guaranteed within
+									stated ranges
+								</li>
+							</ul>
+
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								However, we make no warranties regarding:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>
+									Suitability for any specific research
+									application
+								</li>
+								<li>Results or outcomes from product use</li>
+								<li>
+									Performance in any particular protocol or
+									study
+								</li>
+							</ul>
+							<p>
+								You assume all responsibility for proper
+								handling, storage, and use of products.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								9. Limitation of Liability
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								TO THE MAXIMUM EXTENT PERMITTED BY LAW:
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Products are provided "AS-IS" for research
+								purposes only. PeptideLab shall not be liable
+								for:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>
+									Any direct, indirect, incidental,
+									consequential, or punitive damages
+								</li>
+								<li>
+									Injuries, adverse reactions, or health
+									consequences from product misuse
+								</li>
+								<li>
+									Loss of profits, data, or business
+									opportunities
+								</li>
+								<li>
+									Any claims arising from improper use or
+									handling
+								</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Our total liability shall not exceed the
+								purchase price of the product(s) in question.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								You agree to indemnify and hold harmless
+								PeptideLab, its officers, directors, employees,
+								and agents from any claims, damages, or expenses
+								arising from your use of our products.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								10. Intellectual Property
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								All content on this website, including text,
+								graphics, logos, images, and software, is the
+								property of PeptideLab or its licensors and is
+								protected by copyright and trademark laws.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								You may not:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>
+									Reproduce, distribute, or display any
+									content without written permission
+								</li>
+								<li>
+									Use our trademarks or trade names without
+									authorization
+								</li>
+								<li>
+									Reverse engineer or create derivative works
+									from our website or content
+								</li>
+							</ul>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								11. Privacy & Data Protection
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								We collect and process personal information in
+								accordance with our Privacy Policy. By using our
+								website and services, you consent to:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>
+									Collection of personal and payment
+									information
+								</li>
+								<li>
+									Use of cookies and tracking technologies
+								</li>
+								<li>
+									Storage and processing of your data as
+									described in our Privacy Policy
+								</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								We do not sell or share your personal
+								information with third parties except as
+								necessary to process orders and comply with
+								legal obligations.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								12. Legal Compliance
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								You are solely responsible for ensuring your
+								purchase and use of products complies with all
+								applicable:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>Federal, state, and local laws</li>
+								<li>Institutional regulations and policies</li>
+								<li>Professional ethical standards</li>
+							</ul>
+
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								You warrant that you will not:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>Use products for unlawful purposes</li>
+								<li>
+									Violate any regulations governing research
+									chemicals
+								</li>
+								<li>
+									Resell products without proper licensing
+								</li>
+								<li>
+									Export products in violation of export
+									control laws
+								</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								PeptideLab reserves the right to report
+								suspected illegal activity to appropriate
+								authorities.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								13. Termination
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								We reserve the right to:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>Refuse service to anyone at any time</li>
+								<li>
+									Terminate or suspend your access to our
+									website
+								</li>
+								<li>Cancel orders or refuse future orders</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Reasons for termination may include:
+							</p>
+							<ul class="list-disc mt-20">
+								<li>Violation of these Terms and Conditions</li>
+								<li>Fraudulent or suspicious activity</li>
+								<li>Misuse of products</li>
+								<li>Providing false information</li>
+							</ul>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Upon termination, you must immediately cease
+								using our products and website.
+							</p>
+						</div>
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								14. Dispute Resolution & Governing Law
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								These Terms and Conditions shall be governed by
+								and construed in accordance with the laws of the
+								United States and the state in which PeptideLab
+								is registered, without regard to conflict of law
+								principles.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								Arbitration: Any dispute arising from these
+								terms or your use of our products shall be
+								resolved through binding arbitration in
+								accordance with the American Arbitration
+								Association rules.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								You waive any right to participate in class
+								action lawsuits or class-wide arbitration.
+							</p>
+						</div>
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								15. Severability
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								If any provision of these Terms and Conditions
+								is found to be invalid or unenforceable, that
+								provision shall be limited or eliminated to the
+								minimum extent necessary, and the remaining
+								provisions shall remain in full force and
+								effect.
+							</p>
+						</div>
+						<div class="mt-md-40 mt-20">
+							<h6 class="fs-md-24 fs-18 text-black fw-bold">
+								16. Contact Information
+							</h6>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								For questions about these Terms and Conditions,
+								please contact us through our website's contact
+								form.
+							</p>
+							<p class="fs-md-18 fs-16 fw-400 mt-20">
+								By completing a purchase, you acknowledge that
+								you have read, understood, and agree to be bound
+								by these Terms and Conditions.
+							</p>
+						</div>
+
+						<div class="mt-md-40 mt-20">
+							<h6>Choice of Law</h6>
+							<p class="fs-md-18 fs-14 fw-400 mt-20">
+								THIS AGREEMENT SHALL BE GOVERNED BY THE LAWS OF
+								THE STATE OF TEXAS, WITHOUT GIVING EFFECT TO ANY
+								PRINCIPLES REGARDING CONFLICT OF LAWS
+							</p>
+						</div>
+						<div class="mt-md-40 mt-20">
+							<p class="mb-0 fs-18">
+								Customer Full Name: <b>Shovon Redlime</b>
+							</p>
+							<p class="fs-18">Date: <b>December 18, 2025</b></p>
+						</div>
+					</div>
+
+					<div
+						class="modal__actions modal__action__justify modal__actions__equal"
+					>
+						<button
+							class="modal__action modal__action--outline"
+							type="button"
+							data-bs-dismiss="modal"
+						>
+							Cancel
+						</button>
+						<button
+							class="modal__action modal__action--primary"
+							type="button"
+							style="width: unset;"
+							id="agreeTerms"
+						>
+							I agree to the terms & conditions.
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Terms & Condition Modal End -->
+
+	<Footer />
+</Layout>
+
+<script>
+	$(document).ready(function () {
+		$("#agreeTerms").on("click", function () {
+			window.location.href = "/thank-you";
+		});
+	});
+</script>

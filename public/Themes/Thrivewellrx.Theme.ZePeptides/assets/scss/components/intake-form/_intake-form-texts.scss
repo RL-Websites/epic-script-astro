@@ -1,0 +1,129 @@
+@use "../../base/variables" as *;
+
+.assessment {
+	&__title {
+		font-size: $fs-22;
+		line-height: 1.2;
+		color: $secondary;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	&__sub-title {
+		font-size: $fs-36;
+		line-height: 1.4;
+		font-weight: 400;
+	}
+
+	&__group {
+		&-info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		&-label {
+			padding: 20px;
+			border: 1px solid $yellow;
+			border-radius: 20px;
+		}
+
+		&-title {
+			font-size: $fs-24;
+			font-weight: 600;
+			line-height: 1;
+			color: $secondary;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		&-count {
+			color: $primary;
+			font-weight: 400;
+			font-size: $fs-20;
+			line-height: 1;
+			margin-bottom: 0;
+		}
+	}
+
+	&__condition {
+		&-tag {
+			background-color: $primary;
+			padding: 10px 30px;
+			width: 519px;
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&-text {
+			margin-bottom: 0;
+			font-size: $fs-14;
+			font-weight: 400;
+			color: white;
+			text-align: center;
+		}
+	}
+
+	&__question {
+		font-size: $fs-20;
+		font-weight: 700;
+		line-height: 1.4;
+		text-align: center;
+		color: $secondary;
+	}
+
+	&__question--text-left {
+		text-align: left;
+	}
+
+	&__label {
+		font-size: $fs-24;
+		font-weight: 700;
+		line-height: 1.2;
+		color: $secondary;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.assessment {
+		&__sub-title {
+			font-size: 30px;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.assessment {
+		&__question {
+			font-size: 30px;
+			margin-top: 15px !important;
+		}
+
+		&__label {
+			margin-top: 15px !important;
+		}
+
+		&__form {
+			&__checkbox {
+				margin-top: 15px !important;
+			}
+		}
+
+		&__sub-title {
+			font-size: 24px;
+		}
+
+		&__buttons {
+			margin-top: 15px !important;
+		}
+
+		&__form-container {
+			max-width: 320px;
+		}
+	}
+}

@@ -1,0 +1,321 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!--=====|| Main Section Start ||=====-->
+
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!-- ==|| FAQ Hero Section Start ||== -->
+			<section class="pt-md-150 pt-120 pb-md-100 pb-50 faq-section">
+				<div class="container">
+					<h2
+						class="site__heading-two-lg text-center text-primary-grad-1"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+					>
+						Your Questions Answered!
+					</h2>
+
+					<div
+						class="text-center"
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay="100"
+					>
+						<p class="cart-hero__text faq-subtitle p-lg-20">
+							For any additional questions, please reach out to&nbsp;<a
+								class="text-blue-2"
+								data-bind="attr: { href: 'mailto:' + siteEmail() }, text: siteEmail"
+								>info@vpeptides.com</a
+							>
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- ==|| FAQ Hero Section End ||== -->
+
+			<!-- ==|| FAQ Section Start ||== -->
+			<section
+				class="faq faq__main"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-delay="200"
+			>
+				<div class="container">
+					<div
+						class="panel-group faq__lg"
+						id="accordion"
+						role="tablist"
+						aria-multiselectable="true"
+					>
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingOne"
+							>
+								<p
+									class="collapsed-heading"
+									role="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseOne"
+									aria-expanded="true"
+									aria-controls="collapseOne"
+								>
+									<span
+										>What is the difference between Semaglutide and Tirzepatide?</span
+									>
+								</p>
+							</div>
+							<div
+								id="collapseOne"
+								class="panel-collapse collapse show"
+								data-bs-parent="#accordion"
+								aria-labelledby="headingOne"
+							>
+								<div class="faq__lg__body">
+									Semaglutide is a Peptide receptor agonist, which mimics a
+									hormone that helps regulate blood sugar levels, slow down
+									digestion, and reduce appetite. Tirzepatide, on the other
+									hand, is a dual GIP and Peptide receptor agonist, meaning it
+									mimics two hormones that regulate blood sugar and appetite.
+									This dual action can make weight loss programs with injections
+									more effective. By combining two hormonal effects, Tirzepatide
+									enhances the benefits of weight loss programs with injections,
+									offering better blood sugar control and greater weight loss
+									compared to using Peptide alone.
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingTwo"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo"
+									aria-expanded="false"
+									aria-controls="collapseTwo"
+								>
+									<span>Should I expect any side effects?</span>
+								</p>
+							</div>
+							<div
+								id="collapseTwo"
+								class="panel-collapse collapse"
+								data-bs-parent="#accordion"
+								aria-labelledby="headingTwo"
+							>
+								<div class="faq__lg__body">
+									<p>
+										Many people who join our rapid weight Loss programs enjoy
+										the benefits of these products with few or no side effects.
+										And with VPeptides approach to weight loss for men and
+										women, side effects are minimized through a gradual increase
+										in dosage. Should they occur, it can include nausea at first
+										or slight gastrointestinal discomfort. Staying hydrated and
+										eating small, frequent meals can help manage these issues
+										should you experience them.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingThree"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseThree"
+									aria-expanded="false"
+									aria-controls="collapseThree"
+								>
+									<span>
+										Will any existing medical condition change my eligibility?
+									</span>
+								</p>
+							</div>
+							<div
+								id="collapseThree"
+								class="panel-collapse collapse"
+								data-bs-parent="#accordion"
+								aria-labelledby="headingThree"
+							>
+								<div class="faq__lg__body">
+									For the vast majority of people, both products will be safe
+									and effective. However, as with many products, those with a
+									personal or family history of Medullary Thyroid Carcinoma
+									(MTC) or Multiple Endocrine Neoplasia Syndrome Type 2 (MEN2)
+									should not take either product. Others who are not recommended
+									for these products include those with severe gastroparesis or
+									other severe gastrointestinal diseases, individuals with a
+									history of pancreatitis, severe kidney disease, or impaired
+									kidney function, patients with a history of diabetic
+									retinopathy, or anyone who has had a severe allergic reaction
+									to GLP-1, GLP-1/GIP, or any of their components. These
+									products are also not recommended for use during pregnancy or
+									breastfeeding, and safety and efficacy in individuals under 18
+									have not been established. In such cases, incorporating a
+									nutritionist plan for weight loss can be a valuable
+									alternative to support your health and weight loss goals.
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingFour"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseFour"
+									aria-expanded="false"
+									aria-controls="collapseFour"
+								>
+									<span> How long before I should expect to see results? </span>
+								</p>
+							</div>
+							<div
+								id="collapseFour"
+								class="panel-collapse collapse"
+								data-bs-parent="#accordion"
+								aria-labelledby="headingFour"
+							>
+								<div class="faq__lg__body">
+									Similar to GLP-1, improvements in blood sugar levels can be
+									observed within the first week of beginning GLP-1/GIP.
+									Appetite reduction usually begins within the first few weeks
+									of treatment and many individuals may start to notice weight
+									loss within the first month. Significant weight loss generally
+									occurs over 3 to 6 months, with continued improvements seen
+									over a year or more with consistent use and healthy lifestyle
+									changes. Combining the products with a healthy diet and
+									regular physical activity can enhance results and lead to more
+									sustainable weight loss and blood sugar control. While some
+									effects can be seen relatively quickly, achieving significant
+									weight loss and optimal blood sugar control often requires
+									patience and consistent use of the product over several
+									months. Of course, results can vary based on individual
+									metabolic rates, adherence to the product regimen, and overall
+									health status.
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+
+						<div class="panel panel-default faq__item">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingFive"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseFive"
+									aria-expanded="false"
+									aria-controls="collapseFive"
+								>
+									<span>What kind of additional support do you offer?</span>
+								</p>
+							</div>
+							<div
+								id="collapseFive"
+								class="panel-collapse collapse"
+								data-bs-parent="#accordion"
+								aria-labelledby="headingFive"
+							>
+								<div class="faq__lg__body">
+									<p>
+										Monthly follow-ups with our physician will be done to
+										monitor progress, adjust dosages if necessary, and manage
+										any side effects. In addition, you’ll receive a personalized
+										nutritionist plan for weight loss, tailored to your
+										individual health conditions and treatment plans to help you
+										achieve the best results.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+
+						<!--FAQ Item End-->
+						<div class="panel panel-default faq__item border-0">
+							<div
+								class="panel-heading faq__lg__heading"
+								role="tab"
+								id="headingSix"
+							>
+								<p
+									class="collapsed collapsed-heading"
+									role="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseSix"
+									aria-expanded="false"
+									aria-controls="collapseSix"
+								>
+									<span>What happens when I reach my ideal weight?</span>
+								</p>
+							</div>
+							<div
+								id="collapseSix"
+								class="panel-collapse collapse"
+								data-bs-parent="#accordion"
+								aria-labelledby="headingSix"
+							>
+								<div class="faq__lg__body">
+									<p>
+										Reaching a goal weight with the help of GLP-1 or GLP-1/GIP
+										products as part of our rapid weight loss programs is a
+										significant achievement. Maintaining that weight requires a
+										comprehensive plan, including medical supervision, lifestyle
+										changes, and possibly continued product use at a maintenance
+										dose. Emphasizing healthy eating, regular physical activity,
+										and behavioral support is crucial for maintaining weight
+										loss. If you decide to discontinue the product, VPeptides
+										physician will guide you through a gradual process to
+										minimize the risk of weight regain. This approach supports
+										weight loss for men and women in achieving lasting results.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--FAQ Item End-->
+					</div>
+
+					<!-- <div class="faq__show-more">
+						<a href="" class="text-primary-show">Show More</a>
+					</div> -->
+				</div>
+			</section>
+			<!-- ==|| FAQ Section End ||== -->
+		</div>
+	</main>
+	<!--=====|| Main Section End ||=====-->
+
+	<Footer />
+</Layout>

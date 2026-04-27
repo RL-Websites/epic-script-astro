@@ -1,0 +1,67 @@
+@use "../base/variables" as *;
+
+
+.list-table {
+    .table {
+
+        // text-align: center;
+        thead {
+            tr {
+                th {
+                    color: $black;
+                    font-size: $fs-16;
+
+                    &:first-child {
+                        padding-left: 15px !important;
+
+                    }
+
+                    &:last-child {
+                        padding-right: 40px !important;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:last-child {
+                    border-bottom: 0px !important;
+                }
+
+                td {
+                    color: $black;
+                    padding-left: 10px !important;
+
+                    &:first-child {
+                        padding-left: 15px !important;
+                        // padding-right: 5px !important;
+                    }
+
+                    &:last-child {
+                        padding-right: 15px !important;
+                    }
+
+                    .theme-btn__accent {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+.paginator {
+    border-top: 0 !important;
+    padding: 20px 10px !important;
+
+
+}
+
+@media (max-width: 768px) {
+    .paginator {
+        display: none !important;
+    }
+}

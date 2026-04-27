@@ -1,0 +1,361 @@
+@use "../base/variables" as *;
+
+.theme-btn {
+	padding: 7px 12px;
+	cursor: pointer;
+	font-size: $fs-16;
+	line-height: 150%;
+	font-weight: 700;
+	color: white;
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+	transition: 0.9s;
+	text-decoration: none;
+
+	&__primary {
+		background-color: $primary;
+		border: 1.5px solid $primary;
+		border-radius: 8px;
+		color: white;
+
+		&:hover {
+
+			color: white;
+
+			&--icon {
+				i {
+					color: $secondary;
+				}
+			}
+		}
+
+		&--accent {
+			&:hover {
+				color: white;
+			}
+		}
+
+		&--uppercase {
+			text-transform: uppercase !important;
+		}
+
+		&--icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			i {
+				font-size: 20px;
+				line-height: 1;
+				font-weight: 500;
+			}
+
+			&-box {
+				padding: 5px;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $primary-light;
+				width: 34px;
+				height: 34px;
+				color: $primary;
+				margin-right: -6px;
+			}
+		}
+	}
+
+	&__secondary {
+		background-color: $background-3;
+		border: 1px solid $background-3;
+		color: $black;
+		border-radius: 8px;
+		font-weight: 700;
+
+		&--icon {
+			border-radius: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			i {
+				font-size: 20px;
+				line-height: 1;
+				font-weight: 500;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			background-color: darken($background-3, 10%);
+		}
+	}
+
+	&__dark {
+		background-color: $secondary;
+		border: 1px solid $secondary;
+		color: $secondary;
+		border-radius: 8px;
+	}
+
+	&__light {
+		background-color: white;
+		border: 1px solid white;
+		font-size: $fs-18;
+		color: $secondary;
+		border-radius: 8px;
+		padding: 16px 0px;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	&__danger {
+		padding: 12px 24px;
+		border: 1px solid $red;
+		background-color: transparent;
+		border-radius: 12px;
+		font-size: 14px;
+		line-height: 1.4;
+		font-weight: 400;
+		color: $red;
+	}
+
+	&__outline {
+		font-size: $fs-16;
+		background-color: transparent;
+		border-radius: 8px;
+
+		&:hover,
+		&:focus {
+			background-color: $primary;
+			border-color: $primary;
+		}
+
+		&--primary {
+			border: 1px solid $primary;
+			color: $primary;
+
+			&:hover,
+			&:focus {
+				background-color: $primary-light;
+				color: $primary;
+			}
+		}
+
+		&--secondary {
+			border: 1px solid $background-3;
+			color: $secondary;
+			font-weight: 700;
+
+			&:hover,
+			&:focus {
+				background-color: $background-3;
+				color: $secondary;
+				border: 1px solid $background-3;
+			}
+		}
+
+		&--white {
+			border: 1px solid white;
+			border-radius: 8px;
+			color: white;
+		}
+
+		&--danger {
+			padding: 12px 24px;
+			background-color: transparent;
+			border: 1px solid $red;
+			border-radius: 8px;
+			font-size: 14px;
+			line-height: 1.4;
+			font-weight: 400;
+			color: $red;
+		}
+
+		&--icon {
+			border-radius: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			i {
+				font-size: 20px;
+				line-height: 1;
+				font-weight: 500;
+			}
+		}
+	}
+
+	&__accent {
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	&.theme-btn {
+		&__accent {
+			padding: 0;
+		}
+	}
+
+	&__icon-only {
+		background-color: transparent;
+		padding: 0;
+		font-size: $fs-30;
+		color: $red;
+	}
+
+	&-size {
+		&-xl {
+			padding: 0px;
+			font-size: $fs-30;
+
+			@media all and (min-width: 768px) {
+				padding: 10px 0;
+			}
+		}
+
+		&-md {
+			padding: 9px;
+			font-size: 18px;
+			line-height: 1.6;
+			height: 47px;
+		}
+
+		&-lg {
+			padding: 11px 10px;
+			font-size: $fs-18;
+			line-height: 1.4;
+		}
+
+		&-lg {
+			font-size: $fs-14;
+		}
+	}
+
+	&--with-loader {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+	}
+
+	&__loader {
+		flex-shrink: 0;
+		flex-grow: 0;
+		display: inline-block;
+		border: 2px solid $secondary;
+		border-top: 2px solid white;
+		border-radius: 50px;
+		width: 18px;
+		height: 18px;
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+		animation: spin 1.3s linear infinite;
+	}
+
+	&__loader2 {
+		flex-shrink: 0;
+		flex-grow: 0;
+		display: inline-block;
+		border: 2px solid white;
+		border-top: 2px solid $primary;
+		border-radius: 50px;
+		width: 18px;
+		height: 18px;
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+		animation: spin 1.3s linear infinite;
+	}
+
+	&--disabled {
+		color: $gray-medium;
+		cursor: not-allowed !important;
+		pointer-events: none;
+		background-color: $gray-light;
+		border-color: $gray-light !important;
+	}
+
+	&__min-w-210 {
+		min-width: 210px;
+	}
+}
+
+.oqtane-btn {
+	&__active {
+		background-color: $red;
+		color: white;
+	}
+}
+
+.floating {
+	&__buttons {
+		position: fixed;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		z-index: 1;
+		background-color: #fafafa;
+		box-shadow: 0px -4px 16px 0px #0000001f;
+
+		&__items {
+			display: flex;
+			flex-direction: column-reverse;
+			width: 100%;
+			gap: 5px;
+			padding: 10px;
+			align-items: stretch;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.theme-btn {
+		padding: 12px 30px;
+		font-size: $fs-14;
+
+		&__outline {
+			font-size: $fs-14;
+		}
+
+		&-size {
+			&-lg {
+				padding: 10px 6px;
+			}
+		}
+
+		&__min-w-210 {
+			min-width: 100px;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.theme-btn {
+		font-size: 16px;
+		padding: 10px 20px;
+
+		&__primary {
+			&--icon {
+				display: inline-flex;
+
+				i {
+					font-size: $fs-14;
+				}
+			}
+		}
+	}
+}

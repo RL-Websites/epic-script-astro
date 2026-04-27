@@ -1,0 +1,154 @@
+@use "../base/variables" as *;
+
+.cart-card {
+	border-radius: 10px;
+	border: 1px solid $red;
+	background-image: url(../../img/doc-upload-bg.png);
+
+	&__header {
+		padding: 24px;
+		border-bottom: 2px solid $red;
+
+		h4 {
+			margin: 0px;
+			line-height: 0.8;
+		}
+
+		@media all and (max-width: 767px) {
+			padding: 14px 12px;
+
+			h4 {
+				font-size: $fs-22;
+			}
+		}
+	}
+}
+
+.card-basic {
+	// box-shadow: 2px 2px 24px 0px rgba(195, 195, 195, 0.2784313725);
+	border: 1px solid $primary-light;
+	border-radius: 10px;
+	overflow: hidden;
+	background: transparent;
+
+	&__header {
+		padding: 22px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $primary-light;
+		text-transform: capitalize;
+	}
+
+	&__footer {
+		padding: 22px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid $primary-light;
+		text-transform: capitalize;
+	}
+
+	&__title {
+		margin: 0;
+		color: $secondary;
+
+		font-weight: 500;
+		font-size: $fs-30;
+	}
+
+	&--no-shadow {
+		box-shadow: none;
+	}
+
+	&__table {
+		border-color: #DADADA !important;
+	}
+
+	&__table-mobile {
+		display: none;
+	}
+}
+
+.info {
+	&__card {
+		background-color: $white;
+		padding: 40px 16px 36px 16px;
+		border-radius: 12px;
+		border-radius: 20px;
+		border: 1px solid #e6d4ff;
+		box-shadow: 0px 0px 30px 0px #27005d14;
+
+		&--icon {
+			width: 70px;
+			height: 70px;
+			border-radius: 70px;
+			background: $primary-lighter;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+
+			i {
+				font-size: 36px;
+				color: $primary;
+			}
+		}
+
+		&--content {
+			width: 100%;
+
+			@media all and (min-width: 768px) {
+				max-width: 330px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.card-basic {
+
+
+		&__header {
+			padding: 12px 16px;
+		}
+
+		&__footer {
+			padding: 12px 16px;
+		}
+
+		&__table-desktop {
+			display: none;
+		}
+
+		&__table-mobile {
+			display: block;
+		}
+
+		&__title {
+			font-size: $fs-24;
+		}
+	}
+
+	.cart-card {
+		&__header {
+			padding: 12px 16px !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.card-basic {
+		&__mt {
+			margin-top: 20px;
+		}
+
+		&__header {
+			padding: 16px 12px;
+			
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

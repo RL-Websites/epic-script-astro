@@ -1,0 +1,70 @@
+@use "../base/variables" as *;
+
+.offcanvas {
+  background-color: $primary-lightest !important;
+  z-index: 999999;
+  width: 80% !important;
+
+
+  @media all and (max-width: 1170px) {
+    width: 90% !important;
+  }
+
+  @media all and (max-width: 992px) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  @media all and (max-width: 768px) {
+    width: 100% !important;
+  }
+
+
+  &-title {
+    font-size: 30px;
+    font-weight: 700;
+
+    @media all and (max-width: 768px) {
+      font-size: 18px !important;
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-body {
+    border: 1px solid $primary-light;
+    padding: 24px;
+
+    @media all and (max-width: 768px) {
+      padding: 15px;
+    }
+
+    &__wrapper {
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .faq__item {
+        background: #FFF;
+        border: 1px solid $primary-light !important;
+        border-radius: 12px !important;
+        overflow: hidden;
+
+      }
+
+      .custom-table {
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      .custom-table__alt {
+        overflow-x: auto;
+      }
+    }
+  }
+}

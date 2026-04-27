@@ -1,0 +1,40 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question title start -->
+				<h3 class="site__heading-four text-center text-primary mt-40">
+					Thank You.
+				</h3>
+				<!-- Assessment question title end -->
+
+				<!-- Assessment question sub title start -->
+				<div class="assessment__label fs-md-28 fs-24 mt-30">
+					We will be in touch with you shortly.
+				</div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment buttons start -->
+				<div class="assessment__buttons justify-center mx-auto mt-40">
+					<button class="theme-btn theme-btn__primary min-w-253"
+						>Proceed To Payment</button
+					>
+				</div>
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+
+		<!--Footer Section end-->
+		<AssesmentFooter />
+	</div>
+</Layout>

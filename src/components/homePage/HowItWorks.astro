@@ -1,0 +1,90 @@
+---
+import MobileTimelineStep from "./MobileTimelineStep.astro";
+import TimelineStep from "./TimelineStep.astro";
+
+const workImg =
+	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/1.svg";
+const workImg2 =
+	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/2.svg";
+const workImg3 =
+	"Themes/Thrivewellrx.Theme.ZePeptides/assets/img/howitworks/3.svg";
+---
+
+<section class="how-works py-50 py-md-100">
+	<div class="container">
+		<div class="text-center mb-md-100 mb-30">
+			<h1
+				class="site__heading-one mb-3"
+				data-aos="fade-up"
+				data-aos-duration="600"
+			>
+				How It &nbsp;<span class="text-primary-grad-1">Works</span>
+			</h1>
+			<p
+				class="text-center mt-20 mt-md-24"
+				data-aos="fade-up"
+				data-aos-duration="600"
+				data-aos-delay="100"
+			>
+				High-quality research peptides for laboratory use — verified for purity
+				and quality
+			</p>
+		</div>
+
+		<div class="timeline-desktop d-none d-lg-block">
+			<TimelineStep
+				stepNumber={1}
+				title="Pick Your Product"
+				description="Browse our catalog and select the product or wellness product that fits your needs. No medical forms, no doctor approval, and no prescription required. Just choose your product and proceed."
+				imageSrc={workImg}
+				imageAlt="Doctor consultation"
+				alignment="left"
+			/>
+
+			<TimelineStep
+				stepNumber={2}
+				title="Secure Checkout"
+				description="Complete your purchase through our fast and secure checkout. Once your payment is confirmed, your order is automatically sent to the partner pharmacy for fulfillment."
+				imageSrc={workImg2}
+				imageAlt="Doctor evaluation"
+				alignment="right"
+			/>
+
+			<TimelineStep
+				stepNumber={3}
+				title="Pharmacy Fulfillment & Delivery"
+				description="Our licensed pharmacy prepares your product and ships it directly to your doorstep in discreet packaging. No middlemen. No delays. Just fast, reliable delivery."
+				imageSrc={workImg3}
+				imageAlt="Product delivery"
+				alignment="left"
+			/>
+		</div>
+
+		<div class="d-lg-none">
+			<MobileTimelineStep
+				stepNumber={1}
+				title="Pick Your Product"
+				description="Browse our catalog and select the product or wellness product that fits your needs. No medical forms, no doctor approval, and no prescription required. Just choose your product and proceed."
+				imageSrc={workImg}
+				imageAlt="Doctor consultation"
+			/>
+
+			<MobileTimelineStep
+				stepNumber={2}
+				title="Secure Checkout"
+				description="Complete your purchase through our fast and secure checkout. Once your payment is confirmed, your order is automatically sent to the partner pharmacy for fulfillment."
+				imageSrc={workImg2}
+				imageAlt="Doctor evaluation"
+			/>
+
+			<MobileTimelineStep
+				stepNumber={3}
+				title="Pharmacy Fulfillment & Delivery"
+				description="Our licensed pharmacy prepares your product and ships it directly to your doorstep in discreet packaging. No middlemen. No delays. Just fast, reliable delivery."
+				imageSrc={workImg3}
+				imageAlt="Product delivery"
+				isLast={true}
+			/>
+		</div>
+	</div>
+</section>

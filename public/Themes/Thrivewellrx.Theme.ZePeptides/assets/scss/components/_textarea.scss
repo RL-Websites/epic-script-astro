@@ -1,0 +1,20 @@
+@use "../base/variables" as *;
+
+.textarea {
+	&__wrapper {
+		position: relative;
+		width: 100%;
+
+		.textarea {
+			&__word-count {
+				position: absolute;
+				bottom: 14px;
+				right: 14px;
+				font-size: 14px;
+				line-height: 1;
+				color: $secondary;
+				transition: color 0.3s ease;
+			}
+		}
+	}
+}

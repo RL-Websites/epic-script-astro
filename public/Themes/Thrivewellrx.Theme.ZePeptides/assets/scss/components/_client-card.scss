@@ -1,0 +1,114 @@
+@use "../base/variables" as *;
+
+.client {
+
+
+  &__card {
+    padding: 30px;
+    border-radius: 16px;
+
+    &--blue {
+      background-color: $blue-2;
+    }
+
+    &--pink {
+      background-color: $pink-2;
+    }
+
+    &--green {
+      background-color: $green-2;
+    }
+  }
+
+  &__quote {
+    i {
+      color: white;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  &__quote {
+    font-size: $fs-32;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1.6px solid #1F4A6333;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 10;
+
+    .prev-arrow,
+    .next-arrow {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      color: $secondary;
+      font-size: 25px;
+      border: 1px solid $secondary;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s;
+
+      &:hover {
+        background-color: $secondary;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .client {
+
+
+    &__arrow {
+      position: unset;
+    }
+
+    &__feedbacks {
+      margin-top: 30px;
+    }
+
+    &__navigation {
+      top: unset;
+      transform: (unset, -50%);
+      bottom: -70px;
+
+      .next-arrow,
+      .prev-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+  }
+}

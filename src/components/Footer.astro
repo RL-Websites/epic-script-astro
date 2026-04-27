@@ -1,0 +1,105 @@
+---
+const footerLinkCols = [
+	{
+		links: [
+			{ text: "Home", href: "/" },
+			// { text: "Products", href: "/#products" },
+			{ text: "About Us", href: "/about" },
+
+			// { text: "My account", href: "/login" },
+		],
+	},
+	{
+		links: [
+			// { text: "FAQs", href: "/faq" },
+			{ text: "Contact Us", href: "/contact-us" },
+
+			// { text: "Privacy Policy", href: "/privacy-policy" },
+			// { text: "Refund and returns policy", href: "/refund-and-returns-policy" },
+		],
+	},
+	{
+		links: [
+			{ text: "Terms and conditions", href: "/terms-and-conditions" },
+			// { text: "Semaglutide", href: "/product-details" },
+			// { text: "Tirzepatide", href: "/product-details" },
+		],
+	},
+];
+---
+
+<footer class="site__footer">
+	<!-- Footer Top -->
+	<div class="site__footer__top">
+		<div class="container">
+			<div
+				class="site__footer__logo-section"
+				data-aos="fade-up"
+				data-aos-duration="600"
+			>
+				<a href="/">
+					<img
+						src="Themes/Thrivewellrx.Theme.ZePeptides/assets/img/logo-main.png"
+						alt="VPeptides Logo"
+					/>
+				</a>
+			</div>
+
+			<div class="site__footer__links w-full">
+				{
+					footerLinkCols.map((col) => (
+						<div class="site__footer__links-column">
+							<ul>
+								{col.links.map((link) => (
+									<li
+										data-aos="fade-up"
+										data-aos-delay="200"
+										data-aos-duration="600"
+									>
+										<a class="site__heading-five" href={link.href}>
+											{link.text}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					))
+				}
+				<div
+					class="site__footer__links-column site__footer__social ml-lg-auto pt-14 pt-md-24"
+				>
+					<a href="#" aria-label="Instagram">
+						<i
+							class="icon-instagram"
+							data-aos="fade-up"
+							data-aos-delay="400"
+							data-aos-duration="600"></i>
+					</a>
+					<a href="#" aria-label="Facebook">
+						<i
+							class="icon-facebook"
+							data-aos="fade-up"
+							data-aos-delay="500"
+							data-aos-duration="600"></i>
+					</a>
+					<a href="#" aria-label="LinkedIn">
+						<i
+							class="icon-linkedin"
+							data-aos="fade-up"
+							data-aos-delay="600"
+							data-aos-duration="600"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer Bottom -->
+	<div class="site__footer__bottom">
+		<div class="container">
+			<p class="site__footer__copyright text-center">
+				Copyright © 2025 VPeptides. All rights reserved.
+			</p>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,206 @@
+@use "variables" as *;
+
+//Width
+.mw-400 {
+	max-width: 380px;
+}
+
+.list-disc {
+	list-style-type: disc;
+	padding-left: 1rem;
+}
+
+.fw-300 {
+	font-weight: 300;
+}
+
+.fw-extrabold {
+	font-weight: 800;
+}
+
+.border {
+	&-dashed {
+		border-style: dashed !important;
+	}
+
+	&-solid {
+		border-top: 1px solid $primary-light;
+		width: 100%;
+	}
+}
+
+.ebook {
+	&__download {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 15px;
+		z-index: 100;
+		text-align: center;
+
+		&__btn {
+			margin: 0 auto;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #ffecba;
+			border-radius: 16px;
+			border: 1px solid #a1530a1a;
+			box-shadow: 0px 4px 9px 0px #7e65201a;
+			outline: none;
+			transition: 0.3s;
+			padding: 0;
+		}
+
+		&__img {
+			background: $yellow;
+			padding: 7px;
+			border-radius: 16px 0 0 16px;
+		}
+
+		&__content {
+			padding: 10px;
+			display: inline-block;
+			font-weight: 700;
+		}
+	}
+}
+
+.nav {
+	&-pills {
+		&__custom {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			margin-top: 50px;
+			justify-content: space-around;
+			position: relative;
+			padding-bottom: 10px;
+
+			&::after {
+				position: absolute;
+				content: "";
+				background-color: $primary-light;
+				height: 3px;
+				width: 100%;
+				bottom: 0;
+				border-radius: 2px;
+			}
+
+			.nav-link {
+				text-align: center;
+				font-weight: 700;
+				position: relative;
+				color: rgba(45, 45, 45, 0.5);
+				padding: 0;
+				width: 100%;
+			}
+
+			.nav-link.active {
+				background-color: transparent;
+				color: $black;
+
+				&::after {
+					position: absolute;
+					z-index: 1;
+					content: "";
+					background-color: $primary;
+					height: 5px;
+					width: 100%;
+					bottom: -11px;
+					left: 0;
+					border-radius: 2.5px;
+				}
+			}
+		}
+	}
+}
+
+.tab {
+	&-pills {
+		display: flex;
+		gap: 15px;
+		overflow-x: scroll;
+		padding-bottom: 20px;
+
+		&__single {
+			padding: 8px 15px;
+			min-width: 130px;
+			border: 2px solid $primary-light;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			border-radius: 12px;
+		}
+	}
+}
+
+.common {
+	&__banner {
+		margin-top: 110px;
+		background: url("../img/bg/common-bg-alt.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		padding: 80px 0 80px;
+		background-color: $blue-3;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.ebook {
+		&__download {
+			bottom: 10px;
+
+			&__btn {
+				border-radius: 10px;
+			}
+
+			&__img {
+				border-radius: 10px 0 0 10px;
+
+				img {
+					width: 30px;
+				}
+			}
+
+			&__content {
+				font-size: 14px;
+				text-wrap: nowrap;
+			}
+		}
+	}
+
+	.common {
+		&__banner {
+			padding: 50px 0 50px;
+			margin-top: 110px;
+			background-size: cover;
+			background-position: center center;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.tab {
+		&-pills {
+			padding-bottom: 10px;
+			gap: 10px;
+
+			&__single {
+				padding: 16px 8px;
+				min-width: 130px;
+			}
+		}
+	}
+
+	.common {
+		&__banner {
+			padding: 30px 0 30px;
+			margin-top: 70px;
+			background-size: cover;
+			background-position: center center;
+		}
+	}
+}

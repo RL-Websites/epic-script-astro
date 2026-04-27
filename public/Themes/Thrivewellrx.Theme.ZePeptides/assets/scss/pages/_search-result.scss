@@ -1,0 +1,26 @@
+.search__result {
+	&__header {
+		padding: 100px 0 30px;
+		p {
+			font-size: $fs-30;
+			font-weight: 500;
+			color: $secondary;
+			span {
+				font-weight: 600;
+			}
+		}
+	}
+	&__content {
+		text-align: center;
+		margin: 100px auto 80px;
+		max-width: 980px;
+		p {
+			color: $secondary;
+			font-weight: 500;
+			font-size: $fs-40;
+		}
+		img {
+			margin-top: 100px;
+		}
+	}
+}

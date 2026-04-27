@@ -1,0 +1,125 @@
+@use "../../base/variables" as *;
+
+.assessment {
+	&__buttons {
+		&.shipping__state__form {
+			width: 370px;
+			margin: 0 auto;
+			display: flex;
+			gap: 20px;
+
+			.rizz-btn {
+				min-width: calc(50% - 10px);
+			}
+		}
+	}
+
+	&.shipping__state {
+		padding-top: 230px;
+		padding-bottom: 100px;
+	}
+}
+
+.state-btn {
+	width: 370px;
+	min-height: 47px;
+	margin-bottom: 36px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&__label {
+		color: white;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 600;
+		background-color: transparent;
+		width: 100%;
+		height: 47px;
+		border: 1px solid $light;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		margin-bottom: 0;
+		text-align: center;
+		cursor: pointer;
+		position: relative;
+		transition: all 0.1s;
+	}
+
+	&__input {
+		position: absolute;
+		appearance: none;
+	}
+
+	// &__input:checked + &__label {
+	// 	background: linear-gradient(90deg, #db5095 0%, #1945e8 100%);
+	// 	border: 0px solid transparent;
+	// 	color: white;
+	// 	height: 49px;
+
+	// 	.state-btn__tick {
+	// 		opacity: 1;
+	// 		right: -8px;
+	// 		top: -8px;
+	// 	}
+	// }
+
+	&__tick {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		padding: 2px;
+		background-color: $primary;
+		border: 2px solid $secondary;
+		border-radius: 24px;
+		z-index: 11;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		opacity: 0;
+
+		i {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 16px;
+			height: 16px;
+			font-size: 14px;
+			text-align: center;
+			vertical-align: middle;
+			color: $secondary;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.assessment {
+
+		// &__buttons {
+		// 	&.shipping__state__form {
+		// 		width: 300px;
+		// 		margin: 0 auto;
+		// 		display: flex;
+		// 		gap: 20px;
+		// 		.rizz-btn {
+		// 			min-width: calc(50% - 10px);
+		// 		}
+		// 	}
+		// }
+		&.shipping__state {
+			padding-top: 120px;
+			padding-bottom: 60px;
+		}
+	}
+
+	.state-btn {
+		width: 300px;
+		margin-bottom: 20px;
+	}
+}

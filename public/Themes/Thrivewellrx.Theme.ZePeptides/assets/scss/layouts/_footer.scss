@@ -1,0 +1,150 @@
+@use "../base/variables" as *;
+
+.site__footer {
+	background-color: $primary-lightest;
+
+	&__top .container {
+		padding: 100px 0;
+		display: flex;
+
+		// justify-content: space-between;
+		@media all and (max-width: 768px) {
+			flex-direction: column;
+			justify-content: center;
+
+			align-items: center;
+			padding: 50px 0 30px 0;
+		}
+
+		@media screen and (min-width: 769px) and (max-width: 992px) {
+			padding: 100px 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__bottom {
+		padding: 24px 0;
+		border-top: 1px solid $primary-light;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__logo-section {
+		max-width: 280px;
+
+		p {
+			color: $black;
+			margin-top: 1rem;
+		}
+
+		img {
+			width: 267px;
+		}
+
+		@media all and (max-width: 768px) {
+			img {
+				width: 250px;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4rem;
+		margin-left: 156px;
+
+		@media all and (max-width: 992px) {
+			gap: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 0px;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+		}
+
+		@media all and (max-width: 768px) {
+			flex-direction: column;
+			margin-left: 0px;
+			align-items: center;
+			margin-top: 30px;
+			text-align: center;
+			gap: 16px;
+		}
+	}
+
+	&__links-column {
+		h4 {
+			margin-bottom: 1.5rem;
+			color: $black;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		li a {
+			color: $black;
+			text-decoration: none;
+			font-size: $fs-16;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__contact-info {
+
+		address,
+		a {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: $black;
+			text-decoration: none;
+			font-style: normal;
+		}
+	}
+
+	&__copyright {
+		font-family: "SF UI Display", sans-serif;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 160%;
+		color: $black;
+	}
+
+	&__social {
+		display: flex;
+		gap: 1.5rem;
+
+		a {
+			color: $primary;
+			font-size: $fs-44;
+			text-decoration: none;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		@media all and (max-width: 768px) {
+			margin-left: 0px;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Prescription Update - {companyName}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+				background-color: #ffffff;
+				font-family: "DM Sans", Arial, sans-serif;
+			}
+
+			table,
+			td {
+				border-collapse: collapse;
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+			}
+
+			img {
+				border: 0;
+				height: auto;
+				line-height: 100%;
+				outline: none;
+				text-decoration: none;
+				-ms-interpolation-mode: bicubic;
+			}
+
+			p {
+				margin: 13px 0;
+			}
+
+			@media only screen and (min-width: 480px) {
+				.mj-column-per-50 {
+					width: 50% !important;
+					max-width: 50%;
+				}
+
+				.mj-column-per-100 {
+					width: 100% !important;
+					max-width: 100%;
+				}
+			}
+
+			@media only screen and (max-width: 480px) {
+				table.mj-full-width-mobile {
+					width: 100% !important;
+				}
+
+				td.mj-full-width-mobile {
+					width: auto !important;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="background-color: #ffffff">
+			<!-- Header Section -->
+			<div
+				style="
+					background: #f5f3ff;
+					background-color: #f5f3ff;
+					margin: 0 auto;
+					max-width: 600px;
+				"
+			>
+				<table
+					align="center"
+					border="0"
+					cellpadding="0"
+					cellspacing="0"
+					width="100%"
+					style="background: #f5f3ff; background-color: #f5f3ff"
+				>
+					<tr>
+						<td style="padding: 20px 40px; text-align: center">
+							<table width="100%">
+								<tr>
+									<td align="center">
+										<img
+											height="auto"
+											src="{bioAccessLogo}"
+											style="
+												border: 0;
+												display: block;
+												outline: none;
+												text-decoration: none;
+												height: auto;
+												font-size: 13px;
+											"
+											width="140"
+										/>
+									</td>
+								</tr>
+								<tr>
+									<td
+										align="center"
+										width="50%"
+										style="
+											font-family: DM Sans, Arial, sans-serif;
+											font-size: 22px;
+											font-weight: 700;
+											color: #2d2d2d;
+											padding-top: 10px;
+										"
+									>
+										Order Shipped
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Main Body -->
+			<div
+				style="
+					background: #ffffff;
+					background-color: #ffffff;
+					margin: 0 auto;
+					max-width: 600px;
+				"
+			>
+				<table
+					align="center"
+					border="0"
+					cellpadding="0"
+					cellspacing="0"
+					width="100%"
+				>
+					<tr>
+						<td style="padding: 50px 40px">
+							<p style="color: #2d2d2d; font-family: DM Sans, Arial, sans-serif"
+								>Hi {customername},</p
+							>
+							<p style="color: #2d2d2d; font-family: DM Sans, Arial, sans-serif"
+								>We're one step closer! 🩺</p
+							>
+							<p
+								style="
+									font-size: 16px;
+									color: #2d2d2d;
+									font-family: DM Sans, Arial, sans-serif;
+								"
+							>
+								Your prescription for Order #[{orderNo}#] has been sent to the
+								pharmacy.
+							</p>
+							<p
+								style="
+									font-size: 16px;
+									color: #2d2d2d;
+									font-family: DM Sans, Arial, sans-serif;
+								"
+							>
+								The pharmacy is now preparing your order for shipment. As soon
+								as it ships, we'll send you a tracking link to follow its
+								journey.
+							</p>
+							<p
+								style="
+									font-size: 16px;
+									color: #2d2d2d;
+									font-family: DM Sans, Arial, sans-serif;
+								"
+							>
+								Thanks again for trusting {companyName} — we've got your
+								wellness covered.
+							</p>
+							<br />
+
+							<p
+								style="
+									font-size: 16px;
+									color: #2d2d2d;
+									font-family: DM Sans, Arial, sans-serif;
+								"
+							>
+								Best,<br />
+								<strong>The {companyName} Team</strong><br />
+								[{companyMail}]
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Footer -->
+			<div
+				style="
+					background: #5708c6;
+					background-color: #5708c6;
+					margin: 0 auto;
+					max-width: 600px;
+				"
+			>
+				<table
+					align="center"
+					border="0"
+					cellpadding="0"
+					cellspacing="0"
+					width="100%"
+				>
+					<tr>
+						<td
+							align="center"
+							style="
+								padding: 25px 40px;
+								font-family: Calibri, sans-serif;
+								font-size: 12px;
+								color: #ffffff;
+							"
+						>
+							<p style="margin: 0; text-align: center"
+								>Copyright © 2025 {companyName}. All rights reserved.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

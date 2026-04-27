@@ -1,0 +1,121 @@
+<button type="button" class="theme theme-btn__primary" id="liveToastBtn"
+	>Show live toast</button
+>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+	<div
+		id="liveToast"
+		class="toast hide"
+		role="alert"
+		aria-live="assertive"
+		aria-atomic="true"
+	>
+		<div
+			class="toast__success d-flex align-items-center justify-content-between"
+		>
+			<div class="d-flex align-items-center gap-3">
+				<i class="icon-completed fs-md-32 text-primary"></i>
+				<div>
+					<h5
+						class="site__heading-six fs-md-12 fs-16 fw-bold text-secondary text-start"
+						>Payment Successful
+					</h5>
+					<div class="fw-500 fs-md-6 fs-14">
+						Hello, world! This is a toast message.</div
+					>
+				</div>
+			</div>
+
+			<button
+				type="button"
+				class="btn-close"
+				data-bs-dismiss="toast"
+				aria-label="Close"
+			>
+				<i class="icon-cross text-primary"></i>
+			</button>
+		</div>
+		<!-- Toast Succeess -->
+
+		<div
+			class="toast__warning d-flex align-items-center justify-content-between"
+		>
+			<div class="d-flex align-items-center gap-3">
+				<i class="icon-warning-fill fs-md-32 text-primary"></i>
+				<div>
+					<h5
+						class="site__heading-six fs-md-18 fs-16 fw-bold text-secondary text-start"
+						>Warning
+					</h5>
+					<div class="fw-500 fs-md-6 fs-14">
+						Hello, world! This is a toast message.</div
+					>
+				</div>
+			</div>
+
+			<button
+				type="button"
+				class="btn-close"
+				data-bs-dismiss="toast"
+				aria-label="Close"
+			>
+				<i class="icon-cross"></i>
+			</button>
+		</div>
+		<!-- Toast Warning -->
+		<div
+			class="toast__danger d-flex align-items-center justify-content-between"
+		>
+			<div class="d-flex align-items-center gap-3">
+				<i class="icon-cross_filled fs-md-32 text-primary"></i>
+				<div>
+					<h5
+						class="site__heading-six fs-md-18 fs-16 fw-bold text-secondary text-start"
+						>Error
+					</h5>
+					<div class="fw-500 fs-md-6 fs-14">
+						Hello, world! This is a toast message.</div
+					>
+				</div>
+			</div>
+
+			<button
+				type="button"
+				class="btn-close"
+				data-bs-dismiss="toast"
+				aria-label="Close"
+			>
+				<i class="icon-cross"></i>
+			</button>
+		</div>
+		<!-- Toast Danger -->
+
+		<!-- Toast Information -->
+		<div
+			class="toast__information d-flex align-items-center justify-content-between"
+		>
+			<div class="d-flex align-items-center gap-3">
+				<i class="icon-info-zpeptides fs-md-32 text-primary"></i>
+				<div>
+					<h5
+						class="site__heading-six fs-md-18 fs-16 fw-bold text-secondary text-start"
+						>Information
+					</h5>
+					<div class="fw-500 fs-md-6 fs-14">
+						Hello, world! This is a toast message.</div
+					>
+				</div>
+			</div>
+
+			<button
+				type="button"
+				class="btn-close"
+				data-bs-dismiss="toast"
+				aria-label="Close"
+			>
+				<i class="icon-cross"></i>
+			</button>
+		</div>
+		<!-- Toast Information -->
+	</div>
+</div>

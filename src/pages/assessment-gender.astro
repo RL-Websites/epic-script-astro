@@ -1,0 +1,87 @@
+---
+import AssesmentFooter from "../components/AssesmentFooter.astro";
+import AssesmentHeader from "../components/AssesmentHeader.astro";
+import CommonAction from "../components/CommonAction.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="assessment__page-wrapper page-full">
+		<div class="container">
+			<div class="assessment">
+				<!--Assesment Header Start -->
+				<AssesmentHeader />
+				<!--Assesment Header End -->
+
+				<!-- Assessment question sub title start -->
+				<div
+					class="assessment__label mt-40 animate__animated animate__fadeInUp adur-500ms adel-900ms"
+				>
+					What is your sex at birth?
+				</div>
+				<!-- Assessment form start -->
+				<div class="assessment__form mt-30">
+					<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio1"
+							value="male"
+							checked
+						/>
+						<label for="answerRadio1"> Male </label>
+					</div>
+
+					<div class="assessment__form_radio mt-sm-20 mb-0">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio2"
+							value="female"
+						/>
+						<label for="answerRadio2"> Female </label>
+					</div>
+				</div>
+				<!-- Assessment form end -->
+
+				<!-- Assessment form start -->
+				<!-- <div
+					class="assessment__form mt-10 animate__animated animate__fadeInRight adur-700ms adel-1-1s"
+				>
+					<div class="dropdown__selection dropdown__selection__date">
+						<div class="dropdown__selection__date__items">
+							<select class="select-items" name="" id="">
+								<option class="selected-value" value="">1</option>
+								<option class="selected-value" value="">2</option>
+								<option class="selected-value" value="">3</option>
+								<option class="selected-value" value="">4</option>
+							</select>
+						</div>
+						<div class="dropdown__selection__date__items">
+							<select class="select-items" name="" id="">
+								<option class="selected-value" value="">1</option>
+								<option class="selected-value" value="">2</option>
+								<option class="selected-value" value="">3</option>
+								<option class="selected-value" value="">4</option>
+							</select>
+						</div>
+						<div class="dropdown__selection__date__items">
+							<select class="select-items" name="" id="">
+								<option class="selected-value" value="">1992</option>
+								<option class="selected-value" value="">2</option>
+								<option class="selected-value" value="">3</option>
+								<option class="selected-value" value="">4</option>
+							</select>
+						</div>
+					</div>
+				</div> -->
+				<!-- Assessment form end -->
+
+				<!-- Assessment buttons start -->
+				<CommonAction />
+				<!-- Assessment buttons end -->
+			</div>
+		</div>
+		<AssesmentFooter />
+	</div>
+</Layout>

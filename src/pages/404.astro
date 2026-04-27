@@ -1,0 +1,73 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- =====|| Main Section Start ||====== -->
+	<main class="page">
+		<div class="page__wrapper page__wrapper--alt">
+			<!--==|| Empty Cart Status Start ||== -->
+			<section class="pt-md-160 pb-md-150 pt-md-150 pt-150 pb-80">
+				<div class="container">
+					<div class="row" data-aos="flip-up" data-aos-duration="1000">
+						<div class="text-center">
+							<p class="fs-md-200 fs-80 fw-bold lh-1 text-primary">404</p>
+							<h2
+								class="fs-md-48 fs-28 fw-semibold text-primary mt-md-30 mt-10"
+							>
+								Page Not Found
+							</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--==|| Empty Cart Status End ||== -->
+		</div>
+	</main>
+	<!-- =====|| Main Section End ||====== -->
+</Layout>
+
+<Footer />
+
+<!-- Confirm Modal Start -->
+<div id="confirm" class="modal fade confirm-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button> -->
+
+			<div class="modal-body">
+				<div class="modal__icon">
+					<i class="icon-alert"></i>
+				</div>
+				<div class="modal__title">
+					<p>Please Confirm</p>
+				</div>
+
+				<div class="modal__text">
+					<p>Do you want to delete this item?</p>
+				</div>
+
+				<div class="modal__actions">
+					<button
+						class="modal__action modal__action--primary"
+						type="button"
+						data-dismiss="modal"
+					>
+						No
+					</button>
+					<button class="modal__action modal__action--outline" type="button">
+						Yes
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Confirm Modal End -->

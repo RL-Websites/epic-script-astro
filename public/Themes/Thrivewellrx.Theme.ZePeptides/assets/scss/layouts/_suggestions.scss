@@ -1,0 +1,159 @@
+.suggestions {
+	padding: 100px 0;
+
+	&__heading {
+		margin-bottom: 65px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+		transition: transform 0.3s ease;
+		transform-origin: bottom;
+	}
+
+	&__item2 {
+		.suggestions__body {
+			height: 780px;
+		}
+		.suggestions__content {
+			align-items: center;
+		}
+	}
+
+	&__body {
+		height: 504px;
+		background-color: $yellow-light;
+		border-radius: 16px;
+		position: relative;
+		overflow: hidden;
+		&--center {
+			img {
+				right: auto;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__content {
+		position: absolute;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+
+	&__title {
+		font-size: $fs-40;
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+
+	&__img {
+		position: absolute;
+		max-width: 400px;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	&__cta {
+		margin-top: auto;
+		width: 100%;
+		display: flex;
+		gap: 15px;
+
+		button {
+			flex-grow: 1;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			font-size: $fs-16;
+			line-height: 18px;
+			font-weight: 500;
+			text-decoration: underline;
+			color: $grey-5;
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.suggestions {
+		padding: 60px 0;
+		.row {
+			.col-md-6 {
+				width: 50% !important;
+				float: left;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.suggestions {
+		padding: 60px 0;
+		.row {
+			.col-md-6 {
+				width: 50% !important;
+				float: left;
+			}
+		}
+		&__img {
+			max-width: 200px;
+		}
+		&__body {
+			height: 350px;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.suggestions {
+		padding: 60px 0;
+		&__body {
+			width: 100%;
+			height: 300px;
+		}
+		.row {
+			.col-md-6 {
+				width: 100% !important;
+				float: unset;
+				&:nth-child(2) {
+					margin-top: 20px;
+				}
+			}
+		}
+		&__items {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		&__img {
+			max-width: 150px;
+		}
+		&__content {
+			padding: 20px;
+		}
+		&__title {
+			font-size: $fs-30;
+		}
+	}
+}
