@@ -5,8 +5,14 @@
 	background-size: cover;
 	&__wrapper {
 		max-width: 652px;
+		padding: 100px 0 174px;
 		h1 {
 			color: $white;
+			padding-top: 26px;
+			text-transform: capitalize;
 		}
 	}
+}
+
+.category-slider {
 }

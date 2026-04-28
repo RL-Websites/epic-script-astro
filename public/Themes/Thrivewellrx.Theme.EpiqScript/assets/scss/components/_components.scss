@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 // .rizz-separator {
 // 	height: 3px;
@@ -296,8 +296,8 @@
 				position: relative;
 
 				&::after {
-					content: "\e911";
-					font-family: "icomoon";
+					content: '\e911';
+					font-family: 'icomoon';
 					position: absolute;
 					z-index: -1;
 					top: 50%;
@@ -388,7 +388,7 @@
 }
 
 .status-pill {
-	padding: 5px 12px;
+	padding: 10px 16px;
 	border-radius: 30px;
 	font-size: $fs-14;
 	line-height: 1;
@@ -396,6 +396,7 @@
 	border: 0;
 	outline: 0;
 	box-shadow: none;
+	text-transform: uppercase;
 
 	&--default {
 		background-color: $gray-normal;
@@ -432,14 +433,13 @@
 		color: $black-deep;
 	}
 
-
 	&--transparent {
 		background-color: transparent;
 	}
 
 	&--yellow-light {
 		background-color: $yellow-light;
-		color: $gray-dark;
+		color: $black-deep;
 	}
 
 	&--primary {
@@ -462,15 +462,34 @@
 	}
 
 	&--active {
-		background-color: #F3F7FC;
-		color: #175BCC;
+		background-color: #f3f7fc;
+		color: #175bcc;
 		border-radius: 8px;
 		padding: 6px 20px;
 	}
 
 	&--pending {
-		background-color: #FFFCDB;
+		background-color: #fffcdb;
 		color: $dark;
+	}
+	&--bullet {
+		position: relative;
+		padding-left: 24px;
+		display: inline-block;
+		color: $primary;
+		background: $green-lighter2;
+		text-transform: capitalize;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 8px;
+			transform: translateY(-50%);
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $primary;
+		}
 	}
 }
 

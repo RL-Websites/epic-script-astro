@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 //Width
 .mw-400 {
@@ -28,7 +28,6 @@
 		width: 100%;
 	}
 }
-
 
 .ebook {
 	&__download {
@@ -80,7 +79,7 @@
 
 			&::after {
 				position: absolute;
-				content: "";
+				content: '';
 				background-color: $primary-light;
 				height: 3px;
 				width: 100%;
@@ -104,7 +103,7 @@
 				&::after {
 					position: absolute;
 					z-index: 1;
-					content: "";
+					content: '';
 					background-color: $primary;
 					height: 5px;
 					width: 100%;
@@ -140,12 +139,15 @@
 .common {
 	&__banner {
 		margin-top: 110px;
-		background: url("../img/bg/common-bg-alt.svg");
+		background: url('../img/bg/common-bg-alt.svg');
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: bottom center;
 		padding: 80px 0 80px;
 		background-color: $blue-3;
+	}
+	&__padding {
+		padding: 80px 0;
 	}
 }
 

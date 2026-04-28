@@ -472,15 +472,15 @@ small,
 }
 
 .bg-background-1 {
-  background-color: #EFEFF1 !important;
+  background-color: #efeff1 !important;
 }
 
 .text-background-1 {
-  color: #EFEFF1 !important;
+  color: #efeff1 !important;
 }
 
 .border-background-1 {
-  border-color: #EFEFF1 !important;
+  border-color: #efeff1 !important;
 }
 
 .bg-background-2 {
@@ -6638,7 +6638,7 @@ body {
 body {
   font-family: "sfuidisplay", sans-serif;
   font-size: 16px;
-  background-color: #EFEFF1;
+  background-color: #efeff1;
   color: #2d2d2d;
   margin: 0px;
   background: url("../img/bg/body-watermark.png") top center/1920px auto repeat;
@@ -6674,7 +6674,7 @@ ul li a:hover, ul li a:focus {
 }
 
 .dropdown-menu {
-  background-color: #EFEFF1;
+  background-color: #efeff1;
 }
 .dropdown-menu li a {
   background-color: transparent;
@@ -6949,7 +6949,7 @@ textarea.form-control::placeholder {
   background-color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-days tbody tr td.active {
-  background-color: #EFEFF1;
+  background-color: #efeff1;
   color: #2d2d2d;
   transition: 0.5s;
 }
@@ -6977,7 +6977,7 @@ textarea.form-control::placeholder {
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-months tbody tr td span.active,
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-years tbody tr td span.active {
-  background-color: #EFEFF1;
+  background-color: #efeff1;
   color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-months tbody tr td span.active:hover,
@@ -6996,7 +6996,7 @@ textarea.form-control::placeholder {
   background-color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-decades tbody tr td span.active {
-  background-color: #EFEFF1;
+  background-color: #efeff1;
   color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-decades tbody tr td span.active:hover {
@@ -7264,6 +7264,9 @@ textarea.form-control::placeholder {
   padding: 80px 0 80px;
   background-color: #9790d4;
 }
+.common__padding {
+  padding: 80px 0;
+}
 
 @media only screen and (max-width: 992px) {
   .ebook__download {
@@ -7310,18 +7313,19 @@ textarea.form-control::placeholder {
   cursor: pointer;
   font-size: 16px;
   line-height: 150%;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   border: 0;
   outline: 0;
   box-shadow: none;
   transition: 0.9s;
   text-decoration: none;
+  width: 100%;
 }
 .theme-btn__primary {
   background-color: #00533f;
   border: 1.5px solid #00533f;
-  border-radius: 8px;
+  border-radius: 25px;
   color: white;
 }
 .theme-btn__primary:hover {
@@ -7411,19 +7415,19 @@ textarea.form-control::placeholder {
 .theme-btn__outline {
   font-size: 16px;
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: 25px;
 }
 .theme-btn__outline:hover, .theme-btn__outline:focus {
   background-color: #00533f;
   border-color: #00533f;
 }
 .theme-btn__outline--primary {
-  border: 1px solid #00533f;
-  color: #00533f;
+  border: 1px solid #626262;
+  color: #626262;
 }
 .theme-btn__outline--primary:hover, .theme-btn__outline--primary:focus {
-  background-color: #e6d4ff;
-  color: #00533f;
+  background-color: #626262;
+  color: #ffffff;
 }
 .theme-btn__outline--secondary {
   border: 1px solid #e6d4ff;
@@ -7697,6 +7701,39 @@ textarea.form-control::placeholder {
   .product__price-section {
     padding: 22px 12px 22px 12px;
   }
+}
+
+.product-card__thumb {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  padding: 72px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 83, 63, 0.0901960784);
+}
+.product-card__thumb img {
+  height: 100%;
+  max-width: 100%;
+}
+.product-card__content {
+  padding-top: 24px;
+}
+.product-card__content h2 {
+  padding-top: 18px;
+  padding-bottom: 20px;
+}
+.product-card__content p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #212121;
+}
+.product-card__link {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
 }
 
 .client__card {
@@ -8620,7 +8657,7 @@ textarea.form-control::placeholder {
 }
 
 .status-pill {
-  padding: 5px 12px;
+  padding: 10px 16px;
   border-radius: 30px;
   font-size: 14px;
   line-height: 1;
@@ -8628,6 +8665,7 @@ textarea.form-control::placeholder {
   border: 0;
   outline: 0;
   box-shadow: none;
+  text-transform: uppercase;
 }
 .status-pill--default {
   background-color: #e7f3ff;
@@ -8651,18 +8689,18 @@ textarea.form-control::placeholder {
 }
 .status-pill--state {
   background-color: #ffe9e9;
-  color: #1f1f1f;
+  color: #212121;
 }
 .status-pill--saving {
   background-color: #d8ffce;
-  color: #1f1f1f;
+  color: #212121;
 }
 .status-pill--transparent {
   background-color: transparent;
 }
 .status-pill--yellow-light {
-  background-color: #fdf2dc;
-  color: #525252;
+  background-color: #ffe46b;
+  color: #212121;
 }
 .status-pill--primary {
   background-color: #00533f;
@@ -8680,14 +8718,33 @@ textarea.form-control::placeholder {
   text-decoration: none;
 }
 .status-pill--active {
-  background-color: #F3F7FC;
-  color: #175BCC;
+  background-color: #f3f7fc;
+  color: #175bcc;
   border-radius: 8px;
   padding: 6px 20px;
 }
 .status-pill--pending {
-  background-color: #FFFCDB;
+  background-color: #fffcdb;
   color: #444444;
+}
+.status-pill--bullet {
+  position: relative;
+  padding-left: 24px;
+  display: inline-block;
+  color: #00533f;
+  background: #d4f7e7;
+  text-transform: capitalize;
+}
+.status-pill--bullet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00533f;
 }
 
 .searchable-dropdown.dropdown {
@@ -11972,7 +12029,7 @@ body.header-open {
   border-radius: 12px;
   max-height: calc(100% - 30px) !important;
   overflow-y: auto !important;
-  background: #EFEFF1;
+  background: #efeff1;
   background-size: cover;
   background-position: center;
   border: 1px solid #fbf9ff;
@@ -12579,7 +12636,7 @@ body.header-open {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: #EFEFF1;
+  background-color: #efeff1;
 }
 .client__title {
   max-width: 550px;
@@ -13547,9 +13604,12 @@ body.header-open {
 }
 .category-hero__wrapper {
   max-width: 652px;
+  padding: 100px 0 174px;
 }
 .category-hero__wrapper h1 {
   color: #ffffff;
+  padding-top: 26px;
+  text-transform: capitalize;
 }
 
 .assessment__page-wrapper {
