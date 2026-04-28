@@ -1,16 +1,23 @@
 @use '../base/variables' as *;
 
 .category-hero {
-	background: url('../img/category-hero.jpg') no-repeat center center;
-	background-size: cover;
+
 	&__wrapper {
-		max-width: 652px;
-		padding: 100px 0 174px;
+		padding: 100px 120px;
+		background: url('../img/category-hero.jpg') no-repeat center center;
+		background-size: cover;
+		min-height: 570px;
+		border-radius: 20px;
+
 		h1 {
 			color: $white;
 			padding-top: 26px;
 			text-transform: capitalize;
 		}
+	}
+
+	&__content {
+		max-width: 620px;
 	}
 }
 

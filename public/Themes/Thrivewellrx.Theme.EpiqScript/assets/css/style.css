@@ -13557,18 +13557,20 @@ body.header-open {
   text-decoration-color: #FF0000;
 }
 
-.category-hero {
+.category-hero__wrapper {
+  padding: 100px 120px;
   background: url("../img/category-hero.jpg") no-repeat center center;
   background-size: cover;
-}
-.category-hero__wrapper {
-  max-width: 652px;
-  padding: 100px 0 174px;
+  min-height: 570px;
+  border-radius: 20px;
 }
 .category-hero__wrapper h1 {
   color: #ffffff;
   padding-top: 26px;
   text-transform: capitalize;
+}
+.category-hero__content {
+  max-width: 620px;
 }
 
 .category-slider__controls {
