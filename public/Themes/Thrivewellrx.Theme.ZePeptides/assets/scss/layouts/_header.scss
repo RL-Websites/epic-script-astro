@@ -2,16 +2,18 @@
 
 .site {
 	&__header {
-		padding: 16px 0;
+		padding: 24px 30px;
 		transition: all 0.3s ease;
-		position: fixed;
-		top: 0;
 		width: 100%;
+		position: sticky;
 		z-index: 999;
 		background: #FFFFFFCC;
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		box-shadow: 0 2px 10px rgba($black, 0.05);
+		border-radius: 10px;
+
+
 
 		&.sticky {
 			box-shadow: 0 4px 20px rgba($black, 0.1);

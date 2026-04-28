@@ -90,7 +90,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: darken($background-3, 10%);
+			background-color: $background-3;
 		}
 	}
 
