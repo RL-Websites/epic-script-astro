@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "npm-run-all --parallel astro:dev watch",
 		"astro:dev": "astro dev --port 1080 --host --watch",
-		"watch": "sass --watch public/Themes/Thrivewellrx.Theme.ZePeptides/assets/scss/styles.scss:public/Themes/Thrivewellrx.Theme.ZePeptides/assets/css/style.css",
+		"watch": "sass --watch public/Themes/Thrivewellrx.Theme.EpiqScript/assets/scss/styles.scss:public/Themes/Thrivewellrx.Theme.EpiqScript/assets/css/style.css",
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro"
