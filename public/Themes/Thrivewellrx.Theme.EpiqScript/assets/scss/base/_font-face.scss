@@ -2,85 +2,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 /* SF UI Fonts */
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplayblack.eot");
-	src: url("../fonts/sf-ui/sfuidisplayblack.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplayblack.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplayblack.woff") format("woff"), url("../fonts/sf-ui/sfuidisplayblack.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplayblack.svg#sfuidisplayblack") format("svg");
-	font-weight: 900;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplayblack.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplayblack.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplayblack.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplayblack.woff") format("woff"), url("../fonts/sf-ui/sfuidisplayblack.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplayblack.svg#sfuidisplayblack") format("svg");
+// 	font-weight: 900;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplayheavy.eot");
-	src: url("../fonts/sf-ui/sfuidisplayheavy.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplayheavy.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplayheavy.woff") format("woff"), url("../fonts/sf-ui/sfuidisplayheavy.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplayheavy.svg#sfuidisplayheavy") format("svg");
-	font-weight: 800;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplayheavy.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplayheavy.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplayheavy.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplayheavy.woff") format("woff"), url("../fonts/sf-ui/sfuidisplayheavy.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplayheavy.svg#sfuidisplayheavy") format("svg");
+// 	font-weight: 800;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplaybold.eot");
-	src: url("../fonts/sf-ui/sfuidisplaybold.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaybold.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplaybold.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaybold.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplaybold.svg#sfuidisplaybold") format("svg");
-	font-weight: 700;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplaybold.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplaybold.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaybold.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplaybold.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaybold.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplaybold.svg#sfuidisplaybold") format("svg");
+// 	font-weight: 700;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplaysemibold.eot");
-	src: url("../fonts/sf-ui/sfuidisplaysemibold.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaysemibold.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplaysemibold.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaysemibold.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplaysemibold.svg#sfuidisplaysemibold") format("svg");
-	font-weight: 600;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplaysemibold.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplaysemibold.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaysemibold.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplaysemibold.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaysemibold.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplaysemibold.svg#sfuidisplaysemibold") format("svg");
+// 	font-weight: 600;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplaymedium.eot");
-	src: url("../fonts/sf-ui/sfuidisplaymedium.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaymedium.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplaymedium.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaymedium.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplaymedium.svg#sfuidisplaymedium") format("svg");
-	font-weight: 500;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplaymedium.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplaymedium.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaymedium.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplaymedium.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaymedium.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplaymedium.svg#sfuidisplaymedium") format("svg");
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplaylight.eot");
-	src: url("../fonts/sf-ui/sfuidisplaylight.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaylight.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplaylight.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaylight.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplaylight.svg#sfuidisplaylight") format("svg");
-	font-weight: 300;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplaylight.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplaylight.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaylight.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplaylight.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaylight.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplaylight.svg#sfuidisplaylight") format("svg");
+// 	font-weight: 300;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplaythin.eot");
-	src: url("../fonts/sf-ui/sfuidisplaythin.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaythin.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplaythin.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaythin.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplaythin.svg#sfuidisplaythin") format("svg");
-	font-weight: 200;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplaythin.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplaythin.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplaythin.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplaythin.woff") format("woff"), url("../fonts/sf-ui/sfuidisplaythin.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplaythin.svg#sfuidisplaythin") format("svg");
+// 	font-weight: 200;
+// 	font-style: normal;
+// }
 
-@font-face {
-	font-family: "sfuidisplay";
-	src: url("../fonts/sf-ui/sfuidisplayultralight.eot");
-	src: url("../fonts/sf-ui/sfuidisplayultralight.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplayultralight.woff2") format("woff2"),
-		url("../fonts/sf-ui/sfuidisplayultralight.woff") format("woff"), url("../fonts/sf-ui/sfuidisplayultralight.ttf") format("truetype"),
-		url("../fonts/sf-ui/sfuidisplayultralight.svg#sfuidisplayultralight") format("svg");
-	font-weight: 100;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: "sfuidisplay";
+// 	src: url("../fonts/sf-ui/sfuidisplayultralight.eot");
+// 	src: url("../fonts/sf-ui/sfuidisplayultralight.eot") format("embedded-opentype"), url("../fonts/sf-ui/sfuidisplayultralight.woff2") format("woff2"),
+// 		url("../fonts/sf-ui/sfuidisplayultralight.woff") format("woff"), url("../fonts/sf-ui/sfuidisplayultralight.ttf") format("truetype"),
+// 		url("../fonts/sf-ui/sfuidisplayultralight.svg#sfuidisplayultralight") format("svg");
+// 	font-weight: 100;
+// 	font-style: normal;
+// }
 
 // /* Cabinet Grotesk Fonts */
 // @font-face {

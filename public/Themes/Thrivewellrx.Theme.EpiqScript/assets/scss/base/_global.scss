@@ -13,7 +13,7 @@ body {
 }
 
 body {
-	font-family: 'sfuidisplay', sans-serif;
+	font-family: "Manrope", sans-serif;
 	font-size: $fs-16;
 	background-color: $background-1;
 	color: $secondary;
@@ -49,6 +49,7 @@ ul {
 @media all and (min-width: 1420px) {
 	.container {
 		max-width: 1420px;
+
 		&--alt {
 			max-width: 1260px;
 		}
