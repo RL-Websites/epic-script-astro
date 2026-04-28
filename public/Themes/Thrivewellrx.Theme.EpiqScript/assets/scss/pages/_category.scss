@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 
 .category-hero {
-	background: url('../../img/category-hero.jpg') no-repeat center center;
+	background: url('../img/category-hero.jpg') no-repeat center center;
 	background-size: cover;
 	&__wrapper {
 		max-width: 652px;
