@@ -1,31 +1,38 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	image: string;
+	status: string;
+}
+
+const { title, description, image, status } = Astro.props;
+---
+
 <div class="product-card">
 	<div class="product-card__thumb">
-		<img
-			src="Themes/Thrivewellrx.Theme.EpiqScript/assets/img/products/product-5.png"
-			alt="product thumbnail"
-		/>
+		<img src={image} alt={title} class="product-card__image" />
 	</div>
 	<div class="product-card__content">
-		<span class="status-pill status-pill--bullet">New And In Stock</span>
-		<h2 class="product-card__title">Wegovy Pil</h2>
+		<span class="status-pill status-pill--bullet">{status}</span>
+		<h2 class="product-card__title">{title}</h2>
 		<p class="product-card__description">
-			The Comprehensive Plus Panel delivers the most in-depth health
-			evaluation...
+			{description}
 		</p>
 		<div class="product-card__link">
 			<button
 				type="button"
 				class="theme-btn theme-btn__primary"
 				data-bs-toggle="modal"
-				data-bs-target="#productDetailsModal"
-				disabled>Get Started</button
-			>
+				data-bs-target="#productDetailsModal">
+				Get Started
+			</button>
 			<button
 				type="button"
 				class="theme-btn theme-btn__outline theme-btn__outline--primary"
-				data-bs-toggle="modal"
-				data-bs-target="#productDetailsModal">Learn more</button
-			>
+				data-bs-toggle="modal">
+				Learn More
+			</button>
 		</div>
 	</div>
 </div>
