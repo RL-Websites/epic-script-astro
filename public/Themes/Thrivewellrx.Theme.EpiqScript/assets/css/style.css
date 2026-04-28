@@ -472,15 +472,15 @@ small,
 }
 
 .bg-background-1 {
-  background-color: #fbf9ff !important;
+  background-color: #EFEFF1 !important;
 }
 
 .text-background-1 {
-  color: #fbf9ff !important;
+  color: #EFEFF1 !important;
 }
 
 .border-background-1 {
-  border-color: #fbf9ff !important;
+  border-color: #EFEFF1 !important;
 }
 
 .bg-background-2 {
@@ -6638,7 +6638,7 @@ body {
 body {
   font-family: "sfuidisplay", sans-serif;
   font-size: 16px;
-  background-color: #fbf9ff;
+  background-color: #EFEFF1;
   color: #2d2d2d;
   margin: 0px;
   background: url("../img/bg/body-watermark.png") top center/1920px auto repeat;
@@ -6674,7 +6674,7 @@ ul li a:hover, ul li a:focus {
 }
 
 .dropdown-menu {
-  background-color: #fbf9ff;
+  background-color: #EFEFF1;
 }
 .dropdown-menu li a {
   background-color: transparent;
@@ -6890,7 +6890,7 @@ textarea.form-control::placeholder {
   font-size: 16px;
   padding: 10px;
   border: 0px;
-  background: linear-gradient(0deg, rgba(251, 249, 255, 0.9), rgba(251, 249, 255, 0.9)), linear-gradient(0deg, rgba(45, 45, 45, 0.6), rgba(45, 45, 45, 0.6)), url("../../img/bg-pattern-2.png");
+  background: linear-gradient(0deg, rgba(239, 239, 241, 0.9), rgba(239, 239, 241, 0.9)), linear-gradient(0deg, rgba(45, 45, 45, 0.6), rgba(45, 45, 45, 0.6)), url("../../img/bg-pattern-2.png");
 }
 .bootstrap-datetimepicker-widget.dropdown-menu.top {
   left: 50% !important;
@@ -6907,7 +6907,7 @@ textarea.form-control::placeholder {
 .bootstrap-datetimepicker-widget.dropdown-menu.top:before {
   border-left: 14px solid transparent;
   border-right: 14px solid transparent;
-  border-top: 12px solid rgba(251, 249, 255, 0.9);
+  border-top: 12px solid rgba(239, 239, 241, 0.9);
   bottom: -12px;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker thead {
@@ -6949,7 +6949,7 @@ textarea.form-control::placeholder {
   background-color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-days tbody tr td.active {
-  background-color: #fbf9ff;
+  background-color: #EFEFF1;
   color: #2d2d2d;
   transition: 0.5s;
 }
@@ -6977,7 +6977,7 @@ textarea.form-control::placeholder {
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-months tbody tr td span.active,
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-years tbody tr td span.active {
-  background-color: #fbf9ff;
+  background-color: #EFEFF1;
   color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-months tbody tr td span.active:hover,
@@ -6996,7 +6996,7 @@ textarea.form-control::placeholder {
   background-color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-decades tbody tr td span.active {
-  background-color: #fbf9ff;
+  background-color: #EFEFF1;
   color: #2d2d2d;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker .datepicker-decades tbody tr td span.active:hover {
@@ -11972,7 +11972,7 @@ body.header-open {
   border-radius: 12px;
   max-height: calc(100% - 30px) !important;
   overflow-y: auto !important;
-  background: #fbf9ff;
+  background: #EFEFF1;
   background-size: cover;
   background-position: center;
   border: 1px solid #fbf9ff;
@@ -12579,7 +12579,7 @@ body.header-open {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: #fbf9ff;
+  background-color: #EFEFF1;
 }
 .client__title {
   max-width: 550px;
