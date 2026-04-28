@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 // Base typography styles
 h1,
@@ -8,27 +8,25 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-family: "sfuidisplay", sans-serif;
+	font-family: 'sfuidisplay', sans-serif;
 	color: $secondary;
 }
 
-
-
 p {
 	margin: 0;
-	font-family: "sfuidisplay", sans-serif;
+	font-family: 'sfuidisplay', sans-serif;
 	color: $secondary;
 }
 
 span {
-	font-family: "sfuidisplay", sans-serif;
+	font-family: 'sfuidisplay', sans-serif;
 }
 
 // H1 - 70px Bold, 120% line-height
 h1 {
-	font-size: 70px;
+	font-size: $fs-56;
 	font-weight: 700;
-	line-height: 120%;
+	line-height: 1.2;
 	letter-spacing: 0;
 }
 
@@ -179,15 +177,15 @@ small,
 }
 
 .font-sfui {
-	font-family: "sfuidisplay", sans-serif;
+	font-family: 'sfuidisplay', sans-serif;
 }
 
 .font-cabinet-grotesk {
-	font-family: "CabinetGrotesk", sans-serif;
+	font-family: 'CabinetGrotesk', sans-serif;
 }
 
 .font-playfair {
-	font-family: "Playfair Display", serif;
+	font-family: 'Playfair Display', serif;
 }
 
 .text-primary-grad-1 {
@@ -199,8 +197,6 @@ small,
 
 // Responsive typography
 @media only screen and (max-width: 992px) {
-
-
 	h1 {
 		font-size: 48px;
 	}
@@ -249,8 +245,6 @@ small,
 }
 
 @media only screen and (max-width: 768px) {
-
-
 	h1 {
 		font-size: 30px;
 	}
@@ -300,5 +294,4 @@ small,
 			}
 		}
 	}
-
 }

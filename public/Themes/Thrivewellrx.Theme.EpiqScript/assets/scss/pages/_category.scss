@@ -1,6 +1,12 @@
-@use '../abstracts/variables' as *;
+@use '../base/variables' as *;
 
 .category-hero {
 	background: url('../img/category-hero.jpg') no-repeat center center;
 	background-size: cover;
+	&__wrapper {
+		max-width: 652px;
+		h1 {
+			color: $white;
+		}
+	}
 }

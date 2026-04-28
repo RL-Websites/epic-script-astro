@@ -1,7 +1,7 @@
 // ==== Colors
 // Primary Brand Colors
 $primary-deep: #141a33; // Deep Dark Blue
-$primary: #00533F; // Primary Purple
+$primary: #00533f; // Primary Purple
 $primary-light: #e6d4ff; // Light Purple
 $primary-lighter: #f6efff; // Very Light Purple
 $primary-lightest: #fbf9ff; // Off White Purple
@@ -9,7 +9,7 @@ $primary-lightest: #fbf9ff; // Off White Purple
 $black: #2d2d2d; // Dark Gray/Black
 $black-deep: #1f1f1f; // Deep Black
 $gray-dark: #525252; // Medium Gray
-$gray-medium2: #878CA8;
+$gray-medium2: #878ca8;
 $gray-medium: #868686;
 $gray-normal: #e7f3ff; // Normal Gray
 $gray-light: #dadada; // Light Gray
@@ -18,11 +18,11 @@ $gray-light-2: #ffd4dd; // Light Gray
 $gray-lighter: #ffe9e9; // Light Gray
 $white: #ffffff; // Pure White
 $gray-border: #dee2e6;
-$gray-border-light: #AEAEAE;
+$gray-border-light: #aeaeae;
 // Accent Colors
 $red: #ed3131; // Red Accent
 $red-light: #ffeee8; // Light Red/Pink
-$green-deep: #BDDCB6; // Deep Green
+$green-deep: #bddcb6; // Deep Green
 $green: #8ddcb6; // Medium Green
 $green-light: #f2ffef; // Light Green
 $green-lighter: #fffcdb; // Lighter Green
@@ -36,10 +36,10 @@ $background-1: $primary-lightest;
 $background-2: $primary-lighter;
 $background-3: $primary-light;
 $success: #28a745;
-$submitted: #EAFFE7;
+$submitted: #eaffe7;
 $warning: #ffc107;
-$saving: #D8FFCE;
-$yellow-light: #FDF2DC; // Medium Gray
+$saving: #d8ffce;
+$yellow-light: #fdf2dc; // Medium Gray
 
 // Additional legacy colors (for utils.scss compatibility)
 $yellow: #ffd66d; // Legacy yellow
@@ -70,6 +70,7 @@ $fs-36: 36px;
 $fs-40: 40px;
 $fs-44: 44px;
 $fs-48: 48px;
+$fs-56: 56px;
 $fs-70: 70px;
 $fs-80: 80px;
 $fs-90: 90px;

@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 * {
 	box-sizing: border-box;
@@ -13,12 +13,12 @@ body {
 }
 
 body {
-	font-family: "sfuidisplay", sans-serif;
+	font-family: 'sfuidisplay', sans-serif;
 	font-size: $fs-16;
 	background-color: $background-1;
 	color: $secondary;
 	margin: 0px;
-	background: url("../img/bg/body-watermark.png") top center/1920px auto repeat;
+	background: url('../img/bg/body-watermark.png') top center/1920px auto repeat;
 }
 
 ul {
@@ -46,11 +46,12 @@ ul {
 	padding: 0 15px;
 }
 
-
-
 @media all and (min-width: 1420px) {
 	.container {
 		max-width: 1420px;
+		&--alt {
+			max-width: 1260px;
+		}
 	}
 }
 
@@ -81,8 +82,8 @@ ul {
 		z-index: 99;
 
 		&::after {
-			content: "\e920";
-			font-family: "icomoon";
+			content: '\e920';
+			font-family: 'icomoon';
 			position: absolute;
 			z-index: -1;
 			top: 50%;
@@ -122,8 +123,8 @@ ul {
 			background-color: transparent;
 
 			&::after {
-				content: "\e920";
-				font-family: "icomoon";
+				content: '\e920';
+				font-family: 'icomoon';
 				position: absolute;
 				z-index: 2;
 				top: 50%;
@@ -133,7 +134,6 @@ ul {
 				font-weight: 700;
 				line-height: 1;
 				color: black;
-
 			}
 		}
 
@@ -267,7 +267,9 @@ a {
 
 /* Smooth transitions */
 ::-webkit-scrollbar-thumb {
-	transition: background 0.3s ease, transform 0.2s ease;
+	transition:
+		background 0.3s ease,
+		transform 0.2s ease;
 }
 
 /* For Firefox smooth transition */
