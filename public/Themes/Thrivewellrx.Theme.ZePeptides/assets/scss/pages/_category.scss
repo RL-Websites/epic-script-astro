@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as *;
+
+.category-hero {
+	background: url('../../images/category-hero-bg.png') no-repeat center center;
+	background-size: cover;
+}
