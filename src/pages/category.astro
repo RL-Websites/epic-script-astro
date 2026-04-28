@@ -27,10 +27,51 @@ import Layout from '../layouts/Layout.astro';
 			<!-- category slider start -->
 			<section class="category-slider common__padding">
 				<div class="container container--alt">
-					<div class="category-slider__wrapper">
-						<div class="row">
-							<div class="col-md-4">
-								<ProductSingle />
+					<div class="category-slider__wrapper swiper product-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<ProductSingle
+									title="Wegovy Pen"
+									description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+									image="/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/products/product-5.png"
+									status="New And In Stock"
+								/>
+							</div>
+							<div class="swiper-slide">
+								<ProductSingle
+									title="Sermorelin"
+									description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+									image="/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/products/product-5.png"
+									status="New And In Stock"
+								/>
+							</div>
+							<div class="swiper-slide">
+								<ProductSingle
+									title="NAD+"
+									description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+									image="/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/products/product-5.png"
+									status="New And In Stock"
+								/>
+							</div>
+							<div class="swiper-slide">
+								<ProductSingle
+									title="NAD+"
+									description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+									image="/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/products/product-5.png"
+									status="New And In Stock"
+								/>
+							</div>
+						</div>
+
+						<div class="category-slider__controls">
+							<div class="category-slider__pagination swiper-pagination"></div>
+							<div class="category-slider__navigation">
+								<div class="swiper-button-prev-custom">
+									<i class="icon-arrow-left"></i>
+								</div>
+								<div class="swiper-button-next-custom">
+									<i class="icon-arrow-right"></i>
+								</div>
 							</div>
 						</div>
 					</div>

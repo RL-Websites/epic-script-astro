@@ -15,4 +15,52 @@
 }
 
 .category-slider {
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 40px;
+		margin-top: 50px;
+	}
+
+	&__pagination.swiper-pagination-progressbar {
+		position: relative;
+		width: 120px;
+		height: 4px;
+		background: #e0e0e0;
+		border-radius: 2px;
+		top: auto;
+
+		.swiper-pagination-progressbar-fill {
+			background: #004d3d; // Primary Dark Green
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		gap: 15px;
+
+		[class^='swiper-button-'] {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: #f5f5f5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			color: #333;
+
+			&:hover {
+				background: #004d3d;
+				color: $white;
+			}
+
+			&.swiper-button-disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+		}
+	}
 }
