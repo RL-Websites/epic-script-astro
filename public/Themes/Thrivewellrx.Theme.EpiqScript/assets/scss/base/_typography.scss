@@ -8,18 +8,18 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-family: 'sfuidisplay', sans-serif;
+	font-family: "Manrope", sans-serif;
 	color: $secondary;
 }
 
 p {
 	margin: 0;
-	font-family: 'sfuidisplay', sans-serif;
+	font-family: "Manrope", sans-serif;
 	color: $secondary;
 }
 
 span {
-	font-family: 'sfuidisplay', sans-serif;
+	font-family: "Manrope", sans-serif;
 }
 
 // H1 - 70px Bold, 120% line-height
@@ -177,16 +177,16 @@ small,
 }
 
 .font-sfui {
-	font-family: 'sfuidisplay', sans-serif;
+	font-family: "Manrope", sans-serif;
 }
 
-.font-cabinet-grotesk {
-	font-family: 'CabinetGrotesk', sans-serif;
-}
+// .font-cabinet-grotesk {
+// 	font-family: 'CabinetGrotesk', sans-serif;
+// }
 
-.font-playfair {
-	font-family: 'Playfair Display', serif;
-}
+// .font-playfair {
+// 	font-family: 'Playfair Display', serif;
+// }
 
 .text-primary-grad-1 {
 	background: linear-gradient(90deg, #5100c2 0%, #b07bfa 100%);
