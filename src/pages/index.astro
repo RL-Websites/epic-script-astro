@@ -1,7 +1,8 @@
 ---
+import Client from "../components/Client.astro";
+import CategoryCard from "../components/common/CategoryCard.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import CategoryHome from "../components/homePage/CategoryHome.astro";
 import Homehero from "../components/homePage/Homehero.astro";
 
 import Layout from "../layouts/Layout.astro";
@@ -16,8 +17,75 @@ import Layout from "../layouts/Layout.astro";
 		<!--===|| Banner Section End ||===-->
 
 		<!--===|| Category Section Start ||===-->
-		<CategoryHome />
+		<section class="mb-10">
+			<div class="category__home">
+				<div class="container">
+					<div class="category__home__wrapper">
+						<CategoryCard />
+
+						<Client />
+					</div>
+				</div>
+			</div>
+		</section>
 		<!--===|| Category Section End ||===-->
+
+		<!--===||  Solution Section Start ||===-->
+		<section class="solutions">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<!-- Card 1 -->
+						<div class="solutions__card bg-orange">
+							<div class="solutions__content">
+								<div class="solutions__icon">
+									<i class="icon-delivery"></i>
+								</div>
+
+								<h3> End-To-End Digital Pharmacy Solutions </h3>
+
+								<p class="solutions__text">
+									Say goodbye to more telehealth app development services and
+									simply integrate ready-made software into your system so you
+									can offer a more joined-up service to your patients. Create a
+									smooth customer journey from appointment to medication.
+								</p>
+
+								<button class="theme-btn theme-btn__primary">
+									Find Out More
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<!-- Card 2 -->
+						<div class="solutions__card bg-green">
+							<div class="solutions__content">
+								<div class="solutions__icon">
+									<i class="icon-delivery"></i>
+								</div>
+
+								<h3 class="solutions__title">
+									Deliver More To Your Patients
+								</h3>
+
+								<p class="solutions__text">
+									Through sophisticated software design, we specialize in online
+									prescription fulfillment. Your patient can order any
+									medication which will then be sent directly to them with your
+									branding.
+								</p>
+
+								<button class="theme-btn theme-btn__primary">
+									Find Out More
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--===||  Solution Section End ||===-->
 
 		<!-- <div class="ebook__download">
 			<button class="ebook__download__btn">
@@ -132,24 +200,24 @@ import Layout from "../layouts/Layout.astro";
 					</ul>
 				</div>
 
-				<ProductCard />
-				<PackageProductCard />
-			</div>
-		</section> -->
-		<!--===|| Product Section End ||===-->
+				<!-- <ProductCard />
+				<PackageProductCard /> -->
+	</main>
+</Layout>
+<!--===|| Product Section End ||===-->
 
-		<!--===|| How it Works Section Start ||===-->
+<!--===|| How it Works Section Start ||===-->
 
-		<!-- <HowItWorks /> -->
+<!-- <HowItWorks /> -->
 
-		<!--===|| How it Works Section End ||===-->
+<!--===|| How it Works Section End ||===-->
 
-		<!-- Why Choose Us VPeptides Section Start -->
-		<!-- <WhyChooseUs /> -->
-		<!-- Why Choose Us VPeptides Section End -->
+<!-- Why Choose Us VPeptides Section Start -->
+<!-- <WhyChooseUs /> -->
+<!-- Why Choose Us VPeptides Section End -->
 
-		<!--===|| Faq Section Start ||===-->
-		<!-- <section class="faq py-0 py-md-100">
+<!--===|| Faq Section Start ||===-->
+<!-- <section class="faq py-0 py-md-100">
 			<div class="container faq__wrapper">
 				<div class="row">
 					<div class="col-lg-12 faq__items">
@@ -158,20 +226,14 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 		</section> -->
-		<!--===|| Faq Section End ||===-->
+<!--===|| Faq Section End ||===-->
 
-		<!--===|| Client Feedback Section Start ||===-->
-		<!-- <Client /> -->
-		<!--===|| Client Feedback Section End ||===-->
+<!--=====|| Main Section End ||=====-->
 
-		<!--=====|| Main Section End ||=====-->
-	</main>
-
-	<Footer />
-	<!-- =====|| Toast Start ||====== -->
-	<!-- <Toast /> -->
-	<!-- =====|| Toast Start ||====== -->
-</Layout>
+<Footer />
+<!-- =====|| Toast Start ||====== -->
+<!-- <Toast /> -->
+<!-- =====|| Toast Start ||====== -->
 
 <!--Unable To Proceed Start -->
 <div

@@ -75,11 +75,15 @@
 
 .category {
 	&__home {
-		margin-top: -90px;
+		&__wrapper {
+			background: white;
+			padding: 0 80px;
+			border-radius: 0 0 10px 10px;
+		}
 	}
 
-	&__card {
 
+	&__card {
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
@@ -154,5 +158,9 @@
 			flex-direction: row;
 			align-items: center;
 		}
+	}
+
+	&__items {
+		margin-top: 0;
 	}
 }

@@ -3,36 +3,36 @@
 		if (!el) return;
 
 		// Prevent double init
-		if (el.dataset.swiperInited === '1') return;
+		if (el.dataset.swiperInited === "1") return;
 
 		// If Swiper not loaded yet
-		if (typeof window.Swiper === 'undefined') return;
+		if (typeof window.Swiper === "undefined") return;
 
 		const opts = buildOptions(el);
 
 		try {
 			// If a swiper instance somehow exists, destroy it
-			if (el.swiper && typeof el.swiper.destroy === 'function') {
+			if (el.swiper && typeof el.swiper.destroy === "function") {
 				el.swiper.destroy(true, true);
 			}
 
 			new Swiper(el, opts);
-			el.dataset.swiperInited = '1';
+			el.dataset.swiperInited = "1";
 		} catch (e) {
-			console.warn('Swiper init failed:', el, e);
+			console.warn("Swiper init failed:", el, e);
 		}
 	}
 
 	function initAllSwipers() {
-		initSwiperForElement(document.querySelector('.product__wrapper'), (el) => ({
+		initSwiperForElement(document.querySelector(".product__wrapper"), (el) => ({
 			loop: true,
 			navigation: {
 				nextEl:
-					el.closest('.swiper')?.querySelector('.next-arrow') ||
-					el.querySelector('.next-arrow'),
+					el.closest(".swiper")?.querySelector(".next-arrow") ||
+					el.querySelector(".next-arrow"),
 				prevEl:
-					el.closest('.swiper')?.querySelector('.prev-arrow') ||
-					el.querySelector('.prev-arrow'),
+					el.closest(".swiper")?.querySelector(".prev-arrow") ||
+					el.querySelector(".prev-arrow"),
 			},
 			autoplay: { delay: 3000 },
 			breakpoints: {
@@ -40,48 +40,45 @@
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 15,
-					grid: { rows: 1, fill: 'row' },
+					grid: { rows: 1, fill: "row" },
 				},
 				992: {
 					slidesPerView: 2,
 					spaceBetween: 35,
-					grid: { rows: 2, fill: 'row' },
+					grid: { rows: 2, fill: "row" },
 				},
 			},
 		}));
 
-		initSwiperForElement(
-			document.querySelector('.client__feedbacks'),
-			(el) => ({
-				loop: true,
-				navigation: {
-					nextEl:
-						el.closest('.swiper')?.querySelector('.next-arrow') ||
-						el.querySelector('.next-arrow'),
-					prevEl:
-						el.closest('.swiper')?.querySelector('.prev-arrow') ||
-						el.querySelector('.prev-arrow'),
-				},
-				breakpoints: {
-					0: { slidesPerView: 1.3, spaceBetween: 15 },
-					768: { slidesPerView: 1.8, spaceBetween: 15 },
-					992: { slidesPerView: 2.5, spaceBetween: 35 },
-				},
-			}),
-		);
+		// initSwiperForElement(document.querySelector(".client__slider"), (el) => ({
+		// 	loop: true,
+		// 	navigation: {
+		// 		nextEl:
+		// 			el.closest(".swiper")?.querySelector(".next-arrow") ||
+		// 			el.querySelector(".next-arrow"),
+		// 		prevEl:
+		// 			el.closest(".swiper")?.querySelector(".prev-arrow") ||
+		// 			el.querySelector(".prev-arrow"),
+		// 	},
+		// 	breakpoints: {
+		// 		0: { slidesPerView: 1.3, spaceBetween: 15 },
+		// 		768: { slidesPerView: 1.8, spaceBetween: 15 },
+		// 		992: { slidesPerView: 2.5, spaceBetween: 35 },
+		// 	},
+		// }));
 
 		initSwiperForElement(
-			document.querySelector('.related_product_slider'),
+			document.querySelector(".related_product_slider"),
 			(el) => ({
 				spaceBetween: 20,
 				loop: true,
 				navigation: {
 					nextEl:
-						el.closest('.swiper')?.querySelector('.product__arrow--left') ||
-						el.querySelector('.product__arrow--left'),
+						el.closest(".swiper")?.querySelector(".product__arrow--left") ||
+						el.querySelector(".product__arrow--left"),
 					prevEl:
-						el.closest('.swiper')?.querySelector('.product__arrow--right') ||
-						el.querySelector('.product__arrow--right'),
+						el.closest(".swiper")?.querySelector(".product__arrow--right") ||
+						el.querySelector(".product__arrow--right"),
 				},
 				breakpoints: {
 					0: { slidesPerView: 1 },
@@ -92,29 +89,29 @@
 		);
 
 		initSwiperForElement(
-			document.querySelector('.products__filter-btns'),
+			document.querySelector(".products__filter-btns"),
 			(el) => ({
 				spaceBetween: 12,
 				loop: false,
-				slidesPerView: 'auto',
+				slidesPerView: "auto",
 				navigation: {
 					nextEl:
-						el.closest('.swiper')?.querySelector('.products__filter-right') ||
-						el.querySelector('.products__filter-right'),
+						el.closest(".swiper")?.querySelector(".products__filter-right") ||
+						el.querySelector(".products__filter-right"),
 					prevEl:
-						el.closest('.swiper')?.querySelector('.products__filter-left') ||
-						el.querySelector('.products__filter-left'),
+						el.closest(".swiper")?.querySelector(".products__filter-left") ||
+						el.querySelector(".products__filter-left"),
 				},
 			}),
 		);
 
-		initSwiperForElement(document.querySelector('.feedback__slider'), (el) => ({
+		initSwiperForElement(document.querySelector(".feedback__slider"), (el) => ({
 			spaceBetween: 20,
 			loop: true,
 			pagination: {
 				el:
-					el.closest('.swiper')?.querySelector('.swiper-pagination') ||
-					el.querySelector('.swiper-pagination'),
+					el.closest(".swiper")?.querySelector(".swiper-pagination") ||
+					el.querySelector(".swiper-pagination"),
 				clickable: true,
 			},
 			breakpoints: {
@@ -128,29 +125,29 @@
 			},
 		}));
 
-		initSwiperForElement(document.querySelector('.mySwiper'), (el) => ({
+		initSwiperForElement(document.querySelector(".mySwiper"), (el) => ({
 			slidesPerView: 3,
 			spaceBetween: 30,
 			pagination: {
 				el:
-					el.closest('.swiper')?.querySelector('.swiper-pagination') ||
-					el.querySelector('.swiper-pagination'),
+					el.closest(".swiper")?.querySelector(".swiper-pagination") ||
+					el.querySelector(".swiper-pagination"),
 				clickable: true,
 			},
 		}));
 
 		initSwiperForElement(
-			document.querySelector('.home-product-slider'),
+			document.querySelector(".home-product-slider"),
 			(el) => ({
 				spaceBetween: 20,
 				loop: true,
 				navigation: {
 					nextEl:
-						el.closest('.swiper')?.querySelector('.product__arrow--right') ||
-						el.querySelector('.product__arrow--right'),
+						el.closest(".swiper")?.querySelector(".product__arrow--right") ||
+						el.querySelector(".product__arrow--right"),
 					prevEl:
-						el.closest('.swiper')?.querySelector('.product__arrow--left') ||
-						el.querySelector('.product__arrow--left'),
+						el.closest(".swiper")?.querySelector(".product__arrow--left") ||
+						el.querySelector(".product__arrow--left"),
 				},
 				breakpoints: {
 					0: { slidesPerView: 1.3, centerInsufficientSlides: true },
@@ -161,22 +158,22 @@
 		);
 
 		initSwiperForElement(
-			document.querySelector('.product__items--alt'),
+			document.querySelector(".product__items--alt"),
 			(el) => ({
 				spaceBetween: 20,
 				loop: true,
 				navigation: {
 					nextEl:
-						el.closest('.swiper')?.querySelector('.next-arrow') ||
-						el.querySelector('.next-arrow'),
+						el.closest(".swiper")?.querySelector(".next-arrow") ||
+						el.querySelector(".next-arrow"),
 					prevEl:
-						el.closest('.swiper')?.querySelector('.prev-arrow') ||
-						el.querySelector('.prev-arrow'),
+						el.closest(".swiper")?.querySelector(".prev-arrow") ||
+						el.querySelector(".prev-arrow"),
 				},
 				pagination: {
 					el:
-						el.closest('.swiper')?.querySelector('.swiper-pagination') ||
-						el.querySelector('.swiper-pagination'),
+						el.closest(".swiper")?.querySelector(".swiper-pagination") ||
+						el.querySelector(".swiper-pagination"),
 					clickable: true,
 				},
 				breakpoints: {
@@ -193,7 +190,7 @@
 	}
 
 	// Run once on first load
-	document.addEventListener('DOMContentLoaded', initAllSwipers);
+	document.addEventListener("DOMContentLoaded", initAllSwipers);
 
 	// MutationObserver: re-init when Oqtane injects new page/module DOM
 	const observer = new MutationObserver(() => {
@@ -210,18 +207,18 @@
 	setTimeout(initAllSwipers, 1000);
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
-	new Swiper('.product-swiper', {
+$(document).ready(function () {
+	new Swiper(".product-swiper", {
 		slidesPerView: 1.2,
 		spaceBetween: 24,
 		loop: false,
 		pagination: {
-			el: '.category-slider__pagination',
-			type: 'progressbar',
+			el: ".category-slider__pagination",
+			type: "progressbar",
 		},
 		navigation: {
-			nextEl: '.swiper-button-next-custom',
-			prevEl: '.swiper-button-prev-custom',
+			nextEl: ".swiper-button-next-custom",
+			prevEl: ".swiper-button-prev-custom",
 		},
 		breakpoints: {
 			640: {
@@ -234,6 +231,33 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			1280: {
 				slidesPerView: 3.2,
+				spaceBetween: 30,
+			},
+		},
+	});
+	new Swiper(".client__slider", {
+		slidesPerView: "auto",
+		spaceBetween: 40,
+		loop: true,
+		speed: 5000,
+		freeMode: true,
+		freeModeMomentum: false,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 1.5,
+				spaceBetween: 20,
+			},
+			1024: {
+				slidesPerView: 2.2,
+				spaceBetween: 20,
+			},
+			1280: {
+				slidesPerView: 5,
 				spaceBetween: 30,
 			},
 		},
