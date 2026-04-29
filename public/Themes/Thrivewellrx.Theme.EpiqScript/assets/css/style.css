@@ -311,15 +311,15 @@ small,
 }
 
 .bg-light {
-  background-color: #dadada !important;
+  background-color: #f3f3f3 !important;
 }
 
 .text-light {
-  color: #dadada !important;
+  color: #f3f3f3 !important;
 }
 
 .border-light {
-  border-color: #dadada !important;
+  border-color: #f3f3f3 !important;
 }
 
 .bg-gray-dark {
@@ -335,27 +335,27 @@ small,
 }
 
 .bg-gray-medium {
-  background-color: #8E8E8E !important;
+  background-color: #8e8e8e !important;
 }
 
 .text-gray-medium {
-  color: #8E8E8E !important;
+  color: #8e8e8e !important;
 }
 
 .border-gray-medium {
-  border-color: #8E8E8E !important;
+  border-color: #8e8e8e !important;
 }
 
 .bg-gray-light {
-  background-color: #dadada !important;
+  background-color: #f3f3f3 !important;
 }
 
 .text-gray-light {
-  color: #dadada !important;
+  color: #f3f3f3 !important;
 }
 
 .border-gray-light {
-  border-color: #dadada !important;
+  border-color: #f3f3f3 !important;
 }
 
 .bg-gray-aeae {
@@ -6613,7 +6613,7 @@ ul li a:hover, ul li a:focus {
 }
 .dropdown-menu li a {
   background-color: transparent;
-  color: #dadada;
+  color: #f3f3f3;
 }
 .dropdown-menu li a:hover {
   background-color: transparent;
@@ -6805,7 +6805,7 @@ html {
 }
 .form-control:focus {
   box-shadow: none;
-  border-color: #dadada;
+  border-color: #f3f3f3;
 }
 
 textarea.form-control {
@@ -6852,7 +6852,7 @@ textarea.form-control::placeholder {
   height: 30px;
   padding: 6px;
   line-height: 30px;
-  color: #dadada;
+  color: #f3f3f3;
   font-weight: 500;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker thead tr:first-child th:hover {
@@ -6972,7 +6972,7 @@ textarea.form-control::placeholder {
   padding-bottom: 5px;
 }
 .datepicker .datepicker-header .datepicker-controls .btn {
-  color: #dadada;
+  color: #f3f3f3;
 }
 .datepicker .datepicker-header .datepicker-controls .btn:hover {
   background-color: #00533f;
@@ -7475,11 +7475,11 @@ textarea.form-control::placeholder {
   animation: spin 1.3s linear infinite;
 }
 .theme-btn--disabled {
-  color: #8E8E8E;
+  color: #8e8e8e;
   cursor: not-allowed !important;
   pointer-events: none;
-  background-color: #dadada;
-  border-color: #dadada !important;
+  background-color: #f3f3f3;
+  border-color: #f3f3f3 !important;
 }
 .theme-btn__min-w-210 {
   min-width: 210px;
@@ -7847,7 +7847,7 @@ textarea.form-control::placeholder {
   transform: translateY(-50%) rotate(360deg);
 }
 .faq--alternate .recommended__text {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid #f3f3f3;
   padding-bottom: 20px;
 }
 .faq__title {
@@ -8070,7 +8070,7 @@ textarea.form-control::placeholder {
   font-family: "Neue Montreal";
   font-size: 24px;
   margin-bottom: 0;
-  color: #dadada;
+  color: #f3f3f3;
 }
 .faq-alt__lg__body {
   padding-bottom: 30px;
@@ -8109,7 +8109,7 @@ textarea.form-control::placeholder {
   right: 0;
   width: 30px;
   height: 30px;
-  color: #dadada;
+  color: #f3f3f3;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -8126,7 +8126,7 @@ textarea.form-control::placeholder {
   right: 0;
   width: 30px;
   height: 30px;
-  color: #dadada;
+  color: #f3f3f3;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -8328,7 +8328,7 @@ textarea.form-control::placeholder {
   justify-content: center;
   gap: 10px;
   height: 32px;
-  background-color: #dadada;
+  background-color: #f3f3f3;
   color: #2d2d2d;
   border-radius: 10px;
   min-width: 150px;
@@ -8943,7 +8943,7 @@ textarea.form-control::placeholder {
   height: 60px;
   padding: 10px 24px;
   font-size: 18px;
-  color: #dadada;
+  color: #f3f3f3;
   border: 1px solid #aeaeae;
   border-radius: 10px;
   outline: 0;
@@ -8952,7 +8952,7 @@ textarea.form-control::placeholder {
 }
 .single-input__field::placeholder {
   font-size: 18px;
-  color: #dadada;
+  color: #f3f3f3;
 }
 .single-input__field--message {
   height: auto;
@@ -8960,7 +8960,7 @@ textarea.form-control::placeholder {
 }
 .single-input__field--message::placeholder {
   font-size: 18px;
-  color: #dadada;
+  color: #f3f3f3;
 }
 
 .basic-input {
@@ -8975,7 +8975,7 @@ textarea.form-control::placeholder {
   font-size: 16px;
 }
 .basic-input::placeholder {
-  color: #dadada;
+  color: #f3f3f3;
 }
 
 .basic-label {
@@ -9171,14 +9171,14 @@ textarea.form-control::placeholder {
     width: 100%;
     height: 50px;
     font-size: 14px;
-    color: #dadada;
-    border: 1px solid #dadada;
+    color: #f3f3f3;
+    border: 1px solid #f3f3f3;
     border-radius: 8px;
     outline: 0;
     box-shadow: none;
   }
   .single-input__field:placeholder {
-    color: #dadada;
+    color: #f3f3f3;
   }
   .single-input__field--message {
     height: auto;
@@ -9793,7 +9793,7 @@ textarea.form-control::placeholder {
   background-color: transparent;
   width: 100%;
   height: 47px;
-  border: 1px solid #dadada;
+  border: 1px solid #f3f3f3;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -9962,7 +9962,7 @@ textarea.form-control::placeholder {
 }
 .dropdown--assessment ul {
   border-radius: 10px;
-  border-color: #dadada;
+  border-color: #f3f3f3;
   padding: 0px;
 }
 .dropdown--assessment ul.dropdown-menu {
@@ -9995,7 +9995,7 @@ textarea.form-control::placeholder {
   background-color: transparent !important;
 }
 .dropdown--assessment.open > .dropdown-toggle.btn-default {
-  background-color: #dadada;
+  background-color: #f3f3f3;
 }
 
 @media only screen and (max-width: 768px) {
@@ -10753,11 +10753,11 @@ textarea.form-control::placeholder {
   vertical-align: top !important;
   font-size: 16px;
   line-height: 1.4;
-  border-top: 1px solid #dadada;
+  border-top: 1px solid #f3f3f3;
   background-color: #fbf9ff;
 }
 .list-table .table tbody tr {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid #f3f3f3;
   min-height: 70px;
   background-color: transparent;
 }
@@ -12113,7 +12113,7 @@ body.header-open {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
-  color: #dadada;
+  color: #f3f3f3;
 }
 .modal__highlight-text {
   margin-top: 30px;
@@ -13559,7 +13559,7 @@ body.header-open {
 
 .category-hero__wrapper {
   padding: 100px 120px;
-  background: url("../img/category-hero.jpg") no-repeat center center;
+  background: url("../img/img/category-hero.jpg") no-repeat center center;
   background-size: cover;
   min-height: 570px;
   border-radius: 10px;
@@ -13583,23 +13583,25 @@ body.header-open {
 .category-slider__pagination.swiper-pagination-progressbar {
   position: relative;
   width: 120px;
-  height: 4px;
-  background: #e0e0e0;
-  border-radius: 2px;
+  height: 10px;
+  background: #f3f3f3;
+  border-radius: 25px;
   top: auto;
+  overflow: hidden;
 }
 .category-slider__pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #004d3d;
+  border-radius: 25px;
+  background: #00533f;
 }
 .category-slider__navigation {
   display: flex;
   gap: 15px;
 }
 .category-slider__navigation [class^=swiper-button-] {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #f5f5f5;
+  height: 56px;
+  width: 56px;
+  border-radius: 100%;
+  background: #f3f3f3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13912,7 +13914,7 @@ body.header-open {
 .time-picker__viewer span {
   font-size: 25px;
   font-weight: 400;
-  color: #dadada;
+  color: #f3f3f3;
   display: flex;
   align-items: center;
 }
@@ -14283,7 +14285,7 @@ body.header-open {
   border: 0.5px solid #aeaeae;
 }
 .payment__form--card .basic-input::placeholder {
-  color: #dadada;
+  color: #f3f3f3;
   opacity: 1;
 }
 .payment__form--card .card-icons {
@@ -14311,7 +14313,7 @@ body.header-open {
   cursor: texts;
 }
 .payment__form--card-variation .basic-input::placeholder {
-  color: #dadada;
+  color: #f3f3f3;
   opacity: 1;
 }
 .payment__form--inline-fields {
@@ -14575,7 +14577,7 @@ body.header-open {
     padding: 10px;
   }
   .payment__form--card-variation::placeholder {
-    color: #dadada;
+    color: #f3f3f3;
     opacity: 1;
   }
   .condition__highlight p {
@@ -14981,7 +14983,7 @@ body.header-open {
   width: 100%;
   height: 320px;
   padding: 0;
-  color: #dadada;
+  color: #f3f3f3;
   border-radius: 20px;
   border: 2px dashed #ed3131;
   cursor: pointer;
@@ -15168,8 +15170,8 @@ body.header-open {
     width: 100%;
     height: 320px;
     padding: 0;
-    background-color: rgba(218, 218, 218, 0.1);
-    color: #dadada;
+    background-color: rgba(243, 243, 243, 0.1);
+    color: #f3f3f3;
     border-radius: 20px;
     border: 1px dashed #00533f;
     cursor: pointer;
