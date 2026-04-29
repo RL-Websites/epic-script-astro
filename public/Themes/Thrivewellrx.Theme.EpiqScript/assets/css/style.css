@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0;
@@ -44,22 +44,22 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 160%;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 130%;
   letter-spacing: 0;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
-  line-height: 160%;
+  line-height: 120%;
   letter-spacing: 0;
 }
 
 h6 {
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.2;
   font-weight: 600;
 }
 
@@ -160,8 +160,8 @@ small,
   font-family: "Manrope", sans-serif;
 }
 
-.text-primary-grad-1 {
-  background: linear-gradient(90deg, #5100c2 0%, #b07bfa 100%);
+.text-grad-yellow {
+  background: linear-gradient(93deg, #D2FFA3 4.95%, #7CF9E0 140.21%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -7244,7 +7244,7 @@ textarea.form-control::placeholder {
   }
 }
 .theme-btn {
-  padding: 7px 12px;
+  padding: 12px 40px;
   cursor: pointer;
   font-size: 16px;
   line-height: 150%;
@@ -7253,14 +7253,14 @@ textarea.form-control::placeholder {
   border: 0;
   outline: 0;
   box-shadow: none;
-  transition: 0.9s;
+  transition: 0.3s;
   text-decoration: none;
   width: 100%;
+  border-radius: 100px;
 }
 .theme-btn__primary {
   background-color: #00533f;
   border: 1.5px solid #00533f;
-  border-radius: 25px;
   color: white;
 }
 .theme-btn__primary:hover {
@@ -7299,10 +7299,9 @@ textarea.form-control::placeholder {
   margin-right: -6px;
 }
 .theme-btn__secondary {
-  background-color: #e6d4ff;
-  border: 1px solid #e6d4ff;
+  background-color: #E1FFC3;
+  border: 1px solid #E1FFC3;
   color: #2d2d2d;
-  border-radius: 8px;
   font-weight: 700;
 }
 .theme-btn__secondary--icon {
@@ -7318,7 +7317,8 @@ textarea.form-control::placeholder {
   font-weight: 500;
 }
 .theme-btn__secondary:hover, .theme-btn__secondary:focus {
-  background-color: #e6d4ff;
+  background-color: transparent;
+  color: #E1FFC3;
 }
 .theme-btn__dark {
   background-color: #2d2d2d;
@@ -7408,11 +7408,18 @@ textarea.form-control::placeholder {
 .theme-btn.theme-btn__accent {
   padding: 0;
 }
-.theme-btn__icon-only {
-  background-color: transparent;
-  padding: 0;
-  font-size: 30px;
-  color: #ed3131;
+.theme-btn__icon {
+  padding: 3px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.theme-btn__icon__dark {
+  background: rgba(0, 0, 0, 0.1);
 }
 .theme-btn-size-xl {
   padding: 0px;
@@ -12053,56 +12060,49 @@ body.header-open {
   animation: aosLikeFadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s both;
 }
 
-.home__hero {
-  padding: 80px 40px 40px;
-  position: relative;
-  min-height: 100vh;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.home-hero__wrapper {
+  padding: 100px 120px;
+  background: url("../img/home/banner.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 480px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
 }
-.home__hero__header {
-  padding: 40px 40px 0;
+.home-hero__content {
+  max-width: 620px;
+  grid-column: span 2;
 }
-.home__hero__header .hamburger-menu {
+.home-hero__content .theme-btn {
+  width: auto;
+}
+.home-hero__right {
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.home-hero__card {
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(165, 165, 165, 0.4) 0%, rgba(49, 49, 49, 0.4) 100%);
+  backdrop-filter: blur(27px);
+  padding: 16px;
+}
+.home-hero__card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.home-hero__card ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.home-hero__card ul li i,
+.home-hero__card ul li span {
   color: white;
-}
-.home__hero__header .sticky .hamburger-menu {
-  color: #2d2d2d;
-}
-.home__hero {
-  background: url("../img/bg/hero-back.png") no-repeat center top/cover;
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: center center;
-}
-@media all and (max-width: 768px) {
-  .home__hero {
-    align-items: center;
-  }
-}
-.home__banner {
-  position: relative;
-}
-.home__banner--bottom {
-  max-width: 820px;
-  text-align: center;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
-}
-.home__banner__foreground {
-  z-index: 1;
-}
-.home__banner__foreground img {
-  width: 100%;
-  max-height: 400px;
-  border-radius: 0 0 40px 40px;
-}
-.home__banner .theme-btn__primary {
-  box-shadow: 0 0 24px 0 rgba(86, 7, 197, 0.3);
+  font-weight: 500;
 }
 
 .alert-pill {
@@ -13114,7 +13114,7 @@ body.header-open {
   background: url("../img/bg/category-hero.jpg") no-repeat center center;
   background-size: cover;
   min-height: 570px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .category-hero__wrapper h1 {
   color: #ffffff;
@@ -13168,6 +13168,74 @@ body.header-open {
 .category-slider__navigation [class^=swiper-button-].swiper-button-disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.category__home {
+  margin-top: -90px;
+}
+.category__card {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.category__card h4,
+.category__card h5,
+.category__card h6 {
+  color: white;
+}
+.category__card__one {
+  min-height: 320px;
+  padding: 30px;
+  background: url("../img/home/category/weight-loss.jpg") center center/cover no-repeat;
+}
+.category__card__two {
+  min-height: 320px;
+  padding: 30px;
+  background: url("../img/home/category/anti-aging.jpg") center center/cover no-repeat;
+}
+.category__card__three {
+  min-height: 150px;
+  padding: 15px 30px;
+  background: url("../img/home/category/hormone-health.jpg") center center/cover no-repeat;
+}
+.category__card__four {
+  min-height: 150px;
+  padding: 15px 30px;
+  background: url("../img/home/category/pre-workout.jpg") center center/cover no-repeat;
+}
+.category__card__five {
+  min-height: 150px;
+  padding: 15px 30px;
+  background: url("../img/home/category/sexual-health.jpg") center center/cover no-repeat;
+}
+.category__card__six {
+  min-height: 100px;
+  padding: 15px 30px;
+  background: url("../img/home/category/hair-growth.jpg") center center/cover no-repeat;
+  flex-direction: row;
+  align-items: center;
+}
+.category__card__seven {
+  min-height: 100px;
+  padding: 15px 30px;
+  background: url("../img/home/category/sterile-injections.jpg") center center/cover no-repeat;
+  flex-direction: row;
+  align-items: center;
+}
+.category__card__eight {
+  min-height: 100px;
+  padding: 15px 30px;
+  background: url("../img/home/category/testosterone.jpg") center center/cover no-repeat;
+  flex-direction: row;
+  align-items: center;
+}
+.category__card__nine {
+  min-height: 100px;
+  padding: 15px 30px;
+  background: url("../img/home/category/sleep.jpg") center center/cover no-repeat;
+  flex-direction: row;
+  align-items: center;
 }
 
 .assessment__page-wrapper {

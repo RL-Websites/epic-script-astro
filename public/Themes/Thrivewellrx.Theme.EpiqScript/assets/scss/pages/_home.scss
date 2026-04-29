@@ -1,67 +1,62 @@
 @use "../base/variables" as *;
 
 .home {
-	&__hero {
-		padding: 80px 40px 40px;
-		position: relative;
-		min-height: 100vh;
-		height: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	&-hero {
+		&__wrapper {
+			padding: 100px 120px;
+			background: url('../img/home/banner.jpg') no-repeat center center;
+			background-size: cover;
+			min-height: 480px;
+			border-radius: 10px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			align-items: center;
+		}
 
-		&__header {
-			padding: 40px 40px 0;
+		&__content {
+			max-width: 620px;
+			grid-column: span 2;
 
-			.hamburger-menu {
-				color: white;
+			.theme-btn {
+				width: auto;
 			}
+		}
 
-			.sticky {
-				.hamburger-menu {
-					color: $secondary;
+		&__right {
+			grid-column: span 1;
+			display: flex;
+			align-items: center;
+			justify-content: end;
+
+		}
+
+		&__card {
+			border-radius: 12px;
+			background: linear-gradient(180deg, rgba(165, 165, 165, 0.40) 0%, rgba(49, 49, 49, 0.40) 100%);
+			backdrop-filter: blur(27px);
+			padding: 16px;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+
+				li {
+					display: flex;
+					align-items: center;
+					gap: 15px;
+
+					i,
+					span {
+						color: white;
+						font-weight: 500;
+					}
 				}
 			}
 		}
-
-		background: url("../img/bg/hero-back.png") no-repeat center top / cover;
-		background-attachment: scroll;
-		background-size: cover;
-		background-position: center center;
-
-		@media all and (max-width: 768px) {
-			align-items: center;
-		}
 	}
 
-	&__banner {
-		position: relative;
 
-		// Alert pill used in hero banner
-
-		&--bottom {
-			max-width: 820px;
-			text-align: center;
-			left: 50%;
-			bottom: 40px;
-			transform: translateX(-50%);
-		}
-
-		&__foreground {
-			z-index: 1;
-
-			img {
-				width: 100%;
-				max-height: 400px;
-				border-radius: 0 0 40px 40px;
-			}
-		}
-
-		.theme-btn__primary {
-			box-shadow: 0 0 24px 0 rgba(86, 7, 197, 0.3);
-		}
-	}
 }
 
 .alert-pill {

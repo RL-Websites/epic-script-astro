@@ -1,6 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import CategoryHome from "../components/homePage/CategoryHome.astro";
+import Homehero from "../components/homePage/Homehero.astro";
 
 import Layout from "../layouts/Layout.astro";
 ---
@@ -10,9 +12,12 @@ import Layout from "../layouts/Layout.astro";
 	<!--=====|| Main Section Start ||=====-->
 	<main class="page">
 		<!--===|| Banner Section Start ||===-->
-
-		<!-- <Homehero /> -->
+		<Homehero />
 		<!--===|| Banner Section End ||===-->
+
+		<!--===|| Category Section Start ||===-->
+		<CategoryHome />
+		<!--===|| Category Section End ||===-->
 
 		<!-- <div class="ebook__download">
 			<button class="ebook__download__btn">
