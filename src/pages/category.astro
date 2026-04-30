@@ -86,10 +86,6 @@ import Layout from '../layouts/Layout.astro';
 				<div class="container container--alt">
 					<div class="faq__wrapper">
 						<div class="faq__title">
-							<img
-								src="/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/bg/faq-bg.jpg"
-								alt=""
-							/>
 							<h2 class="faq__heading"
 								>Frequently <br /> <span>Asked Questions</span></h2
 							>
@@ -101,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
 							<div class="accordion-item faq__item">
 								<h2 class="accordion-header">
 									<button
-										class="accordion-button collapsed faq__button"
+										class="accordion-button faq__button"
 										type="button"
 										data-bs-toggle="collapse"
 										data-bs-target="#faq-1"
@@ -114,7 +110,7 @@ import Layout from '../layouts/Layout.astro';
 								</h2>
 								<div
 									id="faq-1"
-									class="accordion-collapse collapse"
+									class="accordion-collapse collapse show"
 									data-bs-parent="#faqAccordion">
 									<div class="accordion-body faq__body">
 										You can reach our support team via email or phone. Our
@@ -238,6 +234,6 @@ import Layout from '../layouts/Layout.astro';
 				<!-- faq section ends  -->
 			</section>
 		</div>
-		<Footer />
 	</main>
+	<Footer />
 </Layout>

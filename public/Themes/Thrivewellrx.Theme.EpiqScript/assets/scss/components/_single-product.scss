@@ -28,9 +28,14 @@
 		}
 	}
 	&__link {
-		gap: 16px;
+		gap: 12px;
 		display: flex;
 		align-items: center;
 		padding-top: 24px;
+		flex-direction: column;
+		@media (min-width: 768px) {
+			gap: 16px;
+			flex-direction: row;
+		}
 	}
 }
