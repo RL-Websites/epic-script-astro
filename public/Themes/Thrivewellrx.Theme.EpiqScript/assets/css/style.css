@@ -37,16 +37,16 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 38px;
   font-weight: 700;
-  line-height: 160%;
+  line-height: 120%;
   letter-spacing: 0;
 }
 
 h4 {
   font-size: 32px;
   font-weight: 600;
-  line-height: 130%;
+  line-height: 120%;
   letter-spacing: 0;
 }
 
@@ -838,6 +838,21 @@ small,
 @media all and (min-width: 768px) {
   .fs-md-36 {
     font-size: 36px !important;
+  }
+}
+
+.fs-38 {
+  font-size: 38px !important;
+}
+
+@media all and (min-width: 992px) {
+  .fs-lg-38 {
+    font-size: 38px !important;
+  }
+}
+@media all and (min-width: 768px) {
+  .fs-md-38 {
+    font-size: 38px !important;
   }
 }
 
@@ -12038,8 +12053,44 @@ body.header-open {
   font-weight: 500;
 }
 
+.solutions__wrapper {
+  padding: 50px 80px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.solutions__icon {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.solutions__icon i {
+  font-size: 36px;
+}
 .solutions__card {
   padding: 40px 50px;
+  border-radius: 20px;
+  height: 100%;
+}
+.solutions__card__one {
+  background: url("../img/home/solutions1.svg") center center/cover no-repeat;
+}
+.solutions__card__two {
+  background: url("../img/home/solutions2.svg") center center/cover no-repeat;
+}
+.solutions__content {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  height: 100%;
+}
+.solutions__content h3 {
+  max-width: 320px;
 }
 
 .alert-pill {
@@ -12075,6 +12126,74 @@ body.header-open {
 }
 .product__title {
   max-width: 400px;
+}
+
+.pharmacy {
+  position: relative;
+  height: 200vh;
+  /* gives scroll space */
+  background: linear-gradient(90deg, #0f5132, #9be15d);
+  color: #fff;
+}
+
+.pharmacy__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 0 5%;
+}
+
+.pharmacy__title {
+  font-size: 48px;
+  max-width: 500px;
+}
+
+.pharmacy__highlight {
+  color: #9be15d;
+}
+
+.pharmacy__card {
+  width: 300px;
+  height: 300px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+}
+
+.card__badge {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.card__title {
+  font-size: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* SCROLL STEPS */
+.pharmacy__steps {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.step {
+  height: 100vh;
+}
+
+.card--changing .card__title {
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 .why-choose-section-title {
