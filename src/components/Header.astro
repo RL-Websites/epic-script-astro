@@ -20,9 +20,24 @@ const isHome = Astro.url.pathname === "/";
 			<!-- Navigation Menu -->
 			<nav class="site__menu">
 				<ul class="site__menu__list">
-					<li><a href="/">Home</a></li>
-					<li><a id="browseProducts" style="cursor: pointer">Products</a></li>
-					<li><a href="/contact-us">Contact</a></li>
+					<li>
+						<a href="/">
+							<span>Home</span>
+							<i class="icon-plus"></i>
+						</a>
+					</li>
+					<li>
+						<a id="browseProducts" style="cursor: pointer">
+							<span>Products</span>
+							<i class="icon-plus"></i>
+						</a>
+					</li>
+					<li>
+						<a href="/contact-us">
+							<span>Contact Us</span>
+							<i class="icon-plus"></i>
+						</a>
+					</li>
 					<!-- <li><a href="/faq">FAQ</a></li> -->
 					<li>
 						<button
@@ -47,7 +62,7 @@ const isHome = Astro.url.pathname === "/";
 				<div class="site__menu--auth">
 					<div class="user-dropdown-container">
 						<button class="header-icon user-icon" id="user-menu-btn">
-							<i class="icon-profile"></i>
+							<i class="icon-user"></i>
 						</button>
 						<!-- <div class="user-profile-thumb" id="user-menu-btn">
 						<img src="Themes/Thrivewellrx.Theme.EpiqScript/assets/img/user.png" alt="">

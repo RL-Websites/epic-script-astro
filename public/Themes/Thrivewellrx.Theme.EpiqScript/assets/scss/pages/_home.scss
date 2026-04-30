@@ -31,9 +31,7 @@
 
 		&__card {
 			border-radius: 12px;
-			background: linear-gradient(180deg,
-					rgba(165, 165, 165, 0.4) 0%,
-					rgba(49, 49, 49, 0.4) 100%);
+			background: linear-gradient(180deg, rgba(165, 165, 165, 0.4) 0% rgba(49, 49, 49, 0.4) 100%);
 			backdrop-filter: blur(27px);
 			padding: 16px;
 

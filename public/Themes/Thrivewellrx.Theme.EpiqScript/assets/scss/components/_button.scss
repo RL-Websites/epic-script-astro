@@ -6,14 +6,17 @@
 	font-size: $fs-16;
 	line-height: 150%;
 	font-weight: 600;
+	text-align: center;
 	color: white;
 	border: 0;
 	outline: 0;
 	box-shadow: none;
 	transition: 0.3s;
 	text-decoration: none;
+	text-wrap: nowrap;
 	width: 100%;
 	border-radius: 100px;
+	display: inline-block;
 
 	&__primary {
 		background-color: $primary;
