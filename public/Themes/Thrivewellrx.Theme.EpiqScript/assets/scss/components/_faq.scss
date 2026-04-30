@@ -8,6 +8,12 @@
 		position: relative;
 		border-radius: 10px;
 		overflow: hidden;
+		min-height: 421px;
+		background: url('../img/bg/faq-bg.jpg') no-repeat center center;
+		background-size: 170% 100%;
+		@media (min-width: 576px) {
+			background-size: cover;
+		}
 	}
 	&__heading {
 		font-size: $fs-48;
@@ -88,13 +94,16 @@
 	}
 
 	&__accordion-title {
-		font-size: $fs-24;
+		font-size: $fs-20;
 		font-weight: 600;
 		color: $black-deep;
 		line-height: 1.4;
 		max-width: 768px;
 		line-height: 1.4;
 		display: inline-block;
+		@media (min-width: 576px) {
+			font-size: $fs-24;
+		}
 	}
 
 	&__body {

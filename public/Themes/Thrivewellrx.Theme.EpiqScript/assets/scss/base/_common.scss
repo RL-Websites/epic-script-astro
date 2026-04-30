@@ -147,7 +147,10 @@
 		background-color: $blue-3;
 	}
 	&__padding {
-		padding: 80px 0;
+		padding: 30px 0;
+		@media (min-width: 576px) {
+			padding: 80px 0;
+		}
 	}
 }
 

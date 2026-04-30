@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 .home {
 	&-hero {
@@ -27,12 +27,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: end;
-
 		}
 
 		&__card {
 			border-radius: 12px;
-			background: linear-gradient(180deg, rgba(165, 165, 165, 0.40) 0%, rgba(49, 49, 49, 0.40) 100%);
+			background: linear-gradient(180deg,
+					rgba(165, 165, 165, 0.4) 0%,
+					rgba(49, 49, 49, 0.4) 100%);
 			backdrop-filter: blur(27px);
 			padding: 16px;
 
@@ -305,6 +306,20 @@
 
 //How it Works CSS End
 
+.client {
+	padding: 100px 0;
+	overflow: hidden;
+
+
+
+	&__title {
+		max-width: 550px;
+	}
+
+	&__slider {
+		position: relative;
+	}
+}
 
 .why-choose-section-title {
 	width: 100%;
@@ -350,7 +365,7 @@
 
 .cta {
 	padding: 100px 0;
-	background: url("../img/bg/cta-bg.svg");
+	background: url('../img/bg/cta-bg.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -471,19 +486,6 @@
 			img {
 				height: 170px;
 			}
-		}
-	}
-
-	.faq {
-		background: none;
-
-		&__title {
-			padding: 50px;
-			background: $blue-2;
-		}
-
-		&__items {
-			margin-top: 0;
 		}
 	}
 }
