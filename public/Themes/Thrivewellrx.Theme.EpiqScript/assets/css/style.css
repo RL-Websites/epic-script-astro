@@ -12229,7 +12229,9 @@ body.header-open {
   padding: 80px;
   background: url("../img/home/pharmacy.jpg") center center/cover no-repeat;
   border-radius: 10px;
-  height: 100vh;
+}
+.pharmacy-slider {
+  height: 450px;
 }
 .pharmacy__card {
   width: 530px;
@@ -12242,7 +12244,7 @@ body.header-open {
 }
 .pharmacy__card__img img {
   width: 100%;
-  height: 100%;
+  max-height: 450px;
 }
 
 .client {

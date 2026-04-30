@@ -266,9 +266,11 @@ $(document).ready(function () {
 		slidesPerView: "1",
 		loop: true,
 		speed: 1000,
+		direction: "vertical",
+		mousewheel: true,
 		autoplay: {
 			delay: 2000,
-			disableOnInteraction: true,
+			disableOnInteraction: false,
 		},
 		breakpoints: {
 			1280: {
