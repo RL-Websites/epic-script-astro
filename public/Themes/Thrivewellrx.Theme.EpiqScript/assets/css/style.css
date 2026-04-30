@@ -123,7 +123,17 @@ small,
 }
 
 .site__heading-one {
-  font-size: 70px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
+}
+.site__heading-one-lg {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 120%;
+}
+.site__heading-one-xl {
+  font-size: 94px;
   font-weight: 700;
   line-height: 120%;
 }
@@ -467,15 +477,15 @@ small,
 }
 
 .bg-yellow {
-  background-color: #ffd66d !important;
+  background-color: #B6FF6B !important;
 }
 
 .text-yellow {
-  color: #ffd66d !important;
+  color: #B6FF6B !important;
 }
 
 .border-yellow {
-  border-color: #ffd66d !important;
+  border-color: #B6FF6B !important;
 }
 
 .bg-green {
@@ -7147,7 +7157,7 @@ textarea.form-control::placeholder {
   padding: 0;
 }
 .ebook__download__img {
-  background: #ffd66d;
+  background: #B6FF6B;
   padding: 7px;
   border-radius: 16px 0 0 16px;
 }
@@ -7864,7 +7874,7 @@ textarea.form-control::placeholder {
 }
 .dropdown__selection ul li a:hover {
   border-radius: 12px;
-  color: #ffd66d;
+  color: #B6FF6B;
 }
 .dropdown__selection__alt {
   display: flex;
@@ -8796,7 +8806,7 @@ textarea.form-control::placeholder {
 }
 .assessment__group-label {
   padding: 20px;
-  border: 1px solid #ffd66d;
+  border: 1px solid #B6FF6B;
   border-radius: 20px;
 }
 .assessment__group-title {
@@ -11004,6 +11014,8 @@ html[dir=rtl] .col-justify-end .col-options[b-vznuo5fmpv] {
   border-radius: 10px;
 }
 .site__header.sticky {
+  padding: 10px 30px;
+  top: 0;
   box-shadow: 0 4px 20px rgba(45, 45, 45, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -12211,6 +12223,26 @@ body.header-open {
 }
 .product__title {
   max-width: 400px;
+}
+
+.pharmacy__wrapper {
+  padding: 80px;
+  background: url("../img/home/pharmacy.jpg") center center/cover no-repeat;
+  border-radius: 10px;
+  height: 100vh;
+}
+.pharmacy__card {
+  width: 530px;
+  border-radius: 20px;
+  background: rgba(2, 51, 38, 0.4);
+  backdrop-filter: blur(12px);
+}
+.pharmacy__card__img {
+  text-align: center;
+}
+.pharmacy__card__img img {
+  width: 100%;
+  height: 100%;
 }
 
 .client {
@@ -13491,7 +13523,7 @@ body.header-open {
 }
 .assessment__recommended-products .product.active .product__card {
   background-color: rgba(255, 224, 187, 0.3);
-  border: 3px solid #ffd66d;
+  border: 3px solid #B6FF6B;
 }
 .assessment__recommended-products .product.active .product__img img {
   max-height: 225px;

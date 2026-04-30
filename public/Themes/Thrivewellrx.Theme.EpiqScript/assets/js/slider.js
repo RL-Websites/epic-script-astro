@@ -262,4 +262,18 @@ $(document).ready(function () {
 			},
 		},
 	});
+	new Swiper(".pharmacy-slider", {
+		slidesPerView: "1",
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: true,
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 1,
+			},
+		},
+	});
 });

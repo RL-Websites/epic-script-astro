@@ -10,12 +10,11 @@
 		right: 10px;
 		z-index: 999;
 		background: #FFFFFF;
-
 		border-radius: 10px;
 
-
-
 		&.sticky {
+			padding: 10px 30px;
+			top: 0;
 			box-shadow: 0 4px 20px rgba($black, 0.1);
 			backdrop-filter: blur(8px);
 			-webkit-backdrop-filter: blur(8px);
