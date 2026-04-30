@@ -9842,6 +9842,16 @@ textarea.form-control::placeholder {
     flex-direction: column;
   }
 }
+.faq__inner {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 0;
+}
+@media (min-width: 576px) {
+  .faq__inner {
+    padding: 80px 0;
+  }
+}
 .faq__wrapper {
   padding: 0;
 }
@@ -9859,21 +9869,39 @@ textarea.form-control::placeholder {
   }
 }
 .faq__heading {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1.2;
   color: #ffffff;
   position: absolute;
-  top: 50%;
-  left: 80px;
-  right: auto;
-  transform: translateY(-50%);
+  top: auto;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 330px;
+  width: 100%;
 }
 .faq__heading span {
   color: #e0ffbf;
 }
-.faq__accordion {
-  margin-top: 40px;
+@media (min-width: 576px) {
+  .faq__heading {
+    top: 50%;
+    left: 80px;
+    right: auto;
+    bottom: auto;
+    text-align: left;
+    transform: translateY(-50%);
+    font-size: 48px;
+    max-width: 400px;
+    width: auto;
+  }
+}
+@media (min-width: 576px) {
+  .faq__accordion {
+    margin-top: 40px;
+  }
 }
 .faq__item {
   border: none;
@@ -13161,7 +13189,7 @@ body.header-open {
 
 .category-hero__wrapper {
   padding: 30px 18px;
-  background: url("../img/bg/category-hero.jpg") no-repeat bottom right;
+  background: url("../img/bg/category-hero-sm.jpg") no-repeat bottom right;
   background-size: cover;
   min-height: 570px;
   border-radius: 10px;
@@ -13169,7 +13197,7 @@ body.header-open {
 @media (min-width: 768px) {
   .category-hero__wrapper {
     padding: 100px 120px;
-    background-position: center center;
+    background: url("../img/bg/category-hero.jpg") no-repeat center center;
   }
 }
 .category-hero__wrapper h1 {
@@ -13196,6 +13224,16 @@ body.header-open {
   }
 }
 
+.category-slider__inner-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px 0 30px 18px;
+}
+@media (min-width: 576px) {
+  .category-slider__inner-container {
+    padding: 80px 0 80px 80px;
+  }
+}
 .category-slider__controls {
   display: flex;
   align-items: center;

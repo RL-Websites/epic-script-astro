@@ -1,8 +1,6 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 .site__footer {
-
-
 	&__wrapper {
 		background: linear-gradient(180deg, #242424 0%, #343434 100%);
 
@@ -14,7 +12,6 @@
 		align-items: center;
 		padding: 80px;
 		justify-content: space-between;
-
 
 		// justify-content: space-between;
 		@media all and (max-width: 768px) {
@@ -52,7 +49,6 @@
 			align-items: center;
 			gap: 20px;
 		}
-
 	}
 
 	&__logo-section {
@@ -131,10 +127,7 @@
 		}
 	}
 
-
-
 	&__contact-info {
-
 		address,
 		a {
 			display: flex;
@@ -152,7 +145,6 @@
 		line-height: 160%;
 		color: $white;
 		text-transform: uppercase;
-
 	}
 
 	&__social {
