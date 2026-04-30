@@ -9849,7 +9849,7 @@ textarea.form-control::placeholder {
 }
 @media (min-width: 576px) {
   .faq__inner {
-    padding: 80px 0;
+    padding: 80px;
   }
 }
 .faq__wrapper {
@@ -10995,17 +10995,18 @@ html[dir=rtl] .col-justify-end .col-options[b-vznuo5fmpv] {
 .site__header {
   padding: 24px 30px;
   transition: all 0.3s ease;
-  width: 100%;
-  position: sticky;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
   z-index: 999;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(45, 45, 45, 0.05);
+  background: #FFFFFF;
   border-radius: 10px;
 }
 .site__header.sticky {
   box-shadow: 0 4px 20px rgba(45, 45, 45, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .site__header.menu-open {
   background-color: white;
@@ -12183,74 +12184,6 @@ body.header-open {
   max-width: 400px;
 }
 
-.pharmacy {
-  position: relative;
-  height: 200vh;
-  /* gives scroll space */
-  background: linear-gradient(90deg, #0f5132, #9be15d);
-  color: #fff;
-}
-
-.pharmacy__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  padding: 0 5%;
-}
-
-.pharmacy__title {
-  font-size: 48px;
-  max-width: 500px;
-}
-
-.pharmacy__highlight {
-  color: #9be15d;
-}
-
-.pharmacy__card {
-  width: 300px;
-  height: 300px;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  text-align: center;
-}
-
-.card__badge {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.card__title {
-  font-size: 20px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* SCROLL STEPS */
-.pharmacy__steps {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.step {
-  height: 100vh;
-}
-
-.card--changing .card__title {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
 .client {
   padding: 100px 0;
   overflow: hidden;
@@ -13191,13 +13124,14 @@ body.header-open {
   padding: 30px 18px;
   background: url("../img/bg/category-hero-sm.jpg") no-repeat bottom right;
   background-size: cover;
-  min-height: 570px;
+  min-height: calc(100vh - 130px);
   border-radius: 10px;
 }
 @media (min-width: 768px) {
   .category-hero__wrapper {
     padding: 100px 120px;
     background: url("../img/bg/category-hero.jpg") no-repeat center center;
+    background-size: cover;
   }
 }
 .category-hero__wrapper h1 {
@@ -14419,6 +14353,9 @@ body.header-open {
   .serving {
     padding: 50px 0;
   }
+}
+.page {
+  padding-top: 104px;
 }
 .page__wrapper {
   background-size: 100%;

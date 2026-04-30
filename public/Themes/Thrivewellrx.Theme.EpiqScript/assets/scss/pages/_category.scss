@@ -5,11 +5,13 @@
 		padding: 30px 18px;
 		background: url('../img/bg/category-hero-sm.jpg') no-repeat bottom right;
 		background-size: cover;
-		min-height: 570px;
+		min-height: calc(100vh - 130px);
 		border-radius: 10px;
+
 		@media (min-width: 768px) {
 			padding: 100px 120px;
 			background: url('../img/bg/category-hero.jpg') no-repeat center center;
+			background-size: cover;
 		}
 
 		h1 {
@@ -42,10 +44,12 @@
 		background: $white;
 		border-radius: 10px;
 		padding: 30px 0 30px 18px;
+
 		@media (min-width: 576px) {
 			padding: 80px 0 80px 80px;
 		}
 	}
+
 	&__controls {
 		display: flex;
 		align-items: center;
@@ -122,43 +126,37 @@
 		&__one {
 			min-height: 320px;
 			padding: 30px;
-			background: url('../img/home/category/weight-loss.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/weight-loss.jpg') center center / cover no-repeat;
 		}
 
 		&__two {
 			min-height: 320px;
 			padding: 30px;
-			background: url('../img/home/category/anti-aging.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/anti-aging.jpg') center center / cover no-repeat;
 		}
 
 		&__three {
 			min-height: 150px;
 			padding: 15px 30px;
-			background: url('../img/home/category/hormone-health.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/hormone-health.jpg') center center / cover no-repeat;
 		}
 
 		&__four {
 			min-height: 150px;
 			padding: 15px 30px;
-			background: url('../img/home/category/pre-workout.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/pre-workout.jpg') center center / cover no-repeat;
 		}
 
 		&__five {
 			min-height: 150px;
 			padding: 15px 30px;
-			background: url('../img/home/category/sexual-health.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/sexual-health.jpg') center center / cover no-repeat;
 		}
 
 		&__six {
 			min-height: 100px;
 			padding: 15px 30px;
-			background: url('../img/home/category/hair-growth.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/hair-growth.jpg') center center / cover no-repeat;
 			flex-direction: row;
 			align-items: center;
 		}
@@ -166,8 +164,7 @@
 		&__seven {
 			min-height: 100px;
 			padding: 15px 30px;
-			background: url('../img/home/category/sterile-injections.jpg') center
-				center / cover no-repeat;
+			background: url('../img/home/category/sterile-injections.jpg') center center / cover no-repeat;
 			flex-direction: row;
 			align-items: center;
 		}
@@ -175,8 +172,7 @@
 		&__eight {
 			min-height: 100px;
 			padding: 15px 30px;
-			background: url('../img/home/category/testosterone.jpg') center center /
-				cover no-repeat;
+			background: url('../img/home/category/testosterone.jpg') center center / cover no-repeat;
 			flex-direction: row;
 			align-items: center;
 		}
@@ -184,8 +180,7 @@
 		&__nine {
 			min-height: 100px;
 			padding: 15px 30px;
-			background: url('../img/home/category/sleep.jpg') center center / cover
-				no-repeat;
+			background: url('../img/home/category/sleep.jpg') center center / cover no-repeat;
 			flex-direction: row;
 			align-items: center;
 		}

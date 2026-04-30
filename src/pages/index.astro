@@ -4,7 +4,6 @@ import CategoryCard from "../components/common/CategoryCard.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Homehero from "../components/homePage/Homehero.astro";
-
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -19,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
 		<!--===|| Category Section Start ||===-->
 		<section class="mb-10">
 			<div class="category__home">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="category__home__wrapper">
 						<CategoryCard />
 
@@ -32,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<!--===||  Solution Section Start ||===-->
 		<section class="solutions mb-10">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="solutions__wrapper">
 					<div class="row">
 						<div class="col-md-6">
@@ -88,240 +87,18 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 		<!--===||  Solution Section End ||===-->
-		<!-- 
-		<section class="pharmacy">
-			<main class="pharmacy__container">
-	
-		<div class="pharmacy__content">
-			<h1 class="pharmacy__title">
-				Delivering Digital <span class="pharmacy__highlight"
-					>Pharmacy Solutions</span
-				>
-			</h1>
-		</div>
 
-
-		<div class="pharmacy__card">
-			<div class="card">
-				<div class="card__badge">💊</div>
-				<h3 class="card__title" id="card-title">
-					High-Volume Prescription Fulfillment
-				</h3>
-			</div>
-		</div>
+		<section class="pharmacy"> </section>
 	</main>
+	<!--=====|| Main Section End ||=====-->
 
+	<Footer />
+	<!-- =====|| Toast Start ||====== -->
+	<!-- <Toast /> -->
+	<!-- =====|| Toast Start ||====== -->
+</Layout>
 
-	<div class="pharmacy__steps">
-		<div class="step" data-title="High-Volume Prescription Fulfillment"></div>
-		<div class="step" data-title="Custom Compounding"></div>
-		<div class="step" data-title="Clinical Services"></div>
-		<div class="step" data-title="Home Delivery"></div>
-		<div class="step" data-title="Refill Automation"></div>
-	</div>
-</Layout> -->
-
-		<!-- <div class="ebook__download">
-			<button class="ebook__download__btn">
-				<div class="ebook__download__img">
-					<img
-						src="Themes/Thrivewellrx.Theme.EpiqScript/assets/img/e-book.svg"
-						alt="E-Book"
-					/>
-				</div>
-				<span class="ebook__download__content">Download Free E Book</span>
-			</button>
-		</div> -->
-
-		<!--===|| Product Section Start ||===-->
-		<!-- <section class="product py-50 py-md-100">
-			<div class="container">
-				<h1
-					class="site__heading-one text-center"
-					data-aos="fade-up"
-					data-aos-duration="1400"
-					data-aos-delay="400"
-				>
-					Our
-					<span class="text-primary-grad-1">Products</span>
-				</h1>
-				<p
-					class="text-center mt-20 mt-md-24"
-					data-aos="fade-up"
-					data-aos-duration="1400"
-					data-aos-delay="600"
-				>
-					High-quality research peptides for laboratory use — verified for
-					purity and quality
-				</p>
-				<div
-					class="d-flex justify-content-center gap-3 align-items-center mt-20 mt-md-24 text-red"
-					data-aos="fade-up"
-					data-aos-duration="1400"
-					data-aos-delay="900"
-				>
-					<i class="icon-alert"></i>
-					<span class="text-md-body4 lh-1"
-						>For Research Purposes Only — Not for Human Consumption</span
-					>
-				</div>
-
-				<div
-					class="EpiqScript-search max-w-full mt-30 mt-md-24"
-					data-aos="fade-up"
-					data-aos-delay="1600"
-					data-aos-duration="1000"
-				>
-					<div class="EpiqScript-search__icon">
-						<i class="icon-search-rizz"></i>
-					</div>
-					<input
-						type="text"
-						class="EpiqScript-search__input text-center"
-						id="productSearch"
-						placeholder="Search by product/treatment"
-						data-bind="textInput: statSearch"
-					/>
-					<div class="EpiqScript-search__icon__right">
-						<i class="icon-cross-rizz"></i>
-					</div>
-				</div>
-				<p
-					class="mt-16 mt-md-20 fs-14 fs-md-18 mb-50 text-center"
-					data-aos="fade-up"
-					data-aos-duration="1400"
-					data-aos-delay="2000"
-					>No results found for “<span>hello world</span>”. Check the spelling
-					or use a different word or phrase.</p
-				>
-
-				<div class="text-center">
-					<ul
-						class="nav nav-pills switch-tabs"
-						id="products-tab"
-						role="tablist"
-					>
-						<li class="nav-item switch-tab" role="presentation">
-							<button
-								class="nav-link active switch-tab__btn"
-								id="single-product"
-								data-bs-toggle="pill"
-								data-bs-target="#pills-single"
-								type="button"
-								role="tab"
-								aria-controls="pills-single"
-								aria-selected="true"
-							>
-								<i class="icon-single"></i>
-								<span>Single</span>
-							</button>
-						</li>
-						<li class="nav-item switch-tab" role="presentation">
-							<button
-								class="nav-link switch-tab__btn"
-								id="package-product"
-								data-bs-toggle="pill"
-								data-bs-target="#pills-package"
-								type="button"
-								role="tab"
-								aria-controls="pills-package"
-								aria-selected="false"
-							>
-								<i class="icon-package"></i>
-								<span>Package</span>
-							</button>
-						</li>
-					</ul>
-				</div>
-
-				<!-- <ProductCard />
-				<PackageProductCard /> -->
-
-		<!--===|| Product Section End ||===-->
-
-		<!--===|| How it Works Section Start ||===-->
-
-		<!-- <HowItWorks /> -->
-
-		<!--===|| How it Works Section End ||===-->
-
-		<!-- Why Choose Us VPeptides Section Start -->
-		<!-- <WhyChooseUs /> -->
-		<!-- Why Choose Us VPeptides Section End -->
-
-		<!--===|| Faq Section Start ||===-->
-		<!-- <section class="faq py-0 py-md-100">
-			<div class="container faq__wrapper">
-				<div class="row">
-					<div class="col-lg-12 faq__items">
-						<Faq />
-					</div>
-				</div>
-			</div>
-		</section> -->
-		<!--===|| Faq Section End ||===-->
-
-		<!--=====|| Main Section End ||=====-->
-
-		<Footer />
-		<!-- =====|| Toast Start ||====== -->
-		<!-- <Toast /> -->
-		<!-- =====|| Toast Start ||====== -->
-
-		<!--Unable To Proceed Start -->
-		<div
-			id="unableProceed"
-			class="modal fade dose-modal"
-			tabindex="-1"
-			aria-labelledby="exampleModalLabel"
-			aria-hidden="true"
-		>
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<!-- <button type="button" class="btn-close" data-dismiss="modal">
-				<i class="icon-cross_filled"></i>
-			</button> -->
-
-					<div class="modal-body">
-						<div class="modal__text mt-0">
-							<i class="icon-alert fs-md-90 fs-70"></i>
-							<h5 class="site__heading-five fw-bold text-secondary text-center"
-								>We're Unable to Proceed with Your Treatment
-							</h5>
-						</div>
-						<p
-							class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10"
-						>
-							<span class="fw-bold">Your BMI is 21.25.</span> Based on the medical
-							information you’ve provided, it appears that you may have a condition
-							that makes treatment with GLP-1 products unsafe at this time. For your
-							safety, we recommend consulting with your personal healthcare provider
-							before pursuing any weight loss treatments.
-						</p>
-
-						<div class="modal__actions">
-							<button
-								class="modal__action modal__action--outline"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-								type="button"
-							>
-								Cancel
-							</button>
-							<button
-								class="modal__action modal__action--primary"
-								type="button"
-							>
-								Confirm
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script
-			src="../../public/Themes/Thrivewellrx.Theme.EpiqScript/assets/js/tooltip.js"
-		></script>
-		<!--Unable To Proceed End -->
-	</main></Layout
->
+<script
+	src="../../public/Themes/Thrivewellrx.Theme.EpiqScript/assets/js/tooltip.js"
+></script>
+<!--Unable To Proceed End -->

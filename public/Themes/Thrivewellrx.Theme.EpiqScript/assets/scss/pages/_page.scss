@@ -1,6 +1,8 @@
 @use "../base/variables" as *;
 
 .page {
+	padding-top: 104px;
+
 	&__wrapper {
 		background-size: 100%;
 		background-repeat: no-repeat;
