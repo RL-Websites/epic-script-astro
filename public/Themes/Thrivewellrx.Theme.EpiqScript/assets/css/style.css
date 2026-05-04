@@ -12980,55 +12980,6 @@ body.header-open {
   }
 }
 
-.attention {
-  background: #f2ffef;
-  color: #9bd0e3;
-  padding: 20px;
-  border: 2px dashed #bddcb6;
-  border-radius: 10px;
-}
-.attention__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9bd0e3;
-  font-size: 18px;
-  line-height: 1.4;
-  font-weight: 600;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-.attention__title i {
-  font-size: 24px;
-}
-.attention__title p {
-  margin-bottom: 0px;
-  font-weight: 700;
-}
-.attention__title p span {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 16px;
-  margin-left: 10px;
-}
-.attention__price-desc {
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: #2d2d2d;
-  margin-bottom: 15px;
-}
-.attention__text {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #2d2d2d;
-  margin-bottom: 0;
-}
-.attention__note {
-  font-size: 20px;
-  line-height: 1.2;
-}
-
 .order-summary-cta {
   padding: 24px;
   text-align: center;
@@ -13228,7 +13179,7 @@ body.header-open {
 }
 .recurring-plan__header {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding: 24px 30px;
   cursor: pointer;
@@ -13238,12 +13189,12 @@ body.header-open {
   transform: rotate(180deg);
 }
 .recurring-plan__title {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 700;
   color: #1a1a1a;
-  line-height: 1.4;
+  line-height: 1.6;
   margin-bottom: 0;
-  max-width: 85%;
+  max-width: 960px;
 }
 @media (max-width: 767px) {
   .recurring-plan__title {
@@ -13276,13 +13227,14 @@ body.header-open {
 
 .recurring-card {
   background: linear-gradient(90deg, #114232 0%, #3e8e75 100%);
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 36px 22px 22px 38px;
   height: 100%;
   display: flex;
   align-items: center;
   gap: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 @media (max-width: 575px) {
   .recurring-card {
@@ -13308,20 +13260,22 @@ body.header-open {
 }
 .recurring-card__info {
   flex-grow: 1;
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 .recurring-card__tag {
-  background: #dcfae6;
-  color: #114232;
+  background: #e8fbd4;
+  color: #212121;
   font-size: 10px;
   font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 6px;
+  padding: 6px 20px;
+  border-radius: 0px 20px 0;
   align-self: flex-end;
   margin-bottom: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 @media (max-width: 575px) {
   .recurring-card__tag {
@@ -13379,6 +13333,43 @@ body.header-open {
 .recurring-card__btn--cart:hover {
   background: #f8f8f8;
   color: #000;
+}
+
+/*----------------------------------------*/
+/*  # Cart Warning Section
+/*----------------------------------------*/
+.cart-warning__bg {
+  background: #ffffff;
+  border-radius: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.cart-warning__content {
+  background-color: #ecf7e1;
+  border: 1px dashed #00533f;
+  border-radius: 12px;
+  padding: 24px 30px;
+}
+.cart-warning__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #212121;
+}
+.cart-warning__title i {
+  font-size: 20px;
+  color: #212121;
+}
+.cart-warning__title p {
+  margin-bottom: 0;
+}
+.cart-warning__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #212121;
+  margin-bottom: 0;
 }
 
 .category-hero__wrapper {
