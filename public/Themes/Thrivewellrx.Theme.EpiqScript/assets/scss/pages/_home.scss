@@ -183,6 +183,37 @@
 	}
 }
 
+.features {
+	&__wrapper {
+		padding: 100px 130px;
+		border-radius: 10px;
+	}
+
+	&__card {
+		background-color: $white;
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: start;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 83, 63, 0.30);
+		background: #FCFFFC;
+		box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+
+		img {
+			width: 50px;
+		}
+
+		&__text {
+			color: $gray-dark;
+		}
+
+		.theme-btn {
+			width: auto;
+		}
+	}
+}
 
 //Product CSS End
 

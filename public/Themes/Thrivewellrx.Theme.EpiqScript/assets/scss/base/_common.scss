@@ -146,12 +146,21 @@
 		padding: 80px 0 80px;
 		background-color: $blue-3;
 	}
+
 	&__padding {
 		padding: 30px 0;
+
 		@media (min-width: 576px) {
 			padding: 80px 0;
 		}
 	}
+}
+
+.hr {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: $gray-normal;
 }
 
 @media only screen and (max-width: 992px) {

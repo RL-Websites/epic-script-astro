@@ -106,15 +106,14 @@
 	}
 
 	&__light {
-		background-color: white;
-		border: 1px solid white;
+		background-color: $light;
 		font-size: $fs-18;
 		color: $secondary;
-		border-radius: 8px;
-		padding: 16px 0px;
+		border-radius: 50px;
+		padding: 12px 30px;
 
 		&:hover {
-			background-color: transparent;
+			background-color: $primary-light;
 		}
 	}
 

@@ -321,15 +321,15 @@ small,
 }
 
 .bg-light {
-  background-color: #f3f3f3 !important;
+  background-color: #EFEFF1 !important;
 }
 
 .text-light {
-  color: #f3f3f3 !important;
+  color: #EFEFF1 !important;
 }
 
 .border-light {
-  border-color: #f3f3f3 !important;
+  border-color: #EFEFF1 !important;
 }
 
 .bg-gray-dark {
@@ -654,6 +654,18 @@ small,
 
 .border-orange {
   border-color: #F5DDC3 !important;
+}
+
+.bg-cyan {
+  background-color: #00533F !important;
+}
+
+.text-cyan {
+  color: #00533F !important;
+}
+
+.border-cyan {
+  border-color: #00533F !important;
 }
 
 .fs-10 {
@@ -6649,7 +6661,7 @@ ul li a:hover, ul li a:focus {
 }
 .dropdown-menu li a {
   background-color: transparent;
-  color: #f3f3f3;
+  color: #EFEFF1;
 }
 .dropdown-menu li a:hover {
   background-color: transparent;
@@ -6841,7 +6853,7 @@ html {
 }
 .form-control:focus {
   box-shadow: none;
-  border-color: #f3f3f3;
+  border-color: #EFEFF1;
 }
 
 textarea.form-control {
@@ -6888,7 +6900,7 @@ textarea.form-control::placeholder {
   height: 30px;
   padding: 6px;
   line-height: 30px;
-  color: #f3f3f3;
+  color: #EFEFF1;
   font-weight: 500;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker thead tr:first-child th:hover {
@@ -7008,7 +7020,7 @@ textarea.form-control::placeholder {
   padding-bottom: 5px;
 }
 .datepicker .datepicker-header .datepicker-controls .btn {
-  color: #f3f3f3;
+  color: #EFEFF1;
 }
 .datepicker .datepicker-header .datepicker-controls .btn:hover {
   background-color: #00533f;
@@ -7244,6 +7256,13 @@ textarea.form-control::placeholder {
   }
 }
 
+.hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #C6C6C6;
+}
+
 @media only screen and (max-width: 992px) {
   .ebook__download {
     bottom: 10px;
@@ -7371,15 +7390,14 @@ textarea.form-control::placeholder {
   border-radius: 8px;
 }
 .theme-btn__light {
-  background-color: white;
-  border: 1px solid white;
+  background-color: #EFEFF1;
   font-size: 18px;
   color: #2d2d2d;
-  border-radius: 8px;
-  padding: 16px 0px;
+  border-radius: 50px;
+  padding: 12px 30px;
 }
 .theme-btn__light:hover {
-  background-color: transparent;
+  background-color: #e6d4ff;
 }
 .theme-btn__danger {
   padding: 12px 24px;
@@ -7782,7 +7800,7 @@ textarea.form-control::placeholder {
   justify-content: center;
   gap: 10px;
   height: 32px;
-  background-color: #f3f3f3;
+  background-color: #EFEFF1;
   color: #2d2d2d;
   border-radius: 10px;
   min-width: 150px;
@@ -8064,7 +8082,7 @@ textarea.form-control::placeholder {
   text-transform: uppercase;
 }
 .status-pill--default {
-  background-color: #e7f3ff;
+  background-color: #C6C6C6;
   color: #141a33;
 }
 .status-pill--success {
@@ -8397,7 +8415,7 @@ textarea.form-control::placeholder {
   height: 60px;
   padding: 10px 24px;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #EFEFF1;
   border: 1px solid #aeaeae;
   border-radius: 10px;
   outline: 0;
@@ -8406,7 +8424,7 @@ textarea.form-control::placeholder {
 }
 .single-input__field::placeholder {
   font-size: 18px;
-  color: #f3f3f3;
+  color: #EFEFF1;
 }
 .single-input__field--message {
   height: auto;
@@ -8414,7 +8432,7 @@ textarea.form-control::placeholder {
 }
 .single-input__field--message::placeholder {
   font-size: 18px;
-  color: #f3f3f3;
+  color: #EFEFF1;
 }
 
 .basic-input {
@@ -8429,7 +8447,7 @@ textarea.form-control::placeholder {
   font-size: 16px;
 }
 .basic-input::placeholder {
-  color: #f3f3f3;
+  color: #EFEFF1;
 }
 
 .basic-label {
@@ -8625,14 +8643,14 @@ textarea.form-control::placeholder {
     width: 100%;
     height: 50px;
     font-size: 14px;
-    color: #f3f3f3;
-    border: 1px solid #f3f3f3;
+    color: #EFEFF1;
+    border: 1px solid #EFEFF1;
     border-radius: 8px;
     outline: 0;
     box-shadow: none;
   }
   .single-input__field:placeholder {
-    color: #f3f3f3;
+    color: #EFEFF1;
   }
   .single-input__field--message {
     height: auto;
@@ -9247,7 +9265,7 @@ textarea.form-control::placeholder {
   background-color: transparent;
   width: 100%;
   height: 47px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid #EFEFF1;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -9416,7 +9434,7 @@ textarea.form-control::placeholder {
 }
 .dropdown--assessment ul {
   border-radius: 10px;
-  border-color: #f3f3f3;
+  border-color: #EFEFF1;
   padding: 0px;
 }
 .dropdown--assessment ul.dropdown-menu {
@@ -9449,7 +9467,7 @@ textarea.form-control::placeholder {
   background-color: transparent !important;
 }
 .dropdown--assessment.open > .dropdown-toggle.btn-default {
-  background-color: #f3f3f3;
+  background-color: #EFEFF1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -11710,7 +11728,7 @@ body.header-open {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
-  color: #f3f3f3;
+  color: #EFEFF1;
 }
 .modal__highlight-text {
   margin-top: 30px;
@@ -12245,6 +12263,32 @@ body.header-open {
 .pharmacy__card__img img {
   width: 100%;
   max-height: 450px;
+}
+
+.features__wrapper {
+  padding: 100px 130px;
+  border-radius: 10px;
+}
+.features__card {
+  background-color: #ffffff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 83, 63, 0.3);
+  background: #FCFFFC;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+}
+.features__card img {
+  width: 50px;
+}
+.features__card__text {
+  color: #969696;
+}
+.features__card .theme-btn {
+  width: auto;
 }
 
 .client {
@@ -13577,7 +13621,7 @@ body.header-open {
 .time-picker__viewer span {
   font-size: 25px;
   font-weight: 400;
-  color: #f3f3f3;
+  color: #EFEFF1;
   display: flex;
   align-items: center;
 }
@@ -13948,7 +13992,7 @@ body.header-open {
   border: 0.5px solid #aeaeae;
 }
 .payment__form--card .basic-input::placeholder {
-  color: #f3f3f3;
+  color: #EFEFF1;
   opacity: 1;
 }
 .payment__form--card .card-icons {
@@ -13976,7 +14020,7 @@ body.header-open {
   cursor: texts;
 }
 .payment__form--card-variation .basic-input::placeholder {
-  color: #f3f3f3;
+  color: #EFEFF1;
   opacity: 1;
 }
 .payment__form--inline-fields {
@@ -14240,7 +14284,7 @@ body.header-open {
     padding: 10px;
   }
   .payment__form--card-variation::placeholder {
-    color: #f3f3f3;
+    color: #EFEFF1;
     opacity: 1;
   }
   .condition__highlight p {
@@ -14649,7 +14693,7 @@ body.header-open {
   width: 100%;
   height: 320px;
   padding: 0;
-  color: #f3f3f3;
+  color: #EFEFF1;
   border-radius: 20px;
   border: 2px dashed #ed3131;
   cursor: pointer;
@@ -14836,8 +14880,8 @@ body.header-open {
     width: 100%;
     height: 320px;
     padding: 0;
-    background-color: rgba(243, 243, 243, 0.1);
-    color: #f3f3f3;
+    background-color: rgba(239, 239, 241, 0.1);
+    color: #EFEFF1;
     border-radius: 20px;
     border: 1px dashed #00533f;
     cursor: pointer;
