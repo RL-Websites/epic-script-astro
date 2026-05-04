@@ -19,6 +19,7 @@ $gray-aeae: #dadada; // Light Gray
 $gray-light-2: #ffd4dd; // Light Gray
 $gray-lighter: #ffe9e9; // New Added
 $gray-lighter2: #acacac; // New added
+$gray-lighter3: #c7c7c7; // New added
 $white: #ffffff; // Pure White
 $gray-border: #dee2e6;
 $gray-border-light: #aeaeae;
@@ -27,10 +28,12 @@ $red: #ed3131; // Red Accent
 $red-light: #ffeee8; // Light Red/Pink
 $green-deep: #e0ffbf; // Deep Green
 $green: #8ddcb6; // Medium Green
+$green-medium: #028c50; // new added
 $green-light: #f2ffef; // Light Green
 $green-lighter: #fffcdb; // Lighter Green
 $green-lighter2: #d4f7e7; // Light Green2
-$orange: #F5DDC3;
+$green-lighter3: #e8fbd4; // new added
+$orange: #f5ddc3;
 $dark: #444444;
 // Legacy color mappings (for backward compatibility)
 $secondary: $black; // Map to new black
@@ -44,8 +47,7 @@ $submitted: #eaffe7;
 $warning: #ffc107;
 $saving: #d8ffce;
 $yellow-light: #ffe46b;
-$yellow-lighter: #E1FFC3;
-
+$yellow-lighter: #e1ffc3;
 
 // Additional legacy colors (for utils.scss compatibility)
 $yellow: #ffd66d; // Legacy yellow

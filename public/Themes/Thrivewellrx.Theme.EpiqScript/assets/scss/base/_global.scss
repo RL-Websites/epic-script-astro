@@ -13,9 +13,9 @@ body {
 }
 
 body {
-	font-family: "Manrope", sans-serif;
+	font-family: 'Manrope', sans-serif;
 	font-size: $fs-16;
-	background-color: #EFEFF1;
+	background-color: #efeff1;
 	color: $secondary;
 	margin: 0px;
 	// background: url('../img/bg/body-watermark.png') top center/1920px auto repeat;
@@ -240,7 +240,7 @@ a {
 /* SCROLL BAR CSS */
 * {
 	scrollbar-width: thin;
-	scrollbar-color: #a16de0 #ffffff !important;
+	scrollbar-color: $primary #ffffff !important;
 
 	/* Default: Light pink */
 }
