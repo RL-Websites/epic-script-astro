@@ -5,13 +5,16 @@
 		background: $white;
 		border-radius: 10px;
 		padding: 20px 0;
+
 		@media (min-width: 576px) {
-			padding: 80px 0;
+			padding: 80px;
 		}
 	}
+
 	&__wrapper {
 		padding: 0;
 	}
+
 	&__title {
 		position: relative;
 		border-radius: 10px;
@@ -19,10 +22,12 @@
 		min-height: 421px;
 		background: url('../img/bg/faq-bg.jpg') no-repeat center center;
 		background-size: 170% 100%;
+
 		@media (min-width: 576px) {
 			background-size: cover;
 		}
 	}
+
 	&__heading {
 		font-size: $fs-40;
 		font-weight: 700;
@@ -36,9 +41,11 @@
 		text-align: center;
 		max-width: 330px;
 		width: 100%;
+
 		span {
 			color: $green-deep;
 		}
+
 		@media (min-width: 576px) {
 			top: 50%;
 			left: 80px;
@@ -62,6 +69,7 @@
 		border: none;
 		position: relative;
 		background-color: transparent;
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -70,13 +78,11 @@
 			width: 100%;
 			height: 1px;
 
-			background: repeating-linear-gradient(
-				to right,
-				$gray-lighter2,
-				$gray-lighter2 8px,
-				transparent 8px,
-				transparent 16px
-			);
+			background: repeating-linear-gradient(to right,
+					$gray-lighter2,
+					$gray-lighter2 8px,
+					transparent 8px,
+					transparent 16px);
 		}
 
 		&:first-child {
@@ -110,6 +116,7 @@
 
 		&:not(.collapsed) {
 			color: $black;
+
 			&::after {
 				content: '\e97e';
 				background-image: none;
@@ -125,6 +132,7 @@
 		max-width: 768px;
 		line-height: 1.4;
 		display: inline-block;
+
 		@media (min-width: 576px) {
 			font-size: $fs-24;
 		}

@@ -135,9 +135,21 @@ small,
 .site {
 	&__heading {
 		&-one {
-			font-size: 70px;
+			font-size: 56px;
 			font-weight: 700;
 			line-height: 120%;
+
+			&-lg {
+				font-size: 60px;
+				font-weight: 300;
+				line-height: 120%;
+			}
+
+			&-xl {
+				font-size: 94px;
+				font-weight: 700;
+				line-height: 120%;
+			}
 		}
 
 		&-two-lg {

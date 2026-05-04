@@ -154,72 +154,35 @@
 
 
 .pharmacy {
-	position: relative;
-	height: 200vh;
-	/* gives scroll space */
-	background: linear-gradient(90deg, #0f5132, #9be15d);
-	color: #fff;
+	&__wrapper {
+		padding: 80px;
+		background: url('../img/home/pharmacy.jpg') center center / cover no-repeat;
+		border-radius: 10px;
+		// height: 100vh;
+	}
+
+	&-slider {
+		height: 450px;
+	}
+
+	&__card {
+		width: 530px;
+		border-radius: 20px;
+		background: rgba(2, 51, 38, 0.40);
+		backdrop-filter: blur(12px);
+
+		&__img {
+			text-align: center;
+
+
+			img {
+				width: 100%;
+				max-height: 450px
+			}
+		}
+	}
 }
 
-.pharmacy__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: sticky;
-	top: 0;
-	height: 100vh;
-	padding: 0 5%;
-}
-
-.pharmacy__title {
-	font-size: 48px;
-	max-width: 500px;
-}
-
-.pharmacy__highlight {
-	color: #9be15d;
-}
-
-.pharmacy__card {
-	width: 300px;
-	height: 300px;
-	backdrop-filter: blur(10px);
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.card {
-	text-align: center;
-}
-
-.card__badge {
-	font-size: 40px;
-	margin-bottom: 20px;
-}
-
-.card__title {
-	font-size: 20px;
-	transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* SCROLL STEPS */
-.pharmacy__steps {
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-.step {
-	height: 100vh;
-}
-
-.card--changing .card__title {
-	opacity: 0;
-	transform: translateY(10px);
-}
 
 //Product CSS End
 
