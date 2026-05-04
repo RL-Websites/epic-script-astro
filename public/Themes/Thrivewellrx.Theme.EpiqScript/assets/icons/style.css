@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6y7cle');
-  src:  url('fonts/icomoon.eot?6y7cle#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?6y7cle') format('woff2'),
-    url('fonts/icomoon.ttf?6y7cle') format('truetype'),
-    url('fonts/icomoon.woff?6y7cle') format('woff'),
-    url('fonts/icomoon.svg?6y7cle#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?eejb39');
+  src:  url('fonts/icomoon.eot?eejb39#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?eejb39') format('woff2'),
+    url('fonts/icomoon.ttf?eejb39') format('truetype'),
+    url('fonts/icomoon.woff?eejb39') format('woff'),
+    url('fonts/icomoon.svg?eejb39#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -74,7 +74,7 @@
 .icon-minus:before {
   content: "\e97e";
 }
-.icon-cross1:before {
+.icon-cross:before {
   content: "\e917";
 }
 .icon-button:before {
@@ -199,9 +199,6 @@
 }
 .icon-link:before {
   content: "\e937";
-}
-.icon-linkedin:before {
-  content: "\e938";
 }
 .icon-location:before {
   content: "\e939";
@@ -430,4 +427,7 @@
 }
 .icon-youtube:before {
   content: "\e993";
+}
+.icon-linkedin:before {
+  content: "\e938";
 }

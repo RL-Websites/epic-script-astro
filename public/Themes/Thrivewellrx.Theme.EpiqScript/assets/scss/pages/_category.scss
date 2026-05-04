@@ -108,6 +108,10 @@
 			background: white;
 			padding: 0 80px;
 			border-radius: 0 0 10px 10px;
+
+			@media all and (max-width: 992px) {
+				padding: 0 8px;
+			}
 		}
 	}
 
@@ -127,12 +131,20 @@
 			min-height: 320px;
 			padding: 30px;
 			background: url('../img/home/category/weight-loss.jpg') center center / cover no-repeat;
+
+			@media all and (max-width: 992px) {
+				padding: 15px;
+			}
 		}
 
 		&__two {
 			min-height: 320px;
 			padding: 30px;
 			background: url('../img/home/category/anti-aging.jpg') center center / cover no-repeat;
+
+			@media all and (max-width: 992px) {
+				padding: 15px;
+			}
 		}
 
 		&__three {

@@ -248,12 +248,16 @@ $(document).ready(function () {
 			disableOnInteraction: false,
 		},
 		breakpoints: {
+			0: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
 			640: {
-				slidesPerView: 1.5,
+				slidesPerView: 5,
 				spaceBetween: 20,
 			},
 			1024: {
-				slidesPerView: 2.2,
+				slidesPerView: 5,
 				spaceBetween: 20,
 			},
 			1280: {

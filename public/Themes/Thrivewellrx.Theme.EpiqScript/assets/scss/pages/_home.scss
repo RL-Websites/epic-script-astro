@@ -11,11 +11,23 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			align-items: center;
+
+			@media all and (max-width: 992px) {
+				padding: 15px;
+			}
 		}
 
 		&__content {
 			max-width: 620px;
 			grid-column: span 2;
+
+			@media all and (max-width: 992px) {
+				h2 {
+					span {
+						display: block;
+					}
+				}
+			}
 
 			.theme-btn {
 				width: auto;
@@ -63,6 +75,10 @@
 		padding: 50px 80px;
 		background-color: $white;
 		border-radius: 10px;
+
+		@media all and (max-width: 992px) {
+			padding: 30px 8px;
+		}
 	}
 
 	&__icon {

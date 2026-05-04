@@ -28,6 +28,10 @@ h1 {
 	font-weight: 700;
 	line-height: 1.2;
 	letter-spacing: 0;
+
+	@media all and (max-width: 992px) {
+		font-size: $fs-30;
+	}
 }
 
 // H2 - 30px Bold, 100% line-height
@@ -36,6 +40,10 @@ h2 {
 	font-weight: 700;
 	line-height: 100%;
 	letter-spacing: 0;
+
+	@media all and (max-width: 992px) {
+		font-size: $fs-30;
+	}
 }
 
 // H3 - 24px Bold, 160% line-height
@@ -52,6 +60,11 @@ h4 {
 	font-weight: 600;
 	line-height: 120%;
 	letter-spacing: 0;
+
+	@media all and (max-width: 992px) {
+		font-size: 20px;
+
+	}
 }
 
 // H5 - 16px Semibold, 160% line-height
