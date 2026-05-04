@@ -8,18 +8,18 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-family: "Manrope", sans-serif;
+	font-family: 'Manrope', sans-serif;
 	color: $secondary;
 }
 
 p {
 	margin: 0;
-	font-family: "Manrope", sans-serif;
+	font-family: 'Manrope', sans-serif;
 	color: $secondary;
 }
 
 span {
-	font-family: "Manrope", sans-serif;
+	font-family: 'Manrope', sans-serif;
 }
 
 // H1 - 70px Bold, 120% line-height
@@ -210,7 +210,7 @@ small,
 }
 
 .font-sfui {
-	font-family: "Manrope", sans-serif;
+	font-family: 'Manrope', sans-serif;
 }
 
 // .font-cabinet-grotesk {
@@ -222,7 +222,7 @@ small,
 // }
 
 .text-grad-yellow {
-	background: linear-gradient(93deg, #D2FFA3 4.95%, #7CF9E0 140.21%);
+	background: linear-gradient(93deg, #d2ffa3 4.95%, #7cf9e0 140.21%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
