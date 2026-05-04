@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 // .radio-pill {
 // 	&:last-of-type {
@@ -65,7 +65,7 @@
 		display: none;
 	}
 
-	&__input:checked+&__label {
+	&__input:checked + &__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
@@ -105,7 +105,7 @@
 
 			&::placeholder {
 				font-size: $fs-18;
-				color: $light
+				color: $light;
 			}
 		}
 	}
@@ -295,18 +295,18 @@
 	outline: 0;
 	cursor: pointer;
 
-	&[type="radio"]:not(:checked) {
+	&[type='radio']:not(:checked) {
 		box-shadow: none;
 		border: 0;
 		outline: 0;
-		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.1' stroke='%235607C5' stroke-width='1.8'/%3E%3C/svg%3E%0A");
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.1' stroke='%2300533f' stroke-width='1.8'/%3E%3C/svg%3E%0A");
 	}
 
-	&:checked[type=radio] {
+	&:checked[type='radio'] {
 		box-shadow: none;
 		border: 0;
 		outline: 0;
-		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.7' fill='%235607C5' stroke='%235607C5' stroke-width='0.6'/%3E%3Cpath d='M16.8031 8.39844L10.2031 14.9984L7.20312 11.9984' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.7' fill='%2300533f' stroke='%2300533f' stroke-width='0.6'/%3E%3Cpath d='M16.8031 8.39844L10.2031 14.9984L7.20312 11.9984' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 	}
 
 	&:focus {
@@ -316,9 +316,8 @@
 	}
 }
 
-
-.form-check-input.is-valid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label {
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
 	color: $black;
 }
 
@@ -381,7 +380,6 @@
 			font-size: 14px;
 			letter-spacing: 1px;
 			padding: 10px 40px;
-
 		}
 
 		&__icon {

@@ -1,7 +1,12 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 .my-order {
-	padding: 120px 0 100px;
+	&__bg {
+		padding: 50px 80px;
+		background: $white;
+		border-radius: 10px;
+		margin: 12px 0;
+	}
 
 	// &__title,
 	// &__title a {
@@ -31,7 +36,7 @@
 					padding: 10px 12px !important;
 					font-size: $fs-18;
 					font-weight: 600;
-					color: #2D2D2D;
+					color: #2d2d2d;
 
 					&:first-child {
 						padding-left: 20px !important;
@@ -73,7 +78,6 @@
 	text-decoration: underline;
 }
 
-
 .order {
 	padding: 20px 20px 50px;
 
@@ -84,10 +88,10 @@
 	}
 
 	&__label {
-		font-family: "Manrope", sans-serif;
+		font-family: 'Manrope', sans-serif;
 		font-size: $fs-18;
 		font-weight: 600;
-		color: #2D2D2D;
+		color: #2d2d2d;
 		display: flex;
 		gap: 8px;
 		flex-wrap: wrap;
@@ -129,7 +133,7 @@
 	&__step {
 		width: 20px;
 		height: 20px;
-		background-color: #E6D4FF;
+		background-color: #e6d4ff;
 		border-radius: 50%;
 		position: relative;
 		z-index: 2;
@@ -152,7 +156,7 @@
 		white-space: nowrap;
 
 		&.active {
-			color: #2D2D2D;
+			color: #2d2d2d;
 		}
 
 		&--bottom {
@@ -201,7 +205,7 @@
 
 	&__label {
 		min-width: 154px;
-		color: #2D2D2D;
+		color: #2d2d2d;
 		font-weight: 700;
 	}
 }
@@ -231,7 +235,7 @@
 
 	&__label {
 		min-width: 154px;
-		color: #2D2D2D;
+		color: #2d2d2d;
 		font-weight: 700;
 	}
 }
@@ -319,8 +323,6 @@
 	.order-details {
 		padding: 150px 0 80px;
 	}
-
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -374,7 +376,6 @@
 		}
 	}
 
-
 	.timeline {
 		position: relative;
 		display: block;
@@ -414,8 +415,6 @@
 					color: #000;
 				}
 			}
-
-
 		}
 
 		&__dot {

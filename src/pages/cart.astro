@@ -19,9 +19,12 @@ import Layout from '../layouts/Layout.astro';
 								class="container"
 								data-aos="fade-up"
 								data-aos-duration="1000">
-								<h1 class="cart-hero__title text-center text-primary-grad-1">
-									Complete Your Order
-								</h1>
+								<div class="cart-hero__title-back">
+									<i class="icon-back"></i>
+									<h1 class="cart-hero__title text-center text-primary-grad-1">
+										Complete Your Order
+									</h1>
+								</div>
 
 								<div class="text-center">
 									<p class="cart-hero__text">
@@ -330,7 +333,7 @@ import Layout from '../layouts/Layout.astro';
 														<p class="pricing__total--name">Total</p>
 														<p class="pricing__total--value">$175.87</p>
 													</div>
-													<div
+													<!-- <div
 														class="text-center mt-20 d-none d-md-block"
 														data-aos="flip-left"
 														data-aos-duration="1000"
@@ -340,7 +343,7 @@ import Layout from '../layouts/Layout.astro';
 															href="/payment-method">
 															Proceed to Checkout
 														</a>
-													</div>
+													</div> -->
 												</div>
 											</div>
 										</div>
@@ -515,7 +518,7 @@ import Layout from '../layouts/Layout.astro';
 								data-aos-delay="100"
 								data-aos-once="true">
 								<a
-									class="theme-btn theme-btn__primary px-50"
+									class="theme-btn theme-btn__primary px-50 w-auto"
 									href="/payment-method">
 									Proceed to Checkout
 								</a>

@@ -3,9 +3,21 @@
 .car-common-bg {
 	border-radius: 10px;
 	background: $white;
+	padding: 0 80px;
 }
 
 .cart-hero {
+	&__title-back {
+		position: relative;
+		i {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			font-size: 20px;
+			transform: translateY(-50%);
+		}
+	}
+
 	&__title {
 		font-size: $fs-44 !important;
 		line-height: 1.5;
@@ -431,6 +443,7 @@
 	&__basic {
 		border-bottom: 1px dashed $gray-lighter3;
 		padding: 20px 24px;
+		padding-bottom: 90px;
 	}
 
 	&__item {
@@ -785,12 +798,13 @@
 	border-radius: 12px;
 	overflow: hidden;
 	background: $white;
+	padding: 0 80px;
 
 	&__header {
 		display: flex;
 		align-items: start;
 		justify-content: space-between;
-		padding: 24px 30px;
+		padding: 24px 0;
 		cursor: pointer;
 		user-select: none;
 
@@ -832,7 +846,7 @@
 	}
 
 	&__content {
-		padding: 0 30px 30px 30px;
+		padding-bottom: 30px;
 
 		@media (max-width: 767px) {
 			padding: 0 15px 20px 15px;
@@ -842,7 +856,7 @@
 
 .recurring-card {
 	background: linear-gradient(
-		90deg,
+		160deg,
 		#114232 0%,
 		#3e8e75 100%
 	); // Gradient from Figma
@@ -904,11 +918,11 @@
 	}
 
 	&__name {
-		color: #fff;
-		font-size: 16px;
+		color: $white;
+		font-size: 20px;
 		font-weight: 700;
 		margin-bottom: 4px;
-		line-height: 1.3;
+		line-height: 1.6;
 	}
 
 	&__price {
@@ -921,8 +935,7 @@
 
 	&__actions {
 		display: flex;
-		gap: 10px;
-		justify-content: flex-end;
+		gap: 16px;
 		margin-top: auto;
 
 		@media (max-width: 575px) {
@@ -970,7 +983,7 @@
 		background: $white;
 		border-radius: 10px;
 		padding-top: 40px;
-		padding-bottom: 20px;
+		padding: 40px 80px 20px;
 	}
 	&__content {
 		background-color: #ecf7e1;
