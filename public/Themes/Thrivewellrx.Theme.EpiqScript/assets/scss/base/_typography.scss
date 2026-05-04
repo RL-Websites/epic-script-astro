@@ -156,12 +156,20 @@ small,
 				font-size: 60px;
 				font-weight: 300;
 				line-height: 120%;
+
+				@media all and (max-width: 992px) {
+					font-size: 30px;
+				}
 			}
 
 			&-xl {
 				font-size: 94px;
 				font-weight: 700;
 				line-height: 120%;
+
+				@media all and (max-width: 992px) {
+					font-size: 30px;
+				}
 			}
 		}
 

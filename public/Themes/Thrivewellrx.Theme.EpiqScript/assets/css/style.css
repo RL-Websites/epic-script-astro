@@ -147,10 +147,20 @@ small,
   font-weight: 300;
   line-height: 120%;
 }
+@media all and (max-width: 992px) {
+  .site__heading-one-lg {
+    font-size: 30px;
+  }
+}
 .site__heading-one-xl {
   font-size: 94px;
   font-weight: 700;
   line-height: 120%;
+}
+@media all and (max-width: 992px) {
+  .site__heading-one-xl {
+    font-size: 30px;
+  }
 }
 .site__heading-two-lg {
   font-size: 48px;
@@ -9888,7 +9898,7 @@ textarea.form-control::placeholder {
 .faq__inner {
   background: #ffffff;
   border-radius: 10px;
-  padding: 20px 0;
+  padding: 20px 8px;
 }
 @media (min-width: 576px) {
   .faq__inner {
@@ -11069,14 +11079,6 @@ html[dir=rtl] .col-justify-end .col-options[b-vznuo5fmpv] {
 .site__header.menu-open .site__menu__list li a {
   color: #ffffff;
 }
-.site__header.menu-open .theme-btn__outline--primary {
-  border-color: #ffffff;
-  color: #ffffff;
-}
-.site__header.menu-open .theme-btn__outline--primary:hover {
-  background-color: #ffffff;
-  color: #00533f;
-}
 .site__header .cart-icon {
   color: #00533f;
   position: relative;
@@ -12166,14 +12168,19 @@ body.header-open {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 768px) {
   .home-hero__wrapper {
-    padding: 15px;
+    padding: 80px 40px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 200px 8px 15px 8px;
+    min-height: unset;
+    gap: 30px;
   }
 }
 .home-hero__content {
   max-width: 620px;
   grid-column: span 2;
+  text-align: center;
 }
 @media all and (max-width: 992px) {
   .home-hero__content h2 span {
@@ -12188,6 +12195,17 @@ body.header-open {
   display: flex;
   align-items: center;
   justify-content: end;
+}
+@media all and (max-width: 992px) {
+  .home-hero__right {
+    justify-content: center;
+  }
+}
+@media all and (max-width: 576px) {
+  .home-hero__right {
+    display: block;
+    width: 100%;
+  }
 }
 .home-hero__card {
   border-radius: 12px;
@@ -12238,6 +12256,12 @@ body.header-open {
   border-radius: 20px;
   height: 100%;
 }
+@media all and (max-width: 992px) {
+  .solutions__card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
 .solutions__card__one {
   background: url("../img/home/solutions1.svg") center center/cover no-repeat;
 }
@@ -12251,6 +12275,11 @@ body.header-open {
   align-items: start;
   gap: 20px;
   height: 100%;
+}
+@media all and (max-width: 576px) {
+  .solutions__content {
+    max-width: 100%;
+  }
 }
 .solutions__content h3 {
   max-width: 320px;
@@ -12295,6 +12324,17 @@ body.header-open {
   padding: 80px;
   background: url("../img/home/pharmacy.jpg") center center/cover no-repeat;
   border-radius: 10px;
+  height: calc(100vh - 90px);
+}
+@media all and (max-width: 576px) {
+  .pharmacy__wrapper {
+    padding: 40px;
+    height: auto;
+  }
+}
+.pharmacy__wrapper .row {
+  align-items: center;
+  height: 100%;
 }
 .pharmacy-slider {
   height: 450px;
@@ -12316,6 +12356,11 @@ body.header-open {
 .features__wrapper {
   padding: 100px 130px;
   border-radius: 10px;
+}
+@media all and (max-width: 992px) {
+  .features__wrapper {
+    padding: 40px 8px;
+  }
 }
 .features__card {
   background-color: #ffffff;
@@ -13399,6 +13444,11 @@ body.header-open {
     padding: 15px;
   }
 }
+@media all and (max-width: 768px) {
+  .category__card__one {
+    min-height: 190px;
+  }
+}
 .category__card__two {
   min-height: 320px;
   padding: 30px;
@@ -13409,20 +13459,42 @@ body.header-open {
     padding: 15px;
   }
 }
+@media all and (max-width: 768px) {
+  .category__card__two {
+    min-height: 190px;
+  }
+}
 .category__card__three {
   min-height: 150px;
   padding: 15px 30px;
   background: url("../img/home/category/hormone-health.jpg") center center/cover no-repeat;
+}
+@media all and (max-width: 768px) {
+  .category__card__three {
+    min-height: 190px;
+  }
 }
 .category__card__four {
   min-height: 150px;
   padding: 15px 30px;
   background: url("../img/home/category/pre-workout.jpg") center center/cover no-repeat;
 }
+@media all and (max-width: 768px) {
+  .category__card__four {
+    min-height: 190px;
+  }
+}
 .category__card__five {
   min-height: 150px;
   padding: 15px 30px;
   background: url("../img/home/category/sexual-health.jpg") center center/cover no-repeat;
+  flex-direction: row;
+  align-items: center;
+}
+@media all and (max-width: 768px) {
+  .category__card__five {
+    min-height: 100px;
+  }
 }
 .category__card__six {
   min-height: 100px;

@@ -12,14 +12,19 @@
 			grid-template-columns: repeat(3, 1fr);
 			align-items: center;
 
-			@media all and (max-width: 992px) {
-				padding: 15px;
+			@media all and (max-width: 768px) {
+				padding: 80px 40px;
+				grid-template-columns: repeat(1, 1fr);
+				padding: 200px 8px 15px 8px;
+				min-height: unset;
+				gap: 30px;
 			}
 		}
 
 		&__content {
 			max-width: 620px;
 			grid-column: span 2;
+			text-align: center;
 
 			@media all and (max-width: 992px) {
 				h2 {
@@ -39,6 +44,16 @@
 			display: flex;
 			align-items: center;
 			justify-content: end;
+
+			@media all and (max-width: 992px) {
+				justify-content: center;
+
+			}
+
+			@media all and (max-width: 576px) {
+				display: block;
+				width: 100%;
+			}
 		}
 
 		&__card {
@@ -101,6 +116,11 @@
 		border-radius: 20px;
 		height: 100%;
 
+		@media all and (max-width: 992px) {
+			padding: 15px;
+			border-radius: 10px;
+		}
+
 		&__one {
 			background: url('../img/home/solutions1.svg') center center / cover no-repeat;
 		}
@@ -117,6 +137,10 @@
 		align-items: start;
 		gap: 20px;
 		height: 100%;
+
+		@media all and (max-width: 576px) {
+			max-width: 100%;
+		}
 
 		h3 {
 			max-width: 320px;
@@ -174,7 +198,17 @@
 		padding: 80px;
 		background: url('../img/home/pharmacy.jpg') center center / cover no-repeat;
 		border-radius: 10px;
-		// height: 100vh;
+		height: calc(100vh - 90px);
+
+		@media all and (max-width: 576px) {
+			padding: 40px;
+			height: auto;
+		}
+
+		.row {
+			align-items: center;
+			height: 100%;
+		}
 	}
 
 	&-slider {
@@ -203,6 +237,10 @@
 	&__wrapper {
 		padding: 100px 130px;
 		border-radius: 10px;
+
+		@media all and (max-width: 992px) {
+			padding: 40px 8px;
+		}
 	}
 
 	&__card {
