@@ -13,21 +13,21 @@
       }
 
       label {
-        background-color: transparent;
+        background-color: $gray-lighter4;
         width: 519px;
-        min-height: 74px;
-        border-radius: 16px;
+        min-height: 64px;
+        border-radius: 50px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        color: $red;
+        justify-content: start;
+        color: $secondary;
         font-weight: 400;
-        padding: 16px 24px;
+        padding: 10px 30px;
         padding-right: 60px;
         text-align: center;
-        border: 1px solid $red;
         cursor: pointer;
         transition: all 0.3s;
+
       }
 
       input {
@@ -44,21 +44,20 @@
         }
 
         &:checked~label {
-          color: $red;
-          border: 1px solid $red;
+          color: $secondary;
 
           &:after {
-            content: '\e90a';
+            content: '\e96c';
             position: absolute;
             right: 17px;
             top: 46%;
             transform: translateY(-50%);
             font-family: 'icomoon';
-            font-size: 40px;
+            font-size: 30px;
             display: inline-flex;
-            height: 40px;
-            width: 40px;
-            line-height: 42px;
+            height: 30px;
+            width: 30px;
+            line-height: 1;
             color: $primary;
             border-radius: 50%;
             transition: all 0.3s;
@@ -180,7 +179,7 @@
         label {
           max-width: 320px;
           min-height: 50px;
-          border-radius: 12px;
+          border-radius: 50px;
         }
       }
 

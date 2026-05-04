@@ -162,15 +162,18 @@ small,
     font-size: 30px;
   }
 }
+.site__heading-two {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+}
 .site__heading-two-lg {
   font-size: 48px;
   font-weight: 700;
   line-height: 100%;
 }
-.site__heading-two {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 100%;
+.site__heading-two-md {
+  font-size: 44px;
 }
 .site__heading-three {
   font-size: 24px;
@@ -7348,11 +7351,13 @@ textarea.form-control::placeholder {
 }
 .theme-btn__primary {
   background-color: #00533f;
-  border: 1.5px solid #00533f;
+  border: 1px solid #00533f;
   color: white;
 }
 .theme-btn__primary:hover {
-  color: white;
+  color: #2d2d2d;
+  background-color: #e1ffc3;
+  border-color: #e1ffc3;
 }
 .theme-btn__primary:hover--icon i {
   color: #2d2d2d;
@@ -7448,8 +7453,9 @@ textarea.form-control::placeholder {
   color: #626262;
 }
 .theme-btn__outline--primary:hover, .theme-btn__outline--primary:focus {
-  background-color: #626262;
-  color: #ffffff;
+  border: 1px solid #e1ffc3;
+  color: #2d2d2d;
+  background-color: #e1ffc3;
 }
 .theme-btn__outline--secondary {
   border: 1px solid #e6d4ff;
@@ -7578,21 +7584,26 @@ textarea.form-control::placeholder {
 }
 
 .floating__buttons {
+  padding: 20px 5px;
   position: fixed;
   width: 100%;
   bottom: 0px;
   left: 0px;
   z-index: 1;
-  background-color: #fafafa;
-  box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.1215686275);
+  background-color: #ffffff;
+  border-top: 1px solid #8BA39D;
 }
 .floating__buttons__items {
   display: flex;
-  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   gap: 5px;
-  padding: 10px;
-  align-items: stretch;
+}
+.floating__buttons__items button {
+  width: auto;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 @keyframes spin {
@@ -8894,11 +8905,12 @@ textarea.form-control::placeholder {
   text-align: left;
 }
 .assessment__label {
-  font-size: 24px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 1.2;
   color: #2d2d2d;
   text-align: center;
+  text-transform: capitalize;
 }
 
 @media only screen and (max-width: 992px) {
@@ -8935,19 +8947,18 @@ textarea.form-control::placeholder {
   width: 100%;
 }
 .assessment__form_radio label {
-  background-color: transparent;
+  background-color: #FDFDF1;
   width: 519px;
-  min-height: 74px;
-  border-radius: 16px;
+  min-height: 64px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #ed3131;
+  justify-content: start;
+  color: #2d2d2d;
   font-weight: 400;
-  padding: 16px 24px;
+  padding: 10px 30px;
   padding-right: 60px;
   text-align: center;
-  border: 1px solid #ed3131;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -8962,21 +8973,20 @@ textarea.form-control::placeholder {
   display: none;
 }
 .assessment__form_radio input:checked ~ label {
-  color: #ed3131;
-  border: 1px solid #ed3131;
+  color: #2d2d2d;
 }
 .assessment__form_radio input:checked ~ label:after {
-  content: "\e90a";
+  content: "\e96c";
   position: absolute;
   right: 17px;
   top: 46%;
   transform: translateY(-50%);
   font-family: "icomoon";
-  font-size: 40px;
+  font-size: 30px;
   display: inline-flex;
-  height: 40px;
-  width: 40px;
-  line-height: 42px;
+  height: 30px;
+  width: 30px;
+  line-height: 1;
   color: #00533f;
   border-radius: 50%;
   transition: all 0.3s;
@@ -9072,7 +9082,7 @@ textarea.form-control::placeholder {
   .assessment__form_radio label {
     max-width: 320px;
     min-height: 50px;
-    border-radius: 12px;
+    border-radius: 50px;
   }
   .assessment__form input:checked ~ label:after {
     font-size: 30px;
@@ -9205,7 +9215,7 @@ textarea.form-control::placeholder {
 .assessment__progress-bar .assessment__progress {
   height: 6px;
   border-radius: 100px;
-  background-color: white;
+  background-color: #FDFDF1;
   overflow: hidden;
 }
 .assessment__progress-bar .assessment__progress .progress-bar {
@@ -13743,7 +13753,6 @@ body.header-open {
 }
 
 .assessment__page-wrapper {
-  background: url("../img/bg/common-bg.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -13752,6 +13761,7 @@ body.header-open {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 .assessment__page-wrapper__alt {
   background-position: top center;
@@ -13772,10 +13782,11 @@ body.header-open {
   transform: rotate(-55.61);
 }
 .assessment__logo {
-  width: 180px;
+  width: 200px;
 }
 .assessment__form {
   margin-top: 80px;
+  gap: 20px;
 }
 .assessment__form-container {
   max-width: 519px;
@@ -14056,6 +14067,7 @@ body.header-open {
   .assessment__label {
     font-size: 16px;
     margin-top: 0 !important;
+    border-radius: 50px;
   }
   .assessment__form.all-questions {
     gap: 15px;
@@ -14063,7 +14075,7 @@ body.header-open {
   .assessment__form.all-questions .single-question input {
     max-width: 320px;
     height: 50px;
-    border-radius: 12px;
+    border-radius: 50%;
   }
 }
 @media all and (max-width: 768px) {

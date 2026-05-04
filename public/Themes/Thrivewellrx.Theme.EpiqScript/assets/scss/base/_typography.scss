@@ -173,16 +173,21 @@ small,
 			}
 		}
 
-		&-two-lg {
-			font-size: 48px;
-			font-weight: 700;
-			line-height: 100%;
-		}
 
 		&-two {
-			font-size: 30px;
+			font-size: $fs-30;
 			font-weight: 700;
 			line-height: 100%;
+
+			&-lg {
+				font-size: $fs-48;
+				font-weight: 700;
+				line-height: 100%;
+			}
+
+			&-md {
+				font-size: $fs-44;
+			}
 		}
 
 		&-three {

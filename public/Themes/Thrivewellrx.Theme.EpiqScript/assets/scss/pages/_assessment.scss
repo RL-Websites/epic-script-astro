@@ -2,7 +2,6 @@
 
 .assessment {
 	&__page-wrapper {
-		background: url("../img/bg/common-bg.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -11,6 +10,7 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		background-color: #ffffff;
 
 		&__alt {
 			background-position: top center;
@@ -35,11 +35,12 @@
 	}
 
 	&__logo {
-		width: 180px;
+		width: 200px;
 	}
 
 	&__form {
 		margin-top: 80px;
+		gap: 20px;
 
 		&-container {
 			max-width: 519px;
@@ -399,6 +400,7 @@
 		&__label {
 			font-size: $fs-16;
 			margin-top: 0 !important;
+			border-radius: 50px;
 		}
 
 		&__form {
@@ -408,7 +410,7 @@
 				.single-question input {
 					max-width: 320px;
 					height: 50px;
-					border-radius: 12px;
+					border-radius: 50%;
 				}
 			}
 		}
