@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 //Custom Table
 .list-table {
@@ -8,7 +8,7 @@
 	.table {
 		margin-bottom: 0;
 		vertical-align: baseline;
-		background-color: #fbf9ff;
+		background-color: #f3f3f3;
 
 		thead {
 			vertical-align: baseline;
@@ -19,7 +19,7 @@
 				border-bottom: 0 !important;
 				font-weight: 600;
 				vertical-align: baseline;
-				background-color: #fbf9ff;
+				background-color: $gray-light;
 			}
 		}
 
@@ -33,7 +33,7 @@
 				font-size: $fs-16;
 				line-height: 1.4;
 				border-top: 1px solid $gray-light;
-				background-color: #fbf9ff;
+				background-color: $gray-light;
 			}
 
 			tr {
@@ -52,8 +52,6 @@
 				td:last-child {
 					border-bottom: 0 !important;
 				}
-
-
 			}
 		}
 
@@ -89,17 +87,15 @@
 				}
 			}
 		}
-
 	}
 
-	.table>:not(caption)>*>* {
+	.table > :not(caption) > * > * {
 		border-bottom: 0 !important;
 	}
 
 	&.normal-table {
 		.table {
 			&__normal {
-
 				thead,
 				tbody,
 				tr {
@@ -118,6 +114,11 @@
 	&__time {
 		width: 140px;
 	}
+	&__Id {
+		font-weight: 700;
+		color: $primary !important;
+		text-decoration: underline;
+	}
 }
 
 .custom {
@@ -125,7 +126,6 @@
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
-
 
 		@media all and (max-width: 768px) {
 			// gap: 20px;
@@ -135,13 +135,12 @@
 
 		&__item {
 			width: 100%;
-
 		}
 
 		&__header {
 			font-size: $fs-14;
 			font-weight: 700;
-			border-bottom: 1px solid #E6D4FF;
+			border-bottom: 1px solid #e6d4ff;
 			padding-top: 16px;
 			// padding-bottom: 10px;
 			padding-right: 15px;
@@ -150,7 +149,6 @@
 			@media all and (max-width: 768px) {
 				border: 0;
 				padding-top: 0px;
-
 			}
 
 			p {
@@ -158,10 +156,8 @@
 				width: 100%;
 				padding-bottom: 12px !important;
 
-
-
 				&.custom-table__header__text {
-					color: #2D2D2D;
+					color: #2d2d2d;
 
 					@media all and (max-width: 768px) {
 						font-size: 18px;
@@ -197,12 +193,12 @@
 // 	background-color: #DADADA !important;
 // }
 
-.table-striped>tbody>tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) {
 	--bs-table-accent-bg: unset;
 	color: var(--bs-table-striped-color);
 }
 
-.table-striped>tbody>tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) {
 	background-color: transparent !important;
 }
 
@@ -262,7 +258,7 @@
 
 	.order-table {
 		border: 1px solid $primary-light;
-		border-radius: 10px;
+		border-radius: 16px;
 		margin-bottom: 20px;
 
 		&__row {
@@ -304,6 +300,5 @@
 }
 
 .border-bottom-mobile {
-	border-bottom: 1px solid #E6D4FF;
-
+	border-bottom: 1px solid #e6d4ff;
 }

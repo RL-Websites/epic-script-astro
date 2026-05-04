@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 .cart-card {
 	border-radius: 10px;
@@ -26,8 +26,8 @@
 
 .card-basic {
 	// box-shadow: 2px 2px 24px 0px rgba(195, 195, 195, 0.2784313725);
-	border: 1px solid $primary-light;
-	border-radius: 10px;
+	border: 1px solid $gray-lighter3;
+	border-radius: 16px;
 	overflow: hidden;
 	background: transparent;
 
@@ -62,7 +62,7 @@
 	}
 
 	&__table {
-		border-color: #DADADA !important;
+		border-color: #dadada !important;
 	}
 
 	&__table-mobile {
@@ -108,8 +108,6 @@
 
 @media only screen and (max-width: 992px) {
 	.card-basic {
-
-
 		&__header {
 			padding: 12px 16px;
 		}
@@ -146,7 +144,7 @@
 
 		&__header {
 			padding: 16px 12px;
-			
+
 			display: flex;
 			flex-direction: column;
 		}

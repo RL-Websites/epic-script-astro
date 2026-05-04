@@ -9796,8 +9796,8 @@ textarea.form-control::placeholder {
 }
 
 .card-basic {
-  border: 1px solid #e6d4ff;
-  border-radius: 10px;
+  border: 1px solid #c7c7c7;
+  border-radius: 16px;
   overflow: hidden;
   background: transparent;
 }
@@ -9827,7 +9827,7 @@ textarea.form-control::placeholder {
   box-shadow: none;
 }
 .card-basic__table {
-  border-color: #DADADA !important;
+  border-color: #dadada !important;
 }
 .card-basic__table-mobile {
   display: none;
@@ -10340,7 +10340,7 @@ textarea.form-control::placeholder {
 .list-table .table {
   margin-bottom: 0;
   vertical-align: baseline;
-  background-color: #fbf9ff;
+  background-color: #f3f3f3;
 }
 .list-table .table thead {
   vertical-align: baseline;
@@ -10351,7 +10351,7 @@ textarea.form-control::placeholder {
   border-bottom: 0 !important;
   font-weight: 600;
   vertical-align: baseline;
-  background-color: #fbf9ff;
+  background-color: #f3f3f3;
 }
 .list-table .table tbody {
   vertical-align: top;
@@ -10363,7 +10363,7 @@ textarea.form-control::placeholder {
   font-size: 16px;
   line-height: 1.4;
   border-top: 1px solid #f3f3f3;
-  background-color: #fbf9ff;
+  background-color: #f3f3f3;
 }
 .list-table .table tbody tr {
   border-bottom: 1px solid #f3f3f3;
@@ -10418,6 +10418,11 @@ textarea.form-control::placeholder {
 .list-table__time {
   width: 140px;
 }
+.list-table__Id {
+  font-weight: 700;
+  color: #00533f !important;
+  text-decoration: underline;
+}
 
 .custom-table {
   display: flex;
@@ -10436,7 +10441,7 @@ textarea.form-control::placeholder {
 .custom-table__header {
   font-size: 14px;
   font-weight: 700;
-  border-bottom: 1px solid #E6D4FF;
+  border-bottom: 1px solid #e6d4ff;
   padding-top: 16px;
   padding-right: 15px;
   text-wrap: nowrap;
@@ -10453,7 +10458,7 @@ textarea.form-control::placeholder {
   padding-bottom: 12px !important;
 }
 .custom-table__header p.custom-table__header__text {
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 @media all and (max-width: 768px) {
   .custom-table__header p.custom-table__header__text {
@@ -10529,7 +10534,7 @@ textarea.form-control::placeholder {
   }
   .order-table {
     border: 1px solid #e6d4ff;
-    border-radius: 10px;
+    border-radius: 16px;
     margin-bottom: 20px;
   }
   .order-table__row {
@@ -10561,7 +10566,7 @@ textarea.form-control::placeholder {
   }
 }
 .border-bottom-mobile {
-  border-bottom: 1px solid #E6D4FF;
+  border-bottom: 1px solid #e6d4ff;
 }
 
 /*-------- default css from microsoft -------*/
@@ -13491,7 +13496,10 @@ body.header-open {
   background: #ffffff;
   border-radius: 10px;
   padding-top: 40px;
-  padding: 40px 80px 20px;
+  padding: 40px 0 20px;
+}
+.cart-warning__bg-inner {
+  padding-inline: 80px;
 }
 .cart-warning__content {
   background-color: #ecf7e1;
@@ -13523,6 +13531,7 @@ body.header-open {
 .cart-warning__actions {
   padding-top: 20px;
   border-top: 1px solid #8ba39d;
+  padding-inline: 80px;
 }
 
 .category-hero__wrapper {
@@ -15359,7 +15368,7 @@ body.header-open {
   margin: 12px 0;
 }
 .my-order .order-list.table thead th {
-  padding: 10px 12px !important;
+  padding: 30px 12px !important;
   font-size: 18px;
   font-weight: 600;
   color: #2d2d2d;

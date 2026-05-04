@@ -983,7 +983,10 @@
 		background: $white;
 		border-radius: 10px;
 		padding-top: 40px;
-		padding: 40px 80px 20px;
+		padding: 40px 0 20px;
+		&-inner {
+			padding-inline: 80px;
+		}
 	}
 	&__content {
 		background-color: #ecf7e1;
@@ -1019,5 +1022,6 @@
 	&__actions {
 		padding-top: 20px;
 		border-top: 1px solid #8ba39d;
+		padding-inline: 80px;
 	}
 }
