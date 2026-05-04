@@ -842,7 +842,7 @@
 
 .recurring-card {
 	background: linear-gradient(
-		90deg,
+		145deg,
 		#114232 0%,
 		#3e8e75 100%
 	); // Gradient from Figma
@@ -1001,5 +1001,10 @@
 		line-height: 1.6;
 		color: $black-deep;
 		margin-bottom: 0;
+	}
+
+	&__actions {
+		padding-top: 20px;
+		border-top: 1px solid #8ba39d;
 	}
 }
