@@ -2,7 +2,6 @@
 
 .assessment {
 	&__page-wrapper {
-		background: url("../img/bg/common-bg.svg");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -11,6 +10,7 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		background-color: #ffffff;
 
 		&__alt {
 			background-position: top center;
@@ -35,7 +35,7 @@
 	}
 
 	&__logo {
-		width: 180px;
+		width: 200px;
 	}
 
 	&__form {

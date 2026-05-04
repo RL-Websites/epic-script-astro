@@ -80,11 +80,12 @@
 	}
 
 	&__label {
-		font-size: $fs-24;
+		font-size: $fs-44;
 		font-weight: 700;
 		line-height: 1.2;
 		color: $secondary;
 		text-align: center;
+		text-transform: capitalize;
 	}
 }
 

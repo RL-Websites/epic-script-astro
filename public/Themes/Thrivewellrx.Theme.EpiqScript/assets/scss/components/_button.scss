@@ -20,12 +20,13 @@
 
 	&__primary {
 		background-color: $primary;
-		border: 1.5px solid $primary;
-
+		border: 1px solid $primary;
 		color: white;
 
 		&:hover {
-			color: white;
+			color: $secondary;
+			background-color: $yellow-lighter;
+			border-color: $yellow-lighter;
 
 			&--icon {
 				i {
@@ -145,8 +146,9 @@
 
 			&:hover,
 			&:focus {
-				background-color: $gray-medium4;
-				color: $white;
+				border: 1px solid $yellow-lighter;
+				color: $secondary;
+				background-color: $yellow-lighter;
 			}
 		}
 
@@ -304,6 +306,7 @@
 
 .floating {
 	&__buttons {
+		padding: 20px 10px;
 		position: fixed;
 		width: 100%;
 		bottom: 0px;
@@ -314,11 +317,17 @@
 
 		&__items {
 			display: flex;
-			flex-direction: column-reverse;
+			align-items: center;
+			justify-content: space-between;
 			width: 100%;
 			gap: 5px;
-			padding: 10px;
-			align-items: stretch;
+
+
+			button {
+				width: auto;
+				padding-left: 60px;
+				padding-right: 60px;
+			}
 		}
 	}
 }
