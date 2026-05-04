@@ -4,11 +4,12 @@
 	&__inner {
 		background: $white;
 		border-radius: 10px;
-		padding: 20px 0;
+		padding: 20px 8px;
 
 		@media (min-width: 576px) {
 			padding: 80px;
 		}
+
 	}
 
 	&__wrapper {

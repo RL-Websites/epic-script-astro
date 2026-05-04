@@ -9,13 +9,13 @@ $primary-lightest: #fbf9ff; // Off White Purple
 $black: #2d2d2d; // Dark Gray/Black
 $black-deep: #212121; // Deep Black
 $gray-dark: #969696; // New Added
-$gray-medium4: #626262;
+$gray-medium4: #626262; // New Added
 $gray-medium3: #00533f17; // New Added
 $gray-medium2: #878ca8; // New Added
 $gray-medium: #8e8e8e; // New Added
-$gray-normal: #e7f3ff; // Normal Gray
+$gray-normal: #C6C6C6; // Normal Gray
 $gray-light: #f3f3f3; // New Added
-$gray-aeae: #dadada; // Light Gray
+$gray-aeae: #dadada; // New Added
 $gray-light-2: #ffd4dd; // Light Gray
 $gray-lighter: #ffe9e9; // New Added
 $gray-lighter2: #acacac; // New added
@@ -37,7 +37,7 @@ $orange: #f5ddc3;
 $dark: #444444;
 // Legacy color mappings (for backward compatibility)
 $secondary: $black; // Map to new black
-$light: $gray-light; // Map to new light gray
+$light: #EFEFF1; // Map to new light gray
 $gray: $gray-dark; // Map to gray-dark
 $background-1: #efeff1;
 $background-2: $primary-lighter;
@@ -59,6 +59,7 @@ $blue-2: #9bd0e3; // Legacy blue-2
 $blue-3: #9790d4; // Legacy blue-3
 $pink-1: #d47186; // Legacy pink-1
 $pink-2: #ffe0eb; // Legacy pink-2
+$cyan: #00533F; //New Added Cyan
 
 // ==== Font Sizes
 $fs-10: 10px;
