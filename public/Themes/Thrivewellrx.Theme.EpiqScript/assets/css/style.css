@@ -7584,14 +7584,14 @@ textarea.form-control::placeholder {
 }
 
 .floating__buttons {
-  padding: 20px 10px;
+  padding: 20px 5px;
   position: fixed;
   width: 100%;
   bottom: 0px;
   left: 0px;
   z-index: 1;
-  background-color: #fafafa;
-  box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.1215686275);
+  background-color: #ffffff;
+  border-top: 1px solid #8BA39D;
 }
 .floating__buttons__items {
   display: flex;
@@ -9082,7 +9082,7 @@ textarea.form-control::placeholder {
   .assessment__form_radio label {
     max-width: 320px;
     min-height: 50px;
-    border-radius: 12px;
+    border-radius: 50px;
   }
   .assessment__form input:checked ~ label:after {
     font-size: 30px;
@@ -9215,7 +9215,7 @@ textarea.form-control::placeholder {
 .assessment__progress-bar .assessment__progress {
   height: 6px;
   border-radius: 100px;
-  background-color: white;
+  background-color: #FDFDF1;
   overflow: hidden;
 }
 .assessment__progress-bar .assessment__progress .progress-bar {
@@ -13765,6 +13765,7 @@ body.header-open {
 }
 .assessment__form {
   margin-top: 80px;
+  gap: 20px;
 }
 .assessment__form-container {
   max-width: 519px;
@@ -14045,6 +14046,7 @@ body.header-open {
   .assessment__label {
     font-size: 16px;
     margin-top: 0 !important;
+    border-radius: 50px;
   }
   .assessment__form.all-questions {
     gap: 15px;
@@ -14052,7 +14054,7 @@ body.header-open {
   .assessment__form.all-questions .single-question input {
     max-width: 320px;
     height: 50px;
-    border-radius: 12px;
+    border-radius: 50%;
   }
 }
 @media all and (max-width: 768px) {

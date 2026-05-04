@@ -40,6 +40,7 @@
 
 	&__form {
 		margin-top: 80px;
+		gap: 20px;
 
 		&-container {
 			max-width: 519px;
@@ -399,6 +400,7 @@
 		&__label {
 			font-size: $fs-16;
 			margin-top: 0 !important;
+			border-radius: 50px;
 		}
 
 		&__form {
@@ -408,7 +410,7 @@
 				.single-question input {
 					max-width: 320px;
 					height: 50px;
-					border-radius: 12px;
+					border-radius: 50%;
 				}
 			}
 		}
