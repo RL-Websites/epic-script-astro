@@ -97,7 +97,7 @@ ul {
 			font-size: 20px;
 			font-weight: 700;
 			line-height: 1;
-			color: #00533F;
+			color: #00533f;
 		}
 	}
 
@@ -287,4 +287,39 @@ a {
 /* Optional: Smooth scrolling for the entire page */
 html {
 	scroll-behavior: smooth !important;
+}
+
+.product-info-box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 24px;
+	background-color: $green-lighter3;
+	border-radius: 12px;
+
+	// High-precision dashed border using SVG to match Figma exactly
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%2300533F' stroke-width='2' stroke-dasharray='8%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+
+	&__section {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&__title {
+		margin: 0;
+		color: $black-deep;
+		font-size: $fs-18;
+		font-weight: 600;
+		line-height: 1.4;
+	}
+
+	&__description {
+		margin: 0;
+		color: $black-deep;
+		font-size: $fs-14;
+		font-weight: 400;
+		line-height: 1.4;
+		max-width: 1120px;
+	}
 }

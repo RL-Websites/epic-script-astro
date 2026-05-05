@@ -1,11 +1,11 @@
 ---
-import Client from "../components/Client.astro";
-import Faq from "../components/Faq.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import HowItWorks from "../components/homePage/HowItWorks.astro";
-import WhyChooseUs from "../components/homePage/WhyChooseUs.astro";
-import Layout from "../layouts/Layout.astro";
+import Client from '../components/Client.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import HowItWorks from '../components/homePage/HowItWorks.astro';
+import WhyChooseUs from '../components/homePage/WhyChooseUs.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
@@ -21,14 +21,13 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div> -->
 		<!-- ==|| Product Hero Section Start ||== -->
-		<section class="product-hero bg-white">
+		<section class="product-hero">
 			<div class="container">
 				<div class="row align-items-start">
 					<div
 						class="col-xl-5 col-md-6 product-hero__left-col"
 						data-aos="zoom-out"
-						data-aos-duration="1000"
-					>
+						data-aos-duration="1000">
 						<div class="product-hero__left">
 							<img
 								src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/product-2.png"
@@ -41,101 +40,42 @@ import Layout from "../layouts/Layout.astro";
 						class="col-xl-7 col-md-6"
 						data-aos="fade-left"
 						data-aos-duration="1000"
-						data-aos-delay="200"
-					>
+						data-aos-delay="200">
 						<div class="product-hero__right">
 							<div class="d-flex align-items-start">
-								<h2>Focus and Mood Blend - PE-22-28/Pinealon/Selank</h2>
-								<span
-									class="badge rounded-pill bg-pink-2 text-red ml-auto mt-1"
-								>
+								<h2>Semaglutide Injection</h2>
+								<!-- <span
+									class="badge rounded-pill bg-pink-2 text-red ml-auto mt-1">
 									Out of Stock
-								</span>
+								</span> -->
 							</div>
-							<h3 class="mt-12 text-primary-grad-1">$450</h3>
+							<!-- <h3 class="mt-12 text-primary-grad-1">$450</h3>
 							<h5 class="mt-12 text-gray-dark">Purity: 99.9%</h5>
 							<div class="alert-pill mt-20 mt-md-24">
 								<i class="icon-alert"></i>
 								<span
 									>For Research Purposes Only — Not for Human Consumption</span
 								>
-							</div>
+							</div> -->
 
-							<div class="product-hero__cart mt-24">
-								<div class="product-action">
-									<!-- <div
-										class="input-group product-action__cart product-action__cart--lg"
-									>
-										<span class="input-group-btn">
-											<button class="btn" type="button">
-												<i class="icon-minus"></i>
-											</button>
-										</span>
-										<input
-											type="text"
-											class="form-control"
-											id="quantity"
-											value="1"
-										/>
-										<span class="input-group-btn">
-											<button class="btn" type="button">
-												<i class="icon-plus1"></i>
-											</button>
-										</span>
-									</div> -->
-
-									<div class="product-action__btn mt-24">
-										<div
-											class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
-											data-aos="flip-left"
-											data-aos-duration="1000"
-											data-aos-once="true"
-										>
-											<span class="input-group-btn">
-												<button class="btn" type="button">
-													<i class="icon-minus"></i>
-												</button>
-											</span>
-											<input
-												type="text"
-												inputmode="numeric"
-												class="form-control numeric-only"
-												id="quantity"
-												value="1"
-											/>
-											<span class="input-group-btn">
-												<button class="btn" type="button">
-													<i class="icon-plus1"></i>
-												</button>
-											</span>
-										</div>
-										<button
-											type="button"
-											class="theme-btn theme-btn-size-md theme-btn__primary"
-											data-aos="flip-left"
-											data-aos-duration="1000"
-											data-aos-once="true"
-										>
-											Add to Cart
-										</button>
-										<button
-											type="button"
-											class="theme-btn theme-btn-size-md theme-btn__outline theme-btn__outline--primary"
-											data-aos="flip-left"
-											data-aos-duration="1000"
-											data-aos-once="true"
-										>
-											Buy Now
-										</button>
-									</div>
-								</div>
+							<div class="product-hero__about">
+								<h4>About The Product:</h4>
+								<ul>
+									<li
+										>Doctors Appointment, Prescription and Medications Included
+									</li>
+									<li>Fast Shipping</li>
+									<li>All Supplies Included</li>
+									<li>Unlimited Weight Loss Program Support</li>
+									<li>Bypass Insurance – No Insurance Needed</li>
+									<li>No Hidden Fees</li>
+								</ul>
 							</div>
 
 							<ul
 								class="nav nav-pills nav-pills__custom mb-3"
 								id="pills-tab"
-								role="tablist"
-							>
+								role="tablist">
 								<li class="nav-item" role="presentation">
 									<button
 										class="nav-link active"
@@ -145,8 +85,7 @@ import Layout from "../layouts/Layout.astro";
 										type="button"
 										role="tab"
 										aria-controls="pills-home"
-										aria-selected="true"
-									>
+										aria-selected="true">
 										1 Month Program
 									</button>
 								</li>
@@ -165,14 +104,12 @@ import Layout from "../layouts/Layout.astro";
 							</ul>
 							<div
 								class="tab-content tab-content__custom"
-								id="pills-tabContent"
-							>
+								id="pills-tabContent">
 								<div
 									class="tab-pane fade show active"
 									id="pills-home"
 									role="tabpanel"
-									aria-labelledby="pills-home-tab"
-								>
+									aria-labelledby="pills-home-tab">
 									<div class="tab-pills">
 										<div class="tab-pills__single">
 											<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
@@ -216,8 +153,7 @@ import Layout from "../layouts/Layout.astro";
 									class="tab-pane fade"
 									id="pills-profile"
 									role="tabpanel"
-									aria-labelledby="pills-profile-tab"
-								>
+									aria-labelledby="pills-profile-tab">
 									<div class="tab-pills">
 										<div class="tab-pills__single">
 											<span class="fs-md-18 fs-sm-16 fs-14 lh-1 fw-bold"
@@ -241,9 +177,77 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 							</div>
 
-							<div
-								class="text-body3 text-gray-dark mt-20 mt-md-24 product-hero__details"
-							>
+							<div class="product-hero__cart">
+								<div class="product-action">
+									<!-- <div
+										class="input-group product-action__cart product-action__cart--lg"
+									>
+										<span class="input-group-btn">
+											<button class="btn" type="button">
+												<i class="icon-minus"></i>
+											</button>
+										</span>
+										<input
+											type="text"
+											class="form-control"
+											id="quantity"
+											value="1"
+										/>
+										<span class="input-group-btn">
+											<button class="btn" type="button">
+												<i class="icon-plus1"></i>
+											</button>
+										</span>
+									</div> -->
+
+									<div class="product-action__btn">
+										<div
+											class="input-group product-action__cart product-action__cart--md"
+											data-aos="flip-left"
+											data-aos-duration="1000"
+											data-aos-once="true">
+											<span class="input-group-btn">
+												<button class="btn" type="button">
+													<i class="icon-minus"></i>
+												</button>
+											</span>
+											<input
+												type="text"
+												inputmode="numeric"
+												class="form-control numeric-only"
+												id="quantity"
+												value="1"
+											/>
+											<span class="input-group-btn">
+												<button class="btn" type="button">
+													<i class="icon-plus"></i>
+												</button>
+											</span>
+										</div>
+										<div class="product-action__wrap">
+											<button
+												type="button"
+												class="theme-btn theme-btn-size-md theme-btn__outline theme-btn__outline--primary"
+												data-aos="flip-left"
+												data-aos-duration="1000"
+												data-aos-once="true">
+												Buy Now
+											</button>
+											<button
+												type="button"
+												class="theme-btn theme-btn-size-md theme-btn__primary"
+												data-aos="flip-left"
+												data-aos-duration="1000"
+												data-aos-once="true">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- <div
+								class="text-body3 text-gray-dark mt-20 mt-md-24 product-hero__details">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 								enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -269,7 +273,7 @@ import Layout from "../layouts/Layout.astro";
 								<div class="read-more">
 									<span id="readMore" class="text-body3"> Read More </span>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -393,8 +397,7 @@ import Layout from "../layouts/Layout.astro";
 					<button
 						class="modal__action modal__action--outline"
 						data-dismiss="modal"
-						type="button"
-					>
+						type="button">
 						Cancel
 					</button>
 					<button class="modal__action modal__action--primary" type="button">

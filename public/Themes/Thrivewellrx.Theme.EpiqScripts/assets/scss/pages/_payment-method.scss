@@ -18,7 +18,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 20px 50px;
+		gap: 20px 30px;
 		flex-direction: row;
 	}
 
@@ -275,7 +275,7 @@
 	}
 
 	&__input {
-		width: calc(50% - 50px);
+		width: calc(50% - 15px);
 	}
 
 	&__methods {
@@ -426,6 +426,26 @@
 		@media all and (max-width: 768px) {
 			display: block;
 		}
+	}
+}
+
+.info-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 18px 24px;
+	background-color: $green-lighter3;
+	border-radius: 12px;
+
+	// Custom SVG/Gradient Border logic
+	// We use a mask or a background-image to create the perfect dash
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%2300533F' stroke-width='2' stroke-dasharray='8%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+
+	&__text {
+		margin: 0;
+		color: $black-deep;
+		font-size: $fs-16;
+		line-height: 1.4;
 	}
 }
 
