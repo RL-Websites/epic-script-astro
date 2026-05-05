@@ -1,5 +1,4 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
 import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
 import Layout from "../layouts/Layout.astro";
@@ -13,13 +12,13 @@ import Layout from "../layouts/Layout.astro";
 				<AssesmentHeader />
 				<!--Assesment Header End -->
 				<!-- Assessment question sub title start -->
-				<div class="assessment__label mt-50">
+				<div class="assessment__label">
 					How much decline in your work performance have you noticed?
 				</div>
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
-				<div class="assessment__form mt-30">
+				<div class="assessment__form">
 					<div class="assessment__form__checkbox">
 						<input
 							type="checkbox"
@@ -31,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
 						<label for="answerCheckbox1"> Yes </label>
 					</div>
 
-					<div class="assessment__form__checkbox mt-30">
+					<div class="assessment__form__checkbox">
 						<input
 							type="checkbox"
 							name="answeCheckbox"
@@ -41,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
 						<label for="answerCheckbox2"> No </label>
 					</div>
 
-					<div class="assessment__form__checkbox mt-30">
+					<div class="assessment__form__checkbox">
 						<input
 							type="checkbox"
 							name="answeCheckbox"
@@ -61,8 +60,5 @@ import Layout from "../layouts/Layout.astro";
 				<CommonAction />
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<AssesmentFooter />
 	</div>
 </Layout>

@@ -8926,12 +8926,15 @@ textarea.form-control::placeholder {
   text-align: left;
 }
 .assessment__label {
+  max-width: 900px;
+  margin: 0 auto;
   font-size: 44px;
   font-weight: 700;
   line-height: 1.2;
   color: #2d2d2d;
   text-align: center;
   text-transform: capitalize;
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -8969,7 +8972,7 @@ textarea.form-control::placeholder {
 }
 .assessment__form_radio label {
   background-color: #fdfdf1;
-  width: 519px;
+  width: 570px;
   min-height: 64px;
   border-radius: 50px;
   display: flex;
@@ -9124,21 +9127,20 @@ textarea.form-control::placeholder {
   width: 100%;
 }
 .assessment__form__checkbox label {
-  background-color: transparent;
-  width: 519px;
-  min-height: 74px;
-  border-radius: 16px;
+  background-color: #fdfdf1;
+  width: 570px;
+  min-height: 64px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #ed3131;
+  justify-content: start;
+  color: #2d2d2d;
   font-weight: 400;
-  padding: 16px 24px;
-  padding-right: 65px;
+  padding: 10px 30px;
+  padding-right: 60px;
   text-align: center;
-  border: 1px solid #ed3131;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 .assessment__form__checkbox input {
   position: absolute;
@@ -9149,10 +9151,9 @@ textarea.form-control::placeholder {
 }
 .assessment__form__checkbox input:checked ~ label {
   color: #ed3131;
-  border: 1px solid #ed3131;
 }
 .assessment__form__checkbox input:checked ~ label:after {
-  content: "\e90a";
+  content: "\e910";
   position: absolute;
   right: 17px;
   top: 46%;
@@ -13806,7 +13807,7 @@ body.header-open {
   width: 200px;
 }
 .assessment__form {
-  margin-top: 80px;
+  margin-top: 40px;
   gap: 20px;
 }
 .assessment__form-container {
