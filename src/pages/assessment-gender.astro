@@ -1,15 +1,16 @@
 ---
-import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<div class="assessment__page-wrapper page-full">
+<Layout bodyClass="alt-bg">
+	<Header class="site__header--border" />
+	<main class="assessment__page-wrapper page-full">
 		<div class="container">
 			<div class="assessment">
 				<!--Assesment Header Start -->
-				<AssesmentHeader />
+				<!-- <AssesmentHeader /> -->
 				<!--Assesment Header End -->
 
 				<!-- Assessment question sub title start -->
@@ -82,5 +83,5 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 		<!-- <AssesmentFooter /> -->
-	</div>
+	</main>
 </Layout>

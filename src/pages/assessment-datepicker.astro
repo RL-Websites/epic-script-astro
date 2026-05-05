@@ -1,42 +1,27 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
-import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<div class="assessment__page-wrapper">
+<Layout bodyClass="alt-bg">
+	<Header class="site__header--border" />
+
+	<main class="assessment__page-wrapper">
 		<div class="container">
 			<div class="assessment">
 				<!--Assesment Header Start -->
-				<AssesmentHeader />
+				<!-- <AssesmentHeader /> -->
 				<!--Assesment Header End -->
 
 				<!-- Assessment question sub title start -->
-				<div class="assessment__label mt-50">
+				<div class="assessment__label">
 					How much decline in your work performance have you noticed?
 				</div>
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
-				<!-- <div class="assessment__form assessment__form-container mt-30">
-					<div class="input-group date" id="datetimepicker3">
-						<input type="text" class="form-control" />
-						<span class="date-viewer">
-							<span id="month">MM</span>
-							<span id="date">DD</span>
-							<span id="year">YYYY</span>
-						</span>
-					</div>
-				</div> -->
-				<!-- Assessment form end -->
-
-				<!-- Assessment form start -->
-				<div
-					class="assessment__form mt-20"
-					style="position: relative; z-index: 9;"
-				>
+				<div class="assessment__form" style="position: relative; z-index: 9;">
 					<div class="dropdown__selection dropdown__selection__date">
 						<div class="select__wrapper">
 							<select class="select__options">
@@ -99,8 +84,5 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment buttons  -->
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<AssesmentFooter />
-	</div>
+	</main>
 </Layout>
