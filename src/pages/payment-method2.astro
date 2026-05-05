@@ -388,73 +388,90 @@ import Layout from '../layouts/Layout.astro';
 								<form>
 									<div class="payment__wrapper">
 										<div class="payment__input">
-											<label class="basic-label" for="shippingName"
-												>Name <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="text"
-												name="shippingName"
-												id="shippingName"
-												placeholder=""
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="shippingName"
+													>Name <span class="icon-ellipse"></span></label
+												>
+												<input
+													class="basic-input"
+													type="text"
+													name="shippingName"
+													id="shippingName"
+													placeholder=" "
+												/>
+											</div>
 											<p class="basic-error">Shipping name is required</p>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingState"
-												>State <span class="icon-ellipse"></span></label
-											>
-											<StateAutocomplete
-												id="shippingState"
-												name="shippingState"
-												className="select__options select__options--padding fs-16 text-secondary"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="shippingState"
+													>State <span class="icon-ellipse"></span></label
+												>
+												<StateAutocomplete
+													id="shippingState"
+													name="shippingState"
+													className="select__options select__options--padding fs-16 text-secondary"
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingAddress"
-												>Address <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="email"
-												name="shippingAddress"
-												id="shippingAddress"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="shippingAddress"
+													>Address <span class="icon-ellipse"></span></label
+												>
+												<input
+													class="basic-input"
+													type="text"
+													name="shippingAddress"
+													id="shippingAddress"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 
 										<div class="payment__input">
-											<label class="basic-label" for="shippingAddress"
-												>City <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="email"
-												name="shippingAddress"
-												id="shippingAddress"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="shippingCity"
+													>City <span class="icon-ellipse"></span></label
+												>
+												<input
+													class="basic-input"
+													type="text"
+													name="shippingCity"
+													id="shippingCity"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingZipCode"
-												>Zip Code <span class="icon-ellipse"></span></label
-											>
-											<input
-												inputmode="numeric"
-												class="basic-input"
-												type="text"
-												name="shippingZipCode"
-												id="shippingZipCode"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="shippingZipCode"
+													>Zip Code <span class="icon-ellipse"></span></label
+												>
+												<input
+													inputmode="numeric"
+													class="basic-input"
+													type="text"
+													name="shippingZipCode"
+													id="shippingZipCode"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="shippingEmail"
-												>Email Address <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="email"
-												name="shippingEmail"
-												id="shippingEmail"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="shippingEmail"
+													>Email Address <span class="icon-ellipse"
+													></span></label
+												>
+												<input
+													class="basic-input"
+													type="email"
+													name="shippingEmail"
+													id="shippingEmail"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 									</div>
 								</form>
@@ -501,71 +518,89 @@ import Layout from '../layouts/Layout.astro';
 								<form>
 									<div class="payment__wrapper">
 										<div class="payment__input">
-											<label class="basic-label" for="shippingName"
-												>Name <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="text"
-												name="shippingName"
-												id="shippingName"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="billingName"
+													>Name <span class="icon-ellipse"></span></label
+												>
+												<input
+													class="basic-input"
+													type="text"
+													name="billingName"
+													id="billingName"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="billingState"
-												>State <span class="icon-ellipse"></span></label
-											>
-											<StateAutocomplete
-												id="billingState"
-												name="billingState"
-												className="select__options select__options--padding fs-16 text-secondary"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="billingState"
+													>State <span class="icon-ellipse"></span></label
+												>
+												<StateAutocomplete
+													id="billingState"
+													name="billingState"
+													className="select__options select__options--padding fs-16 text-secondary"
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="billingAddress"
-												>Address <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="email"
-												name="billingAddress"
-												id="billingAddress"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="billingAddress"
+													>Address <span class="icon-ellipse"></span></label
+												>
+												<input
+													class="basic-input"
+													type="text"
+													name="billingAddress"
+													id="billingAddress"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 
 										<div class="payment__input">
-											<label class="basic-label" for="billingCity"
-												>City <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="email"
-												name="billingCity"
-												id="billingCity"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="billingCity"
+													>City <span class="icon-ellipse"></span></label
+												>
+												<input
+													class="basic-input"
+													type="text"
+													name="billingCity"
+													id="billingCity"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="billingZipCode"
-												>Zip Code <span class="icon-ellipse"></span></label
-											>
-											<input
-												inputmode="numeric"
-												class="basic-input"
-												type="text"
-												name="billingZipCode"
-												id="billingZipCode"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="billingZipCode"
+													>Zip Code <span class="icon-ellipse"></span></label
+												>
+												<input
+													inputmode="numeric"
+													class="basic-input"
+													type="text"
+													name="billingZipCode"
+													id="billingZipCode"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 										<div class="payment__input">
-											<label class="basic-label" for="billingEmail"
-												>Email Address <span class="icon-ellipse"></span></label
-											>
-											<input
-												class="basic-input"
-												type="email"
-												name="billingEmail"
-												id="billingEmail"
-											/>
+											<div class="basic-wrapper">
+												<label class="basic-label" for="billingEmail"
+													>Email Address <span class="icon-ellipse"
+													></span></label
+												>
+												<input
+													class="basic-input"
+													type="email"
+													name="billingEmail"
+													id="billingEmail"
+													placeholder=" "
+												/>
+											</div>
 										</div>
 									</div>
 								</form>
