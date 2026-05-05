@@ -6654,6 +6654,9 @@ body {
   color: #2d2d2d;
   margin: 0px;
 }
+body.alt-bg {
+  background-color: #ffffff;
+}
 
 ul {
   list-style: none;
@@ -6722,17 +6725,18 @@ ul li a:hover, ul li a:focus {
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  background: transparent;
+  background: #f3f3f3;
   outline: 0;
   font-size: 16px;
   font-weight: 700;
   padding: 20px 15px;
-  border-radius: 12px;
+  border-radius: 30px;
   position: relative;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+  border: none;
 }
 .select__options-country {
   padding: 15px 15px;
@@ -8493,13 +8497,13 @@ textarea.form-control::placeholder {
 }
 
 .basic-input {
-  background-color: transparent;
+  background-color: #f3f3f3;
   width: 100%;
   height: 60px;
   padding: 15px 20px;
-  border: 1px solid #ed3131;
-  border-radius: 10px;
+  border-radius: 30px;
   outline: 0;
+  border: none;
   box-shadow: none;
   font-size: 16px;
 }
@@ -13101,6 +13105,9 @@ body.header-open {
   padding: 20px 24px;
   padding-bottom: 90px;
 }
+.pricing__basic--alt {
+  padding-bottom: 20px;
+}
 .pricing__item {
   display: flex;
   align-items: center;
@@ -14495,9 +14502,6 @@ body.header-open {
   font-weight: bold;
 }
 
-.basic-input {
-  border: 1px solid #aeaeae !important;
-}
 .basic-input:-webkit-autofill, .basic-input:-webkit-autofill:hover, .basic-input:-webkit-autofill:focus, .basic-input:-webkit-autofill:active {
   -webkit-text-fill-color: black !important;
   /* THE REAL FIX */
@@ -14523,10 +14527,6 @@ body.header-open {
   caret-color: black !important;
   appearance: none !important;
   background-color: #ffffff !important;
-}
-
-.select__options {
-  border: 1px solid #aeaeae !important;
 }
 
 .conatiner-padding {
@@ -15397,7 +15397,6 @@ body.header-open {
 }
 .my-order__bg {
   padding: 50px 80px;
-  background: #ffffff;
   border-radius: 10px;
   margin: 12px 0;
 }

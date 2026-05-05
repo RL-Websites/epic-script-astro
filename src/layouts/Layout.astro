@@ -1,3 +1,11 @@
+---
+interface Props {
+	bodyClass?: string;
+}
+
+const { bodyClass } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -44,7 +52,7 @@
 			href="Themes/Thrivewellrx.Theme.EpiqScript/assets/css/style.css"
 		/>
 	</head>
-	<body>
+	<body class={bodyClass}>
 		<slot />
 		<!-- =====|| All JS Integration Start Here ||===== -->
 

@@ -1,33 +1,37 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import StateAutocomplete from "../components/StateAutocomplete.astro";
-import Toast from "../components/Toast.astro";
-import Layout from "../layouts/Layout.astro";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import StateAutocomplete from '../components/StateAutocomplete.astro';
+import Toast from '../components/Toast.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
+<Layout bodyClass="alt-bg">
 	<Header />
 
-	<!-- =====|| Main Section Start ||====== -->
+	<!-- Main Section Start -->
 	<main class="page">
 		<div class="page__wrapper page__wrapper--alt">
-			<!-- ==|| Cart Hero Section Start ||== -->
+			<!-- Cart Hero Section Start -->
 			<section class="cart-hero pt-md-130 pt-120">
 				<div class="container" data-aos="fade-up" data-aos-duration="500">
-					<h1 class="text-primary-grad-1 text-center">Payment Method</h1>
+					<div class="cart-hero__title-back">
+						<i class="icon-back"></i>
+						<h1 class="cart-hero__title text-center text-primary-grad-1"
+							>Payment Method</h1
+						>
+					</div>
 				</div>
 			</section>
-			<!-- ==|| Cart Hero Section End ||== -->
+			<!-- Cart Hero Section End -->
 
-			<!-- ==|| Payment List Section Start ||== -->
-			<section class="payment__card">
+			<!-- Payment List Section Start -->
+			<!-- <section class="payment__card">
 				<div class="container">
 					<div
 						class="m-0 cart-card payment__card--cart-summary"
 						data-aos="fade-up"
-						data-aos-duration="500"
-					>
+						data-aos-duration="500">
 						<div class="container">
 							<div class="row mb-3">
 								<div class="payment-table-header">
@@ -172,11 +176,9 @@ import Layout from "../layouts/Layout.astro";
 							<div class="payment-card__body">
 								<div
 									class="payment__form payment__form--body payment__form--card pt-0"
-									id="payment-form"
-								>
+									id="payment-form">
 									<div
-										class="payment__form--inline-fields payment__form--inline-fields--alt mt-20"
-									>
+										class="payment__form--inline-fields payment__form--inline-fields--alt mt-20">
 										<div class="form-group">
 											<div class="d-flex items-start">
 												<label class="fw-bold mb-5 basic-label" for="cardNumber"
@@ -264,8 +266,7 @@ import Layout from "../layouts/Layout.astro";
 											<select
 												class="select__options select__options-country text-secondary fw-normal"
 												name="country"
-												id="country"
-											>
+												id="country">
 												<option value="">Select a country</option>
 												<option value="Afghanistan">Bangladesh</option>
 												<option value="Albania">India</option>
@@ -278,8 +279,7 @@ import Layout from "../layouts/Layout.astro";
 										<div class="form-group">
 											<label
 												class="fw-bold mb-5 basic-label table-my"
-												for="zipCode"
-											>
+												for="zipCode">
 												ZIP Code<span class="icon-ellipse"></span>
 											</label>
 											<input
@@ -306,8 +306,8 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- ==|| Payment List Section End ||== -->
+			</section> -->
+			<!-- Payment List Section End -->
 
 			<section class="mt-40">
 				<div class="container">
@@ -320,7 +320,7 @@ import Layout from "../layouts/Layout.astro";
 									</h3>
 								</div>
 								<div class="cart-card__body">
-									<div class="pricing__basic">
+									<div class="pricing__basic pricing__basic--alt">
 										<div class="pricing__item">
 											<p class="pricing__item--name">Subtotal</p>
 											<p class="pricing__item--value">$150.50</p>
@@ -333,6 +333,17 @@ import Layout from "../layouts/Layout.astro";
                                                 <p class="pricing__item--name">Consultancy Fee</p>
                                                 <p class="pricing__item--value">$30.50</p>
                                             </div> -->
+									</div>
+
+									<div class="coupon pricing__coupon">
+										<p class="coupon__label">Coupon Code</p>
+										<div class="theme-tag">
+											<i class="icon-promo-code theme-tag__icon"></i>
+											<span class="theme-tag__text">VRIC2024</span>
+											<button class="theme-tag__btn">
+												<i class="icon-cross"></i>
+											</button>
+										</div>
 									</div>
 
 									<div class="pricing__total">
@@ -353,7 +364,7 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</section>
 
-			<!-- ==|| Shipping info Section Start ||== -->
+			<!-- Shipping info Section Start -->
 			<section class="mt-40" data-aos="fade-up" data-aos-duration="1000">
 				<div class="container">
 					<div class="payment__card mt-0">
@@ -452,14 +463,13 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 			</section>
-			<!-- ==|| Shipping info Section End ||== -->
+			<!-- Shipping info Section End -->
 
-			<!-- ==|| Billing Section Start ||== -->
+			<!-- Billing Section Start -->
 			<section
 				class="payment__billing mt-50 mt-md-100"
 				data-aos="fade-up"
-				data-aos-duration="1000"
-			>
+				data-aos-duration="1000">
 				<div class="container">
 					<div class="payment__card mt-0">
 						<div class="payment__header">
@@ -612,24 +622,21 @@ import Layout from "../layouts/Layout.astro";
 						</label>
 						<p
 							class="basic-error"
-							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions"
-						>
+							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions">
 						</p>
 					</div>
 
 					<div class="step-btn text-end mt-40">
 						<button
 							type="button"
-							class="theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer theme-btn__min-w-210"
-						>
+							class="theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer theme-btn__min-w-210">
 							Go Back
 						</button>
 						<button
 							type="button"
 							class="theme-btn theme-btn__primary theme-btn__min-w-210 theme-btn__primary--signin theme-btn--with-loader"
 							data-bs-toggle="modal"
-							data-bs-target="#payment"
-						>
+							data-bs-target="#payment">
 							Next
 
 							<span class="theme-btn__loader spin"></span>
@@ -637,19 +644,18 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 			</section>
-			<!-- ==|| Billing Section End ||== -->
+			<!-- Billing Section End -->
 		</div>
 	</main>
-	<!-- =====|| Main Section End ||====== -->
+	<!-- == Main Section End==== -->
 
-	<!-- =====|| Payment Successful Modal Start ||====== -->
+	<!-- == Payment Successful Modal Start==== -->
 	<div
 		id="payment"
 		class="modal fade payment-modal confirm-modal"
 		tabindex="-1"
 		aria-labelledby="payment"
-		aria-hidden="true"
-	>
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!-- <button type="button" class="btn-close" data-dismiss="modal">
@@ -667,8 +673,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<p
-						class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10"
-					>
+						class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10">
 						Thank you for your payment. Your order is now being processed. If
 						necessary, a prescriber will contact you to discuss the next steps
 						in your treatment.
@@ -685,8 +690,7 @@ import Layout from "../layouts/Layout.astro";
 							class="modal__action modal__action--outline"
 							type="button"
 							data-bs-dismiss="modal"
-							aria-label="Close"
-						>
+							aria-label="Close">
 							I Will Do It Later
 						</button>
 						<button class="modal__action modal__action--primary" type="button">
@@ -697,19 +701,18 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</div>
-	<!-- =====|| Payment Successful Modal End ||====== -->
+	<!-- == Payment Successful Modal End==== -->
 
-	<!-- =====|| Toast Start ||====== -->
+	<!-- == Toast Start==== -->
 	<Toast />
-	<!-- =====|| Toast Start ||====== -->
+	<!-- == Toast Start==== -->
 
 	<!-- Terms & Condition Modal Start -->
 	<div
 		id="termCodition"
 		class="modal fade terms-condition-modal"
 		tabindex="-1"
-		role="dialog"
-	>
+		role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!-- <button type="button" class="btn-close-filled" data-dismiss="modal">
@@ -1179,21 +1182,18 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<div
-						class="modal__actions modal__action__justify modal__actions__equal"
-					>
+						class="modal__actions modal__action__justify modal__actions__equal">
 						<button
 							class="modal__action modal__action--outline"
 							type="button"
-							data-bs-dismiss="modal"
-						>
+							data-bs-dismiss="modal">
 							Cancel
 						</button>
 						<button
 							class="modal__action modal__action--primary"
 							type="button"
 							style="width: unset;"
-							id="agreeTerms"
-						>
+							id="agreeTerms">
 							I agree to the terms & conditions.
 						</button>
 					</div>

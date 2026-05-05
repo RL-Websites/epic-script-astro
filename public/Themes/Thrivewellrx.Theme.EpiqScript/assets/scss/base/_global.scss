@@ -19,6 +19,9 @@ body {
 	color: $secondary;
 	margin: 0px;
 	// background: url('../img/bg/body-watermark.png') top center/1920px auto repeat;
+	&.alt-bg {
+		background-color: $white;
+	}
 }
 
 ul {
@@ -106,17 +109,18 @@ ul {
 		justify-content: space-between;
 		align-items: center;
 		text-align: left;
-		background: transparent;
+		background: $gray-light;
 		outline: 0;
 		font-size: 16px;
 		font-weight: 700;
 		padding: 20px 15px;
-		border-radius: 12px;
+		border-radius: 30px;
 		position: relative;
 		appearance: none;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		cursor: pointer;
+		border: none;
 
 		&-country {
 			padding: 15px 15px;

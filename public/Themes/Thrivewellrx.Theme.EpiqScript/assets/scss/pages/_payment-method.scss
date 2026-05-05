@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use '../base/variables' as *;
 
 .payment {
 	padding: 100px 0;
@@ -237,10 +237,7 @@
 					color: $light; // change this to your color
 					opacity: 1; // required for Firefox
 				}
-
 			}
-
-
 		}
 
 		&--inline-fields {
@@ -351,8 +348,6 @@
 }
 
 .basic-input {
-	border: 1px solid #aeaeae !important;
-
 	&:-webkit-autofill,
 	&:-webkit-autofill:hover,
 	&:-webkit-autofill:focus,
@@ -388,26 +383,19 @@
 	}
 }
 
-.select__options {
-	border: 1px solid #aeaeae !important;
-}
-
 .conatiner-padding {
-    padding: 0px 15px;
+	padding: 0px 15px;
 
 	@media screen and (max-width: 768px) {
 		padding: 0px;
 	}
 }
 
-
 .card-input {
 	border: none !important;
 }
 
-
 .payment-table {
-
 	&-header {
 		display: flex;
 		font-size: 22px;
@@ -421,7 +409,6 @@
 			margin-top: 20px;
 		}
 	}
-
 
 	&-body {
 		padding: 24px;
@@ -441,7 +428,6 @@
 		}
 	}
 }
-
 
 // Medium Device media Query
 @media all and (max-width: 992px) {
@@ -573,13 +559,10 @@
 				height: 50px;
 				padding: 10px;
 
-
 				&::placeholder {
 					color: $light; // change this to your color
 					opacity: 1; // required for Firefox
 				}
-
-
 			}
 		}
 	}
