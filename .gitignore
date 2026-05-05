@@ -23,7 +23,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-/public/Themes/Thrivewellrx.Theme.EpiqScript/assets/css/style.css
-/public/Themes/Thrivewellrx.Theme.EpiqScript/assets/css/style.css.map
+/public/Themes/Thrivewellrx.Theme.EpiqScripts/assets/css/style.css
+/public/Themes/Thrivewellrx.Theme.EpiqScripts/assets/css/style.css.map
 .vscode
 .vscode/*

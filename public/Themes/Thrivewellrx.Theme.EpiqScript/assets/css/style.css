@@ -9106,7 +9106,7 @@ textarea.form-control::placeholder {
   width: 100%;
 }
 .assessment__form__checkbox label {
-  background-color: #FDFDF1;
+  background-color: #F3F3F3;
   width: 570px;
   min-height: 64px;
   border-radius: 50px;
@@ -9121,6 +9121,21 @@ textarea.form-control::placeholder {
   cursor: pointer;
   transition: all 0.3s;
 }
+.assessment__form__checkbox label:after {
+  content: "\e912";
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "icomoon";
+  font-size: 30px;
+  display: inline-flex;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  color: #00533f;
+  transition: all 0.3s;
+}
 .assessment__form__checkbox input {
   position: absolute;
   right: 17px;
@@ -9129,20 +9144,20 @@ textarea.form-control::placeholder {
   display: none;
 }
 .assessment__form__checkbox input:checked ~ label {
-  color: #ed3131;
+  color: #2d2d2d;
 }
 .assessment__form__checkbox input:checked ~ label:after {
   content: "\e910";
   position: absolute;
   right: 17px;
-  top: 46%;
+  top: 50%;
   transform: translateY(-50%);
   font-family: "icomoon";
-  font-size: 40px;
+  font-size: 30px;
   display: inline-flex;
-  height: 40px;
-  width: 40px;
-  line-height: 42px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
   color: #00533f;
   transition: all 0.3s;
 }
@@ -10158,7 +10173,7 @@ textarea.form-control::placeholder {
 }
 .how-works {
   position: relative;
-  background-image: url("/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/bg/how-it-works-top-bg.png"), url("/Themes/Thrivewellrx.Theme.EpiqScript/assets/img/bg/how-it-works-bottom-bg.png");
+  background-image: url("/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/bg/how-it-works-top-bg.png"), url("/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/bg/how-it-works-bottom-bg.png");
   background-repeat: no-repeat, no-repeat;
   background-position: top center, bottom center;
   background-size: 1920px auto, 1920px auto;
