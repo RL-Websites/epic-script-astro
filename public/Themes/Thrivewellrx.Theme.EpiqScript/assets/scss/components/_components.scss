@@ -403,6 +403,30 @@
 		color: $primary-deep;
 	}
 
+	&--received {
+		color: $white;
+		background: $blue-4;
+		border-radius: 10px;
+	}
+
+	&--paid {
+		color: $white;
+		background: $cyan1;
+		border-radius: 10px;
+	}
+
+	&--processing {
+		color: $white;
+		border-radius: 10px;
+		background: $olive;
+	}
+
+	&--shipped {
+		color: $black-deep;
+		border-radius: 10px;
+		background: $green-deep;
+	}
+
 	&--success {
 		background-color: $green-lighter;
 		color: $primary-deep;
@@ -419,8 +443,9 @@
 	}
 
 	&--danger {
-		background-color: $red;
 		color: $white;
+		border-radius: 10px;
+		background: $red-lighter;
 	}
 
 	&--state {
