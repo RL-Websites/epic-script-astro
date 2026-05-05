@@ -1,43 +1,46 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
-import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<div class="assessment__page-wrapper">
+<Layout bodyClass="alt-bg">
+	<Header class="site__header--border" />
+
+	<main class="assessment__page-wrapper">
 		<div class="container">
 			<div class="assessment">
 				<!--Assesment Header Start -->
-				<AssesmentHeader />
+				<!-- <AssesmentHeader /> -->
 				<!--Assesment Header End -->
 
 				<!-- Assessment question title start -->
-				<div class="assessment__question mt-40">
+				<!-- <div class="assessment__question mt-40">
 					State that you are eligible to work, not for marketing purposes.
-				</div>
+				</div> -->
 				<!-- Assessment question title end -->
 
 				<!-- Assessment question sub title start -->
-				<label
-					class="assessment__label text-center d-block mt-50"
-					for="textareaOne"
-				>
+				<label class="assessment__label text-center d-block" for="textareaOne">
 					How much decline in your work performance have you noticed?
 				</label>
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
 				<div class="assessment__form mt-30">
-					<div class="textarea__wrapper">
-						<textarea
-							class="form-control"
-							rows="5"
-							placeholder="Write down here"
-							name="textareaOne"
-							id="textareaOne"></textarea>
-						<span class="textarea__word-count">0/300</span>
+					<div class="basic-wrapper">
+						<label for="textareaOne" class="basic-label basic-label__alt"
+							>Write down here</label
+						>
+						<div class="textarea__wrapper">
+							<textarea
+								class="form-control"
+								rows="5"
+								placeholder=""
+								name="textareaOne"
+								id="textareaOne"></textarea>
+							<span class="textarea__word-count">0/300</span>
+						</div>
 					</div>
 				</div>
 				<!-- Assessment form end -->
@@ -49,6 +52,6 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 
 		<!--Footer Section end-->
-		<AssesmentFooter />
-	</div>
+		<!-- <AssesmentFooter /> -->
+	</main>
 </Layout>

@@ -120,6 +120,12 @@
 			transition: all 0.3s ease;
 			pointer-events: none;
 
+			&__alt {
+				top: 10px;
+				left: 15px;
+				transform: translateY(0);
+			}
+
 			.icon-ellipse {
 				background: $red;
 				background-clip: text;
@@ -132,6 +138,7 @@
 				padding: 0 2px 0 0;
 			}
 		}
+
 	}
 }
 

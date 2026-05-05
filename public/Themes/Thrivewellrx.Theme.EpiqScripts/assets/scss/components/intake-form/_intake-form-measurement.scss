@@ -3,8 +3,6 @@
 .assessment {
 	&__form {
 		.measurement {
-			width: 519px;
-
 			&.measurement__flex {
 				display: flex;
 				gap: 20px;
@@ -12,15 +10,22 @@
 			}
 
 			.measurement-input {
-				padding: 0 40px;
-				max-width: 100%;
+				position: relative;
 				display: flex;
 				align-items: center;
+				justify-content: start;
 				opacity: 1;
 				color: $secondary;
-				border: 1px solid $red;
-				border-radius: 16px;
-				position: relative;
+				background-color: #f3f3f3;
+				width: 570px;
+				height: 64px;
+				border-radius: 50px;
+				font-weight: 500;
+				padding: 10px 25px;
+				padding-right: 60px;
+				text-align: center;
+				cursor: pointer;
+				transition: all 0.3s;
 
 				input {
 					padding: 0;
@@ -32,7 +37,7 @@
 					color: $secondary;
 
 					&::placeholder {
-						color: $gray;
+						color: $gray-dark;
 					}
 				}
 
@@ -42,7 +47,7 @@
 					height: 100%;
 					display: flex;
 					align-items: center;
-					color: $secondary;
+					color: $gray-dark;
 					opacity: 1;
 					// border-left: 1px solid $grey-10;
 					padding: 8px 30px 8px 20px;

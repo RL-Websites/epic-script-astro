@@ -21,15 +21,11 @@
 		}
 
 		.textarea__wrapper {
-			width: 519px;
+			width: 570px;
 
 			textarea.form-control {
-				background-color: transparent;
-				border: 1px solid $red;
-				border-radius: 16px;
-				display: block;
-				font-size: $fs-18;
-				color: $secondary;
+				background-color: $gray-light;
+				border-radius: 20px;
 			}
 		}
 	}
