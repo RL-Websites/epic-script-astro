@@ -22,7 +22,7 @@
 				justify-content: start;
 				color: $secondary;
 				font-weight: 500;
-				padding: 10px 30px;
+				padding: 10px 25px;
 				padding-right: 60px;
 				text-align: center;
 				cursor: pointer;
@@ -31,7 +31,7 @@
 				&:after {
 					content: "\e912";
 					position: absolute;
-					right: 17px;
+					right: 25px;
 					top: 50%;
 					transform: translateY(-50%);
 					// content: "\e915";
@@ -61,7 +61,7 @@
 					&:after {
 						content: "\e910";
 						position: absolute;
-						right: 17px;
+						right: 25px;
 						top: 50%;
 						transform: translateY(-50%);
 						font-family: "icomoon";

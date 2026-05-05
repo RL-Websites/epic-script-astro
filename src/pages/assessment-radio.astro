@@ -1,5 +1,4 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
 import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
 import Layout from "../layouts/Layout.astro";
@@ -38,8 +37,8 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
-				<div class="assessment__form mt-20">
-					<div class="assessment__form_radio mb-5">
+				<div class="assessment__form">
+					<div class="assessment__form_radio">
 						<input
 							type="radio"
 							name="answerRadio"
@@ -50,13 +49,13 @@ import Layout from "../layouts/Layout.astro";
 						<label for="answerRadio1"> Yes </label>
 					</div>
 
-					<div class="assessment__condition-tag mt-20">
+					<div class="assessment__condition-tag">
 						<p class="assessment__condition-text">
 							If yes, another question will appear as it's a conditional answer.
 						</p>
 					</div>
 
-					<div class="assessment__form_radio mt-20 mb-0">
+					<div class="assessment__form_radio">
 						<input
 							type="radio"
 							name="answerRadio"
@@ -75,6 +74,6 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 
 		<!--Footer Section end-->
-		<AssesmentFooter />
+		<!-- <AssesmentFooter /> -->
 	</div>
 </Layout>
