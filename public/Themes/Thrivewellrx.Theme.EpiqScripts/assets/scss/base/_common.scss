@@ -69,48 +69,51 @@
 .nav {
 	&-pills {
 		&__custom {
+			gap: 16px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			width: 100%;
-			margin-top: 50px;
 			justify-content: space-around;
 			position: relative;
-			padding-bottom: 10px;
 
-			&::after {
-				position: absolute;
-				content: '';
-				background-color: $primary-light;
-				height: 3px;
-				width: 100%;
-				bottom: 0;
-				border-radius: 2px;
-			}
+			// &::after {
+			// 	position: absolute;
+			// 	content: '';
+			// 	background-color: $primary-light;
+			// 	height: 3px;
+			// 	width: 100%;
+			// 	bottom: 0;
+			// 	border-radius: 2px;
+			// }
 
 			.nav-link {
 				text-align: center;
-				font-weight: 700;
+				font-weight: 600;
 				position: relative;
-				color: rgba(45, 45, 45, 0.5);
 				padding: 0;
 				width: 100%;
+				height: 44px;
+				color: $gray-medium4;
+				background: transparent;
+				border: 1px solid $gray-medium4;
+				border-radius: 30px;
 			}
 
 			.nav-link.active {
-				background-color: transparent;
-				color: $black;
+				background: $primary;
+				color: $white;
 
-				&::after {
-					position: absolute;
-					z-index: 1;
-					content: '';
-					background-color: $primary;
-					height: 5px;
-					width: 100%;
-					bottom: -11px;
-					left: 0;
-					border-radius: 2.5px;
-				}
+				// &::after {
+				// 	position: absolute;
+				// 	z-index: 1;
+				// 	content: '';
+				// 	background-color: $primary;
+				// 	height: 5px;
+				// 	width: 100%;
+				// 	bottom: -11px;
+				// 	left: 0;
+				// 	border-radius: 2.5px;
+				// }
 			}
 		}
 	}
@@ -124,14 +127,15 @@
 		padding-bottom: 20px;
 
 		&__single {
-			padding: 8px 15px;
+			padding: 16px 15px;
 			min-width: 130px;
-			border: 2px solid $primary-light;
 			text-align: center;
 			display: flex;
 			flex-direction: column;
 			gap: 5px;
+			color: $primary;
 			border-radius: 12px;
+			background: $white;
 		}
 	}
 }

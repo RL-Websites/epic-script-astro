@@ -16,7 +16,9 @@ import Layout from '../layouts/Layout.astro';
 			<section class="cart-hero pt-md-130 pt-120">
 				<div class="container" data-aos="fade-up" data-aos-duration="500">
 					<div class="cart-hero__title-back">
-						<i class="icon-back"></i>
+						<a href="">
+							<i class="icon-back"></i>
+						</a>
 						<h1 class="cart-hero__title text-center text-primary-grad-1"
 							>Payment Method</h1
 						>
@@ -361,6 +363,32 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 						</div>
 					</div>
+					<!-- product info box -->
+					<div class="product-info-box mt-40">
+						<div class="product-info-box__section">
+							<h3 class="product-info-box__title"
+								>GLP-1, Peptides, TRT/HRT, and Other Prescription Treatments</h3
+							>
+							<p class="product-info-box__description">
+								Your card will not be charged at checkout. We securely store
+								your payment information and only process the charge once a
+								doctor reviews your intake form and issues your prescription. If
+								you are not approved, you will not be charged.
+							</p>
+						</div>
+
+						<div class="product-info-box__section">
+							<h3 class="product-info-box__title"
+								>DotFit, Skin Care & Pain Relief Products (Non-Prescription)</h3
+							>
+							<p class="product-info-box__description">
+								These items do not require a doctor review or intake form. Your
+								card will be charged immediately at checkout, and your order
+								will proceed directly to fulfillment.
+							</p>
+						</div>
+					</div>
+					<!-- product info box -->
 				</div>
 			</section>
 
@@ -636,6 +664,37 @@ import Layout from '../layouts/Layout.astro';
 						></p>
 					</div> -->
 
+					<div class="info-box my-40">
+						<p class="info-box__text">
+							This product is not dispensed without intake review and provider
+							clearance.
+						</p>
+					</div>
+
+					<div>
+						<label class="custom-check mt-15">
+							<span class="custom-check__input">
+								<!--<input type="checkbox" data-bind="checked: agreedToTermsAndConditions" />-->
+								<input
+									type="checkbox"
+									data-bs-toggle="modal"
+									data-bs-target="#termCodition"
+									checked
+								/>
+								<span></span>
+							</span>
+
+							<span class="custom-check__label">
+								I confirm that I have answered truthfully and understand that
+								these medications should be used under the guidance of a
+								licensed healthcare provider.
+							</span>
+						</label>
+						<p
+							class="basic-error"
+							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions">
+						</p>
+					</div>
 					<div>
 						<label class="custom-check mt-15">
 							<span class="custom-check__input">

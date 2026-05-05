@@ -132,7 +132,7 @@
 	&__outline {
 		font-size: $fs-16;
 		background-color: transparent;
-		border-radius: 25px;
+		border-radius: 30px;
 
 		&:hover,
 		&:focus {
@@ -141,8 +141,8 @@
 		}
 
 		&--primary {
-			border: 1px solid $gray-medium4;
-			color: $gray-medium4;
+			border: 1px solid $primary;
+			color: $primary;
 
 			&:hover,
 			&:focus {
@@ -219,7 +219,7 @@
 		border-radius: 100px;
 
 		&__dark {
-			background: rgba(0, 0, 0, 0.10);
+			background: rgba(0, 0, 0, 0.1);
 		}
 	}
 
@@ -313,7 +313,7 @@
 		left: 0px;
 		z-index: 1;
 		background-color: #ffffff;
-		border-top: 1px solid #8BA39D;
+		border-top: 1px solid #8ba39d;
 
 		&__items {
 			display: flex;
@@ -321,7 +321,6 @@
 			justify-content: space-between;
 			width: 100%;
 			gap: 5px;
-
 
 			button {
 				width: auto;

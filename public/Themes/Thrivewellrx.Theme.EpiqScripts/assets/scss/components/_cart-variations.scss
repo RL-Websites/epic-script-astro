@@ -69,11 +69,10 @@
 		&--md {
 			&.input-group {
 				.form-control {
-					height: 47px;
-					margin-top: 9.5px !important;
+					height: 55px;
 				}
 				.input-group-btn {
-					height: 47px;
+					height: 55px;
 					width: 74px;
 				}
 			}
@@ -130,7 +129,7 @@
 		.theme-btn {
 			flex-grow: 1;
 			flex-basis: 0;
-			height: 47px;
+			height: 60px;
 		}
 	}
 }
