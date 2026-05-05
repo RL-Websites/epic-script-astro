@@ -80,12 +80,15 @@
 	}
 
 	&__label {
+		max-width: 900px;
+		margin: 0 auto;
 		font-size: $fs-44;
 		font-weight: 700;
 		line-height: 1.2;
 		color: $secondary;
 		text-align: center;
 		text-transform: capitalize;
+		margin-top: 40px;
 	}
 }
 
