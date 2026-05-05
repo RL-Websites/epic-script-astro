@@ -349,15 +349,15 @@ small,
 }
 
 .bg-light {
-  background-color: #EFEFF1 !important;
+  background-color: #efeff1 !important;
 }
 
 .text-light {
-  color: #EFEFF1 !important;
+  color: #efeff1 !important;
 }
 
 .border-light {
-  border-color: #EFEFF1 !important;
+  border-color: #efeff1 !important;
 }
 
 .bg-gray-dark {
@@ -505,15 +505,15 @@ small,
 }
 
 .bg-yellow {
-  background-color: #B6FF6B !important;
+  background-color: #b6ff6b !important;
 }
 
 .text-yellow {
-  color: #B6FF6B !important;
+  color: #b6ff6b !important;
 }
 
 .border-yellow {
-  border-color: #B6FF6B !important;
+  border-color: #b6ff6b !important;
 }
 
 .bg-green {
@@ -685,15 +685,15 @@ small,
 }
 
 .bg-cyan {
-  background-color: #00533F !important;
+  background-color: #00533f !important;
 }
 
 .text-cyan {
-  color: #00533F !important;
+  color: #00533f !important;
 }
 
 .border-cyan {
-  border-color: #00533F !important;
+  border-color: #00533f !important;
 }
 
 .fs-10 {
@@ -6689,7 +6689,7 @@ ul li a:hover, ul li a:focus {
 }
 .dropdown-menu li a {
   background-color: transparent;
-  color: #EFEFF1;
+  color: #efeff1;
 }
 .dropdown-menu li a:hover {
   background-color: transparent;
@@ -6881,7 +6881,7 @@ html {
 }
 .form-control:focus {
   box-shadow: none;
-  border-color: #EFEFF1;
+  border-color: #efeff1;
 }
 
 textarea.form-control {
@@ -6928,7 +6928,7 @@ textarea.form-control::placeholder {
   height: 30px;
   padding: 6px;
   line-height: 30px;
-  color: #EFEFF1;
+  color: #efeff1;
   font-weight: 500;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu .datepicker thead tr:first-child th:hover {
@@ -7048,7 +7048,7 @@ textarea.form-control::placeholder {
   padding-bottom: 5px;
 }
 .datepicker .datepicker-header .datepicker-controls .btn {
-  color: #EFEFF1;
+  color: #efeff1;
 }
 .datepicker .datepicker-header .datepicker-controls .btn:hover {
   background-color: #00533f;
@@ -7197,7 +7197,7 @@ textarea.form-control::placeholder {
   padding: 0;
 }
 .ebook__download__img {
-  background: #B6FF6B;
+  background: #b6ff6b;
   padding: 7px;
   border-radius: 16px 0 0 16px;
 }
@@ -7288,7 +7288,7 @@ textarea.form-control::placeholder {
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #C6C6C6;
+  background-color: #c6c6c6;
 }
 
 @media only screen and (max-width: 992px) {
@@ -7420,7 +7420,7 @@ textarea.form-control::placeholder {
   border-radius: 8px;
 }
 .theme-btn__light {
-  background-color: #EFEFF1;
+  background-color: #efeff1;
   font-size: 18px;
   color: #2d2d2d;
   border-radius: 50px;
@@ -7836,7 +7836,7 @@ textarea.form-control::placeholder {
   justify-content: center;
   gap: 10px;
   height: 32px;
-  background-color: #EFEFF1;
+  background-color: #efeff1;
   color: #2d2d2d;
   border-radius: 10px;
   min-width: 150px;
@@ -7928,7 +7928,7 @@ textarea.form-control::placeholder {
 }
 .dropdown__selection ul li a:hover {
   border-radius: 12px;
-  color: #B6FF6B;
+  color: #b6ff6b;
 }
 .dropdown__selection__alt {
   display: flex;
@@ -8118,8 +8118,28 @@ textarea.form-control::placeholder {
   text-transform: uppercase;
 }
 .status-pill--default {
-  background-color: #C6C6C6;
+  background-color: #c6c6c6;
   color: #141a33;
+}
+.status-pill--received {
+  color: #ffffff;
+  background: #0079ad;
+  border-radius: 10px;
+}
+.status-pill--paid {
+  color: #ffffff;
+  background: #00ad85;
+  border-radius: 10px;
+}
+.status-pill--processing {
+  color: #ffffff;
+  border-radius: 10px;
+  background: #b9bc00;
+}
+.status-pill--shipped {
+  color: #212121;
+  border-radius: 10px;
+  background: #e0ffbf;
 }
 .status-pill--success {
   background-color: #fffcdb;
@@ -8134,8 +8154,9 @@ textarea.form-control::placeholder {
   color: #141a33;
 }
 .status-pill--danger {
-  background-color: #ed3131;
   color: #ffffff;
+  border-radius: 10px;
+  background: #ff644e;
 }
 .status-pill--state {
   background-color: #ffe9e9;
@@ -8451,7 +8472,7 @@ textarea.form-control::placeholder {
   height: 60px;
   padding: 10px 24px;
   font-size: 18px;
-  color: #EFEFF1;
+  color: #efeff1;
   border: 1px solid #aeaeae;
   border-radius: 10px;
   outline: 0;
@@ -8460,7 +8481,7 @@ textarea.form-control::placeholder {
 }
 .single-input__field::placeholder {
   font-size: 18px;
-  color: #EFEFF1;
+  color: #efeff1;
 }
 .single-input__field--message {
   height: auto;
@@ -8468,7 +8489,7 @@ textarea.form-control::placeholder {
 }
 .single-input__field--message::placeholder {
   font-size: 18px;
-  color: #EFEFF1;
+  color: #efeff1;
 }
 
 .basic-input {
@@ -8483,7 +8504,7 @@ textarea.form-control::placeholder {
   font-size: 16px;
 }
 .basic-input::placeholder {
-  color: #EFEFF1;
+  color: #efeff1;
 }
 
 .basic-label {
@@ -8636,13 +8657,13 @@ textarea.form-control::placeholder {
   box-shadow: none;
   border: 0;
   outline: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.1' stroke='%235607C5' stroke-width='1.8'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.1' stroke='%2300533f' stroke-width='1.8'/%3E%3C/svg%3E%0A");
 }
 .form-check-input:checked[type=radio] {
   box-shadow: none;
   border: 0;
   outline: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.7' fill='%235607C5' stroke='%235607C5' stroke-width='0.6'/%3E%3Cpath d='M16.8031 8.39844L10.2031 14.9984L7.20312 11.9984' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.7' fill='%2300533f' stroke='%2300533f' stroke-width='0.6'/%3E%3Cpath d='M16.8031 8.39844L10.2031 14.9984L7.20312 11.9984' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 .form-check-input:focus {
   box-shadow: none;
@@ -8679,14 +8700,14 @@ textarea.form-control::placeholder {
     width: 100%;
     height: 50px;
     font-size: 14px;
-    color: #EFEFF1;
-    border: 1px solid #EFEFF1;
+    color: #efeff1;
+    border: 1px solid #efeff1;
     border-radius: 8px;
     outline: 0;
     box-shadow: none;
   }
   .single-input__field:placeholder {
-    color: #EFEFF1;
+    color: #efeff1;
   }
   .single-input__field--message {
     height: auto;
@@ -8860,7 +8881,7 @@ textarea.form-control::placeholder {
 }
 .assessment__group-label {
   padding: 20px;
-  border: 1px solid #B6FF6B;
+  border: 1px solid #b6ff6b;
   border-radius: 20px;
 }
 .assessment__group-title {
@@ -8950,7 +8971,7 @@ textarea.form-control::placeholder {
   width: 100%;
 }
 .assessment__form_radio label {
-  background-color: #FDFDF1;
+  background-color: #fdfdf1;
   width: 570px;
   min-height: 64px;
   border-radius: 50px;
@@ -9106,7 +9127,11 @@ textarea.form-control::placeholder {
   width: 100%;
 }
 .assessment__form__checkbox label {
+<<<<<<< HEAD
   background-color: #F3F3F3;
+=======
+  background-color: #fdfdf1;
+>>>>>>> f4159df1ef188f07a84c49ec36cb0a55f47e726d
   width: 570px;
   min-height: 64px;
   border-radius: 50px;
@@ -9231,7 +9256,7 @@ textarea.form-control::placeholder {
 .assessment__progress-bar .assessment__progress {
   height: 6px;
   border-radius: 100px;
-  background-color: #FDFDF1;
+  background-color: #fdfdf1;
   overflow: hidden;
 }
 .assessment__progress-bar .assessment__progress .progress-bar {
@@ -9316,7 +9341,7 @@ textarea.form-control::placeholder {
   background-color: transparent;
   width: 100%;
   height: 47px;
-  border: 1px solid #EFEFF1;
+  border: 1px solid #efeff1;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -9485,7 +9510,7 @@ textarea.form-control::placeholder {
 }
 .dropdown--assessment ul {
   border-radius: 10px;
-  border-color: #EFEFF1;
+  border-color: #efeff1;
   padding: 0px;
 }
 .dropdown--assessment ul.dropdown-menu {
@@ -9518,7 +9543,7 @@ textarea.form-control::placeholder {
   background-color: transparent !important;
 }
 .dropdown--assessment.open > .dropdown-toggle.btn-default {
-  background-color: #EFEFF1;
+  background-color: #efeff1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -9822,8 +9847,8 @@ textarea.form-control::placeholder {
 }
 
 .card-basic {
-  border: 1px solid #e6d4ff;
-  border-radius: 10px;
+  border: 1px solid #c7c7c7;
+  border-radius: 16px;
   overflow: hidden;
   background: transparent;
 }
@@ -9853,7 +9878,7 @@ textarea.form-control::placeholder {
   box-shadow: none;
 }
 .card-basic__table {
-  border-color: #DADADA !important;
+  border-color: #dadada !important;
 }
 .card-basic__table-mobile {
   display: none;
@@ -10366,7 +10391,7 @@ textarea.form-control::placeholder {
 .list-table .table {
   margin-bottom: 0;
   vertical-align: baseline;
-  background-color: #fbf9ff;
+  background-color: #f3f3f3;
 }
 .list-table .table thead {
   vertical-align: baseline;
@@ -10377,7 +10402,7 @@ textarea.form-control::placeholder {
   border-bottom: 0 !important;
   font-weight: 600;
   vertical-align: baseline;
-  background-color: #fbf9ff;
+  background-color: #f3f3f3;
 }
 .list-table .table tbody {
   vertical-align: top;
@@ -10389,7 +10414,7 @@ textarea.form-control::placeholder {
   font-size: 16px;
   line-height: 1.4;
   border-top: 1px solid #f3f3f3;
-  background-color: #fbf9ff;
+  background-color: #f3f3f3;
 }
 .list-table .table tbody tr {
   border-bottom: 1px solid #f3f3f3;
@@ -10444,6 +10469,11 @@ textarea.form-control::placeholder {
 .list-table__time {
   width: 140px;
 }
+.list-table__Id {
+  font-weight: 700;
+  color: #00533f !important;
+  text-decoration: underline;
+}
 
 .custom-table {
   display: flex;
@@ -10462,7 +10492,7 @@ textarea.form-control::placeholder {
 .custom-table__header {
   font-size: 14px;
   font-weight: 700;
-  border-bottom: 1px solid #E6D4FF;
+  border-bottom: 1px solid #e6d4ff;
   padding-top: 16px;
   padding-right: 15px;
   text-wrap: nowrap;
@@ -10479,7 +10509,7 @@ textarea.form-control::placeholder {
   padding-bottom: 12px !important;
 }
 .custom-table__header p.custom-table__header__text {
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 @media all and (max-width: 768px) {
   .custom-table__header p.custom-table__header__text {
@@ -10555,7 +10585,7 @@ textarea.form-control::placeholder {
   }
   .order-table {
     border: 1px solid #e6d4ff;
-    border-radius: 10px;
+    border-radius: 16px;
     margin-bottom: 20px;
   }
   .order-table__row {
@@ -10587,7 +10617,7 @@ textarea.form-control::placeholder {
   }
 }
 .border-bottom-mobile {
-  border-bottom: 1px solid #E6D4FF;
+  border-bottom: 1px solid #e6d4ff;
 }
 
 /*-------- default css from microsoft -------*/
@@ -11789,7 +11819,7 @@ body.header-open {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
-  color: #EFEFF1;
+  color: #efeff1;
 }
 .modal__highlight-text {
   margin-top: 30px;
@@ -12714,8 +12744,19 @@ body.header-open {
 .car-common-bg {
   border-radius: 10px;
   background: #ffffff;
+  padding: 0 80px;
 }
 
+.cart-hero__title-back {
+  position: relative;
+}
+.cart-hero__title-back i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
 .cart-hero__title {
   font-size: 44px !important;
   line-height: 1.5;
@@ -13077,6 +13118,7 @@ body.header-open {
 .pricing__basic {
   border-bottom: 1px dashed #c7c7c7;
   padding: 20px 24px;
+  padding-bottom: 90px;
 }
 .pricing__item {
   display: flex;
@@ -13339,12 +13381,13 @@ body.header-open {
   border-radius: 12px;
   overflow: hidden;
   background: #ffffff;
+  padding: 0 80px;
 }
 .recurring-plan__header {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  padding: 24px 30px;
+  padding: 24px 0;
   cursor: pointer;
   user-select: none;
 }
@@ -13380,7 +13423,7 @@ body.header-open {
   transition: transform 0.3s ease;
 }
 .recurring-plan__content {
-  padding: 0 30px 30px 30px;
+  padding-bottom: 30px;
 }
 @media (max-width: 767px) {
   .recurring-plan__content {
@@ -13389,7 +13432,7 @@ body.header-open {
 }
 
 .recurring-card {
-  background: linear-gradient(145deg, #114232 0%, #3e8e75 100%);
+  background: linear-gradient(160deg, #114232 0%, #3e8e75 100%);
   border-radius: 20px;
   padding: 36px 22px 22px 38px;
   height: 100%;
@@ -13447,11 +13490,11 @@ body.header-open {
   }
 }
 .recurring-card__name {
-  color: #fff;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 4px;
-  line-height: 1.3;
+  line-height: 1.6;
 }
 .recurring-card__price {
   color: #fff;
@@ -13462,8 +13505,7 @@ body.header-open {
 }
 .recurring-card__actions {
   display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+  gap: 16px;
   margin-top: auto;
 }
 @media (max-width: 575px) {
@@ -13505,7 +13547,10 @@ body.header-open {
   background: #ffffff;
   border-radius: 10px;
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 40px 0 20px;
+}
+.cart-warning__bg-inner {
+  padding-inline: 80px;
 }
 .cart-warning__content {
   background-color: #ecf7e1;
@@ -13537,6 +13582,7 @@ body.header-open {
 .cart-warning__actions {
   padding-top: 20px;
   border-top: 1px solid #8ba39d;
+  padding-inline: 80px;
 }
 
 .category-hero__wrapper {
@@ -13924,7 +13970,7 @@ body.header-open {
 }
 .assessment__recommended-products .product.active .product__card {
   background-color: rgba(255, 224, 187, 0.3);
-  border: 3px solid #B6FF6B;
+  border: 3px solid #b6ff6b;
 }
 .assessment__recommended-products .product.active .product__img img {
   max-height: 225px;
@@ -13976,7 +14022,7 @@ body.header-open {
 .time-picker__viewer span {
   font-size: 25px;
   font-weight: 400;
-  color: #EFEFF1;
+  color: #efeff1;
   display: flex;
   align-items: center;
 }
@@ -14348,7 +14394,7 @@ body.header-open {
   border: 0.5px solid #aeaeae;
 }
 .payment__form--card .basic-input::placeholder {
-  color: #EFEFF1;
+  color: #efeff1;
   opacity: 1;
 }
 .payment__form--card .card-icons {
@@ -14376,7 +14422,7 @@ body.header-open {
   cursor: texts;
 }
 .payment__form--card-variation .basic-input::placeholder {
-  color: #EFEFF1;
+  color: #efeff1;
   opacity: 1;
 }
 .payment__form--inline-fields {
@@ -14640,7 +14686,7 @@ body.header-open {
     padding: 10px;
   }
   .payment__form--card-variation::placeholder {
-    color: #EFEFF1;
+    color: #efeff1;
     opacity: 1;
   }
   .condition__highlight p {
@@ -15054,7 +15100,7 @@ body.header-open {
   width: 100%;
   height: 320px;
   padding: 0;
-  color: #EFEFF1;
+  color: #efeff1;
   border-radius: 20px;
   border: 2px dashed #ed3131;
   cursor: pointer;
@@ -15242,7 +15288,7 @@ body.header-open {
     height: 320px;
     padding: 0;
     background-color: rgba(239, 239, 241, 0.1);
-    color: #EFEFF1;
+    color: #efeff1;
     border-radius: 20px;
     border: 1px dashed #00533f;
     cursor: pointer;
@@ -15368,14 +15414,17 @@ body.header-open {
     padding: 15px 15px 0 15px;
   }
 }
-.my-order {
-  padding: 120px 0 100px;
+.my-order__bg {
+  padding: 50px 80px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 12px 0;
 }
 .my-order .order-list.table thead th {
-  padding: 10px 12px !important;
+  padding: 30px 12px !important;
   font-size: 18px;
   font-weight: 600;
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 .my-order .order-list.table thead th:first-child {
   padding-left: 20px !important;
@@ -15421,7 +15470,7 @@ body.header-open {
   font-family: "Manrope", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #2D2D2D;
+  color: #2d2d2d;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -15456,7 +15505,7 @@ body.header-open {
 .order__step {
   width: 20px;
   height: 20px;
-  background-color: #E6D4FF;
+  background-color: #e6d4ff;
   border-radius: 50%;
   position: relative;
   z-index: 2;
@@ -15477,7 +15526,7 @@ body.header-open {
   white-space: nowrap;
 }
 .order__step-label.active {
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 .order__step-label--bottom {
   top: 30px;
@@ -15516,7 +15565,7 @@ body.header-open {
 }
 .medicine-info__label {
   min-width: 154px;
-  color: #2D2D2D;
+  color: #2d2d2d;
   font-weight: 700;
 }
 
@@ -15544,7 +15593,7 @@ body.header-open {
 }
 .document-info__label {
   min-width: 154px;
-  color: #2D2D2D;
+  color: #2d2d2d;
   font-weight: 700;
 }
 
