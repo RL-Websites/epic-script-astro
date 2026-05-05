@@ -13,7 +13,7 @@
 			}
 
 			label {
-				background-color: $gray-lighter4;
+				background-color: $gray-lighter5;
 				width: 570px;
 				min-height: 64px;
 				border-radius: 50px;
@@ -27,6 +27,23 @@
 				text-align: center;
 				cursor: pointer;
 				transition: all 0.3s;
+
+				&:after {
+					content: "\e912";
+					position: absolute;
+					right: 17px;
+					top: 50%;
+					transform: translateY(-50%);
+					// content: "\e915";
+					font-family: "icomoon";
+					font-size: 30px;
+					display: inline-flex;
+					height: 30px;
+					width: 30px;
+					line-height: 30px;
+					color: $primary;
+					transition: all 0.3s;
+				}
 			}
 
 			input {
@@ -37,23 +54,22 @@
 				display: none;
 
 
+
 				&:checked~label {
-					// background-color: $primary;
-					color: $red;
+					color: $secondary;
 
 					&:after {
 						content: "\e910";
 						position: absolute;
 						right: 17px;
-						top: 46%;
+						top: 50%;
 						transform: translateY(-50%);
-						// content: "\e915";
 						font-family: "icomoon";
-						font-size: 40px;
+						font-size: 30px;
 						display: inline-flex;
-						height: 40px;
-						width: 40px;
-						line-height: 42px;
+						height: 30px;
+						width: 30px;
+						line-height: 30px;
 						color: $primary;
 						transition: all 0.3s;
 					}
