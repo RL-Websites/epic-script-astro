@@ -12,6 +12,10 @@
 		background: #FFFFFF;
 		border-radius: 10px;
 
+		&--border {
+			border: 2px solid $gray-light;
+		}
+
 		@media all and (max-width: 992px) {
 			padding: 10px 8px;
 		}

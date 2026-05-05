@@ -1,37 +1,5 @@
 @use '../base/variables' as *;
 
-// .radio-pill {
-// 	&:last-of-type {
-// 		margin-bottom: 0;
-// 	}
-
-// 	&__label {
-// 		color: $secondary;
-// 		font-size: $fs-18;
-// 		line-height: 18;
-// 		font-weight: 400;
-// 		background-color: transparent;
-// 		border: 1px solid $secondary;
-// 		border-radius: 50px;
-// 		padding: 6px 10px;
-// 		margin-bottom: 0;
-// 		text-align: center;
-// 		cursor: pointer;
-// 		position: relative;
-// 		transition: all 0.3s ease;
-// 	}
-
-// 	&__input {
-// 		position: absolute;
-// 		appearance: none;
-// 	}
-
-// 	&__input:checked + &__label {
-// 		background-color: $secondary;
-// 		color: white;
-// 	}
-// }
-
 .radio-pill {
 	margin-bottom: 0;
 	position: relative;
@@ -65,7 +33,7 @@
 		display: none;
 	}
 
-	&__input:checked + &__label {
+	&__input:checked+&__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
@@ -84,7 +52,7 @@
 
 	&__field {
 		width: 100%;
-		height: 60px;
+		height: 64px;
 		padding: 10px 24px;
 		font-size: 18px;
 		color: $light;
@@ -120,6 +88,7 @@
 		visibility: hidden;
 		transform: translateY(-70%);
 	}
+
 	.basic {
 		&-input {
 			width: 100%;
@@ -334,8 +303,8 @@
 	}
 }
 
-.form-check-input.is-valid ~ .form-check-label,
-.was-validated .form-check-input:valid ~ .form-check-label {
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
 	color: $black;
 }
 
