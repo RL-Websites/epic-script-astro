@@ -198,10 +198,10 @@
 
 		&--card {
 			.basic-input {
-				border: 0.5px solid #aeaeae;
+				// border: 0.5px solid #aeaeae;
 
 				&::placeholder {
-					color: $light; // change this to your color
+					color: $gray-dark; // change this to your color
 					opacity: 1; // required for Firefox
 				}
 			}
@@ -224,7 +224,8 @@
 			padding: 20px;
 			height: 60px;
 			border-radius: 10px;
-			border: 1px solid #aeaeae;
+			border: 0;
+			background: $white;
 
 			.basic-input {
 				border: 0;
@@ -234,7 +235,7 @@
 				cursor: texts;
 
 				&::placeholder {
-					color: $light; // change this to your color
+					color: $gray-dark; // change this to your color
 					opacity: 1; // required for Firefox
 				}
 			}
@@ -348,7 +349,6 @@
 }
 
 .basic-input {
-
 	&:-webkit-autofill,
 	&:-webkit-autofill:hover,
 	&:-webkit-autofill:focus,
@@ -364,8 +364,6 @@
 		background-color: #ffffff !important;
 	}
 }
-
-
 
 .conatiner-padding {
 	padding: 0px 15px;

@@ -1,9 +1,9 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Toast from "../components/Toast.astro";
-import Layout from "../layouts/Layout.astro";
-import StateAutocomplete from "../components/StateAutocomplete.astro";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Toast from '../components/Toast.astro';
+import Layout from '../layouts/Layout.astro';
+import StateAutocomplete from '../components/StateAutocomplete.astro';
 ---
 
 <Layout>
@@ -13,7 +13,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 	<main class="page">
 		<div class="page__wrapper page__wrapper--alt">
 			<!-- ==|| Cart Hero Section Start ||== -->
-			<section class="cart-hero pt-md-130 pt-120">
+			<section class="cart-hero pt-50">
 				<div class="container" data-aos="fade-up" data-aos-duration="1000">
 					<h1 class="text-primary-grad-1 text-center"> Payment Method </h1>
 				</div>
@@ -28,15 +28,13 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 							<div
 								class="payment-card__body cart-card payment__card--cart-summary"
 								data-aos="fade-up"
-								data-aos-duration="1000"
-							>
+								data-aos-duration="1000">
 								<div class="cart-card__header">
 									<h3>Payment Details</h3>
 								</div>
 								<div
 									class="payment__form payment__form--body payment__form--card"
-									id="payment-form"
-								>
+									id="payment-form">
 									<div class="form-group">
 										<div class="d-flex items-start">
 											<label class="fw-bold mb-5 basic-label" for="cardNumber"
@@ -126,8 +124,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 										<select
 											class="select__options text-secondary fw-normal"
 											name="country"
-											id="country"
-										>
+											id="country">
 											<option value="">Select a country</option>
 											<option value="Afghanistan">Bangladesh</option>
 											<option value="Albania">India</option>
@@ -144,8 +141,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 								class="cart-card"
 								data-aos="fade-left"
 								data-aos-duration="1000"
-								data-aos-delay="200"
-							>
+								data-aos-delay="200">
 								<div class="cart-card__header">
 									<h3 class="fs-md-24 fs-20 fw-bold">
 										Cart Total <span class="fs-16 fw-normal">(4 items)</span>
@@ -357,8 +353,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 			<section
 				class="payment__billing mt-50 mt-md-100"
 				data-aos="fade-up"
-				data-aos-duration="1000"
-			>
+				data-aos-duration="1000">
 				<div class="container">
 					<div class="payment__card mt-0">
 						<div class="payment__header">
@@ -511,24 +506,21 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 						</label>
 						<p
 							class="basic-error"
-							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions"
-						>
+							data-bind="visible: isSubmitted, validationMessage: agreedToTermsAndConditions">
 						</p>
 					</div>
 
 					<div class="step-btn text-end mt-40">
 						<button
 							type="button"
-							class="theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer theme-btn__min-w-210"
-						>
+							class="theme-btn theme-btn__outline theme-btn__outline--primary cursor-pointer theme-btn__min-w-210">
 							Go Back
 						</button>
 						<button
 							type="button"
 							class="theme-btn theme-btn__primary theme-btn__min-w-210 theme-btn__primary--signin theme-btn--with-loader"
 							data-bs-toggle="modal"
-							data-bs-target="#payment"
-						>
+							data-bs-target="#payment">
 							Next
 
 							<span class="theme-btn__loader spin"></span>
@@ -547,8 +539,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 		class="modal fade payment-modal confirm-modal"
 		tabindex="-1"
 		aria-labelledby="payment"
-		aria-hidden="true"
-	>
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!-- <button type="button" class="btn-close" data-dismiss="modal">
@@ -566,8 +557,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 					</div>
 
 					<p
-						class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10"
-					>
+						class="text-blue-6 text-center mb-20 fs-md-18 fs-16 mt-md-30 mt-10">
 						Thank you for your payment. Your order is now being processed. If
 						necessary, a prescriber will contact you to discuss the next steps
 						in your treatment.
@@ -584,8 +574,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 							class="modal__action modal__action--outline"
 							type="button"
 							data-bs-dismiss="modal"
-							aria-label="Close"
-						>
+							aria-label="Close">
 							I Will Do It Later
 						</button>
 						<button class="modal__action modal__action--primary" type="button">
@@ -607,8 +596,7 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 		id="termCodition"
 		class="modal fade terms-condition-modal"
 		tabindex="-1"
-		role="dialog"
-	>
+		role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<!-- <button type="button" class="btn-close-filled" data-dismiss="modal">
@@ -1084,21 +1072,18 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 					</div>
 
 					<div
-						class="modal__actions modal__action__justify modal__actions__equal"
-					>
+						class="modal__actions modal__action__justify modal__actions__equal">
 						<button
 							class="modal__action modal__action--outline"
 							type="button"
-							data-bs-dismiss="modal"
-						>
+							data-bs-dismiss="modal">
 							Cancel
 						</button>
 						<button
 							class="modal__action modal__action--primary"
 							type="button"
 							style="width: unset;"
-							id="agreeTerms"
-						>
+							id="agreeTerms">
 							I agree to the terms & conditions.
 						</button>
 					</div>
@@ -1113,8 +1098,8 @@ import StateAutocomplete from "../components/StateAutocomplete.astro";
 
 <script>
 	$(document).ready(function () {
-		$("#agreeTerms").on("click", function () {
-			window.location.href = "/thank-you";
+		$('#agreeTerms').on('click', function () {
+			window.location.href = '/thank-you';
 		});
 	});
 </script>
