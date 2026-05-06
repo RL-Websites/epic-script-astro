@@ -11,19 +11,14 @@ import Layout from "../layouts/Layout.astro";
 	<main class="page">
 		<!-- ==|| Login Section Start ||== -->
 		<section class="login">
-			<div class="container-fluid p-0">
-				<div class="row g-0">
-					<!-- Form Column -->
+			<div class="container-fluid">
+				<div class="row">
+					<!--  Column -->
 					<div
-						class="col-lg-6 d-flex align-items-center justify-content-center min-vh-100 py-5"
+						class="col-lg-6 d-flex align-items-center justify-content-center"
 					>
-						<div class="login__form-content w-100">
-							<div
-								class="login__header"
-								data-aos="fade-up"
-								data-aos-duration="1000"
-								data-aos-once="true"
-							>
+						<div class="login__content">
+							<div class="login__header">
 								<div
 									class="col-12"
 									data-aos="fade-down"
@@ -45,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 							</div>
 
-							<form>
+							<form class="login__form">
 								<div
 									data-aos="fade-up"
 									data-aos-duration="1000"
@@ -59,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
 										<input
 											type="email"
 											class="basic-input login__input"
-											placeholder="Registered email address"
+											placeholder=""
 											id="email"
 											required
 										/>
@@ -81,7 +76,7 @@ import Layout from "../layouts/Layout.astro";
 											<input
 												type="password"
 												class="basic-input login__input"
-												placeholder="Your account password"
+												placeholder=""
 												id="password"
 												required
 											/>
@@ -95,7 +90,7 @@ import Layout from "../layouts/Layout.astro";
 
 								<div class="d-flex justify-content-between align-items-center">
 									<div
-										class="d-flex gap-2 p-2 mt-24"
+										class="d-flex gap-2 align-items-center"
 										data-aos="fade-up"
 										data-aos-duration="1000"
 										data-aos-delay="500"
@@ -107,14 +102,23 @@ import Layout from "../layouts/Layout.astro";
 											id="remember"
 											checked
 										/>
-										<label class="basic-label mb-24" for="remember">
+										<label class="basic-label" for="remember">
 											Remember me
 										</label>
 									</div>
-									<p class="first-time-text"> Forgot your password? </p>
+									<a
+										href="#"
+										class="first-time-text mb-0"
+										data-aos="fade-up"
+										data-aos-duration="1000"
+										data-aos-delay="500"
+										data-aos-once="true"
+									>
+										Forgot your password?
+									</a>
 								</div>
 
-								<div
+								<!-- <div
 									data-aos="flip-left"
 									data-aos-duration="1000"
 									data-aos-delay="600"
@@ -123,7 +127,7 @@ import Layout from "../layouts/Layout.astro";
 								>
 									<button
 										type="submit"
-										class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-30"
+										class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg"
 									>
 										Login
 									</button>
@@ -133,29 +137,30 @@ import Layout from "../layouts/Layout.astro";
 									>
 										Begin Your Journey
 									</button>
-								</div>
+								</div> -->
 
 								<div
-									class="text-center mt-3"
-									data-aos="fade-up"
-									data-aos-duration="1000"
-									data-aos-delay="700"
-									data-aos-once="true"
+									class="floating__buttons__items floating__buttons__items__alt"
 								>
-									<!-- <p class="first-time-text mb-60">
-										Don’t have an account yet? <button
-											type="button"
-											class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
-											>Create an account</button
-										>
-									</p> -->
+									<button
+										class="theme-btn theme-btn__outline theme-btn__outline--primary"
+										data-bind="click:goToHome"
+									>
+										Begin your journey
+									</button>
+									<button
+										class="theme-btn theme-btn__primary text-center"
+										data-bind="click:loadPartialShippingView"
+									>
+										Login
+									</button>
 								</div>
 							</form>
 						</div>
 					</div>
 
 					<!-- Image Column -->
-					<div class="col-lg-6 d-none d-md-block p-3">
+					<div class="col-lg-6 d-none d-lg-block p-3">
 						<div class="login__image w-100">
 							<img
 								src="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/bg/login-bg.jpg"
