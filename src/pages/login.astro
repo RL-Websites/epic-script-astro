@@ -1,7 +1,7 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
@@ -19,15 +19,13 @@ import Layout from "../layouts/Layout.astro";
 							class="login__header text-center mb-30"
 							data-aos="fade-up"
 							data-aos-duration="1000"
-							data-aos-once="true"
-						>
+							data-aos-once="true">
 							<div
 								class="col-12 text-center"
 								data-aos="fade-down"
 								data-aos-duration="1000"
 								data-aos-delay="100"
-								data-aos-once="true"
-							>
+								data-aos-once="true">
 								<h1 class="text-primary-grad-1 mb-0">Account Login</h1>
 							</div>
 
@@ -37,8 +35,7 @@ import Layout from "../layouts/Layout.astro";
 								data-aos="fade-down"
 								data-aos-duration="1000"
 								data-aos-delay="200"
-								data-aos-once="true"
-							>
+								data-aos-once="true">
 								<h2 class="text-primary-grad-1" style="line-height: 160%;"
 									>Securely access your VPeptides account</h2
 								>
@@ -54,40 +51,42 @@ import Layout from "../layouts/Layout.astro";
 									data-aos="fade-up"
 									data-aos-duration="1000"
 									data-aos-delay="300"
-									data-aos-once="true"
-								>
-									<label for="email" class="basic-label">
-										Email Address <span class="icon-ellipse"> </span></label
-									>
-									<input
-										type="email"
-										class="basic-input login__input"
-										placeholder="Registered email address"
-										id="email"
-										required
-									/>
+									data-aos-once="true">
+									<div class="basic-wrapper">
+										<label for="email" class="basic-label">
+											Email Address <span class="icon-ellipse"> </span></label
+										>
+										<input
+											type="email"
+											class="basic-input login__input"
+											placeholder="Registered email address"
+											id="email"
+											required
+										/>
+									</div>
 									<p class="basic-error">Email Address is required</p>
 									<div
 										data-aos="fade-up"
 										data-aos-duration="1000"
 										data-aos-delay="400"
-										data-aos-once="true"
-									>
-										<label for="password" class="basic-label mt-24">
-											Password<span class="icon-ellipse"> </span></label
-										>
-										<div class="login__password">
-											<input
-												type="password"
-												class="basic-input login__input"
-												placeholder="Your account password"
-												id="password"
-												required
-											/>
-											<button type="button" class="login__toggle-btn">
-												<i class="icon-StateOff"></i>
-												<!-- <i class="icon-password-encrypt"></i> -->
-											</button>
+										data-aos-once="true">
+										<div class="basic-wrapper">
+											<label for="password" class="basic-label">
+												Password<span class="icon-ellipse"> </span></label
+											>
+											<div class="login__password">
+												<input
+													type="password"
+													class="basic-input login__input"
+													placeholder="Your account password"
+													id="password"
+													required
+												/>
+												<button type="button" class="login__toggle-btn">
+													<i class="icon-state-on"></i>
+													<!-- <i class="icon-password-encrypt"></i> -->
+												</button>
+											</div>
 										</div>
 										<p class="basic-error">Password required</p>
 									</div>
@@ -98,8 +97,7 @@ import Layout from "../layouts/Layout.astro";
 										data-aos-duration="1000"
 										data-aos-delay="500"
 										data-aos-once="true"
-										data-aos-offset="-500"
-									>
+										data-aos-offset="-500">
 										<input
 											class="form-check-input"
 											type="checkbox"
@@ -116,12 +114,10 @@ import Layout from "../layouts/Layout.astro";
 										data-aos-duration="1000"
 										data-aos-delay="600"
 										data-aos-once="true"
-										data-aos-offset="-500"
-									>
+										data-aos-offset="-500">
 										<button
 											type="submit"
-											class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
-										>
+											class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4">
 											Sign In
 										</button></div
 									>
@@ -132,8 +128,7 @@ import Layout from "../layouts/Layout.astro";
 										data-aos-duration="1000"
 										data-aos-delay="700"
 										data-aos-once="true"
-										data-aos-offset="-500"
-									>
+										data-aos-offset="-500">
 										<p class="first-time-text mb-20">
 											Forgot Password? <button
 												class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
