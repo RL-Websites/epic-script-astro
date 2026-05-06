@@ -33,7 +33,7 @@
 		display: none;
 	}
 
-	&__input:checked + &__label {
+	&__input:checked+&__label {
 		background-color: $blue-1;
 		color: $blue-2;
 		font-weight: 400;
@@ -94,12 +94,13 @@
 			width: 100%;
 			height: 60px;
 			padding: 15px 20px;
-			border-radius: 30px;
+			border-radius: 10px;
 			outline: 0;
 			border: none;
 			box-shadow: none;
 			font-size: 16px;
 			background-color: $gray-light;
+			border: 1px solid $gray-dark;
 
 			&::placeholder {
 				color: $light;
@@ -111,6 +112,7 @@
 			font-weight: 500;
 			color: $gray-light-3;
 			margin-bottom: 0;
+			padding-bottom: 0;
 			display: block;
 			position: absolute;
 			top: 50%;
@@ -146,12 +148,13 @@
 		width: 100%;
 		height: 60px;
 		padding: 15px 20px;
-		border-radius: 30px;
+		border-radius: 10px;
 		outline: 0;
 		border: none;
 		box-shadow: none;
 		font-size: 16px;
 		background-color: $white;
+		border: 1px solid $gray-dark;
 
 		&::placeholder {
 			color: $gray-dark;
@@ -348,8 +351,8 @@
 	}
 }
 
-.form-check-input.is-valid ~ .form-check-label,
-.was-validated .form-check-input:valid ~ .form-check-label {
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
 	color: $black;
 }
 

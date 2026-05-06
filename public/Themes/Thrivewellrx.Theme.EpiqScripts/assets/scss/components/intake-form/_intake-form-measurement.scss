@@ -19,13 +19,14 @@
 				background-color: #f3f3f3;
 				width: 570px;
 				height: 64px;
-				border-radius: 50px;
+				border-radius: 10px;
 				font-weight: 500;
 				padding: 10px 25px;
 				padding-right: 60px;
 				text-align: center;
 				cursor: pointer;
 				transition: all 0.3s;
+				border: 1px solid $gray-dark;
 
 				input {
 					padding: 0;

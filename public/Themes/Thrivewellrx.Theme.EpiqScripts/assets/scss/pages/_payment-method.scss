@@ -226,6 +226,7 @@
 			border-radius: 10px;
 			border: 0;
 			background: $white;
+			border: 1px solid $gray-dark;
 
 			.basic-input {
 				border: 0;
@@ -349,6 +350,7 @@
 }
 
 .basic-input {
+
 	&:-webkit-autofill,
 	&:-webkit-autofill:hover,
 	&:-webkit-autofill:focus,
@@ -373,9 +375,6 @@
 	}
 }
 
-.card-input {
-	border: none !important;
-}
 
 .payment-table {
 	&-header {

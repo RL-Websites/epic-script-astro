@@ -16,7 +16,7 @@
         background-color: $gray-light;
         width: 570px;
         min-height: 64px;
-        border-radius: 50px;
+        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: start;
@@ -27,6 +27,7 @@
         text-align: center;
         cursor: pointer;
         transition: all 0.3s;
+        border: 1px solid $gray-dark;
       }
 
       input {
