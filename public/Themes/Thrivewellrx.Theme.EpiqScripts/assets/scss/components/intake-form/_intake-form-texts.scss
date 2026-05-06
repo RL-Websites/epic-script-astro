@@ -1,4 +1,4 @@
-@use "../../base/variables" as *;
+@use '../../base/variables' as *;
 
 .assessment {
 	&__title {
@@ -83,13 +83,26 @@
 	&__label {
 		max-width: 900px;
 		margin: 0 auto;
-		font-size: $fs-28;
-		font-weight: 500;
-		line-height: 1.2;
-		color: $secondary;
-		text-align: center;
-		text-transform: capitalize;
 		margin-bottom: 30px;
+		position: relative;
+		&-link {
+			font-weight: 600;
+			font-size: $fs-18;
+			text-transform: uppercase;
+			text-decoration: underline !important;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+		h4 {
+			font-size: $fs-28;
+			font-weight: 500;
+			line-height: 1.2;
+			color: $secondary;
+			text-align: center;
+			text-transform: capitalize;
+		}
 	}
 }
 
@@ -102,7 +115,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
 	.assessment {
 		&__question {
 			font-size: 30px;
