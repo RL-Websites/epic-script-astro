@@ -322,12 +322,24 @@
 			width: 100%;
 			gap: 5px;
 
+			&__alt {
+				flex-direction: column-reverse;
+				align-items: stretch;
+				gap: 20px;
+				margin-top: 20px;
+
+
+			}
+
 			button {
 				width: auto;
 				padding-left: 60px;
 				padding-right: 60px;
 			}
+
 		}
+
+
 	}
 }
 
