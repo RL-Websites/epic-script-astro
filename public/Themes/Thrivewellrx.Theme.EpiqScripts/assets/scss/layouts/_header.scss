@@ -114,7 +114,7 @@
 			display: flex;
 			align-items: center;
 			gap: 32px;
-			margin: 0;
+			margin: 0 auto;
 			padding: 0;
 			list-style: none;
 
@@ -131,10 +131,10 @@
 					&::after {
 						content: "";
 						position: absolute;
-						bottom: -10px;
+						bottom: -3px;
 						left: 0;
 						width: 0;
-						height: 0px;
+						height: 1px;
 						background-color: $primary;
 						transition: width 0.3s ease;
 						border-radius: 2px;
@@ -147,11 +147,12 @@
 
 						&::after {
 							width: 100%;
-							height: 4px;
+
 						}
 					}
 
 					i {
+						font-size: $fs-14;
 						color: $gray-dark;
 
 						@media all and (max-width: 992px) {
@@ -313,6 +314,50 @@
 			right: -46px;
 		}
 	}
+}
+
+.user-menu-list {
+	&__alt {
+		background-color: $white;
+		padding: 15px;
+
+		li {
+			margin-bottom: 10px;
+
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				color: $black;
+				text-decoration: none;
+				font-size: 14px;
+				transition: color 0.3s ease;
+				display: block;
+				padding: 4px 0;
+
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: -3px;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: #00533f;
+					transition: width 0.3s ease;
+					border-radius: 2px;
+				}
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+
 }
 
 // Responsive styles

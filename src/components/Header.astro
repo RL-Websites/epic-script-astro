@@ -22,21 +22,30 @@ const { class: className = "" } = Astro.props;
 			<nav class="site__menu">
 				<ul class="site__menu__list">
 					<li>
-						<a href="/">
-							<span>Home</span>
+						<a
+							href="#"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<span>Treatments</span>
 							<i class="icon-plus"></i>
 						</a>
+						<ul class="dropdown-menu user-menu-list__alt">
+							<li><a href="#">Weight Loss</a></li>
+							<li><a href="#">Testestorne</a></li>
+							<li><a href="#">Sexual Health</a></li>
+						</ul>
 					</li>
+
 					<li>
 						<a id="browseProducts" style="cursor: pointer">
-							<span>Products</span>
-							<i class="icon-plus"></i>
+							<span>Labs</span>
 						</a>
 					</li>
 					<li>
-						<a href="/contact-us">
-							<span>Contact Us</span>
-							<i class="icon-plus"></i>
+						<a href="#">
+							<span>Supplements</span>
 						</a>
 					</li>
 
