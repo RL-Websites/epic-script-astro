@@ -320,6 +320,7 @@
 	&__alt {
 		background-color: $white;
 		padding: 15px;
+		top: 30px;
 
 		li {
 			margin-bottom: 10px;
@@ -343,15 +344,20 @@
 					position: absolute;
 					bottom: -3px;
 					left: 0;
-					width: 100%;
+					width: 0;
 					height: 1px;
-					background-color: #00533f;
-					transition: width 0.3s ease;
+					background-color: $primary;
+					transition: 0.3s ease;
 					border-radius: 2px;
 				}
 
 				&:hover {
 					color: $primary;
+
+					&::after {
+						width: 100%;
+						height: 1px;
+					}
 				}
 			}
 		}
