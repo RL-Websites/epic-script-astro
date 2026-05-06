@@ -1,24 +1,32 @@
 ---
-import CommonAction from "../components/CommonAction.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
+import CommonAction from '../components/CommonAction.astro';
+import Header from '../components/Header.astro';
+import Offcanvas from '../components/Offcanvas.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout bodyClass="alt-bg">
 	<Header class="site__header--border" />
 	<main class="assessment__page-wrapper page-full">
 		<div class="container">
+			<!-- Assessment question sub title start -->
+			<div
+				class="assessment__label animate__animated animate__fadeInUp adur-500ms adel-900ms">
+				<h4>What is your sex at birth?</h4>
+				<a
+					class="assessment__label-link"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasExample"
+					role="button"
+					aria-controls="offcanvasExample">
+					Review Progress
+				</a>
+			</div>
 			<div class="assessment">
 				<!--Assesment Header Start -->
 				<!-- <AssesmentHeader /> -->
 				<!--Assesment Header End -->
 
-				<!-- Assessment question sub title start -->
-				<div
-					class="assessment__label animate__animated animate__fadeInUp adur-500ms adel-900ms"
-				>
-					What is your sex at birth?
-				</div>
 				<!-- Assessment form start -->
 				<div class="assessment__form">
 					<div class="assessment__form_radio">
@@ -84,4 +92,52 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 		<!-- <AssesmentFooter /> -->
 	</main>
+
+	<Offcanvas id="offcanvasExample">
+		<ul class="assessment__progress-list">
+			<li
+				class="assessment__progress-item assessment__progress-item--completed">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text">1. Let’s Get Started!</span>
+			</li>
+			<li
+				class="assessment__progress-item assessment__progress-item--completed">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text"
+					>2. Are you experiencing any pain right now?</span
+				>
+			</li>
+			<li
+				class="assessment__progress-item assessment__progress-item--completed">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text"
+					>3. Have you noticed any changes in your health recently?</span
+				>
+			</li>
+			<li class="assessment__progress-item assessment__progress-item--active">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text"
+					>4. Do you have any allergies we should know about?</span
+				>
+			</li>
+			<li class="assessment__progress-item assessment__progress-item--upcoming">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text"
+					>5. When was your last medical check-up?</span
+				>
+			</li>
+			<li class="assessment__progress-item assessment__progress-item--upcoming">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text"
+					>6. Are you currently taking any medications?</span
+				>
+			</li>
+			<li class="assessment__progress-item assessment__progress-item--upcoming">
+				<span class="assessment__progress-icon"></span>
+				<span class="assessment__progress-text"
+					>7. Do you have a family history of any chronic illnesses?</span
+				>
+			</li>
+		</ul>
+	</Offcanvas>
 </Layout>

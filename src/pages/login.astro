@@ -1,79 +1,74 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
 	<Header />
 
 	<!-- =====|| Main Section Start ||====== -->
-
 	<main class="page">
 		<!-- ==|| Login Section Start ||== -->
-		<section class="login py-5">
-			<div class="container p-0">
-				<div class="row justify-content-center mt-120 mt-sm-150 mx-0">
-					<div class="col-11 col-sm-10 col-md-8 col-lg-8">
-						<div
-							class="login__header text-center mb-30"
-							data-aos="fade-up"
-							data-aos-duration="1000"
-							data-aos-once="true"
-						>
+		<section class="login">
+			<div class="container-fluid p-0">
+				<div class="row g-0">
+					<!-- Form Column -->
+					<div
+						class="col-lg-6 d-flex align-items-center justify-content-center min-vh-100 py-5">
+						<div class="login__form-content w-100">
 							<div
-								class="col-12 text-center"
-								data-aos="fade-down"
+								class="login__header"
+								data-aos="fade-up"
 								data-aos-duration="1000"
-								data-aos-delay="100"
-								data-aos-once="true"
-							>
-								<h1 class="text-primary-grad-1 mb-0">Account Login</h1>
-							</div>
-
-							<!-- Heading Row 2 -->
-							<div
-								class="col-12 text-center mb-5"
-								data-aos="fade-down"
-								data-aos-duration="1000"
-								data-aos-delay="200"
-								data-aos-once="true"
-							>
-								<h2 class="text-primary-grad-1" style="line-height: 160%;"
-									>Securely access your VPeptides account</h2
-								>
-							</div>
-						</div>
-					</div>
-
-					<form>
-						<div class="container p-0">
-							<div class="row justify-content-center mx-0">
+								data-aos-once="true">
 								<div
-									class="col-11 col-sm-10 col-md-8 col-lg-6"
+									class="col-12"
+									data-aos="fade-down"
+									data-aos-duration="1000"
+									data-aos-delay="100"
+									data-aos-once="true">
+									<h2>Returning customer</h2>
+								</div>
+
+								<div
+									class="col-12 mb-5"
+									data-aos="fade-down"
+									data-aos-duration="1000"
+									data-aos-delay="200"
+									data-aos-once="true">
+									<h3>Log in to continue your journey</h3>
+								</div>
+							</div>
+
+							<form>
+								<div
 									data-aos="fade-up"
 									data-aos-duration="1000"
 									data-aos-delay="300"
-									data-aos-once="true"
-								>
-									<label for="email" class="basic-label">
-										Email Address <span class="icon-ellipse"> </span></label
-									>
-									<input
-										type="email"
-										class="basic-input login__input"
-										placeholder="Registered email address"
-										id="email"
-										required
-									/>
+									data-aos-once="true">
+									<div class="basic-wrapper">
+										<label for="email" class="basic-label">
+											Email Address <span class="icon-ellipse"> </span></label
+										>
+										<input
+											type="email"
+											class="basic-input login__input"
+											placeholder="Registered email address"
+											id="email"
+											required
+										/>
+									</div>
 									<p class="basic-error">Email Address is required</p>
-									<div
-										data-aos="fade-up"
-										data-aos-duration="1000"
-										data-aos-delay="400"
-										data-aos-once="true"
-									>
-										<label for="password" class="basic-label mt-24">
+								</div>
+
+								<div
+									data-aos="fade-up"
+									data-aos-duration="1000"
+									data-aos-delay="400"
+									data-aos-once="true">
+									<div class="basic-wrapper">
+										<label for="password" class="basic-label">
 											Password<span class="icon-ellipse"> </span></label
 										>
 										<div class="login__password">
@@ -85,76 +80,75 @@ import Layout from "../layouts/Layout.astro";
 												required
 											/>
 											<button type="button" class="login__toggle-btn">
-												<i class="icon-StateOff"></i>
-												<!-- <i class="icon-password-encrypt"></i> -->
+												<i class="icon-state-on"></i>
 											</button>
 										</div>
-										<p class="basic-error">Password required</p>
 									</div>
+									<p class="basic-error">Password required</p>
+								</div>
 
+								<div class="d-flex justify-content-between align-items-center">
 									<div
 										class="d-flex gap-2 p-2 mt-24"
 										data-aos="fade-up"
 										data-aos-duration="1000"
 										data-aos-delay="500"
-										data-aos-once="true"
-										data-aos-offset="-500"
-									>
+										data-aos-once="true">
 										<input
 											class="form-check-input"
 											type="checkbox"
 											id="remember"
 											checked
 										/>
-
 										<label class="basic-label mb-24" for="remember">
 											Remember me
 										</label>
 									</div>
-									<div
-										data-aos="flip-left"
-										data-aos-duration="1000"
-										data-aos-delay="600"
-										data-aos-once="true"
-										data-aos-offset="-500"
-									>
-										<button
-											type="submit"
-											class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-4"
-										>
-											Sign In
-										</button></div
-									>
-
-									<div
-										class="text-center mt-3"
-										data-aos="fade-up"
-										data-aos-duration="1000"
-										data-aos-delay="700"
-										data-aos-once="true"
-										data-aos-offset="-500"
-									>
-										<p class="first-time-text mb-20">
-											Forgot Password? <button
-												class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
-												>Reset it here</button
-											>
-										</p>
-
-										<p class="first-time-text mb-60">
-											Don’t have an account yet? <button
-												class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
-												>Create an account</button
-											>
-										</p>
-									</div>
+									<p class="first-time-text"> Forgot your password? </p>
 								</div>
-							</div>
+
+								<div
+									data-aos="flip-left"
+									data-aos-duration="1000"
+									data-aos-delay="600"
+									data-aos-once="true"
+									class="d-none d-md-block">
+									<button
+										type="submit"
+										class="theme-btn theme-btn__primary theme-btn__min-w-100 w-100 btn-lg mb-30">
+										Login
+									</button>
+									<button
+										type="submit"
+										class="theme-btn theme-btn-size-md theme-btn__outline theme-btn__outline--primary">
+										Begin Your Journey
+									</button>
+								</div>
+
+								<div
+									class="text-center mt-3"
+									data-aos="fade-up"
+									data-aos-duration="1000"
+									data-aos-delay="700"
+									data-aos-once="true">
+									<!-- <p class="first-time-text mb-60">
+										Don’t have an account yet? <button
+											type="button"
+											class="text-link text-decoration-underline fw-medium theme-btn theme-btn__accent text-primary"
+											>Create an account</button
+										>
+									</p> -->
+								</div>
+							</form>
 						</div>
-					</form>
+					</div>
+
+					<!-- Image Column -->
+					<div class="col-lg-6 d-none d-md-block p-3">
+						<div class="login__bg-image w-100"></div>
+					</div>
 				</div>
 			</div>
-			<!-- ==|| Login Section End ||== -->
 		</section>
 	</main>
 
