@@ -15,7 +15,6 @@
 			border-radius: 12px;
 			object-fit: cover;
 			display: block;
-
 		}
 	}
 
@@ -52,7 +51,6 @@
 		border-radius: 10px;
 		width: 100%;
 		font-size: $fs-18;
-
 	}
 
 	&__password {
@@ -94,21 +92,24 @@
 		&:checked {
 			background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 32 32' fill='%238BA39D'%3E%3Cpath d='M3.054 3.054c2.221-2.221 5.796-2.221 12.946-2.221s10.724 0 12.946 2.221c2.221 2.221 2.221 5.796 2.221 12.946s0 10.724-2.221 12.946c-2.221 2.221-5.796 2.221-12.946 2.221s-10.725 0-12.946-2.221c-2.221-2.221-2.221-5.796-2.221-12.946s0-10.725 2.221-12.946zM22.975 11.75c0.298-0.325 0.276-0.83-0.049-1.128s-0.83-0.276-1.128 0.049l-8.217 8.964-3.402-3.402c-0.312-0.312-0.817-0.312-1.129 0s-0.312 0.817 0 1.129l3.991 3.991c0.154 0.154 0.364 0.238 0.582 0.233s0.424-0.098 0.571-0.259l8.781-9.579z'%3E%3C/path%3E%3C/svg%3E%0A");
 			margin-top: 0;
-
 		}
 	}
 
 	&__content {
 		padding-left: 130px;
 		width: 100%;
+		&__alt {
+			padding-left: 0;
+			padding-right: 130px;
+			@media all and (max-width: 1170px) {
+				padding-right: 0;
+			}
+		}
 
 		@media all and (max-width: 1170px) {
 			padding-left: 0;
 		}
 	}
-
-
-
 }
 
 @media only screen and (max-width: 768px) {
