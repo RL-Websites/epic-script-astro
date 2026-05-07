@@ -10,21 +10,22 @@
 			padding: 100px 120px;
 		}
 
-		&__weight-lose {
-			background: url('../img/bg/category-hero-sm.jpg') no-repeat center center;
+		&__weight-loss {
+			background: url('../img/bg/category-weight-loss-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
-				background: url('../img/bg/category-hero.jpg') no-repeat center center;
+				background: url('../img/bg/category-weight-loss.jpg') no-repeat center center;
 			}
 
 			background-size: cover;
 		}
 
 		&__testosterone {
-			background: url('../img/bg/category-hero-sm.jpg') no-repeat center center;
+			background: url('../img/bg/category-testosterone.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
-				background: url('../img/bg/category-testosterone-hero.jpg') no-repeat center center;
+				background: url('../img/bg/category-testosterone.jpg') no-repeat center center;
+
 			}
 
 			background-size: cover;
