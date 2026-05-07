@@ -1,5 +1,4 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
 import AssesmentHeader from "../components/AssesmentHeader.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -12,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 				<AssesmentHeader />
 				<!--Assesment Header End -->
 
-				<div class="text-center mt-md-40 mt-sm-30 mt-20">
+				<div class="text-center mt-md-40 mt-20">
 					<img
 						src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/doctor-info-graphic.png"
 					/>
@@ -20,26 +19,45 @@ import Layout from "../layouts/Layout.astro";
 
 				<div class="assessment__form-container">
 					<!-- Assessment question title start -->
-					<h2 class="site__heading-four fw-extrabold mt-md-30 mt-20"
-						>WHAT TREATMENT IS RIGHT FOR YOU</h2
+					<h4 class="site__heading-four fw-bold mt-30"
+						>WHAT TREATMENT IS RIGHT FOR YOU</h4
 					>
 					<!-- Assessment question title end -->
 
-					<div class="assessment__sub-title fw-light text-left mt-24">
+					<div class="assessment__label mt-md-20 text-start">
 						Discover the personalized path to your well-being with our quiz-
 						your journey to tailored healthcare starts here.
 					</div>
 
-					<!-- Assessment buttons start -->
-					<div class="assessment__buttons mx-auto mt-40 w-100 d-block">
+					<!-- <div class="assessment__buttons mx-auto mt-40 w-100 d-block">
 						<button class="theme-btn theme-btn__primary w-100 d-block"
 							>Take Quiz</button
 						>
+					</div> -->
+
+					<!-- Assessment buttons start -->
+					<div class="floating__buttons">
+						<div class="container">
+							<div class="floating__buttons__items justify-content-center">
+								<!-- <button
+									class="theme-btn theme-btn__outline theme-btn__outline--primary"
+									data-bind="click:goToHome"
+								>
+									Back
+								</button> -->
+								<button
+									class="theme-btn theme-btn__primary text-center"
+									data-bind="click:loadPartialShippingView"
+								>
+									Take Quiz
+								</button>
+							</div>
+						</div>
 					</div>
 					<!-- Assessment buttons end -->
 				</div>
 			</div>
 		</div>
-		<AssesmentFooter />
+		<!-- <AssesmentFooter /> -->
 	</div>
 </Layout>
