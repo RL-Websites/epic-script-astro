@@ -1,5 +1,4 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
 import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
 import Layout from "../layouts/Layout.astro";
@@ -21,18 +20,38 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment question title end -->
 
 				<!-- Assessment form start -->
-				<div class="assessment__form all-questions mt-md-30 mt-20">
+				<div class="assessment__form all-questions">
 					<div class="single-question">
-						<label class="assessment__label mb-sm-20 mb-10">
-							How much decline in your work performance have you noticed?
-						</label>
-						<input type="text" class="form-control" placeholder="Write here" />
+						<label class="assessment__label">
+							How much decline in your work performance have you noticed?</label
+						>
+						<div class="basic-wrapper">
+							<label class="basic-label" for="firstName"
+								>Write here <span class="icon-ellipse"></span></label
+							>
+							<input
+								class="basic-input"
+								type="text"
+								name="firstName"
+								id="firstName"
+								placeholder=" "
+							/>
+						</div>
 					</div>
 					<div class="single-question">
-						<label class="assessment__label mb-sm-20 mb-10">
-							And when did it start?
-						</label>
-						<input type="text" class="form-control" placeholder="Write here" />
+						<label class="assessment__label"> And when did it start?</label>
+						<div class="basic-wrapper">
+							<label class="basic-label" for="firstName"
+								>Write here<span class="icon-ellipse"></span></label
+							>
+							<input
+								class="basic-input"
+								type="text"
+								name="firstName"
+								id="firstName"
+								placeholder=" "
+							/>
+						</div>
 					</div>
 				</div>
 				<!-- Assessment form end -->
@@ -42,8 +61,5 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment buttons end -->
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<AssesmentFooter />
 	</div>
 </Layout>

@@ -1,8 +1,8 @@
 ---
-import CommonAction from '../components/CommonAction.astro';
-import Header from '../components/Header.astro';
-import Offcanvas from '../components/Offcanvas.astro';
-import Layout from '../layouts/Layout.astro';
+import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
+import Offcanvas from "../components/Offcanvas.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout bodyClass="alt-bg">
@@ -11,14 +11,16 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container">
 			<!-- Assessment question sub title start -->
 			<div
-				class="assessment__label animate__animated animate__fadeInUp adur-500ms adel-900ms">
+				class="assessment__label animate__animated animate__fadeInUp adur-500ms adel-900ms"
+			>
 				<h4>What is your sex at birth?</h4>
 				<a
 					class="assessment__label-link"
 					data-bs-toggle="offcanvas"
 					data-bs-target="#offcanvasExample"
 					role="button"
-					aria-controls="offcanvasExample">
+					aria-controls="offcanvasExample"
+				>
 					Review Progress
 				</a>
 			</div>
@@ -96,19 +98,22 @@ import Layout from '../layouts/Layout.astro';
 	<Offcanvas id="offcanvasExample">
 		<ul class="assessment__progress-list">
 			<li
-				class="assessment__progress-item assessment__progress-item--completed">
+				class="assessment__progress-item assessment__progress-item--completed"
+			>
 				<span class="assessment__progress-icon"></span>
 				<span class="assessment__progress-text">1. Let’s Get Started!</span>
 			</li>
 			<li
-				class="assessment__progress-item assessment__progress-item--completed">
+				class="assessment__progress-item assessment__progress-item--completed"
+			>
 				<span class="assessment__progress-icon"></span>
 				<span class="assessment__progress-text"
 					>2. Are you experiencing any pain right now?</span
 				>
 			</li>
 			<li
-				class="assessment__progress-item assessment__progress-item--completed">
+				class="assessment__progress-item assessment__progress-item--completed"
+			>
 				<span class="assessment__progress-icon"></span>
 				<span class="assessment__progress-text"
 					>3. Have you noticed any changes in your health recently?</span
