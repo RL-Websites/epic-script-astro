@@ -1,7 +1,7 @@
 @use "../base/variables" as *;
 
 .upload-document {
-	padding: 180px 0 160px 0;
+	padding: 50px 0 120px 0;
 
 	.medical-documents {
 		&__title {
@@ -72,14 +72,14 @@
 		padding: 0;
 		color: $light;
 		border-radius: 20px;
-		border: 2px dashed $red;
+		border: 2px dashed $gray-dark;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: all 0.3s ease;
 		text-align: center;
-		background-color: $background-3;
+		background-color: $background-4;
 
 		i {
 			font-size: 80px;
@@ -106,13 +106,13 @@
 }
 
 .generated-document {
-	border-bottom: 1.5px solid $red;
+	border-bottom: 1.5px solid $gray-dark;
 	margin-bottom: 40px;
 	background-color: transparent;
 
 	&.completed {
 		padding: 25px 50px;
-		border: 1px solid $red;
+		border: 1px solid $gray-dark;
 		border-radius: 12px;
 
 		// .dropdown__selection {
@@ -137,7 +137,7 @@
 			.doc-icon {
 				i {
 					font-size: 50px;
-					color: $red;
+					color: $gray-dark;
 				}
 			}
 
@@ -197,7 +197,7 @@
 				i {
 					font-size: 22px;
 					font-weight: 500;
-					color: $red;
+					color: $gray-dark;
 				}
 			}
 		}
@@ -223,14 +223,15 @@
 	align-items: center;
 	gap: 50px;
 	padding: 40px;
-	background-color: $background-3;
+	background-color: $background-4;
+	border: 1px solid $gray-dark;
 	border-radius: 20px;
 	margin-top: 30px;
 
 	&__icon {
 		i {
 			font-size: 80px;
-			color: $red;
+			color: $primary;
 		}
 	}
 

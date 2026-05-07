@@ -217,10 +217,8 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 100px;
-
-		&__dark {
-			background: rgba(0, 0, 0, 0.1);
-		}
+		background-color: transparent;
+		color: $secondary;
 	}
 
 	&-size {

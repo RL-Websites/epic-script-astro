@@ -1,5 +1,5 @@
 ---
-import Footer from "../components/Footer.astro";
+import CommonAction from "../components/CommonAction.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -56,7 +56,9 @@ import Layout from "../layouts/Layout.astro";
 												<p>CVC Reports.pdf</p>
 												<ul>
 													<li>30 KB of 90 KB <i class="icon-ellipse"></i></li>
-													<li><i class="icon-completed me-3"></i> Completed</li>
+													<li
+														><i class="icon-checkbox-filled me-3"></i> Completed</li
+													>
 												</ul>
 											</div>
 										</div>
@@ -148,7 +150,11 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 						</div>
 
-						<div class="step-btn">
+						<!-- Assessment buttons start -->
+						<CommonAction />
+						<!-- Assessment buttons end -->
+
+						<!-- <div class="step-btn">
 							<button
 								type="button"
 								class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--primary"
@@ -163,7 +169,7 @@ import Layout from "../layouts/Layout.astro";
 							>
 								Save
 							</button>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</section>
@@ -171,5 +177,5 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</main>
 
-	<Footer />
+	<!-- <Footer /> -->
 </Layout>

@@ -4,30 +4,35 @@ interface Props {
 	title?: string;
 }
 
-const { id, title = 'Questions' } = Astro.props;
+const { id, title = "Questions" } = Astro.props;
 ---
 
 <div
 	class="offcanvas offcanvas-end assessment__offcanvas"
 	tabindex="-1"
 	id={id}
-	aria-labelledby={`${id}Label`}>
+	aria-labelledby={`${id}Label`}
+>
 	<div class="offcanvas-header assessment__offcanvas-header">
 		<div class="assessment__offcanvas-header-left">
 			<button
 				type="button"
 				class="assessment__offcanvas-back"
 				data-bs-dismiss="offcanvas"
-				aria-label="Back">
+				aria-label="Back"
+			>
 				<i class="icon-back"></i>
 			</button>
 			<h5 class="offcanvas-title" id={`${id}Label`}>{title}</h5>
 		</div>
 		<button
 			type="button"
-			class="btn-close"
+			class="theme-btn theme-btn__icon"
 			data-bs-dismiss="offcanvas"
-			aria-label="Close"></button>
+			aria-label="Close"
+		>
+			<i class="icon-cross"></i>
+		</button>
 	</div>
 	<div class="offcanvas-body assessment__offcanvas-body">
 		<slot />

@@ -84,7 +84,7 @@ ul {
 .select {
 	&__wrapper {
 		position: relative;
-		z-index: 99;
+		z-index: 1;
 
 		&::after {
 			content: '\e91d';
