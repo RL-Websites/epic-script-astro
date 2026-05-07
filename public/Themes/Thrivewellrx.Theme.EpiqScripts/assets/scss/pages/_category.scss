@@ -10,21 +10,61 @@
 			padding: 100px 120px;
 		}
 
-		&__weight-lose {
-			background: url('../img/bg/category-hero-sm.jpg') no-repeat center center;
+		&__weight-loss {
+			background: url('../img/bg/category-weight-loss-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
-				background: url('../img/bg/category-hero.jpg') no-repeat center center;
+				background: url('../img/bg/category-weight-loss.jpg') no-repeat center center;
 			}
 
 			background-size: cover;
 		}
 
 		&__testosterone {
-			background: url('../img/bg/category-hero-sm.jpg') no-repeat center center;
+			background: url('../img/bg/category-testosterone.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
-				background: url('../img/bg/category-testosterone-hero.jpg') no-repeat center center;
+				background: url('../img/bg/category-testosterone.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
+		&__sexual-health {
+			background: url('../img/bg/category-sexual-health.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-sexual-health.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
+		&__pre-workout {
+			background: url('../img/bg/category-pre-workout.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-pre-workout.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
+		&__hormone-health {
+			background: url('../img/bg/category-hormone-health.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-hormone-health.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
+		&__anti-aging {
+			background: url('../img/bg/category-anti-aging.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-anti-aging.jpg') no-repeat center center;
 			}
 
 			background-size: cover;

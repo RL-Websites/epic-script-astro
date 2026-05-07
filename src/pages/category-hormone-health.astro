@@ -1,0 +1,261 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+// import Header from '../components/Header.astro';
+import ProductSingle from "../components/ProductSingle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<Header />
+	<!-- <Header title="Category" /> -->
+	<main class="page">
+		<div class="page__wrapper">
+			<!-- category hero section start -->
+			<section class="category-hero mt-10">
+				<div class="container-fluid">
+					<div
+						class="category-hero__wrapper category-hero__wrapper__hormone-health"
+					>
+						<div class="category-hero__content">
+							<span class="status-pill status-pill--yellow-light"
+								>Hormone Health</span
+							>
+							<h1>
+								Hormone health <br /> medication online - with the experts to match.
+							</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- category hero section ends  -->
+
+			<!-- category slider start -->
+			<section class="category-slider mt-10">
+				<div class="container-fluid">
+					<div class="category-slider__inner-container">
+						<div class="category-slider__wrapper swiper product-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<ProductSingle
+										title="Wegovy Pen"
+										description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+										image="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/product-5.png"
+										status="New And In Stock"
+									/>
+								</div>
+								<div class="swiper-slide">
+									<ProductSingle
+										title="Sermorelin"
+										description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+										image="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/product-5.png"
+										status="New And In Stock"
+									/>
+								</div>
+								<div class="swiper-slide">
+									<ProductSingle
+										title="NAD+"
+										description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+										image="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/product-5.png"
+										status="New And In Stock"
+									/>
+								</div>
+								<div class="swiper-slide">
+									<ProductSingle
+										title="NAD+"
+										description="The Comprehensive Plus Panel delivers the most in-depth health evaluation..."
+										image="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/product-5.png"
+										status="New And In Stock"
+									/>
+								</div>
+							</div>
+
+							<div class="container container--alt">
+								<div class="category-slider__controls">
+									<div class="category-slider__pagination swiper-pagination"
+									></div>
+									<div class="category-slider__navigation">
+										<div class="swiper-button-prev-custom">
+											<i class="icon-left-arrow text-3xl/none"></i>
+										</div>
+										<div class="swiper-button-next-custom">
+											<i class="icon-right-arrow text-3xl/none"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- category slider ends  -->
+
+			<!-- faq section start -->
+			<section class="faq my-10">
+				<div class="container-fluid">
+					<div class="faq__inner">
+						<div class="faq__wrapper">
+							<div class="faq__title">
+								<h2 class="faq__heading"
+									>Frequently <span>Asked Questions</span></h2
+								>
+							</div>
+							<!-- faq accordion start -->
+							<div
+								class="faq__accordion accordion accordion-flush"
+								id="faqAccordion"
+							>
+								<div class="accordion-item faq__item">
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button faq__button"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#faq-1"
+											aria-expanded="true"
+											aria-controls="faq-1"
+										>
+											<span class="faq__accordion-title"
+												>Contact Information For Epiq Scripts?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="faq-1"
+										class="accordion-collapse collapse show"
+										data-bs-parent="#faqAccordion"
+									>
+										<div class="accordion-body faq__body">
+											You can reach our support team via email or phone. Our
+											experts are available Monday through Friday to assist with
+											your weight loss journey and medication questions.
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item faq__item">
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed faq__button"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#faq-2"
+											aria-expanded="false"
+											aria-controls="faq-2"
+										>
+											<span class="faq__accordion-title"
+												>How Does A Patient Get Started With Epiq Scripts
+												Pharmacy?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="faq-2"
+										class="accordion-collapse collapse"
+										data-bs-parent="#faqAccordion"
+									>
+										<div class="accordion-body faq__body">
+											Getting started is simple. Choose your program, complete a
+											brief online evaluation, and our medical team will review
+											your health profile to determine the best treatment plan
+											for you.
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item faq__item">
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed faq__button"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#faq-3"
+											aria-expanded="false"
+											aria-controls="faq-3"
+										>
+											<span class="faq__accordion-title"
+												>Can A Patient Speak With A Pharmacist For Consultation
+												Regarding Prescriptions? What Are The Hours Of
+												Availability?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="faq-3"
+										class="accordion-collapse collapse"
+										data-bs-parent="#faqAccordion"
+									>
+										<div class="accordion-body faq__body">
+											Yes, our licensed pharmacists are available for
+											consultations. You can schedule a call through your
+											patient dashboard during our standard business hours.
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item faq__item">
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed faq__button"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#faq-4"
+											aria-expanded="false"
+											aria-controls="faq-4"
+										>
+											<span class="faq__accordion-title"
+												>How Are Medications Shipped?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="faq-4"
+										class="accordion-collapse collapse"
+										data-bs-parent="#faqAccordion"
+									>
+										<div class="accordion-body faq__body">
+											All medications are shipped discreetly and securely to
+											your preferred address. We use temperature-controlled
+											packaging where necessary to ensure product integrity.
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item faq__item">
+									<h2 class="accordion-header">
+										<button
+											class="accordion-button collapsed faq__button"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#faq-5"
+											aria-expanded="false"
+											aria-controls="faq-5"
+										>
+											<span class="faq__accordion-title"
+												>What States Is Epiq Scripts Licensed In?</span
+											>
+										</button>
+									</h2>
+									<div
+										id="faq-5"
+										class="accordion-collapse collapse"
+										data-bs-parent="#faqAccordion"
+									>
+										<div class="accordion-body faq__body">
+											We are currently licensed in a majority of states and are
+											constantly expanding our reach. Please check our
+											availability during the sign-up process.
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- faq accordion ends  -->
+						</div>
+					</div>
+				</div>
+				<!-- faq section ends  -->
+			</section>
+		</div>
+	</main>
+	<Footer />
+</Layout>
