@@ -19,24 +19,24 @@ const { title, description, image, status } = Astro.props;
 		<p class="product-card__description">
 			{description}
 		</p>
-		<div class="product-card__link">
-			<button
-				type="button"
-				class="theme-btn theme-btn__primary"
-				data-bs-toggle="modal"
-				data-bs-target="#productDetailsModal"
-			>
-				Get Started
-			</button>
-			<button
-				type="button"
-				class="theme-btn theme-btn__outline theme-btn__outline--primary"
-				data-bs-toggle="modal"
-				data-bs-target="#productDetailsModal"
-			>
-				Learn More
-			</button>
-		</div>
+	</div>
+	<div class="product-card__link">
+		<button
+			type="button"
+			class="theme-btn theme-btn__primary"
+			data-bs-toggle="modal"
+			data-bs-target="#productDetailsModal"
+		>
+			Get Started
+		</button>
+		<button
+			type="button"
+			class="theme-btn theme-btn__outline theme-btn__outline--primary"
+			data-bs-toggle="modal"
+			data-bs-target="#productDetailsModal"
+		>
+			Learn More
+		</button>
 	</div>
 </div>
 
