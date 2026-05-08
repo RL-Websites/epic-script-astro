@@ -327,7 +327,7 @@
 }
 
 .status-pill {
-	padding: 10px 16px;
+	padding: 5px 10px;
 	border-radius: 30px;
 	font-size: $fs-14;
 	line-height: 1;
@@ -367,7 +367,7 @@
 	}
 
 	&--success {
-		background-color: $green-lighter;
+		background-color: $green-deep;
 		color: $primary-deep;
 	}
 

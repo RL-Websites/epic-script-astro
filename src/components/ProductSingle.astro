@@ -24,15 +24,216 @@ const { title, description, image, status } = Astro.props;
 				type="button"
 				class="theme-btn theme-btn__primary"
 				data-bs-toggle="modal"
-				data-bs-target="#productDetailsModal">
+				data-bs-target="#productDetailsModal"
+			>
 				Get Started
 			</button>
 			<button
 				type="button"
 				class="theme-btn theme-btn__outline theme-btn__outline--primary"
-				data-bs-toggle="modal">
+				data-bs-toggle="modal"
+				data-bs-target="#productDetailsModal"
+			>
 				Learn More
 			</button>
 		</div>
 	</div>
 </div>
+
+<!-- Product Details Modal Start-->
+<div
+	class="modal product-details-modal fade"
+	id="productDetailsModal"
+	tabindex="-1"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<!-- Close button -->
+
+			<div class="modal-body modal-body__alt2">
+				<div class="btn-modal-close">
+					<button
+						type="button"
+						class="btn btn-outline border-0"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="icon-cross_filled btn-close-icon"></i>
+					</button>
+				</div>
+				<div class="row align-items-start pt-20">
+					<!-- Product Image -->
+					<div class="col-xl-5 col-md-6 product-hero__left-col">
+						<div class="product-hero__left_gray">
+							<img
+								src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/product-2.png"
+								class="product-hero__img"
+								alt="Semaglutide"
+							/>
+						</div>
+					</div>
+
+					<!-- Product Details -->
+					<div class="col-xl-7 col-md-6">
+						<div class="product-hero__right">
+							<h2 class="mb-3">Semaglutide 5mg/vial</h2>
+
+							<h3 class="mt-12 text-primary">$299.99</h3>
+
+							<!-- Out of Stock badge (example - remove if not needed) -->
+							<!--
+              <div class="mt-12">
+                <span class="badge rounded-pill bg-pink-2 text-red">
+                  Out of Stock
+                </span>
+              </div>
+              -->
+
+							<div
+								class="d-flex justify-content-between align-items-center mt-12"
+							>
+								<h5 class="text-gray-dark">Purity: 99.9%</h5>
+								<a
+									href="https://example.com/coa/semaglutide.pdf"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-primary"
+								>
+									COA
+								</a>
+							</div>
+
+							<div class="alert-pill mt-20 mt-md-24">
+								<i class="icon-alert"></i>
+								<span>
+									For Research Purposes Only — Not for Human Consumption
+								</span>
+							</div>
+
+							<div
+								class="d-flex flex-wrap align-items-center justify-content-between py-3"
+							>
+								<div class="d-flex align-items-center gap-2">
+									<input
+										class="form-check-input fs-md-24 fs-20 mt-0"
+										type="radio"
+										name="gender"
+										id="oneTimePriceProdDetails"
+										value="male"
+										checked=""
+									/>
+									<label
+										class="form-check-label fs-md-18 fs-16 fw-bold"
+										for="oneTimePriceProdDetails">One Time Price</label
+									>
+								</div>
+								<h3 class="text-primary product__meta--price mb-0">$320</h3>
+							</div>
+							<div class="border-solid"></div>
+							<div
+								class="d-flex align-items-start justify-content-between py-3"
+							>
+								<div class="d-flex align-items-center gap-2">
+									<input
+										class="form-check-input fs-md-24 fs-20 mt-0"
+										type="radio"
+										name="gender"
+										id="subscriptionPriceProdDetails"
+										value="male"
+										checked=""
+									/>
+									<label
+										class="form-check-label fs-md-18 fs-16 fw-bold"
+										for="subscriptionPriceProdDetails"
+										>Subscribe &amp; Save
+									</label>
+								</div>
+
+								<div>
+									<div
+										class="d-flex flex-column-reverse flex-md-row align-items-md-center align-items-end justify-content-end gap-2"
+									>
+										<h3
+											class="text-gray-medium fs-16 text-decoration-line-through mb-0"
+										>
+											$220
+										</h3>
+										<h3 class="text-primary product__meta--price mb-0 lh-1">
+											$320
+										</h3>
+									</div>
+									<span class="status-pill status-pill--saving d-block"
+										>16.67% Savings</span
+									>
+								</div>
+							</div>
+
+							<ul class="d-flex flex-column gap-3 pb-3">
+								<li class="d-flex gap-2">
+									<i class="icon-tick fs-18 text-primary"></i>
+									<span class="lh-sm fs-14"
+										>A Quarter Billion+ nights made (and counting)</span
+									>
+								</li>
+								<li class="d-flex gap-2">
+									<i class="icon-tick fs-18 text-primary"></i>
+									<span class="lh-sm fs-14"
+										>Easily charge or cancel any time</span
+									>
+								</li>
+								<li class="d-flex gap-2">
+									<i class="icon-tick fs-18 text-primary"></i>
+									<span class="lh-sm fs-14">Delivered every 30 days</span>
+								</li>
+							</ul>
+
+							<!-- Cart Actions -->
+							<div class="product-hero__cart mt-24">
+								<div class="product-action__btn mt-24 d-flex gap-3 flex-wrap">
+									<button
+										type="button"
+										class="theme-btn theme-btn-size-md theme-btn__primary"
+									>
+										Add to Cart
+									</button>
+
+									<button
+										type="button"
+										class="theme-btn theme-btn-size-md theme-btn__outline theme-btn__outline--primary"
+									>
+										Buy Now
+									</button>
+								</div>
+							</div>
+
+							<!-- Product Description -->
+							<div
+								class="text-body3 text-gray-dark mt-20 mt-md-24 product-hero__details_scroll"
+							>
+								<p>
+									Semaglutide is a high-purity research peptide used in
+									laboratory settings for studying GLP-1 receptor pathways.
+								</p>
+								<p>
+									It is lyophilized and supplied in vials for reconstitution.
+									Purity verified at 99.9% via HPLC.
+								</p>
+								<p>
+									<strong
+										>For Research Purposes Only — Not for Human Consumption</strong
+									>
+								</p>
+								<p>
+									Each vial contains 5 mg of Semaglutide with &gt;99.9% purity.
+									Certificate of Analysis (COA) available upon request.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Product Details Modal ENd-->
