@@ -92,7 +92,7 @@
 	.basic {
 		&-input {
 			width: 100%;
-			height: 60px;
+			height: 50px;
 			padding: 15px 20px;
 			border-radius: 30px;
 			outline: 0;
@@ -103,6 +103,10 @@
 
 			&::placeholder {
 				color: $light;
+			}
+
+			@media (min-width: 992px) {
+				height: 60px;
 			}
 		}
 

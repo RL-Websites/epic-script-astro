@@ -39,24 +39,22 @@ import Layout from '../layouts/Layout.astro';
 								<i class="icon-left-arrow text-primary fs-md-18 fw-700"></i>
 								<h4>Back</h4>
 							</div> -->
-									<div class="login__header">
-										<div
-											class="col-12"
-											data-aos="fade-down"
-											data-aos-duration="1000"
-											data-aos-delay="100"
-											data-aos-once="true">
-											<h2>Let’s Get You</h2>
-										</div>
+									<div
+										class="col-12"
+										data-aos="fade-down"
+										data-aos-duration="1000"
+										data-aos-delay="100"
+										data-aos-once="true">
+										<h2>Let’s Get You</h2>
+									</div>
 
-										<div
-											class="col-12 mb-5"
-											data-aos="fade-down"
-											data-aos-duration="1000"
-											data-aos-delay="200"
-											data-aos-once="true">
-											<h3>Signed Up</h3>
-										</div>
+									<div
+										class="col-12 mb-5"
+										data-aos="fade-down"
+										data-aos-duration="1000"
+										data-aos-delay="200"
+										data-aos-once="true">
+										<h3>Signed Up</h3>
 									</div>
 								</div>
 								<form class="login__form" id="edit-profile">
@@ -121,13 +119,13 @@ import Layout from '../layouts/Layout.astro';
 										<p class="basic-error">Display Name is required</p>
 									</div>
 									<div class="form-item">
-										<label class="fw-bold mb-5" for="expiry"
+										<label class="basic-label fw-500 pb-5 fs-20" for="expiry"
 											>Date of Birth</label
 										>
 										<div
 											class="dropdown__selection dropdown__selection__date dropdown__selection__date-md">
 											<div class="select__wrapper">
-												<select class="select__options">
+												<select class="select__options select__options--white">
 													<option disabled selected>Month</option>
 													<option>January</option>
 													<option>February</option>
@@ -144,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
 												</select>
 											</div>
 											<div class="select__wrapper">
-												<select class="select__options">
+												<select class="select__options select__options--white">
 													<option disabled selected>Day</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
@@ -154,7 +152,7 @@ import Layout from '../layouts/Layout.astro';
 											</div>
 
 											<div class="select__wrapper">
-												<select class="select__options">
+												<select class="select__options select__options--white">
 													<option disabled selected>Year</option>
 													<option>2025</option>
 													<option>2024</option>
@@ -184,35 +182,31 @@ import Layout from '../layouts/Layout.astro';
 										>
 									</div>
 									<div class="form-item">
-										<label class="basic-label d-block mb-2"
-											>Gender <span class="icon-ellipse"></span></label
+										<label class="basic-label d-block fw-500 pb-5 fs-20"
+											>Gender</label
 										>
-
-										<div class="form-check form-check-inline">
-											<input
-												class="form-check-input"
-												type="radio"
-												name="gender"
-												id="genderMale"
-												value="male"
-												checked
-											/>
-											<label class="form-check-label" for="genderMale"
-												>Male</label
-											>
-										</div>
-
-										<div class="form-check form-check-inline">
-											<input
-												class="form-check-input"
-												type="radio"
-												name="gender"
-												id="genderFemale"
-												value="female"
-											/>
-											<label class="form-check-label" for="genderFemale"
-												>Female</label
-											>
+										<div class="assessment__form mt-10">
+											<div
+												class="assessment__form_radio assessment__form_radio--white">
+												<input
+													type="radio"
+													name="answerRadio"
+													id="answerRadio1"
+													value="male"
+													checked
+												/>
+												<label for="answerRadio1"> Male </label>
+											</div>
+											<div
+												class="assessment__form_radio assessment__form_radio--white">
+												<input
+													type="radio"
+													name="answerRadio"
+													id="answerRadio2"
+													value="female"
+												/>
+												<label for="answerRadio2"> Female </label>
+											</div>
 										</div>
 										<p class="basic-error">Gender is required</p>
 									</div>
@@ -302,17 +296,23 @@ import Layout from '../layouts/Layout.astro';
 										id="reset-password"
 										type="submit"
 										class="theme-btn theme-btn__primary px-20 py-10 w-100"
-										data-aos-delay="100">Register & Login</button
+										data-aos-delay="100">Continue</button
 									>
 
-									<div>
+									<button
+										class="theme-btn theme-btn__outline theme-btn__outline--primary"
+										data-bind="click:goToHome">
+										Already a member?
+									</button>
+
+									<!-- <div>
 										<p class="text-center mt-20">
 											<span class="fs-16 fs-md-20"
 												>Already have an account?</span
 											>
 											<a href="#" class="text-primary fs-16 fs-md-20">Log in</a>
 										</p>
-									</div>
+									</div> -->
 								</form>
 							</div>
 						</div>
