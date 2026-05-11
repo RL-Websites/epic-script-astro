@@ -28,6 +28,10 @@
 				transition: all 0.3s;
 				border: 1px solid $gray-dark;
 
+				@media all and (max-width: 576px) {
+					width: 320px;
+				}
+
 				input {
 					padding: 0;
 					border: 0;
