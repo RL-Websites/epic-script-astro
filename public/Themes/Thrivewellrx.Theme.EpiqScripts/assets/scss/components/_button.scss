@@ -309,8 +309,8 @@
 		padding: 20px 5px;
 		position: fixed;
 		width: 100%;
-		bottom: 0px;
-		left: 0px;
+		bottom: 0;
+		left: 0;
 		z-index: 1;
 		background-color: #ffffff;
 		border-top: 1px solid #8ba39d;
@@ -322,26 +322,90 @@
 			width: 100%;
 			gap: 5px;
 
-			&__alt {
-				flex-direction: column-reverse;
-				align-items: stretch;
-				gap: 20px;
-				margin-top: 20px;
-
-
-			}
-
 			button {
 				width: auto;
 				padding-left: 60px;
 				padding-right: 60px;
 			}
 
+			
+			@media (max-width: 576px) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 12px;
+
+				.theme-btn {
+					width: 100%;
+					min-height: 52px;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					padding-left: 16px;
+					padding-right: 16px;
+
+					border-radius: 999px;
+					text-align: center;
+				}
+
+				.theme-btn:last-child:nth-child(odd) {
+					grid-column: 1 / -1;
+				}
+			}
+
+			&__alt {
+				flex-direction: column-reverse;
+				align-items: stretch;
+				gap: 20px;
+				margin-top: 20px;
+
+				@media (max-width: 576px) {
+					display: flex;
+				}
+			}
 		}
-
-
 	}
 }
+
+// .floating {
+// 	&__buttons {
+// 		padding: 20px 5px;
+// 		position: fixed;
+// 		width: 100%;
+// 		bottom: 0px;
+// 		left: 0px;
+// 		z-index: 1;
+// 		background-color: #ffffff;
+// 		border-top: 1px solid #8ba39d;
+
+// 		&__items {
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: space-between;
+// 			width: 100%;
+// 			gap: 5px;
+
+// 			&__alt {
+// 				flex-direction: column-reverse;
+// 				align-items: stretch;
+// 				gap: 20px;
+// 				margin-top: 20px;
+
+
+// 			}
+
+// 			button {
+// 				width: auto;
+// 				padding-left: 60px;
+// 				padding-right: 60px;
+// 			}
+
+// 		}
+
+
+// 	}
+// }
 
 @keyframes spin {
 	0% {
