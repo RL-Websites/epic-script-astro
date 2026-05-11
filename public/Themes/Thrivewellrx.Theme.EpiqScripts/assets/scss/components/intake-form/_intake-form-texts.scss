@@ -85,6 +85,10 @@
 		margin: 0 auto;
 		margin-bottom: 30px;
 		position: relative;
+		font-size: $fs-28;
+		line-height: 1;
+		font-weight: 600;
+
 		&-link {
 			font-weight: 600;
 			font-size: $fs-18;
@@ -95,6 +99,7 @@
 			right: 0;
 			transform: translateY(-50%);
 		}
+
 		h4 {
 			font-size: $fs-28;
 			font-weight: 500;
