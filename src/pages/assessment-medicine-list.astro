@@ -1,20 +1,17 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
-import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div class="assessment__page-wrapper">
+	<Header class="site__header--border" />
+
+	<main class="assessment__page-wrapper">
 		<div class="container">
 			<div class="assessment">
-				<!--Assesment Header Start -->
-				<AssesmentHeader />
-				<!--Assesment Header End -->
-
 				<!-- Assessment question title start -->
-				<div class="assessment__question mt-40">
+				<div class="assessment__question">
 					Your medical history is crucial for us to provide you with the best
 					care. Please provide details about your health conditions and
 					products.
@@ -48,8 +45,5 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment buttons end -->
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<AssesmentFooter />
-	</div>
+	</main>
 </Layout>
