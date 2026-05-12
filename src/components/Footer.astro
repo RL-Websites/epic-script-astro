@@ -3,20 +3,23 @@ const footerLinkCols = [
 	{
 		links: [
 			{ text: "High Volume Prescription Fulfillment", href: "/" },
-			{ text: "Packaging", href: "/" },
+			{ text: "Custom Branding and Packaging", href: "/" },
 			{ text: "Custom Compounds", href: "/" },
-			{ text: "Shipment and Delivery", href: "/" },
-		],
-	},
-	{
-		links: [
-			{ text: "Digital Pharmacy ", href: "/" },
+			{ text: "Pharmacy", href: "/" },
 			{ text: "Technology", href: "/" },
-			{ text: "About Us", href: "/" },
 			{ text: "About Us", href: "/" },
 			{ text: "Contact us", href: "/" },
 		],
 	},
+	// {
+	// 	links: [
+	// 		{ text: "Digital Pharmacy ", href: "/" },
+	// 		{ text: "Technology", href: "/" },
+	// 		{ text: "About Us", href: "/" },
+	// 		{ text: "About Us", href: "/" },
+	// 		{ text: "Contact us", href: "/" },
+	// 	],
+	// },
 ];
 ---
 
@@ -69,35 +72,48 @@ const footerLinkCols = [
 			</div>
 
 			<div class="site__footer__links w-full">
-				{
-					footerLinkCols.map((col) => (
-						<div class="site__footer__links-column">
-							<ul>
-								{col.links.map((link) => (
-									<li>
-										<a class="text-white" href={link.href}>
-											{link.text}
-										</a>
-									</li>
-								))}
-							</ul>
+				<div class="site__footer__links-card" data-aos="fade-up" data-aos-duration="600">
+					<div class="site__footer__links-card__content">
+						<p class="site__footer__links-card__label">Download the app</p>
+						<h2 class="site__footer__links-card__title">
+							Total care.<br />Totally different.
+						</h2>
+						<div class="site__footer__links-card__image">
+							<img
+								src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/mobile-image.png"
+								alt="Download the app"
+							/>
 						</div>
-					))
-				}
-				<div class="site__footer__links-column">
-					<ul>
-						<li>
-							<p class="text-gray-medium"> Call us </p>
-							<a class="fs-md-24 fs-16" href="tel:833654-3553">(833) 654-3553</a
-							>
-						</li>
-						<li>
-							<p class="text-gray-medium">Email us anytime:</p>
-							<a class="fs-md-24 fs-16" href="mailto:admin@epiqscripts.com"
-								>admin@epiqscripts.com</a
-							>
-						</li>
-					</ul>
+					</div>
+				</div>
+				<div class="site__footer__links-block">
+					{
+						footerLinkCols.map((col) => (
+							<div class="site__footer__links-column">
+								<ul>
+									{col.links.map((link) => (
+										<li>
+											<a class="text-white" href={link.href}>
+												{link.text}
+											</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						))
+					}
+					<div class="site__footer__links-column">
+						<ul>
+							<li>
+								<p class="text-gray-medium"> Call us </p>
+								<a class="fs-md-24 fs-16" href="tel:833654-3553">(833) 654-3553</a>
+							</li>
+							<li>
+								<p class="text-gray-medium">Email us anytime:</p>
+								<a class="fs-md-24 fs-16" href="mailto:admin@epiqscripts.com">admin@epiqscripts.com</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
