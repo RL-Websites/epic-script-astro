@@ -145,6 +145,46 @@
 	}
 }
 
+.basic {
+	&-input {
+		width: 100%;
+		height: 60px;
+		padding: 15px 20px;
+		border-radius: 10px;
+		outline: 0;
+		border: none;
+		box-shadow: none;
+		font-size: 16px;
+		background-color: $white;
+		border: 1px solid $gray-dark;
+
+		&::placeholder {
+			color: $gray-dark;
+		}
+	}
+
+	&-label {
+		font-size: $fs-20;
+		font-weight: 500;
+		color: $gray-light-3;
+		display: block;
+		position: relative;
+		padding-bottom: 10px;
+
+		.icon-ellipse {
+			background: $red;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 6px;
+			margin-left: 5px;
+			position: absolute;
+			top: 10px;
+			padding: 0 2px 0 0;
+		}
+	}
+}
+
 .basic-error {
 	font-size: $fs-16;
 	color: $red;
