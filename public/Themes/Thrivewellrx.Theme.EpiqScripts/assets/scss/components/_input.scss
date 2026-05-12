@@ -99,7 +99,7 @@
 			border: none;
 			box-shadow: none;
 			font-size: 16px;
-			background-color: $white;
+			background-color: $gray-light;
 
 			&::placeholder {
 				color: $light;
@@ -107,6 +107,10 @@
 
 			@media (min-width: 992px) {
 				height: 60px;
+			}
+
+			&__alt {
+				background-color: $white;
 			}
 		}
 
