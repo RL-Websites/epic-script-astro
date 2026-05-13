@@ -1,209 +1,90 @@
-<div class="panel-group faq__lg" id="accordion">
-	<div class="container">
-		<div class="faq__top">
-			<h1
-				class="section__title"
-				data-aos="fade-up"
-				data-aos-delay="300"
-				data-aos-duration="800"
-				>Frequently Asked&nbsp;
-				<span class="text-primary-grad-1">Questions</span></h1
-			>
-		</div>
-	</div>
-	<div
-		class="panel panel-default faq__item faq__item--primary-lighter mt-md-50 mt-30"
-		data-aos="fade-up"
-		data-aos-delay="600"
-		data-aos-duration="800"
-	>
-		<div class="panel-heading faq__lg__heading" role="tab" id="headingOne">
-			<p
-				class="fs-md-22 fs-14 fw-500"
-				role="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseOne"
-				aria-expanded="true"
-				aria-controls="collapseOne"
-			>
-				<span>What is the difference between Semaglutide and Tirzepatide?</span>
-			</p>
-		</div>
-		<div
-			id="collapseOne"
-			class="panel-collapse collapse show"
-			data-bs-parent="#accordion"
-			aria-labelledby="headingOne"
-		>
-			<div class="faq__lg__body">
-				Semaglutide is a GLP-1 receptor agonist, which mimics a hormone that
-				helps regulate blood sugar levels, slow down digestion, and reduce
-				appetite. Tirzepatide, on the other hand, is a dual GIP and GLP-1
-				receptor agonist, meaning it mimics two hormones that regulate blood
-				sugar and appetite. This dual action can make weight loss programs with
-				injections more effective. By combining two hormonal effects,
-				Tirzepatide enhances the benefits of weight loss programs with
-				injections, offering better blood sugar control and greater weight loss
-				compared to using GLP-1 alone.
-			</div>
-		</div>
-	</div>
-	<!--FAQ Item End-->
+---
+const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
 
-	<div
-		class="panel panel-default faq__item faq__item--primary-lighter"
-		data-aos="fade-up"
-		data-aos-delay="600"
-		data-aos-duration="800"
-	>
-		<div class="panel-heading faq__lg__heading" role="tab" id="headingTwo">
-			<p
-				class="collapsed fs-md-22 fs-14 fw-500"
-				role="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseTwo"
-				aria-expanded="false"
-				aria-controls="collapseTwo"
-			>
-				<span>Should I expect any side effects?</span>
-			</p>
-		</div>
-		<div
-			id="collapseTwo"
-			class="panel-collapse collapse"
-			data-bs-parent="#accordion"
-			aria-labelledby="headingTwo"
-		>
-			<div class="faq__lg__body">
-				<p>
-					VPeptides serves individuals seeking accessible, expert-led healthcare
-					for needs like weight management...
-				</p>
-			</div>
-		</div>
-	</div>
-	<!--FAQ Item End-->
+const faqs = [
+	{
+		id: "faq-contact",
+		question: "Contact Information For Epiq Scripts?",
+		answer:
+			"You can reach our support team via email or phone. Our experts are available Monday through Friday to assist with your medication and pharmacy questions.",
+	},
+	{
+		id: "faq-started",
+		question: "How Does A Patient Get Started With Epiq Scripts Pharmacy?",
+		answer:
+			"Choose your program, complete a brief online evaluation, and our medical team will review your profile to determine the next steps.",
+	},
+	{
+		id: "faq-consultation",
+		question:
+			"Can A Patient Speak With A Pharmacist For Consultation Regarding Prescriptions? What Are The Hours Of Availability?",
+		answer:
+			"Yes. Licensed pharmacists are available for consultations during standard business hours, and follow-up guidance can be scheduled through the patient workflow.",
+	},
+	{
+		id: "faq-shipping",
+		question: "How Are Medications Shipped?",
+		answer:
+			"Medications are shipped securely and discreetly, with temperature-conscious packaging used when product handling requires it.",
+	},
+	{
+		id: "faq-states",
+		question: "What States Is Epiq Scripts Licensed In?",
+		answer:
+			"Licensing coverage continues to expand. Patients can confirm current availability during the sign-up and prescription flow.",
+	},
+];
+---
 
-	<div
-		class="panel panel-default faq__item faq__item--primary-lighter"
-		data-aos="fade-up"
-		data-aos-delay="600"
-		data-aos-duration="800"
-	>
-		<div class="panel-heading faq__lg__heading" role="tab" id="headingThree">
-			<p
-				class="collapsed fs-md-22 fs-14 fw-500"
-				role="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseThree"
-				aria-expanded="false"
-				aria-controls="collapseThree"
-			>
-				<span>Will any existing medical condition change my eligibility?</span>
-			</p>
+<div class="faq__panel">
+	<div class="faq__intro">
+		<div class="faq__heading-block">
+			<h2>Frequently <br> Asked Questions</h2>
 		</div>
-		<div
-			id="collapseThree"
-			class="panel-collapse collapse"
-			data-bs-parent="#accordion"
-			aria-labelledby="headingThree"
-		>
-			<div class="faq__lg__body">
-				The healthcare professionals on VPeptides platform include...
-			</div>
-		</div>
-	</div>
-	<!--FAQ Item End-->
 
-	<div
-		class="panel panel-default faq__item faq__item--primary-lighter"
-		data-aos="fade-up"
-		data-aos-delay="600"
-		data-aos-duration="800"
-	>
-		<div class="panel-heading faq__lg__heading" role="tab" id="headingFour">
-			<p
-				class="collapsed fs-md-22 fs-14 fw-500"
-				role="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseFour"
-				aria-expanded="false"
-				aria-controls="collapseFour"
-			>
-				<span>How long before I should expect to see results?</span>
+		<div class="faq__summary">
+			<p>
+				Through Sophisticated Software Design, We Specialize In <br> Online
+				Prescription Fulfillment. Your Patient Can Order Any <br> Medication Which
+				Will Then Be Sent Directly.
 			</p>
-		</div>
-		<div
-			id="collapseFour"
-			class="panel-collapse collapse"
-			data-bs-parent="#accordion"
-			aria-labelledby="headingFour"
-		>
-			<div class="faq__lg__body">
-				No, you do not need an in-person healthcare provider to use VPeptides...
-			</div>
-		</div>
-	</div>
-	<!--FAQ Item End-->
-
-	<div
-		class="panel panel-default faq__item faq__item--primary-lighter"
-		data-aos="fade-up"
-		data-aos-delay="600"
-		data-aos-duration="800"
-	>
-		<div class="panel-heading faq__lg__heading" role="tab" id="headingFive1">
-			<p
-				class="collapsed fs-md-22 fs-14 fw-500"
-				role="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseFive1"
-				aria-expanded="false"
-				aria-controls="collapseFive1"
-			>
-				<span>What kind of additional support do you offer?</span>
-			</p>
-		</div>
-		<div
-			id="collapseFive1"
-			class="panel-collapse collapse"
-			data-bs-parent="#accordion"
-			aria-labelledby="headingFive1"
-		>
-			<div class="faq__lg__body">
-				<p>We prioritize your privacy and security of your information...</p>
-			</div>
 		</div>
 	</div>
 
-	<!-- Duplicate ID fixed for Bootstrap 5 -->
-	<div
-		class="panel panel-default faq__item faq__item--primary-lighter"
-		data-aos="fade-up"
-		data-aos-delay="600"
-		data-aos-duration="800"
-	>
-		<div class="panel-heading faq__lg__heading" role="tab" id="headingFive2">
-			<p
-				class="collapsed fs-md-22 fs-14 fw-500"
-				role="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseFive2"
-				aria-expanded="false"
-				aria-controls="collapseFive2"
-			>
-				<span>What happens when I reach my ideal weight?</span>
-			</p>
+	<div class="faq__content">
+		<div class="faq__media">
+			<img src={`${imagePath}/product.png`} alt="Product packaging" />
 		</div>
-		<div
-			id="collapseFive2"
-			class="panel-collapse collapse"
-			data-bs-parent="#accordion"
-			aria-labelledby="headingFive2"
-		>
-			<div class="faq__lg__body">
-				<p>We prioritize your privacy and security of your information...</p>
-			</div>
+
+		<div class="faq__accordion accordion" id="faqAccordionHome">
+			{
+				faqs.map((faq, index) => (
+					<div class="faq__item accordion-item">
+						<h3 class="faq__item-header accordion-header">
+							<button
+								class={`faq__button accordion-button${index === 0 ? "" : " collapsed"}`}
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target={`#${faq.id}`}
+								aria-expanded={index === 0 ? "true" : "false"}
+								aria-controls={faq.id}
+							>
+								<span class="faq__question">{faq.question}</span>
+								<span class="faq__icon" aria-hidden="true"></span>
+							</button>
+						</h3>
+						<div
+							id={faq.id}
+							class={`faq__collapse accordion-collapse collapse${index === 0 ? " show" : ""}`}
+							data-bs-parent="#faqAccordionHome"
+						>
+							<div class="faq__answer accordion-body">
+								<p>{faq.answer}</p>
+							</div>
+						</div>
+					</div>
+				))
+			}
 		</div>
 	</div>
 </div>
