@@ -115,131 +115,402 @@
 .category {
 	&__home {
 		&__wrapper {
-			background: white;
-			padding: 0 80px;
+			background: $white;
+			padding: 0;
 			border-radius: 0 0 10px 10px;
-
-			@media all and (max-width: 992px) {
-				padding: 0 8px;
-			}
-		}
-	}
-
-	&__card {
-		border-radius: 20px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-
-		h4,
-		h5,
-		h6 {
-			color: white;
-		}
-
-		&__one {
-			min-height: 320px;
-			padding: 30px;
-			background: url('../img/home/category/weight-loss.jpg') center center /
-				cover no-repeat;
-
-			@media all and (max-width: 992px) {
-				padding: 15px;
-			}
-
-			@media all and (max-width: 768px) {
-				min-height: 190px;
-			}
-		}
-
-		&__two {
-			min-height: 320px;
-			padding: 30px;
-			background: url('../img/home/category/anti-aging.jpg') center center /
-				cover no-repeat;
-
-			@media all and (max-width: 992px) {
-				padding: 15px;
-			}
-
-			@media all and (max-width: 768px) {
-				min-height: 190px;
-			}
-		}
-
-		&__three {
-			min-height: 150px;
-			padding: 15px 30px;
-			background: url('../img/home/category/hormone-health.jpg') center center /
-				cover no-repeat;
-
-			@media all and (max-width: 768px) {
-				min-height: 190px;
-			}
-		}
-
-		&__four {
-			min-height: 150px;
-			padding: 15px 30px;
-			background: url('../img/home/category/pre-workout.jpg') center center /
-				cover no-repeat;
-
-			@media all and (max-width: 768px) {
-				min-height: 190px;
-			}
-		}
-
-		&__five {
-			min-height: 150px;
-			padding: 15px 30px;
-			background: url('../img/home/category/sexual-health.jpg') center center /
-				cover no-repeat;
-
-			@media all and (max-width: 768px) {
-				flex-direction: row;
-				align-items: center;
-				min-height: 100px;
-			}
-		}
-
-		&__six {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/hair-growth.jpg') center center /
-				cover no-repeat;
-			flex-direction: row;
-			align-items: center;
-		}
-
-		&__seven {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/sterile-injections.jpg') center
-				center / cover no-repeat;
-			flex-direction: row;
-			align-items: center;
-		}
-
-		&__eight {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/testosterone.jpg') center center /
-				cover no-repeat;
-			flex-direction: row;
-			align-items: center;
-		}
-
-		&__nine {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/sleep.jpg') center center / cover
-				no-repeat;
-			flex-direction: row;
-			align-items: center;
 		}
 	}
 
 	&__items {
-		margin-top: 0;
+		position: relative;
+		overflow: hidden;
+		min-height: 912px;
+		padding: 50px 122px 50px;
+		border-radius: 20px;
+		margin-top: 10px;
+		background: linear-gradient(199.79deg, #00533f 12.52%, #33c074 59.8%);
+		isolation: isolate;
+
+		@media all and (max-width: 1199px) {
+			padding: 42px 56px 40px;
+		}
+
+		@media all and (max-width: 991px) {
+			min-height: auto;
+			padding: 34px 24px 30px;
+		}
+
+		@media all and (max-width: 575px) {
+			padding: 28px 16px 24px;
+			border-radius: 12px;
+		}
+	}
+
+	&__intro {
+		position: relative;
+		z-index: 3;
+		display: grid;
+		grid-template-columns: minmax(0, 560px) minmax(220px, 330px);
+		justify-content: space-between;
+		gap: 28px;
+
+		h2 {
+			margin: 0;
+			color: $white;
+			font-size: 44px;
+			font-weight: 500;
+			line-height: 1.20;
+			letter-spacing: -4%;
+
+			span {
+				display: block;
+			}
+		}
+
+		p {
+			align-self: end;
+			margin: 90px 0 0px;
+			color: $white;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.5;
+			// letter-spacing: -4%;
+		}
+
+		@media all and (max-width: 991px) {
+			grid-template-columns: 1fr;
+
+			h2 {
+				font-size: 30px;
+			}
+
+			p {
+				max-width: 430px;
+				align-self: auto;
+			}
+		}
+
+		@media all and (max-width: 575px) {
+			h2 {
+				font-size: 26px;
+			}
+		}
+	}
+
+	&__curve {
+		position: absolute;
+		z-index: -10;
+		top: 110px;
+		left: -40px;
+		width: calc(100% + 120px);
+		max-width: none;
+		pointer-events: none;
+
+		@media all and (max-width: 991px) {
+			top: 230px;
+			left: -140px;
+			width: 135%;
+		}
+
+		@media all and (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	&__hero-person {
+		position: absolute;
+		z-index: 2;
+		top: 190px;
+		left: 50%;
+		width: min(330px, 29vw);
+		transform: translateX(-50%);
+		pointer-events: none;
+
+		@media all and (max-width: 991px) {
+			top: 236px;
+			width: 250px;
+			opacity: 0.85;
+		}
+
+		@media all and (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__card {
+		position: relative;
+		overflow: hidden;
+		border-radius: 14px;
+		background: #01544080;
+		backdrop-filter: blur(150px);
+		color: $white;
+		text-decoration: none;
+		display: flex;
+		transition:
+			transform 0.3s ease,
+			background-color 0.3s ease;
+
+		&:hover {
+			transform: translateY(-3px);
+			color: $white;
+		}
+
+		&--featured {
+		position: relative;
+			padding: 30px;
+			flex-direction: column;
+			justify-content: space-between;
+
+			h3 {
+				position: relative;
+				z-index: 3;
+				max-width: 140px;
+				margin: 0;
+				color: $white;
+				font-size: 26px;
+				font-weight: 600;
+				line-height: 1.25;
+				padding-bottom: 152px;
+			}
+
+			@media all and (max-width: 767px) {
+				min-height: 245px;
+				padding: 22px;
+			}
+		}
+
+		&--compact {
+			min-height: 88px;
+			padding: 20px;
+			align-items: center;
+			gap: 18px;
+
+			h4 {
+				position: relative;
+				z-index: 2;
+				max-width: 70px;
+				margin: auto;
+				color: $white;
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 1.25;
+			}
+
+			@media all and (max-width: 767px) {
+				min-height: 96px;
+			}
+		}
+	}
+
+	&__featured-grid {
+		position: relative;
+		z-index: 4;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+		margin-top: 225px;
+
+		@media all and (max-width: 991px) {
+			margin-top: 220px;
+		}
+
+		@media all and (max-width: 767px) {
+			grid-template-columns: 1fr;
+			margin-top: 36px;
+		}
+	}
+
+	&__product-row {
+		// position: absolute;
+		// z-index: 1;
+		// left: 24px;
+		// right: 18px;
+		// top: 118px;
+		display: grid;
+		grid-template-columns: repeat(7, minmax(56px, 76px));
+		gap: 14px;
+
+		@media all and (max-width: 1199px) {
+			grid-template-columns: repeat(3, minmax(52px, 70px));
+		}
+
+		@media all and (max-width: 575px) {
+			top: 108px;
+			grid-template-columns: repeat(3, 58px);
+		}
+	}
+
+	&__product-carousel {
+		position: absolute;
+		left: 24px;
+		right: 24px;
+		top: 55%;
+		bottom: auto;
+		width: auto;
+		max-width: none;
+		transform: translateY(-50%);
+
+		.swiper-wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media all and (max-width: 1199px) {
+			left: 16px;
+			right: 16px;
+			bottom: 16px;
+			top: auto;
+			transform: none;
+			width: auto;
+		}
+
+		@media all and (max-width: 767px) {
+			position: relative;
+			width: 100%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: auto;
+			transform: none;
+			margin-top: 16px;
+		}
+	}
+
+	&__product-tile {
+		width: 90px;
+		height: 90px;
+		border-radius: 14px;
+		background: #1d9a65;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 65px;
+			height: auto;
+		}
+
+		&--muted {
+			opacity: 0.35;
+		}
+
+		@media all and (max-width: 1199px) {
+			width: 70px;
+			height: 70px;
+		}
+
+		@media all and (max-width: 575px) {
+			width: 58px;
+			height: 58px;
+		}
+	}
+
+	&__card-person {
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		// top: 24px;
+		bottom: 0;
+		width: min(46%, 280px);
+		max-height: 100%;
+		object-fit: contain;
+		object-position: bottom center;
+		pointer-events: none;
+		transform: translateX(-50%);
+
+		@media all and (max-width: 1199px) {
+			left: 50%;
+			width: min(48%, 220px);
+			top: 20px;
+			transform: translateX(-50%);
+		}
+
+		@media all and (max-width: 767px) {
+			max-width: 55%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__arrow {
+		position: relative;
+		z-index: 3;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: #01785080;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		font-size: 16px;
+		line-height: 1;
+		flex: 0 0 auto;
+	}
+
+	&__compact-grid {
+		position: relative;
+		z-index: 4;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 12px;
+		margin-top: 16px;
+
+		@media all and (max-width: 767px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__compact-person {
+		position: relative;
+		z-index: 2;
+		align-self: flex-end;
+		width: 114px;
+		height: 88px;
+		object-fit: contain;
+		object-position: bottom left;
+		margin: 0 4px -20px 0;
+		flex: 0 0 auto;
+	}
+
+	&__action {
+		position: relative;
+		z-index: 4;
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 24px;
+
+		@media all and (max-width: 767px) {
+			justify-content: center;
+		}
+	}
+
+	&__view-all {
+		min-height: 44px;
+		padding: 13px 40px;
+		border-radius: 999px;
+		background: linear-gradient(90deg, #f8ffc3 0%, #e8f86c 100%);
+		color: #0a1714;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 18px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s ease;
+
+		&:hover {
+			color: #0a1714;
+			transform: translateY(-2px);
+		}
 	}
 }
+

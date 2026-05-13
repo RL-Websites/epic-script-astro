@@ -1,101 +1,141 @@
-<div class="row g-3 category__items">
-	<div class="col-6">
-		<div class="category__card category__card__one">
-			<h4>Weight <br /> Loss</h4>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
+---
+const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
+
+const featuredCategories = [
+	{
+		title: "Weight Loss",
+		image: "happy-fitness-girl.png",
+		alt: "Happy fitness woman",
+		sliderItems: [
+			"injection-left.png",
+			"progestorone.png",
+			"injection-right.png",
+			"injection-left.png",
+			"progestorone.png",
+			"injection-right.png",
+			"progestorone.png",
+			"injection-left.png",
+			"progestorone.png",
+			"injection-right.png",
+		],
+	},
+	{
+		title: "Hormone Health",
+		image: "about-us.webp",
+		alt: "People focused on hormone health",
+		sliderItems: [
+			"progestorone.png",
+			"injection-left.png",
+			"progestorone.png",
+			"injection-right.png",
+			"progestorone.png",
+			"injection-left.png",
+			"progestorone.png",
+			"progestorone.png",
+			"injection-left.png",
+			"progestorone.png",
+		],
+	},
+];
+const compactCategories = [
+    { 
+        name: "Hair Growth", 
+        image: "smiling-young-man.png" 
+    },
+    { 
+        name: "Sexual Health", 
+        image: "happy-couple.png" 
+    },
+    { 
+        name: "Pre Workout", 
+        image: "happy-working-woman.png" 
+    }
+];
+---
+
+<div class="category__items">
+	<div class="category__intro">
+		<h2>Your Wellness, Simplified. <span>Explore Our Categories.</span></h2>
+		<p>
+			Explore Our Product Categories To Find Everything You Need For Your
+			Health And Wellness Journey. From Lab Testing Kits To Supplements.
+		</p>
 	</div>
-	<div class="col-6">
-		<div class="category__card category__card__two">
-			<h4>Anti <br /> Aging</h4>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
+
+	<img
+		class="category__curve"
+		src={`${imagePath}/curveLine.svg`}
+		alt=""
+		aria-hidden="true"
+	/>
+	<img
+		class="category__hero-person"
+		src={`${imagePath}/woman.png`}
+		alt="Woman enjoying wellness"
+	/>
+
+	<div class="category__featured-grid">
+		{
+			featuredCategories.map((category) => (
+				<a class="category__card category__card--featured" href="/category">
+					<h3>{category.title}</h3>
+						{category.sliderItems ? (
+							<div class="category__product-carousel swiper" aria-hidden="true">
+								<div class="swiper-wrapper">
+									{category.sliderItems.map((slide) => (
+										<div class="swiper-slide">
+											<span class="category__product-tile">
+												<img src={`${imagePath}/${slide}`} alt="" />
+											</span>
+										</div>
+									))}
+								</div>
+							</div>
+						) : (
+							<div class="category__product-row" aria-hidden="true">
+								<span class="category__product-tile category__product-tile--muted">
+									<img src={`${imagePath}/progestorone.png`} alt="" />
+								</span>
+								<span class="category__product-tile">
+									<img src={`${imagePath}/progestorone.png`} alt="" />
+								</span>
+								<span class="category__product-tile">
+									<img src={`${imagePath}/progestorone.png`} alt="" />
+								</span>
+							</div>
+						)}
+					<span class="category__arrow" aria-label={`View ${category.title}`}>
+						<i class="icon-right-arrow" />
+					</span>
+					<img
+						class="category__card-person"
+						src={`${imagePath}/${category.image}`}
+						alt={category.alt}
+					/>
+				</a>
+			))
+		}
 	</div>
-	<div class="col-md-4 col-6">
-		<div class="category__card category__card__three">
-			<h5>Hormone <br /> Health</h5>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
+
+	<div class="category__compact-grid">
+		{
+			compactCategories.map((category) => (
+				<a class="category__card category__card--compact" href="/category">
+					<img
+						class="category__compact-person"
+						src={`${imagePath}/${category.image}`}
+						alt={category.name}
+					/>
+					<h4>{category.name}</h4>
+					<span class="category__arrow" aria-label={`View ${category}`}>
+						<i class="icon-right-arrow" />
+					</span>
+				</a>
+			))
+		}
 	</div>
-	<div class="col-md-4 col-6">
-		<div class="category__card category__card__four">
-			<h5>Pre <br /> Workout</h5>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="category__card category__card__five">
-			<h5>Sexual <br /> Health</h5>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="category__card category__card__six">
-			<h6>Hair <br /> Growth</h6>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="category__card category__card__seven">
-			<h6>Sterile <br /> Injections</h6>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="category__card category__card__eight">
-			<h6>Testosterone <br /> Replacement</h6>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="category__card category__card__nine">
-			<h6>Sleep</h6>
-			<a
-				class="theme-btn theme-btn__icon theme-btn__icon__dark"
-				href="/category"
-			>
-				<i class="icon-right-arrow"></i>
-			</a>
-		</div>
+
+	<div class="category__action">
+		<a class="category__view-all" href="/category">View All Categories</a>
 	</div>
 </div>
