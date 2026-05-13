@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Homehero from "../components/homePage/Homehero.astro";
 import Layout from "../layouts/Layout.astro";
+import SolutionCard from "../components/Solutions.astro";
 ---
 
 <Layout>
@@ -33,9 +34,10 @@ import Layout from "../layouts/Layout.astro";
 		<section class="solutions mb-10">
 			<div class="container-fluid">
 				<div class="solutions__wrapper">
-					<div class="row">
+					<SolutionCard />
+					<!-- <div class="row">
 						<div class="col-md-6">
-							<!-- Card 1 -->
+							Card 1
 							<div class="solutions__card solutions__card__one">
 								<div class="solutions__content">
 									<div class="solutions__icon">
@@ -58,7 +60,7 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 						</div>
 						<div class="col-md-6 mt-md-0 mt-20">
-							<!-- Card 2 -->
+							Card 2
 							<div class="solutions__card solutions__card__two">
 								<div class="solutions__content">
 									<div class="solutions__icon">
@@ -82,7 +84,7 @@ import Layout from "../layouts/Layout.astro";
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
