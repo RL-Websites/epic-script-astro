@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import Homehero from "../components/homePage/Homehero.astro";
 import Layout from "../layouts/Layout.astro";
 import SolutionCard from "../components/Solutions.astro";
+import Pharmacy from "../components/Pharmacy.astro";
 ---
 
 <Layout>
@@ -90,8 +91,18 @@ import SolutionCard from "../components/Solutions.astro";
 		</section>
 		<!--===||  Solution Section End ||===-->
 
-		<!--===||  Pharmacy Section Start ||===-->
+		<!--===|| New Pharmacy Section Start ||===-->
 		<section class="pharmacy">
+			<div class="container-fluid">
+				<div class="pharmacy__wrapper">
+					<Pharmacy />
+				</div>
+			</div>
+		</section>
+		<!--===|| New Pharmacy Section Start ||===-->
+
+		<!--===||  Pharmacy Section Start ||===-->
+		<!-- <section class="pharmacy">
 			<div class="container-fluid">
 				<div class="pharmacy__wrapper">
 					<div class="row">
@@ -162,7 +173,7 @@ import SolutionCard from "../components/Solutions.astro";
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!--===||  Pharmacy Section End ||===-->
 
 		<!--===||  Features Section Start ||===-->
