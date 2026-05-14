@@ -1,0 +1,177 @@
+@use '../base/variables' as *;
+
+.delivery {
+	&__panel {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		padding: 78px 80px;
+		border-radius: 16px;
+		background: linear-gradient(180deg, #01533F 0%, #33C075 100%);
+	}
+
+	&__content {
+		color: $white;
+	}
+
+	&__title {
+		margin: 0;
+		color: $white;
+		font-size: 64px;
+		font-weight: 500;
+		line-height: 1.18;
+	}
+
+	&__divider {
+		display: block;
+		width: 100%;
+		max-width: 450px;
+		height: 1px;
+		margin: 50px 0;
+		background: rgba(255, 255, 255, 0.4);
+	}
+
+	&__text {
+		margin: 0;
+		color: $white;
+		font-size: 16px;
+	}
+
+	&__button {
+		display: inline-flex;
+		margin-top: 30px;
+		padding: 12px 40px;
+		border: 1px solid rgba(219, 235, 102, 1);
+		border-radius: 100px;
+		background: linear-gradient(90deg, #F2FF8F 0%, #E8F86C 100%);
+		color: #212121;
+		font-size: 16px;
+		font-weight: 500;
+		text-decoration: none;
+		transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+		&:hover,
+		&:focus {
+			color: #212121;
+			transform: translateY(-2px);
+			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+		}
+	}
+
+	&__visual {
+		position: relative;
+		z-index: 1;
+		min-height: 460px;
+		align-self: stretch;
+	}
+
+	&__mobile {
+		position: absolute;
+		left: -15%;
+		bottom: -78px;
+		z-index: 2;
+	}
+
+	&__cards {
+		position: absolute;
+		top: 15px;
+		left: 44px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__card {
+		padding: 20px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(8px);
+		color: rgba(255, 255, 255, 1);
+
+	}
+
+	&__card-brand {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 12px;
+		color: $white;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+
+		&__img{
+			border: 2px solid #E8F86C;
+			border-radius: 50%;
+
+		}
+	}
+
+	&__card-text {
+		font-size: 12px;
+		color: $white;
+	}
+
+	@media all and (max-width: 768px) {
+		&__panel {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 24px;
+			padding: 34px 18px 0;
+			border-radius: 16px;
+		}
+
+		&__title {
+			font-size: 40px;
+			line-height: 1.2;
+		}
+
+		&__divider {
+			margin: 28px 0 26px;
+		}
+
+		&__text {
+			font-size: 16px;
+			line-height: 1.55;
+			text-transform: none;
+		}
+
+		&__button {
+			min-width: 148px;
+			margin-top: 26px;
+			padding: 11px 26px;
+		}
+
+		&__visual {
+			min-height: 520px;
+		}
+
+		&__mobile {
+			bottom: -18px;
+			width: min(520px, 132%);
+		}
+
+		&__cards {
+			top: 6px;
+			left: 50%;
+			width: min(320px, 78%);
+			transform: translateX(-50%);
+		}
+
+		&__card {
+			min-height: 84px;
+			padding: 16px 18px;
+		}
+
+		&__card-brand {
+			margin-bottom: 10px;
+			font-size: 10px;
+		}
+
+		&__card-text {
+			font-size: 12px;
+		}
+	}
+}

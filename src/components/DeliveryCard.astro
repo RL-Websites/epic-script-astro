@@ -1,0 +1,53 @@
+---
+const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
+
+const deliveryCards = [
+    {
+        text: "Iron levels are low - I recommend foods or supplements.",
+        image: "doctor-1.png"
+    },
+    {
+        text: "Good evening. Your labs are ready in your patient portal.",
+        image: "doctor-2.png"
+    },
+    {
+        text: "Your cholesterol is slightly elevated. Diet and check again.",
+        image: "doctor-3.png"
+    }
+];
+---
+
+<div class="delivery__panel">
+	<div class="delivery__content">
+		<h2 class="delivery__title">Deliver More To <br/> Your Patients</h2>
+		<span class="delivery__divider" aria-hidden="true"></span>
+		<p class="delivery__text">
+			Through Sophisticated Software Design, We Specialize In <br> Online Prescription
+			Fulfillment. Your Patient Can Order Any <br> Medication Which Will Then Be Sent
+			Directly.
+		</p>
+		<a class="delivery__button" href="/about">Find Out More</a>
+	</div>
+
+	<div class="delivery__visual" aria-hidden="true">
+		<div class="delivery__cards">
+			{
+				deliveryCards.map((card) => (
+					<div class="delivery__card">
+						<div class="delivery__card-brand">
+							<img src={`${imagePath}/${card.image}`}  class="delivery__card-brand__img" alt="" loading="lazy" />
+							<span>Epiq Scripts</span>
+						</div>
+						<p class="delivery__card-text">{card.text}</p>
+					</div>
+				))
+			}
+		</div>
+		<img
+			class="delivery__mobile"
+			src={`${imagePath}/mobileImg.svg`}
+			alt=""
+			loading="lazy"
+		/>
+	</div>
+</div>
