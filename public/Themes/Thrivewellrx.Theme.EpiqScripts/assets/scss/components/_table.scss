@@ -8,7 +8,7 @@
 	.table {
 		margin-bottom: 0;
 		vertical-align: baseline;
-		background-color: #f3f3f3;
+		background-color: $gray-lighter3;
 
 		thead {
 			vertical-align: baseline;
@@ -16,10 +16,11 @@
 
 			th {
 				padding: 20px 0 !important;
+				border-color: $gray-lighter3;
 				border-bottom: 0 !important;
 				font-weight: 600;
 				vertical-align: baseline;
-				background-color: $gray-light;
+				background-color: $gray-lighter5;
 			}
 		}
 
@@ -32,25 +33,31 @@
 				vertical-align: top !important;
 				font-size: $fs-16;
 				line-height: 1.4;
-				border-top: 1px solid $gray-light;
-				background-color: $gray-light;
+				border-top: 1px solid $gray-lighter3;
+				background-color: transparent;
+
 			}
 
 			tr {
+				transition: background 400ms;
 				border-bottom: 1px solid $gray-light;
 				min-height: 70px;
 				background-color: transparent;
 
 				&:nth-of-type(even) {
-					background-color: transparent !important;
+					background-color: $gray-lighter5 !important;
 				}
 
 				&:nth-of-type(odd) {
-					background-color: transparent !important;
+					background-color: white !important;
 				}
 
 				td:last-child {
 					border-bottom: 0 !important;
+				}
+
+				&:hover {
+					background-color: $green-lighter3 !important;
 				}
 			}
 		}
@@ -89,13 +96,14 @@
 		}
 	}
 
-	.table > :not(caption) > * > * {
+	.table> :not(caption)>*>* {
 		border-bottom: 0 !important;
 	}
 
 	&.normal-table {
 		.table {
 			&__normal {
+
 				thead,
 				tbody,
 				tr {
@@ -114,9 +122,10 @@
 	&__time {
 		width: 140px;
 	}
+
 	&__Id {
 		font-weight: 700;
-		color: $primary !important;
+		color: $green-medium !important;
 		text-decoration: underline;
 	}
 }
@@ -193,16 +202,18 @@
 // 	background-color: #DADADA !important;
 // }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
-	--bs-table-accent-bg: unset;
-	color: var(--bs-table-striped-color);
+.table-striped>tbody>tr:nth-of-type(odd) {
+	--bs-table-accent-bg: $gray-lighter3;
+	color: $gray-lighter3;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table-striped>tbody>tr:nth-of-type(odd) {
 	background-color: transparent !important;
 }
 
 .table {
+
+
 	.list-table__actions {
 		.view-button {
 			border: 0;
