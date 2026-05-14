@@ -1,0 +1,66 @@
+---
+const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
+
+const cards = [
+	{
+		title: "High Volume Prescription Fulfillment",
+		iconName: `document`,
+		alt: "High volume prescription fulfillment",
+	},
+	{
+		title: "Custom Compounding",
+		iconName: `pitcher`,
+		alt: "Custom compounding",
+	},
+	{
+		title: "Custom Branding & Packaging",
+		iconName: `box`,
+		alt: "Custom branding and packaging",
+	},
+	{
+		title: "Shipment And Delivery",
+		iconName: `truck`,
+		alt: "Shipment and delivery",
+	},
+	{
+		title: "Robust APIs & Unified Communication Platform",
+		iconName: `Globe`,
+		alt: "Robust APIs and unified communication platform",
+	},
+	{
+		title: "End-To-End Digital Pharmacy Solutions",
+		iconName: `heart`,
+		alt: "End-to-end digital pharmacy solutions",
+	},
+];
+---
+
+<div class="digital-pharmacy__panel">
+	<div class="digital-pharmacy__intro">
+		<div class="digital-pharmacy__title">
+			<h2>Deliver Digital <br/> Pharmacy Solutions</h2>
+		</div>
+		<div class="digital-pharmacy__summary">
+			<p>
+				Through Sophisticated Software Design, We Specialize In <br/> Online
+				Prescription Fulfillment. Your Patient Can Order Any <br/> Medication Which
+				Will Then Be Sent Directly.
+			</p>
+		</div>
+	</div>
+
+	<div class="digital-pharmacy__grid">
+		{
+			cards.map((card) => (
+				<a class="digital-pharmacy__card" href="/about">
+					<div class="digital-pharmacy__card-inner">
+						<div class="digital-pharmacy__icon-wrap">
+							<i class={`icon-${card.iconName}`}></i>
+						</div>
+						<h3>{card.title}</h3>
+					</div>
+				</a>
+			))
+		}
+	</div>
+</div>
