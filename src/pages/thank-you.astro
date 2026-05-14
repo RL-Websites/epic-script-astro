@@ -299,25 +299,28 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 
 					<div
-						class="thank-you__actions d-md-flex justify-content-between d-none"
+						class="thank-you__actions d-md-flex d-none"
 						data-aos="fade-up"
 						data-aos-duration="1000"
 						data-aos-once="true"
 					>
 						<a
 							href="/my-order"
-							class="theme-btn theme-btn__outline theme-btn__outline--primary"
+							class="theme-btn theme-btn__outline theme-btn__outline--primary w-auto"
 						>
 							View My Orders
 						</a>
-						<button type="button" class="theme-btn theme-btn__primary fw-400">
+						<button
+							type="button"
+							class="theme-btn theme-btn__primary theme-btn__width-auto fw-400 w-auto"
+						>
 							Continue Shopping
 						</button>
 					</div>
 				</div>
 			</div>
 		</section>
-		<div class="floating__buttons d-md-none d-flex justify-content-between">
+		<div class="floating__buttons d-md-none d-flex">
 			<div class="floating__buttons__items">
 				<a
 					href="/my-order"

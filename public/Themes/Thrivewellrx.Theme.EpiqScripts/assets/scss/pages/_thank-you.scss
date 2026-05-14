@@ -3,9 +3,9 @@
   padding-bottom: 100px;
 
   &__actions {
-    max-width: 430px;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between !important;
     gap: 20px;
     margin: 40px auto 0;
   }
