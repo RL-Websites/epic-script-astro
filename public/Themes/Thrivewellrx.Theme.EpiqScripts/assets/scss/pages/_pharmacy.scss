@@ -76,7 +76,7 @@
 	&__card {
 		position: relative;
 		overflow: hidden;
-		min-height: 342px;
+		// min-height: 342px;
 		border-radius: 18px;
 		text-decoration: none;
 		display: flex;
@@ -155,6 +155,7 @@
 		flex: 1 1 auto;
 		display: flex;
 		justify-content: center;
+		overflow: hidden;
 
 		img {
 			display: block;
@@ -163,7 +164,7 @@
 		}
 
 		&--branding {
-			padding: 12px 0 0;
+			padding: 0;
 			background:
 				linear-gradient(180deg, rgba(255, 255, 255, 0.54) 0%, rgba(255, 255, 255, 0) 100%),
 				linear-gradient(168deg, #eff6ef 0%, #dfece0 26%, #c0e4c4 54%, #edf4ee 100%);
@@ -233,6 +234,56 @@
 			span {
 				font-size: 9px;
 			}
+		}
+	}
+
+	// Carousel image animations
+	.carousel-image {
+		position: absolute !important;
+		inset: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		opacity: 0;
+		z-index: 1;
+		object-fit: contain;
+		object-position: bottom center;
+		pointer-events: none;
+
+		&.active {
+			opacity: 1;
+			z-index: 2;
+		}
+
+		&.enter-animation {
+			animation: slideInFromBottom 0.5s ease-out forwards;
+			z-index: 2;
+		}
+
+		&.exit-animation {
+			animation: slideOutToTop 0.5s ease-out forwards;
+			z-index: 1;
+		}
+	}
+
+	@keyframes slideInFromBottom {
+		from {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideOutToTop {
+		from {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		to {
+			transform: translateY(-100%);
+			opacity: 0;
 		}
 	}
 }

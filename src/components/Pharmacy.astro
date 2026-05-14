@@ -1,6 +1,21 @@
 ---
 const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
 
+const brandingImages = [
+	{
+		image: `${imagePath}/epiq-script-medicine.png`,
+		alt: "Epiq Scripts medicine packaging 1",
+	},
+	{
+		image: `${imagePath}/epiq-script-medicine-2.png`,
+		alt: "Epiq Scripts medicine packaging 2",
+	},
+	{
+		image: `${imagePath}/epiq-script-medicine-3.png`,
+		alt: "Epiq Scripts medicine packaging 3",
+	},
+];
+
 const pharmacyCards = [
 	{
 		modifier: "branding",
@@ -33,8 +48,15 @@ const pharmacyCards = [
 			<div class="pharmacy__card-head">
 				<h3>{pharmacyCards[0].title}</h3>
 			</div>
-			<div class="pharmacy__card-media pharmacy__card-media--branding">
-				<img src={pharmacyCards[0].image} alt={pharmacyCards[0].alt} />
+			<div class="pharmacy__card-media pharmacy__card-media--branding" id="brandingCarousel">
+				{brandingImages.map((item, index) => (
+					<img 
+						src={item.image} 
+						alt={item.alt}
+						class={`carousel-image ${index === 0 ? 'active' : ''}`}
+						data-index={index}
+					/>
+				))}
 			</div>
 		</a>
 
@@ -70,3 +92,49 @@ const pharmacyCards = [
 		</a>
 	</div>
 </div>
+
+<script>
+	function initBrandingCarousel() {
+		const carousel = document.getElementById('brandingCarousel');
+		if (!carousel) return;
+
+		const images = carousel.querySelectorAll('.carousel-image');
+		if (images.length <= 1) return;
+
+		let currentIndex = 0;
+		const totalImages = images.length;
+		const rotationInterval = 2000; // 2 seconds
+
+		setInterval(() => {
+			const previousIndex = currentIndex;
+			currentIndex = (currentIndex + 1) % totalImages;
+
+			const previousImg = images[previousIndex];
+			const currentImg = images[currentIndex];
+
+			// Remove active class from previous and add animation
+			previousImg.classList.remove('active');
+			previousImg.classList.add('exit-animation');
+
+			// Add active class to current with animation
+			currentImg.classList.add('active');
+			currentImg.classList.add('enter-animation');
+
+			// Remove animation classes after animation completes
+			setTimeout(() => {
+				previousImg.classList.remove('exit-animation');
+			}, 3000);
+
+			setTimeout(() => {
+				currentImg.classList.remove('enter-animation');
+			}, 3000);
+		}, rotationInterval);
+	}
+
+	// Initialize when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initBrandingCarousel);
+	} else {
+		initBrandingCarousel();
+	}
+</script>
