@@ -19,9 +19,8 @@
 	display: inline-block;
 
 	&__primary {
-		background-color: $primary;
-		border: 1px solid $primary;
-		color: white;
+		background: linear-gradient(90deg, #F8FFC3 0%, #E8F86C 100%);
+		color: $black-deep;
 
 		&:hover {
 			color: $secondary;
@@ -141,12 +140,26 @@
 		}
 
 		&--primary {
-			border: 1px solid $primary;
-			color: $primary;
+			// border: 1px solid $primary;
+			// color: $primary;
+			background: #1D1D1D;
+			background: #1D1D1D33;
+			background: linear-gradient(180deg, rgba(102, 102, 102, 0) 50%, rgba(102, 102, 102, 0.4) 100%);
+			background: linear-gradient(180deg, rgba(102, 102, 102, 0.2) 0%, rgba(102, 102, 102, 0) 32.69%);
+
+			backdrop-filter: blur(24px);
+
+			box-shadow: 0px 0px 22px 0px #F2F2F280 inset;
+
+			box-shadow: 2px 2px 1px -2px #B3B3B3 inset;
+
+			box-shadow: -12px -12px 6px -14px #B3B3B3 inset;
+
+
 
 			&:hover,
 			&:focus {
-				border: 1px solid $yellow-lighter;
+				// border: 1px solid $yellow-lighter;
 				color: $secondary;
 				background-color: $yellow-lighter;
 			}

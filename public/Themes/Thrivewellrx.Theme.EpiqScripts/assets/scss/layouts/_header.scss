@@ -11,6 +11,87 @@
 		z-index: 999;
 		// background: #FFFFFF;
 		border-radius: 10px;
+		transform: translateY(0);
+		opacity: 1;
+
+		// Hide/show header based on scroll direction
+		&.header-hidden {
+			transform: translateY(-100%);
+			opacity: 0;
+		}
+
+		&.header-visible {
+			transform: translateY(0);
+			opacity: 1;
+			left: 0;
+			right: 0;
+			border-radius: 0;
+		}
+
+		// Scrolled state styling
+		&.header-scrolled {
+			// background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+			.site__logo--main {
+				opacity: 0;
+			}
+
+			.site__logo--alt {
+				opacity: 1;
+			}
+
+			.site__menu__list li a {
+				color: $white;
+
+				i {
+					color: $white;
+				}
+
+				&:hover,
+				&:focus,
+				&.active {
+					color: $white;
+				}
+
+				&::after {
+					background-color: $white;
+				}
+			}
+
+			.site__menu--auth .theme-btn__outline {
+				color: $white;
+				border-color: $white;
+
+				&:hover {
+					background-color: $white;
+					color: $primary;
+				}
+			}
+
+			.site__menu--auth .theme-btn__primary {
+				background-color: $white;
+				color: $primary;
+
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.9);
+				}
+			}
+
+			.header-icon {
+				color: $white;
+
+				&:hover {
+					color: rgba(255, 255, 255, 0.8);
+				}
+			}
+
+			.hamburger-menu {
+				color: $white;
+			}
+		}
 
 		&--border {
 			border: 2px solid $gray-light;
@@ -24,8 +105,7 @@
 			padding: 10px 30px;
 			top: 0;
 			box-shadow: 0 4px 20px rgba($black, 0.1);
-			backdrop-filter: blur(8px);
-			-webkit-backdrop-filter: blur(8px);
+			background: #00000080;
 
 			@media all and (max-width: 992px) {
 				padding: 10px 8px;
@@ -100,6 +180,17 @@
 			height: 56px;
 			width: auto;
 			transition: all 0.3s ease;
+
+			&.site__logo--main {
+				opacity: 1;
+			}
+
+			&.site__logo--alt {
+				opacity: 0;
+				position: absolute;
+				top: 10px;
+				left: 30px;
+			}
 		}
 	}
 
@@ -108,13 +199,14 @@
 		align-items: center;
 		gap: 40px;
 		flex: 1;
-		justify-content: end;
+		padding: 0 32px 0 150px;
+		justify-content: space-between;
 
 		&__list {
 			display: flex;
 			align-items: center;
 			gap: 32px;
-			margin: 0 auto;
+			// margin: 0 auto;
 			padding: 0;
 			list-style: none;
 
@@ -153,7 +245,7 @@
 
 					i {
 						font-size: $fs-14;
-						color: $gray-dark;
+						color: $black-deep;
 
 						@media all and (max-width: 992px) {
 							font-size: 14px;
@@ -168,6 +260,7 @@
 			align-items: center;
 			gap: 16px;
 			flex-shrink: 0;
+			// margin-left: auto;
 
 			@media all and (max-width: 992px) {
 				gap: 10px
