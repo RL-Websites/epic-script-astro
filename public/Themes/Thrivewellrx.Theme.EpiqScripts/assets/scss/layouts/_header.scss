@@ -105,7 +105,7 @@
 			padding: 10px 30px;
 			top: 0;
 			box-shadow: 0 4px 20px rgba($black, 0.1);
-			background: #00000080;
+			background: rgba(0, 0, 0, 0.50);
 
 			@media all and (max-width: 992px) {
 				padding: 10px 8px;
@@ -170,7 +170,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 20px;
+		gap: 75px;
 	}
 
 	&__logo {
@@ -201,6 +201,11 @@
 		flex: 1;
 		padding: 0 32px 0 150px;
 		justify-content: space-between;
+
+		@media all and (max-width: 992px) {
+			padding: 0;
+		justify-content: end;
+		}
 
 		&__list {
 			display: flex;
