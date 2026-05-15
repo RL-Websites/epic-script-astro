@@ -1,6 +1,11 @@
 @use '../base/variables' as *;
 
 .digital-pharmacy {
+	background-image: url('/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/bg/pharmacy-solution-bg.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		
 	&__inner,
 	&__wrapper {
 		padding: 0;
