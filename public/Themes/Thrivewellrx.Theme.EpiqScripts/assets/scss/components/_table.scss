@@ -262,7 +262,7 @@
 	.order-table {
 		&__data {
 			&--time {
-				width: 100px;
+				// width: 100px;
 			}
 		}
 	}
@@ -273,7 +273,7 @@
 		margin-bottom: 20px;
 
 		&__row {
-			padding: 16px 24px;
+			// padding: 16px 24px;
 			border-bottom: 1px solid $primary-light;
 
 			&:last-child {
@@ -287,7 +287,7 @@
 		}
 
 		&__data {
-			width: 100%;
+			// width: 100%;
 			margin-top: 8px;
 		}
 	}
@@ -296,7 +296,7 @@
 @media only screen and (max-width: 576px) {
 	.order-table {
 		&__row {
-			padding: 16px 15px;
+			// padding: 16px 15px;
 		}
 
 		&__title {
@@ -304,7 +304,7 @@
 		}
 
 		&__data {
-			width: 100%;
+			// width: 100%;
 			margin-top: 8px;
 		}
 	}
