@@ -84,12 +84,27 @@
 	}
 
 	&__card {
+		position: relative;
+		overflow: hidden;
 		padding: 20px;
 		border-radius: 12px;
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(8px);
 		color: rgba(255, 255, 255, 1);
 
+		&--overlay {
+			&::after {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				border-radius: inherit;
+				background:
+					linear-gradient(180deg, rgba(1, 83, 63, 0.16) 0%, rgba(1, 83, 63, 0.36) 100%),
+					rgba(1, 83, 63, 0.18);
+				content: "";
+				pointer-events: none;
+			}
+		}
 	}
 
 	&__card-brand {
