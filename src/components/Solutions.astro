@@ -4,11 +4,11 @@ const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
 
 <div class="solutions__content">
 	<div class="solutions__copy">
-		<h2>End-To-End Digital Solutions</h2>
+		<h2>End-To-End <br>  Digital Solutions</h2>
 		<span class="solutions__divider" aria-hidden="true"></span>
 		<p>
-			Through Sophisticated Software Design, We Specialize In Online
-			Prescription Fulfillment. Your Patient Can Order Any Medication
+			Through Sophisticated Software Design, We Specialize In <br> Online
+			Prescription Fulfillment. Your Patient Can Order Any <br> Medication
 			Which Will Then Be Sent Directly.
 		</p>
 		<a class="solutions__button" href="/about">Find Out More</a>
@@ -20,124 +20,123 @@ const imagePath = "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img";
 			src={`${imagePath}/two-happy-woman.png`}
 			alt="Two happy women"
 		/>
-	</div>
-
-	<div class="solutions__stat">
-		<div class="solutions__stat-card solutions__stat-card--week">
-			<div class="solutions__week-header">
-				<div class="solutions__week-copy">
-					<span class="solutions__stat-label">This Week</span>
-					<strong class="solutions__stat-value">8420</strong>
-					<small class="solutions__stat-note"
-						>Steps per day (avg)</small
+		<div class="solutions__stat">
+			<div class="solutions__stat-card solutions__stat-card--week">
+				<div class="solutions__week-header">
+					<div class="solutions__week-copy">
+						<span class="solutions__stat-label">This Week</span>
+						<strong class="solutions__stat-value">8420</strong>
+						<small class="solutions__stat-note"
+							>Steps per day (avg)</small
+						>
+					</div>
+					<div
+						class="solutions__week-progress"
+						aria-label="57 percent of goal"
 					>
+						<svg viewBox="0 0 56 56" aria-hidden="true">
+							<circle
+								class="solutions__week-progress-track"
+								cx="28"
+								cy="28"
+								r="21"></circle>
+							<circle
+								class="solutions__week-progress-value"
+								cx="28"
+								cy="28"
+								r="21"></circle>
+						</svg>
+						<div class="solutions__week-progress-copy">
+							<strong>57%</strong>
+							<span>Of Goal</span>
+						</div>
+					</div>
 				</div>
-				<div
-					class="solutions__week-progress"
-					aria-label="57 percent of goal"
-				>
-					<svg viewBox="0 0 56 56" aria-hidden="true">
-						<circle
-							class="solutions__week-progress-track"
-							cx="28"
-							cy="28"
-							r="21"></circle>
-						<circle
-							class="solutions__week-progress-value"
-							cx="28"
-							cy="28"
-							r="21"></circle>
-					</svg>
-					<div class="solutions__week-progress-copy">
-						<strong>57%</strong>
-						<span>Of Goal</span>
+
+				<div class="solutions__week-footer">
+					<div class="solutions__metric">
+						<i class="icon-calendar"></i>
+						<div>
+							<strong>1320</strong>
+							<span>Steps per day (avg)</span>
+						</div>
+					</div>
+					<div class="solutions__metric">
+						<i class="icon-clock"></i>
+						<div>
+							<strong>7h 12m</strong>
+							<span>Sleep (avg)</span>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="solutions__week-footer">
-				<div class="solutions__metric">
-					<i class="icon-calendar"></i>
+			<div class="solutions__stat-card solutions__stat-card--refill">
+				<div class="solutions__refill-heading">
+					<span class="solutions__refill-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none">
+							<path
+								d="M12 4.25a4 4 0 0 0-4 4v2.04c0 .43-.14.85-.41 1.18l-.94 1.18A2.2 2.2 0 0 0 8.37 16h7.26a2.2 2.2 0 0 0 1.72-3.35l-.94-1.18a1.9 1.9 0 0 1-.41-1.18V8.25a4 4 0 0 0-4-4Z"
+								stroke="currentColor"
+								stroke-width="1.7"
+								stroke-linecap="round"
+								stroke-linejoin="round"></path>
+							<path
+								d="M10.25 18a1.75 1.75 0 0 0 3.5 0"
+								stroke="currentColor"
+								stroke-width="1.7"
+								stroke-linecap="round"></path>
+						</svg>
+					</span>
 					<div>
-						<strong>1320</strong>
+						<strong>Refill Reminder</strong>
 						<span>Steps per day (avg)</span>
 					</div>
 				</div>
-				<div class="solutions__metric">
-					<i class="icon-clock"></i>
+
+				<div class="solutions__refill-body">
+					<strong>May 24, 2025</strong>
+					<strong>10:30 AM</strong>
+				</div>
+
+				<div class="solutions__refill-progress" aria-hidden="true"></div>
+
+				<div class="solutions__refill-meta">
+					<span>Tirzepatide</span>
+					<span>2.2mg</span>
+				</div>
+			</div>
+
+			<div class="solutions__stat-card solutions__stat-card--appointment">
+				<div class="solutions__appointment-header">
 					<div>
-						<strong>7h 12m</strong>
-						<span>Sleep (avg)</span>
+						<span class="solutions__stat-label"
+							>Upcoming Appointment</span
+						>
+						<div class="solutions__appointment-time">
+							<strong>May 24, 2025</strong>
+							<strong>10:30 AM</strong>
+						</div>
 					</div>
+
+					<img
+						class="solutions__appointment-avatar"
+						src={`${imagePath}/doctor-avatar.png`}
+						alt="Doctor avatar"
+					/>
 				</div>
-			</div>
-		</div>
 
-		<div class="solutions__stat-card solutions__stat-card--refill">
-			<div class="solutions__refill-heading">
-				<span class="solutions__refill-icon" aria-hidden="true">
-					<svg viewBox="0 0 24 24" fill="none">
-						<path
-							d="M12 4.25a4 4 0 0 0-4 4v2.04c0 .43-.14.85-.41 1.18l-.94 1.18A2.2 2.2 0 0 0 8.37 16h7.26a2.2 2.2 0 0 0 1.72-3.35l-.94-1.18a1.9 1.9 0 0 1-.41-1.18V8.25a4 4 0 0 0-4-4Z"
-							stroke="currentColor"
-							stroke-width="1.7"
-							stroke-linecap="round"
-							stroke-linejoin="round"></path>
-						<path
-							d="M10.25 18a1.75 1.75 0 0 0 3.5 0"
-							stroke="currentColor"
-							stroke-width="1.7"
-							stroke-linecap="round"></path>
-					</svg>
-				</span>
-				<div>
-					<strong>Refill Reminder</strong>
-					<span>Steps per day (avg)</span>
+				<div class="solutions__appointment-progress" aria-hidden="true">
 				</div>
-			</div>
 
-			<div class="solutions__refill-body">
-				<strong>May 24, 2025</strong>
-				<strong>10:30 AM</strong>
-			</div>
-
-			<div class="solutions__refill-progress" aria-hidden="true"></div>
-
-			<div class="solutions__refill-meta">
-				<span>Tirzepatide</span>
-				<span>2.2mg</span>
-			</div>
-		</div>
-
-		<div class="solutions__stat-card solutions__stat-card--appointment">
-			<div class="solutions__appointment-header">
-				<div>
-					<span class="solutions__stat-label"
-						>Upcoming Appointment</span
-					>
-					<div class="solutions__appointment-time">
-						<strong>May 24, 2025</strong>
-						<strong>10:30 AM</strong>
+				<div class="solutions__appointment-footer">
+					<span class="solutions__appointment-icon" aria-hidden="true">
+						<i class="icon-calendar"></i>
+					</span>
+					<div>
+						<strong>Follow-up with</strong>
+						<span>Dr. C. Emery</span>
 					</div>
-				</div>
-
-				<img
-					class="solutions__appointment-avatar"
-					src={`${imagePath}/doctor-avatar.png`}
-					alt="Doctor avatar"
-				/>
-			</div>
-
-			<div class="solutions__appointment-progress" aria-hidden="true">
-			</div>
-
-			<div class="solutions__appointment-footer">
-				<span class="solutions__appointment-icon" aria-hidden="true">
-					<i class="icon-calendar"></i>
-				</span>
-				<div>
-					<strong>Follow-up with</strong>
-					<span>Dr. C. Emery</span>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 @use '../base/variables' as *;
 
 .delivery {
+	background-color: $white;
 	&__panel {
 		position: relative;
 		display: grid;

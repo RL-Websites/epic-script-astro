@@ -25,7 +25,7 @@
 
 	&__content {
 		position: relative;
-		min-height: 812px;
+		min-height: 950px;
 
 
 		@media all and (max-width: 991px) {
@@ -37,12 +37,10 @@
 
 	&__copy {
 		position: relative;
-		z-index: 4;
-		max-width: 470px;
 
 		h2 {
 			margin: 0;
-			color: #222222;
+			color: $black-deep;
 			font-size: 74px;
 			font-weight: 600;
 			line-height: 1.18;
@@ -50,29 +48,26 @@
 		}
 
 		p {
-			max-width: 390px;
 			margin: 42px 0 0;
-			color: #141414;
+			color: $black-deep;
 			font-size: 16px;
-			font-weight: 400;
-			line-height: 1.6;
-			text-transform: capitalize;
 		}
 
-		@media all and (max-width: 1199px) {
-			h2 {
-				font-size: 48px;
-			}
-		}
+		// @media all and (max-width: 1199px) {
+		// 	h2 {
+		// 		font-size: 48px;
+		// 	}
+		// }
 
-		@media all and (max-width: 767px) {
+		@media all and (max-width: 768px) {
 			h2 {
-				font-size: 38px;
+				font-size: 36px;
 			}
 
 			p {
 				margin-top: 30px;
 				font-size: 14px;
+				max-width: 390px;
 			}
 		}
 	}
@@ -118,7 +113,7 @@
 		z-index: 2;
 		right: 12px;
 		bottom: 0;
-		width: min(720px, 64vw);
+		width: 100%;
 		min-height: 690px;
 
 		@media all and (max-width: 991px) {
@@ -153,26 +148,25 @@
 	&__people {
 		position: absolute;
 		z-index: 2;
-		// right: 50%;
-		// left: 100%;
+		right: 15%;
 		bottom: 0;
-		width: min(620px, 76%);
-		max-height: 690px;
 		object-fit: contain;
 		object-position: bottom center;
 		pointer-events: none;
 		// transform: translateX(80%);
 
-		@media all and (max-width: 1199px) {
-			right: 40px;
-			width: min(560px, 82%);
-		}
+		// @media all and (max-width: 1199px) {
+		// 	right: 40px;
+		// 	width: min(560px, 82%);
+		// }
 
-		@media all and (max-width: 991px) {
+		@media all and (max-width: 768px) {
 			left: 50%;
 			right: auto;
-			width: min(540px, 92%);
+			width: 100%;
 			transform: translateX(-50%);
+			object-fit: contain;
+		object-position: bottom center;
 		}
 	}
 
@@ -202,15 +196,15 @@
 		}
 
 		&--week {
-			top: 250px;
-			right: 50px;
+			top: 0%;
+			right: 7%;
 			max-width: 240px;
 			min-height: 114px;
 		}
 
 		&--refill {
-			right: 30%;
-			bottom: 175px;
+			right: 39%;
+			bottom: 20%;
 			max-width: 240px;
 			min-height: 113px;
 			padding: 12px 17px 14px;
@@ -218,8 +212,8 @@
 		}
 
 		&--appointment {
-			right: 150px;
-			bottom: 115px;
+			right: 15%;
+			bottom: 15%;
 			max-width: 240px;
 			min-height: 113px;
 			padding: 20px;
