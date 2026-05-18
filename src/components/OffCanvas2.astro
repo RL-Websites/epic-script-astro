@@ -1,0 +1,140 @@
+---
+interface Props {
+	id?: string;
+	title?: string;
+}
+
+const { id = "productStartOffcanvas", title = "SEMAGLUTIDE 0.25mg - 0.5mg" } =
+	Astro.props;
+---
+
+<div
+	class="offcanvas offcanvas-end offcanvas2"
+	tabindex="-1"
+	id={id}
+	aria-labelledby={`${id}Label`}
+>
+	<div class="offcanvas2__header">
+		<div class="offcanvas2__header-start">
+			<button type="button" class="offcanvas2__icon-btn" aria-label="Back">
+				<i class="icon-left-arrow"></i>
+			</button>
+			<h2 class="offcanvas2__title" id={`${id}Label`}>{title}</h2>
+		</div>
+		<button
+			type="button"
+			class="offcanvas2__icon-btn"
+			data-bs-dismiss="offcanvas"
+			aria-label="Close"
+		>
+			<i class="icon-cross"></i>
+		</button>
+	</div>
+
+	<div class="offcanvas2__body">
+		<section class="offcanvas2__section">
+			<h3 class="offcanvas2__heading">Select Shipping Type</h3>
+			<p class="offcanvas2__lead">
+				Please choose how this medication should be shipped.
+			</p>
+
+			<div class="offcanvas2__shipping-options" role="group" aria-label="Shipping type">
+				<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio1"
+							value="male"
+							checked
+						/>
+						<label for="answerRadio1"> Regular </label>
+					</div>
+				<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio2"
+							value="female"
+						/>
+						<label for="answerRadio2"> Overnight Shipping ($20) </label>
+					</div>
+			</div>
+
+			<div class="offcanvas2__notice">
+				Overnight shipping applies after prescription approval and pharmacy
+				processing. It does not guarantee next-day delivery from the order date.
+			</div>
+		</section>
+
+		<section class="offcanvas2__card">
+			<h3 class="offcanvas2__card-title">
+				Lab Testing Is Mandatory For All Testosterone Treatments
+			</h3>
+			<p>
+				Lab results are required before a doctor can approve any testosterone
+				prescription. Partners may allow the patient to use a certified lab of
+				their choice. If selecting this option:
+			</p>
+			<p>You have two options:</p>
+			<ul class="offcanvas2__list">
+				<li>The patient must complete all required panels</li>
+				<li>The report must be uploaded clearly into the Dosevana portal</li>
+				<li>
+					Missing or incomplete values will delay treatment and doctors
+					consultation will be charged.
+				</li>
+			</ul>
+			<h4 class="offcanvas2__subheading">Required Lab Panels</h4>
+			<ul class="offcanvas2__list">
+				<li>Prostate-Specific Ag</li>
+				<li>Testosterone, Free, Direct</li>
+				<li>CBC With Differential/Platelet</li>
+				<li>CBC/Diff Ambiguous Default</li>
+				<li>Estradiol, Sensitive</li>
+			</ul>
+		</section>
+
+		<section class="offcanvas2__card">
+			<h3 class="offcanvas2__card-title">Important Compliance Requirements</h3>
+			<div class="offcanvas2__stack">
+				<p>
+					<strong>Day 0 Lab:</strong>
+					Must be completed before any prescription review or medication
+					shipment.
+				</p>
+				<p>
+					<strong>Day 90 Lab:</strong>
+					A reminder is sent 15 days before. This lab must be completed before
+					Day 90, allowing the doctor 2-3 days to review results. Month 4
+					medication will not ship without this lab.
+				</p>
+				<p>
+					<strong>Day 120 Lab:</strong>
+					Another mandatory follow-up lab to monitor hormone safety and
+					stability.
+				</p>
+			</div>
+		</section>
+
+		<section class="offcanvas2__card">
+			<h3 class="offcanvas2__card-title">Important:</h3>
+			<p>
+				Without these lab results, our doctors cannot proceed with your
+				prescription.
+			</p>
+		</section>
+
+		<div class="offcanvas2__actions">
+			<button type="button" class="theme-btn theme-btn__primary offcanvas2__action">
+				I Agree
+			</button>
+			<button
+				type="button"
+				class="theme-btn theme-btn__outline theme-btn__outline--primary offcanvas2__action"
+				data-bs-dismiss="offcanvas"
+			>
+				Do Not Proceed
+			</button>
+		</div>
+	</div>
+</div>
