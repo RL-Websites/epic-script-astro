@@ -18,6 +18,7 @@
 				color: $secondary;
 				background-color: #f3f3f3;
 				width: 570px;
+
 				height: 64px;
 				border-radius: 50px;
 				font-weight: 500;
@@ -64,14 +65,14 @@
 	.assessment {
 		&__form {
 			.measurement {
-				max-width: 320px;
+				width: 100%;
 
 				.measurement-input {
 					padding: 0 5px;
 					border-radius: 12px;
 
 					.unit {
-						background-color: #162333;
+						// background-color: #162333;
 						padding: 0 15px;
 						border-radius: 0 12px 12px 0;
 					}
