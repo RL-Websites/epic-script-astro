@@ -15,6 +15,7 @@
 		flex-direction: column;
 		background-color: #ffffff;
 		padding: 180px 0 120px;
+
 		@media (max-width: 991px) {
 			padding: 120px 0 80px;
 		}
@@ -241,11 +242,9 @@
 					&:focus,
 					.active {
 						border: 1px solid rgba($blue-2, 0.9);
-						background: linear-gradient(
-							95.12deg,
-							$blue-2 7.77%,
-							$blue-3 95.93%
-						);
+						background: linear-gradient(95.12deg,
+								$blue-2 7.77%,
+								$blue-3 95.93%);
 						color: white;
 					}
 				}
@@ -409,8 +408,9 @@
 		}
 
 		&__label {
-			font-size: $fs-16;
-			margin-top: 0 !important;
+			font-size: $fs-22;
+			margin-top: 30px !important;
+			line-height: 120%;
 			border-radius: 50px;
 		}
 
@@ -519,6 +519,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
 				i {
 					font-size: 24px;
 					color: #111827;
@@ -528,6 +529,7 @@
 			.btn-close {
 				font-size: 1.25rem;
 				opacity: 0.5;
+
 				&:focus {
 					box-shadow: none;
 				}
@@ -553,11 +555,9 @@
 				top: 8px;
 				bottom: 8px;
 				width: 1px;
-				background-image: linear-gradient(
-					to bottom,
-					$gray-dark 50%,
-					transparent 50%
-				);
+				background-image: linear-gradient(to bottom,
+						$gray-dark 50%,
+						transparent 50%);
 				background-size: 1px 10px;
 				background-repeat: repeat-y;
 				z-index: 1;
@@ -581,6 +581,7 @@
 					background-color: $primary;
 					border: 2px solid $primary;
 				}
+
 				.assessment__progress-text {
 					color: $primary;
 				}
@@ -591,6 +592,7 @@
 					background-color: $green-deep;
 					border: 2px solid $primary;
 				}
+
 				.assessment__progress-text {
 					color: $primary;
 					font-weight: 500;
@@ -602,6 +604,7 @@
 					background-color: $white;
 					border: 2px solid $gray-dark;
 				}
+
 				.assessment__progress-text {
 					color: #9ca3af;
 				}
