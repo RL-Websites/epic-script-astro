@@ -1,8 +1,8 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import OrderTable from '../components/OrderTable.astro';
-import Layout from '../layouts/Layout.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import OrderTable from "../components/OrderTable.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout bodyClass="alt-bg">
@@ -19,261 +19,401 @@ import Layout from '../layouts/Layout.astro';
 							<h2
 								class="my-order__heading text-left"
 								data-aos="fade-up"
-								data-aos-duration="1000">
+								data-aos-duration="1000"
+							>
 								<span class="text-primary-grad-1 fw-700 fs-md-44">My Order</span
 								>
 							</h2>
+							<div class="mobile-title-border w-100 h-1 pt-2 pb-2"></div>
 
 							<div
-								class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
+								class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-20 mt-20"
 								data-aos="fade-left"
 								data-aos-duration="1000"
-								data-aos-delay="300">
+								data-aos-delay="300"
+							>
 								<div class="card-basic__body">
 									<div class="list-table">
 										<div class="table-responsive">
-											<table class="table order-list table-striped">
+											<table class="table order-list">
 												<thead>
 													<tr>
 														<th>Order ID</th>
 														<th>Date</th>
 														<th>Product</th>
-
-														<!-- <th>Prescription</th>
-												<th>Lab Reports</th>
-												<th>Driving License</th>
-												<th>Intake form</th> -->
-														<th>Status</th>
-														<th>Details</th>
+														<th>Billing Name</th>
+														<th>Amount</th>
+														<th class="text-center">Status</th>
+														<th class="text-center">Payments Status</th>
 													</tr>
 												</thead>
 
 												<tbody>
+													<!-- Row 1 -->
 													<tr>
-														<td class="list-table__Id">#nx20250400010</td>
-														<td class="list-table__time"
-															>12/28/2024 03:37:02 PM</td
-														>
-														<td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td
-														>
-
-														<!-- <td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td> -->
-														<!-- <td>
-													<div class="list-table__actions">
-														<button
-															class="view-button"
-															data-toggle="modal"
-															data-target="#view-reports-modal"
-														>
-															View (5)
-														</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td> -->
-														<!-- <td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td> -->
-														<!-- <td>
-													<button
-														class="view-button"
-														data-toggle="modal"
-														data-target="#modal-intake-form-view"
-													>
-														View
-													</button>
-												</td> -->
 														<td>
-															<span class="status-pill status-pill--received">
-																Received
-															</span>
+															<a class="list-table__Id" type="button"
+																>#732561265</a
+															>
 														</td>
+														<td class="list-table__time"
+															>April 20, 2026 10:26 AM</td
+														>
 														<td>
-															<button type="button" class="view-button">
-																View
+															<div
+																class="d-flex align-items-center justify-content-start gap-2"
+															>
+																<span>Tirzepatide 30mg</span>
+																<button
+																	type="button"
+																	class="status-pill status-pill--shipped px-3 py-2 productTooltipBtn"
+																	title="<div class='status-tooltip p-12'><strong>Package 2, Semaglutide</strong></div>"
+																	>+2</button
+																>
+															</div>
+														</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<div
+																class="d-flex align-items-center justify-content-center gap-2"
+															>
+																<button
+																	type="button"
+																	class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>P1</button
+																>
+																<button
+																	type="button"
+																	class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>P2</button
+																>
+																<button
+																	type="button"
+																	class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>S</button
+																>
+															</div>
+														</td>
+														<td class="text-center">
+															<button
+																type="button"
+																class="theme-btn theme-btn__icon-only statusTooltipBtn"
+																style="margin-left: 0;"
+																title="
+																	<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Paid :</span>
+																			<span>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Not paid:</span>
+																			<span>Semaglutide</span>
+																		</div>
+																		<div class='text-left'>
+																			<span class='fw-700 d-block'>Payment failed:</span>
+																			<span>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+																"
+															>
+																<i
+																	class="icon-money text-green-medium fs-24 fw-500"
+																></i>
 															</button>
 														</td>
 													</tr>
 
+													<!-- Row 2 -->
 													<tr>
-														<td class="list-table__Id">#nx20250400010</td>
+														<td
+															><a class="list-table__Id" href="">#732561265</a
+															></td
+														>
 														<td class="list-table__time"
-															>12/28/2024 03:37:02 PM</td
+															>April 20, 2026 10:26 AM</td
 														>
-														<td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td
-														>
-
-														<!-- <td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View (5)</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--paid">
+														<td>Tirzepatide 30mg</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<span
+																class="status-pill status-pill--shipped fs-12 py-10 px-12"
+															>
+																Shipped
+															</span>
+														</td>
+														<td class="text-center">
+															<span
+																class="status-pill status-pill--shipped fs-12"
+															>
 																Paid
 															</span>
 														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
 													</tr>
 
+													<!-- Row 3 -->
 													<tr>
-														<td class="list-table__Id">#7387</td>
-														<td>12/28/2024</td>
-														<td>Kyzetrex</td>
-
-														<!-- <td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View (5)</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--danger">
-																Declined
-															</span>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
-
-													<tr>
-														<td class="list-table__Id">#7387</td>
-														<td>12/28/2024</td>
-														<td>Kyzetrex</td>
-														<!-- <td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View (5)</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--processing">
-																Processing
-															</span>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
-
-													<tr>
-														<td class="list-table__Id">#7387</td>
-														<td>12/28/2024</td>
-														<td>Kyzetrex</td>
-
-														<!-- <td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View (5)</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td>
-													<div class="list-table__actions">
-														<button class="view-button">View</button>
-														<button class="view-button view-button--icon">
-															<i class="icon-upload"></i>
-														</button>
-													</div>
-												</td>
-												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--shipped"
-																>Shipped</span
+														<td
+															><a class="list-table__Id" href="">#732561265</a
+															></td
+														>
+														<td class="list-table__time"
+															>April 20, 2026 10:26 AM</td
+														>
+														<td>Tirzepatide 30mg</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<span
+																class="status-pill status-pill--shipped fs-12 py-10 px-12"
 															>
+																Shipped
+															</span>
 														</td>
+														<td class="text-center">
+															<button
+																type="button"
+																class="theme-btn theme-btn__icon-only statusTooltipBtn"
+																style="margin-left: 0;"
+																title="
+																	<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Paid :</span>
+																			<span>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Not paid:</span>
+																			<span>Semaglutide</span>
+																		</div>
+																		<div class='text-left'>
+																			<span class='fw-700 d-block'>Payment failed:</span>
+																			<span>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+																"
+															>
+																<i
+																	class="icon-money text-green-medium fs-24 fw-500"
+																></i>
+															</button>
+														</td>
+													</tr>
+
+													<!-- Row 4 — fixed: added text-center to Status td -->
+													<tr>
+														<td
+															><a class="list-table__Id" href="">#732561265</a
+															></td
+														>
+														<td class="list-table__time"
+															>April 20, 2026 10:26 AM</td
+														>
+														<td>Tirzepatide 30mg</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<span
+																class="status-pill status-pill--shipped fs-12 py-10 px-12"
+															>
+																Shipped
+															</span>
+														</td>
+														<td class="text-center">
+															<button
+																type="button"
+																class="theme-btn theme-btn__icon-only statusTooltipBtn"
+																style="margin-left: 0;"
+																title="
+																	<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Paid :</span>
+																			<span>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Not paid:</span>
+																			<span>Semaglutide</span>
+																		</div>
+																		<div class='text-left'>
+																			<span class='fw-700 d-block'>Payment failed:</span>
+																			<span>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+																"
+															>
+																<i
+																	class="icon-money text-green-medium fs-24 fw-500"
+																></i>
+															</button>
+														</td>
+													</tr>
+
+													<!-- Row 5 -->
+													<tr>
+														<td
+															><a class="list-table__Id" href="">#732561265</a
+															></td
+														>
+														<td class="list-table__time"
+															>April 20, 2026 10:26 AM</td
+														>
 														<td>
-															<button type="button" class="view-button">
-																View
+															<div class="d-flex align-items-center gap-2">
+																<span>Tirzepatide 30mg</span>
+																<button
+																	type="button"
+																	class="status-pill status-pill--shipped px-3 py-2 productTooltipBtn"
+																	title="<div class='status-tooltip p-12'><strong>Package 2, Semaglutide</strong></div>"
+																	>+2</button
+																>
+															</div>
+														</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<a
+																href="#"
+																class="status-pill status-pill--outline d-inline-flex align-items-center gap-1 p-0"
+															>
+																<button
+																	type="button"
+																	data-bs-toggle="modal"
+																	data-bs-target="#prescriptionModal"
+																	class="fs-6 fw-700 text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>View All Status</button
+																>
+																<i
+																	class="icon-refresh text-green-medium fw-500 fs-20"
+																></i>
+															</a>
+														</td>
+														<td class="text-center">
+															<button
+																type="button"
+																class="theme-btn theme-btn__icon-only statusTooltipBtn"
+																style="margin-left: 0;"
+																title="
+																	<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Paid :</span>
+																			<span>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Not paid:</span>
+																			<span>Semaglutide</span>
+																		</div>
+																		<div class='text-left'>
+																			<span class='fw-700 d-block'>Payment failed:</span>
+																			<span>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+																"
+															>
+																<i
+																	class="icon-money text-green-medium fs-24 fw-500"
+																></i>
+															</button>
+														</td>
+													</tr>
+
+													<!-- Row 6 -->
+													<tr>
+														<td
+															><a class="list-table__Id" href="">#732561265</a
+															></td
+														>
+														<td class="list-table__time"
+															>April 20, 2026 10:26 AM</td
+														>
+														<td>Tirzepatide 30mg</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<span
+																class="status-pill status-pill--shipped fs-12 py-10 px-12"
+															>
+																Shipped
+															</span>
+														</td>
+														<td class="text-center">
+															<span
+																class="status-pill status-pill--shipped fs-12"
+															>
+																Paid
+															</span>
+														</td>
+													</tr>
+
+													<!-- Row 7 — fixed: added text-center + justify-content-center to Status td -->
+													<tr>
+														<td
+															><a class="list-table__Id" href="">#732561265</a
+															></td
+														>
+														<td class="list-table__time"
+															>April 20, 2026 10:26 AM</td
+														>
+														<td class="text-center">
+															<div
+																class="d-flex align-items-center justify-content-start gap-2"
+															>
+																<span>Tirzepatide 30mg</span>
+																<button
+																	type="button"
+																	class="status-pill status-pill--shipped px-3 py-2 productTooltipBtn"
+																	title="<div class='status-tooltip p-12'><strong>Package 2, Semaglutide</strong></div>"
+																	>+2</button
+																>
+															</div>
+														</td>
+														<td>Tarance Lewis</td>
+														<td>$862.32</td>
+														<td class="text-center">
+															<div
+																class="d-flex align-items-center justify-content-center gap-2"
+															>
+																<button
+																	type="button"
+																	class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>P1</button
+																>
+																<button
+																	type="button"
+																	class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>P2</button
+																>
+																<button
+																	type="button"
+																	class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+																	>S</button
+																>
+															</div>
+														</td>
+														<td class="text-center">
+															<button
+																type="button"
+																class="theme-btn theme-btn__icon-only statusTooltipBtn"
+																style="margin-left: 0;"
+																title="
+																	<div class='status-tooltip p-12'>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Paid :</span>
+																			<span>GLP-1, AOD-9604</span>
+																		</div>
+																		<div class='text-left mb-12'>
+																			<span class='fw-700 d-block'>Not paid:</span>
+																			<span>Semaglutide</span>
+																		</div>
+																		<div class='text-left'>
+																			<span class='fw-700 d-block'>Payment failed:</span>
+																			<span>Cagrilintide Injectable Solution</span>
+																		</div>
+																	</div>
+																"
+															>
+																<i
+																	class="icon-money text-green-medium fs-24 fw-500"
+																></i>
 															</button>
 														</td>
 													</tr>
@@ -285,7 +425,8 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 
 							<div
-								class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30 border-0 rounded-0">
+								class="card-basic card-basic--no-shadow card-basic__table-mobile mt-4 border-0 rounded-0 mobile-order-card"
+							>
 								<div class="card-basic__body">
 									<OrderTable />
 									<OrderTable />
@@ -309,7 +450,8 @@ import Layout from '../layouts/Layout.astro';
 	id="view-reports-modal"
 	tabindex="-1"
 	role="dialog"
-	aria-labelledby="myModalLabel">
+	aria-labelledby="myModalLabel"
+>
 	<div class="modal-dialog" role="document">
 		<div class="modal-content overflow-h">
 			<div class="modal-header">
@@ -319,7 +461,8 @@ import Layout from '../layouts/Layout.astro';
 					type="button"
 					class="modal-close btn-close"
 					data-dismiss="modal"
-					aria-label="Close">
+					aria-label="Close"
+				>
 					<i class="icon-cross_filled"></i>
 				</button>
 			</div>
@@ -388,7 +531,8 @@ import Layout from '../layouts/Layout.astro';
 	class="modal fade intake-form-modal"
 	id="modal-intake-form-view"
 	tabindex="-1"
-	role="dialog">
+	role="dialog"
+>
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -398,7 +542,8 @@ import Layout from '../layouts/Layout.astro';
 					type="button"
 					class="modal-close btn-close"
 					data-dismiss="modal"
-					aria-label="Close">
+					aria-label="Close"
+				>
 					<i class="icon-cross_filled"></i>
 				</button>
 			</div>
@@ -458,7 +603,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<div class="modal__qa">
 					<p class="modal__ques"
-						>8. List any products you’re allergic to. Or answer none.</p
+						>8. List any products you're allergic to. Or answer none.</p
 					>
 					<p class="modal__ans"
 						>- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro

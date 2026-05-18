@@ -1,113 +1,73 @@
 <div class="order-table">
 	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Date</p>
+		<div class="order-table__title fs-16 fw-600">Order ID</div>
+		<div class="order-table__data">
+			<a class="list-table__Id" type="button">#732561265</a>
 		</div>
+	</div>
+
+	<div class="order-table__row">
+		<div class="order-table__title fs-16 fw-600">Date</div>
 		<div class="order-table__data order-table__data--time fs-14 fw-500">
-			12/28/2024 03:37:02 PM
+			April 20, 2026 10:26 AM
 		</div>
 	</div>
+
 	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Product</p>
-		</div>
-		<div class="order-table__data">
-			<p>Lyopholized 2X Blend CJC-1295 No DAC (5mg) / Ipamorelin (5mg)</p>
-		</div>
-	</div>
-	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Order ID</p>
-		</div>
-		<div class="order-table__data">
-			<p>#nx20250400010</p>
-		</div>
-	</div>
-	<!-- <div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Prescription</p>
-		</div>
-		<div class="order-table__data">
-			<div class="list-table__actions">
-				<button
-					class="view-button"
-					data-toggle="modal"
-					data-target="#view-reports-modal"
-				>
-					View (5)
-				</button>
-				<button class="view-button view-button--icon">
-					<i class="icon-upload"></i>
-				</button>
-			</div>
-		</div>
-	</div>
-	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Lab Reports</p>
-		</div>
-		<div class="order-table__data">
-			<div class="list-table__actions">
-				<button
-					class="view-button"
-					data-toggle="modal"
-					data-target="#view-reports-modal"
-				>
-					View (5)
-				</button>
-				<button class="view-button view-button--icon">
-					<i class="icon-upload"></i>
-				</button>
-			</div>
-		</div>
-	</div>
-	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Driving License</p>
-		</div>
-		<div class="order-table__data">
-			<div class="list-table__actions">
-				<button
-					class="view-button"
-					data-toggle="modal"
-					data-target="#view-reports-modal"
-				>
-					View (5)
-				</button>
-				<button class="view-button view-button--icon">
-					<i class="icon-upload"></i>
-				</button>
-			</div>
-		</div>
-	</div>
-	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Intake form</p>
-		</div>
-		<div class="order-table__data">
+		<div class="order-table__title fs-16 fw-600">Product</div>
+		<div class="order-table__data order-table__data--product">
+			<span>Tirzepatide 30mg</span>
 			<button
-				class="view-button"
-				data-toggle="modal"
-				data-target="#modal-intake-form-view"
+				type="button"
+				class="status-pill status-pill--shipped px-3 py-2 productTooltipBtn"
+				title="<div class='status-tooltip p-12'><strong>Package 2, Semaglutide</strong></div>"
 			>
-				View
+				+2
 			</button>
 		</div>
-	</div> -->
+	</div>
+
 	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Status</p>
-		</div>
-		<div class="order-table__data">
-			<span class="status-pill status-pill--default"> Received </span>
+		<div class="order-table__title fs-16 fw-600">Billing Name</div>
+		<div class="order-table__data">Tarance Lewis</div>
+	</div>
+
+	<div class="order-table__row">
+		<div class="order-table__title fs-16 fw-600">Amount</div>
+		<div class="order-table__data">$862.32</div>
+	</div>
+
+	<div class="order-table__row">
+		<div class="order-table__title fs-16 fw-600">Status</div>
+		<div class="order-table__data order-table__data--status">
+			<button
+				type="button"
+				class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+				>P1</button
+			>
+			<button
+				type="button"
+				class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+				>P2</button
+			>
+			<button
+				type="button"
+				class="text-green-medium text-decoration-underline bg-transparent border-0 p-0"
+				>S</button
+			>
 		</div>
 	</div>
+
 	<div class="order-table__row">
-		<div class="order-table__title fs-16 fw-600">
-			<p>Details</p>
-		</div>
-		<div class="order-table__data">
-			<button class="view-button"> View </button>
+		<div class="order-table__title fs-16 fw-600">Payments Status</div>
+		<div class="order-table__data order-table__data--payment">
+			<button
+				type="button"
+				class="theme-btn theme-btn__icon-only statusTooltipBtn"
+				title="..."
+			>
+				<i class="icon-money text-green-medium fs-24 fw-500"></i>
+			</button>
 		</div>
 	</div>
 </div>
