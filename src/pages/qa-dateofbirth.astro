@@ -1,0 +1,97 @@
+---
+import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout bodyClass="alt-bg">
+	<Header class="site__header--border" />
+	<div class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment mb-md-206 mb-80">
+				<!--Assesment Header Start -->
+				<!-- <AssesmentHeader /> -->
+				<!--Assesment Header End -->
+
+				<!-- Assessment question sub title start -->
+				<div class="d-flex justify-content-center w-100">
+					<img
+						class="newcustomer-mobile-img"
+						src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/newcustomer_female.png"
+					/>
+				</div>
+				<div class="assessment__label mt-40"> What is your Date of Birth? </div>
+				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
+				<div class="mt-10">
+					<div class="assessment__form">
+						<div
+							class="dropdown__selection dropdown__selection__date d-flex flex-column flex-md-row justify-content-center gap-10 w-100"
+						>
+							<div class="select__wrapper">
+								<select class="select__options">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
+
+							<div class="select__wrapper">
+								<select class="select__options">
+									<option disabled selected>Month</option>
+									<option>January</option>
+									<option>February</option>
+									<option>March</option>
+									<option>April</option>
+									<option>May</option>
+									<option>June</option>
+									<option>July</option>
+									<option>August</option>
+									<option>September</option>
+									<option>October</option>
+									<option>November</option>
+									<option>December</option>
+								</select>
+							</div>
+
+							<div class="select__wrapper">
+								<select class="select__options">
+									<option disabled selected>Year</option>
+									<option>2025</option>
+									<option>2024</option>
+									<option>2023</option>
+									<option>2022</option>
+									<option>2021</option>
+									<option>2020</option>
+									<option>2019</option>
+									<option>2018</option>
+									<option>2017</option>
+									<option>2016</option>
+									<option>2015</option>
+									<option>2014</option>
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+									<option>2007</option>
+									<option>2006</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<!-- Assessment buttons start -->
+					<CommonAction />
+					<!-- Assessment buttons end -->
+				</div>
+			</div>
+
+			<!--Footer Section end-->
+			<!-- <AssesmentFooter /> -->
+		</div>
+	</div>
+</Layout>
