@@ -1,0 +1,220 @@
+---
+import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout bodyClass="alt-bg">
+	<Header class="site__header--border" />
+	<main class="assessment__page-wrapper">
+		<div class="container">
+			<div class="assessment mb-md-206 mb-80">
+				<div class="assessment__label">
+					Do You Have Or Have Had Any Of The Following?
+				</div>
+				<div class="d-flex justify-content-center w-100 mb-30">
+					<img
+						class="newcustomer-mobile-img"
+						src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/newcustomer_female.png"
+						alt="Assessment Graphic"
+					/>
+				</div>
+
+				<div class="assessment__form">
+					<div class="row g-3">
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox1" class="m-0 cursor-pointer">
+									Medullary Thyroid Carcinoma (MTC)
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox1"
+									id="answerCheckbox1"
+									value="mtc"
+								/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox2" class="m-0 cursor-pointer">
+									Multiple Endocrine Neoplasia Type 2 (MEN2)
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox2"
+									id="answerCheckbox2"
+									value="men2"
+								/>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox3" class="m-0 cursor-pointer">
+									Pancreatitis
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox3"
+									id="answerCheckbox3"
+									value="pancreatitis"
+								/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox4" class="m-0 cursor-pointer">
+									Kidney disease
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox4"
+									id="answerCheckbox4"
+									value="kidney"
+								/>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox5" class="m-0 cursor-pointer">
+									Liver disease
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox5"
+									id="answerCheckbox5"
+									value="liver"
+								/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox6" class="m-0 cursor-pointer">
+									Severe GI disorders
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox6"
+									id="answerCheckbox6"
+									value="gi"
+								/>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox7" class="m-0 cursor-pointer">
+									Diabetic retinopathy
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox7"
+									id="answerCheckbox7"
+									value="retinopathy"
+								/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox8" class="m-0 cursor-pointer">
+									Type 1 Diabetes
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox8"
+									id="answerCheckbox8"
+									value="diabetes"
+								/>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox9" class="m-0 cursor-pointer">
+									Active cancer (undergoing treatment)
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox9"
+									id="answerCheckbox9"
+									value="cancer"
+								/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox10" class="m-0 cursor-pointer">
+									History of eating disorders
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox10"
+									id="answerCheckbox10"
+									value="eating"
+								/>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label for="answerCheckbox11" class="m-0 cursor-pointer">
+									History of substance abuse or addiction
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox11"
+									id="answerCheckbox11"
+									value="substance"
+								/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div
+								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
+							>
+								<label
+									for="answerCheckbox12"
+									class="m-0 cursor-pointer fw-bold"
+								>
+									None of the above
+								</label>
+								<input
+									type="checkbox"
+									name="answerCheckbox12"
+									id="answerCheckbox12"
+									value="none"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<CommonAction />
+			</div>
+		</div>
+	</main>
+</Layout>
