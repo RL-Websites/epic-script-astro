@@ -21,7 +21,10 @@ const { title, description, image, status } = Astro.props;
 		</p>
 	</div>
 	<div class="product-card__link">
-		<button type="button" class="theme-btn theme-btn__primary">
+		<button type="button" class="theme-btn theme-btn__primary"
+		 data-bs-toggle="offcanvas"
+		 data-bs-target="#productStartOffcanvas"
+		 aria-controls="productStartOffcanvas">
 			Get Started
 		</button>
 		<button
