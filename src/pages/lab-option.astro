@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import OffCanvas3 from '../components/OffCanvas3.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -60,7 +61,13 @@ import Layout from '../layouts/Layout.astro';
 							Select one of the options below to proceed with the required blood
 							tests
 						</p>
-						<button type="button" class="lab-option__button">
+						<button
+							type="button"
+							class="lab-option__button"
+							data-bs-toggle="offcanvas"
+							data-bs-target="#labOptionOffcanvas"
+							aria-controls="labOptionOffcanvas"
+						>
 							Choose Lab Option
 						</button>
 						<p class="lab-option__text lab-option__text--spaced">
@@ -88,5 +95,6 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 	</main>
+	<OffCanvas3 />
 	<Footer />
 </Layout>
