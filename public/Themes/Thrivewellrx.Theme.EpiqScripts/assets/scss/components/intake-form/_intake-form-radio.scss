@@ -30,6 +30,12 @@
         border: 1px solid $gray-dark;
       }
 
+      &__radioButton {
+        width: auto !important;
+        border-radius: 100px !important;
+        border: 0 !important;
+      }
+
       input {
         position: absolute;
         right: 17px;

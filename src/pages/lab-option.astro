@@ -1,0 +1,97 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import OffCanvas3 from '../components/OffCanvas3.astro';
+---
+
+<Layout>
+	<Header />
+	<main class="lab-option">
+		<section class="lab-option__section">
+			<div class="lab-option__container">
+				<h1 class="lab-option__title">
+					Select How You Would Like <br /> To Provide Lab Results
+				</h1>
+
+				<div class="lab-option__toggle" role="group" aria-label="Lab result option">
+					<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio1"
+							value="male"
+							checked
+						/>
+						<label for="answerRadio1"  class="assessment__form_radio__radioButton"> Select lab option now </label>
+					</div>
+				<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio2"
+							value="female"
+						/>
+						<label for="answerRadio2" class="assessment__form_radio__radioButton"> Let patient choose lab option later </label>
+					</div>
+				</div>
+
+				<div class="lab-option__card">
+					<section class="lab-option__block">
+						<h2 class="lab-option__heading">Required Lab Tests</h2>
+						<p class="lab-option__text">
+							The tests listed below are required for this program and will be
+							included in the lab requisition provided by Dosevana. The patient
+							may take this requisition to a nearby laboratory to complete the
+							required blood work.
+						</p>
+						<div class="lab-option__pills" aria-label="Required lab tests">
+							<span class="lab-option__pill">CBC</span>
+							<span class="lab-option__pill">TSH, T3, T4</span>
+							<span class="lab-option__pill">CMP/BMP</span>
+							<span class="lab-option__pill">Blood Test</span>
+						</div>
+					</section>
+
+					<section class="lab-option__block">
+						<h2 class="lab-option__heading">
+							Choose how lab work would be submitted for this order
+						</h2>
+						<p class="lab-option__text">
+							Select one of the options below to proceed with the required blood
+							tests
+						</p>
+						<button type="button" class="lab-option__button"
+                        data-bs-toggle="offcanvas"
+							data-bs-target="#labOptionOffcanvas"
+							aria-controls="labOptionOffcanvas">
+							Choose Lab Option
+						</button>
+						<p class="lab-option__text lab-option__text--spaced">
+							Choose how you want to complete your lab work
+						</p>
+					</section>
+
+					<section class="lab-option__block lab-option__block--last">
+						<h2 class="lab-option__heading">Lab Option</h2>
+						<span class="lab-option__selected-pill">
+							Patient's Preferred Lab (Requisition Provided)
+						</span>
+						<p class="lab-option__text lab-option__text--spaced">
+							Lab requisition download and report upload will be available after
+							the order is created.
+						</p>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<div class="lab-option__footer-action">
+			<div class="lab-option__footer-action-inner">
+				<button type="button" class="lab-option__next-btn">Next</button>
+			</div>
+		</div>
+	</main>
+    <OffCanvas3 />
+	<Footer />
+</Layout>

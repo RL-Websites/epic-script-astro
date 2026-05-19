@@ -1,0 +1,213 @@
+@use '../base/variables' as *;
+
+.lab-option {
+	background: $white;
+	color: $black-deep;
+	padding-top: 60px;
+
+	&__section {
+		min-height: 930px;
+		padding: 70px 16px 120px;
+	}
+
+	&__container {
+		// width: min(100%, 880px);
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin: 0;
+		color: $black-deep;
+		font-size: 44px;
+		font-weight: 600;
+		line-height: 1.35;
+		text-align: center;
+	}
+
+	&__toggle {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		margin-top: 20px;
+	}
+
+	// &__toggle-btn {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: space-between;
+	// 	gap: 16px;
+	// 	min-height: 60px;
+	// 	padding: 12px 32px;
+	// 	border: 0;
+	// 	border-radius: 999px;
+	// 	background: $gray-light;
+	// 	color: $black-deep;
+	// 	font-size: 20px;
+	// 	font-weight: 400;
+	// 	line-height: 1.2;
+	// 	text-align: left;
+	// 	cursor: pointer;
+	// }
+
+	// &__toggle-check {
+	// 	display: inline-flex;
+	// 	flex: 0 0 auto;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	width: 28px;
+	// 	height: 28px;
+	// 	border-radius: 50%;
+	// 	background: #00533F;
+	// 	color: $white;
+
+	// 	i {
+	// 		font-size: 18px;
+	// 		line-height: 1;
+	// 	}
+	// }
+
+	&__card {
+		margin-top: 30px;
+		border: 1px solid $gray-lighter3;
+		border-radius: 16px;
+		background: $white;
+	}
+
+	&__block {
+		padding: 22px;
+
+		& + & {
+			border-top: 1px dashed $gray-lighter3;
+		}
+	}
+
+	&__block--last {
+		padding-bottom: 24px;
+	}
+
+	&__heading {
+		color: $black-deep;
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	&__text {
+		margin: 14px 0 0;
+		color: $black-deep;
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	&__text--spaced {
+		margin-top: 18px;
+	}
+
+	&__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-top: 14px;
+	}
+
+	&__pill,
+	&__selected-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 0.5px solid $gray-dark;
+		border-radius: 20px;
+		background: $green-deep;
+		color: $black-deep;
+		font-weight: 700;
+	}
+
+	&__pill {
+		padding: 6px 26px;
+		font-size: 12px;
+		font-weight: 700;
+	}
+
+	&__selected-pill {
+		margin-top: 14px;
+		padding: 10px 16px;
+		font-size: 20px;
+	}
+
+	&__button,
+	&__next-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #00533F;
+		border-radius: 999px;
+		background: #00533F;
+		color: $white;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__button {
+		margin-top: 12px;
+		padding: 14px 40px;
+		font-size: 16px;
+	}
+
+	&__footer-action {
+		border-top: 1px solid #8BA39D;
+		background: $white;
+	}
+
+	&__footer-action-inner {
+		display: flex;
+		justify-content: flex-end;
+		width: min(100%, 1200px);
+		margin: 0 auto;
+		padding: 20px 16px 60px;
+	}
+
+	&__next-btn {
+		min-width: 196px;
+		min-height: 60px;
+		padding: 16px 48px;
+		font-size: 20px;
+	}
+
+	@media all and (max-width: 768px) {
+		&__section {
+			min-height: auto;
+			padding: 44px 16px 70px;
+		}
+
+		&__title {
+			font-size: 34px;
+		}
+
+		&__toggle {
+			grid-template-columns: 1fr;
+			gap: 14px;
+		}
+
+		&__toggle-btn {
+			min-height: 54px;
+			padding: 12px 22px;
+			font-size: 16px;
+		}
+
+		&__heading {
+			font-size: 22px;
+		}
+
+		&__selected-pill {
+			font-size: 16px;
+		}
+
+		&__footer-action-inner {
+			padding-bottom: 24px;
+		}
+
+		&__next-btn {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,239 @@
+@use '../base/variables' as *;
+
+.offcanvas3 {
+	width: 100%;
+	max-width: 770px;
+	border-left: 0;
+	background: $white;
+	color: $black-deep;
+	border-radius: 12px;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 18px;
+		padding: 30px 24px;
+		border-bottom: 1px solid $gray-dark;
+	}
+
+	&__header-start {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__icon-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		border: 0;
+		background: transparent;
+		color: $black-deep;
+
+		i {
+			font-size: 22px;
+			line-height: 1;
+		}
+	}
+
+	&__title {
+		color: $black-deep;
+		font-size: 32px;
+		font-weight: 600;
+	}
+
+	&__body {
+		padding: 30px 24px;
+		overflow-y: auto;
+	}
+
+	&__section {
+		margin-bottom: 40px;
+	}
+
+	&__heading {
+		color: $black-deep;
+		font-size: 28px;
+		font-weight: 600;
+	}
+
+	&__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		margin-top: 16px;
+	}
+
+	&__pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		// min-width: 43px;
+		// min-height: 17px;
+		padding: 4px 24px;
+		border: 0.5px solid $gray-dark;
+		border-radius: 10px;
+		background: $green-lighter3;
+		color: $black-deep;
+		font-size: 12px;
+		font-weight: 700;
+	}
+
+	&__form,
+	&__options {
+		display: grid;
+		gap: 30px;
+	}
+
+	&__option {
+		position: relative;
+
+		input {
+			position: absolute;
+			opacity: 0;
+			pointer-events: none;
+
+			&:checked + .offcanvas3__card {
+				border-color: $primary;
+				border-style: dashed;
+				background: $green-lighter3;
+
+				.offcanvas3__card-icon {
+					border-color: $primary;
+					background: $primary;
+
+					&::after {
+						content: "\e96c";
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						font-family: "icomoon";
+						font-size: 30px;
+						display: inline-flex;
+						height: 30px;
+						width: 30px;
+						line-height: 30px;
+						// color: $white;
+						background-color: $green-deep;
+						border-radius: 50%;
+				transition: all 0.3s;
+		}
+				}
+			}
+
+			&:focus-visible + .offcanvas3__card {
+				outline: 2px solid $primary;
+				outline-offset: 2px;
+			}
+		}
+	}
+
+	&__card {
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding: 12px 24px;
+		border: 1px solid transparent;
+		border-radius: 6px;
+		background: $gray-light;
+		color: $black-deep;
+		cursor: pointer;
+		transition:
+			background 0.2s ease,
+			border-color 0.2s ease;
+	}
+
+	&__card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 14px;
+		padding-bottom: 16px;
+		border-bottom: 1px solid $gray-dark;
+	}
+
+	&__card-title {
+		color: $black-deep;
+		font-size: 28px;
+		font-weight: 600;
+
+		// &::after {
+		// 		content: "\e96c";
+		// 		position: absolute;
+		// 		right: 10px;
+		// 		top: 22%;
+		// 		transform: translateY(-50%);
+		// 		font-family: "icomoon";
+		// 		font-size: 30px;
+		// 		display: inline-flex;
+		// 		height: 30px;
+		// 		width: 30px;
+		// 		line-height: 1;
+		// 		color: #00533f;
+		// 		border-radius: 50%;
+		// 		transition: all 0.3s;
+		// }
+	}
+
+	&__card-icon {
+		position: relative;
+		// display: inline-flex;
+		// flex: 0 0 auto;
+		// align-items: center;
+		// justify-content: center;
+		// width: 18px;
+		// height: 18px;
+		// border: 1.5px solid $primary;
+		// border-radius: 50%;
+		// background: transparent;
+		// color: $primary;
+
+		&::after {
+			content: "\e985";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-family: "icomoon";
+			font-size: 30px;
+			display: inline-flex;
+			height: 30px;
+			width: 30px;
+			line-height: 30px;
+			color: $primary;
+			transition: all 0.3s;
+		}
+	}
+
+	&__card-copy {
+		padding-top: 16px;
+		color: $black-deep;
+		font-size: 20px;
+		font-weight: 500;
+
+		P {
+			margin-top: 16px;
+		}
+	}
+
+	// &__save-btn {
+	// 	padding: 20px;;
+	// 	border: 0;
+	// 	border-radius: 100px;
+	// 	background: $primary;
+	// 	color: $white;
+	// 	font-size: 20px;
+	// 	font-weight: 600;
+	// }
+
+	// @media all and (max-width: 480px) {
+	// 	max-width: 100%;
+
+	// 	&__card-title {
+	// 		font-size: 17px;
+	// 	}
+	// }
+}

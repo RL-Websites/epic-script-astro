@@ -16,8 +16,9 @@ const { id = "productStartOffcanvas", title = "SEMAGLUTIDE 0.25mg - 0.5mg" } =
 >
 	<div class="offcanvas2__header">
 		<div class="offcanvas2__header-start">
-			<button type="button" class="offcanvas2__icon-btn" aria-label="Back">
-				<i class="icon-left-arrow"></i>
+			<button type="button" class="offcanvas2__icon-btn"  data-bs-dismiss="offcanvas"
+			aria-label="Close" aria-label="Back">
+				<i class="icon-back"></i>
 			</button>
 			<h2 class="offcanvas2__title" id={`${id}Label`}>{title}</h2>
 		</div>
@@ -47,7 +48,7 @@ const { id = "productStartOffcanvas", title = "SEMAGLUTIDE 0.25mg - 0.5mg" } =
 							value="male"
 							checked
 						/>
-						<label for="answerRadio1"> Regular </label>
+						<label for="answerRadio1" class="assessment__form_radio__radioButton"> Regular </label>
 					</div>
 				<div class="assessment__form_radio">
 						<input
@@ -56,7 +57,7 @@ const { id = "productStartOffcanvas", title = "SEMAGLUTIDE 0.25mg - 0.5mg" } =
 							id="answerRadio2"
 							value="female"
 						/>
-						<label for="answerRadio2"> Overnight Shipping ($20) </label>
+						<label for="answerRadio2" class="assessment__form_radio__radioButton"> Overnight Shipping ($20) </label>
 					</div>
 			</div>
 

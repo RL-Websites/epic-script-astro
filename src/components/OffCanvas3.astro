@@ -1,0 +1,105 @@
+---
+interface Props {
+	id?: string;
+	title?: string;
+}
+
+const { id = "labOptionOffcanvas", title = "Select Lab Option" } = Astro.props;
+
+const labTests = ["CBC", "TSH, T3, T4", "CMP/BMP", "Blood Test"];
+
+const labOptions = [
+	{
+		id: "patientPreferredRequisition",
+		title: "Patient's Preferred Lab (Requisition Provided)",
+		checked: true,
+		description: [
+			"A lab requisition form will be provided that can be taken to any laboratory of choice.",
+			"Payment will be made directly to the lab at the time of the visit.",
+		],
+	},
+	{
+		id: "patientPreferredUpload",
+		title: "Patient's Preferred Lab (Requisition Provided)",
+		description: [
+			"If recent lab results are available, they may be uploaded for medical review.",
+			"The lab report must be completed within the last 90 days and include the required tests. Based on the patient's profile, the system will display the necessary tests (e.g., Testosterone, Estradiol, PSA, CBC for men or hormone panel tests for women).",
+			"If required tests are missing, the order may be cancelled after doctor review. Medication will not be charged, but the doctor review fee may still apply.",
+		],
+	},
+	{
+		id: "dosevanaPrepaidLab",
+		title: "Prepaid Lab Setup by Dosevana",
+		description: [
+			"Dosevana will arrange the lab order with a partner laboratory.",
+			"The lab test fee will be added during checkout. The patient simply needs to visit the lab on the scheduled day, and results will be sent directly to our medical team.",
+			"(No paperwork or report uploads required.)",
+		],
+	},
+];
+---
+
+<div
+	class="offcanvas offcanvas-end offcanvas3"
+	tabindex="-1"
+	id={id}
+	aria-labelledby={`${id}Label`}
+>
+	<div class="offcanvas3__header">
+		<div class="offcanvas3__header-start">
+			<button type="button" class="offcanvas3__icon-btn" data-bs-dismiss="offcanvas"
+			aria-label="Close" aria-label="Back">
+				<i class="icon-back"></i>
+			</button>
+			<h2 class="offcanvas3__title" id={`${id}Label`}>{title}</h2>
+		</div>
+		<button
+			type="button"
+			class="offcanvas3__icon-btn"
+			data-bs-dismiss="offcanvas"
+			aria-label="Close"
+		>
+			<i class="icon-cross"></i>
+		</button>
+	</div>
+
+	<div class="offcanvas3__body">
+		<section class="offcanvas3__section">
+			<h3 class="offcanvas3__heading">Tests Needed For Your Lab Work</h3>
+			<div class="offcanvas3__pills" aria-label="Required lab tests">
+				{labTests.map((test) => <span class="offcanvas3__pill">{test}</span>)}
+			</div>
+		</section>
+
+		<form class="offcanvas3__form">
+			<div class="offcanvas3__options" role="radiogroup" aria-label="Lab option">
+				{
+					labOptions.map((option) => (
+						<div class="offcanvas3__option">
+							<input
+								type="radio"
+								name="labOption"
+								id={option.id}
+								value={option.id}
+								checked={option.checked}
+							/>
+							<label class="offcanvas3__card" for={option.id}>
+								<p class="offcanvas3__card-header">
+									<span class="offcanvas3__card-title">{option.title}</span>
+									<span class="offcanvas3__card-icon" aria-hidden="true" />
+								</p>
+								<span class="offcanvas3__card-copy">
+									{option.description.map((line) => (
+										<p>{line}</p>
+									))}
+								</span>
+							</label>
+						</div>
+					))
+				}
+			</div>
+
+			<button type="button" class="theme-btn theme-btn__primary px-20">Save</button>
+		</form>
+	</div>
+</div>
