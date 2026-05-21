@@ -25,10 +25,10 @@
 
 	&__content {
 		position: relative;
-		min-height: 950px;
+		min-height: 990px;
 
 
-		@media all and (max-width: 991px) {
+		@media all and (max-width: 768px) {
 			min-height: auto;
 			display: flex;
 			flex-direction: column;
@@ -116,34 +116,20 @@
 		width: 100%;
 		min-height: 690px;
 
-		@media all and (max-width: 991px) {
+		@media all and (max-width: 400px) {
+			width: 70%;
+			min-height: 300px;
+		}
+
+		@media all and (max-width: 768px) {
 			position: relative;
 			right: auto;
 			width: 100%;
-			min-height: 560px;
+			min-height: 300px;
 			margin-top: 36px;
 		}
 
-		@media all and (max-width: 575px) {
-			min-height: 460px;
-		}
 	}
-
-	// &__stat {
-	// 	position: absolute;
-	// 	inset: 0;
-	// 	z-index: 3;
-	// 	pointer-events: none;
-
-	// 	@media all and (max-width: 480px) {
-	// 		position: relative;
-	// 		inset: auto;
-	// 		margin-top: 18px;
-	// 		display: grid;
-	// 		gap: 12px;
-	// 		pointer-events: auto;
-	// 	}
-	// }
 
 	&__people {
 		position: absolute;
@@ -153,17 +139,11 @@
 		object-fit: contain;
 		object-position: bottom center;
 		pointer-events: none;
-		// transform: translateX(80%);
-
-		// @media all and (max-width: 1199px) {
-		// 	right: 40px;
-		// 	width: min(560px, 82%);
-		// }
 
 		@media all and (max-width: 768px) {
 			left: 50%;
 			right: auto;
-			width: 100%;
+			width: 110%;
 			transform: translateX(-50%);
 			object-fit: contain;
 		object-position: bottom center;
@@ -219,39 +199,39 @@
 			padding: 20px;
 		}
 
-		@media all and (max-width: 1199px) {
-			&--week {
-				right: 18px;
-			}
+		// @media all and (max-width: 1199px) {
+		// 	&--week {
+		// 		right: 18px;
+		// 	}
 
-			&--refill {
-				left: 38%;
-			}
+		// 	&--refill {
+		// 		left: 38%;
+		// 	}
 
-			&--appointment {
-				right: 32px;
-			}
-		}
+		// 	&--appointment {
+		// 		right: 32px;
+		// 	}
+		// }
 
-		@media all and (max-width: 991px) {
-			&--week {
-				top: 72px;
-				right: 4px;
-			}
+		// @media all and (max-width: 991px) {
+		// 	&--week {
+		// 		top: 72px;
+		// 		right: 4px;
+		// 	}
 
-			&--refill {
-				left: 18px;
-				bottom: 104px;
-				transform: none;
-			}
+		// 	&--refill {
+		// 		left: 18px;
+		// 		bottom: 104px;
+		// 		transform: none;
+		// 	}
 
-			&--appointment {
-				right: 20px;
-				bottom: 74px;
-			}
-		}
+		// 	&--appointment {
+		// 		right: 20px;
+		// 		bottom: 74px;
+		// 	}
+		// }
 
-		@media all and (max-width: 767px) {
+		@media all and (max-width: 768px) {
 			width: 178px;
 			min-height: 104px;
 			padding: 14px;
@@ -282,13 +262,16 @@
 			margin-top: 12px;
 			transform: none;
 
-			&--week,
-			&--refill,
+			&--week {
+				left: -60%;
+				top: 0;
+			}
+			&--refill{
+				right: -80%;
+				top: 20%;
+			}
 			&--appointment {
-				top: auto;
-				right: auto;
-				bottom: auto;
-				left: auto;
+				bottom: -80%;
 			}
 		}
 	}

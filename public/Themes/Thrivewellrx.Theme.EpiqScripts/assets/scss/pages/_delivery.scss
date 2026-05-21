@@ -69,7 +69,7 @@
 
 	&__mobile {
 		position: absolute;
-		left: -15%;
+		left: -20%;
 		bottom: -78px;
 		z-index: 2;
 	}
@@ -165,8 +165,10 @@
 		}
 
 		&__mobile {
-			bottom: -18px;
+			bottom: 0px;
 			width: min(520px, 132%);
+			// left: -280px;
+			// overflow: hidden;
 		}
 
 		&__cards {
