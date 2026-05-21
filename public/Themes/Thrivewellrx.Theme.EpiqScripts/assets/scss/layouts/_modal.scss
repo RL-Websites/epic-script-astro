@@ -389,6 +389,214 @@
 	}
 }
 
+.upload-modal {
+	.modal {
+		// &-dialog {
+		// 	max-width: 1000px;
+		// 	width: calc(100% - 40px);
+		// }
+
+		&-content {
+			background: #ffffff;
+			// border: 1px solid #d0d0d0;
+			border-radius: 12px;
+		}
+
+		&-header {
+			align-items: center;
+			justify-content: space-between;
+			padding: 30px 24px;
+			border-bottom: 2px solid $gray-lighter;
+
+			&-title {
+				margin: 0;
+				padding: 0;
+				color: $black-deep;
+				font-size: 32px;
+				font-weight: 600;
+				line-height: 1;
+			}
+		}
+
+		&-body {
+			padding: 24px;
+		}
+	}
+
+	.btn-close {
+		position: static;
+		width: auto;
+		height: auto;
+		padding: 0;
+		background: transparent;
+		border: 0;
+		box-shadow: none;
+		opacity: 1;
+
+		i {
+			color: $black-deep;
+			font-size: 24px;
+		}
+	}
+
+	&__notice {
+		padding: 16px 24px;
+		border: 1px dashed $primary;
+		border-radius: 12px;
+		background: $green-lighter3;
+		color: $black-deep;
+		font-size: 20px;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	&__dropzone {
+		display: flex;
+		min-height: 224px;
+		margin-top: 20px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 1px dashed #9b9b9b;
+		border-radius: 16px;
+		background: #FCFAFA;
+
+		p {
+			margin: 0 0 10px;
+			color: $black-deep;
+			font-size: 18px;
+			font-weight: 500;
+		}
+
+		input {
+			display: none;
+		}
+	}
+
+	&__upload-btn {
+		min-width: 240px;
+		margin-top: 10px;
+		padding: 14px 26px;
+		border-radius: 999px;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.2;
+		cursor: pointer;
+	}
+
+	&__section-title {
+		margin: 46px 0 16px;
+		color: $black-deep;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+
+	&__reports {
+		display: flex;
+		flex-direction: column;
+		gap: 22px;
+	}
+
+	&__report {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 98px;
+		padding: 20px 22px 20px 36px;
+		border: 1px solid #d0d0d0;
+		border-radius: 14px;
+		background: #fffdfd;
+
+		.theme-btn__icon-only {
+			width: 28px;
+			height: 28px;
+			min-width: 28px;
+			padding: 0;
+			background: transparent;
+			border: 0;
+			color: $primary;
+		}
+
+		.icon-delete {
+			color: $primary;
+			font-size: 18px;
+		}
+	}
+
+	&__report-info {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+
+		.icon-attachment {
+			color: #9b9b9b;
+			font-size: 42px;
+		}
+	}
+
+	&__report-name {
+		margin: 0 0 8px;
+		color: $black-deep;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__report-type {
+		margin: 0;
+		color: #9b9b9b;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 28px;
+		max-width: 140px;
+		margin-left: auto;
+
+		.theme-btn {
+			min-width: 108px;
+			padding: 11px 28px;
+			border-radius: 999px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+
+	@media all and (max-width: 768px) {
+		.modal {
+			// &-dialog {
+			// 	width: calc(100% - 20px);
+			// 	max-width: calc(100% - 20px);
+			// }
+
+			&-header {
+				padding: 22px 18px;
+
+				&-title {
+					font-size: 24px;
+				}
+			}
+
+			&-body {
+				padding: 16px;
+			}
+		}
+
+		&__report {
+			padding: 18px;
+		}
+
+		&__report-info {
+			gap: 18px;
+		}
+	}
+}
+
 .intake-form-modal {
 	.modal-content {
 		overflow: hidden !important;

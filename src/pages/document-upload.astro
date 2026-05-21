@@ -150,6 +150,8 @@ import Layout from "../layouts/Layout.astro";
 
 						<div class="step-btn">
 							<button
+							data-bs-toggle="modal"
+								data-bs-target="#labFiles"
 								type="button"
 								class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--primary"
 							>
@@ -178,47 +180,82 @@ import Layout from "../layouts/Layout.astro";
 <!-- Lab Files Modal Start -->
 <div
 	id="labFiles"
-	class="modal fade confirm-modal"
-	 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+	class="modal fade upload-modal lab-report-modal"
+	tabindex="-1"
+	aria-labelledby="uploadLabReportLabel"
+	aria-hidden="true"
 	data-aos="fade-up"
 	data-aos-duration="1000"
 >
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-			<button type="button" class="btn-close" data-bs-dismiss="modal">
-				<i class="icon-cross_filled"></i>
-			</button>
+			<div class="modal-header">
+				<h2 id="uploadLabReportLabel" class="modal-header-title">
+					Upload Lab Report
+				</h2>
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<i class="icon-cross"></i>
+				</button>
+			</div>
 
 			<div class="modal-body">
-				
+				<div class="upload-modal__notice">
+					After upload, you cannot change this. Before uploading, make sure you are uploading lap reports.
+				</div>
 
-				<div class="modal__title">
-					<p>Continue Without Lab Files?</p
+				<div class="upload-modal__dropzone">
+					<p>Drag & Drop files here</p>
+					<p>OR</p>
+					<div class="upload-modal__dropzone__upload">
+						<label
+						class="theme-btn theme-btn__primary upload-modal__upload-btn"
+						for="upload-input"
 					>
-				</div>
-				<div class="modal__text">
-					<p>You selected <strong>Own Lab</strong>, but no lab files have been uploaded yet.</p>
-				</div>
-
-				<div class="modal__alert-card">
-					<div class="modal__alert__container">
-						<i class="icon-alert modal-card__icon"></i>
-						<h3 class="modal__alert-header">Before You Continue</h3>
-					</div>
-					<div class="modal__alert-body">
-						<p class="modal__alert-text">If lab results are required for review, submitting now without files may slow down the order process.</p>
+						Upload Document
+					</label>
+					<input id="upload-input" type="file" />
 					</div>
 				</div>
 
-				<div class="modal__actions">
-					<button
-						class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--primary"
-						type="button"
-					>
-						Upload Files
-					</button>
-					<button class="theme-btn .theme-btn-size-lg theme-btn__primary" type="button">
-						Continue Anyway
+				<h3 class="upload-modal__section-title">
+					Existing Reports
+				</h3>
+
+				<div class="upload-modal__reports">
+					<div class="upload-modal__report">
+						<div class="upload-modal__report-info">
+							<i class="icon-attachment"></i>
+							<div>
+								<p class="upload-modal__report-name">
+									Dylans Prescription.pdf
+								</p>
+								<p class="upload-modal__report-type">PDF</p>
+							</div>
+						</div>
+						<button class="theme-btn theme-btn__icon-only" type="button">
+							<i class="icon-delete"></i>
+						</button>
+					</div>
+
+					<div class="upload-modal__report">
+						<div class="upload-modal__report-info">
+							<i class="icon-attachment"></i>
+							<div>
+								<p class="upload-modal__report-name">
+									Dylans Prescription.pdf
+								</p>
+								<p class="upload-modal__report-type">PDF</p>
+							</div>
+						</div>
+						<button class="theme-btn theme-btn__icon-only" type="button">
+							<i class="icon-delete"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="upload-modal__actions">
+					<button class="theme-btn theme-btn__primary" type="button">
+						Done
 					</button>
 				</div>
 			</div>
