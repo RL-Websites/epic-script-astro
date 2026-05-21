@@ -156,8 +156,8 @@ import Layout from "../layouts/Layout.astro";
 								Go Back
 							</button>
 							<button
-								data-toggle="modal"
-								data-target="#couponModal"
+								data-bs-toggle="modal"
+								data-bs-target="#labFiles"
 								type="button"
 								class="theme-btn .theme-btn-size-lg theme-btn__primary"
 							>
@@ -173,3 +173,57 @@ import Layout from "../layouts/Layout.astro";
 
 	<Footer />
 </Layout>
+
+
+<!-- Lab Files Modal Start -->
+<div
+	id="labFiles"
+	class="modal fade confirm-modal"
+	 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+	data-aos="fade-up"
+	data-aos-duration="1000"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal">
+				<i class="icon-cross_filled"></i>
+			</button>
+
+			<div class="modal-body">
+				
+
+				<div class="modal__title">
+					<p>Continue Without Lab Files?</p
+					>
+				</div>
+				<div class="modal__text">
+					<p>You selected <strong>Own Lab</strong>, but no lab files have been uploaded yet.</p>
+				</div>
+
+				<div class="modal__alert-card">
+					<div class="modal__alert__container">
+						<i class="icon-alert modal-card__icon"></i>
+						<h3 class="modal__alert-header">Before You Continue</h3>
+					</div>
+					<div class="modal__alert-body">
+						<p class="modal__alert-text">If lab results are required for review, submitting now without files may slow down the order process.</p>
+					</div>
+				</div>
+
+				<div class="modal__actions">
+					<button
+						class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--primary"
+						type="button"
+					>
+						Upload Files
+					</button>
+					<button class="theme-btn .theme-btn-size-lg theme-btn__primary" type="button">
+						Continue Anyway
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Lab Files Modal End -->

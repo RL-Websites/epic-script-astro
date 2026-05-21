@@ -48,8 +48,8 @@ import Layout from "../layouts/Layout.astro";
 								type="radio"
 								name="state"
 								value="stateid"
-								data-toggle="modal"
-								data-target="#confirm"
+								data-bs-toggle="modal"
+								data-bs-target="#confirm"
 							/>
 							<label class="state-btn__label" for="state-1"
 								>Alabama
@@ -171,7 +171,9 @@ import Layout from "../layouts/Layout.astro";
 						data-aos-duration="1000"
 						data-aos-once="true"
 					>
-						<button class="theme-btn theme-btn-size-lg theme-btn__primary w-mob"
+						<button class="theme-btn theme-btn-size-lg theme-btn__primary w-mob" 
+								data-bs-toggle="modal"
+								data-bs-target="#labFiles"
 							>Go Back</button
 						>
 					</div>
@@ -189,16 +191,15 @@ import Layout from "../layouts/Layout.astro";
 <div
 	id="confirm"
 	class="modal fade confirm-modal"
-	tabindex="-1"
-	role="dialog"
+	 tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
 	data-aos="fade-up"
 	data-aos-duration="1000"
 >
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-			<!-- <button type="button" class="btn-close" data-dismiss="modal">
+			<button type="button" class="btn-close" data-dismiss="modal">
 				<i class="icon-cross_filled"></i>
-			</button> -->
+			</button>
 
 			<div class="modal-body">
 				<div class="modal__icon">
@@ -234,3 +235,5 @@ import Layout from "../layouts/Layout.astro";
 </div>
 
 <!-- Confirm Modal End -->
+
+
