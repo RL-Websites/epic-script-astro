@@ -8,39 +8,51 @@ import Layout from "../layouts/Layout.astro";
 	<Header class="site__header--border" />
 	<div class="assessment__page-wrapper">
 		<div class="container">
-			<div class="assessment mb-80">
+			<div class="assessment">
 				<!--Assesment Header Start -->
 				<!-- <AssesmentHeader /> -->
 				<!--Assesment Header End -->
 
 				<!-- Assessment question sub title start -->
-				<div class="d-flex justify-content-center w-100">
+				<div>
 					<img
 						class="newcustomer-mobile-img"
 						src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/newcustomer_female.png"
 					/>
 				</div>
 				<div class="assessment__label mt-40">
-					What Is Your Current Weight?
+					Are You New Or An Existing EpiqScript Customer?
 				</div>
 				<!-- Assessment question sub title end -->
+
+				<!-- Assessment form start -->
 				<div class="assessment__form mt-30">
-					<div class="measurement">
-						<div class="measurement-input">
-							<input
-								type="text"
-								class="form-control"
-								placeholder="0"
-								aria-describedby="basic-addon2"
-							/>
-							<span class="unit">lbs</span>
-						</div>
+					<div class="assessment__form_radio">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio1"
+							value="new"
+							checked
+						/>
+						<label for="answerRadio1"> New </label>
+					</div>
+
+					<div class="assessment__form_radio mt-sm-20 mb-0">
+						<input
+							type="radio"
+							name="answerRadio"
+							id="answerRadio2"
+							value="existing"
+						/>
+						<label for="answerRadio2"> Existing </label>
 					</div>
 				</div>
-				<!-- Single Assessment form end -->
+				<!-- Assessment form end -->
 
 				<!-- Assessment buttons start -->
 				<CommonAction />
+				<!-- Assessment buttons end -->
 			</div>
 		</div>
 

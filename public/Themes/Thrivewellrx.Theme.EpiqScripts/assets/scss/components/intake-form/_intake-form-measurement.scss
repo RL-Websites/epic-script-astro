@@ -18,6 +18,7 @@
 				color: $secondary;
 				background-color: #f3f3f3;
 				width: 570px;
+				max-width: 100%; // never overflow its container
 				height: 64px;
 				border-radius: 50px;
 				font-weight: 500;
@@ -30,11 +31,18 @@
 				input {
 					padding: 0;
 					border: 0;
+					background: transparent;
 					box-shadow: none;
 					font-size: $fs-18;
 					padding-right: 20px;
 					text-align: center;
 					color: $secondary;
+					width: 100%; // fill remaining space
+
+					&:focus {
+						outline: none;
+						box-shadow: none;
+					}
 
 					&::placeholder {
 						color: $gray-dark;
@@ -42,18 +50,17 @@
 				}
 
 				.unit {
-					font-size: 16px;
+					font-size: $fs-18;
 					border: 0;
 					height: 100%;
 					display: flex;
 					align-items: center;
 					color: $gray-dark;
 					opacity: 1;
-					// border-left: 1px solid $grey-10;
 					padding: 8px 30px 8px 20px;
 					position: absolute;
 					right: 0;
-					font-size: $fs-18;
+					white-space: nowrap; // unit label never wraps
 				}
 			}
 		}
@@ -64,16 +71,22 @@
 	.assessment {
 		&__form {
 			.measurement {
-				max-width: 320px;
+				width: 100%;
 
 				.measurement-input {
-					padding: 0 5px;
-					border-radius: 12px;
+					width: 100%; // full width on mobile
+					max-width: 100%;
+					padding: 10px 70px 10px 20px; // keep right space for unit
+					border-radius: 50px; // keep pill shape — not 12px
+
+					input {
+						font-size: $fs-16;
+						text-align: left; // left-align on mobile feels more natural
+					}
 
 					.unit {
-						background-color: #162333;
-						padding: 0 15px;
-						border-radius: 0 12px 12px 0;
+						font-size: $fs-16;
+						padding: 0 20px;
 					}
 				}
 			}

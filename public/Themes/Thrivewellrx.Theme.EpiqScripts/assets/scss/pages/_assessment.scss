@@ -4,6 +4,62 @@
 	max-width: 570px;
 	margin: 0 auto;
 
+	&__nav {
+		&-back-wrap {
+			width: 160px;
+			flex-shrink: 0;
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		&-back-icon {
+			font-size: 30px;
+			color: $black-deep;
+		}
+
+		&-progress-wrap {
+			width: 160px;
+			flex-shrink: 0;
+
+			@media (max-width: 767px) {
+				width: auto;
+			}
+		}
+
+		&-progress {
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			text-decoration: underline;
+			text-underline-offset: 3px;
+			white-space: nowrap;
+			color: $cyan;
+
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+	}
+
+	&__alt {
+		max-width: 1080px;
+
+		@media (max-width: 991px) {
+			margin-top: 0px;
+		}
+	}
+
+	&__alt2 {
+		max-width: 12040px;
+
+		@media (max-width: 991px) {
+			margin-top: 0px;
+		}
+	}
+
 	&__page-wrapper {
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -14,10 +70,18 @@
 		display: flex;
 		flex-direction: column;
 		background-color: #ffffff;
-		padding: 180px 0 120px;
-		@media (max-width: 991px) {
-			padding: 120px 0 80px;
+		padding: 134px 0px 120px;
+
+		margin-top: 59px;
+
+		@media (max-width: 768px) {
+			margin-top: 24px !important;
+			padding-top: 75px !important;
 		}
+
+		// @media (max-width: 991px) {
+		// 	padding: 120px 0 80px;
+		// }
 
 		&__alt {
 			background-position: top center;
@@ -46,7 +110,7 @@
 	}
 
 	&__form {
-		margin-top: 40px;
+		// margin-top: 40px;
 		gap: 20px;
 
 		&-container {
@@ -68,6 +132,63 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+
+		&__checkbox {
+			background: #f3f3f3;
+			border-radius: 50px;
+			padding: 0px;
+
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			// Hide real input completely
+			.form-check-input[type="checkbox"] {
+				position: absolute !important;
+				opacity: 0 !important;
+
+				pointer-events: none !important;
+				margin: 0 !important;
+			}
+
+			.form-check-label {
+				margin: 0 !important;
+				cursor: pointer;
+				flex-grow: 1;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+
+				&::after {
+					font-family: 'icomoon';
+					content: '\e911'; // empty box unicode
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+
+					min-width: 22px; // prevents shrink
+					min-height: 22px; // prevents shrink
+					font-size: 22px;
+					color: #bbb;
+					flex-shrink: 0;
+					line-height: 1;
+					overflow: hidden; // clips any glyph bleed
+					text-align: center;
+				}
+			}
+
+			.form-check-input[type="checkbox"]:checked+.form-check-label {
+				&::after {
+					content: '\e910'; // filled box unicode
+					color: #1b3a2d;
+					// nothing else changes — no size, no padding, no margin
+				}
+			}
+
+
+		}
 
 		&--two-col {
 			margin: 0 auto;
@@ -241,11 +362,9 @@
 					&:focus,
 					.active {
 						border: 1px solid rgba($blue-2, 0.9);
-						background: linear-gradient(
-							95.12deg,
-							$blue-2 7.77%,
-							$blue-3 95.93%
-						);
+						background: linear-gradient(95.12deg,
+								$blue-2 7.77%,
+								$blue-3 95.93%);
 						color: white;
 					}
 				}
@@ -405,13 +524,18 @@
 		}
 
 		&__form {
-			margin-top: 50px;
+			margin-top: 40px;
 		}
 
 		&__label {
-			font-size: $fs-16;
-			margin-top: 0 !important;
+			font-size: $fs-22;
+			margin-top: 30px !important;
+			line-height: 120%;
 			border-radius: 50px;
+
+			&__alt {
+				margin-top: 0px !important;
+			}
 		}
 
 		&__form {
@@ -519,6 +643,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
 				i {
 					font-size: 24px;
 					color: #111827;
@@ -528,6 +653,7 @@
 			.btn-close {
 				font-size: 1.25rem;
 				opacity: 0.5;
+
 				&:focus {
 					box-shadow: none;
 				}
@@ -553,11 +679,9 @@
 				top: 8px;
 				bottom: 8px;
 				width: 1px;
-				background-image: linear-gradient(
-					to bottom,
-					$gray-dark 50%,
-					transparent 50%
-				);
+				background-image: linear-gradient(to bottom,
+						$gray-dark 50%,
+						transparent 50%);
 				background-size: 1px 10px;
 				background-repeat: repeat-y;
 				z-index: 1;
@@ -581,6 +705,7 @@
 					background-color: $primary;
 					border: 2px solid $primary;
 				}
+
 				.assessment__progress-text {
 					color: $primary;
 				}
@@ -591,6 +716,7 @@
 					background-color: $green-deep;
 					border: 2px solid $primary;
 				}
+
 				.assessment__progress-text {
 					color: $primary;
 					font-weight: 500;
@@ -602,6 +728,7 @@
 					background-color: $white;
 					border: 2px solid $gray-dark;
 				}
+
 				.assessment__progress-text {
 					color: #9ca3af;
 				}

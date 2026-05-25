@@ -8,55 +8,47 @@ import Layout from "../layouts/Layout.astro";
 	<Header class="site__header--border" />
 
 	<main class="assessment__page-wrapper">
-		<div class="container">
-			<div class="assessment">
-				<!--Assesment Header Start -->
-				<!-- <AssesmentHeader /> -->
-				<!--Assesment Header End -->
+		<div class="container-lg">
+			<div class="assessment assessment__alt2">
+				<!-- Nav row -->
+				<div class="d-flex align-items-center w-100 mb-4 assessment__nav-row">
+					<div class="assessment__nav-back-wrap">
+						<button onclick="" class="btn p-0 border-0 shadow-none">
+							<i class="icon-back assessment__nav-back-icon"></i>
+						</button>
+					</div>
 
-				<!-- Assessment question title start -->
-				<!-- <div class="assessment__question mt-40">
-					We need your demographic information to better understand your health
-					profile and ensure the most accurate care.
-				</div> -->
-				<!-- Assessment question title end -->
+					<div
+						class="assessment__label assessment__label__alt text-center mb-0 flex-grow-1"
+					>
+						What Is Your Current Height?
+					</div>
 
-				<!-- Assessment question sub title start -->
-				<div class="assessment__label"> Your height?</div>
-				<!-- Assessment question sub title end -->
+					<div class="assessment__nav-progress-wrap d-flex justify-content-end">
+						<button
+							class="btn p-0 border-0 shadow-none d-none d-md-flex assessment__nav-progress"
+						>
+							Review Progress
+						</button>
+					</div>
+				</div>
 
-				<!-- Assessment form start -->
+				<!-- Assessment form -->
 				<div class="assessment__form mt-20">
 					<div class="measurement">
 						<div class="measurement-input">
-							<input
-								type="text"
-								class="form-control"
-								placeholder="0"
-								aria-describedby="basic-addon2"
-							/>
+							<input type="text" class="form-control" placeholder="0" />
 							<span class="unit">Feet</span>
 						</div>
 						<div class="measurement-input mt-md-20 mt-15">
-							<input
-								type="text"
-								class="form-control"
-								placeholder="0"
-								aria-describedby="basic-addon2"
-							/>
+							<input type="text" class="form-control" placeholder="0" />
 							<span class="unit">Inch</span>
 						</div>
 					</div>
 				</div>
-				<!-- Assessment form end -->
 
-				<!-- Assessment buttons start -->
 				<CommonAction />
-				<!-- Assessment buttons end -->
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<!-- <AssesmentFooter /> -->
 	</main>
 </Layout>
