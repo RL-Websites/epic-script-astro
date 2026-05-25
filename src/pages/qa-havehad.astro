@@ -6,12 +6,10 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout bodyClass="alt-bg">
 	<Header class="site__header--border" />
-	<main class="assessment__page-wrapper">
+	<div class="assessment__page-wrapper">
 		<div class="container">
-			<div class="assessment mb-md-206 mb-80">
-				<div class="assessment__label">
-					Do You Have Or Have Had Any Of The Following?
-				</div>
+			<div class="assessment assessment__alt">
+				<!-- Image -->
 				<div class="d-flex justify-content-center w-100 mb-30">
 					<img
 						class="newcustomer-mobile-img"
@@ -20,194 +18,167 @@ import Layout from "../layouts/Layout.astro";
 					/>
 				</div>
 
-				<div class="assessment__form">
+				<div class="assessment__label">
+					Do You Have Or Have Had Any Of The Following?
+				</div>
+
+				<div class="assessment__form mt-30 mb-30">
 					<div class="row g-3">
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox1" class="m-0 cursor-pointer">
-									Medullary Thyroid Carcinoma (MTC)
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox1"
 									id="answerCheckbox1"
 									value="mtc"
 								/>
+								<label class="form-check-label" for="answerCheckbox1"
+									>Medullary Thyroid Carcinoma (MTC)</label
+								>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox2" class="m-0 cursor-pointer">
-									Multiple Endocrine Neoplasia Type 2 (MEN2)
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox2"
 									id="answerCheckbox2"
 									value="men2"
 								/>
+								<label class="form-check-label" for="answerCheckbox2"
+									>Multiple Endocrine Neoplasia Type 2 (MEN2)</label
+								>
 							</div>
 						</div>
-
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox3" class="m-0 cursor-pointer">
-									Pancreatitis
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox3"
 									id="answerCheckbox3"
 									value="pancreatitis"
 								/>
+								<label class="form-check-label" for="answerCheckbox3"
+									>Pancreatitis</label
+								>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox4" class="m-0 cursor-pointer">
-									Kidney disease
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox4"
 									id="answerCheckbox4"
 									value="kidney"
 								/>
+								<label class="form-check-label" for="answerCheckbox4"
+									>Kidney disease</label
+								>
 							</div>
 						</div>
-
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox5" class="m-0 cursor-pointer">
-									Liver disease
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox5"
 									id="answerCheckbox5"
 									value="liver"
 								/>
+								<label class="form-check-label" for="answerCheckbox5"
+									>Liver disease</label
+								>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox6" class="m-0 cursor-pointer">
-									Severe GI disorders
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox6"
 									id="answerCheckbox6"
 									value="gi"
 								/>
+								<label class="form-check-label" for="answerCheckbox6"
+									>Severe GI disorders</label
+								>
 							</div>
 						</div>
-
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox7" class="m-0 cursor-pointer">
-									Diabetic retinopathy
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox7"
 									id="answerCheckbox7"
 									value="retinopathy"
 								/>
+								<label class="form-check-label" for="answerCheckbox7"
+									>Diabetic retinopathy</label
+								>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox8" class="m-0 cursor-pointer">
-									Type 1 Diabetes
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox8"
 									id="answerCheckbox8"
 									value="diabetes"
 								/>
+								<label class="form-check-label" for="answerCheckbox8"
+									>Type 1 Diabetes</label
+								>
 							</div>
 						</div>
-
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox9" class="m-0 cursor-pointer">
-									Active cancer (undergoing treatment)
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox9"
 									id="answerCheckbox9"
 									value="cancer"
 								/>
+								<label class="form-check-label" for="answerCheckbox9"
+									>Active cancer (undergoing treatment)</label
+								>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox10" class="m-0 cursor-pointer">
-									History of eating disorders
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox10"
 									id="answerCheckbox10"
 									value="eating"
 								/>
+								<label class="form-check-label" for="answerCheckbox10"
+									>History of eating disorders</label
+								>
 							</div>
 						</div>
-
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label for="answerCheckbox11" class="m-0 cursor-pointer">
-									History of substance abuse or addiction
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox11"
 									id="answerCheckbox11"
 									value="substance"
 								/>
+								<label class="form-check-label" for="answerCheckbox11"
+									>History of substance abuse or addiction</label
+								>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div
-								class="assessment__form__checkbox d-flex align-items-center justify-content-between"
-							>
-								<label
-									for="answerCheckbox12"
-									class="m-0 cursor-pointer fw-bold"
-								>
-									None of the above
-								</label>
+							<div class="form-check assessment__form__checkbox">
 								<input
+									class="form-check-input"
 									type="checkbox"
-									name="answerCheckbox12"
 									id="answerCheckbox12"
 									value="none"
+									checked
 								/>
+								<label class="form-check-label" for="answerCheckbox12"
+									>None of the above</label
+								>
 							</div>
 						</div>
 					</div>
@@ -216,5 +187,5 @@ import Layout from "../layouts/Layout.astro";
 				<CommonAction />
 			</div>
 		</div>
-	</main>
+	</div>
 </Layout>
