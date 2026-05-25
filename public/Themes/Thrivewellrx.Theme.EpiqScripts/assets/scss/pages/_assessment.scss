@@ -52,6 +52,14 @@
 		}
 	}
 
+	&__alt2 {
+		max-width: 12040px;
+
+		@media (max-width: 991px) {
+			margin-top: 0px;
+		}
+	}
+
 	&__page-wrapper {
 		background-size: contain;
 		background-repeat: no-repeat;
