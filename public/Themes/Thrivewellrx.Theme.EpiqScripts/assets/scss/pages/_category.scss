@@ -70,6 +70,36 @@
 			background-size: cover;
 		}
 
+		&__sleep {
+			background: url('../img/bg/category-sleep.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-sleep.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
+		&__sterile-injections {
+			background: url('../img/bg/category-sterile-injections.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-sterile-injections.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
+		&__hair-growth {
+			background: url('../img/bg/category-hair-growth.jpg') no-repeat center center;
+
+			@media (min-width: 768px) {
+				background: url('../img/bg/category-hair-growth.jpg') no-repeat center center;
+			}
+
+			background-size: cover;
+		}
+
 		h1 {
 			font-size: 30px;
 			font-weight: 600;
