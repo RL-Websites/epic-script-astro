@@ -23,7 +23,9 @@ import Layout from "../layouts/Layout.astro";
 					<div class="category__home__wrapper">
 						<div class="category__home__title">
 							<h2>Try Our Epiq Scripts Catalog</h2>
-							<p class="text-primary">Contact us to learn more about our offerings!</p>
+							<p class="text-primary"
+								>Contact us to learn more about our offerings!</p
+							>
 						</div>
 						<CategoryCard />
 
@@ -112,10 +114,18 @@ import Layout from "../layouts/Layout.astro";
 								>Pharmacy Solutions</h1
 							>
 						</div>
-						<div
-							class="col-lg-6 d-flex justify-content-lg-end justify-content-center mt-md-0 mt-20"
-						>
-							<div class="pharmacy__card">
+						<div class="col-lg-6">
+							<div class="pharmacy__cards">
+								<div class="pharmacy__cards__single">
+									<div class="pharmacy__cards__icon">
+										<i class="icon-report"></i>
+									</div>
+									<div class="pharmacy__cards__title">
+										<h6>High-Volume <br /> Prescription Fulfillment</h6>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="pharmacy__card">
 								<div class="swiper pharmacy-slider">
 									<div class="swiper-wrapper text-end">
 										<div class="swiper-slide">
@@ -164,7 +174,7 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -400,10 +410,43 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 						<!-- faq accordion ends  -->
 					</div>
+					
+					<!-- Future Healthcare Section Start -->
+					<div class="future-healthcare">
+						<div class="future-healthcare__wrapper">
+							<div class="row align-items-center">
+								<div class="col-lg-8">
+									<div class="future-healthcare__content">
+										<h2 class="future-healthcare__heading">
+											Ready To Welcome <br />
+											In The Future Of Healthcare?
+										</h2>
+										<h4 class="future-healthcare__sub-heading">
+											We Rx-Cited To Hear From You
+										</h4>
+										<a href="/contact-us" class="future-healthcare__btn theme-btn">
+											Contact Us
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-4 mt-0 mt-md-30">
+									<div class="future-healthcare__img">
+										<img
+											src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/healthcare-img.png"
+											alt="Healthcare tablets"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Future Healthcare Section end -->
 				</div>
 			</div>
 		</section>
 		<!-- FAQ section ends  -->
+
+
 	</main>
 	<!--=====|| Main Section End ||=====-->
 
