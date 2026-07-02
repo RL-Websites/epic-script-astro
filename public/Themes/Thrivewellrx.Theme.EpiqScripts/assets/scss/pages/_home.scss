@@ -126,6 +126,10 @@
 
 		&__two {
 			background: url('../img/home/solutions2.svg') center center / cover no-repeat;
+
+			@media all and (max-width: 768px) {
+				margin-top: 20px;
+			}
 		}
 	}
 
@@ -473,14 +477,19 @@
 		color: $white;
 	}
 
-	&__btn {
-		width: auto;
-		padding: 16px 58px;
-		border-radius: 100px;
-		background-color: $white;
-		color: $primary;
-		font-weight: 700;
-	}
+	// &__btn {
+	// 	width: auto;
+	// 	padding: 12px 40px;
+	// 	border-radius: 100px;
+	// 	background-color: $white;
+	// 	color: $primary;
+	// 	font-weight: 700;
+
+	// 	&:hover {
+	// 		background-color: $yellow-lighter;
+	// 		color: $black;
+	// 	}
+	// }
 
 	&__img {
 		display: flex;

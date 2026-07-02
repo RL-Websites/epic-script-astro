@@ -99,6 +99,20 @@
 		}
 	}
 
+	&__white {
+		width: auto;
+		padding: 12px 40px;
+		border-radius: 100px;
+		background-color: $white;
+		color: $primary;
+		font-weight: 700;
+
+		&:hover {
+			background-color: $yellow-lighter;
+			color: $black;
+		}
+	}
+
 	&__dark {
 		background-color: $secondary;
 		border: 1px solid $secondary;

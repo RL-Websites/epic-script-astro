@@ -7,4 +7,12 @@
     width: 930px;
     margin: 0 auto;
   }
+
+  &__header {
+    text-align: center;
+    font-size: $fs-16;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: $gray-lighter5;
+  }
 }
