@@ -288,12 +288,11 @@
 .tsp {
 	&__wrapper {
 		background-color: $white;
+		border-radius: 10px;
 	}
 
 	&__block {
 		padding: 30px;
-
-		border-radius: 10px;
 
 		&__row {
 			display: flex;
