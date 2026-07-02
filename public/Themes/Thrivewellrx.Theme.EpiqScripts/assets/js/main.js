@@ -97,6 +97,24 @@ $(document).ready(function () {
 		);
 	});
 
+	$(document).on("click", 'a[href="#rapid-contact"]', function (e) {
+		const rapidContact = $("#rapid-contact");
+
+		if (!rapidContact.length) return;
+
+		e.preventDefault();
+
+		const header = $(".site__header");
+		const headerOffset = header.length ? header.outerHeight() + 30 : 120;
+
+		$("html, body").animate(
+			{
+				scrollTop: rapidContact.offset().top - headerOffset,
+			},
+			600,
+		);
+	});
+
 	// Toast
 	$("#liveToastBtn").on("click", function () {
 		var toastEl = $("#liveToast");
