@@ -406,6 +406,113 @@
 	}
 }
 
+.future-healthcare {
+	&__wrapper {
+		padding: 60px;
+		border-radius: 20px;
+		background: linear-gradient(86.9deg, #00533F 5.13%, #272727 103.47%);
+		margin: 48px 0 0;
+	}
+
+	// &__content {
+	// 	max-width: 620px;
+	// }
+
+	&__heading {
+		margin-bottom: 18px;
+		font-size: $fs-48;
+		font-weight: 700;
+		color: $white;
+	}
+
+	&__sub-heading {
+		margin-bottom: 32px;
+		font-size: $fs-24;
+		font-weight: 600;
+		color: $white;
+	}
+
+	&__btn {
+		width: auto;
+		padding: 16px 58px;
+		border-radius: 100px;
+		background-color: $white;
+		color: $primary;
+		font-weight: 700;
+	}
+
+	&__img {
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			width: 100%;
+			max-width: 420px;
+		}
+	}
+
+	@media all and (max-width: 992px) {
+		&__wrapper {
+			padding: 48px 32px;
+		}
+
+		&__heading {
+			font-size: $fs-40;
+		}
+
+		&__sub-heading {
+			font-size: $fs-20;
+		}
+
+		&__img {
+			img {
+				max-width: 330px;
+			}
+		}
+	}
+
+	@media all and (max-width: 768px) {
+		&__wrapper {
+			padding: 40px 24px;
+			text-align: center;
+		}
+
+		&__content {
+			max-width: 100%;
+		}
+
+		&__heading {
+			font-size: $fs-24;
+		}
+
+		&__sub-heading {
+			font-size: $fs-20;
+		}
+
+		&__btn {
+			padding: 14px 42px;
+		}
+
+		&__img {
+			justify-content: center;
+			display: none;
+
+			img {
+				max-width: 280px;
+			}
+		}
+	}
+
+	// @media all and (max-width: 375px) {
+	// 	&__heading {
+	// 		font-size: $fs-28;
+	// 	}
+
+	// 	&__btn {
+	// 		padding: 14px 34px;
+	// 	}
+	// }
+}
 //FAQ CSS End
 
 .cta {
