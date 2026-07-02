@@ -29,6 +29,13 @@
 	}
 }
 
+.dashed-border {
+	border: 1px solid transparent;
+	border-image: repeating-linear-gradient(90deg,
+			$gray-lighter2 0 12px,
+			transparent 12px 24px) 1;
+}
+
 .ebook {
 	&__download {
 		position: fixed;
