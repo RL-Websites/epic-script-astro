@@ -13,28 +13,28 @@
   &__success {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid #5607C5;
+    border-left: 10px solid $primary;
     border-radius: 6px;
   }
 
   &__warning {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid #5607C5;
+    border-left: 10px solid $primary;
     border-radius: 6px;
   }
 
   &__danger {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid #5607C5;
+    border-left: 10px solid $primary;
     border-radius: 6px;
   }
 
   &__information {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid #5607C5;
+    border-left: 10px solid $primary;
     border-radius: 6px;
   }
 
