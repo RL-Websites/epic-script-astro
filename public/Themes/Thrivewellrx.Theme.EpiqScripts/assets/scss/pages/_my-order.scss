@@ -194,7 +194,8 @@
 			margin: 0;
 			line-height: 1;
 			margin-top: 20px;
-			color: $gray-dark;
+			color:  $black-deep;
+			font-size: $fs-18;
 
 			@media (max-width: 768px) {
 				margin-top: 0;
@@ -204,7 +205,7 @@
 
 	&__label {
 		min-width: 154px;
-		color: #2d2d2d;
+		color: $black-deep;
 		font-weight: 700;
 	}
 }
