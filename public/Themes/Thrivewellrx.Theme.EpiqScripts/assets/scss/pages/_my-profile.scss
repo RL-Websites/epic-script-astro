@@ -69,6 +69,10 @@
 .form-group {
   margin-bottom: 24px;
 
+  @media all and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+
   input {
     border-color: #aeaeae;
   }
