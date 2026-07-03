@@ -128,7 +128,7 @@
 		padding: 12px 30px;
 
 		&:hover {
-			background-color: $primary-light;
+			background-color: $yellow-lighter;
 		}
 	}
 
@@ -163,6 +163,15 @@
 				border: 1px solid $yellow-lighter;
 				color: $secondary;
 				background-color: $yellow-lighter;
+			}
+
+			&__alt {
+
+				&:hover,
+				&:focus {
+					border: 1px solid $white;
+					background-color: $white;
+				}
 			}
 		}
 
@@ -342,7 +351,7 @@
 				padding-right: 60px;
 			}
 
-			
+
 			@media (max-width: 576px) {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
