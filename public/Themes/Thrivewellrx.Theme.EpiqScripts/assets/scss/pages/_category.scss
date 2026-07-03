@@ -271,7 +271,7 @@
 		&__three {
 			min-height: 150px;
 			padding: 15px 30px;
-			background: url('../img/home/category/hormone-health.jpg') center center / cover no-repeat;
+			background: url('../img/home/category/hormone-health.jpg') top center / cover no-repeat;
 
 			@media all and (max-width: 768px) {
 				min-height: 190px;
@@ -281,7 +281,7 @@
 		&__four {
 			min-height: 150px;
 			padding: 15px 30px;
-			background: url('../img/home/category/pre-workout.jpg') center center / cover no-repeat;
+			background: url('../img/home/category/pre-workout-img.jpg') top center / cover no-repeat;
 
 			@media all and (max-width: 768px) {
 				min-height: 190px;
@@ -291,7 +291,7 @@
 		&__five {
 			min-height: 150px;
 			padding: 15px 30px;
-			background: url('../img/home/category/sexual-health.png') center center / cover no-repeat;
+			background: url('../img/home/category/sexual-health.png') top center / cover no-repeat;
 
 			@media all and (max-width: 768px) {
 				flex-direction: row;

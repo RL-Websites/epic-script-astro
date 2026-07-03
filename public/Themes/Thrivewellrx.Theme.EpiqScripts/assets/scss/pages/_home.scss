@@ -4,7 +4,7 @@
 	&-hero {
 		&__wrapper {
 			padding: 100px 120px;
-			background: url('../img/home/banner.jpg') no-repeat center center;
+			background: url('../img/home/banner-home.jpg') no-repeat center center;
 			background-size: cover;
 			min-height: 480px;
 			border-radius: 10px 10px 0 0;
@@ -200,7 +200,7 @@
 
 	&__wrapper {
 		padding: 80px;
-		background: url('../img/home/pharmacy.jpg') top center / cover no-repeat;
+		background: url('../img/home/pharmacy-banner.jpg') top center / cover no-repeat;
 		border-radius: 10px;
 
 		@media all and (max-width: 768px) {
@@ -338,6 +338,7 @@
 	&__card {
 		background-color: $white;
 		padding: 24px;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
