@@ -247,6 +247,14 @@
 		}
 	}
 
+	&__icon-only {
+		padding: 0;
+		background-color: transparent;
+		font-size: $fs-28;
+		color: $primary;
+		border: 0;
+	}
+
 	&-size {
 		&-xl {
 			padding: 0px;
