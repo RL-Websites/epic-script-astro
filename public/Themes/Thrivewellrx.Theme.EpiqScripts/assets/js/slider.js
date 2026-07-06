@@ -236,36 +236,37 @@ $(document).ready(function () {
 		},
 	});
 	new Swiper(".client__slider", {
-		slidesPerView: "auto",
-		spaceBetween: 40,
-		loop: true,
-		speed: 5000,
-		freeMode: true,
-		freeModeMomentum: false,
-		allowTouchMove: false,
-		autoplay: {
-			delay: 0,
-			disableOnInteraction: false,
-		},
-		breakpoints: {
-			0: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-			},
-			640: {
-				slidesPerView: 5,
-				spaceBetween: 20,
-			},
-			1024: {
-				slidesPerView: 5,
-				spaceBetween: 20,
-			},
-			1280: {
-				slidesPerView: 5,
-				spaceBetween: 30,
-			},
-		},
-	});
+    slidesPerView: 2.2,
+    spaceBetween: 16,
+    loop: true,
+    speed: 5000,
+    freeMode: true,
+    freeModeMomentum: false,
+    allowTouchMove: false,
+    centerInsufficientSlides: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2.2,
+        spaceBetween: 16,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
 	new Swiper(".pharmacy-slider", {
 		slidesPerView: "1",
 		loop: true,

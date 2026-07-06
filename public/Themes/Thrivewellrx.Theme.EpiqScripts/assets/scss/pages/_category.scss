@@ -250,7 +250,7 @@
 			}
 
 			@media all and (max-width: 768px) {
-				min-height: 190px;
+				min-height: 150px;
 			}
 		}
 
@@ -264,27 +264,29 @@
 			}
 
 			@media all and (max-width: 768px) {
-				min-height: 190px;
+				min-height: 150px;
 			}
 		}
 
 		&__three {
 			min-height: 150px;
-			padding: 15px 30px;
+			padding: 15px;
 			background: url('../img/home/category/hormone-health.jpg') top center / cover no-repeat;
 
 			@media all and (max-width: 768px) {
-				min-height: 190px;
+				min-height: 150px;
+				background: url('../img/home/category/hormone-health.jpg') 60% 0% / 120% 100% no-repeat;
 			}
 		}
 
 		&__four {
 			min-height: 150px;
-			padding: 15px 30px;
-			background: url('../img/home/category/pre-workout-img.jpg') top center / cover no-repeat;
+			padding: 15px;
+			background: url('../img/home/category/pre-workout.jpg') top center / cover no-repeat;
 
 			@media all and (max-width: 768px) {
-				min-height: 190px;
+				min-height: 150px;
+				background: url('../img/home/category/pre-workout.jpg') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
