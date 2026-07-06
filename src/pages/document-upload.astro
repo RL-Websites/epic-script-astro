@@ -35,9 +35,9 @@ import Layout from "../layouts/Layout.astro";
 										</p>
 
 										<span
-											class="theme-btn theme-btn__primary py-10 w-full d-block fw-400 mt-30"
+											class="theme-btn theme-btn__primary py-10 fw-400 mt-30 w-auto"
 										>
-											Browse Files
+											Upload Document
 										</span>
 									</div>
 								</label>
@@ -62,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 										<div class="generated-document__status__action">
 											<button
-												class="theme-btn theme-btn__icon-only"
+												class="theme-btn theme-btn__icon"
 												data-toggle="modal"
 												data-target="#DocRemoveConfirm"
 												type="button"
@@ -150,7 +150,7 @@ import Layout from "../layouts/Layout.astro";
 
 						<div class="step-btn">
 							<button
-							data-bs-toggle="modal"
+								data-bs-toggle="modal"
 								data-bs-target="#labFiles"
 								type="button"
 								class="theme-btn theme-btn-size-lg theme-btn__outline theme-btn__outline--primary"
@@ -176,7 +176,6 @@ import Layout from "../layouts/Layout.astro";
 	<Footer />
 </Layout>
 
-
 <!-- Lab Files Modal Start -->
 <div
 	id="labFiles"
@@ -200,7 +199,8 @@ import Layout from "../layouts/Layout.astro";
 
 			<div class="modal-body">
 				<div class="upload-modal__notice">
-					After upload, you cannot change this. Before uploading, make sure you are uploading lap reports.
+					After upload, you cannot change this. Before uploading, make sure you
+					are uploading lap reports.
 				</div>
 
 				<div class="upload-modal__dropzone">
@@ -208,18 +208,16 @@ import Layout from "../layouts/Layout.astro";
 					<p>OR</p>
 					<div class="upload-modal__dropzone__upload">
 						<label
-						class="theme-btn theme-btn__primary upload-modal__upload-btn"
-						for="upload-input"
-					>
-						Upload Document
-					</label>
-					<input id="upload-input" type="file" />
+							class="theme-btn theme-btn__primary upload-modal__upload-btn"
+							for="upload-input"
+						>
+							Upload Document
+						</label>
+						<input id="upload-input" type="file" />
 					</div>
 				</div>
 
-				<h3 class="upload-modal__section-title">
-					Existing Reports
-				</h3>
+				<h3 class="upload-modal__section-title"> Existing Reports </h3>
 
 				<div class="upload-modal__reports">
 					<div class="upload-modal__report">

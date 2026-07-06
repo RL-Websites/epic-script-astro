@@ -15,13 +15,13 @@ body {
 body {
 	font-family: 'Manrope', sans-serif;
 	font-size: $fs-16;
-	background-color: #efeff1;
+	background-color: $white;
 	color: $secondary;
 	margin: 0px;
 
 	// background: url('../img/bg/body-watermark.png') top center/1920px auto repeat;
 	&.alt-bg {
-		background-color: $white;
+		background-color: $light;
 	}
 }
 
