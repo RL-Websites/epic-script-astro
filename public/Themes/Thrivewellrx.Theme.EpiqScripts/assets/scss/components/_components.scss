@@ -208,8 +208,8 @@
 				align-items: center;
 				text-align: left;
 				background: transparent;
-				color: $red;
-				border: 1px solid $red;
+				color: $gray-dark;
+				border: 1px solid $gray-dark;
 				outline: 0;
 				font-size: 16px;
 				font-weight: 700;
@@ -235,7 +235,7 @@
 				position: relative;
 
 				&::after {
-					content: '\e911';
+					content: "\e91d";
 					font-family: 'icomoon';
 					position: absolute;
 					z-index: -1;
@@ -245,7 +245,7 @@
 					font-size: 20px;
 					font-weight: 700;
 					line-height: 1;
-					color: $red;
+					color: $primary;
 				}
 			}
 
