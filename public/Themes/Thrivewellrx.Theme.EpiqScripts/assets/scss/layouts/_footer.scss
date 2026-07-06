@@ -164,6 +164,10 @@
 		line-height: 160%;
 		color: $white;
 		text-transform: uppercase;
+
+		@media all and (max-width: 768px) {
+			text-align: center;
+		}
 	}
 
 	&__social {
