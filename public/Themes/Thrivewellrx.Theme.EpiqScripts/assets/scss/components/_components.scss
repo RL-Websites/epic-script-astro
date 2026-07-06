@@ -578,6 +578,13 @@
 		}
 	}
 }
+.dropdown__selection__date option{
+    color: #525252 !important;
+}
+
+.select__options option {
+    color: #525252 !important;
+}
 
 @media only screen and (max-width: 992px) {
 	.dropdown__selection {
