@@ -17,9 +17,9 @@
 .tooltip-arrow {}
 
 .tooltip-inner {
-    padding: 12px 16px 12px 16px !important;
+    padding: 5px 7px !important;
     background-color: $primary-lightest;
-    color: $gray-dark;
+    color: $black;
     max-width: 281px !important;
     box-shadow: 0px 0px 30px 0px #27005D14;
 
@@ -33,7 +33,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            color: $gray-dark;
+            color: $black;
             font-weight: 500;
 
             i {

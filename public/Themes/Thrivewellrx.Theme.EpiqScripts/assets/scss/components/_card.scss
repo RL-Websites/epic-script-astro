@@ -29,14 +29,14 @@
 	border: 1px solid $gray-lighter3;
 	border-radius: 16px;
 	overflow: hidden;
-	background: transparent;
+	background: $gray-lighter6;
 
 	&__header {
 		padding: 22px 20px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-bottom: 1px solid $primary-light;
+		border-bottom: 1px solid $gray-lighter3;
 		text-transform: capitalize;
 	}
 
@@ -51,10 +51,10 @@
 
 	&__title {
 		margin: 0;
-		color: $secondary;
+		color: $black-deep;
 
-		font-weight: 500;
-		font-size: $fs-30;
+		font-weight: 700;
+		font-size: $fs-24;
 	}
 
 	&--no-shadow {

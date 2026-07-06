@@ -539,10 +539,9 @@ body.header-open {
 
 .app-login-btn {
 	color: #000;
-	/* default color */
 	transition: color 0.3s ease;
-}
 
-.app-login-btn:hover {
-	color: #5607c5 !important;
+	&:hover {
+		color: $cyan !important;
+	}
 }
