@@ -292,6 +292,8 @@
 }
 
 .tsp {
+	overflow: hidden;
+
 	&__wrapper {
 		background-color: $white;
 		border-radius: 10px;
