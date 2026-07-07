@@ -29,13 +29,116 @@
 							<label for="rapid-category" class="basic-label">
 								Category of Interest
 							</label>
-							<input
-								id="rapid-category"
-								type="text"
-								class="basic-input"
-								placeholder="Category of Interest"
-								required
-							/>
+							<div
+								class="select__wrapper select__wrapper__alt custom-select"
+								data-custom-select
+							>
+								<input
+									type="hidden"
+									id="rapid-category"
+									name="categoryOfInterest"
+									data-custom-select-input
+									required
+								/>
+								<button
+									type="button"
+									class="select__options custom-select__trigger"
+									data-custom-select-trigger
+									aria-haspopup="listbox"
+									aria-expanded="false"
+								>
+									<span data-custom-select-label>Category of Interest</span>
+								</button>
+								<ul
+									class="custom-select__menu"
+									data-custom-select-menu
+									role="listbox"
+									aria-labelledby="rapid-category"
+									hidden
+								>
+									<li
+										class="custom-select__option"
+										data-value="weight-loss"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Weight Loss
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="sexual-health"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Sexual Health
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="hair-growth"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Hair Growth
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="hormone-health"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Hormone Health
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="sleep"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Sleep
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="anti-aging"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Anti-Aging
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="testosterone-replacement"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Testosterone Replacement
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="pre-workout"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Pre-Workout
+									</li>
+									<li
+										class="custom-select__option"
+										data-value="sterile-injections"
+										role="option"
+										aria-selected="false"
+										tabindex="0"
+									>
+										Sterile Injections
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 
