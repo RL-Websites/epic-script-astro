@@ -20,12 +20,13 @@
 		position: relative;
 		border-radius: 10px;
 		overflow: hidden;
-		min-height: 421px;
+		min-height: 250px;
 		background: url('../img/bg/faq-bg.jpg') no-repeat center center;
 		background-size: 170% 100%;
 
 		@media (min-width: 576px) {
 			background-size: cover;
+
 		}
 	}
 
@@ -35,8 +36,7 @@
 		line-height: 1.2;
 		color: $white;
 		position: absolute;
-		top: auto;
-		bottom: 48px;
+		top: 30%;
 		left: 50%;
 		transform: translateX(-50%);
 		text-align: center;
