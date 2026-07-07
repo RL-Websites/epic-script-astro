@@ -115,6 +115,115 @@ $(document).ready(function () {
 		);
 	});
 
+	function closeCustomSelect($select) {
+		$select.removeClass("is-open");
+		$select.find("[data-custom-select-menu]").attr("hidden", true);
+		$select
+			.find("[data-custom-select-trigger]")
+			.attr("aria-expanded", "false");
+		$select.find(".custom-select__option").removeClass("is-hovered");
+	}
+
+	function openCustomSelect($select) {
+		$("[data-custom-select]").not($select).each(function () {
+			closeCustomSelect($(this));
+		});
+
+		$select.addClass("is-open");
+		$select.find("[data-custom-select-menu]").removeAttr("hidden");
+		$select
+			.find("[data-custom-select-trigger]")
+			.attr("aria-expanded", "true");
+	}
+
+	function selectCustomOption($option) {
+		const $select = $option.closest("[data-custom-select]");
+		const value = $option.data("value");
+		const label = $.trim($option.text());
+
+		$select.find("[data-custom-select-input]").val(value).trigger("change");
+		$select.find("[data-custom-select-label]").text(label);
+		$select.find(".custom-select__option")
+			.removeClass("is-active")
+			.attr("aria-selected", "false");
+		$option.addClass("is-active").attr("aria-selected", "true");
+		closeCustomSelect($select);
+	}
+
+	$(document).on("click", "[data-custom-select-trigger]", function () {
+		const $select = $(this).closest("[data-custom-select]");
+
+		if ($select.hasClass("is-open")) {
+			closeCustomSelect($select);
+		} else {
+			openCustomSelect($select);
+		}
+	});
+
+	$(document).on(
+		"mouseenter",
+		"[data-custom-select] .custom-select__option",
+		function () {
+			$(this).addClass("is-hovered");
+		},
+	);
+
+	$(document).on(
+		"mouseleave",
+		"[data-custom-select] .custom-select__option",
+		function () {
+			$(this).removeClass("is-hovered");
+		},
+	);
+
+	$(document).on("click", "[data-custom-select] .custom-select__option", function () {
+		selectCustomOption($(this));
+	});
+
+	$(document).on(
+		"keydown",
+		"[data-custom-select-trigger], [data-custom-select] .custom-select__option",
+		function (e) {
+			const $select = $(this).closest("[data-custom-select]");
+
+			if (e.key === "Escape") {
+				closeCustomSelect($select);
+				$select.find("[data-custom-select-trigger]").trigger("focus");
+				return;
+			}
+
+			if (e.key !== "Enter" && e.key !== " ") return;
+
+			e.preventDefault();
+
+			if ($(this).is("[data-custom-select-trigger]")) {
+				openCustomSelect($select);
+				$select.find(".custom-select__option").first().trigger("focus");
+			} else {
+				selectCustomOption($(this));
+				$select.find("[data-custom-select-trigger]").trigger("focus");
+			}
+		},
+	);
+
+	$(document).on("click", function (e) {
+		if ($(e.target).closest("[data-custom-select]").length) return;
+
+		$("[data-custom-select]").each(function () {
+			closeCustomSelect($(this));
+		});
+	});
+
+	$(document).on("submit", ".rapid-contact__form", function (e) {
+		const $category = $(this).find("[data-custom-select-input]");
+
+		if (!$category.length || $category.val()) return;
+
+		e.preventDefault();
+		openCustomSelect($category.closest("[data-custom-select]"));
+		$(this).find("[data-custom-select-trigger]").trigger("focus");
+	});
+
 	// Toast
 	$("#liveToastBtn").on("click", function () {
 		var toastEl = $("#liveToast");

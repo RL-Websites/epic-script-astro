@@ -15,7 +15,7 @@ body {
 body {
 	font-family: 'Manrope', sans-serif;
 	font-size: $fs-16;
-	background-color: $light;
+	background-color: #efeff1;
 	color: $secondary;
 	margin: 0px;
 
@@ -92,7 +92,7 @@ ul {
 			position: absolute;
 			z-index: 0;
 			top: 50%;
-			right: 15px;
+			right: 25px;
 			transform: translateY(-50%);
 			font-size: 20px;
 			font-weight: 700;
@@ -113,9 +113,9 @@ ul {
 		background: $white;
 		border: 1px solid $gray-dark;
 		outline: 0;
-		font-size: $fs-16;
+		font-size: $fs-20;
 		font-weight: 500;
-		padding: 10px 45px 10px 15px;
+		padding: 10px 25px;
 		border-radius: 10px;
 		position: relative;
 		appearance: none;
@@ -154,13 +154,83 @@ ul {
 		}
 
 		option {
-			background-color: $white !important;
+			background-color: $green-light;
 			color: $gray-dark;
 
 			&:hover,
 			&:checked {
-				background-color: rgba($white, 1) !important;
-				color: $gray-dark !important;
+				color: $primary;
+				background-color: $green-deep;
+			}
+		}
+	}
+}
+
+.custom-select {
+	&.select__wrapper {
+		z-index: 100;
+
+		&.is-open {
+			z-index: 101;
+		}
+	}
+
+	&__trigger {
+		span {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			padding-right: 24px;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		top: calc(100% + 6px);
+		left: 0;
+		width: 100%;
+		max-height: 260px;
+		overflow-y: auto;
+		margin: 0;
+		padding: 6px;
+		border-radius: 10px;
+		background-color: $white;
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+	}
+
+	&__option {
+		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: 42px;
+		padding: 10px 42px 10px 16px;
+		border-radius: 8px;
+		color: $gray-dark;
+		font-size: $fs-16;
+		font-weight: 500;
+		line-height: 1.3;
+		cursor: pointer;
+
+		&.is-hovered {
+			background-color: #EFEFEF;
+			color: #0C0C0D;
+		}
+
+		&.is-active {
+			background-color: $primary;
+			color: $white;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 18px;
+				width: 8px;
+				height: 14px;
+				border: solid $white;
+				border-width: 0 2px 2px 0;
+				transform: translateY(-60%) rotate(45deg);
 			}
 		}
 	}
