@@ -11,10 +11,10 @@
 		}
 
 		&__weight-loss {
-			background: url('../img/bg/category-weight-loss-mob.jpg') no-repeat center center;
+			background: url('../img/bg/category-weight-loss-mobile.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
-				background: url('../img/bg/category-weight-loss.jpg') no-repeat center center;
+				background: url('../img/bg/category-weight-loss-bg.jpg') no-repeat center center;
 			}
 
 			background-size: cover;
@@ -199,6 +199,7 @@
 				padding: 0 8px;
 			}
 		}
+
 		&__title {
 			text-align: center;
 			padding: 50px 0 30px;
