@@ -23,7 +23,7 @@
 			font-weight: 700;
 			line-height: 1.1;
 
-			@media all and (max-widthP: 768px) {
+			@media all and (max-width: 768px) {
 				font-size: 30px;
 			}
 		}
@@ -33,10 +33,12 @@
 			font-size: $fs-28;
 			font-weight: 700;
 			line-height: 1.4;
-		}
-		@media all and (max-widthP: 768px) {
+
+			@media all and (max-width: 768px) {
 				font-size: 16px;
 			}
+		}
+		
 	}
 
 	// &__form {
