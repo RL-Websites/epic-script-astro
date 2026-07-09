@@ -4,123 +4,128 @@ const { class: className = "" } = Astro.props;
 ---
 
 <header class="container-fluid site__header__wrapper mt-10">
-	<!-- <input type="hidden" id="homeUrl" value="" /> -->
-	<div class={`site__header ${className}`}>
-		<div class="site__navbar">
-			<!-- Logo -->
-			<div class="site__logo">
-				<a href="/">
-					<img
-						class="site__logo--img"
-						src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/logo-main.png"
-						alt="VPeptides Logo"
-					/>
-				</a>
-			</div>
+  <!-- <input type="hidden" id="homeUrl" value="" /> -->
+  <div class={`site__header ${className}`}>
+    <div class="site__navbar">
+      <!-- Logo -->
+      <div class="site__logo">
+        <a href="/">
+          <img
+            class="site__logo--img"
+            src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/logo-main.png"
+            alt="VPeptides Logo"
+          />
+        </a>
+      </div>
 
-			<!-- Navigation Menu -->
-			<nav class="site__menu">
-				<ul class="site__menu__list">
-					<li>
-						<a
-							href="#"
-							role="button"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>
-							<span>Treatments</span>
-							<i class="icon-plus"></i>
-						</a>
-						<ul class="dropdown-menu user-menu-list__alt">
-							<li><a href="#">Weight Loss</a></li>
-							<li><a href="#">Testestorne</a></li>
-							<li><a href="#">Sexual Health</a></li>
-						</ul>
-					</li>
+      <!-- Navigation Menu -->
+      <nav class="site__menu">
+        <ul class="site__menu__list">
+          <li>
+            <a
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span>Treatments</span>
+              <i class="icon-plus"></i>
+            </a>
+            <ul class="dropdown-menu user-menu-list__alt">
+              <li><a href="#">Weight Loss</a></li>
+              <li><a href="#">Testestorne</a></li>
+              <li><a href="#">Sexual Health</a></li>
+            </ul>
+          </li>
 
-					<li>
-						<a id="browseProducts" style="cursor: pointer">
-							<span>Labs</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span>Supplements</span>
-						</a>
-					</li>
+          <li>
+            <a id="browseProducts" style="cursor: pointer">
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Technology</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>About</span>
+            </a>
+          </li>
 
-					<li>
-						<button
-							type="button"
-							onclick="goToLogin()"
-							class="theme-btn theme-btn__outline theme-btn__outline--primary d-md-none"
-							>Log In</button
-						>
-					</li>
-				</ul>
-				<div class="cart">
-					<a href="/cart" class="header-icon cart-icon">
-						<i class="icon-cart"></i>
-						<span class="cart__badge text-center">99</span>
-					</a>
-				</div>
-				<!-- CTA Buttons -->
-				<div class="site__menu--auth">
-					<div class="user-dropdown-container">
-						<button class="header-icon user-icon" id="user-menu-btn">
-							<i class="icon-user"></i>
-						</button>
-						<!-- <div class="user-profile-thumb" id="user-menu-btn">
+          <li>
+            <button
+              type="button"
+              onclick="goToLogin()"
+              class="theme-btn theme-btn__outline theme-btn__outline--primary d-md-none"
+              >Log In</button
+            >
+          </li>
+        </ul>
+        <div class="cart">
+          <a href="/cart" class="header-icon cart-icon">
+            <i class="icon-cart"></i>
+            <span class="cart__badge text-center">99</span>
+          </a>
+        </div>
+        <!-- CTA Buttons -->
+        <div class="site__menu--auth">
+          <div class="user-dropdown-container">
+            <button class="header-icon user-icon" id="user-menu-btn">
+              <i class="icon-user"></i>
+            </button>
+            <!-- <div class="user-profile-thumb" id="user-menu-btn">
 						<img src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/user.png" alt="">
 					</div> -->
-						<div class="user-dropdown" id="user-dropdown">
-							<div class="user-name">User Name</div>
-							<ul class="user-menu-list">
-								<li><a href="/my-profile">Profile</a></li>
-								<li><a href="/orders">Orders</a></li>
-								<li><a href="/logout">Logout</a></li>
-							</ul>
-						</div>
-					</div>
-					<a
-						type="button"
-						href="/login"
-						class="theme-btn theme-btn__outline theme-btn__outline--primary px-20"
-					>
-						Login
-					</a>
-					<button
-						type="button"
-						class="theme-btn theme-btn__primary px-20"
-						id="getStartedBtn"
-					>
-						Get Started
-					</button>
-				</div>
+            <div class="user-dropdown" id="user-dropdown">
+              <div class="user-name">User Name</div>
+              <ul class="user-menu-list">
+                <li><a href="/my-profile">Profile</a></li>
+                <li><a href="/orders">Orders</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+          <a
+            type="button"
+            href="/login"
+            class="theme-btn theme-btn__outline theme-btn__outline--primary px-20"
+          >
+            Login
+          </a>
+          <button
+            type="button"
+            class="theme-btn theme-btn__primary px-20"
+            id="getStartedBtn"
+          >
+            Get Started
+          </button>
+        </div>
 
-				<!-- Mobile Header Elements -->
-				<div class="mobile-header-elements">
-					<div class="user-dropdown-container mobile-only">
-						<button class="header-icon user-icon" id="user-menu-btn-mob">
-							<i class="icon-user"></i>
-						</button>
-						<!-- <div class="user-profile-thumb" id="user-menu-btn-mob">
+        <!-- Mobile Header Elements -->
+        <div class="mobile-header-elements">
+          <div class="user-dropdown-container mobile-only">
+            <button class="header-icon user-icon" id="user-menu-btn-mob">
+              <i class="icon-user"></i>
+            </button>
+            <!-- <div class="user-profile-thumb" id="user-menu-btn-mob">
 						<img src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/user.png" alt="">
 					</div> -->
-						<div class="user-dropdown" id="user-dropdown">
-							<div class="user-name">User Name</div>
-							<ul class="user-menu-list">
-								<li><a href="/my-profile">Profile</a></li>
-								<li><a href="/orders">Orders</a></li>
-								<li><a href="/logout">Logout</a></li>
-							</ul>
-						</div>
-					</div>
-					<button class="hamburger-menu" id="hamburger-menu">
-						<i class="icon-hamburger-menu fw-bold"></i>
-					</button>
-				</div>
-			</nav>
-		</div>
-	</div>
+            <div class="user-dropdown" id="user-dropdown">
+              <div class="user-name">User Name</div>
+              <ul class="user-menu-list">
+                <li><a href="/my-profile">Profile</a></li>
+                <li><a href="/orders">Orders</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="hamburger-menu" id="hamburger-menu">
+            <i class="icon-hamburger-menu fw-bold"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
 </header>

@@ -235,16 +235,46 @@
 		flex-direction: column;
 		justify-content: space-between;
 
+		h2,
 		h4,
 		h5,
 		h6 {
 			color: white;
+			font-weight: 500;
+		}
+
+		&__action {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 12px;
+
+			p {
+				margin: 0;
+				font-size: $fs-20;
+				font-weight: 500;
+				line-height: 1.2;
+				color: $white;
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+			}
+
+			// .theme-btn__icon {
+			// 	width: 28px;
+			// 	height: 28px;
+			// 	padding: 0;
+			// 	flex: 0 0 28px;
+			// 	font-size: $fs-16;
+			// 	color: $white;
+			// }
 		}
 
 		&__one {
 			min-height: 320px;
-			padding: 30px;
-			background: url('../img/home/category/weight-loss.jpg') center center / cover no-repeat;
+			padding: 24px 16px 16px 24px;
+			background: url('../img/home/category/hairRegrowth.png') 60% 0% / 125% 100% no-repeat;
 
 			@media all and (max-width: 992px) {
 				padding: 15px;
@@ -252,13 +282,14 @@
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
+				background: url('../img/home/category/hairRegrowth.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__two {
 			min-height: 320px;
-			padding: 30px;
-			background: url('../img/home/category/anti-aging.jpg') center center / cover no-repeat;
+			padding: 24px;
+			background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 125% 100% no-repeat;
 
 			@media all and (max-width: 992px) {
 				padding: 15px;
@@ -266,57 +297,66 @@
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
+				background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__three {
-			min-height: 150px;
-			padding: 15px;
-			background: url('../img/home/category/hormone-health.jpg') top center / cover no-repeat;
+			min-height: 320px;
+			padding: 24px;
+			background: url('../img/home/category/weightLoss.png') 60% 0% / 125% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
-				background: url('../img/home/category/hormone-health.jpg') 60% 0% / 120% 100% no-repeat;
+				background: url('../img/home/category/weightLoss.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__four {
-			min-height: 150px;
+			min-height: 190px;
 			padding: 15px;
-			background: url('../img/home/category/pre-workout.jpg') top center / cover no-repeat;
+			background: url('../img/home/category/Anti-Aging.png') 60% 0% / 100% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
-				background: url('../img/home/category/pre-workout.jpg') 60% 0% / 100% 100% no-repeat;
+				// background: url('../img/home/category/pre-workout.jpg') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__five {
-			min-height: 150px;
-			padding: 15px 30px;
-			background: url('../img/home/category/sexual-health.png') top center / cover no-repeat;
+			min-height: 190px;
+			padding: 15px;
+			background: url('../img/home/category/sexualHealth.png') 60% 0% / 100% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
-				flex-direction: row;
-				align-items: center;
-				min-height: 100px;
+				// flex-direction: row;
+				// align-items: center;
+				min-height: 150px;
 			}
 		}
 
 		&__six {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/hair-growth.jpg') center center / cover no-repeat;
-			flex-direction: row;
-			align-items: center;
+			min-height: 190px;
+			padding: 15px;
+			background: url('../img/home/category/preWorkout.png') 60% 0% / 100% 100% no-repeat;
+
+			@media all and (max-width: 768px) {
+				// flex-direction: row;
+				// align-items: center;
+				min-height: 150px;
+			}
 		}
 
 		&__seven {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/sterile-injections.jpg') center center / cover no-repeat;
-			flex-direction: row;
-			align-items: center;
+			min-height: 190px;
+			padding: 15px;
+			background: url('../img/home/category/Sleep.png') 60% 0% / 100% 100% no-repeat;
+
+			@media all and (max-width: 768px) {
+				// flex-direction: row;
+				// align-items: center;
+				min-height: 150px;
+			}
 		}
 
 		&__eight {
