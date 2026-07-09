@@ -192,7 +192,7 @@
 	&__home {
 		&__wrapper {
 			background: white;
-			padding: 0 80px;
+			padding: 0 80px 20px;
 			border-radius: 0 0 10px 10px;
 
 			@media all and (max-width: 992px) {
@@ -218,7 +218,7 @@
 
 			p {
 				font-size: 20px;
-				font-weight: 600;
+				font-weight: 700;
 				line-height: 1.2;
 				letter-spacing: 0;
 
@@ -241,6 +241,10 @@
 		h6 {
 			color: white;
 			font-weight: 500;
+
+			@media screen and (max-width: 768px) {
+				font-size: 24px;
+			}
 		}
 
 		&__action {
@@ -274,7 +278,7 @@
 		&__one {
 			min-height: 320px;
 			padding: 24px 16px 16px 24px;
-			background: url('../img/home/category/hairRegrowth.png') 60% 0% / 125% 100% no-repeat;
+			background: url('../img/home/category/hairRegrowth.png') 60% 0% / 164% 100% no-repeat;
 
 			@media all and (max-width: 992px) {
 				padding: 15px;
@@ -289,7 +293,7 @@
 		&__two {
 			min-height: 320px;
 			padding: 24px;
-			background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 125% 100% no-repeat;
+			background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 164% 100% no-repeat;
 
 			@media all and (max-width: 992px) {
 				padding: 15px;
@@ -304,7 +308,7 @@
 		&__three {
 			min-height: 320px;
 			padding: 24px;
-			background: url('../img/home/category/weightLoss.png') 60% 0% / 125% 100% no-repeat;
+			background: url('../img/home/category/weightLoss.png') 60% 0% / 164% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
@@ -315,47 +319,50 @@
 		&__four {
 			min-height: 190px;
 			padding: 15px;
-			background: url('../img/home/category/Anti-Aging.png') 60% 0% / 100% 100% no-repeat;
+			background: url('../img/home/category/Anti-Aging.png') 60% 0% / 138% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
-				// background: url('../img/home/category/pre-workout.jpg') 60% 0% / 100% 100% no-repeat;
+				background: url('../img/home/category/Anti-Aging.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__five {
 			min-height: 190px;
 			padding: 15px;
-			background: url('../img/home/category/sexualHealth.png') 60% 0% / 100% 100% no-repeat;
+			background: url('../img/home/category/sexualHealth.png') 60% 0% / 138% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				// flex-direction: row;
 				// align-items: center;
 				min-height: 150px;
+				background: url('../img/home/category/sexualHealth.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__six {
 			min-height: 190px;
 			padding: 15px;
-			background: url('../img/home/category/preWorkout.png') 60% 0% / 100% 100% no-repeat;
+			background: url('../img/home/category/preWorkout.png') 60% 0% / 138% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				// flex-direction: row;
 				// align-items: center;
 				min-height: 150px;
+				background: url('../img/home/category/preWorkout.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 
 		&__seven {
 			min-height: 190px;
 			padding: 15px;
-			background: url('../img/home/category/Sleep.png') 60% 0% / 100% 100% no-repeat;
+			background: url('../img/home/category/Sleep.png') 60% 0% / 138% 100% no-repeat;
 
 			@media all and (max-width: 768px) {
 				// flex-direction: row;
 				// align-items: center;
 				min-height: 150px;
+				background: url('../img/home/category/Sleep.png') 60% 0% / 100% 100% no-repeat;
 			}
 		}
 

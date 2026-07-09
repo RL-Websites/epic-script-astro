@@ -1,126 +1,128 @@
 ---
 const footerLinkCols = [
-	{
-		links: [
-			{ text: "High Volume Prescription Fulfillment", href: "/" },
-			{ text: "Packaging", href: "/" },
-			{ text: "Custom Compounds", href: "/" },
-			{ text: "Shipment and Delivery", href: "/" },
-		],
-	},
-	{
-		links: [
-			{ text: "Digital Pharmacy ", href: "/" },
-			{ text: "Technology", href: "/" },
-			{ text: "About Us", href: "/" },
-			{ text: "About Us", href: "/" },
-			{ text: "Contact us", href: "/" },
-		],
-	},
+  {
+    links: [
+      { text: "High Volume Prescription Fulfillment", href: "/" },
+      { text: "Packaging", href: "/" },
+      { text: "Custom Compounds", href: "/" },
+      { text: "Shipment and Delivery", href: "/" },
+    ],
+  },
+  {
+    links: [
+      { text: "Digital Pharmacy ", href: "/" },
+      { text: "Technology", href: "/" },
+      { text: "About Us", href: "/" },
+      { text: "About Us", href: "/" },
+      { text: "Contact us", href: "/" },
+    ],
+  },
 ];
 ---
 
 <footer class="site__footer mb-10">
-	<div class="container-fluid">
-		<!-- Footer Top -->
-		<div class="site__footer__wrapper">
-			<div class="site__footer__top">
-				<div
-					class="site__footer__logo-section"
-					data-aos="fade-up"
-					data-aos-duration="600"
-				>
-					<a href="/">
-						<img
-							src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/logo-alt.png"
-							alt="VPeptides Logo"
-						/>
-					</a>
-				</div>
-				<div class="site__footer__social">
-					<a
-						href="#"
-						aria-label="Instagram"
-						data-aos="fade-up"
-						data-aos-delay="400"
-						data-aos-duration="600"
-					>
-						<i class="icon-instagram"></i>
-					</a>
-					<a
-						href="#"
-						aria-label="Facebook"
-						data-aos="fade-up"
-						data-aos-delay="500"
-						data-aos-duration="600"
-					>
-						<i class="icon-facebook"></i>
-					</a>
-					<a
-						href="#"
-						aria-label="LinkedIn"
-						data-aos="fade-up"
-						data-aos-delay="600"
-						data-aos-duration="600"
-					>
-						<i class="icon-linkedin"></i>
-					</a>
-				</div>
-			</div>
+  <div class="container-fluid">
+    <!-- Footer Top -->
+    <div class="site__footer__wrapper">
+      <div class="site__footer__top">
+        <div
+          class="site__footer__logo-section"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
+          <a href="/">
+            <img
+              src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/logo-alt.png"
+              alt="VPeptides Logo"
+            />
+          </a>
+        </div>
+        <div class="site__footer__social">
+          <a
+            href="#"
+            aria-label="Instagram"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="600"
+          >
+            <i class="icon-instagram"></i>
+          </a>
+          <a
+            href="#"
+            aria-label="Facebook"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="600"
+          >
+            <i class="icon-facebook"></i>
+          </a>
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="600"
+          >
+            <i class="icon-linkedin"></i>
+          </a>
+        </div>
+      </div>
 
-			<div class="site__footer__links w-full">
-				{
-					footerLinkCols.map((col) => (
-						<div class="site__footer__links-column">
-							<ul>
-								{col.links.map((link) => (
-									<li>
-										<a class="text-white" href={link.href}>
-											{link.text}
-										</a>
-									</li>
-								))}
-							</ul>
-						</div>
-					))
-				}
-				<div class="site__footer__links-column">
-					<ul>
-						<li>
-							<p class="text-gray-medium"> Call us </p>
-							<a class="fs-md-24 fs-16" href="tel:833654-3553">(833) 654-3553</a
-							>
-						</li>
-						<li>
-							<p class="text-gray-medium">Email us anytime:</p>
-							<a class="fs-md-24 fs-16" href="mailto:admin@epiqscripts.com"
-								>admin@epiqscripts.com</a
-							>
-						</li>
-					</ul>
-				</div>
-			</div>
+      <div class="site__footer__links w-full">
+        {
+          footerLinkCols.map((col) => (
+            <div class="site__footer__links-column">
+              <ul>
+                {col.links.map((link) => (
+                  <li>
+                    <a class="text-white" href={link.href}>
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+        <div class="site__footer__links-column">
+          <ul>
+            <li>
+              <p class="text-gray-medium">Call us</p>
+              <a class="fs-md-24 fs-16 fw-500" href="tel:833654-3553"
+                >(833) 654-3553</a
+              >
+            </li>
+            <li>
+              <p class="text-gray-medium">Email us anytime:</p>
+              <a
+                class="fs-md-24 fs-16 fw-500"
+                href="mailto:admin@epiqscripts.com">admin@epiqscripts.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
 
-			<!-- Footer Bottom -->
-			<div class="site__footer__bottom">
-				<div class="container">
-					<p class="site__footer__copyright">
-						© 2026 | Epiq Scripts | All Rights Reserved
-					</p>
-					<ul>
-						<li>
-							<a class="site__footer__copyright" href=""
-								>Notice of privacy practices</a
-							>
-						</li>
-						<li>
-							<a class="site__footer__copyright" href="">
-								Terms and Conditions
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+      <!-- Footer Bottom -->
+      <div class="site__footer__bottom">
+        <div class="container">
+          <p class="site__footer__copyright">
+            © 2026 | Epiq Scripts | All Rights Reserved
+          </p>
+          <ul>
+            <li>
+              <a class="site__footer__copyright" href=""
+                >Notice of privacy practices</a
+              >
+            </li>
+            <li>
+              <a class="site__footer__copyright" href="">
+                Terms and Conditions
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
