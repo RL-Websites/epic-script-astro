@@ -22,7 +22,10 @@
 		}
 
 		&__weight-loss {
-			background: #0f2f28;
+			// background: #0f2f28;
+			display: flex;
+				justify-content: flex-start;
+				align-items: center;
 		}
 
 		&__testosterone {
@@ -30,6 +33,9 @@
 
 			@media (min-width: 768px) {
 				background: url('../img/bg/category-testosterone.jpg') no-repeat center center;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 			}
 
 			background-size: cover;
@@ -39,6 +45,9 @@
 			background: url('../img/bg/category-sexual-health-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 				background: url('../img/bg/category-sexual-health.jpg') no-repeat center center;
 			}
 
@@ -46,6 +55,9 @@
 		}
 
 		&__pre-workout {
+			display: flex;
+				justify-content: flex-start;
+				align-items: center;
 			// background: url('../img/bg/category-pre-workout-mob.jpg') no-repeat center center;
 
 			// @media (min-width: 768px) {
@@ -59,6 +71,9 @@
 			background: url('../img/bg/category-hormone-health-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 				background: url('../img/bg/category-hormone-health.jpg') no-repeat center center;
 			}
 
@@ -69,6 +84,9 @@
 			background: url('../img/bg/category-anti-aging-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 				background: url('../img/bg/category-anti-aging.jpg') no-repeat center center;
 			}
 
@@ -79,6 +97,9 @@
 			background: url('../img/bg/category-sleep-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 				background: url('../img/bg/category-sleep.jpg') no-repeat center center;
 			}
 
@@ -89,6 +110,9 @@
 			background: url('../img/bg/category-sterile-injections-mob.jpg') no-repeat center center;
 
 			@media (min-width: 768px) {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 				background: url('../img/bg/category-sterile-injections.jpg') no-repeat center center;
 			}
 
@@ -96,6 +120,9 @@
 		}
 
 		&__hair-growth {
+			display: flex;
+				justify-content: flex-start;
+				align-items: center;
 			// background: url('../img/bg/category-hair-growth-mob.jpg') no-repeat center center;
 
 			// @media (min-width: 768px) {
@@ -107,7 +134,7 @@
 
 		h1 {
 			font-size: 30px;
-			font-weight: 600;
+			font-weight: 500;
 			line-height: 1.3;
 			color: $white;
 			padding-top: 26px;
@@ -116,7 +143,7 @@
 
 			@media (min-width: 768px) {
 				font-size: 56px;
-				font-weight: 700;
+				font-weight: 500;
 				line-height: 1.2;
 			}
 		}
@@ -128,7 +155,7 @@
 		max-width: 320px;
 
 		@media (min-width: 768px) {
-			max-width: 620px;
+			max-width: 700px;
 		}
 	}
 
