@@ -333,6 +333,7 @@
 			min-height: 320px;
 			padding: 24px 16px 16px 24px;
 			background: url('../img/home/category/hairRegrowth.png') 60% 0% / 164% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 992px) {
 				padding: 15px;
@@ -341,6 +342,7 @@
 			@media all and (max-width: 768px) {
 				min-height: 150px;
 				background: url('../img/home/category/hairRegrowth.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 
@@ -348,6 +350,7 @@
 			min-height: 320px;
 			padding: 24px;
 			background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 164% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 992px) {
 				padding: 15px;
@@ -356,6 +359,7 @@
 			@media all and (max-width: 768px) {
 				min-height: 150px;
 				background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 
@@ -363,10 +367,12 @@
 			min-height: 320px;
 			padding: 24px;
 			background: url('../img/home/category/weightLoss.png') 60% 0% / 164% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
 				background: url('../img/home/category/weightLoss.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 
@@ -374,10 +380,12 @@
 			min-height: 190px;
 			padding: 15px;
 			background: url('../img/home/category/Anti-Aging.png') 60% 0% / 138% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 768px) {
 				min-height: 150px;
 				background: url('../img/home/category/Anti-Aging.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 
@@ -385,12 +393,14 @@
 			min-height: 190px;
 			padding: 15px;
 			background: url('../img/home/category/sexualHealth.png') 60% 0% / 138% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 768px) {
 				// flex-direction: row;
 				// align-items: center;
 				min-height: 150px;
 				background: url('../img/home/category/sexualHealth.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 
@@ -398,12 +408,14 @@
 			min-height: 190px;
 			padding: 15px;
 			background: url('../img/home/category/preWorkout.png') 60% 0% / 138% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 768px) {
 				// flex-direction: row;
 				// align-items: center;
 				min-height: 150px;
 				background: url('../img/home/category/preWorkout.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 
@@ -411,12 +423,14 @@
 			min-height: 190px;
 			padding: 15px;
 			background: url('../img/home/category/Sleep.png') 60% 0% / 138% 100% no-repeat;
+			background-size: cover;
 
 			@media all and (max-width: 768px) {
 				// flex-direction: row;
 				// align-items: center;
 				min-height: 150px;
 				background: url('../img/home/category/Sleep.png') 60% 0% / 100% 100% no-repeat;
+				background-size: cover;
 			}
 		}
 

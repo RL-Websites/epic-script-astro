@@ -194,6 +194,10 @@
 		background-color: $white;
 		border: 1px solid $gray-dark;
 
+		&:focus {
+			border: 2px solid $cyan;
+		}
+
 		&::placeholder {
 			color: $gray-dark;
 		}

@@ -113,8 +113,8 @@ ul {
 		background: $white;
 		border: 1px solid $gray-dark;
 		outline: 0;
-		font-size: $fs-20;
-		font-weight: 500;
+		font-size: $fs-16;
+		font-weight: 400;
 		padding: 10px 25px;
 		border-radius: 10px;
 		position: relative;
@@ -124,6 +124,10 @@ ul {
 		cursor: pointer;
 
 		color: $gray-dark;
+
+		&:focus {
+			border: 2px solid $cyan;
+		}
 
 		&-country {
 			padding: 15px 15px;
@@ -182,6 +186,7 @@ ul {
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			padding-right: 24px;
+			color: $gray-dark;
 		}
 	}
 

@@ -45,6 +45,14 @@
 		.cart-icon {
 			color: $primary;
 			position: relative;
+		
+
+			&:hover {
+			.cart__badge {
+				background-color: $green-lighter4;
+			}
+				color: $green-lighter4;
+			}
 		}
 
 		.cart__badge {
@@ -214,7 +222,7 @@
 	cursor: pointer;
 
 	&:hover {
-		color: $primary;
+		color: $green-lighter4;
 	}
 
 	&.mobile-only {
