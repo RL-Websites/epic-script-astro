@@ -117,8 +117,8 @@
 		font-weight: 700;
 
 		&:hover {
-			background-color: $yellow-lighter;
-			color: $black;
+			background-color: $green-lighter4;
+			color: $white;
 		}
 	}
 
@@ -244,7 +244,11 @@
 		border-radius: 100px;
 
 		&__dark {
-			background: rgba(0, 0, 0, 0.1);
+			background: rgba(0, 0, 0, 0.3);
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.1);
+			}
 		}
 	}
 
