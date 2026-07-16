@@ -1,0 +1,78 @@
+---
+interface Props {
+  persistent?: boolean;
+}
+
+const { persistent = false } = Astro.props;
+---
+
+<div
+  class="epiq-loader"
+  data-epiq-loader
+  data-persistent={persistent ? "true" : undefined}
+  role="status"
+  aria-live="polite"
+  aria-label="Loading"
+>
+  <div class="epiq-loader__animation" aria-hidden="true">
+    <span class="epiq-loader__dot epiq-loader__dot--1"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--2"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--3"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--4"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--5"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--6"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--7"></span>
+    <span class="epiq-loader__dot epiq-loader__dot--8"></span>
+
+    <svg
+      class="epiq-loader__mark"
+      viewBox="0 0 32 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 25V13C8 6.925 11.582 3 16 3C20.418 3 24 6.925 24 13V21"
+        stroke="currentColor"
+        stroke-width="3.5"
+        stroke-linecap="round"
+      />
+      <path
+        d="M24 23V35C24 41.075 20.418 45 16 45C11.582 45 8 41.075 8 35V27"
+        stroke="currentColor"
+        stroke-width="3.5"
+        stroke-linecap="round"
+      />
+      <path
+        d="M3 19H18V13M29 29H14V35"
+        stroke="currentColor"
+        stroke-width="3.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+  <span class="visually-hidden">Loading…</span>
+</div>
+
+<script>
+  const loaders = document.querySelectorAll<HTMLElement>(
+    "[data-epiq-loader]:not([data-persistent='true'])",
+  );
+
+  const dismissLoaders = () => {
+    window.setTimeout(() => {
+      loaders.forEach((loader) => {
+        loader.classList.add("epiq-loader--hidden");
+        loader.addEventListener("transitionend", () => loader.remove(), {
+          once: true,
+        });
+      });
+    }, 650);
+  };
+
+  if (document.readyState === "complete") {
+    dismissLoaders();
+  } else {
+    window.addEventListener("load", dismissLoaders, { once: true });
+  }
+</script>
