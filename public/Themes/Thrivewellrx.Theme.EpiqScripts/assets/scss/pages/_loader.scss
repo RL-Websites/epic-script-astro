@@ -1,0 +1,94 @@
+@use "../base/variables" as *;
+
+.loader-page {
+  margin: 0;
+  background: $white;
+}
+
+.loader {
+  --loader-size: clamp(9rem, 26vw, 11rem);
+  --logo-size: clamp(2.5rem, 7vw, 3.25rem);
+  min-height: 100dvh;
+  padding: 1.5rem;
+  background: $white;
+
+  &__content {
+    width: var(--loader-size);
+    aspect-ratio: 1;
+  }
+
+  &__logo {
+    z-index: 1;
+    width: var(--logo-size);
+    height: auto;
+  }
+
+  // One element creates five dots; the larger dot travels around the circle.
+  &__dots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    color: $primary;
+    font-size: clamp(0.4rem, 1vw, 0.5rem);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: loader-dots 1.3s linear infinite;
+    will-change: box-shadow;
+  }
+}
+
+@keyframes loader-dots {
+  0%,
+  100% {
+    box-shadow:
+      0 -5.5em 0 0.2em,
+      5.23em -1.7em 0 -0.05em,
+      3.23em 4.45em 0 -0.05em,
+      -3.23em 4.45em 0 -0.05em,
+      -5.23em -1.7em 0 -0.05em;
+  }
+
+  20% {
+    box-shadow:
+      0 -5.5em 0 -0.05em,
+      5.23em -1.7em 0 0.2em,
+      3.23em 4.45em 0 -0.05em,
+      -3.23em 4.45em 0 -0.05em,
+      -5.23em -1.7em 0 -0.05em;
+  }
+
+  40% {
+    box-shadow:
+      0 -5.5em 0 -0.05em,
+      5.23em -1.7em 0 -0.05em,
+      3.23em 4.45em 0 0.2em,
+      -3.23em 4.45em 0 -0.05em,
+      -5.23em -1.7em 0 -0.05em;
+  }
+
+  60% {
+    box-shadow:
+      0 -5.5em 0 -0.05em,
+      5.23em -1.7em 0 -0.05em,
+      3.23em 4.45em 0 -0.05em,
+      -3.23em 4.45em 0 0.2em,
+      -5.23em -1.7em 0 -0.05em;
+  }
+
+  80% {
+    box-shadow:
+      0 -5.5em 0 -0.05em,
+      5.23em -1.7em 0 -0.05em,
+      3.23em 4.45em 0 -0.05em,
+      -3.23em 4.45em 0 -0.05em,
+      -5.23em -1.7em 0 0.2em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader__dots {
+    animation: none;
+  }
+}

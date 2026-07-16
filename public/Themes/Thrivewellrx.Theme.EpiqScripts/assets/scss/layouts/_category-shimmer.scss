@@ -31,7 +31,7 @@
 		justify-content: space-between;
 		padding: 24px;
 		border-radius: 20px;
-		background: $gray-light;
+		background: #EFEFF1;
 
 		&::after {
 			position: absolute;
@@ -88,7 +88,7 @@
 	.placeholder {
 		display: block;
 		border-radius: 4px;
-		background: rgba($primary, 0.12);
+		background: #E0E0E2;
 		opacity: 1;
 	}
 
