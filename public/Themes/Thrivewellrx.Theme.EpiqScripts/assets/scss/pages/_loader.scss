@@ -25,29 +25,59 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     margin: -9px;
     border-radius: 50%;
     background: $primary;
     animation: epiq-loader-comet 1.25s linear infinite;
 
-    &--1 { --dot-angle: 90deg; animation-delay: 0s; }
-    &--2 { --dot-angle: 135deg; animation-delay: -0.15625s; }
-    &--3 { --dot-angle: 180deg; animation-delay: -0.3125s; }
-    &--4 { --dot-angle: 225deg; animation-delay: -0.46875s; }
-    &--5 { --dot-angle: 270deg; animation-delay: -0.625s; }
-    &--6 { --dot-angle: 315deg; animation-delay: -0.78125s; }
-    &--7 { --dot-angle: 360deg; animation-delay: -0.9375s; }
-    &--8 { --dot-angle: 405deg; animation-delay: -1.09375s; }
+    &--1 {
+      --dot-angle: 90deg;
+      animation-delay: 0s;
+    }
+
+    &--2 {
+      --dot-angle: 135deg;
+      animation-delay: -0.15625s;
+    }
+
+    &--3 {
+      --dot-angle: 180deg;
+      animation-delay: -0.3125s;
+    }
+
+    &--4 {
+      --dot-angle: 225deg;
+      animation-delay: -0.46875s;
+    }
+
+    &--5 {
+      --dot-angle: 270deg;
+      animation-delay: -0.625s;
+    }
+
+    &--6 {
+      --dot-angle: 315deg;
+      animation-delay: -0.78125s;
+    }
+
+    &--7 {
+      --dot-angle: 360deg;
+      animation-delay: -0.9375s;
+    }
+
+    &--8 {
+      --dot-angle: 405deg;
+      animation-delay: -1.09375s;
+    }
   }
 
   &__mark {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 32px;
-    height: 48px;
+    width: 25px;
     transform: translate(-50%, -50%);
     color: $primary;
   }
@@ -58,10 +88,12 @@
     opacity: 1;
     transform: rotate(var(--dot-angle)) translateY(-51px) scale(1.15);
   }
+
   55% {
     opacity: 0.12;
     transform: rotate(var(--dot-angle)) translateY(-51px) scale(0.18);
   }
+
   100% {
     opacity: 0;
     transform: rotate(var(--dot-angle)) translateY(-51px) scale(0.08);
