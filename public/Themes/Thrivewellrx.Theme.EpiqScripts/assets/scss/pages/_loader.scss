@@ -8,6 +8,8 @@
 .loader {
   --loader-size: clamp(9rem, 26vw, 11rem);
   --logo-size: clamp(2.5rem, 7vw, 3.25rem);
+  --dot-gap: 20px;
+  --orbit-radius: 70px;
   min-height: 100dvh;
   padding: 1.5rem;
   background: $white;
@@ -23,7 +25,7 @@
     height: auto;
   }
 
-  // One element creates five dots; the larger dot travels around the circle.
+  // One element creates five dots of decreasing size around the fixed logo.
   &__dots {
     position: absolute;
     top: 50%;
@@ -34,56 +36,28 @@
     font-size: clamp(0.4rem, 1vw, 0.5rem);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: loader-dots 1.3s linear infinite;
-    will-change: box-shadow;
+    box-shadow:
+      0 calc(var(--orbit-radius) * -1) 0 0.18em,
+      calc(var(--orbit-radius) * 0.9511) calc(var(--orbit-radius) * -0.309) 0
+        0.1em,
+      calc(var(--orbit-radius) * 0.5878) calc(var(--orbit-radius) * 0.809) 0
+        0.03em,
+      calc(var(--orbit-radius) * -0.5878) calc(var(--orbit-radius) * 0.809)
+        0 -0.04em,
+      calc(var(--orbit-radius) * -0.9511) calc(var(--orbit-radius) * -0.309)
+        0 -0.1em;
+    animation: loader-orbit 2s linear infinite;
+    will-change: transform;
   }
 }
 
-@keyframes loader-dots {
-  0%,
-  100% {
-    box-shadow:
-      0 -5.5em 0 0.2em,
-      5.23em -1.7em 0 -0.05em,
-      3.23em 4.45em 0 -0.05em,
-      -3.23em 4.45em 0 -0.05em,
-      -5.23em -1.7em 0 -0.05em;
+@keyframes loader-orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
-  20% {
-    box-shadow:
-      0 -5.5em 0 -0.05em,
-      5.23em -1.7em 0 0.2em,
-      3.23em 4.45em 0 -0.05em,
-      -3.23em 4.45em 0 -0.05em,
-      -5.23em -1.7em 0 -0.05em;
-  }
-
-  40% {
-    box-shadow:
-      0 -5.5em 0 -0.05em,
-      5.23em -1.7em 0 -0.05em,
-      3.23em 4.45em 0 0.2em,
-      -3.23em 4.45em 0 -0.05em,
-      -5.23em -1.7em 0 -0.05em;
-  }
-
-  60% {
-    box-shadow:
-      0 -5.5em 0 -0.05em,
-      5.23em -1.7em 0 -0.05em,
-      3.23em 4.45em 0 -0.05em,
-      -3.23em 4.45em 0 0.2em,
-      -5.23em -1.7em 0 -0.05em;
-  }
-
-  80% {
-    box-shadow:
-      0 -5.5em 0 -0.05em,
-      5.23em -1.7em 0 -0.05em,
-      3.23em 4.45em 0 -0.05em,
-      -3.23em 4.45em 0 -0.05em,
-      -5.23em -1.7em 0 0.2em;
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
