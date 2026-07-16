@@ -1,395 +1,479 @@
-@use '../base/variables' as *;
+@use "../base/variables" as *;
 
 .category-hero {
-	&__wrapper {
-		padding: 30px 18px;
-		min-height: calc(100vh - 130px);
-		border-radius: 10px;
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 18px;
+    height: 420px;
+    border-radius: 10px;
 
-		@media (min-width: 768px) {
-			padding: 100px 120px;
-		}
+    &::after {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 51.69%
+      );
+    }
 
-		&__weight-loss {
-			background: url('../img/bg/category-weight-loss-mobile.jpg') no-repeat center center;
+    @media (min-width: 768px) {
+      padding: 50px 120px;
+    }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-weight-loss-bg.jpg') no-repeat center center;
-			}
+    &__weight-loss {
+      // background: #0f2f28;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
 
-			background-size: cover;
-		}
+    &__testosterone {
+      background: url("../img/bg/category-testosterone-mob-new.jpg") no-repeat
+        center center;
 
-		&__testosterone {
-			background: url('../img/bg/category-testosterone-mob.jpg') no-repeat center center;
+      @media (min-width: 768px) {
+        background: url("../img/bg/category-testosterone-new.jpg") no-repeat
+          center center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-testosterone.jpg') no-repeat center center;
-			}
+      background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__sexual-health {
+      background: url("../img/bg/category-sexual-health-mob-new.jpg") no-repeat
+        center center;
 
-		&__sexual-health {
-			background: url('../img/bg/category-sexual-health-mob.jpg') no-repeat center center;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url("../img/bg/category-sexual-health-new.jpg") no-repeat
+          center center;
+      }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-sexual-health.jpg') no-repeat center center;
-			}
+      background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__pre-workout {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      // background: url('../img/bg/category-pre-workout-mob.jpg') no-repeat center center;
 
-		&__pre-workout {
-			background: url('../img/bg/category-pre-workout-mob.jpg') no-repeat center center;
+      // @media (min-width: 768px) {
+      // 	background: url('../img/bg/category-pre-workout.jpg') no-repeat center center;
+      // }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-pre-workout.jpg') no-repeat center center;
-			}
+      // background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__hormone-health {
+      background: url("../img/bg/category-hormone-health-mob-new.jpg") no-repeat
+        center center;
 
-		&__hormone-health {
-			background: url('../img/bg/category-hormone-health-mob.jpg') no-repeat center center;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url("../img/bg/category-hormone-health-new.jpg") no-repeat
+          center center;
+      }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-hormone-health.jpg') no-repeat center center;
-			}
+      background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__anti-aging {
+      background: url("../img/bg/category-anti-aging-mob-new.jpg") no-repeat
+        center center;
 
-		&__anti-aging {
-			background: url('../img/bg/category-anti-aging-mob.jpg') no-repeat center center;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url("../img/bg/category-anti-agingNew.jpg") no-repeat center
+          center;
+      }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-anti-aging.jpg') no-repeat center center;
-			}
+      background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__sleep {
+      background: url("../img/bg/category-sleep-mob-new.jpg") no-repeat center
+        center;
 
-		&__sleep {
-			background: url('../img/bg/category-sleep-mob.jpg') no-repeat center center;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url("../img/bg/category-sleep-new.jpg") no-repeat center
+          center;
+      }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-sleep.jpg') no-repeat center center;
-			}
+      background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__sterile-injections {
+      background: url("../img/bg/category-sterile-injections-mob-new.jpg")
+        no-repeat center center;
 
-		&__sterile-injections {
-			background: url('../img/bg/category-sterile-injections-mob.jpg') no-repeat center center;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url("../img/bg/category-sterile-injections-new.jpg")
+          no-repeat center center;
+      }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-sterile-injections.jpg') no-repeat center center;
-			}
+      background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    &__hair-growth {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      // background: url('../img/bg/category-hair-growth-mob.jpg') no-repeat center center;
 
-		&__hair-growth {
-			background: url('../img/bg/category-hair-growth-mob.jpg') no-repeat center center;
+      // @media (min-width: 768px) {
+      // 	background: url('../img/bg/category-hair-growth.jpg') no-repeat center center;
+      // }
 
-			@media (min-width: 768px) {
-				background: url('../img/bg/category-hair-growth.jpg') no-repeat center center;
-			}
+      // background-size: cover;
+    }
 
-			background-size: cover;
-		}
+    h1 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: $white;
+      padding-top: 26px;
+      text-transform: capitalize;
 
-		h1 {
-			font-size: 30px;
-			font-weight: 600;
-			line-height: 1.3;
-			color: $white;
-			padding-top: 26px;
-			text-transform: capitalize;
+      @media (min-width: 768px) {
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+    }
+  }
 
-			@media (min-width: 768px) {
-				font-size: 56px;
-				font-weight: 700;
-				line-height: 1.2;
-			}
-		}
-	}
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
 
-	&__content {
-		max-width: 320px;
+    @media (min-width: 768px) {
+      max-width: 700px;
+    }
+  }
 
-		@media (min-width: 768px) {
-			max-width: 620px;
-		}
-	}
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
+    z-index: 0;
+
+    @media all and (max-width: 768px) {
+      height: 100%;
+    }
+  }
 }
 
 .category-slider {
-	&__inner-container {
-		background: $white;
-		border-radius: 10px;
-		padding: 30px 0 30px 18px;
+  &__inner-container {
+    background: $white;
+    border-radius: 10px;
+    padding: 30px 0 30px 18px;
 
-		@media (min-width: 576px) {
-			padding: 80px 0 80px 80px;
-		}
-	}
+    @media (min-width: 576px) {
+      padding: 80px 0 80px 80px;
+    }
+  }
 
-	&__controls {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 40px;
-		margin-top: 50px;
-	}
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-top: 50px;
+  }
 
-	&__pagination.swiper-pagination-progressbar {
-		position: relative;
-		width: 120px !important;
-		height: 10px;
-		background: $gray-light;
-		border-radius: 25px;
-		top: auto;
-		overflow: hidden;
+  &__pagination.swiper-pagination-progressbar {
+    position: relative;
+    width: 120px !important;
+    height: 10px;
+    background: $gray-light;
+    border-radius: 25px;
+    top: auto;
+    overflow: hidden;
 
-		.swiper-pagination-progressbar-fill {
-			border-radius: 25px;
-			background: $primary; // Primary Dark Green
-		}
-	}
+    .swiper-pagination-progressbar-fill {
+      border-radius: 25px;
+      background: $primary; // Primary Dark Green
+    }
+  }
 
-	&__navigation {
-		display: flex;
-		gap: 15px;
+  &__navigation {
+    display: flex;
+    gap: 15px;
 
-		[class^='swiper-button-'] {
-			height: 56px;
-			width: 56px;
-			border-radius: 100%;
-			background: $gray-light;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			color: #333;
+    [class^="swiper-button-"] {
+      height: 56px;
+      width: 56px;
+      border-radius: 100%;
+      background: $gray-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #333;
 
-			&:hover {
-				background: #004d3d;
-				color: $white;
-			}
+      &:hover {
+        background: #004d3d;
+        color: $white;
+      }
 
-			&.swiper-button-disabled {
-				opacity: 0.5;
-				cursor: not-allowed;
-			}
-		}
-	}
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
 }
 
 .category {
-	&__home {
-		&__wrapper {
-			background: white;
-			padding: 0 80px 20px;
-			border-radius: 0 0 10px 10px;
+  &__home {
+    &__wrapper {
+      background: white;
+      padding: 0 80px 20px;
+      border-radius: 0 0 10px 10px;
 
-			@media all and (max-width: 992px) {
-				padding: 0 8px;
-				margin-top: 10px;
-				border-radius: 10px;
-			}
-		}
+      @media all and (max-width: 992px) {
+        padding: 0 8px;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+    }
 
-		&__title {
-			text-align: center;
-			padding: 50px 0 40px;
-		
-			@media all and (max-width: 768px) {
-				padding: 24px 0 30px;
-			}
+    &__title {
+      text-align: center;
+      padding: 50px 0 40px;
 
-			h2 {
-				font-size: 48px;
-				font-weight: 700;
-				line-height: 1.2;
-				letter-spacing: 0;
-				padding-bottom: 12px;
+      @media all and (max-width: 768px) {
+        padding: 24px 0 30px;
+      }
 
-				@media all and (max-width: 992px) {
-					font-size: $fs-30;
-				}
-			}
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0;
+        padding-bottom: 12px;
 
-			p {
-				font-size: 20px;
-				font-weight: 700;
-				line-height: 1.2;
-				letter-spacing: 0;
+        @media all and (max-width: 992px) {
+          font-size: $fs-30;
+        }
+      }
 
-				@media all and (max-width: 992px) {
-					font-size: $fs-16;
-				}
-			}
-		}
-	}
+      p {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0;
 
-	&__card {
-		border-radius: 20px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+        @media all and (max-width: 992px) {
+          font-size: $fs-16;
+        }
+      }
+    }
+  }
 
-		h2,
-		h4,
-		h5,
-		h6 {
-			color: white;
-			font-weight: 500;
+  &__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-			@media screen and (max-width: 768px) {
-				font-size: 24px;
-			}
-		}
+    &__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 60% 0;
+      transition: transform 0.3s ease;
+    }
 
-		&__action {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			gap: 12px;
+    &:hover &__image {
+      transform: scale(1.2);
+    }
 
-			p {
-				margin: 0;
-				font-size: $fs-20;
-				font-weight: 500;
-				line-height: 1.2;
-				color: $white;
+    h2,
+    h4,
+    h5,
+    h6,
+    &__action {
+      position: relative;
+      z-index: 1;
+    }
 
-				@media screen and (max-width: 768px) {
-					display: none;
-				}
-			}
+    h2,
+    h4,
+    h5,
+    h6 {
+      color: white;
+      font-weight: 500;
 
-			// .theme-btn__icon {
-			// 	width: 28px;
-			// 	height: 28px;
-			// 	padding: 0;
-			// 	flex: 0 0 28px;
-			// 	font-size: $fs-16;
-			// 	color: $white;
-			// }
-		}
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
 
-		&__one {
-			min-height: 320px;
-			padding: 24px 16px 16px 24px;
-			background: url('../img/home/category/hairRegrowth.png') 60% 0% / 164% 100% no-repeat;
+    h2 {
+      font-size: 44px;
+    }
 
-			@media all and (max-width: 992px) {
-				padding: 15px;
-			}
+    h4 {
+      font-size: 28px;
+    }
 
-			@media all and (max-width: 768px) {
-				min-height: 150px;
-				background: url('../img/home/category/hairRegrowth.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+    &__action {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
 
-		&__two {
-			min-height: 320px;
-			padding: 24px;
-			background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 164% 100% no-repeat;
+      p {
+        margin: 0;
+        font-size: $fs-20;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $white;
 
-			@media all and (max-width: 992px) {
-				padding: 15px;
-			}
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
 
-			@media all and (max-width: 768px) {
-				min-height: 150px;
-				background: url('../img/home/category/hormoneTherapy.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+      // .theme-btn__icon {
+      // 	width: 28px;
+      // 	height: 28px;
+      // 	padding: 0;
+      // 	flex: 0 0 28px;
+      // 	font-size: $fs-16;
+      // 	color: $white;
+      // }
+    }
 
-		&__three {
-			min-height: 320px;
-			padding: 24px;
-			background: url('../img/home/category/weightLoss.png') 60% 0% / 164% 100% no-repeat;
+    &__one {
+      min-height: 320px;
+      padding: 24px 16px 16px 24px;
 
-			@media all and (max-width: 768px) {
-				min-height: 150px;
-				background: url('../img/home/category/weightLoss.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
 
-		&__four {
-			min-height: 190px;
-			padding: 15px;
-			background: url('../img/home/category/Anti-Aging.png') 60% 0% / 138% 100% no-repeat;
+      @media all and (max-width: 768px) {
+        min-height: 150px;
+      }
+    }
 
-			@media all and (max-width: 768px) {
-				min-height: 150px;
-				background: url('../img/home/category/Anti-Aging.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+    &__two {
+      min-height: 320px;
+      padding: 24px;
 
-		&__five {
-			min-height: 190px;
-			padding: 15px;
-			background: url('../img/home/category/sexualHealth.png') 60% 0% / 138% 100% no-repeat;
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
 
-			@media all and (max-width: 768px) {
-				// flex-direction: row;
-				// align-items: center;
-				min-height: 150px;
-				background: url('../img/home/category/sexualHealth.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+      @media all and (max-width: 768px) {
+        min-height: 150px;
+      }
+    }
 
-		&__six {
-			min-height: 190px;
-			padding: 15px;
-			background: url('../img/home/category/preWorkout.png') 60% 0% / 138% 100% no-repeat;
+    &__three {
+      min-height: 320px;
+      padding: 24px;
 
-			@media all and (max-width: 768px) {
-				// flex-direction: row;
-				// align-items: center;
-				min-height: 150px;
-				background: url('../img/home/category/preWorkout.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+      @media all and (max-width: 768px) {
+        min-height: 150px;
+      }
+    }
 
-		&__seven {
-			min-height: 190px;
-			padding: 15px;
-			background: url('../img/home/category/Sleep.png') 60% 0% / 138% 100% no-repeat;
+    &__four {
+      min-height: 190px;
+      padding: 15px;
 
-			@media all and (max-width: 768px) {
-				// flex-direction: row;
-				// align-items: center;
-				min-height: 150px;
-				background: url('../img/home/category/Sleep.png') 60% 0% / 100% 100% no-repeat;
-			}
-		}
+      @media all and (max-width: 768px) {
+        min-height: 150px;
+      }
+    }
 
-		&__eight {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/testosterone.jpg') center center / cover no-repeat;
-			flex-direction: row;
-			align-items: center;
-		}
+    &__five {
+      min-height: 190px;
+      padding: 15px;
 
-		&__nine {
-			min-height: 100px;
-			padding: 15px 30px;
-			background: url('../img/home/category/sleep.jpg') center center / cover no-repeat;
-			flex-direction: row;
-			align-items: center;
-		}
-	}
+      @media all and (max-width: 768px) {
+        // flex-direction: row;
+        // align-items: center;
+        min-height: 150px;
+      }
+    }
 
-	&__items {
-		margin-top: 0;
-	}
+    &__six {
+      min-height: 190px;
+      padding: 15px;
+
+      @media all and (max-width: 768px) {
+        // flex-direction: row;
+        // align-items: center;
+        min-height: 150px;
+      }
+    }
+
+    &__seven {
+      min-height: 190px;
+      padding: 15px;
+
+      @media all and (max-width: 768px) {
+        // flex-direction: row;
+        // align-items: center;
+        min-height: 150px;
+      }
+    }
+
+    &__eight {
+      min-height: 100px;
+      padding: 15px 30px;
+      background: url("../img/home/category/testosterone.jpg") center center /
+        cover no-repeat;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__nine {
+      min-height: 100px;
+      padding: 15px 30px;
+      background: url("../img/home/category/sleep.jpg") center center / cover
+        no-repeat;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__items {
+    margin-top: 0;
+  }
 }

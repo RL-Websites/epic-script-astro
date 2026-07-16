@@ -1,492 +1,503 @@
-@use '../base/variables' as *;
+@use "../base/variables" as *;
 
 .radio-pill {
-	margin-bottom: 0;
-	position: relative;
-	width: 100%;
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
 
-	&__label {
-		padding: 16px 12px;
-		color: $primary;
-		font-size: $fs-16;
-		line-height: 1;
-		font-weight: 600;
-		text-wrap: nowrap;
-		background-color: transparent;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-		gap: 10px;
-		background-color: $blue-2;
-		box-shadow: 0 0 2px rgba($blue-2, 0.1);
-		border-radius: 16px;
-		transition: all 0.3s ease;
-		text-align: center;
-	}
+  &__label {
+    padding: 16px 12px;
+    color: $primary;
+    font-size: $fs-16;
+    line-height: 1;
+    font-weight: 600;
+    text-wrap: nowrap;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background-color: $blue-2;
+    box-shadow: 0 0 2px rgba($blue-2, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
 
-	&__input {
-		position: absolute;
-		appearance: none;
-		display: none;
-	}
+  &__input {
+    position: absolute;
+    appearance: none;
+    display: none;
+  }
 
-	&__input:checked+&__label {
-		background-color: $blue-1;
-		color: $blue-2;
-		font-weight: 400;
-	}
+  &__input:checked + &__label {
+    background-color: $blue-1;
+    color: $blue-2;
+    font-weight: 400;
+  }
 }
 
 //Input design
 .single-input {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 
-	&__label {
-		font-size: $fs-24;
-		font-weight: 700;
-		margin-bottom: 10px;
-	}
+  &__label {
+    font-size: $fs-24;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 
-	&__field {
-		width: 100%;
-		height: 64px;
-		padding: 10px 24px;
-		font-size: 18px;
-		color: $light;
-		border: 1px solid #aeaeae;
-		border-radius: 10px;
-		outline: 0;
-		box-shadow: none;
-		background-color: transparent;
+  &__field {
+    width: 100%;
+    height: 64px;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: $light;
+    border: 1px solid #aeaeae;
+    border-radius: 10px;
+    outline: 0;
+    box-shadow: none;
+    background-color: transparent;
 
-		&::placeholder {
-			font-size: $fs-18;
-			color: $light;
-		}
+    &::placeholder {
+      font-size: $fs-18;
+      color: $light;
+    }
 
-		&--message {
-			height: auto;
-			border-radius: 10px;
+    &--message {
+      height: auto;
+      border-radius: 10px;
 
-			&::placeholder {
-				font-size: $fs-18;
-				color: $light;
-			}
-		}
-	}
+      &::placeholder {
+        font-size: $fs-18;
+        color: $light;
+      }
+    }
+  }
 }
 
 .basic-wrapper {
-	position: relative;
+  position: relative;
 
-	&:focus-within .basic-label,
-	&:has(input:not(:placeholder-shown)) .basic-label,
-	&:has(textarea:not(:placeholder-shown)) .basic-label {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(-70%);
-	}
+  &:focus-within .basic-label,
+  &:has(input:not(:placeholder-shown)) .basic-label,
+  &:has(textarea:not(:placeholder-shown)) .basic-label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-70%);
+  }
 
-	.basic {
-		&-input {
-			width: 100%;
-			height: 50px;
-			padding: 15px 20px;
-			border-radius: 30px;
-			outline: 0;
-			border: none;
-			box-shadow: none;
-			font-size: 16px;
-			background-color: $white;
+  .basic {
+    &-input {
+      width: 100%;
+      height: 50px;
+      padding: 15px 20px;
+      border-radius: 30px;
+      outline: 0;
+      border: none;
+      box-shadow: none;
+      font-size: 16px;
+      background-color: $white;
 
-			&::placeholder {
-				color: $light;
-			}
+      &::placeholder {
+        color: $light;
+      }
 
-			@media (min-width: 992px) {
-				height: 60px;
-			}
-		}
+      @media (min-width: 992px) {
+        height: 60px;
+      }
+    }
 
-		&-label {
-			font-size: $fs-20;
-			font-weight: 500;
-			color: $gray-light-3;
-			margin-bottom: 0;
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 20px;
-			transform: translateY(-50%);
-			z-index: 1;
-			transition: all 0.3s ease;
-			pointer-events: none;
+    &-label {
+      font-size: $fs-20;
+      font-weight: 500;
+      color: $gray-light-3;
+      margin-bottom: 0;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 1;
+      transition: all 0.3s ease;
+      pointer-events: none;
 
-			&__alt {
-				top: 10px;
-				left: 15px;
-				transform: translateY(0);
-			}
+      &__alt {
+        top: 10px;
+        left: 15px;
+        transform: translateY(0);
+      }
 
-			.icon-ellipse {
-				background: $red;
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				font-size: 6px;
-				margin-left: 5px;
-				position: absolute;
-				top: 10px;
-				padding: 0 2px 0 0;
-			}
-		}
-	}
-	&--soft {
-		.basic-label {
-			position: absolute;
-			width: 1px;
-			height: 1px;
-			padding: 0;
-			margin: -1px;
-			overflow: hidden;
-			clip: rect(0, 0, 0, 0);
-			white-space: nowrap;
-			border: 0;
-		}
+      .icon-ellipse {
+        background: $red;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 6px;
+        margin-left: 5px;
+        position: absolute;
+        top: 10px;
+        padding: 0 2px 0 0;
+      }
+    }
+  }
+  &--soft {
+    .basic-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
-		.basic-input {
-			height: 64px;
-			padding: 12px 28px;
-			border: 0;
-			border-radius: 30px;
-			background-color: $gray-light;
-			color: $black;
-			font-size: $fs-14;
+    .basic-input {
+      height: 64px;
+      padding: 12px 28px;
+      border: 0;
+      border-radius: 30px;
+      background-color: $gray-light;
+      color: $black;
+      font-size: $fs-14;
 
-			&::placeholder {
-				color: $gray-dark;
-			}
-		}
+      &::placeholder {
+        color: $gray-dark;
+      }
+    }
 
-		.basic-textarea--soft {
-			min-height: 76px;
-			height: auto;
-			resize: none;
-			border-radius: 12px;
-			padding-top: 15px;
-		}
-	}
+    .basic-textarea--soft {
+      min-height: 76px;
+      height: auto;
+      resize: none;
+      border-radius: 12px;
+      padding-top: 15px;
+    }
+  }
 }
 
 .basic {
-	&-input {
-		width: 100%;
-		height: 60px;
-		padding: 15px 20px;
-		border-radius: 10px;
-		outline: 0;
-		border: none;
-		box-shadow: none;
-		font-size: 16px;
-		background-color: $white;
-		border: 1px solid $gray-dark;
+  &-input {
+    width: 100%;
+    height: 60px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    background-color: $white;
+    border: 1px solid $gray-dark;
+    transition:
+      border-color 0.8s ease-in,
+      box-shadow 0.5s ease-in;
 
-		&::placeholder {
-			color: $gray-dark;
-		}
-	}
+    &:hover {
+      border-color: $cyan;
+    }
 
-	&-label {
-		font-size: $fs-18;
-		font-weight: 700;
-		color: $black-deep;
-		display: block;
-		position: relative;
-		padding-bottom: 10px;
+    &:focus {
+      box-shadow: inset 0 0 0 1px $cyan;
+    }
 
-		.icon-ellipse {
-			background: $red;
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			font-size: 6px;
-			margin-left: 5px;
-			position: absolute;
-			top: 10px;
-			padding: 0 2px 0 0;
-		}
-	}
+    &::placeholder {
+      color: $gray-dark;
+    }
+  }
+
+  &-label {
+    font-size: $fs-18;
+    font-weight: 700;
+    color: $black-deep;
+    display: block;
+    position: relative;
+    padding-bottom: 10px;
+
+    .icon-ellipse {
+      background: $red;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 6px;
+      margin-left: 5px;
+      position: absolute;
+      top: 10px;
+      padding: 0 2px 0 0;
+    }
+  }
 }
 
 .basic-error {
-	font-size: $fs-16;
-	color: $red;
-	font-weight: 300;
-	margin-top: 4px;
-	line-height: 1.6;
+  font-size: $fs-16;
+  color: $red;
+  font-weight: 300;
+  margin-top: 4px;
+  line-height: 1.6;
 }
 
 .rounded-input {
-	width: 445px;
-	margin: 20px 0;
-	display: flex;
-	align-items: center;
-	gap: 24px;
+  width: 445px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 
-	label {
-		font-size: $fs-20;
-	}
+  label {
+    font-size: $fs-20;
+  }
 
-	input {
-		height: 48px;
-		padding: 15px 20px;
-		width: 100%;
-		border: 1px solid rgba(white, 0.5);
-		box-shadow: none;
-		outline: 0;
-		background-color: transparent;
-		border-radius: 50px;
-		font-size: $fs-18;
+  input {
+    height: 48px;
+    padding: 15px 20px;
+    width: 100%;
+    border: 1px solid rgba(white, 0.5);
+    box-shadow: none;
+    outline: 0;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: $fs-18;
 
-		&::placeholder {
-			font-size: 18px;
-			color: rgba(white, 0.5);
-		}
-	}
+    &::placeholder {
+      font-size: 18px;
+      color: rgba(white, 0.5);
+    }
+  }
 }
 
 .form {
-	&-control {
-		// color: white;
+  &-control {
+    // color: white;
 
-		&::placeholder {
-			color: rgba(white, 0.6);
-		}
-	}
+    &::placeholder {
+      color: rgba(white, 0.6);
+    }
+  }
 }
 
 .EpiqScript-search {
-	width: 612px;
-	max-width: 100%;
-	margin: 0 auto;
-	height: 75px;
-	position: relative;
-	border: 1px solid #ffffff;
-	border-radius: 12px;
-	// background: rgba(67, 67, 67, 0.16);
-	backdrop-filter: blur(204px);
+  width: 612px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 75px;
+  position: relative;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  // background: rgba(67, 67, 67, 0.16);
+  backdrop-filter: blur(204px);
 
-	&__input {
-		display: block;
-		border: 0;
-		outline: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: 100px;
-		background-color: rgba(167, 112, 245, 0.12);
-		color: $black;
-		font-size: 20px;
-		font-weight: 400;
-		letter-spacing: 1.5px;
-		padding: 25px;
-		padding-left: 83px;
-		padding-right: 80px;
+  &__input {
+    display: block;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: rgba(167, 112, 245, 0.12);
+    color: $black;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    padding: 25px;
+    padding-left: 83px;
+    padding-right: 80px;
 
-		&::placeholder {
-			opacity: 1;
-			transition: opacity 0.2s ease;
-		}
+    &::placeholder {
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
 
-		&:focus::placeholder {
-			opacity: 0; // hides the placeholder when input is focused
-		}
+    &:focus::placeholder {
+      opacity: 0; // hides the placeholder when input is focused
+    }
 
-		&:-webkit-autofill,
-		&:-webkit-autofill:hover,
-		&:-webkit-autofill:focus,
-		&:-webkit-autofill:active {
-			-webkit-text-fill-color: black !important;
-			/* THE REAL FIX */
-			box-shadow: 0 0 0 1000px rgba(167, 112, 245, 0.12) inset !important;
-			/* THE SECRET iOS TRICK */
-			transition: background-color 99999s ease-in-out 0s !important;
-			/* Helps but not required */
-			caret-color: black !important;
-			appearance: none !important;
-			background-color: rgba(167, 112, 245, 0.12) !important;
-		}
-	}
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: black !important;
+      /* THE REAL FIX */
+      box-shadow: 0 0 0 1000px rgba(167, 112, 245, 0.12) inset !important;
+      /* THE SECRET iOS TRICK */
+      transition: background-color 99999s ease-in-out 0s !important;
+      /* Helps but not required */
+      caret-color: black !important;
+      appearance: none !important;
+      background-color: rgba(167, 112, 245, 0.12) !important;
+    }
+  }
 
-	&__icon {
-		position: absolute;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		width: 25px;
-		height: 25px;
-		left: 40px;
-		top: 50%;
-		transform: translateY(-50%);
+  &__icon {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
 
-		&__right {
-			position: absolute;
-			right: 40px;
-			top: 50%;
-			transform: translateY(-50%);
-			border: 0;
-			outline: 0;
-			background: transparent;
-			box-shadow: none;
-			cursor: pointer;
-			z-index: 10;
-			background: rgba(0, 0, 0, 0.001);
-			pointer-events: auto;
-			-webkit-tap-highlight-color: transparent;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			-webkit-tap-highlight-color: transparent;
+    &__right {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 0;
+      outline: 0;
+      background: transparent;
+      box-shadow: none;
+      cursor: pointer;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.001);
+      pointer-events: auto;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
 
-			i {
-				font-size: $fs-22;
-			}
-		}
+      i {
+        font-size: $fs-22;
+      }
+    }
 
-		i {
-			font-size: $fs-24;
-		}
-	}
+    i {
+      font-size: $fs-24;
+    }
+  }
 }
 
 .form-check-input {
-	box-shadow: none;
-	border: 0;
-	outline: 0;
-	cursor: pointer;
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
 
-	&[type='radio']:not(:checked) {
-		box-shadow: none;
-		border: 0;
-		outline: 0;
-		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.1' stroke='%2300533f' stroke-width='1.8'/%3E%3C/svg%3E%0A");
-	}
+  &[type="radio"]:not(:checked) {
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.1' stroke='%2300533f' stroke-width='1.8'/%3E%3C/svg%3E%0A");
+  }
 
-	&:checked[type='radio'] {
-		box-shadow: none;
-		border: 0;
-		outline: 0;
-		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.7' fill='%2300533f' stroke='%2300533f' stroke-width='0.6'/%3E%3Cpath d='M16.8031 8.39844L10.2031 14.9984L7.20312 11.9984' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-	}
+  &:checked[type="radio"] {
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.7' fill='%2300533f' stroke='%2300533f' stroke-width='0.6'/%3E%3Cpath d='M16.8031 8.39844L10.2031 14.9984L7.20312 11.9984' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
 
-	&:focus {
-		box-shadow: none;
-		border: 0;
-		outline: 0;
-	}
+  &:focus {
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+  }
 }
 
-.form-check-input.is-valid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label {
-	color: $black;
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: $black;
 }
 
 @media only screen and (max-width: 992px) {
-	.single-input {
-		margin-bottom: 10px;
+  .single-input {
+    margin-bottom: 10px;
 
-		&__label {
-			margin-bottom: 5px;
-		}
+    &__label {
+      margin-bottom: 5px;
+    }
 
-		&__field {
-			height: 45px;
-			padding: 7px 10px;
-			font-size: 16px;
-		}
-	}
+    &__field {
+      height: 45px;
+      padding: 7px 10px;
+      font-size: 16px;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
-	.basic-input {
-		height: 50px;
-	}
+  .basic-input {
+    height: 50px;
+  }
 
-	//Input design
-	.single-input {
-		&__label {
-			margin-bottom: 10px;
-		}
+  //Input design
+  .single-input {
+    &__label {
+      margin-bottom: 10px;
+    }
 
-		&__field {
-			width: 100%;
-			height: 50px;
-			font-size: $fs-14;
-			color: $light;
-			border: 1px solid $light;
-			border-radius: 8px;
-			outline: 0;
-			box-shadow: none;
+    &__field {
+      width: 100%;
+      height: 50px;
+      font-size: $fs-14;
+      color: $light;
+      border: 1px solid $light;
+      border-radius: 8px;
+      outline: 0;
+      box-shadow: none;
 
-			&:placeholder {
-				color: $light;
-			}
+      &:placeholder {
+        color: $light;
+      }
 
-			&--message {
-				height: auto;
-			}
-		}
-	}
+      &--message {
+        height: auto;
+      }
+    }
+  }
 
-	.basic-label {
-		font-size: 16px;
-		font-weight: 600;
-	}
+  .basic-label {
+    font-size: 16px;
+    font-weight: 600;
+  }
 
-	.EpiqScript-search {
-		height: 60px;
+  .EpiqScript-search {
+    height: 60px;
 
-		&__input {
-			font-size: 14px;
-			letter-spacing: 1px;
-			padding: 10px 40px;
-		}
+    &__input {
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 10px 40px;
+    }
 
-		&__icon {
-			left: 12px;
-			top: 50%;
-			transform: translateY(-50%);
+    &__icon {
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
 
-			i {
-				font-size: 18px;
-			}
+      i {
+        font-size: 18px;
+      }
 
-			&__right {
-				position: absolute;
-				right: 12px;
-				top: 50%;
-				transform: translateY(-50%);
-				height: 15px;
-				z-index: 10;
-				background: rgba(0, 0, 0, 0.001);
-				pointer-events: auto;
-				-webkit-tap-highlight-color: transparent;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				-webkit-tap-highlight-color: transparent;
+      &__right {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 15px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.001);
+        pointer-events: auto;
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
 
-				i {
-					font-size: 15px;
-				}
-			}
-		}
-	}
+        i {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
 
 .text-dot {
-	color: #ed3131;
+  color: #ed3131;
 }
