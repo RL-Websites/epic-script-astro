@@ -32,26 +32,3 @@ const { persistent = false } = Astro.props;
 	</div>
 	<span class="visually-hidden">Loading…</span>
 </div>
-
-<script>
-	const loaders = document.querySelectorAll<HTMLElement>(
-		"[data-epiq-loader]:not([data-persistent='true'])",
-	);
-
-	const dismissLoaders = () => {
-		window.setTimeout(() => {
-			loaders.forEach((loader) => {
-				loader.classList.add("epiq-loader--hidden");
-				loader.addEventListener("transitionend", () => loader.remove(), {
-					once: true,
-				});
-			});
-		}, 650);
-	};
-
-	if (document.readyState === "complete") {
-		dismissLoaders();
-	} else {
-		window.addEventListener("load", dismissLoaders, { once: true });
-	}
-</script>
