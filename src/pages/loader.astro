@@ -3,16 +3,22 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout bodyClass="loader-page">
-  <main class="loader d-flex min-vh-100 align-items-center justify-content-center">
-    <div class="loader__content position-relative d-flex align-items-center justify-content-center" role="status" aria-live="polite">
-      <span class="loader__dots" aria-hidden="true"></span>
+	<section
+		class="loader d-flex min-vh-100 align-items-center justify-content-center"
+	>
+		<div
+			class="loader__content position-relative d-flex align-items-center justify-content-center"
+			role="status"
+			aria-live="polite"
+		>
+			<span class="loader__dots" aria-hidden="true"></span>
 
-      <img
-        class="loader__logo img-fluid position-relative"
-        src="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/favicon.svg"
-        alt="Epiq Scripts"
-      />
-      <span class="visually-hidden">Loading Epiq Scripts</span>
-    </div>
-  </main>
+			<img
+				class="loader__logo img-fluid position-relative"
+				src="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/favicon.svg"
+				alt="Epiq Scripts"
+			/>
+			<span class="visually-hidden">Loading Epiq Scripts</span>
+		</div>
+	</section>
 </Layout>
