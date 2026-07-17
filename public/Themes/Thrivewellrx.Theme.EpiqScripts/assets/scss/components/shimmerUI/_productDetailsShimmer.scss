@@ -1,0 +1,118 @@
+// Variables
+$shimmer-bg-base: #e9ecef;
+$shimmer-bg-glow: #f8f9fa;
+$shimmer-hero-dark-bg: #09392b; // Forest Green Theme Color
+$shimmer-hero-dark-glow: #0d4d3b;
+$border-radius-lg: 12px;
+$border-radius-sm: 20px;
+
+// Core Keyframe Animation
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// Global Effect Utility
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    $shimmer-bg-base 25%,
+    $shimmer-bg-glow 37%,
+    $shimmer-bg-base 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmerAnimation 1.5s infinite linear;
+}
+
+// ==========================================
+// Category Details (Hero) Shimmer Component
+// ==========================================
+.category-details {
+  background-color: $shimmer-hero-dark-bg;
+  border-radius: $border-radius-lg;
+  min-height: 280px;
+  overflow: hidden;
+
+  // Modifying shimmer color blocks for contrast against dark background
+  & .shimmer-effect {
+    background: linear-gradient(90deg, #0b4434 25%, #125e49 37%, #0b4434 63%);
+    background-size: 200% 100%;
+  }
+
+  &__badge {
+    width: 90px;
+    height: 22px;
+    border-radius: $border-radius-sm;
+  }
+
+  &__title-line {
+    height: 32px;
+    border-radius: 6px;
+  }
+
+  &__image-placeholder {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+// ==========================================
+// Product Card Shimmer Component
+// ==========================================
+.shimmer-card {
+  padding: 0;
+  background: transparent;
+
+  &__image-wrapper {
+    background-color: #eef2f1;
+    border-radius: $border-radius-lg;
+    padding: 2.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 90px;
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  &__badge {
+    width: 110px;
+    height: 18px;
+    border-radius: $border-radius-sm;
+  }
+
+  &__title {
+    height: 28px;
+    width: 60%;
+    border-radius: 4px;
+  }
+
+  &__text {
+    height: 14px;
+    border-radius: 4px;
+  }
+
+  &__btn {
+    height: 42px;
+
+    &--primary {
+      border-radius: 30px;
+    }
+
+    &--secondary {
+      border-radius: 30px;
+      opacity: 0.6;
+    }
+  }
+}
