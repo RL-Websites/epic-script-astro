@@ -1,11 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProductDetailsShimmer from "../components/shimmerUI/productDetailsShimmer.astro";
+import CartShimmer from "../components/shimmerUI/cartShimmer.astro";
+import CategoryCardShimmer from "../components/shimmerUI/CategoryCardShimmer.astro";
 ---
 
 <Layout bodyClass="shimmerUI container-fluid">
   <main class="">
-    <h1>Epiq Scripts shimmer animation</h1>
+    <h1>Category Card Shimmer</h1>
+    <CategoryCardShimmer />
+    <h1>Product Details Shimmer</h1>
     <ProductDetailsShimmer />
+    <h1>Cart Shimmer</h1>
+    <CartShimmer />
   </main>
 </Layout>

@@ -1,0 +1,162 @@
+// Configuration Theme Colors
+$shimmer-base: #e9ecef;
+$shimmer-glow: #f8f9fa;
+$shimmer-card-bg: #ffffff;
+$shimmer-card-border: #e0e0e0;
+$radius-base: 10px;
+
+// Global Keyframe Animation Loop
+@keyframes cartShimmerMove {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// Global Light Gray Shimmer Base Component
+.cart-shimmer-glow {
+  background: linear-gradient(
+    90deg,
+    $shimmer-base 25%,
+    $shimmer-glow 37%,
+    $shimmer-base 63%
+  );
+  background-size: 200% 100%;
+  animation: cartShimmerMove 1.5s infinite linear;
+}
+
+// ==========================================
+// Cart Header Component Block
+// ==========================================
+.cart-shimmer-header {
+  &__title {
+    @extend .cart-shimmer-glow;
+    height: 38px;
+    width: 260px;
+    border-radius: 6px;
+  }
+
+  &__link {
+    @extend .cart-shimmer-glow;
+    height: 16px;
+    width: 130px;
+    border-radius: 4px;
+  }
+}
+
+// ==========================================
+// Item Component Block
+// ==========================================
+.cart-shimmer-item {
+  background-color: $shimmer-card-bg;
+  border: 1px solid $shimmer-card-border;
+  border-radius: $radius-base;
+
+  &__image-wrapper {
+    width: 80px;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+
+  &__delete {
+    width: 65px;
+    height: 14px;
+    border-radius: 4px;
+  }
+
+  &__name {
+    width: 140px;
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  &__price {
+    width: 60px;
+    height: 16px;
+    border-radius: 4px;
+  }
+
+  &__quantity {
+    width: 130px;
+    height: 38px;
+    border-radius: 6px;
+  }
+}
+
+// ==========================================
+// Coupon Component Block
+// ==========================================
+.cart-shimmer-coupon {
+  background-color: $shimmer-card-bg;
+  border: 1px solid $shimmer-card-border;
+  border-radius: $radius-base;
+
+  &__input {
+    height: 46px;
+    border-radius: 25px;
+  }
+
+  &__btn {
+    width: 140px;
+    height: 46px;
+    border-radius: 25px;
+    opacity: 0.85;
+  }
+}
+
+// ==========================================
+// Summary Component Block
+// ==========================================
+.cart-shimmer-summary {
+  background-color: $shimmer-card-bg;
+  border: 1px solid $shimmer-card-border;
+  border-radius: $radius-base;
+
+  &__header {
+    width: 160px;
+    height: 24px;
+    border-radius: 4px;
+  }
+
+  &__label {
+    width: 90px;
+    height: 16px;
+    border-radius: 4px;
+  }
+
+  &__value {
+    width: 60px;
+    height: 16px;
+    border-radius: 4px;
+  }
+
+  &__divider {
+    border-top: 1px dashed $shimmer-card-border;
+    opacity: 1;
+    margin: 0;
+  }
+
+  &__total-label {
+    width: 60px;
+    height: 28px;
+    border-radius: 4px;
+  }
+
+  &__total-value {
+    width: 85px;
+    height: 32px;
+    border-radius: 4px;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 25px;
+  }
+}
