@@ -1,0 +1,46 @@
+<section class="my-order-shimmer" aria-label="Loading orders" aria-busy="true">
+  <div class="container-fluid">
+    <div class="my-order-shimmer__background">
+      <div class="container">
+        <div class="my-order-shimmer__heading my-order-shimmer__pulse"></div>
+
+        <div class="my-order-shimmer__table d-none d-lg-block">
+          <table class="table mb-0" aria-hidden="true">
+            <thead>
+              <tr>
+                <th><span class="my-order-shimmer__header-line my-order-shimmer__pulse"></span></th>
+                <th><span class="my-order-shimmer__header-line my-order-shimmer__pulse"></span></th>
+                <th><span class="my-order-shimmer__header-line my-order-shimmer__pulse"></span></th>
+                <th><span class="my-order-shimmer__header-line my-order-shimmer__pulse"></span></th>
+                <th><span class="my-order-shimmer__header-line my-order-shimmer__pulse"></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              {Array.from({ length: 5 }).map(() => (
+                <tr>
+                  <td><span class="my-order-shimmer__cell-line my-order-shimmer__cell-line--id my-order-shimmer__pulse"></span></td>
+                  <td><span class="my-order-shimmer__cell-line my-order-shimmer__cell-line--date my-order-shimmer__pulse"></span></td>
+                  <td><span class="my-order-shimmer__cell-line my-order-shimmer__cell-line--product my-order-shimmer__pulse"></span></td>
+                  <td><span class="my-order-shimmer__status my-order-shimmer__pulse"></span></td>
+                  <td><span class="my-order-shimmer__details my-order-shimmer__pulse"></span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="my-order-shimmer__mobile d-lg-none" aria-hidden="true">
+          {Array.from({ length: 2 }).map(() => (
+            <article class="my-order-shimmer__mobile-card">
+              <div class="my-order-shimmer__mobile-row"><span class="my-order-shimmer__mobile-label my-order-shimmer__pulse"></span><span class="my-order-shimmer__mobile-value my-order-shimmer__mobile-value--date my-order-shimmer__pulse"></span></div>
+              <div class="my-order-shimmer__mobile-row"><span class="my-order-shimmer__mobile-label my-order-shimmer__pulse"></span><span class="my-order-shimmer__mobile-value my-order-shimmer__mobile-value--product my-order-shimmer__pulse"></span></div>
+              <div class="my-order-shimmer__mobile-row"><span class="my-order-shimmer__mobile-label my-order-shimmer__pulse"></span><span class="my-order-shimmer__mobile-value my-order-shimmer__mobile-value--id my-order-shimmer__pulse"></span></div>
+              <div class="my-order-shimmer__mobile-row"><span class="my-order-shimmer__mobile-label my-order-shimmer__pulse"></span><span class="my-order-shimmer__status my-order-shimmer__pulse"></span></div>
+              <div class="my-order-shimmer__mobile-row"><span class="my-order-shimmer__mobile-label my-order-shimmer__pulse"></span><span class="my-order-shimmer__details my-order-shimmer__pulse"></span></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
