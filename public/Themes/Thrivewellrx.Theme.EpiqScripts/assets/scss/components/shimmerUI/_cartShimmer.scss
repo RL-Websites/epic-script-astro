@@ -30,19 +30,30 @@ $radius-base: 10px;
 // ==========================================
 // Cart Header Component Block
 // ==========================================
+.cart-shimmer {
+  border-radius: $radius-base;
+  background-color: $shimmer-card-bg;
+  padding: 80px;
+
+  @media (max-width: 767px) {
+    padding: 24px 14px;
+  }
+}
+
 .cart-shimmer-header {
   &__title {
     @extend .cart-shimmer-glow;
-    height: 38px;
-    width: 260px;
+    width: min(100%, 420px);
+    height: 48px;
     border-radius: 6px;
   }
 
   &__link {
     @extend .cart-shimmer-glow;
-    height: 16px;
-    width: 130px;
-    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+    margin: 50px 0 20px;
   }
 }
 
@@ -53,39 +64,64 @@ $radius-base: 10px;
   background-color: $shimmer-card-bg;
   border: 1px solid $shimmer-card-border;
   border-radius: $radius-base;
+  min-height: 148px;
+  padding: 24px;
 
   &__image-wrapper {
-    width: 80px;
+    width: 112px;
   }
 
   &__image {
-    width: 80px;
-    height: 80px;
+    width: 112px;
+    height: 100px;
     border-radius: 8px;
   }
 
   &__delete {
-    width: 65px;
-    height: 14px;
-    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
   }
 
   &__name {
-    width: 140px;
-    height: 22px;
+    width: min(100%, 260px);
+    height: 29px;
     border-radius: 4px;
   }
 
   &__price {
-    width: 60px;
-    height: 16px;
+    width: min(100%, 180px);
+    height: 20px;
     border-radius: 4px;
   }
 
   &__quantity {
-    width: 130px;
-    height: 38px;
-    border-radius: 6px;
+    width: 120px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 0;
+    padding: 14px;
+
+    &__image-wrapper,
+    &__image {
+      width: 84px;
+    }
+
+    &__image {
+      height: 84px;
+    }
+
+    &__name {
+      width: min(100%, 220px);
+      height: 20px;
+    }
+
+    &__price {
+      height: 16px;
+    }
   }
 }
 
@@ -96,17 +132,31 @@ $radius-base: 10px;
   background-color: $shimmer-card-bg;
   border: 1px solid $shimmer-card-border;
   border-radius: $radius-base;
+  padding: 24px;
 
   &__input {
-    height: 46px;
+    height: 60px;
     border-radius: 25px;
   }
 
   &__btn {
-    width: 140px;
-    height: 46px;
+    width: 160px;
+    height: 60px;
     border-radius: 25px;
     opacity: 0.85;
+  }
+
+  @media (max-width: 767px) {
+    padding: 12px;
+
+    &__input {
+      height: 44px;
+    }
+
+    &__btn {
+      width: 100%;
+      height: 42px;
+    }
   }
 }
 
@@ -117,6 +167,7 @@ $radius-base: 10px;
   background-color: $shimmer-card-bg;
   border: 1px solid $shimmer-card-border;
   border-radius: $radius-base;
+  padding: 24px;
 
   &__header {
     width: 160px;
