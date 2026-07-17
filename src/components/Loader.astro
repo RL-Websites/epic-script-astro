@@ -1,0 +1,34 @@
+---
+interface Props {
+	persistent?: boolean;
+}
+
+const { persistent = false } = Astro.props;
+---
+
+<div
+	class="epiq-loader"
+	data-epiq-loader
+	data-persistent={persistent ? "true" : undefined}
+	role="status"
+	aria-live="polite"
+	aria-label="Loading"
+>
+	<div class="epiq-loader__animation" aria-hidden="true">
+		<span class="epiq-loader__dot epiq-loader__dot--1"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--2"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--3"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--4"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--5"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--6"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--7"></span>
+		<span class="epiq-loader__dot epiq-loader__dot--8"></span>
+
+		<img
+			class="epiq-loader__mark"
+			src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/favicon.svg"
+			alt="Epiq Scripts"
+		/>
+	</div>
+	<span class="visually-hidden">Loading…</span>
+</div>

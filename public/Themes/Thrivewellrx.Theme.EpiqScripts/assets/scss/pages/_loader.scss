@@ -1,63 +1,115 @@
 @use "../base/variables" as *;
 
-.loader-page {
-  margin: 0;
+.epiq-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
   background: $white;
-}
+  opacity: 1;
+  visibility: visible;
+  animation: epiq-loader-dismiss 300ms ease 1.8s forwards;
 
-.loader {
-  --loader-size: clamp(9rem, 26vw, 11rem);
-  --logo-size: clamp(2.5rem, 7vw, 3.25rem);
-  --orbit-radius: 165px;
-  min-height: 100dvh;
-  padding: 1.5rem;
-  background: $white;
-
-  &__content {
-    width: 430px;
-    aspect-ratio: 1;
+  &[data-persistent="true"] {
+    animation: none;
   }
 
-  &__logo {
-    z-index: 1;
-    width: var(--logo-size);
-    height: auto;
+  &__animation {
+    position: relative;
+    width: 128px;
+    height: 128px;
   }
 
-  // One element creates five dots of decreasing size around the fixed logo.
-  &__dots {
+  &__dot {
     position: absolute;
+    left: 50%;
     top: 50%;
-    left: 51%;
-    right: 107%;
-    width: 1em;
-    height: 1em;
-    color: #00533f;
-    font-size: 10px;
-    border-radius: 183px;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 -62px 0 0.18em, -36.4px -55.4px 0 0.13em, -55.6px -27.4px 0 0.09em, -65.6px 0px 0 0.055em, -55.5px 36.4px 0 0.025em;
-    animation: loader-orbit 2s linear infinite;
-    will-change: transform;
+    width: 14px;
+    height: 14px;
+    margin: -9px;
+    border-radius: 50%;
+    background: $primary;
+    animation: epiq-loader-comet 1.25s linear infinite;
+
+    &--1 {
+      --dot-angle: 90deg;
+      animation-delay: 0s;
+    }
+
+    &--2 {
+      --dot-angle: 135deg;
+      animation-delay: -0.15625s;
+    }
+
+    &--3 {
+      --dot-angle: 180deg;
+      animation-delay: -0.3125s;
+    }
+
+    &--4 {
+      --dot-angle: 225deg;
+      animation-delay: -0.46875s;
+    }
+
+    &--5 {
+      --dot-angle: 270deg;
+      animation-delay: -0.625s;
+    }
+
+    &--6 {
+      --dot-angle: 315deg;
+      animation-delay: -0.78125s;
+    }
+
+    &--7 {
+      --dot-angle: 360deg;
+      animation-delay: -0.9375s;
+    }
+
+    &--8 {
+      --dot-angle: 405deg;
+      animation-delay: -1.09375s;
+    }
   }
 
-  // .loader__dots {
-
-  // }
+  &__mark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 25px;
+    transform: translate(-50%, -50%);
+    color: $primary;
+  }
 }
 
-@keyframes loader-orbit {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
+@keyframes epiq-loader-comet {
+  0% {
+    opacity: 1;
+    transform: rotate(var(--dot-angle)) translateY(-51px) scale(1.15);
   }
 
+  55% {
+    opacity: 0.12;
+    transform: rotate(var(--dot-angle)) translateY(-51px) scale(0.18);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(var(--dot-angle)) translateY(-51px) scale(0.08);
+  }
+}
+
+@keyframes epiq-loader-dismiss {
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .loader__dots {
-    animation: none;
+  .epiq-loader__dot {
+    animation-duration: 2.4s;
   }
 }
