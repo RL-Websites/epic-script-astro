@@ -4,6 +4,13 @@
 }
 
 .my-order-shimmer {
+  &__container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
   &__background {
     padding: 50px 80px;
     margin: 12px 0;
@@ -30,7 +37,11 @@
     border-radius: 16px;
     background: #fcfafa;
 
-    .table { table-layout: fixed; }
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
 
     th,
     td {
@@ -78,7 +89,7 @@
   }
 
   &__mobile {
-    display: grid;
+    display: none;
     gap: 20px;
   }
 
@@ -116,6 +127,8 @@
   }
 
   @media (max-width: 991px) {
+    &__table { display: none; }
+    &__mobile { display: grid; }
     &__background { padding: 40px 24px; }
     &__heading { margin-bottom: 20px; }
   }
@@ -124,5 +137,9 @@
     &__background { padding: 24px 14px; }
     &__heading { width: min(100%, 140px); height: 36px; }
     &__mobile-card { padding: 15px; }
+  }
+
+  @media (max-width: 576px) {
+    &__container { padding: 0; }
   }
 }
