@@ -79,8 +79,9 @@
     justify-content: flex-end;
 
     .placeholder:first-child {
-      width: 120px;
-      height: 18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 100px;
     }
   }
 
@@ -117,8 +118,8 @@
       }
     }
 
-    &__action .placeholder:first-child {
-      display: none;
+    &__action .category-shimmer__button {
+      display: block;
     }
   }
 }
