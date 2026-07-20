@@ -7,28 +7,73 @@
       <span class="placeholder"></span>
     </div>
 
-    <div class="row g-3">
-      {
-        Array.from({ length: 7 }).map((_, index) => (
-          <div class={index < 3 ? "col-md-4" : "col-md-3"}>
-            <div
-              class={`category-shimmer__card category-shimmer__card--${
-                index < 3 ? "large" : "small"
-              }`}
-              aria-hidden="true"
-            >
-              <div class="category-shimmer__title">
-                <span class="placeholder" />
-                {index < 3 && <span class="placeholder" />}
-              </div>
-              <div class="category-shimmer__action">
-                {index < 3 && <span class="placeholder" />}
-                <span class="placeholder category-shimmer__button" />
-              </div>
-            </div>
+    <div class="row g-3" aria-hidden="true">
+      <div class="col-md-4">
+        <div class="category-shimmer__card category-shimmer__card--large">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span><span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder"></span><span
+              class="placeholder category-shimmer__button"></span>
           </div>
-        ))
-      }
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="category-shimmer__card category-shimmer__card--large">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span><span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder"></span><span
+              class="placeholder category-shimmer__button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="category-shimmer__card category-shimmer__card--large">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span><span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder"></span><span
+              class="placeholder category-shimmer__button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-shimmer__card category-shimmer__card--small">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder category-shimmer__button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-shimmer__card category-shimmer__card--small">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder category-shimmer__button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-shimmer__card category-shimmer__card--small">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder category-shimmer__button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-shimmer__card category-shimmer__card--small">
+          <div class="category-shimmer__title">
+            <span class="placeholder"></span>
+          </div><div class="category-shimmer__action">
+            <span class="placeholder category-shimmer__button"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
