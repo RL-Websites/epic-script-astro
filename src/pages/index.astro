@@ -1,10 +1,10 @@
 ---
 import Client from "../components/Client.astro";
 import CategoryCard from "../components/common/CategoryCard.astro";
-import CategoryCardShimmer from "../components/homePage/CategoryCardShimmer.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Homehero from "../components/homePage/Homehero.astro";
+import DigitalPhamacy from "../components/homePage/DigitalPhamacy.astro";
 import RapidContact from "../components/homePage/RapidContact.astro";
 import Layout from "../layouts/Layout.astro";
 import Loader from "../components/Loader.astro";
@@ -20,7 +20,6 @@ import Loader from "../components/Loader.astro";
     <!--===|| Banner Section End ||===-->
 
     <!--===|| Category Section Start ||===-->
-    <!-- <CategoryCardShimmer /> -->
     <section class="mb-15">
       <div class="category__home">
         <div class="container-fluid">
@@ -32,9 +31,7 @@ import Loader from "../components/Loader.astro";
               data-aos-duration="600"
             >
               <h2>Try Our Epiq Scripts Catalog</h2>
-              <p class="text-primary">
-                Contact us to learn more about our offerings!
-              </p>
+              <p>Contact us to learn more about our offerings!</p>
             </div>
             <CategoryCard />
             <!-- <CategoryCardShimmer /> -->
@@ -106,7 +103,8 @@ import Loader from "../components/Loader.astro";
     <!--===||  Solution Section End ||===-->
 
     <!--===||  Pharmacy Section Start ||===-->
-    <section class="pharmacy mb-15">
+    <DigitalPhamacy />
+    <!-- <section class="pharmacy mb-15">
       <div class="container-fluid">
         <div class="pharmacy__wrapper">
           <div class="row">
@@ -209,61 +207,11 @@ import Loader from "../components/Loader.astro";
                   </div>
                 </div>
               </div>
-              <!-- <div class="pharmacy__card">
-								<div class="swiper pharmacy-slider">
-									<div class="swiper-wrapper text-end">
-										<div class="swiper-slide">
-											<div class="pharmacy__card__img">
-												<img
-													src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/pharmacy/high-volume.svg"
-													alt="Pharmacy Solutions"
-												/>
-											</div>
-										</div>
-
-										<div class="swiper-slide">
-											<div class="pharmacy__card__img">
-												<img
-													src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/pharmacy/custom-compounding.svg"
-													alt="Custom Compounding"
-												/>
-											</div>
-										</div>
-
-										<div class="swiper-slide">
-											<div class="pharmacy__card__img">
-												<img
-													src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/pharmacy/custom-bp.svg"
-													alt="Custom BP"
-												/>
-											</div>
-										</div>
-
-										<div class="swiper-slide">
-											<div class="pharmacy__card__img">
-												<img
-													src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/pharmacy/robust-api.svg"
-													alt="Robust API"
-												/>
-											</div>
-										</div>
-
-										<div class="swiper-slide">
-											<div class="pharmacy__card__img">
-												<img
-													src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/pharmacy/end-to-end.svg"
-													alt="End-to-End"
-												/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> -->
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--===||  Pharmacy Section End ||===-->
 
     <!--===||  Technology, Shipment, Packaging Section Start ||===-->
@@ -292,8 +240,8 @@ import Loader from "../components/Loader.astro";
                 data-aos-duration="500"
               >
                 <div class="tsp__block__content pl-md-30 mt-md-0 mt-20">
-                  <h2>Technology that connects</h2>
-                  <h2 class="text-cyan2">every step of care</h2>
+                  <h2 class="text-cyan">Technology that connects</h2>
+                  <h2>every step of care</h2>
                   <p class="fs-md-20 fs-16 mt-10">
                     Epiq Connect brings prescribing, fulfillment, and patient
                     management into one seamless system. From order submission
@@ -319,8 +267,8 @@ import Loader from "../components/Loader.astro";
                 data-aos-duration="500"
               >
                 <div class="tsp__block__content pl-md-30 mt-md-0 mt-20">
-                  <h2>Reliable Shipment</h2>
-                  <h2 class="text-cyan2">and Delivery</h2>
+                  <h2 class="text-cyan">Reliable Shipment</h2>
+                  <h2>and Delivery</h2>
                   <p class="fs-md-20 fs-16 mt-10">
                     Epiq Scripts can deliver your patient’s medication quickly
                     and efficiently. Our online prescription fulfillment service
@@ -363,7 +311,7 @@ import Loader from "../components/Loader.astro";
               >
                 <div class="tsp__block__img">
                   <img
-                    src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/packaging.png"
+                    src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/packagingHome.jpg"
                     alt="Technology"
                   />
                 </div>
@@ -375,8 +323,8 @@ import Loader from "../components/Loader.astro";
                 data-aos-duration="500"
               >
                 <div class="tsp__block__content pl-md-30 mt-md-0 mt-20">
-                  <h2>Packaging that fits</h2>
-                  <h2 class="text-cyan2">your BRAND</h2>
+                  <h2 class="text-cyan">Packaging that fits</h2>
+                  <h2>your BRAND</h2>
                   <p class="fs-md-20 fs-16 mt-10">
                     Choose from a range of formats, materials, and
                     configurations tailored to your product, workflow, and
@@ -466,7 +414,10 @@ import Loader from "../components/Loader.astro";
       <div class="container-fluid">
         <div class="faq__inner">
           <div class="faq__wrapper">
-            <div
+            <div class="faq__header">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+            <!-- <div
               class="faq__title"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -475,7 +426,7 @@ import Loader from "../components/Loader.astro";
               <h2 class="faq__heading">
                 Frequently <br /><span>Asked Questions</span>
               </h2>
-            </div>
+            </div> -->
             <!-- faq accordion start -->
             <div
               class="faq__accordion accordion accordion-flush"

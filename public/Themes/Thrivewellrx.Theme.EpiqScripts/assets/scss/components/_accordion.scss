@@ -1,0 +1,9 @@
+.faq__accordion {
+  .faq__item:last-child {
+    border-bottom: 0 !important;
+
+    &::after {
+      display: none;
+    }
+  }
+}

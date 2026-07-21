@@ -1,73 +1,72 @@
-@use '../base/variables' as *;
+@use "../base/variables" as *;
 
 .rapid-contact {
+  &__wrapper {
+    background: white;
+    padding: 50px 80px;
+    border-radius: 10px;
 
-	&__wrapper {
-		background: white;
-		padding: 50px 80px;
-		border-radius: 10px;
+    @media all and (max-width: 992px) {
+      padding: 40px 20px;
+    }
+  }
 
-		@media all and (max-width: 992px) {
-			padding: 40px 20px;
-		}
-	}
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
 
-	&__title {
-		text-align: center;
-		margin-bottom: 24px;
+    h2 {
+      margin-bottom: 10px;
+      color: $cyan;
+      font-size: $fs-56;
+      font-weight: 700;
+      line-height: 1.1;
 
-		h2 {
-			margin-bottom: 10px;
-			color: $black-deep;
-			font-size: $fs-56;
-			font-weight: 700;
-			line-height: 1.1;
+      @media all and (max-width: 768px) {
+        font-size: 30px;
+      }
+    }
 
-			@media all and (max-width: 768px) {
-				font-size: 30px;
-			}
-		}
+    p {
+      margin-bottom: 0;
+      font-size: $fs-28;
+      font-weight: 700;
+      line-height: 1.4;
+      color: $green-lighter5;
 
-		p {
-			margin-bottom: 0;
-			font-size: $fs-28;
-			font-weight: 700;
-			line-height: 1.4;
+      @media all and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
 
-			@media all and (max-width: 768px) {
-				font-size: 16px;
-			}
-		}
-		
-	}
+  // &__form {
+  // 	.row {
+  // 		--bs-gutter-x: 34px;
+  // 		--bs-gutter-y: 20px;
+  // 	}
+  // }
 
-	// &__form {
-	// 	.row {
-	// 		--bs-gutter-x: 34px;
-	// 		--bs-gutter-y: 20px;
-	// 	}
-	// }
+  &__action {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
 
-	&__action {
-		display: flex;
-		justify-content: center;
-		margin-top: 24px;
-	}
+  &__submit {
+    width: 414px;
+    height: 64px;
+    border: 0;
+    border-radius: 30px;
+    background-color: $primary;
+    color: $white;
+    font-size: $fs-20;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+  }
 
-	&__submit {
-		width: 414px;
-		height: 64px;
-		border: 0;
-		border-radius: 30px;
-		background-color: $primary;
-		color: $white;
-		font-size: $fs-20;
-		font-weight: 500;
-		line-height: 1;
-		cursor: pointer;
-	}
-
-	@media all and (max-width: 992px) {
-		scroll-margin-top: 90px;
-	}
+  @media all and (max-width: 992px) {
+    scroll-margin-top: 90px;
+  }
 }

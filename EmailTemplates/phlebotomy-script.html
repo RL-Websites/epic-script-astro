@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Therapeutic Phlebotomy Order</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: #111111;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 1.25;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
+      }
+
+      td {
+        padding: 0;
+        vertical-align: top;
+      }
+
+      .email-shell {
+        width: 100%;
+        background: #ffffff;
+      }
+
+      .email-gutter {
+        padding: 0;
+      }
+
+      .order-form {
+        width: 100%;
+        background: #ffffff;
+      }
+
+      .form-padding {
+        padding: 18px 16px 24px;
+      }
+
+      .header-table,
+      .form-table,
+      .instructions-table,
+      .options-table,
+      .review-table {
+        width: 100%;
+      }
+
+      .form-title {
+        padding: 0 0 24px;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      .section-heading {
+        padding-top: 8px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .instructions-heading {
+        font-style: italic;
+      }
+
+      .instructions-table {
+        margin: 4px 0 2px;
+      }
+
+      .instruction-number {
+        width: 28px;
+        padding: 2px 8px 2px 0;
+        font-weight: 700;
+        text-align: right;
+      }
+
+      .instruction-copy {
+        padding: 2px 0;
+      }
+
+      .expiry-note {
+        padding: 1px 0 5px 36px;
+      }
+
+      .form-table {
+        border-top: 1px solid #111111;
+        border-left: 1px solid #111111;
+      }
+
+      .form-table td {
+        border-right: 1px solid #111111;
+        border-bottom: 1px solid #111111;
+        padding: 7px 8px;
+      }
+
+      .label {
+        font-weight: 700;
+      }
+
+      .field {
+        height: 18px;
+      }
+
+      .field-tall {
+        height: 32px;
+      }
+
+      .patient-question,
+      .indications-cell {
+        padding: 8px 10px 10px !important;
+      }
+
+      .choice-line {
+        padding-top: 8px;
+      }
+
+      .checkbox {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin: 0 5px 0 18px;
+        border: 1px solid #111111;
+        vertical-align: -2px;
+      }
+
+      .checkbox-first {
+        margin-left: 0;
+      }
+
+      .fill-line {
+        display: inline-block;
+        min-width: 210px;
+        height: 14px;
+        border-bottom: 1px solid #111111;
+        vertical-align: bottom;
+      }
+
+      .options-table {
+        margin-top: 4px;
+      }
+
+      .options-table td {
+        width: 50%;
+        padding: 3px 12px 3px 0;
+        border: 0;
+      }
+
+      .option {
+        padding-left: 22px;
+        text-indent: -22px;
+      }
+
+      .sub-option {
+        padding-left: 44px;
+      }
+
+      .order-heading-note {
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        text-decoration: none;
+      }
+
+      .handwriting {
+        font-family: "Segoe Print", "Bradley Hand", cursive;
+        font-size: 18px;
+      }
+
+      .order-note {
+        padding: 7px 9px !important;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .frequency-cell {
+        padding: 8px 10px 10px !important;
+      }
+
+      .frequency-title {
+        padding-bottom: 5px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .frequency-option {
+        display: inline-block;
+        width: 48%;
+        padding: 4px 0;
+      }
+
+      .short-line {
+        display: inline-block;
+        width: 75px;
+        height: 13px;
+        border-bottom: 1px solid #111111;
+        vertical-align: bottom;
+      }
+
+      .hemoglobin-cell {
+        width: 31%;
+        padding: 10px 12px !important;
+      }
+
+      .hemoglobin-value {
+        padding: 11px 0 5px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .default-note {
+        font-size: 10px;
+        font-style: italic;
+      }
+
+      .signature-cell {
+        height: 29px;
+      }
+
+      .review-wrap {
+        margin-top: 7px;
+        border: 3px double #111111;
+      }
+
+      .review-title {
+        padding: 3px 6px;
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .review-table td {
+        padding: 4px 8px;
+      }
+
+      .review-line {
+        display: inline-block;
+        min-width: 180px;
+        height: 13px;
+        border-bottom: 1px solid #111111;
+        vertical-align: bottom;
+      }
+
+      @media only screen and (max-width: 620px) {
+        .form-padding {
+          padding: 14px 10px;
+        }
+
+        .form-title {
+          font-size: 20px;
+        }
+
+        .options-table td {
+          display: block;
+          width: auto;
+        }
+
+        .frequency-option {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="email-shell" role="presentation" width="100%">
+      <tr>
+        <td class="email-gutter" align="center">
+          <table class="order-form" role="presentation" width="100%">
+            <tr>
+              <td class="form-padding">
+                <div class="form-title">Therapeutic Phlebotomy Order</div>
+
+                <div class="section-heading instructions-heading">
+                  Physician Instructions:
+                </div>
+                <table class="instructions-table" role="presentation">
+                  <tr>
+                    <td class="instruction-number">1.</td>
+                    <td class="instruction-copy">
+                      Complete, sign, and return this form to the blood center
+                      prior to the phlebotomy; physicians should not write
+                      prescriptions for themselves or immediate family members.
+                      Complete all fields to avoid delays.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="instruction-number">2.</td>
+                    <td class="instruction-copy">
+                      Patient must have normal vital signs and be in otherwise
+                      healthy and stable condition for the request to be
+                      approved.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="instruction-number">3.</td>
+                    <td class="instruction-copy">
+                      For standing orders, indicate the frequency of the
+                      donation and the hemoglobin limit. Note that the blood
+                      center can only determine hemoglobin values. Modification
+                      of other values (ferritin, etc.) must be done at the
+                      doctor's office.
+                    </td>
+                  </tr>
+                </table>
+                <div class="expiry-note">
+                  Standing orders expire one year from the request date.
+                </div>
+
+                <div class="section-heading">Patient Information</div>
+                <table class="form-table" role="presentation">
+                  <tr>
+                    <td width="38%">
+                      <span class="label">Last Name:</span>
+                      <div class="field">{PatientLastName}</div>
+                    </td>
+                    <td width="31%">
+                      <span class="label">First Name:</span>
+                      <div class="field">{PatientFirstName}</div>
+                    </td>
+                    <td width="31%">
+                      <span class="label">Middle Name:</span>
+                      <div class="field">{PatientMiddleName}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <span class="label">Street Address:</span>
+                      <div class="field">{PatientStreetAddress}</div>
+                    </td>
+                    <td>
+                      <span class="label">Last 4 Digits of SSN:</span>
+                      <div class="field">{PatientSsnLastFour}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="label">City:</span>
+                      <div class="field">{PatientCity}</div>
+                    </td>
+                    <td>
+                      <span class="label">State:</span>
+                      <div class="field">{PatientState}</div>
+                    </td>
+                    <td>
+                      <span class="label">ZIP:</span>
+                      <div class="field">{PatientZip}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="label">Phone:</span>
+                      <div class="field">{PatientPhone}</div>
+                    </td>
+                    <td>
+                      <span class="label">DOB:</span>
+                      <div class="field">{PatientDob}</div>
+                    </td>
+                    <td>
+                      <span class="label">Sex:</span>
+                      <div class="field">{PatientSex}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <span class="label">Email:</span>
+                      <div class="field">{PatientEmail}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="patient-question" colspan="3">
+                      <div class="label">
+                        Does the patient have a medical condition that may
+                        increase risk of adverse reaction and require medical
+                        supervision during phlebotomy?
+                      </div>
+                      <div class="choice-line">
+                        <span class="checkbox checkbox-first">&nbsp;</span>No
+                        <span class="checkbox">&nbsp;</span>Yes, explain:
+                        <span class="fill-line"
+                          >{MedicalConditionExplanation}</span
+                        >
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="indications-cell" colspan="3">
+                      <div class="label">Indication for phlebotomy:</div>
+                      <table class="options-table" role="presentation">
+                        <tr>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >238.4/D45 Polycythemia Vera (Primary)
+                            </div>
+                          </td>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >275.03/E83.118 or E83.119 Other/Unspecified
+                              Hemochromatosis (acquired/unspecified) (liver,
+                              myocardium) (secondary)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >289.0/D75.1 Polycythemia or Erythrocytosis,
+                              secondary
+                            </div>
+                            <div class="sub-option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >Testosterone Replacement Therapy (TRT)*
+                            </div>
+                          </td>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >277.1/E80.1 Disorders of porphyrin metabolism
+                              (includes porphyria cutanea tarda)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >289.6/D75.0 Familial Polycythemia or
+                              Erythrocytosis
+                            </div>
+                          </td>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >790.6/R79.89 Other Abnormal Blood Chemistry
+                              (elevated ferritin, hemoglobin, iron)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="option">
+                              <span class="checkbox checkbox-first">&nbsp;</span
+                              >275.01/E83.110 Hereditary Hemochromatosis*
+                            </div>
+                          </td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="section-heading">
+                  <em>Order Details</em>
+                  <span class="order-heading-note"
+                    >(Each draw removes 500 mL &plusmn; 10% of whole
+                    blood.)</span
+                  >
+                </div>
+                <table class="form-table" role="presentation">
+                  <tr>
+                    <td colspan="2">
+                      <span class="label"
+                        >Requested by (MD or RN) (print):</span
+                      >
+                      &nbsp; <strong>DR. EDWARD PEARSON</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="68%">
+                      <span class="label">Phone:</span> &nbsp;
+                      <strong class="handwriting">561-328-6276</strong>
+                    </td>
+                    <td width="32%">
+                      <span class="label">Request Date:</span>
+                      <span class="short-line">&nbsp;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="order-note">
+                      <strong>Notes:</strong> Patients with Hereditary
+                      Hemochromatosis or Secondary Polycythemia due to TRT may
+                      be considered for phlebotomy. Goal is to evaluate and
+                      maintain hemoglobin levels and/or ferritin for highest
+                      donation every eight weeks or as indicated below,
+                      whichever is more frequent.
+                    </td>
+                    <td class="hemoglobin-cell" rowspan="2">
+                      <strong
+                        >Do not draw if hemoglobin level is less than:</strong
+                      >
+                      <div class="hemoglobin-value">13.0 &nbsp; g/dL</div>
+                      <div class="default-note">
+                        (Default minimum is 12.0 g/dL, if not specified.)
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="frequency-cell">
+                      <div class="frequency-title">
+                        Frequency of draw (select only one):
+                      </div>
+                      <div class="frequency-option">
+                        <span class="checkbox checkbox-first">&nbsp;</span>One
+                        time only
+                      </div>
+                      <div class="frequency-option">
+                        <span class="checkbox checkbox-first">&nbsp;</span>Once
+                        every <span class="short-line">{Weeks}</span> week(s)
+                      </div>
+                      <div class="frequency-option">
+                        <span class="checkbox checkbox-first">&nbsp;</span>Once
+                        every <span class="short-line">{Months}</span> month(s)
+                      </div>
+                      <div class="frequency-option">
+                        <span class="checkbox checkbox-first">&nbsp;</span>Other
+                        (specify):
+                        <span class="short-line">{OtherFrequency}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="signature-cell" colspan="2">
+                      <span class="label">Requester's Signature:</span>
+                      <span class="handwriting">Edward W. Pearson, MD</span>
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="review-wrap">
+                  <div class="review-title">Blood Center Use Only</div>
+                  <table class="review-table" role="presentation">
+                    <tr>
+                      <td>
+                        <span class="checkbox checkbox-first">&nbsp;</span
+                        >Approved
+                      </td>
+                      <td>
+                        <span class="checkbox checkbox-first">&nbsp;</span
+                        >Denied
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        Medical Director or designee:
+                        <span class="review-line">&nbsp;</span> &nbsp; Date:
+                        <span class="review-line">&nbsp;</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        Donor ID: <span class="review-line">&nbsp;</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
