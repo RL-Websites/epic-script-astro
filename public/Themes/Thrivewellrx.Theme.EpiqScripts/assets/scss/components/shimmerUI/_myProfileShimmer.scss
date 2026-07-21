@@ -1,0 +1,140 @@
+@keyframes my-profile-shimmer-move {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.my-profile-shimmer {
+  padding: 120px 0 100px;
+
+  &__container {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  &__pulse {
+    display: block;
+    background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 37%, #e9ecef 63%);
+    background-size: 200% 100%;
+    animation: my-profile-shimmer-move 1.5s linear infinite;
+  }
+
+  &__title {
+    width: 220px;
+    height: 52px;
+    margin: 0 auto 60px;
+    border-radius: 6px;
+  }
+
+  &__email {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__email-label {
+    width: 150px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+
+  &__email-value {
+    width: 210px;
+    height: 18px;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+
+  &__form {
+    margin-top: 20px;
+    padding: 40px 40px 20px;
+    border-radius: 10px;
+    background: #fbf9ff;
+  }
+
+  &__form--edit { margin-top: 20px; }
+
+  &__edit {
+    width: 38px;
+    height: 18px;
+    margin: 0 0 22px auto;
+    border-radius: 4px;
+  }
+
+  &__avatar {
+    width: 208px;
+    height: 208px;
+    margin: 24px auto 30px;
+    border-radius: 8px;
+  }
+
+  &__field {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    width: min(100%, 150px);
+    height: 18px;
+    border-radius: 4px;
+  }
+
+  &__text,
+  &__input {
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+  }
+
+  &__text { width: min(100%, 220px); height: 20px; }
+
+  &__date-inputs,
+  &__radio-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__date-inputs .my-profile-shimmer__input { flex: 1; }
+
+  &__radio {
+    width: 92px;
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0 22px;
+  }
+
+  &__button {
+    width: 210px;
+    height: 58px;
+    border-radius: 30px;
+  }
+
+  &__button--primary { opacity: 0.75; }
+
+  @media (max-width: 768px) {
+    padding: 100px 0 50px;
+    &__container { padding: 0 15px; }
+    &__title { width: 170px; height: 38px; margin-bottom: 50px; }
+    &__form { padding: 20px; }
+    &__field { margin-bottom: 10px; }
+    &__avatar { width: 160px; height: 160px; margin-bottom: 25px; }
+    &__actions { gap: 12px; }
+    &__button { width: 50%; height: 50px; }
+  }
+
+  @media (max-width: 450px) {
+    &__date-inputs { gap: 6px; }
+    &__radio { width: 70px; }
+  }
+}

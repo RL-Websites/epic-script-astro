@@ -1,0 +1,97 @@
+// Layout Configurations
+$shimmer-base: #e9ecef;
+$shimmer-glow: #f8f9fa;
+$card-bg: #ffffff;
+$card-border-color: #e0e0e0;
+$radius-card: 10px;
+$radius-input: 8px;
+
+// Shimmer Keyframe Loop Animation
+@keyframes paymentShimmerMove {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// Global Light Gray Shimmer Base class
+.payment-shimmer-glow {
+  background: linear-gradient(
+    90deg,
+    $shimmer-base 25%,
+    $shimmer-glow 37%,
+    $shimmer-base 63%
+  );
+  background-size: 200% 100%;
+  animation: paymentShimmerMove 1.5s infinite linear;
+}
+
+// Global Main Header
+.payment-shimmer-header {
+  @extend .payment-shimmer-glow;
+  height: 44px;
+  width: 290px;
+  border-radius: 6px;
+}
+
+// ==========================================
+// Card Main Component Block
+// ==========================================
+.payment-shimmer-card {
+  background-color: $card-bg;
+  border: 1px solid $card-border-color;
+  border-radius: $radius-card;
+  padding: 20px;
+
+  &__title {
+    height: 28px;
+    width: 180px;
+    border-radius: 4px;
+  }
+
+  &__divider {
+    border-top: 1px solid $card-border-color;
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+// ==========================================
+// Form Field Element Component Block
+// ==========================================
+.payment-shimmer-field {
+  &__label {
+    height: 16px;
+    width: 110px;
+    border-radius: 4px;
+  }
+
+  &__input {
+    height: 48px; // Form element thickness mimicking real text inputs
+    width: 100%;
+    border-radius: $radius-input;
+  }
+}
+
+// ==========================================
+// Shipping Side Component Block
+// ==========================================
+.payment-shimmer-shipping {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+
+  &__title {
+    height: 26px;
+    width: 140px;
+    border-radius: 4px;
+  }
+
+  &__checkbox {
+    height: 20px;
+    width: 150px;
+    border-radius: 4px;
+  }
+}

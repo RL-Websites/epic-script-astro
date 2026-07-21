@@ -1,0 +1,59 @@
+@keyframes thank-you-shimmer-move {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.thank-you-shimmer {
+  padding: 150px 0 100px;
+
+  &__container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 12px; }
+
+  &__pulse {
+    display: block;
+    background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 37%, #e9ecef 63%);
+    background-size: 200% 100%;
+    animation: thank-you-shimmer-move 1.5s linear infinite;
+  }
+
+  &__title { width: min(100%, 480px); height: 104px; margin: 0 auto 30px; border-radius: 6px; }
+  &__intro { width: min(100%, 680px); height: 24px; margin: 0 auto 16px; border-radius: 4px; }
+  &__next { display: grid; gap: 12px; margin: 16px auto 30px; max-width: 760px; text-align: center; }
+  &__next-line { width: 90%; height: 20px; margin: auto; border-radius: 4px; }
+  &__next-line--short { width: 180px; }
+  &__next-line--last { width: 70%; }
+  &__highlight { display: grid; gap: 12px; margin: 0 auto 20px; padding: 24px 30px; border-radius: 12px; background: #f4efff; }
+  &__highlight-line { width: 85%; height: 20px; border-radius: 4px; }
+  &__highlight-line--title { width: 180px; height: 24px; }
+  &__highlight-line--last { width: 70%; }
+  &__card { overflow: hidden; margin-top: 20px; border: 1px solid #dadada; border-radius: 16px; background: #f7f7f7; }
+  &__card-header { width: 30%; height: 30px; margin: 22px 20px; border-radius: 5px; }
+  &__info-grid, &__summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 28px 20px 50px; }
+  &__info-item, &__summary-item { display: grid; gap: 20px; min-height: 58px; }
+  &__label { width: min(100%, 154px); height: 18px; border-radius: 4px; }
+  &__value { width: min(100%, 220px); height: 18px; border-radius: 4px; }
+  &__product { display: flex; gap: 20px; padding: 20px; border-top: 1px solid #dadada; }
+  &__product-image { width: 112px; height: 100px; flex: 0 0 112px; border-radius: 8px; }
+  &__product-info { display: grid; grid-template-columns: minmax(120px, 1fr) minmax(100px, 1fr); gap: 20px 32px; width: 100%; }
+  &__summary-grid { padding-bottom: 40px; }
+  &__total { display: flex; align-items: center; justify-content: space-between; padding: 22px 20px; border-top: 1px solid #dadada; }
+  &__total-label, &__total-value { width: 90px; height: 26px; border-radius: 4px; }
+  &__total-value { width: 120px; }
+  &__actions { display: flex; justify-content: center; gap: 20px; max-width: 430px; margin: 40px auto 0; }
+  &__button { width: 210px; height: 58px; border-radius: 30px; }
+  &__button--primary { opacity: .75; }
+
+  @media (max-width: 992px) { &__container { max-width: 960px; } }
+  @media (max-width: 768px) {
+    padding: 120px 0 60px;
+    &__container { padding: 0 15px; }
+    &__title { height: 76px; }
+    &__info-grid, &__summary-grid { grid-template-columns: 1fr; gap: 20px; padding: 15px; }
+    &__highlight { padding: 20px; }
+    &__product { gap: 12px; padding: 15px; }
+    &__product-image { width: 84px; height: 84px; flex-basis: 84px; }
+    &__product-info { grid-template-columns: 1fr 1fr; gap: 12px; }
+    &__actions { margin-top: 20px; gap: 10px; }
+    &__button { width: 50%; height: 50px; }
+  }
+  @media (max-width: 576px) { &__next-line, &__highlight-line { width: 100%; } &__card-header { width: 55%; height: 24px; margin: 16px 12px; } }
+}

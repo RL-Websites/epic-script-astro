@@ -1,0 +1,153 @@
+@keyframes my-profile-shimmer-move {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+.my-profile-shimmer {
+  padding: 120px 0 100px;
+}
+.my-profile-shimmer__container {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+.my-profile-shimmer__pulse {
+  display: block;
+  background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 37%, #e9ecef 63%);
+  background-size: 200% 100%;
+  animation: my-profile-shimmer-move 1.5s linear infinite;
+}
+.my-profile-shimmer__title {
+  width: 220px;
+  height: 52px;
+  margin: 0 auto 60px;
+  border-radius: 6px;
+}
+.my-profile-shimmer__email {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.my-profile-shimmer__email-label {
+  width: 150px;
+  height: 20px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.my-profile-shimmer__email-value {
+  width: 210px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.my-profile-shimmer__form {
+  margin-top: 20px;
+  padding: 40px 40px 20px;
+  border-radius: 10px;
+  background: #fbf9ff;
+}
+.my-profile-shimmer__form--edit {
+  margin-top: 20px;
+}
+.my-profile-shimmer__edit {
+  width: 38px;
+  height: 18px;
+  margin: 0 0 22px auto;
+  border-radius: 4px;
+}
+.my-profile-shimmer__avatar {
+  width: 208px;
+  height: 208px;
+  margin: 24px auto 30px;
+  border-radius: 8px;
+}
+.my-profile-shimmer__field {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.my-profile-shimmer__label {
+  width: min(100%, 150px);
+  height: 18px;
+  border-radius: 4px;
+}
+.my-profile-shimmer__text, .my-profile-shimmer__input {
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+}
+.my-profile-shimmer__text {
+  width: min(100%, 220px);
+  height: 20px;
+}
+.my-profile-shimmer__date-inputs, .my-profile-shimmer__radio-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.my-profile-shimmer__date-inputs .my-profile-shimmer__input {
+  flex: 1;
+}
+.my-profile-shimmer__radio {
+  width: 92px;
+  height: 22px;
+  border-radius: 4px;
+}
+.my-profile-shimmer__actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0 22px;
+}
+.my-profile-shimmer__button {
+  width: 210px;
+  height: 58px;
+  border-radius: 30px;
+}
+.my-profile-shimmer__button--primary {
+  opacity: 0.75;
+}
+@media (max-width: 768px) {
+  .my-profile-shimmer {
+    padding: 100px 0 50px;
+  }
+  .my-profile-shimmer__container {
+    padding: 0 15px;
+  }
+  .my-profile-shimmer__title {
+    width: 170px;
+    height: 38px;
+    margin-bottom: 50px;
+  }
+  .my-profile-shimmer__form {
+    padding: 20px;
+  }
+  .my-profile-shimmer__field {
+    margin-bottom: 10px;
+  }
+  .my-profile-shimmer__avatar {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 25px;
+  }
+  .my-profile-shimmer__actions {
+    gap: 12px;
+  }
+  .my-profile-shimmer__button {
+    width: 50%;
+    height: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .my-profile-shimmer__date-inputs {
+    gap: 6px;
+  }
+  .my-profile-shimmer__radio {
+    width: 70px;
+  }
+}
