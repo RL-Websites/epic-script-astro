@@ -256,7 +256,7 @@
     &__wrapper {
       background: white;
       padding: 0 80px 20px;
-      border-radius: 0 0 10px 10px;
+      border-radius: 10px;
 
       @media all and (max-width: 992px) {
         padding: 0 8px;
@@ -279,6 +279,7 @@
         line-height: 1.2;
         letter-spacing: 0;
         padding-bottom: 12px;
+        color: $cyan;
 
         @media all and (max-width: 992px) {
           font-size: $fs-30;
@@ -286,10 +287,11 @@
       }
 
       p {
-        font-size: 20px;
+        font-size: 28px;
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: 0;
+        color: $green-lighter5;
 
         @media all and (max-width: 992px) {
           font-size: $fs-16;
