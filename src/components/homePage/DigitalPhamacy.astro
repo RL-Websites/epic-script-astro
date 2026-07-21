@@ -1,0 +1,55 @@
+---
+const assetPath =
+  "Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/home/pharmacy";
+
+const pharmacyServices = [
+  {
+    icon: "icon-report",
+    label: "High-Volume Prescription Fulfillment",
+  },
+  {
+    icon: "icon-networking",
+    label: "Custom Compounding",
+  },
+  {
+    icon: "icon-box",
+    label: "Custom Branding & Packaging",
+  },
+  {
+    icon: "icon-delivery",
+    label: "Shipment And Delivery",
+  },
+  {
+    icon: "icon-chat",
+    label: "Robust APIs & Unified Communication Platform",
+  },
+  {
+    icon: "icon-tablet",
+    label: "End-To-End Digital Pharmacy Solutions",
+  },
+];
+---
+
+<section class="digital-pharmacy">
+  <div class="container-fluid">
+    <div class="digital-pharmacy__wrapper">
+      <h2 class="digital-pharmacy__heading">
+        Delivering Digital Pharmacy Solution
+      </h2>
+      <div class="row g-4">
+        {
+          pharmacyServices.map((service) => (
+            <div class="col-md-6 col-xl-4">
+              <div class="digital-pharmacy__card h-100">
+                <div class="digital-pharmacy__icon">
+                  <i class={service.icon} />
+                </div>
+                <p class="digital-pharmacy__text">{service.label}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
