@@ -2,9 +2,10 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 // import Header from '../components/Header.astro';
+import OffCanvas2 from "../components/OffCanvas2.astro";
+import ProductDetailModal from "../components/ProductDetailModal.astro";
 import ProductSingle from "../components/ProductSingle.astro";
 import Layout from "../layouts/Layout.astro";
-import OffCanvas2 from '../components/OffCanvas2.astro';
 ---
 
 <Layout>
@@ -25,8 +26,7 @@ import OffCanvas2 from '../components/OffCanvas2.astro';
 							muted
 							loop
 							playsinline
-							aria-hidden="true"
-						></video>
+							aria-hidden="true"></video>
 						<div class="category-hero__content">
 							<span class="status-pill status-pill--yellow-light"
 								>Weight Loss</span
@@ -268,5 +268,6 @@ import OffCanvas2 from '../components/OffCanvas2.astro';
 		</div>
 	</main>
 	<OffCanvas2 />
+	<ProductDetailModal />
 	<Footer />
 </Layout>
