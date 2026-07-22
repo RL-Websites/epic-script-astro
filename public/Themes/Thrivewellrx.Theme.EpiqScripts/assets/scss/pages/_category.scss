@@ -241,7 +241,7 @@
   &__home {
     &__wrapper {
       background: white;
-      padding: 0 80px 20px;
+      padding: 0 30px 20px;
       border-radius: 10px;
 
       @media all and (max-width: 992px) {
@@ -294,6 +294,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @media all and (max-width: 720px) {
+      border-radius: 15px;
+    }
+
     &__image {
       position: absolute;
       inset: 0;
@@ -302,6 +306,14 @@
       object-fit: cover;
       object-position: 60% 0;
       transition: transform 0.3s ease;
+
+      @media all and (max-width: 1440px) {
+        object-position: 77% 0;
+      }
+
+      @media all and (max-width: 768px) {
+        object-position: 0 70%;
+      }
     }
 
     &:hover &__image {
@@ -331,10 +343,26 @@
 
     h2 {
       font-size: 44px;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 28px;
+      }
     }
 
     h4 {
       font-size: 28px;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 28px;
+      }
     }
 
     &__action {
@@ -369,11 +397,19 @@
       min-height: 320px;
       padding: 24px 16px 16px 24px;
 
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
       @media all and (max-width: 992px) {
         padding: 15px;
       }
 
       @media all and (max-width: 768px) {
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
     }
@@ -382,11 +418,19 @@
       min-height: 320px;
       padding: 24px;
 
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
       @media all and (max-width: 992px) {
         padding: 15px;
       }
 
       @media all and (max-width: 768px) {
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
     }
@@ -395,7 +439,20 @@
       min-height: 320px;
       padding: 24px;
 
+
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
+
       @media all and (max-width: 768px) {
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
     }
@@ -404,18 +461,42 @@
       min-height: 190px;
       padding: 15px;
 
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
+
       @media all and (max-width: 768px) {
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
+
+
     }
 
     &__five {
       min-height: 190px;
       padding: 15px;
 
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
+
       @media all and (max-width: 768px) {
-        // flex-direction: row;
-        // align-items: center;
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
     }
@@ -424,9 +505,19 @@
       min-height: 190px;
       padding: 15px;
 
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
+
       @media all and (max-width: 768px) {
-        // flex-direction: row;
-        // align-items: center;
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
     }
@@ -435,9 +526,19 @@
       min-height: 190px;
       padding: 15px;
 
+      @media all and (max-width: 1024px) {
+        min-height: 290px;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: 15px;
+      }
+
       @media all and (max-width: 768px) {
-        // flex-direction: row;
-        // align-items: center;
+        min-height: 200px;
+      }
+
+      @media all and (max-width: 576px) {
         min-height: 150px;
       }
     }
