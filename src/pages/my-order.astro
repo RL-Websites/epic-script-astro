@@ -1,63 +1,65 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import OrderTable from '../components/OrderTable.astro';
-import Layout from '../layouts/Layout.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import OrderTable from "../components/OrderTable.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout bodyClass="alt-bg">
-	<Header />
+  <Header />
 
-	<!-- =====|| Main Section Start ||====== -->
-	<main class="page page__alt">
-		<div class="page__wrapper page__wrapper--alt">
-			<!-- My Order Section Start -->
-			<section class="my-order">
-				<div class="container-fluid">
-					<div class="my-order__bg">
-						<div class="container">
-							<h2
-								class="my-order__heading text-left"
-								data-aos="fade-up"
-								data-aos-duration="1000">
-								<span class="text-primary-grad-1 fw-700 fs-md-44">My Order</span
-								>
-							</h2>
+  <!-- =====|| Main Section Start ||====== -->
+  <main class="page page__alt">
+    <div class="page__wrapper page__wrapper--alt">
+      <!-- My Order Section Start -->
+      <section class="my-order">
+        <div class="container-fluid">
+          <div class="mb-30">
+            <div class="container">
+              <h2
+                class="my-order__heading text-left"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <span class="text-primary-grad-1 fw-700 fs-md-44">My Order</span
+                >
+              </h2>
 
-							<div
-								class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
-								data-aos="fade-left"
-								data-aos-duration="1000"
-								data-aos-delay="300">
-								<div class="card-basic__body">
-									<div class="list-table">
-										<div class="table-responsive">
-											<table class="table order-list table-striped">
-												<thead>
-													<tr>
-														<th>Order ID</th>
-														<th>Date</th>
-														<th>Product</th>
+              <div
+                class="card-basic card-basic--no-shadow card-basic__table card-basic__table-desktop mt-md-30 mt-20"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
+                <div class="card-basic__body">
+                  <div class="list-table">
+                    <div class="table-responsive">
+                      <table class="table order-list table-striped">
+                        <thead>
+                          <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Product</th>
 
-														<!-- <th>Prescription</th>
+                            <!-- <th>Prescription</th>
 												<th>Lab Reports</th>
 												<th>Driving License</th>
 												<th>Intake form</th> -->
-														<th>Status</th>
-														<th>Details</th>
-													</tr>
-												</thead>
+                            <th>Status</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
 
-												<tbody>
-													<tr>
-														<td class="list-table__Id">#nx20250400010</td>
-														<td class="list-table__time"
-															>12/28/2024 03:37:02 PM</td
-														>
-														<td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td
-														>
+                        <tbody>
+                          <tr>
+                            <td class="list-table__Id">#nx20250400010</td>
+                            <td class="list-table__time"
+                              >12/28/2024 03:37:02 PM</td
+                            >
+                            <td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td
+                            >
 
-														<!-- <td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button class="view-button">View</button>
 														<button class="view-button view-button--icon">
@@ -65,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
 														</button>
 													</div>
 												</td> -->
-														<!-- <td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button
 															class="view-button"
@@ -79,7 +81,7 @@ import Layout from '../layouts/Layout.astro';
 														</button>
 													</div>
 												</td> -->
-														<!-- <td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button class="view-button">View</button>
 														<button class="view-button view-button--icon">
@@ -87,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
 														</button>
 													</div>
 												</td> -->
-														<!-- <td>
+                            <!-- <td>
 													<button
 														class="view-button"
 														data-toggle="modal"
@@ -96,27 +98,27 @@ import Layout from '../layouts/Layout.astro';
 														View
 													</button>
 												</td> -->
-														<td>
-															<span class="status-pill status-pill--received">
-																Received
-															</span>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
+                            <td>
+                              <span class="status-pill status-pill--received">
+                                Received
+                              </span>
+                            </td>
+                            <td>
+                              <button type="button" class="view-button">
+                                View
+                              </button>
+                            </td>
+                          </tr>
 
-													<tr>
-														<td class="list-table__Id">#nx20250400010</td>
-														<td class="list-table__time"
-															>12/28/2024 03:37:02 PM</td
-														>
-														<td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td
-														>
+                          <tr>
+                            <td class="list-table__Id">#nx20250400010</td>
+                            <td class="list-table__time"
+                              >12/28/2024 03:37:02 PM</td
+                            >
+                            <td>2X Blend Tesamorelin (10mg)/Ipamorelin (5mg)</td
+                            >
 
-														<!-- <td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button class="view-button">View</button>
 														<button class="view-button view-button--icon">
@@ -141,24 +143,24 @@ import Layout from '../layouts/Layout.astro';
 													</div>
 												</td>
 												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--paid">
-																Paid
-															</span>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
+                            <td>
+                              <span class="status-pill status-pill--paid">
+                                Paid
+                              </span>
+                            </td>
+                            <td>
+                              <button type="button" class="view-button">
+                                View
+                              </button>
+                            </td>
+                          </tr>
 
-													<tr>
-														<td class="list-table__Id">#7387</td>
-														<td>12/28/2024</td>
-														<td>Kyzetrex</td>
+                          <tr>
+                            <td class="list-table__Id">#7387</td>
+                            <td>12/28/2024</td>
+                            <td>Kyzetrex</td>
 
-														<!-- <td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button class="view-button">View</button>
 														<button class="view-button view-button--icon">
@@ -183,23 +185,23 @@ import Layout from '../layouts/Layout.astro';
 													</div>
 												</td>
 												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--danger">
-																Declined
-															</span>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
+                            <td>
+                              <span class="status-pill status-pill--danger">
+                                Declined
+                              </span>
+                            </td>
+                            <td>
+                              <button type="button" class="view-button">
+                                View
+                              </button>
+                            </td>
+                          </tr>
 
-													<tr>
-														<td class="list-table__Id">#7387</td>
-														<td>12/28/2024</td>
-														<td>Kyzetrex</td>
-														<!-- <td>
+                          <tr>
+                            <td class="list-table__Id">#7387</td>
+                            <td>12/28/2024</td>
+                            <td>Kyzetrex</td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button class="view-button">View</button>
 														<button class="view-button view-button--icon">
@@ -224,24 +226,24 @@ import Layout from '../layouts/Layout.astro';
 													</div>
 												</td>
 												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--processing">
-																Processing
-															</span>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
+                            <td>
+                              <span class="status-pill status-pill--processing">
+                                Processing
+                              </span>
+                            </td>
+                            <td>
+                              <button type="button" class="view-button">
+                                View
+                              </button>
+                            </td>
+                          </tr>
 
-													<tr>
-														<td class="list-table__Id">#7387</td>
-														<td>12/28/2024</td>
-														<td>Kyzetrex</td>
+                          <tr>
+                            <td class="list-table__Id">#7387</td>
+                            <td>12/28/2024</td>
+                            <td>Kyzetrex</td>
 
-														<!-- <td>
+                            <!-- <td>
 													<div class="list-table__actions">
 														<button class="view-button">View</button>
 														<button class="view-button view-button--icon">
@@ -266,221 +268,226 @@ import Layout from '../layouts/Layout.astro';
 													</div>
 												</td>
 												<td><a href="" class="view-button">View</a></td> -->
-														<td>
-															<span class="status-pill status-pill--shipped"
-																>Shipped</span
-															>
-														</td>
-														<td>
-															<button type="button" class="view-button">
-																View
-															</button>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
+                            <td>
+                              <span class="status-pill status-pill--shipped"
+                                >Shipped</span
+                              >
+                            </td>
+                            <td>
+                              <button type="button" class="view-button">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-							<div
-								class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30 border-0 rounded-0">
-								<div class="card-basic__body">
-									<OrderTable />
-									<OrderTable />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- My Order Section End -->
-		</div>
-	</main>
-	<!-- =====|| Main Section End ||====== -->
+              <div
+                class="card-basic card-basic--no-shadow card-basic__table-mobile mt-30 border-0 rounded-0"
+              >
+                <div class="card-basic__body">
+                  <OrderTable />
+                  <OrderTable />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- My Order Section End -->
+    </div>
+  </main>
+  <!-- =====|| Main Section End ||====== -->
 </Layout>
 
 <Footer />
 
 <!-- Lab Report Modal Start-->
 <div
-	class="modal fade lab-report-modal"
-	id="view-reports-modal"
-	tabindex="-1"
-	role="dialog"
-	aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content overflow-h">
-			<div class="modal-header">
-				<p class="modal-title fs-22">Lab Reports</p>
+  class="modal fade lab-report-modal"
+  id="view-reports-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content overflow-h">
+      <div class="modal-header">
+        <p class="modal-title fs-22">Lab Reports</p>
 
-				<button
-					type="button"
-					class="modal-close btn-close"
-					data-dismiss="modal"
-					aria-label="Close">
-					<i class="icon-cross_filled"></i>
-				</button>
-			</div>
-			<div class="modal-body p-0">
-				<div class="list-table">
-					<div class="table-responsive">
-						<table class="table table-striped table__alt">
-							<thead>
-								<tr>
-									<th>Report Name</th>
-									<th>File Type</th>
-									<th>Details</th>
-								</tr>
-							</thead>
+        <button
+          type="button"
+          class="modal-close btn-close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="icon-cross_filled"></i>
+        </button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="list-table">
+          <div class="table-responsive">
+            <table class="table table-striped table__alt">
+              <thead>
+                <tr>
+                  <th>Report Name</th>
+                  <th>File Type</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
 
-							<tbody>
-								<tr>
-									<td>CVC Report</td>
-									<td class="text-uppercase">PDF</td>
-									<td>
-										<button type="button" class="view-button">View</button>
-									</td>
-								</tr>
+              <tbody>
+                <tr>
+                  <td>CVC Report</td>
+                  <td class="text-uppercase">PDF</td>
+                  <td>
+                    <button type="button" class="view-button">View</button>
+                  </td>
+                </tr>
 
-								<tr>
-									<td>Biilirubin</td>
-									<td class="text-uppercase">jpg</td>
-									<td>
-										<button type="button" class="view-button">View</button>
-									</td>
-								</tr>
+                <tr>
+                  <td>Biilirubin</td>
+                  <td class="text-uppercase">jpg</td>
+                  <td>
+                    <button type="button" class="view-button">View</button>
+                  </td>
+                </tr>
 
-								<tr>
-									<td>Ammonia</td>
-									<td class="text-uppercase">png</td>
-									<td>
-										<button type="button" class="view-button">View</button>
-									</td>
-								</tr>
-								<tr>
-									<td>Amylase</td>
-									<td class="text-uppercase">pdf</td>
-									<td>
-										<button type="button" class="view-button">View</button>
-									</td>
-								</tr>
-								<tr>
-									<td>Ammonia</td>
-									<td class="text-uppercase">pdf</td>
-									<td>
-										<button type="button" class="view-button">View</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                <tr>
+                  <td>Ammonia</td>
+                  <td class="text-uppercase">png</td>
+                  <td>
+                    <button type="button" class="view-button">View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Amylase</td>
+                  <td class="text-uppercase">pdf</td>
+                  <td>
+                    <button type="button" class="view-button">View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ammonia</td>
+                  <td class="text-uppercase">pdf</td>
+                  <td>
+                    <button type="button" class="view-button">View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Lab Report Modal End-->
 
 <!-- Intake Form Modal Start-->
 <div
-	class="modal fade intake-form-modal"
-	id="modal-intake-form-view"
-	tabindex="-1"
-	role="dialog">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<p class="modal-title fs-36 fw-600">Intake Form</p>
+  class="modal fade intake-form-modal"
+  id="modal-intake-form-view"
+  tabindex="-1"
+  role="dialog"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title fs-36 fw-600">Intake Form</p>
 
-				<button
-					type="button"
-					class="modal-close btn-close"
-					data-dismiss="modal"
-					aria-label="Close">
-					<i class="icon-cross_filled"></i>
-				</button>
-			</div>
-			<div class="modal-body modal-body__alt">
-				<div class="modal__qa">
-					<p class="modal__ques">1. Are you diabetic?</p>
-					<p class="modal__ans">-Yes</p>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>2. Please list any oral products or insulins you take (for
-						diabetics). If none, please answer 'none'.</p
-					>
-					<p class="modal__ans"
-						>- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-						(Humalog), Insulin Glargine (Lantus).</p
-					>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>3. Do you have high blood pressure or heart problems?</p
-					>
-					<p class="modal__ans">- Yes</p>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>4. List of oral products (for high blood pressure). Or answer none.</p
-					>
-					<p class="modal__ans"
-						>- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-						(Humalog), Insulin Glargine (Lantus).</p
-					>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>5. List of other oral products (for these conditions) . Or answer
-						none.</p
-					>
-					<p class="modal__ans"
-						>- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-						(Humalog), Insulin Glargine (Lantus).</p
-					>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>6. List of any other oral products (for other conditions) . Or
-						answer none.</p
-					>
-					<p class="modal__ans"
-						>- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-						(Humalog), Insulin Glargine (Lantus).</p
-					>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques">7. Are you allergic to any product?</p>
-					<p class="modal__ans">- Yes</p>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>8. List any products you’re allergic to. Or answer none.</p
-					>
-					<p class="modal__ans"
-						>- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-						(Humalog), Insulin Glargine (Lantus).</p
-					>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques"
-						>9. Have you seen a doctor in the last 12 months?</p
-					>
-					<p class="modal__ans">- Yes</p>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques">10. Are you pregnant or breast feeding?</p>
-					<p class="modal__ans">- Yes</p>
-				</div>
-				<div class="modal__qa">
-					<p class="modal__ques">11. Do you experience a lack of energy?</p>
-					<p class="modal__ans">- Yes</p>
-				</div>
-			</div>
-		</div>
-	</div>
+        <button
+          type="button"
+          class="modal-close btn-close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="icon-cross_filled"></i>
+        </button>
+      </div>
+      <div class="modal-body modal-body__alt">
+        <div class="modal__qa">
+          <p class="modal__ques">1. Are you diabetic?</p>
+          <p class="modal__ans">-Yes</p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            2. Please list any oral products or insulins you take (for
+            diabetics). If none, please answer 'none'.
+          </p>
+          <p class="modal__ans">
+            - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
+            (Humalog), Insulin Glargine (Lantus).
+          </p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            3. Do you have high blood pressure or heart problems?
+          </p>
+          <p class="modal__ans">- Yes</p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            4. List of oral products (for high blood pressure). Or answer none.
+          </p>
+          <p class="modal__ans">
+            - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
+            (Humalog), Insulin Glargine (Lantus).
+          </p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            5. List of other oral products (for these conditions) . Or answer
+            none.
+          </p>
+          <p class="modal__ans">
+            - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
+            (Humalog), Insulin Glargine (Lantus).
+          </p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            6. List of any other oral products (for other conditions) . Or
+            answer none.
+          </p>
+          <p class="modal__ans">
+            - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
+            (Humalog), Insulin Glargine (Lantus).
+          </p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">7. Are you allergic to any product?</p>
+          <p class="modal__ans">- Yes</p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            8. List any products you’re allergic to. Or answer none.
+          </p>
+          <p class="modal__ans">
+            - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
+            (Humalog), Insulin Glargine (Lantus).
+          </p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">
+            9. Have you seen a doctor in the last 12 months?
+          </p>
+          <p class="modal__ans">- Yes</p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">10. Are you pregnant or breast feeding?</p>
+          <p class="modal__ans">- Yes</p>
+        </div>
+        <div class="modal__qa">
+          <p class="modal__ques">11. Do you experience a lack of energy?</p>
+          <p class="modal__ans">- Yes</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!--Intake Form Modal End-->

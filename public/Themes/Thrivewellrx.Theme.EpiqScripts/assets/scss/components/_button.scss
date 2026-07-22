@@ -348,7 +348,7 @@
     left: 0;
     z-index: 10;
     background-color: #ffffff;
-    border-top: 1px solid #8ba39d;
+    // border-top: 1px solid #8ba39d;
 
     @media (max-width: 576px) {
       padding: 10px 5px;
@@ -368,8 +368,9 @@
       }
 
       @media (max-width: 576px) {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
         gap: 5px;
 
         .theme-btn {
