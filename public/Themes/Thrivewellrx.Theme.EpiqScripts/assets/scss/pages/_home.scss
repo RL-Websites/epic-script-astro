@@ -21,11 +21,11 @@
 
       @media all and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
-        padding: 15px 8px 15px 8px;
+        padding: 50px 15px;
         min-height: unset;
         gap: 0;
         background: none;
-        background-color: #e7ffcf;
+        background-color: $white;
         text-align: center;
       }
     }
@@ -314,6 +314,10 @@
   &__block {
     padding: 30px;
 
+    @media all and (max-width: 768px) {
+      padding: 15px 15px 50px 15px;
+    }
+
     &__row {
       display: flex;
       align-items: center;
@@ -467,6 +471,10 @@
   padding: 100px 0;
   overflow: hidden;
 
+  @media all and (max-width: 768px) {
+    padding: 50px 0;
+  }
+
   &__title {
     max-width: 550px;
   }
@@ -492,6 +500,10 @@
 
     h2 {
       color: $cyan;
+
+      @media all and (max-width: 768px) {
+        font-size: $fs-30;
+      }
     }
   }
 

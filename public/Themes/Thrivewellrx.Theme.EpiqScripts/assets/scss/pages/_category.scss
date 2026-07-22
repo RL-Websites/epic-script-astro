@@ -245,7 +245,7 @@
       border-radius: 10px;
 
       @media all and (max-width: 992px) {
-        padding: 0 8px;
+        padding: 50px 15px 15px;
         margin-top: 10px;
         border-radius: 10px;
       }
@@ -256,7 +256,7 @@
       padding: 50px 0 40px;
 
       @media all and (max-width: 768px) {
-        padding: 24px 0 30px;
+        padding: 0 0 0;
       }
 
       h2 {
@@ -307,13 +307,45 @@
       object-position: 60% 0;
       transition: transform 0.3s ease;
 
-      @media all and (max-width: 1440px) {
-        object-position: 77% 0;
+      &__one,
+      &__three {
+        @media all and (max-width: 1440px) {
+          object-position: 70% 0;
+        }
+
+        @media all and (max-width: 768px) {
+          object-position: 0 70%;
+        }
       }
 
-      @media all and (max-width: 768px) {
-        object-position: 0 70%;
+      &__two {
+        object-position: 45% 0;
+
+        @media all and (max-width: 1440px) {
+          object-position: 45% 0;
+        }
+
+        @media all and (max-width: 768px) {
+          object-position: 0 70%;
+        }
       }
+
+      &__four,
+      &__five,
+      &__six,
+      &__seven {
+
+
+        @media all and (max-width: 1440px) {
+          object-position: 45% 0;
+        }
+
+        @media all and (max-width: 768px) {
+          object-position: 0 70%;
+        }
+      }
+
+
     }
 
     &:hover &__image {
