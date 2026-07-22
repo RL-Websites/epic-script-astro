@@ -493,6 +493,7 @@
 //Client CSS End
 
 .faq {
+  overflow: hidden;
   // background: linear-gradient(to right, $blue-2 0%, $blue-2 45%, #f9f9f9 45%, #f9f9f9 100%);
 
   &__header {
@@ -610,6 +611,7 @@
     &__wrapper {
       padding: 50px 15px;
       text-align: center;
+      border-radius: 15px;
     }
 
     &__content {
@@ -618,10 +620,11 @@
 
     &__heading {
       font-size: $fs-24;
+      line-height: 1.3;
     }
 
     &__sub-heading {
-      font-size: $fs-20;
+      font-size: $fs-18;
     }
 
     &__btn {
