@@ -14,6 +14,11 @@
       grid-template-columns: repeat(3, 1fr);
       align-items: center;
 
+      @media all and (max-width: 1170px) {
+        padding: 50px 30px;
+        min-height: unset;
+      }
+
       @media all and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
         padding: 15px 8px 15px 8px;
@@ -28,10 +33,12 @@
     &__content {
       max-width: 620px;
       grid-column: span 2;
+
       @media (max-width: 768px) {
         grid-column: span 1;
         max-width: 100%;
       }
+
       p {
         font-weight: 500;
       }
@@ -68,10 +75,8 @@
 
     &__card {
       border-radius: 12px;
-      background: linear-gradient(
-        180deg,
-        rgba(165, 165, 165, 0.4) 0% rgba(49, 49, 49, 0.4) 100%
-      );
+      background: linear-gradient(180deg,
+          rgba(165, 165, 165, 0.4) 0% rgba(49, 49, 49, 0.4) 100%);
       backdrop-filter: blur(27px);
       padding: 16px;
 
@@ -132,13 +137,11 @@
     }
 
     &__one {
-      background: url("../img/home/solutions1.svg") center center / cover
-        no-repeat;
+      background: url("../img/home/solutions1.svg") center center / cover no-repeat;
     }
 
     &__two {
-      background: url("../img/home/solutions2.svg") center center / cover
-        no-repeat;
+      background: url("../img/home/solutions2.svg") center center / cover no-repeat;
 
       @media all and (max-width: 768px) {
         margin-top: 20px;
@@ -196,7 +199,7 @@
 
 .product {
   &__card {
-    & > a {
+    &>a {
       text-decoration: none;
     }
   }
@@ -212,8 +215,7 @@
 
   &__wrapper {
     padding: 80px;
-    background: url("../img/home/pharmacy-banner.jpg") top center / cover
-      no-repeat;
+    background: url("../img/home/pharmacy-banner.jpg") top center / cover no-repeat;
     border-radius: 10px;
 
     @media all and (max-width: 768px) {
@@ -247,11 +249,9 @@
       padding: 28px 24px 28px 24px;
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      background: linear-gradient(
-        115.28deg,
-        rgba(18, 65, 53, 0.8) 0.98%,
-        rgba(18, 65, 53, 0.16) 100%
-      );
+      background: linear-gradient(115.28deg,
+          rgba(18, 65, 53, 0.8) 0.98%,
+          rgba(18, 65, 53, 0.16) 100%);
       backdrop-filter: blur(6px);
       display: flex;
       align-items: center;
@@ -335,6 +335,7 @@
         text-transform: capitalize;
         color: $green-lighter5;
       }
+
       p {
         color: $gray-lighter5;
       }
@@ -493,6 +494,7 @@
       color: $cyan;
     }
   }
+
   &__main {
     background: none;
   }
@@ -646,8 +648,7 @@
   background-color: $blue-3;
 }
 
-@media only screen and (max-width: 1170px) {
-}
+@media only screen and (max-width: 1170px) {}
 
 @media only screen and (max-width: 992px) {
   .home {
