@@ -7,7 +7,7 @@
     border-radius: 10px;
 
     @media all and (max-width: 992px) {
-      padding: 40px 20px;
+      padding: 50px 15px;
     }
   }
 
@@ -64,6 +64,12 @@
     font-weight: 500;
     line-height: 1;
     cursor: pointer;
+
+    @media all and (max-width: 768px) {
+      width: 100%;
+      height: 46px;
+      font-size: $fs-16;
+    }
   }
 
   @media all and (max-width: 992px) {

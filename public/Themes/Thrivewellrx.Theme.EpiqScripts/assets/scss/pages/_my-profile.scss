@@ -6,18 +6,19 @@
 }
 
 .select__wrapper__alt {
-  .select__options{
-     padding: 15px 10px;
+  .select__options {
+    padding: 15px 20px;
     color: #525252;
     min-width: unset;
 
-    @media screen and (max-width: 576px) {
-      padding: 10px 6px;
+    @media screen and (max-width: 768px) {
+      padding: 10px 20px;
       font-size: 16px;
     }
   }
+
   width: 100%;
-     
+
   // padding: 15px 10px;
   &::after {
     right: 10px;
@@ -114,7 +115,7 @@
 
 .profile-edit {
   position: absolute;
-  
+
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -169,7 +170,7 @@
   pointer-events: none;
 }
 
-.edit-button{
+.edit-button {
   color: #5607c5;
   text-decoration: underline;
   cursor: pointer;
