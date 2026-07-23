@@ -14,9 +14,11 @@
       z-index: 0;
       pointer-events: none;
       content: "";
-      background: linear-gradient(90deg,
-          rgba(0, 0, 0, 0.3) 0%,
-          rgba(0, 0, 0, 0) 51.69%);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 51.69%
+      );
     }
 
     @media (min-width: 768px) {
@@ -31,10 +33,12 @@
     }
 
     &__testosterone {
-      background: url("../img/bg/category-testosterone-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-testosterone-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
-        background: url("../img/bg/category-testosterone-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-testosterone-new.jpg") no-repeat
+          center center;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -44,13 +48,15 @@
     }
 
     &__sexual-health {
-      background: url("../img/bg/category-sexual-health-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-sexual-health-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-sexual-health-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-sexual-health-new.jpg") no-repeat
+          center center;
       }
 
       background-size: cover;
@@ -70,52 +76,60 @@
     }
 
     &__hormone-health {
-      background: url("../img/bg/category-hormone-health-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-hormone-health-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-hormone-health-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-hormone-health-new.jpg") no-repeat
+          center center;
       }
 
       background-size: cover;
     }
 
     &__anti-aging {
-      background: url("../img/bg/category-anti-aging-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-anti-aging-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-anti-agingNew.jpg") no-repeat center center;
+        background: url("../img/bg/category-anti-agingNew.jpg") no-repeat center
+          center;
       }
 
       background-size: cover;
     }
 
     &__sleep {
-      background: url("../img/bg/category-sleep-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-sleep-mob-new.jpg") no-repeat center
+        center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-sleep-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-sleep-new.jpg") no-repeat center
+          center;
       }
 
       background-size: cover;
     }
 
     &__sterile-injections {
-      background: url("../img/bg/category-sterile-injections-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-sterile-injections-mob-new.jpg")
+        no-repeat center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-sterile-injections-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-sterile-injections-new.jpg")
+          no-repeat center center;
       }
 
       background-size: cover;
@@ -245,7 +259,7 @@
       border-radius: 10px;
 
       @media all and (max-width: 992px) {
-        padding: 50px 15px 15px;
+        padding: 40px 15px;
         margin-top: 10px;
         border-radius: 10px;
       }
@@ -334,8 +348,6 @@
       &__five,
       &__six,
       &__seven {
-
-
         @media all and (max-width: 1440px) {
           object-position: 45% 0;
         }
@@ -344,8 +356,6 @@
           object-position: 0 70%;
         }
       }
-
-
     }
 
     &:hover &__image {
@@ -471,7 +481,6 @@
       min-height: 320px;
       padding: 24px;
 
-
       @media all and (max-width: 1024px) {
         min-height: 290px;
       }
@@ -508,8 +517,6 @@
       @media all and (max-width: 576px) {
         min-height: 150px;
       }
-
-
     }
 
     &__five {
@@ -578,7 +585,8 @@
     &__eight {
       min-height: 100px;
       padding: 15px 30px;
-      background: url("../img/home/category/testosterone.jpg") center center / cover no-repeat;
+      background: url("../img/home/category/testosterone.jpg") center center /
+        cover no-repeat;
       flex-direction: row;
       align-items: center;
     }
@@ -586,7 +594,8 @@
     &__nine {
       min-height: 100px;
       padding: 15px 30px;
-      background: url("../img/home/category/sleep.jpg") center center / cover no-repeat;
+      background: url("../img/home/category/sleep.jpg") center center / cover
+        no-repeat;
       flex-direction: row;
       align-items: center;
     }

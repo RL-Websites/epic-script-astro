@@ -3,11 +3,10 @@
 .digital-pharmacy {
   &__wrapper {
     padding: 50px 80px;
-    background: url("../img/home/pharmacy-banner-bg.jpg") center / cover no-repeat;
+    background: url("../img/home/pharmacy-banner-bg.jpg") center / cover
+      no-repeat;
     border-radius: 10px;
     margin-bottom: 16px;
-
-
   }
 
   &__heading {
@@ -63,9 +62,9 @@
     }
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: 768px) {
     &__wrapper {
-      padding: 50px 15px;
+      padding: 40px 15px;
     }
 
     &__heading {
@@ -74,8 +73,6 @@
   }
 
   @media all and (max-width: 575px) {
-
-
     &__heading {
       font-size: 30px;
     }
