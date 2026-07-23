@@ -122,16 +122,16 @@
     }
 
     &__hair-growth {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      // background: url('../img/bg/category-hair-growth-mob.jpg') no-repeat center center;
+      background: url("../img/bg/hair-regrowth-mob.webp") no-repeat center center;
 
-      // @media (min-width: 768px) {
-      // 	background: url('../img/bg/category-hair-growth.jpg') no-repeat center center;
-      // }
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url("../img/bg/hair-regrowth.webp") no-repeat top center;
+      }
 
-      // background-size: cover;
+      background-size: cover;
     }
 
     h1 {
