@@ -242,6 +242,9 @@
 			font-weight: 700;
 			line-height: 1.2;
 			color: $secondary;
+			@media (max-width: 767px) {
+				line-height: 2;
+			}
 		}
 
 		&__description {
@@ -343,9 +346,9 @@
 				font-size: 80px;
 			}
 
-			&:hover {
-				background-color: rgba($secondary, 0.7);
-			}
+			// &:hover {
+			// 	background-color: rgba($secondary, 0.7);
+			// }
 		}
 
 		&__content {
@@ -429,7 +432,7 @@
 		}
 
 		&.completed {
-			padding: 0 12.5px;
+			padding: 12.5px;
 			background-color: transparent;
 		}
 	}
@@ -438,6 +441,13 @@
 		.step-btn {
 			margin-top: 20px;
 			display: flex;
+			@media (max-width: 575px) {
+				flex-direction: column;
+				gap: 10px;
+				button {
+					width: 100%;
+				}
+			}
 
 			button {
 				padding: 12px;
