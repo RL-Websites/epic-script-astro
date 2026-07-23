@@ -189,7 +189,11 @@
     border-radius: 10px;
     outline: 0;
     border: none;
-    box-shadow: none;
+    // Keep the same inset paint layer in normal and autofilled states. This
+    // masks the browser's autofill background without a state-change flash.
+    box-shadow:
+      inset 0 0 0 0 transparent,
+      inset 0 0 0 1000px $white;
     font-size: 16px;
     background-color: $white;
     border: 1px solid $gray-dark;
@@ -202,7 +206,51 @@
     }
 
     &:focus {
-      box-shadow: inset 0 0 0 1px $cyan;
+      box-shadow:
+        inset 0 0 0 1px $cyan,
+        inset 0 0 0 1000px $white;
+    }
+
+    // Chromium and WebKit expose autofill through this vendor pseudo-class.
+    // The permanent white inset shadow above prevents a visual jump when the
+    // user edits the value and the pseudo-class is removed.
+    @at-root input#{&}:-webkit-autofill,
+      input#{&}:-webkit-autofill:hover,
+      input#{&}:-webkit-autofill:active {
+      -webkit-text-fill-color: currentColor;
+      caret-color: currentColor;
+      box-shadow:
+        inset 0 0 0 0 transparent,
+        inset 0 0 0 1000px $white !important;
+      transition:
+        border-color 0.8s ease-in,
+        box-shadow 0.5s ease-in !important;
+    }
+
+    @at-root input#{&}:-webkit-autofill:focus {
+      -webkit-text-fill-color: currentColor;
+      caret-color: currentColor;
+      box-shadow:
+        inset 0 0 0 1px $cyan,
+        inset 0 0 0 1000px $white !important;
+      transition:
+        border-color 0.8s ease-in,
+        box-shadow 0.5s ease-in !important;
+    }
+
+    // Firefox supports the unprefixed autofill pseudo-class.
+    &:autofill,
+    &:autofill:hover,
+    &:autofill:active {
+      box-shadow:
+        inset 0 0 0 0 transparent,
+        inset 0 0 0 1000px $white;
+    }
+
+    &:autofill:focus {
+      box-shadow:
+        inset 0 0 0 1px $cyan,
+        inset 0 0 0 1000px $white;
     }
 
     &::placeholder {
