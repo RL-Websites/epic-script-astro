@@ -105,6 +105,10 @@
 	&__logo {
 		flex-shrink: 0;
 
+		@media all and (max-width: 992px) {
+			padding-left: 8px;
+		}
+
 		&--img {
 			height: 56px;
 			width: auto;
