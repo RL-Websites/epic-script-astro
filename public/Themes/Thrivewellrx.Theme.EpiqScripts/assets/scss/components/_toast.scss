@@ -20,21 +20,21 @@
   &__warning {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid $primary;
+    border-left: 10px solid $olive;
     border-radius: 6px;
   }
 
   &__danger {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid $primary;
+    border-left: 10px solid $red;
     border-radius: 6px;
   }
 
   &__information {
     padding: 19px 20px 19px 16px;
     gap: 16px;
-    border-left: 10px solid $primary;
+    border-left: 10px solid $blue-4;
     border-radius: 6px;
   }
 
