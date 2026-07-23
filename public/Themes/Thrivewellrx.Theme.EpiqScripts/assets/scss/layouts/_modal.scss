@@ -195,6 +195,8 @@
 		justify-content: center;
 		gap: 10px;
 		margin-top: 30px;
+
+
 	}
 
 	&__action {
@@ -296,51 +298,54 @@
 			color: white;
 		}
 	}
+
 	// Alert Banner section configures custom internal layout specifications
-    &__alert-card {
-        display: flex;
+	&__alert-card {
+		display: flex;
 		flex-direction: column;
-        gap: 16px;
-        text-align: left;
-        width: 100%;
+		gap: 16px;
+		text-align: left;
+		width: 100%;
 		background-color: $green-lighter3;
-        border: 1px dashed $primary;
-        border-radius: 16px;
-        padding: 16px 36px; // Applied exact targeted user specifications
-        margin-bottom: 24px;
+		border: 1px dashed $primary;
+		border-radius: 16px;
+		padding: 16px 36px; // Applied exact targeted user specifications
+		margin-bottom: 24px;
 		margin-top: 16px;
 
-        @media (max-width: 576px) {
-            padding: 16px;
-        }
-    }
+		@media (max-width: 576px) {
+			padding: 16px;
+		}
+	}
+
 	&__alert__container {
 		display: flex;
 		align-items: center;
 		gap: 12px;
 	}
+
 	&-card__icon {
-        font-size: 24px;
-        color: $black-deep;
-    }
+		font-size: 24px;
+		color: $black-deep;
+	}
 
-    &__alert-body {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
+	&__alert-body {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
 
-    &__alert-header {
-        font-size: 18px; // Applied specified 18px size
-        font-weight: 600; // Semibold
-        color: $black-deep; 
-    }
+	&__alert-header {
+		font-size: 18px; // Applied specified 18px size
+		font-weight: 600; // Semibold
+		color: $black-deep;
+	}
 
-    &__alert-text {
-        font-size: 16px;
-        line-height: 1.5;
-        color: $black-deep; 
-    }
+	&__alert-text {
+		font-size: 16px;
+		line-height: 1.5;
+		color: $black-deep;
+	}
 }
 
 .confirm-modal {
@@ -701,6 +706,8 @@
 
 		&__actions {
 			margin: 20px 0 0;
+			flex-direction: column;
+			gap: 20px;
 
 			&--alt {
 				max-width: 320px;
