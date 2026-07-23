@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2q1jph');
-  src:  url('fonts/icomoon.eot?2q1jph#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?2q1jph') format('woff2'),
-    url('fonts/icomoon.ttf?2q1jph') format('truetype'),
-    url('fonts/icomoon.woff?2q1jph') format('woff'),
-    url('fonts/icomoon.svg?2q1jph#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ag7qej');
+  src:  url('fonts/icomoon.eot?ag7qej#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?ag7qej') format('woff2'),
+    url('fonts/icomoon.ttf?ag7qej') format('truetype'),
+    url('fonts/icomoon.woff?ag7qej') format('woff'),
+    url('fonts/icomoon.svg?ag7qej#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -374,11 +374,17 @@
 .icon-checkbox-filled:before {
   content: "\e96c";
 }
+.icon-completed:before {
+  content: "\e984";
+}
 .icon-copy:before {
   content: "\e96d";
 }
 .icon-cross-filled:before {
   content: "\e96f";
+}
+.icon-cross_filled:before {
+  content: "\e98b";
 }
 .icon-delete:before {
   content: "\e970";
@@ -397,6 +403,9 @@
 }
 .icon-info-filled:before {
   content: "\e979";
+}
+.icon-info-zpeptides:before {
+  content: "\e994";
 }
 .icon-instagram:before {
   content: "\e97a";
