@@ -80,6 +80,11 @@ $border-radius-sm: 20px;
   background: white;
   border-radius: 20px;
 
+  @media all and (max-width: 768px) {
+    padding: 0 10px 20px;
+    margin-top: 40px;
+  }
+
   &-shimmer {
     padding: 0;
     background: transparent;
