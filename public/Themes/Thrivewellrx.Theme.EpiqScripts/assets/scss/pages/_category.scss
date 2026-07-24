@@ -226,8 +226,8 @@
       color: #333;
 
       &:hover {
-        background: #004d3d;
         color: $white;
+        background-color: $green-lighter4;
       }
 
       &.swiper-button-disabled {
