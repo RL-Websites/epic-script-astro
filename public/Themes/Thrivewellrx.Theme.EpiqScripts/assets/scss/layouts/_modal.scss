@@ -224,11 +224,14 @@
 			border: 1px solid $primary;
 			color: white;
 			transition: 0.3s;
+			border-radius: 25px;
 
 			&:hover,
 			&:focus,
 			.active {
 				color: white;
+				background: $green-lighter4;
+				border: 1px solid $green-lighter4;
 			}
 		}
 
@@ -237,12 +240,14 @@
 			color: $primary;
 			border: 1px solid $primary;
 			transition: 0.3s;
+			border-radius: 25px;
 
 			&:hover,
 			&:focus,
 			.active {
-				background-color: $primary-light;
-				color: $primary;
+				color: $white;
+				background-color: $green-lighter4;
+				border: 1px solid $green-lighter4;
 			}
 		}
 
