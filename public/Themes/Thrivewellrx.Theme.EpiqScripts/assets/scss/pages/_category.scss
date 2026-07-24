@@ -123,12 +123,13 @@
 
     &__hair-growth {
       background: url("../img/bg/hair-regrowth-mob.webp") no-repeat center center;
+      background-position: 50% 26%;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/hair-regrowth.webp") no-repeat top center;
+        background: url("../img/bg/hair-regrowth-bg.webp") no-repeat top center;
       }
 
       background-size: cover;
@@ -225,8 +226,8 @@
       color: #333;
 
       &:hover {
-        background: #004d3d;
         color: $white;
+        background-color: $green-lighter4;
       }
 
       &.swiper-button-disabled {
@@ -236,6 +237,8 @@
     }
   }
 }
+
+
 
 .category {
   &__home {
@@ -310,7 +313,7 @@
       &__one,
       &__three {
         @media all and (max-width: 1440px) {
-          object-position: 70 % 0;
+          object-position: 74% 0;
         }
 
         @media all and (max-width: 768px) {
@@ -322,7 +325,7 @@
         object-position: 45% 0;
 
         @media all and (max-width: 1440px) {
-          object-position: 45% 0;
+          object-position: 48% 0;
         }
 
         @media all and (max-width: 768px) {
@@ -335,7 +338,7 @@
       &__six,
       &__seven {
         @media all and (max-width: 1440px) {
-          object-position: 45% 0;
+          object-position: 48% 0;
         }
 
         @media all and (max-width: 768px) {
