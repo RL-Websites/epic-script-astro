@@ -123,12 +123,13 @@
 
     &__hair-growth {
       background: url("../img/bg/hair-regrowth-mob.webp") no-repeat center center;
+      background-position: 50% 26%;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/hair-regrowth.webp") no-repeat top center;
+        background: url("../img/bg/hair-regrowth-bg.webp") no-repeat top center;
       }
 
       background-size: cover;
