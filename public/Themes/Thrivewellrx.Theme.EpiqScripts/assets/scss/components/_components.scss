@@ -335,7 +335,7 @@
   border: 0;
   outline: 0;
   box-shadow: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &--default {
     background-color: $gray-normal;
@@ -578,6 +578,7 @@
     }
   }
 }
+
 .dropdown__selection__date option {
   color: #525252 !important;
 }
