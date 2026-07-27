@@ -242,6 +242,7 @@
 			font-weight: 700;
 			line-height: 1.2;
 			color: $secondary;
+
 			@media (max-width: 767px) {
 				line-height: 2;
 			}
@@ -283,7 +284,7 @@
 
 @media only screen and (max-width: 767px) {
 	.upload-document {
-		padding: 100px 0 50px;
+		padding: 50px 0 50px;
 
 		.medical-documents {
 			&__title {
@@ -441,9 +442,11 @@
 		.step-btn {
 			margin-top: 20px;
 			display: flex;
+
 			@media (max-width: 575px) {
 				flex-direction: column;
 				gap: 10px;
+
 				button {
 					width: 100%;
 				}

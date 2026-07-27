@@ -26,7 +26,7 @@
 			textarea.form-control {
 				background-color: $gray-light;
 				border-radius: 20px;
-				
+
 			}
 		}
 	}
@@ -47,6 +47,8 @@
 
 	.assessment {
 		&__form {
+
+
 			.textarea__wrapper {
 				max-width: 320px;
 
@@ -61,4 +63,12 @@
 		}
 	}
 
+}
+
+@media only screen and (max-width: 576px) {
+	.assessment {
+		&__form {
+			flex-direction: column;
+		}
+	}
 }
