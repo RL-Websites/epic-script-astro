@@ -72,6 +72,7 @@
     }
 
     &__alt {
+
       &:hover,
       &:focus {
         border: 1px solid $white;
@@ -251,7 +252,7 @@
   }
 
   &__icon-only {
-    padding: 0;
+    padding: 0 !important;
     background-color: transparent;
     font-size: $fs-28;
     color: $primary;

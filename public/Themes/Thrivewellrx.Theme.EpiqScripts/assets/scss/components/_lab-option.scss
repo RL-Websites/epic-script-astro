@@ -6,7 +6,7 @@
 	padding-top: 60px;
 
 	&__section {
-		min-height: 930px;
+		min-height: 500px;
 		padding: 70px 16px 120px;
 	}
 
@@ -42,7 +42,7 @@
 	&__block {
 		padding: 22px;
 
-		& + & {
+		&+& {
 			border-top: 1px dashed $gray-lighter3;
 		}
 	}
@@ -57,7 +57,7 @@
 		font-weight: 700;
 	}
 
-	&__button-group{
+	&__button-group {
 		display: flex;
 		gap: 12px;
 	}
@@ -176,7 +176,7 @@
 			font-size: 22px;
 		}
 
-		&__button-group{
+		&__button-group {
 			flex-direction: column;
 			gap: 6px;
 		}
