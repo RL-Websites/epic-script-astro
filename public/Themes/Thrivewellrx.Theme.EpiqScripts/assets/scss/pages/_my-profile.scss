@@ -15,9 +15,9 @@
     color: #525252;
     min-width: unset;
 
-    @media screen and (max-width: 768px) {
-     padding: 60px 0
-    }
+    // @media screen and (max-width: 768px) {
+    //  padding: 60px 0
+    // }
   }
 
   width: 100%;
@@ -30,7 +30,6 @@
 }
 
 .my-profile__input {
-
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
@@ -94,9 +93,11 @@
     position: absolute;
     inset: 0;
     border-radius: 8px;
-    background: linear-gradient(180deg,
-        rgba(0, 0, 0, 0.6) 60%,
-        rgba(0, 0, 0, 0.6) 60%);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.6) 60%
+    );
     opacity: 0;
     transition: opacity 160ms ease-in-out;
     pointer-events: none;
@@ -160,7 +161,6 @@
 .modal-content--custom {
   max-width: 540px;
   max-height: 785px;
-
 }
 
 .upload-icon {
@@ -169,7 +169,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
-  color: #0C0C0D;
+  color: #0c0c0d;
   pointer-events: none;
 }
 
@@ -178,7 +178,6 @@
   text-decoration: underline;
   cursor: pointer;
 }
-
 
 /* Hide native file input UI text in avatar modal but keep the element clickable
    so the custom icon and area can be used to pick a file. */
@@ -197,9 +196,6 @@
 //   z-index: 2;
 // }
 
-
-
-
 /* ===============================
    AVATAR MODAL DESIGN OVERRIDES
    =============================== */
@@ -208,7 +204,6 @@
    ============================== */
 
 #avatarModal {
-
   /* Hide controls only when modal does not have an image loaded */
   #avatarModal:not(.image-loaded) #cropperControls,
   #avatarModal:not(.image-loaded) #dropZone,
