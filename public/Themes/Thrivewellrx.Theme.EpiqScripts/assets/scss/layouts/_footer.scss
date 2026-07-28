@@ -34,28 +34,19 @@
   }
 
   &__bottom {
-    padding: 50px 80px;
-    border-top: 1px solid $primary;
+    padding: 50px 0;
+    border-top: 1px solid #ffffff3b;
+    gap: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
 
     @media (max-width: 992px) {
+      gap: 20px;
       padding: 30px 30px 40px;
-    }
-
-    .container {
-      gap: 30px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 100%;
-
-      @media (max-width: 992px) {
-        gap: 20px;
-        flex-direction: column;
-      }
+      flex-direction: column;
     }
 
     ul {
@@ -63,32 +54,51 @@
       align-items: center;
       gap: 20px;
       flex-direction: row;
-
-      @media (max-width: 992px) {
+      @media (max-width: 768px) {
+        gap: 10px;
+        align-items: start;
         flex-direction: column;
-        text-align: center;
       }
 
-      // a {
-      // 	position: relative;
-      // 	text-decoration: none;
+      li {
+        gap: 10px;
+        display: flex;
+        align-items: center;
 
-      // 	&::after {
-      // 		position: absolute;
-      // 		bottom: -3px;
-      // 		left: 0;
-      // 		width: 0;
-      // 		height: 1px;
-      // 		border-radius: 2px;
-      // 		content: '';
-      // 		background-color: $primary;
-      // 		transition: width 0.3s ease;
-      // 	}
+      }
+    }
+    &-icon {
+      i {
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff0a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $white;
+        font-size: $fs-20;
 
-      // 	&:hover::after {
-      // 		width: 100%;
-      // 	}
-      // }
+        @media all and (max-width: 768px) {
+          width: 32px;
+          height: 32px;
+          font-size: $fs-16;
+        }
+      }
+    }
+    &-contact {
+      p {
+        color: #B6B6B6;
+        font-size: $fs-16;
+        font-weight: 400;
+        margin-bottom: 0px;
+      }
+      a {
+        color: $white;
+        font-size: $fs-20;
+        font-weight: 500;
+        text-decoration: none;
+      }
     }
   }
 
