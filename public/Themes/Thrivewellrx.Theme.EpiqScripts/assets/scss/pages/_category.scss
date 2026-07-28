@@ -16,18 +16,18 @@
       height: 360px;
     }
 
-    &::after {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      content: "";
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0) 51.69%
-      );
-    }
+    // &::after {
+    //   position: absolute;
+    //   inset: 0;
+    //   z-index: 0;
+    //   pointer-events: none;
+    //   content: "";
+    //   background: linear-gradient(
+    //     90deg,
+    //     rgba(0, 0, 0, 0.3) 0%,
+    //     rgba(0, 0, 0, 0) 51.69%
+    //   );
+    // }
 
     @media (min-width: 1024px) {
       padding: 200px 120px;
