@@ -8,33 +8,65 @@
     height: 420px;
     border-radius: 10px;
 
+    @media all and (max-width: 768px) {
+      height: 550px;
+    }
+
+    @media all and (max-width: 576px) {
+      height: 360px;
+    }
+
     &::after {
       position: absolute;
       inset: 0;
       z-index: 0;
       pointer-events: none;
       content: "";
-      background: linear-gradient(90deg,
-          rgba(0, 0, 0, 0.3) 0%,
-          rgba(0, 0, 0, 0) 51.69%);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 51.69%
+      );
     }
 
-    @media (min-width: 768px) {
-      padding: 50px 120px;
+    @media (min-width: 1024px) {
+      padding: 200px 120px;
     }
 
     &__weight-loss {
-      // background: #0f2f28;
+      background: #ffffff;
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      background: url("../img/bg/WeightLossBanner.png") no-repeat center center;
+      background-size: cover;
+
+      // @media all and (max-width: 500px) {
+      //   background: url("../img/bg/WeightLossBannerMobile.png") no-repeat bottom
+      //     center;
+      //   display: flex;
+      //   justify-content: flex-start;
+      //   align-items: start;
+      //   background-size: cover;
+      // }
+
+      @media (max-width: 768px) {
+        background: url("../img/bg/WeightLossBannerMobile.png") no-repeat bottom
+          center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        background-size: cover;
+      }
     }
 
     &__testosterone {
-      background: url("../img/bg/category-testosterone-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-testosterone-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
-        background: url("../img/bg/category-testosterone-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-testosterone-new.jpg") no-repeat
+          center center;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -44,13 +76,15 @@
     }
 
     &__sexual-health {
-      background: url("../img/bg/category-sexual-health-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-sexual-health-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-sexual-health-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-sexual-health-new.jpg") no-repeat
+          center center;
       }
 
       background-size: cover;
@@ -70,59 +104,68 @@
     }
 
     &__hormone-health {
-      background: url("../img/bg/category-hormone-health-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-hormone-health-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-hormone-health-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-hormone-health-new.jpg") no-repeat
+          center center;
       }
 
       background-size: cover;
     }
 
     &__anti-aging {
-      background: url("../img/bg/category-anti-aging-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-anti-aging-mob-new.jpg") no-repeat
+        center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-anti-agingNew.jpg") no-repeat center center;
+        background: url("../img/bg/category-anti-agingNew.jpg") no-repeat center
+          center;
       }
 
       background-size: cover;
     }
 
     &__sleep {
-      background: url("../img/bg/category-sleep-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-sleep-mob-new.jpg") no-repeat center
+        center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-sleep-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-sleep-new.jpg") no-repeat center
+          center;
       }
 
       background-size: cover;
     }
 
     &__sterile-injections {
-      background: url("../img/bg/category-sterile-injections-mob-new.jpg") no-repeat center center;
+      background: url("../img/bg/category-sterile-injections-mob-new.jpg")
+        no-repeat center center;
 
       @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background: url("../img/bg/category-sterile-injections-new.jpg") no-repeat center center;
+        background: url("../img/bg/category-sterile-injections-new.jpg")
+          no-repeat center center;
       }
 
       background-size: cover;
     }
 
     &__hair-growth {
-      background: url("../img/bg/hair-regrowth-mob.webp") no-repeat center center;
+      background: url("../img/bg/hair-regrowth-mob.webp") no-repeat center
+        center;
       background-position: 50% 26%;
 
       @media (min-width: 768px) {
@@ -139,11 +182,18 @@
       font-size: 30px;
       font-weight: 500;
       line-height: 1.3;
-      color: $white;
+      color: #0a5641;
       padding-top: 26px;
       text-transform: capitalize;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      @media (min-width: 1024px) {
         font-size: 56px;
         font-weight: 500;
         line-height: 1.2;
@@ -155,10 +205,16 @@
     position: relative;
     z-index: 1;
     max-width: 320px;
+    margin: 0 auto;
 
-    @media (min-width: 768px) {
-      max-width: 700px;
+    @media (min-width: 769px) {
+      max-width: 500px;
+      margin: 0;
     }
+
+    // @media (min-width: 1024px) {
+    //   max-width: 700px;
+    // }
   }
 
   &__video {
@@ -237,8 +293,6 @@
     }
   }
 }
-
-
 
 .category {
   &__home {
@@ -574,7 +628,8 @@
     &__eight {
       min-height: 100px;
       padding: 15px 30px;
-      background: url("../img/home/category/testosterone.jpg") center center / cover no-repeat;
+      background: url("../img/home/category/testosterone.jpg") center center /
+        cover no-repeat;
       flex-direction: row;
       align-items: center;
     }
@@ -582,7 +637,8 @@
     &__nine {
       min-height: 100px;
       padding: 15px 30px;
-      background: url("../img/home/category/sleep.jpg") center center / cover no-repeat;
+      background: url("../img/home/category/sleep.jpg") center center / cover
+        no-repeat;
       flex-direction: row;
       align-items: center;
     }
