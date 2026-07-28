@@ -50,6 +50,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      max-width: 100%;
 
       @media (max-width: 992px) {
         gap: 20px;
@@ -223,11 +224,11 @@
 
     a {
       color: $white;
-      font-size: $fs-24;
+      font-size: $fs-36;
       text-decoration: none;
       width: 64px;
       height: 64px;
-      background-color: $primary;
+      // background-color: $primary;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -242,6 +243,26 @@
       &:hover {
         opacity: 0.7;
         background-color: #0a9876;
+      }
+    }
+
+    &__service-icon {
+      i {
+        width: 64px;
+        height: 64px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $white;
+        font-size: $fs-36;
+
+        @media all and (max-width: 768px) {
+          width: 48px;
+          height: 48px;
+          font-size: $fs-20;
+        }
       }
     }
 
