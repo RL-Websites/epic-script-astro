@@ -70,6 +70,10 @@
             border-radius: 50%;
             transition: all 0.3s;
 
+            @media all and (max-width: 768px) {
+              right: 15px;
+            }
+
           }
         }
       }
@@ -187,7 +191,7 @@
         label {
           max-width: 100%;
           min-height: 50px;
-          border-radius: 50px;
+          border-radius: 14px;
         }
       }
 
@@ -201,7 +205,7 @@
     }
 
     &__condition-tag {
-      max-width: 320px;
+
       border-radius: 12px;
     }
   }
