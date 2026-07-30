@@ -1,26 +1,27 @@
 ---
+import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout bodyClass="alt-bg">
+<Layout>
 	<Header class="site__header--border" />
 	<main class="assessment__page-wrapper">
 		<div class="container">
 			<div class="assessment">
 				<!--Assesment Header Start -->
-				<!-- <AssesmentHeader /> -->
+				<AssesmentHeader />
 				<!--Assesment Header End -->
 
 				<!-- Assessment question sub title start -->
-				<div class="assessment__label mt-50">
+				<div class="assessment__label">
 					How much decline in your work performance have you noticed?
 				</div>
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
-				<div class="assessment__form mt-30">
+				<div class="assessment__form">
 					<div class="select__wrapper">
 						<select class="select__options select__options--alt">
 							<option value="1">1</option>
