@@ -168,10 +168,20 @@
   &__select {
     position: relative;
 
+    &::before {
+      position: absolute;
+      top: 0px;
+      right: 45px;
+      bottom: 1px;
+      border-left: 1px solid $secondary;
+      content: "";
+      pointer-events: none;
+    }
+
     &::after {
       position: absolute;
       top: 50%;
-      right: 14px;
+      right: 17px;
       width: 9px;
       height: 9px;
       border-right: 1px solid $secondary;
@@ -182,9 +192,9 @@
     }
 
     select {
-      width: 180px;
-      height: 40px;
-      padding: 0 35px 0 12px;
+      width: 198px;
+      height: 48px;
+      padding: 0 56px 0 14px;
       appearance: none;
       border: 1px solid $primary;
       border-radius: 8px;
