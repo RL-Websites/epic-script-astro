@@ -96,6 +96,7 @@ const documents = Array.from({ length: 3 });
     <section class="upload-licence">
       <div class="upload-licence__content">
         <div class="upload-licence__cards">
+          <!-- Left Card: Dropzone -->
           <div class="upload-licence__dropzone">
             <input id="driver-licence" type="file" />
             <label for="driver-licence" class="upload-licence__dropzone-area">
@@ -113,46 +114,17 @@ const documents = Array.from({ length: 3 });
             </label>
           </div>
 
+          <!-- Right Card: Empty State (No File Has Been Uploaded Yet) -->
           <div
-            class="upload-licence__documents"
+            class="upload-licence__documents upload-licence__documents--empty"
             aria-label="Uploaded documents"
           >
-            {
-              documents.map(() => (
-                <div class="upload-licence__document">
-                  <div class="upload-licence__document-info">
-                    <i class="icon-attachment upload-licence__document-icon" />
-                    <div>
-                      <p class="upload-licence__document-name">
-                        Dylans Prescription.pdf
-                      </p>
-                      <div class="upload-licence__document-status">
-                        <span>90 KB of 90 KB</span>
-                        <i class="icon-ellipse" />
-                        <span>
-                          <i class="icon-completed" />
-                          Completed
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    class="upload-licence__delete"
-                    type="button"
-                    aria-label="Remove Dylans Prescription.pdf"
-                  >
-                    <i class="icon-delete" />
-                  </button>
-                  <label class="upload-licence__select">
-                    <span class="upload-licence__sr-only">Document type</span>
-                    <select>
-                      <option value="prescription">Prescription</option>
-                      <option value="report">Report</option>
-                    </select>
-                  </label>
-                </div>
-              ))
-            }
+            <div class="upload-licence__empty-state">
+              <i class="icon-attachment upload-licence__empty-icon"></i>
+              <p class="upload-licence__empty-text">
+                No File Has Been Uploaded Yet
+              </p>
+            </div>
           </div>
         </div>
       </div>
