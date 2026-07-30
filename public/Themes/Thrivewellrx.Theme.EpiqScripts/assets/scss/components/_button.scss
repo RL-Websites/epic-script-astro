@@ -391,6 +391,10 @@
         }
       }
 
+      &__single {
+        justify-content: center;
+      }
+
       &__alt {
         flex-direction: column-reverse;
         align-items: stretch;
