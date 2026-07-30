@@ -376,12 +376,12 @@
 
         .theme-btn {
           width: 100%;
-          min-height: 45px;
+          min-height: 40px;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding-left: 15px;
-          padding-right: 15px;
+
+          padding: 5px 15px;
           border-radius: 999px;
           text-align: center;
         }
