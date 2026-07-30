@@ -6,9 +6,10 @@
 		margin: 0 auto;
 
 		.assessment__progress {
+			margin-top: 50px;
 			height: 6px;
 			border-radius: 100px;
-			background-color: $gray-lighter4;
+			background-color: $white;
 			overflow: hidden;
 
 			.progress-bar {

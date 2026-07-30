@@ -1,12 +1,14 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
 import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div class="assessment__page-wrapper">
+	<Header class="site__header--border" />
+
+	<main class="assessment__page-wrapper">
 		<div class="container">
 			<div class="assessment">
 				<!--Assesment Header Start -->
@@ -29,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
-				<div class="assessment__form mt-30">
+				<div class="assessment__form">
 					<div class="textarea__wrapper">
 						<textarea class="form-control" rows="5" placeholder="Write here"
 						></textarea>
@@ -37,19 +39,16 @@ import Layout from "../layouts/Layout.astro";
 
 					<input
 						type="text"
-						class="form-control mt-20 text-start"
+						class="form-control text-start"
 						placeholder="None"
 					/>
 				</div>
 				<!-- Assessment form end -->
-
-				<!-- Assessment buttons start -->
-				<CommonAction />
-				<!-- Assessment buttons end -->
 			</div>
 		</div>
+	</main>
 
-		<!--Footer Section end-->
-		<AssesmentFooter />
-	</div>
+	<!-- Assessment buttons start -->
+	<CommonAction />
+	<!-- Assessment buttons end -->
 </Layout>

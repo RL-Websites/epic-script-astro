@@ -1,26 +1,24 @@
 ---
-import AssesmentFooter from "../components/AssesmentFooter.astro";
-import AssesmentHeader from "../components/AssesmentHeader.astro";
 import CommonAction from "../components/CommonAction.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+	<!-- Header Start -->
+	<Header />
+	<!-- Header End -->
 	<div class="assessment__page-wrapper">
 		<div class="container">
 			<div class="assessment">
-				<!--Assesment Header Start -->
-				<AssesmentHeader />
-				<!--Assesment Header End -->
-
 				<!-- Assessment question sub title start -->
-				<div class="assessment__label mt-50">
+				<div class="assessment__label">
 					How much decline in your work performance have you noticed?
 				</div>
 				<!-- Assessment question sub title end -->
 
 				<!-- Assessment form start -->
-				<div class="assessment__form mt-20">
+				<div class="assessment__form">
 					<input type="text" class="form-control" placeholder="Short Answer" />
 				</div>
 				<!-- Assessment form end -->
@@ -30,8 +28,5 @@ import Layout from "../layouts/Layout.astro";
 				<!-- Assessment buttons end -->
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<AssesmentFooter />
 	</div>
 </Layout>

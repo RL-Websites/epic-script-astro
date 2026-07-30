@@ -14,13 +14,14 @@
       }
 
       label {
-        background-color: $gray-light;
+        background-color: $white;
         width: 570px;
-        min-height: 64px;
+        min-height: 73px;
         border-radius: 10px;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
+        font-size: $fs-20;
         color: $secondary;
         font-weight: 500;
         padding: 10px 25px;
