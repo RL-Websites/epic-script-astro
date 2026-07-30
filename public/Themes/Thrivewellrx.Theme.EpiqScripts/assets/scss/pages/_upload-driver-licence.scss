@@ -22,6 +22,10 @@
     display: grid;
     grid-template-columns: 494px minmax(0, 1fr);
     gap: 25px;
+
+    &__noContent {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__dropzone,
@@ -32,11 +36,11 @@
   }
 
   &__documents {
-    height: 250px;
+    height: 260px;
   }
 
   &__dropzone {
-    height: 250px;
+    height: 260px;
 
     input {
       display: none;
@@ -117,17 +121,18 @@
   }
 
   &__document {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    min-height: 96px;
-    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 10px;
     align-items: center;
     column-gap: 32px;
-    border: 1px solid $gray-dark;
-    border-radius: 16px;
+    border-bottom: 1px dashed $gray-dark;
 
-    &:not(:last-child) {
-      margin-bottom: 16px;
+    // &:not(:last-child) {
+    //   margin-bottom: 10px;
+    // }
+    &:last-child {
+      border-bottom: 0;
     }
   }
 
@@ -144,8 +149,6 @@
   }
 
   &__document-name {
-    margin: 0 0 8px;
-    overflow: hidden;
     color: $black-deep;
     font-size: 18px;
     font-weight: 500;
@@ -162,7 +165,7 @@
 
     > span:first-child {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
     }
 
     .icon-ellipse {
@@ -248,7 +251,7 @@
   &__notice {
     display: flex;
     gap: 28px;
-    margin-top: 24px;
+    // margin: 20px 0;
     padding: 20px 24px;
     align-items: center;
     border: 1px dashed $primary;
@@ -315,7 +318,7 @@
 
   &__documents {
     background-color: $gray-lighter6;
-    padding: 20px;
+    padding: 5px 20px 10px;
     overflow-y: auto;
 
     // Modifier when there are no uploaded documents

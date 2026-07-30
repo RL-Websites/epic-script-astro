@@ -71,7 +71,7 @@ const documents = Array.from({ length: 3 });
         </div>
       </div>
 
-      <aside class="upload-licence__notice">
+      <aside class="upload-licence__notice mt-20">
         <i class="icon-info-circle upload-licence__notice-icon"></i>
         <div class="upload-licence__notice_container">
           <p class="upload-licence__notice__text">
@@ -96,7 +96,7 @@ const documents = Array.from({ length: 3 });
     </footer> -->
     <section class="upload-licence">
       <div class="upload-licence__content">
-        <div class="upload-licence__cards">
+        <div class="upload-licence__cards upload-licence__cards__noContent">
           <!-- Left Card: Dropzone -->
           <div class="upload-licence__dropzone">
             <input id="driver-licence" type="file" />
@@ -109,14 +109,26 @@ const documents = Array.from({ length: 3 });
                 >JPEG, PNG & PDF, up to 50 MB.</span
               >
               <span
-                class="theme-btn theme-btn__primary upload-licence__dropzone-button w-full"
+                class="theme-btn theme-btn__primary upload-licence__dropzone-button w-50"
                 >Browse Files</span
               >
             </label>
           </div>
 
+          <aside class="upload-licence__notice mt-20">
+            <i class="icon-info-circle upload-licence__notice-icon"></i>
+            <div class="upload-licence__notice_container">
+              <p class="upload-licence__notice__text">
+                <span>Mandatory Files to Upload:</span> Driving license & Lab report
+              </p>
+              <p>
+                You can skip this process by clicking on save button, but later
+                on you have to upload these mandatory documents.
+              </p>
+            </div>
+          </aside>
           <!-- Right Card: Empty State (No File Has Been Uploaded Yet) -->
-          <div
+          <!-- <div
             class="upload-licence__documents upload-licence__documents--empty"
             aria-label="Uploaded documents"
           >
@@ -126,6 +138,82 @@ const documents = Array.from({ length: 3 });
                 No File Has Been Uploaded Yet
               </p>
             </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <section class="upload-licence">
+      <div class="upload-licence__content">
+        <div class="upload-licence__cards upload-licence__cards__noContent">
+          <!-- Left Card: Dropzone -->
+          <div class="upload-licence__dropzone">
+            <input id="driver-licence" type="file" />
+            <label for="driver-licence" class="upload-licence__dropzone-area">
+              <i class="icon-files1 upload-licence__dropzone-icon"></i>
+              <span class="upload-licence__dropzone-title"
+                >Choose a file or drag and drop here</span
+              >
+              <span class="upload-licence__dropzone-hint"
+                >JPEG, PNG & PDF, up to 50 MB.</span
+              >
+              <span
+                class="theme-btn theme-btn__primary upload-licence__dropzone-button w-50"
+                >Browse Files</span
+              >
+            </label>
+          </div>
+          <aside class="upload-licence__notice">
+            <i class="icon-info-circle upload-licence__notice-icon"></i>
+            <div class="upload-licence__notice_container">
+              <p class="upload-licence__notice__text">
+                <span>Previously Uploaded Driver's License — </span>
+              </p>
+              <p>
+                Your most recent driver's license will be used. You can upload
+                new images above to replace them.
+              </p>
+            </div>
+          </aside>
+          <div
+            class="upload-licence__documents"
+            aria-label="Uploaded documents"
+          >
+            {
+              documents.map(() => (
+                <div class="upload-licence__document">
+                  <div class="upload-licence__document-info">
+                    <i class="icon-attachment upload-licence__document-icon" />
+                    <div>
+                      <p class="upload-licence__document-name">
+                        Dylans Prescription.pdf
+                      </p>
+                      <div class="upload-licence__document-status">
+                        <span>90 KB of 90 KB</span>
+                        <i class="icon-ellipse" />
+                        <span>
+                          <i class="icon-completed" />
+                          Completed
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="upload-licence__delete"
+                    type="button"
+                    aria-label="Remove Dylans Prescription.pdf"
+                  >
+                    <i class="icon-delete" />
+                  </button>
+                  <label class="upload-licence__select">
+                    <span class="upload-licence__sr-only">Document type</span>
+                    <select>
+                      <option value="prescription">Prescription</option>
+                      <option value="report">Report</option>
+                    </select>
+                  </label>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
