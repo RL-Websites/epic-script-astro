@@ -215,6 +215,7 @@
 // Header Icons
 .header-icon {
 	font-size: 30px;
+	font-weight: 600;
 	color: $primary;
 	text-decoration: none;
 	transition: all 0.5s ease-in-out;
@@ -225,6 +226,10 @@
 	border: none;
 	background: transparent;
 	cursor: pointer;
+
+	i {
+		font-weight: 600;
+	}
 
 	&:hover {
 		color: $green-lighter4;
