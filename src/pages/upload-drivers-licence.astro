@@ -17,14 +17,15 @@ const documents = Array.from({ length: 3 });
         <div class="upload-licence__dropzone">
           <input id="driver-licence" type="file" />
           <label for="driver-licence" class="upload-licence__dropzone-area">
-            <i class="icon-intake_form upload-licence__dropzone-icon"></i>
+            <i class="icon-files1 upload-licence__dropzone-icon"></i>
             <span class="upload-licence__dropzone-title"
               >Choose a file or drag and drop here</span
             >
             <span class="upload-licence__dropzone-hint"
               >JPEG, PNG & PDF, up to 50 MB.</span
             >
-            <span class="theme-btn theme-btn__primary py-10 fw-400 mt-30 w-auto"
+            <span
+              class="theme-btn theme-btn__primary upload-licence__dropzone-button w-full"
               >Browse Files</span
             >
           </label>
@@ -100,7 +101,7 @@ const documents = Array.from({ length: 3 });
           <div class="upload-licence__dropzone">
             <input id="driver-licence" type="file" />
             <label for="driver-licence" class="upload-licence__dropzone-area">
-              <i class="icon-intake_form upload-licence__dropzone-icon"></i>
+              <i class="icon-files1 upload-licence__dropzone-icon"></i>
               <span class="upload-licence__dropzone-title"
                 >Choose a file or drag and drop here</span
               >
@@ -108,7 +109,7 @@ const documents = Array.from({ length: 3 });
                 >JPEG, PNG & PDF, up to 50 MB.</span
               >
               <span
-                class="theme-btn theme-btn__primary py-10 fw-400 mt-30 w-auto"
+                class="theme-btn theme-btn__primary upload-licence__dropzone-button w-full"
                 >Browse Files</span
               >
             </label>
@@ -120,7 +121,7 @@ const documents = Array.from({ length: 3 });
             aria-label="Uploaded documents"
           >
             <div class="upload-licence__empty-state">
-              <i class="icon-attachment upload-licence__empty-icon"></i>
+              <i class="icon-file-not-found upload-licence__empty-icon"></i>
               <p class="upload-licence__empty-text">
                 No File Has Been Uploaded Yet
               </p>

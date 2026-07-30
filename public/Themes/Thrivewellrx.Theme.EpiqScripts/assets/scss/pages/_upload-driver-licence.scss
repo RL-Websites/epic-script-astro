@@ -35,6 +35,10 @@
     input {
       display: none;
     }
+
+    &-button {
+      margin-top: 36px;
+    }
   }
 
   &__dropzone-area {
@@ -48,12 +52,13 @@
     border-radius: inherit;
     cursor: pointer;
     text-align: center;
+    background-color: $gray-lighter6;
   }
 
   &__dropzone-icon {
-    margin-bottom: 26px;
-    color: $secondary;
-    font-size: 44px;
+    margin-bottom: 30px;
+    color: $primary;
+    font-size: 58px;
   }
 
   &__dropzone-title {
@@ -158,7 +163,7 @@
     padding: 6px;
     border: 0;
     background: transparent;
-    color: $secondary;
+    color: $gray-dark;
 
     i {
       font-size: 24px;
