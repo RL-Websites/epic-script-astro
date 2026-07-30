@@ -7,35 +7,37 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
 	<Header class="site__header--border" />
-	<main class="assessment__page-wrapper">
-		<div class="container">
-			<div class="assessment">
-				<!--Assesment Header Start -->
-				<AssesmentHeader />
-				<!--Assesment Header End -->
+	<main>
+		<div class="assessment__page-wrapper">
+			<div class="container">
+				<div class="assessment">
+					<!--Assesment Header Start -->
+					<AssesmentHeader />
+					<!--Assesment Header End -->
 
-				<!-- Assessment question sub title start -->
-				<div class="assessment__label">
-					How much decline in your work performance have you noticed?
-				</div>
-				<!-- Assessment question sub title end -->
-
-				<!-- Assessment form start -->
-				<div class="assessment__form">
-					<div class="select__wrapper">
-						<select class="select__options select__options--alt">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
+					<!-- Assessment question sub title start -->
+					<div class="assessment__label">
+						How much decline in your work performance have you noticed?
 					</div>
-				</div>
-				<!-- Assessment form end -->
+					<!-- Assessment question sub title end -->
 
-				<!-- Assessment buttons start -->
-				<CommonAction />
-				<!-- Assessment buttons  -->
+					<!-- Assessment form start -->
+					<div class="assessment__form">
+						<div class="select__wrapper">
+							<select class="select__options select__options--alt">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+					</div>
+					<!-- Assessment form end -->
+
+					<!-- Assessment buttons start -->
+					<CommonAction />
+					<!-- Assessment buttons  -->
+				</div>
 			</div>
 		</div>
 	</main>
