@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout bodyClass="alt-bg">
+<Layout>
 	<Header class="site__header--border" />
 
 	<main class="assessment__page-wrapper">
@@ -44,14 +44,10 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 				<!-- Assessment form end -->
-
-				<!-- Assessment buttons start -->
-				<CommonAction />
-				<!-- Assessment buttons end -->
 			</div>
 		</div>
-
-		<!--Footer Section end-->
-		<!-- <AssesmentFooter /> -->
 	</main>
+	<!-- Assessment buttons start -->
+	<CommonAction />
+	<!-- Assessment buttons end -->
 </Layout>

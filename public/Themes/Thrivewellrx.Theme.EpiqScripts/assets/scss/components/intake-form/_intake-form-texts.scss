@@ -51,7 +51,7 @@
 		&-tag {
 			background-color: $primary;
 			padding: 10px 30px;
-			width: 519px;
+			width: 100%;
 			border-radius: 12px;
 			display: flex;
 			align-items: center;
@@ -73,7 +73,7 @@
 		line-height: 1.4;
 		text-align: center;
 		color: $secondary;
-		margin-top: 30px;
+		margin-top: 50px;
 	}
 
 	&__question--text-left {
@@ -83,11 +83,12 @@
 	&__label {
 		max-width: 900px;
 		margin: 0 auto;
-		margin-bottom: 30px;
+		margin: 50px 0 20px;
 		position: relative;
 		font-size: $fs-28;
-		line-height: 1;
+		line-height: 1.2;
 		font-weight: 600;
+		text-align: center;
 
 		&-link {
 			font-weight: 600;
@@ -127,7 +128,7 @@
 		}
 
 		&__label {
-			margin-top: 15px !important;
+			margin-top: 40px !important;
 		}
 
 		&__form {
