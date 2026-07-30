@@ -1,0 +1,162 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import CommonAction from "../components/CommonAction.astro";
+
+const documents = Array.from({ length: 3 });
+---
+
+<Layout>
+  <Header />
+
+  <main class="upload-licence">
+    <section class="upload-licence__content">
+      <h1 class="upload-licence__title">Upload Your Driver's License</h1>
+
+      <div class="upload-licence__cards">
+        <div class="upload-licence__dropzone">
+          <input id="driver-licence" type="file" />
+          <label for="driver-licence" class="upload-licence__dropzone-area">
+            <i class="icon-intake_form upload-licence__dropzone-icon"></i>
+            <span class="upload-licence__dropzone-title"
+              >Choose a file or drag and drop here</span
+            >
+            <span class="upload-licence__dropzone-hint"
+              >JPEG, PNG & PDF, up to 50 MB.</span
+            >
+            <span class="theme-btn theme-btn__primary py-10 fw-400 mt-30 w-auto"
+              >Browse Files</span
+            >
+          </label>
+        </div>
+
+        <div class="upload-licence__documents" aria-label="Uploaded documents">
+          {
+            documents.map(() => (
+              <div class="upload-licence__document">
+                <div class="upload-licence__document-info">
+                  <i class="icon-attachment upload-licence__document-icon" />
+                  <div>
+                    <p class="upload-licence__document-name">
+                      Dylans Prescription.pdf
+                    </p>
+                    <div class="upload-licence__document-status">
+                      <span>90 KB of 90 KB</span>
+                      <i class="icon-ellipse" />
+                      <span>
+                        <i class="icon-completed" />
+                        Completed
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="upload-licence__delete"
+                  type="button"
+                  aria-label="Remove Dylans Prescription.pdf"
+                >
+                  <i class="icon-delete" />
+                </button>
+                <label class="upload-licence__select">
+                  <span class="upload-licence__sr-only">Document type</span>
+                  <select>
+                    <option value="prescription">Prescription</option>
+                    <option value="report">Report</option>
+                  </select>
+                </label>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside class="upload-licence__notice">
+        <i class="icon-info-circle upload-licence__notice-icon"></i>
+        <div class="upload-licence__notice_container">
+          <p class="upload-licence__notice__text">
+            <span>Mandatory Files to Upload:</span> Driving license & Lab report
+          </p>
+          <p>
+            You can skip this process by clicking on save button, but later on
+            you have to upload these mandatory documents.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- <footer class="upload-licence__actions">
+      <a class="upload-licence__action upload-licence__action--back" href="#"
+        >Go Back</a
+      >
+      <button
+        class="upload-licence__action upload-licence__action--save"
+        type="button">Save</button
+      >
+    </footer> -->
+    <section class="upload-licence">
+      <div class="upload-licence__content">
+        <div class="upload-licence__cards">
+          <div class="upload-licence__dropzone">
+            <input id="driver-licence" type="file" />
+            <label for="driver-licence" class="upload-licence__dropzone-area">
+              <i class="icon-intake_form upload-licence__dropzone-icon"></i>
+              <span class="upload-licence__dropzone-title"
+                >Choose a file or drag and drop here</span
+              >
+              <span class="upload-licence__dropzone-hint"
+                >JPEG, PNG & PDF, up to 50 MB.</span
+              >
+              <span
+                class="theme-btn theme-btn__primary py-10 fw-400 mt-30 w-auto"
+                >Browse Files</span
+              >
+            </label>
+          </div>
+
+          <div
+            class="upload-licence__documents"
+            aria-label="Uploaded documents"
+          >
+            {
+              documents.map(() => (
+                <div class="upload-licence__document">
+                  <div class="upload-licence__document-info">
+                    <i class="icon-attachment upload-licence__document-icon" />
+                    <div>
+                      <p class="upload-licence__document-name">
+                        Dylans Prescription.pdf
+                      </p>
+                      <div class="upload-licence__document-status">
+                        <span>90 KB of 90 KB</span>
+                        <i class="icon-ellipse" />
+                        <span>
+                          <i class="icon-completed" />
+                          Completed
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="upload-licence__delete"
+                    type="button"
+                    aria-label="Remove Dylans Prescription.pdf"
+                  >
+                    <i class="icon-delete" />
+                  </button>
+                  <label class="upload-licence__select">
+                    <span class="upload-licence__sr-only">Document type</span>
+                    <select>
+                      <option value="prescription">Prescription</option>
+                      <option value="report">Report</option>
+                    </select>
+                  </label>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+    <CommonAction />
+  </main>
+</Layout>
