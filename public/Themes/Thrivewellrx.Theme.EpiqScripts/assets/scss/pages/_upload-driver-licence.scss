@@ -10,7 +10,7 @@
   }
 
   &__title {
-    margin: 0 0 28px;
+    margin: 0 0 20px;
     color: $black-deep;
     font-size: 28px;
     font-weight: 700;
@@ -252,6 +252,22 @@
       option {
         background-color: $light; // or #ffffff
         color: $black-deep;
+      }
+    }
+  }
+
+  &__warning {
+    background-color: #fdf2dc;
+    border: 1px dashed $green-lighter7;
+    border-radius: 16px;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    color: $green-lighter7;
+
+    &_container {
+      p {
+        color: $green-lighter7;
       }
     }
   }
