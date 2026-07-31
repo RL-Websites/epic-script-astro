@@ -653,6 +653,9 @@
 
 		&-body {
 			padding: 40px 36px;
+			@media (max-width: 576px) {
+				padding: 16px
+			}
 		}
 	}
 
