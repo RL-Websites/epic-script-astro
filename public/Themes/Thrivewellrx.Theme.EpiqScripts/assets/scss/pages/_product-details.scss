@@ -18,7 +18,7 @@
 }
 
 .btn-close-icon {
-  font-size: 2rem;
+  font-size: 25px;
 }
 
 @media (max-width: 768px) {
@@ -67,6 +67,7 @@
     &__right {
       max-width: 570px;
       padding-left: 0;
+
       @media (min-width: 1420px) {
         padding-left: 50px;
       }
@@ -74,16 +75,19 @@
 
     &__about {
       padding: 16px 0;
+
       h4 {
         font-size: $fs-30;
         color: #6a6a6a;
         font-weight: 600;
         padding-bottom: 16px;
       }
+
       ul {
         list-style: circle;
         list-style-type: disc;
         list-style-position: inside;
+
         li {
           color: #6a6a6a;
         }
@@ -105,11 +109,9 @@
       position: relative;
 
       .read-more {
-        background: linear-gradient(
-          179.81deg,
-          rgba(255, 255, 255, 0) 0.15%,
-          #ffffff 72.46%
-        );
+        background: linear-gradient(179.81deg,
+            rgba(255, 255, 255, 0) 0.15%,
+            #ffffff 72.46%);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -151,11 +153,9 @@
       position: relative;
 
       .read-more {
-        background: linear-gradient(
-          179.81deg,
-          rgba(255, 255, 255, 0) 0.15%,
-          #ffffff 72.46%
-        );
+        background: linear-gradient(179.81deg,
+            rgba(255, 255, 255, 0) 0.15%,
+            #ffffff 72.46%);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -189,6 +189,7 @@
       }
     }
   }
+
   &-action {
     &__wrap {
       display: flex;
