@@ -15,9 +15,9 @@
     color: #525252;
     min-width: unset;
 
-    // @media screen and (max-width: 768px) {
-    //  padding: 60px 0
-    // }
+    @media (max-width: 768px) {
+     padding: 15px 8px;
+    }
   }
 
   width: 100%;
