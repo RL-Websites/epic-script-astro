@@ -1,57 +1,56 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import CommonAction from "../components/CommonAction.astro";
 ---
 
 <Layout>
-  <Header />
+	<Header />
 
-  <main class="intake-submitted">
-    <section class="intake-submitted__content">
-      <h1 class="intake-submitted__title">Intake Submitted!</h1>
+	<main class="intake-submitted">
+		<section class="intake-submitted__content">
+			<h1 class="intake-submitted__title">Intake Submitted!</h1>
 
-      <!-- What Happens Next Section -->
-      <h2 class="intake-submitted__subtitle">What Happens Next?</h2>
-      <div class="intake-submitted__box intake-submitted__box--green">
-        <ul class="intake-submitted__list">
-          <li class="intake-submitted__list-item">
-            <strong>Review:</strong> Our team is reviewing your health intake and
-            order details.
-          </li>
-          <li class="intake-submitted__list-item">
-            <strong>Follow-Up:</strong> We will contact you directly if any further
-            information is needed.
-          </li>
-          <li class="intake-submitted__list-item">
-            <strong>Updates:</strong> You can check your status anytime in your portal.
-          </li>
-        </ul>
-      </div>
+			<!-- What Happens Next Section -->
+			<h2 class="intake-submitted__subtitle">What Happens Next?</h2>
+			<div class="intake-submitted__box intake-submitted__box--green">
+				<ul class="intake-submitted__list">
+					<li class="intake-submitted__list-item">
+						<strong>Review:</strong> Our team is reviewing your health intake and
+						order details.
+					</li>
+					<li class="intake-submitted__list-item">
+						<strong>Follow-Up:</strong> We will contact you directly if any further
+						information is needed.
+					</li>
+					<li class="intake-submitted__list-item">
+						<strong>Updates:</strong> You can check your status anytime in your portal.
+					</li>
+				</ul>
+			</div>
 
-      <!-- Portal Access Details Section -->
-      <h2 class="intake-submitted__subtitle">Portal Access Details:</h2>
-      <div class="intake-submitted__box intake-submitted__box--yellow">
-        <p class="intake-submitted__detail">
-          <strong>Login:</strong> Your registered email address
-        </p>
-        <p class="intake-submitted__detail">
-          <strong>Password:</strong> The password you selected during registration
-        </p>
-      </div>
-    </section>
+			<!-- Portal Access Details Section -->
+			<h2 class="intake-submitted__subtitle">Portal Access Details:</h2>
+			<div class="intake-submitted__box intake-submitted__box--yellow">
+				<p class="intake-submitted__detail">
+					<strong>Login:</strong> Your registered email address
+				</p>
+				<p class="intake-submitted__detail">
+					<strong>Password:</strong> The password you selected during registration
+				</p>
+			</div>
+		</section>
 
-    <div class="floating__buttons">
-      <div class="container">
-        <div class="floating__buttons__items--single">
-          <button
-            class="theme-btn theme-btn__primary text-center"
-            data-bind="click:loadPartialShippingView"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </div>
-  </main>
+		<div class="floating__buttons">
+			<div class="container">
+				<div class="floating__buttons__items__single">
+					<button
+						class="theme-btn theme-btn__primary text-center"
+						data-bind="click:loadPartialShippingView"
+					>
+						Next
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
 </Layout>
