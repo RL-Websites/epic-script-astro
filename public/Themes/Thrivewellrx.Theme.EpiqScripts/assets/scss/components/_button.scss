@@ -72,13 +72,16 @@
     }
 
     &__alt {
-
       &:hover,
       &:focus {
         border: 1px solid $white;
         background-color: $white;
       }
     }
+  }
+
+  &__margin {
+    margin-top: 15px;
   }
 
   &__secondary {

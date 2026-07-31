@@ -287,6 +287,10 @@
               font-size: 14px;
               top: 24px;
               right: 10px;
+              @media (max-width: 576px) {
+                right: 8px;
+                font-size: 10px;
+              }
             }
           }
         }
@@ -651,6 +655,9 @@
     &__selection {
       &__date {
         gap: 10px;
+        @media (max-width: 576px) {
+          gap: 8px;
+        }
 
         .select-items {
           min-width: 120px;
