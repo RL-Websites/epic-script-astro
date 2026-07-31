@@ -39,8 +39,12 @@
     background: $light;
   }
 
-  &__documents {
-    height: 260px;
+  // &__documents {
+  //   height: 260px;
+  // }
+
+  &__warning {
+    padding-bottom: 12px;
   }
 
   &__dropzone {
