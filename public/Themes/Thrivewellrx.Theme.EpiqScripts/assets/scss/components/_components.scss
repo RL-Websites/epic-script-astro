@@ -278,7 +278,7 @@
 
         @media all and (max-width: 576px) {
           .select__options {
-            font-size: 12px;
+            font-size: 14px;
             padding: 12.5px 10px;
           }
 
@@ -287,6 +287,7 @@
               font-size: 14px;
               top: 24px;
               right: 10px;
+
               @media (max-width: 576px) {
                 right: 8px;
                 font-size: 10px;
@@ -655,6 +656,7 @@
     &__selection {
       &__date {
         gap: 10px;
+
         @media (max-width: 576px) {
           gap: 8px;
         }
