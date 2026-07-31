@@ -257,14 +257,14 @@
   }
 
   .order-table {
-    border: 1px solid $primary-light;
+    border: 1px solid $gray-lighter3;
     border-radius: 16px;
     margin-bottom: 20px;
     background-color: white;
 
     &__row {
       padding: 16px 24px;
-      border-bottom: 1px solid $primary-light;
+      border-bottom: 1px solid $gray-lighter3;
 
       &:last-child {
         border-bottom: 0;
@@ -301,5 +301,5 @@
 }
 
 .border-bottom-mobile {
-  border-bottom: 1px solid #e6d4ff;
+  border-bottom: 1px solid $gray-lighter3;
 }
