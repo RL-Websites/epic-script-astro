@@ -39,8 +39,11 @@
 
 		&__form {
 			&__checkbox {
+				width: 100%;
+
 				label {
-					max-width: 310px;
+					max-width: 100%;
+					width: 100%;
 					min-height: 50px;
 					border-radius: 12px;
 					padding: 8px 12px;
