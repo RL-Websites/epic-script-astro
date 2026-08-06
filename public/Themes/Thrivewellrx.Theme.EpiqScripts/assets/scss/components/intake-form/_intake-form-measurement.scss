@@ -21,7 +21,7 @@
 				height: 73px;
 				border-radius: 10px;
 				font-weight: 500;
-				padding: 10px 25px;
+				padding: 0;
 				padding-right: 60px;
 				text-align: center;
 				cursor: pointer;
@@ -41,6 +41,7 @@
 					padding-right: 20px;
 					text-align: center;
 					color: $secondary;
+					height: 100%;
 
 					&::placeholder {
 						font-size: $fs-20;
