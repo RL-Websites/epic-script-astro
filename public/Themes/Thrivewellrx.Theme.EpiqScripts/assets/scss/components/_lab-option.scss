@@ -4,11 +4,14 @@
 
 	color: $black-deep;
 	padding-top: 0;
+	margin-top: 15px;
 
-	margin-top: 10px &__section {
+	&__wrapper {
 		min-height: 500px;
 		padding: 70px 16px 120px;
 		background: $white;
+		border-radius: 10px;
+		margin-bottom: 15px;
 	}
 
 	&__container {
