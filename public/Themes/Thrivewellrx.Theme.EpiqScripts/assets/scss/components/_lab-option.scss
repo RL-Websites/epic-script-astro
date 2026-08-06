@@ -1,13 +1,14 @@
 @use '../base/variables' as *;
 
 .lab-option {
-	background: $white;
-	color: $black-deep;
-	padding-top: 60px;
 
-	&__section {
+	color: $black-deep;
+	padding-top: 0;
+
+	margin-top: 10px &__section {
 		min-height: 500px;
 		padding: 70px 16px 120px;
+		background: $white;
 	}
 
 	&__container {
