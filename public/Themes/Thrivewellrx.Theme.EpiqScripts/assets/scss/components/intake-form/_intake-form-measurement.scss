@@ -63,6 +63,14 @@
 					right: 0;
 					font-size: $fs-18;
 				}
+
+				&--alt {
+					padding-right: 0;
+					input {
+						padding: 0 20px;
+						text-align: left;
+					}
+				}
 			}
 		}
 	}
