@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v5.16.3" />
+    <title>Astro Basics</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/swiper/package/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/aos/aos.css"
+    />
+    <!-- <link
+			rel="stylesheet"
+			href="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css"
+		/> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker-bs5.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="Themes/Thrivewellrx.Theme.EpiqScripts/assets/icons/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="Themes/Thrivewellrx.Theme.EpiqScripts/assets/css/style.css"
+    />
+  </head>
+  <body>
+    <header class="container-fluid site__header__wrapper mt-10">
+      <!-- <input type="hidden" id="homeUrl" value="" /> -->
+      <div class="site__header">
+        <div class="site__navbar">
+          <!-- Logo -->
+          <div class="site__logo">
+            <a href="/">
+              <img
+                class="site__logo--img"
+                src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/logo-main.png"
+                alt="VPeptides Logo"
+              />
+            </a>
+          </div>
+
+          <!-- Navigation Menu -->
+          <nav class="site__menu">
+            <!-- <ul class="site__menu__list">
+          <li>
+            <a
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span>Treatments</span>
+              <i class="icon-plus"></i>
+            </a>
+            <ul class="dropdown-menu user-menu-list__alt">
+              <li><a href="#">Weight Loss</a></li>
+              <li><a href="#">Testestorne</a></li>
+              <li><a href="#">Sexual Health</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="browseProducts" style="cursor: pointer">
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Technology</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>About</span>
+            </a>
+          </li>
+
+          <li>
+            <button
+              type="button"
+              onclick="goToLogin()"
+              class="theme-btn theme-btn__outline theme-btn__outline--primary d-md-none"
+              >Log In</button
+            >
+          </li>
+        </ul> -->
+            <div class="cart">
+              <a href="/cart" class="header-icon cart-icon">
+                <i class="icon-cart"></i>
+                <span class="cart__badge text-center">99</span>
+              </a>
+            </div>
+            <!-- CTA Buttons -->
+            <div class="site__menu--auth">
+              <div class="user-dropdown-container">
+                <button class="header-icon user-icon" id="user-menu-btn">
+                  <i class="icon-user"></i>
+                </button>
+                <!-- <div class="user-profile-thumb" id="user-menu-btn">
+						<img src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/user.png" alt="">
+					</div> -->
+                <div class="user-dropdown" id="user-dropdown">
+                  <div class="user-name">User Name</div>
+                  <ul class="user-menu-list">
+                    <li><a href="/my-profile">Profile</a></li>
+                    <li><a href="/orders">Orders</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                type="button"
+                href="/login"
+                class="theme-btn theme-btn__outline theme-btn__outline--primary px-20"
+              >
+                Login
+              </a>
+              <button
+                type="button"
+                class="theme-btn theme-btn__primary px-20"
+                id="getStartedBtn"
+              >
+                Get Started
+              </button>
+            </div>
+
+            <!-- Mobile Header Elements -->
+            <div class="mobile-header-elements">
+              <div class="user-dropdown-container mobile-only">
+                <button class="header-icon user-icon" id="user-menu-btn-mob">
+                  <i class="icon-user"></i>
+                </button>
+                <!-- <div class="user-profile-thumb" id="user-menu-btn-mob">
+						<img src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/user.png" alt="">
+					</div> -->
+                <div class="user-dropdown" id="user-dropdown">
+                  <div class="user-name">User Name</div>
+                  <ul class="user-menu-list">
+                    <li><a href="/my-profile">Profile</a></li>
+                    <li><a href="/orders">Orders</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+              <button class="hamburger-menu" id="hamburger-menu">
+                <i class="icon-hamburger-menu fw-bold"></i>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="assessment__page-wrapper">
+      <div class="container">
+        <div class="assessment">s
+          <div class="assessment__form mt-30">
+            <!--!-->
+            <div class="measurement-label">Blood Pressure</div>
+            <div class="measurement measurement__flex measurement--vitals">
+              <div class="measurement-input">
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="3"
+                  class="form-control"
+                  placeholder="Systolic"
+                  aria-describedby="basic-addon2"
+                /><!--!-->
+                <!--!--><span class="unit">mmHg</span>
+              </div>
+              <!--!-->
+              <div class="measurement-input">
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="3"
+                  class="form-control"
+                  placeholder="Diastolic"
+                  aria-describedby="basic-addon2"
+                /><!--!-->
+                <!--!--><span class="unit">mmHg</span>
+              </div>
+            </div>
+            <!--!-->
+            <!--!-->
+            <div class="measurement-label">Resting Heart Rate</div>
+            <div class="measurement measurement__alt">
+              <div class="measurement-input">
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="3"
+                  class="form-control"
+                  placeholder="Beats per minute"
+                  aria-describedby="basic-addon2"
+                /><!--!-->
+                <!--!--><span class="unit">bpm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Footer Section end-->
+      <!-- <AssesmentFooter /> -->
+    </main>
+
+    <!-- =====|| All JS Integration Start Here ||===== -->
+
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/jquery/jquery.3.3.1.js"
+      defer
+    ></script>
+
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"
+      defer
+    ></script>
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/moment/moment.js"
+      defer
+    ></script>
+
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/swiper/package/swiper-bundle.min.js"
+      defer
+    ></script>
+    <!-- <script
+			src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"
+			defer></script> -->
+
+    <!-- DatePicker JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"
+      defer
+    ></script>
+
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/js/aos.js"
+      defer
+    ></script>
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/js/slider.js"
+      defer
+    ></script>
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/js/datepicker.js"
+      defer
+    ></script>
+    <script
+      src="Themes/Thrivewellrx.Theme.EpiqScripts/assets/js/main.js"
+      defer
+    ></script>
+
+    <!-- =====|| All JS Integration End Here ||===== -->
+  </body>
+</html>

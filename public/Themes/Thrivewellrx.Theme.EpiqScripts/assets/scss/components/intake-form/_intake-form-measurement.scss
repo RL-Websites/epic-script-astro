@@ -76,11 +76,42 @@
 	}
 }
 
+.assessment__form .measurement.measurement--vitals {
+	width: 100%;
+	max-width: 570px;
+}
+
+.assessment__form .measurement.measurement--vitals .measurement-input {
+	width: 100%;
+	flex: 1;
+	min-width: 0;
+}
+
+.assessment__form .measurement-label {
+	width: 570px;
+	max-width: 100%;
+	margin-bottom: 8px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: left;
+	color: $dark;
+}
+
+.assessment__form .measurement + .measurement-label {
+	margin-top: 20px;
+}
+
 @media only screen and (max-width: 768px) {
 	.assessment {
 		&__form {
 			.measurement {
 				max-width: 320px;
+
+				&__alt {
+					max-width: 570px;
+        			width: 100%;
+				}
 
 				.measurement-input {
 					padding: 0 5px;
@@ -96,3 +127,17 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 576px) {
+	.assessment__form .measurement.measurement--vitals {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.assessment__form .measurement.measurement--vitals .measurement-input {
+		max-width: 320px;
+		width: 100%;
+		flex: none;
+	}
+}
+
