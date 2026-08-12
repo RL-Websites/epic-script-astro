@@ -47,6 +47,10 @@
 					&::placeholder {
 						font-size: $fs-20;
 						color: $gray-dark;
+
+						@media all and (max-width: 768px) {
+							font-size: $fs-16;
+						}
 					}
 				}
 
@@ -59,7 +63,7 @@
 					color: $gray-dark;
 					opacity: 1;
 					// border-left: 1px solid $grey-10;
-					padding: 8px 30px 8px 20px;
+					padding: 8px 20px 8px 20px;
 					position: absolute;
 					right: 0;
 					font-size: $fs-18;
@@ -71,6 +75,7 @@
 					input {
 						padding: 0 20px;
 						text-align: left;
+
 						@media all and (max-width: 768px) {
 							&::placeholder {
 								font-size: $fs-16;
@@ -98,11 +103,15 @@
 	width: 570px;
 	max-width: 100%;
 	margin-bottom: 8px;
-	font-size: 14px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+	font-size: $fs-18;
+	font-weight: 500;
 	text-align: left;
 	color: $dark;
+
+	@media all and (max-width: 768px) {
+		font-size: $fs-16;
+
+	}
 }
 
 .assessment__form .measurement+.measurement-label {
@@ -143,7 +152,6 @@
 	}
 
 	.assessment__form .measurement.measurement--vitals .measurement-input {
-		max-width: 320px;
 		width: 100%;
 		flex: none;
 	}
