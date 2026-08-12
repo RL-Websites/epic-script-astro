@@ -29,8 +29,9 @@
 				border: 1px solid $gray-dark;
 				overflow: hidden;
 
-				@media all and (max-width: 576px) {
-					width: 320px;
+				@media all and (max-width: 768px) {
+					width: 100%;
+					height: 52px;
 				}
 
 				input {
@@ -66,6 +67,7 @@
 
 				&--alt {
 					padding-right: 0;
+
 					input {
 						padding: 0 20px;
 						text-align: left;
@@ -98,7 +100,7 @@
 	color: $dark;
 }
 
-.assessment__form .measurement + .measurement-label {
+.assessment__form .measurement+.measurement-label {
 	margin-top: 20px;
 }
 
@@ -106,11 +108,12 @@
 	.assessment {
 		&__form {
 			.measurement {
-				max-width: 320px;
+				max-width: 100%;
+				width: 100%;
 
 				&__alt {
 					max-width: 570px;
-        			width: 100%;
+					width: 100%;
 				}
 
 				.measurement-input {
@@ -140,4 +143,3 @@
 		flex: none;
 	}
 }
-
