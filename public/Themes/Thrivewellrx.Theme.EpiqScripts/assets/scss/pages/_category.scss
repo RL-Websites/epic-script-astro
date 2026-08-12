@@ -9,6 +9,7 @@
     border-radius: 10px;
 
     @media all and (max-width: 768px) {
+      padding: 20px 12px;
       height: 550px;
     }
 
@@ -303,6 +304,10 @@
         margin-top: 10px;
         border-radius: 10px;
       }
+
+      @media all and (max-width: 768px) {
+        padding: 20px;
+      }
     }
 
     &__title {
@@ -313,18 +318,6 @@
         padding: 0 0 0;
       }
 
-      h2 {
-        font-size: 56px;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: 0;
-        padding-bottom: 12px;
-        color: $cyan;
-
-        @media all and (max-width: 992px) {
-          font-size: $fs-30;
-        }
-      }
 
       p {
         font-size: 28px;
@@ -334,7 +327,7 @@
         color: $green-lighter5;
 
         @media all and (max-width: 992px) {
-          font-size: $fs-16;
+          font-size: $fs-18;
         }
       }
     }
