@@ -120,14 +120,44 @@ $(document).ready(function () {
 	// 	}
 	// });
 
-	$(document).on("click", "#contactUsBtn", function () {
-		const baseUrl = $("#homeUrl").val();
-		if (baseUrl) {
-			window.location.href = baseUrl + "?loc=rapid-contact";
-		} else {
-			window.location.href = "?loc=rapid-contact";
-		}
-	});
+$(document).on("click", "#contactUsBtn", function (e) {
+	const baseUrl = $("#homeUrl").val();
+	const baseUrl2 = window.location.origin;
+	const currentUrl = window.location.origin + window.location.pathname;
+
+	if (
+		baseUrl2 &&
+		baseUrl2.replace(/\/$/, "") === currentUrl.replace(/\/$/, "")
+	) {
+		// Root/home page
+
+		const rapidContact = $("#rapid-contact");
+
+		if (!rapidContact.length) return;
+
+		e.preventDefault();
+
+		const header = $(".site__header");
+		const headerOffset = header.length
+			? header.outerHeight() + 30
+			: 120;
+
+		$("html, body").animate(
+			{
+				scrollTop: rapidContact.offset().top - headerOffset,
+			},
+			600,
+		);
+
+		return;
+	}
+
+	if (baseUrl) {
+		window.location.href = baseUrl + "?loc=rapid-contact";
+	} else {
+		window.location.href = "?loc=rapid-contact";
+	}
+});
 
 	$(document).on("click", "#categorySectionBtn", function () {
 		const baseUrl = $("#homeUrl").val();
