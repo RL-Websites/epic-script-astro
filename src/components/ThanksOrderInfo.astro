@@ -1,0 +1,114 @@
+---
+const transactionId = "#ES20260700149";
+const orderDate = "Aug 10, 2026";
+const itemCount = "1 item";
+const orderTotal = "$311.00";
+
+const product = {
+  name: "Elite Performance & Hormone Optimization Package",
+  qty: "Qty 1",
+  price: "$299.00",
+};
+const shippingCost = "$12.00";
+const consultencyFee = "$35.00";
+const discount = "-$35.00";
+const currency = "-$35.00";
+
+---
+
+<section class="order-thanks" data-aos="fade-up" data-aos-duration="1000">
+  <div class="order-thanks__content">
+    <h1 class="order-thanks__title">
+      Thank You For Your <strong>Order</strong>
+    </h1>
+    <p class="order-thanks__subtitle">
+      Your order is confirmed and on its way to a licensed provider for review.
+      No additional action is required right now.
+    </p>
+
+    <div class="order-thanks__summary">
+      <div class="order-thanks__summary-row">
+        <div class="order-thanks__summary-item">
+          <span class="order-thanks__summary-label">Transaction</span>
+          <span class="order-thanks__summary-value">{transactionId}</span>
+        </div>
+        <div class="order-thanks__summary-item">
+          <span class="order-thanks__summary-label">Order Date</span>
+          <span class="order-thanks__summary-value">{orderDate}</span>
+        </div>
+        <div class="order-thanks__summary-item">
+          <span class="order-thanks__summary-label">Items</span>
+          <span class="order-thanks__summary-value">{itemCount}</span>
+        </div>
+        <div class="order-thanks__summary-item">
+          <span class="order-thanks__summary-label">Order Total</span>
+          <span class="order-thanks__summary-value">{orderTotal}</span>
+        </div>
+        <button
+          type="button"
+          class="order-thanks__toggle collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#orderThanksDetails"
+          aria-expanded="false"
+          aria-controls="orderThanksDetails"
+        >
+          View Details
+          <i class="icon-down-arrow"></i>
+        </button>
+      </div>
+
+      <div class="collapse" id="orderThanksDetails">
+        <div class="order-thanks__details">
+          <span class="order-thanks__section-label">Product Details</span>
+
+          <div class="order-thanks__products">
+            <div class="order-thanks__product">
+              <span class="order-thanks__product-icon"
+                >
+					<img src="/Themes/Thrivewellrx.Theme.EpiqScripts/assets/img/products/pill.jpg" alt="Product img" />
+				</span
+              >
+              <div class="order-thanks__product-body">
+                <p class="order-thanks__product-name">{product.name}</p>
+                <div class="order-thanks__product-meta">
+                  <span class="order-thanks__product-qty">{product.qty}</span>
+                  <span class="order-thanks__product-price"
+                    >{product.price}</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-thanks__breakdown">
+            <div class="order-thanks__breakdown-item">
+              <span>Total Product Price</span>
+              <span>{product.price}</span>
+            </div>
+            <div class="order-thanks__breakdown-item">
+              <span>Shipping</span>
+              <span>{shippingCost}</span>
+            </div>
+			<div class="order-thanks__breakdown-item">
+              <span>Consultancy fee</span>
+              <span>{consultencyFee}</span>
+            </div>
+			<div class="order-thanks__breakdown-item">
+              <span>Discount</span>
+              <span>{discount}</span>
+            </div>
+			<div class="order-thanks__breakdown-item">
+              <span>Currency</span>
+              <span>{currency}</span>
+            </div>
+          </div>
+
+          <div class="order-thanks__total">
+            <span>Total</span>
+            <span>{orderTotal}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

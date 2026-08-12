@@ -1,0 +1,21 @@
+---
+const steps = [
+	"We've emailed you a link to complete your intake form. Please submit it to begin processing your order.",
+	"Your order is sent directly to our licensed physician for review.",
+	"Once approved, it will be forwarded to the pharmacy for preparation.",
+	"Our fulfillment team will then package your product.",
+	"Once shipped, you'll receive a shipping confirmation email with tracking details.",
+];
+---
+
+<div class="order-progress" data-aos="fade-up" data-aos-duration="1000">
+	<h2 class="order-progress__title">What Happens Next</h2>
+	<ol class="order-progress__steps">
+		{steps.map((step) => (
+			<li class="order-progress__step">
+				<span class="order-progress__step-content">{step}</span>
+			</li>
+		))}
+	</ol>
+	<button type="button" class="theme-btn theme-btn__primary order-progress__submit">Submit Intake Form</button>
+</div>

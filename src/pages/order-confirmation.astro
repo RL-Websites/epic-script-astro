@@ -1,0 +1,34 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import ThanksOrderInfo from "../components/ThanksOrderInfo.astro";
+import OrderInprogress from "../components/OrderInprogress.astro";
+import CustoemrInfo from "../components/CustoemrInfo.astro";
+import OrderedContact from "../components/OrderedContact.astro";
+---
+
+<Layout>
+	<Header />
+	<main class="page">
+		<div class="page__wrapper">
+			<section class="order-confirmation">
+				<div class="container">
+					<ThanksOrderInfo />
+
+					<div class="row order-confirmation__row">
+						<div class="col-lg-6">
+							<OrderInprogress />
+						</div>
+						<div class="col-lg-6">
+							<CustoemrInfo />
+						</div>
+					</div>
+
+					<OrderedContact />
+				</div>
+			</section>
+		</div>
+	</main>
+	<Footer />
+</Layout>
