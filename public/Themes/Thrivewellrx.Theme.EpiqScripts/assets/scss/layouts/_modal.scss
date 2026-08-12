@@ -71,7 +71,7 @@
 			padding: 60px 40px;
 
 			@media all and (max-width: 767px) {
-				padding: 25px 15px 30px 15px;
+				padding: 20px 12px 20px 12px;
 			}
 		}
 	}
@@ -653,6 +653,7 @@
 
 		&-body {
 			padding: 40px 36px;
+
 			@media (max-width: 576px) {
 				padding: 16px
 			}

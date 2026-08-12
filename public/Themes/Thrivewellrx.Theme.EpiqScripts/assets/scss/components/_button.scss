@@ -353,11 +353,10 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-    background-color: #ffffff;
     border-top: 1px solid $gray-dark;
 
     @media (max-width: 576px) {
-      padding: 10px 5px;
+      padding: 10px 0;
     }
 
     &__items {
