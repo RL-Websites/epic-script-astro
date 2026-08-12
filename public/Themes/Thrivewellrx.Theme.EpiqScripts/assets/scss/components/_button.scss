@@ -355,8 +355,12 @@
     z-index: 10;
     border-top: 1px solid $gray-dark;
 
+    @media (max-width: 768px) {
+      background-color: $light;
+    }
+
     @media (max-width: 576px) {
-      padding: 10px 0;
+      padding: 12px 0;
     }
 
     &__items {
@@ -374,7 +378,7 @@
 
       @media (max-width: 576px) {
         display: flex;
-        flex-direction: column-reverse;
+
         width: 100%;
         gap: 10px;
 
@@ -412,43 +416,6 @@
     }
   }
 }
-
-// .floating {
-// 	&__buttons {
-// 		padding: 20px 5px;
-// 		position: fixed;
-// 		width: 100%;
-// 		bottom: 0px;
-// 		left: 0px;
-// 		z-index: 1;
-// 		background-color: #ffffff;
-// 		border-top: 1px solid #8ba39d;
-
-// 		&__items {
-// 			display: flex;
-// 			align-items: center;
-// 			justify-content: space-between;
-// 			width: 100%;
-// 			gap: 5px;
-
-// 			&__alt {
-// 				flex-direction: column-reverse;
-// 				align-items: stretch;
-// 				gap: 20px;
-// 				margin-top: 20px;
-
-// 			}
-
-// 			button {
-// 				width: auto;
-// 				padding-left: 60px;
-// 				padding-right: 60px;
-// 			}
-
-// 		}
-
-// 	}
-// }
 
 @keyframes spin {
   0% {
