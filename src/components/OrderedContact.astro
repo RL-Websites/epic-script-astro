@@ -1,0 +1,22 @@
+---
+const notices = [
+	"These products are prescription items.",
+	"Doctor consultation and medical review are required.",
+	"Please ensure your shipping address and contact details are correct to avoid delays.",
+];
+---
+
+<div class="order-notice" data-aos="fade-up" data-aos-duration="1000">
+	<h2 class="order-notice__title">Good To Know</h2>
+	<ul class="order-notice__list">
+		{notices.map((notice) => <li>{notice}</li>)}
+	</ul>
+	<p class="order-notice__contact">
+		Questions? Call <a href="tel:+18336543556">(833) 654-3556</a> or email <a href="mailto:info@epqscript.com">info@epqscript.com</a>.
+	</p>
+</div>
+
+<div class="order-actions" data-aos="fade-up" data-aos-duration="1000">
+	<a href="/" class="theme-btn theme-btn__primary order-actions__btn">Continue Shopping</a>
+	<a href="/" class="theme-btn theme-btn__outline theme-btn__outline--primary order-actions__btn">Back To Home</a>
+</div>

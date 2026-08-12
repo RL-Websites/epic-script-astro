@@ -1,0 +1,48 @@
+---
+const customer = {
+	name: "Test User",
+	shippingAddress: "#123",
+	shippingCity: "New York",
+	shippingState: "New York",
+	shippingZipcode: "12345",
+};
+---
+
+<div class="customer-info-col">
+	<div class="customer-info" data-aos="fade-up" data-aos-duration="1000">
+		<h2 class="customer-info__title">Customer Information</h2>
+		<div class="customer-info__grid">
+			<div class="customer-info__field">
+				<span class="customer-info__label">Name</span>
+				<span class="customer-info__value">{customer.name}</span>
+			</div>
+			<div class="customer-info__field">
+				<span class="customer-info__label">Shipping Address</span>
+				<span class="customer-info__value">{customer.shippingAddress}</span>
+			</div>
+			<div class="customer-info__field">
+				<span class="customer-info__label">Shipping City</span>
+				<span class="customer-info__value">{customer.shippingCity}</span>
+			</div>
+			<div class="customer-info__field">
+				<span class="customer-info__label">Shipping State</span>
+				<span class="customer-info__value">{customer.shippingState}</span>
+			</div>
+			<div class="customer-info__field">
+				<span class="customer-info__label">Shipping Zipcode</span>
+				<span class="customer-info__value">{customer.shippingZipcode}</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="order-next-step" data-aos="fade-up" data-aos-duration="1000">
+		<h2 class="order-next-step__title">One More Step</h2>
+		<p class="order-next-step__text">
+			Your provider needs a photo ID and your lab report before this order can be approved. You can do it now or later from your portal.
+		</p>
+		<div class="order-next-step__actions">
+			<a href="/upload-report" class="theme-btn theme-btn__primary">Upload Driving License</a>
+			<a href="/upload-report" class="theme-btn theme-btn__outline theme-btn__outline--primary">Upload Lab Report</a>
+		</div>
+	</div>
+</div>
