@@ -46,18 +46,18 @@ $(document).ready(function () {
 		}
 	});
 
-	// User dropdown toggle
-	$(document).on("click", "#user-menu-btn, #user-menu-btn-mob", function () {
+	$(document).on("click", "#user-menu-btn, #user-menu-btn-mob", function (e) {
+		e.stopPropagation();
 		$(this).next(".user-dropdown").toggleClass("show");
 	});
 
 	// Close dropdown when clicking outside
 	$(document).on("click", function (e) {
 		if (
-			!$(e.target).closest("#user-menu-btn").length &&
-			!$(e.target).closest("#user-dropdown").length
+			!$(e.target).closest("#user-menu-btn, #user-menu-btn-mob").length &&
+			!$(e.target).closest(".user-dropdown").length
 		) {
-			$("#user-dropdown").removeClass("show");
+			$(".user-dropdown").removeClass("show");
 		}
 	});
 
@@ -97,133 +97,6 @@ $(document).ready(function () {
 		);
 	});
 
-	$(document).on("click", 'a[href="#rapid-contact"]', function (e) {
-		const rapidContact = $("#rapid-contact");
-
-		if (!rapidContact.length) return;
-
-		e.preventDefault();
-
-		const header = $(".site__header");
-		const headerOffset = header.length ? header.outerHeight() + 30 : 120;
-
-		$("html, body").animate(
-			{
-				scrollTop: rapidContact.offset().top - headerOffset,
-			},
-			600,
-		);
-	});
-
-	function closeCustomSelect($select) {
-		$select.removeClass("is-open");
-		$select.find("[data-custom-select-menu]").attr("hidden", true);
-		$select
-			.find("[data-custom-select-trigger]")
-			.attr("aria-expanded", "false");
-		$select.find(".custom-select__option").removeClass("is-hovered");
-	}
-
-	function openCustomSelect($select) {
-		$("[data-custom-select]").not($select).each(function () {
-			closeCustomSelect($(this));
-		});
-
-		$select.addClass("is-open");
-		$select.find("[data-custom-select-menu]").removeAttr("hidden");
-		$select
-			.find("[data-custom-select-trigger]")
-			.attr("aria-expanded", "true");
-	}
-
-	function selectCustomOption($option) {
-		const $select = $option.closest("[data-custom-select]");
-		const value = $option.data("value");
-		const label = $.trim($option.text());
-
-		$select.find("[data-custom-select-input]").val(value).trigger("change");
-		$select.find("[data-custom-select-label]").text(label);
-		$select.find(".custom-select__option")
-			.removeClass("is-active")
-			.attr("aria-selected", "false");
-		$option.addClass("is-active").attr("aria-selected", "true");
-		closeCustomSelect($select);
-	}
-
-	$(document).on("click", "[data-custom-select-trigger]", function () {
-		const $select = $(this).closest("[data-custom-select]");
-
-		if ($select.hasClass("is-open")) {
-			closeCustomSelect($select);
-		} else {
-			openCustomSelect($select);
-		}
-	});
-
-	$(document).on(
-		"mouseenter",
-		"[data-custom-select] .custom-select__option",
-		function () {
-			$(this).addClass("is-hovered");
-		},
-	);
-
-	$(document).on(
-		"mouseleave",
-		"[data-custom-select] .custom-select__option",
-		function () {
-			$(this).removeClass("is-hovered");
-		},
-	);
-
-	$(document).on("click", "[data-custom-select] .custom-select__option", function () {
-		selectCustomOption($(this));
-	});
-
-	$(document).on(
-		"keydown",
-		"[data-custom-select-trigger], [data-custom-select] .custom-select__option",
-		function (e) {
-			const $select = $(this).closest("[data-custom-select]");
-
-			if (e.key === "Escape") {
-				closeCustomSelect($select);
-				$select.find("[data-custom-select-trigger]").trigger("focus");
-				return;
-			}
-
-			if (e.key !== "Enter" && e.key !== " ") return;
-
-			e.preventDefault();
-
-			if ($(this).is("[data-custom-select-trigger]")) {
-				openCustomSelect($select);
-				$select.find(".custom-select__option").first().trigger("focus");
-			} else {
-				selectCustomOption($(this));
-				$select.find("[data-custom-select-trigger]").trigger("focus");
-			}
-		},
-	);
-
-	$(document).on("click", function (e) {
-		if ($(e.target).closest("[data-custom-select]").length) return;
-
-		$("[data-custom-select]").each(function () {
-			closeCustomSelect($(this));
-		});
-	});
-
-	$(document).on("submit", ".rapid-contact__form", function (e) {
-		const $category = $(this).find("[data-custom-select-input]");
-
-		if (!$category.length || $category.val()) return;
-
-		e.preventDefault();
-		openCustomSelect($category.closest("[data-custom-select]"));
-		$(this).find("[data-custom-select-trigger]").trigger("focus");
-	});
-
 	// Toast
 	$("#liveToastBtn").on("click", function () {
 		var toastEl = $("#liveToast");
@@ -234,25 +107,34 @@ $(document).ready(function () {
 	});
 
 	// Get Started / Browse Products (delegated so it works after SPA navigation)
-	$(document).on("click", "#browseProducts", function () {
-		const productSection = $(".product");
+	// $(document).on("click", "#browseProducts", function () {
+	// 	const productSection = $(".product");
 
-		if (productSection.length) {
-			$("html, body").animate(
-				{
-					scrollTop: productSection.offset().top - 75,
-				},
-				"smooth",
-			);
+	// 	if (productSection.length) {
+	// 		$("html, body").animate(
+	// 			{
+	// 				scrollTop: productSection.offset().top - 75,
+	// 			},
+	// 			"smooth",
+	// 		);
+	// 	}
+	// });
+
+	$(document).on("click", "#contactUsBtn", function () {
+		const baseUrl = $("#homeUrl").val();
+		if (baseUrl) {
+			window.location.href = baseUrl + "?loc=rapid-contact";
+		} else {
+			window.location.href = "?loc=rapid-contact";
 		}
 	});
 
-	$(document).on("click", "#getStartedBtn", function () {
+	$(document).on("click", "#categorySectionBtn", function () {
 		const baseUrl = $("#homeUrl").val();
 		if (baseUrl) {
-			window.location.href = baseUrl + "?loc=product";
+			window.location.href = baseUrl + "?loc=category-section";
 		} else {
-			window.location.href = "?loc=product";
+			window.location.href = "?loc=category-section";
 		}
 	});
 	// 	// Product Read More
@@ -500,496 +382,514 @@ $(window).on("load", function () {
 	}, 500); // 0.5s delay
 });
 
-// my profile image  js code
-(function () {
-	console.log("🚀 Avatar Cropper initialized");
-
-	// DOM Elements
-	const profileAvatar = document.getElementById("profileAvatar");
-	const openBtn = document.getElementById("openAvatarModalBtn");
-	const modalEl = document.getElementById("avatarModal");
-	const fileInput = document.getElementById("avatarFile");
-	const cropperImg = document.getElementById("cropperImage");
-	const controls = document.getElementById("cropperControls");
-	const saveBtn = document.getElementById("saveAvatarBtn");
-	const errorBox = document.getElementById("avatarError");
-	const successBox = document.getElementById("avatarSuccess");
-	const dropZone = document.getElementById("dropZone");
-	const uploadProgress = document.getElementById("uploadProgress");
-	const cropPreview = document.getElementById("cropPreview");
-	const previewContainer = document.querySelector(".preview-container");
-	const previewLabel = previewContainer
-		? previewContainer.querySelector("label")
-		: null;
-
-	// Bootstrap modal instance
-	const bsModal = new bootstrap.Modal(modalEl, { backdrop: "static" });
-
-	let cropper = null;
-	let objectUrl = null;
-
-	// Configuration
-	const CONFIG = {
-		maxSizeMB: 8,
-		minDimensions: 150,
-		allowedTypes: ["image/jpeg", "image/jpg", "image/png", "image/webp"],
-		cropSize: 512,
-		quality: 0.9,
-	};
-
-	// ---- Helper Functions ----
-	function showError(message) {
-		console.error("❌ Error:", message);
-		errorBox.innerHTML = `<i class="fas fa-exclamation-triangle me-2"></i>${message}`;
-		errorBox.classList.remove("d-none");
-		hideSuccess();
-	}
-
-	function showSuccess(message) {
-		console.log("✅ Success:", message);
-		successBox.innerHTML = `<i class="fas fa-check-circle me-2"></i>${message}`;
-		successBox.classList.remove("d-none");
-		hideError();
-	}
-
-	function hideError() {
-		errorBox.classList.add("d-none");
-	}
-
-	function hideSuccess() {
-		successBox.classList.add("d-none");
-	}
-
-	function clearMessages() {
-		hideError();
-		hideSuccess();
-	}
-
-	function showToast(message, type = "success") {
-		const toastEl = document.getElementById("successToast");
-		const toastBody = document.getElementById("successMessage");
-
-		if (toastEl && toastBody) {
-			toastBody.textContent = message;
-			const toast = new bootstrap.Toast(toastEl);
-			toast.show();
-		}
-	}
-
-	function updateProgressBar(percent) {
-		const progressBar = uploadProgress.querySelector(".progress-bar");
-		if (progressBar) {
-			progressBar.style.width = percent + "%";
-			progressBar.setAttribute("aria-valuenow", percent);
-		}
-	}
-
-	function showProgress() {
-		uploadProgress.classList.remove("d-none");
-		updateProgressBar(0);
-	}
-
-	function hideProgress() {
-		uploadProgress.classList.add("d-none");
-		updateProgressBar(0);
-	}
-
-	function updatePreview() {
-		if (!cropper || !cropPreview) return;
-
-		try {
-			const size = 100;
-			const cropped = cropper.getCroppedCanvas({
-				width: size,
-				height: size,
-				imageSmoothingEnabled: true,
-				imageSmoothingQuality: "high",
-			});
-
-			if (cropped) {
-				// Display the cropped image directly (rectangular/square)
-				cropPreview.src = cropped.toDataURL("image/png");
-				cropPreview.style.display = "block";
-				cropPreview.style.borderRadius = "8px"; // Match profile style
-				// Hide the static "Preview:" label when actual preview exists
-				if (previewLabel) previewLabel.style.display = "none";
-			}
-		} catch (err) {
-			console.warn("Preview update failed:", err);
-		}
-	}
-
-	function cleanupPreview() {
-		saveBtn.disabled = true;
-		saveBtn.innerHTML = '<i class="fas fa-save me-2"></i>Save';
-		controls.classList.add("d-none");
-		hideProgress();
-
-		// remove loaded-image state so circular mask is hidden
-		if (modalEl && modalEl.classList) modalEl.classList.remove("image-loaded");
-
-		if (cropper) {
-			cropper.destroy();
-			cropper = null;
-		}
-
-		cropperImg.style.display = "none";
-		cropperImg.removeAttribute("src");
-
-		if (cropPreview) {
-			cropPreview.style.display = "none";
-			cropPreview.removeAttribute("src");
-		}
-
-		// Always hide the static preview label when cleaning up
-		if (previewLabel) {
-			previewLabel.style.display = "none";
-		}
-
-		if (objectUrl) {
-			URL.revokeObjectURL(objectUrl);
-			objectUrl = null;
-		}
-
-		// Reset input
-		fileInput.value = "";
-		clearMessages();
-	}
-
-	function validateFile(file) {
-		console.log("🔍 Validating file:", file.name, file.type, file.size);
-
-		if (!CONFIG.allowedTypes.includes(file.type)) {
-			throw new Error("Please select a valid image file (JPEG, PNG, or WebP).");
-		}
-
-		if (file.size > CONFIG.maxSizeMB * 1024 * 1024) {
-			throw new Error(
-				`Image is too large. Please upload an image under ${CONFIG.maxSizeMB}MB.`,
-			);
-		}
-
-		return true;
-	}
-
-	async function validateImageDimensions(file) {
-		return new Promise((resolve, reject) => {
-			const img = new Image();
-			img.onload = function () {
-				if (
-					img.width < CONFIG.minDimensions ||
-					img.height < CONFIG.minDimensions
-				) {
-					reject(
-						new Error(
-							`Image is too small. Minimum size is ${CONFIG.minDimensions}×${CONFIG.minDimensions} pixels.`,
-						),
-					);
-				} else {
-					console.log("✅ Image dimensions valid:", img.width, "x", img.height);
-					resolve(true);
-				}
-			};
-			img.onerror = () => reject(new Error("Invalid image file."));
-			img.src = URL.createObjectURL(file);
-		});
-	}
-
-	async function initializeCropper(file) {
-		console.log("🔄 Initializing cropper...");
-
-		try {
-			await validateImageDimensions(file);
-		} catch (err) {
-			showError(err.message);
-			cleanupPreview();
-			return;
-		}
-
-		// Cleanup old cropper
-		if (cropper) {
-			cropper.destroy();
-			cropper = null;
-		}
-		if (objectUrl) {
-			URL.revokeObjectURL(objectUrl);
-		}
-
-		objectUrl = URL.createObjectURL(file);
-		cropperImg.src = objectUrl;
-		cropperImg.style.display = "block";
-
-		// Wait for image to load
-		cropperImg.onload = function () {
-			console.log("🖼️ Image loaded, creating cropper...");
-
-			cropper = new Cropper(cropperImg, {
-				aspectRatio: 1,
-				viewMode: 1,
-				dragMode: "move",
-				autoCropArea: 0.8,
-				responsive: true,
-				background: false,
-				checkOrientation: true,
-				guides: true,
-				center: true,
-				highlight: false,
-				cropBoxMovable: true,
-				cropBoxResizable: true,
-				toggleDragModeOnDblclick: false,
-
-				ready() {
-					console.log("✅ Cropper ready!");
-					controls.classList.remove("d-none");
-					saveBtn.disabled = false;
-					if (modalEl && modalEl.classList)
-						modalEl.classList.add("image-loaded");
-					updatePreview();
-				},
-
-				crop: updatePreview,
-				zoom: updatePreview,
-				rotate: updatePreview,
-			});
-		};
-
-		cropperImg.onerror = function () {
-			showError("Failed to load the selected image.");
-			cleanupPreview();
-		};
-	}
-
-	// Initialize cropper from an existing image URL (e.g., already uploaded avatar)
-	async function initializeCropperFromUrl(url) {
-		console.log("🔄 Initializing cropper from URL...", url);
-
-		// Cleanup old cropper
-		if (cropper) {
-			cropper.destroy();
-			cropper = null;
-		}
-
-		cropperImg.src = url;
-		cropperImg.style.display = "block";
-
-		cropperImg.onload = function () {
-			console.log("🖼️ Image (URL) loaded, creating cropper...");
-
-			cropper = new Cropper(cropperImg, {
-				aspectRatio: 1,
-				viewMode: 1,
-				dragMode: "move",
-				autoCropArea: 0.8,
-				responsive: true,
-				background: false,
-				checkOrientation: true,
-				guides: true,
-				center: true,
-				highlight: false,
-				cropBoxMovable: true,
-				cropBoxResizable: true,
-				toggleDragModeOnDblclick: false,
-
-				ready() {
-					console.log("✅ Cropper (URL) ready!");
-					controls.classList.remove("d-none");
-					saveBtn.disabled = false;
-					if (modalEl && modalEl.classList)
-						modalEl.classList.add("image-loaded");
-					updatePreview();
-				},
-
-				crop: updatePreview,
-				zoom: updatePreview,
-				rotate: updatePreview,
-			});
-		};
-
-		cropperImg.onerror = function () {
-			showError("Failed to load the selected image.");
-			cleanupPreview();
-		};
-	}
-
-	// ---- Event Listeners ----
-
-	// Open modal - both button and image click
-	let pendingAvatarSrc = null;
-
-	function openModal() {
-		console.log("📖 Opening avatar modal...");
-		cleanupPreview();
-
-		// Store the src if we need to initialize from existing avatar
-		try {
-			const src = profileAvatar && profileAvatar.src ? profileAvatar.src : null;
-			if (src && !src.includes("default-avatar.png")) {
-				pendingAvatarSrc = src;
-			} else {
-				pendingAvatarSrc = null;
-			}
-		} catch (err) {
-			console.warn("Unable to check avatar src:", err);
-			pendingAvatarSrc = null;
-		}
-
-		bsModal.show();
-	}
-
-	if (openBtn) {
-		openBtn.addEventListener("click", openModal);
-	}
-
-	if (profileAvatar) {
-		profileAvatar.addEventListener("click", openModal);
-		profileAvatar.addEventListener("keydown", function (e) {
-			if (e.key === "Enter" || e.key === " ") {
-				e.preventDefault();
-				openModal();
-			}
-		});
-	}
-
-	// Also allow clicking the wrapper (overlay/icon area) to open modal
-	const profileWrapper = document.querySelector(".profile-picture-wrapper");
-	if (profileWrapper) {
-		profileWrapper.style.cursor = "pointer";
-		profileWrapper.setAttribute("tabindex", "0");
-		profileWrapper.addEventListener("click", function (e) {
-			// if click lands on child controls that shouldn't open, let them handle it
-			openModal();
-		});
-		profileWrapper.addEventListener("keydown", function (e) {
-			if (e.key === "Enter" || e.key === " ") {
-				e.preventDefault();
-				openModal();
-			}
-		});
-	}
-
-	// On init, mark wrapper as having an image if profileAvatar is not the default avatar
-	(function markWrapperIfHasImage() {
-		try {
-			if (profileAvatar && profileWrapper) {
-				const src = profileAvatar.src || "";
-				if (src && !src.includes("default-avatar.png")) {
-					profileWrapper.classList.add("has-image");
-				}
-			}
-		} catch (err) {
-			console.warn("Error checking existing avatar:", err);
-		}
-	})();
-
-	// Modal shown event - initialize cropper if pending
-	modalEl.addEventListener("shown.bs.modal", function () {
-		console.log("👁️ Modal fully shown");
-		if (pendingAvatarSrc) {
-			console.log("🔄 Initializing pending avatar:", pendingAvatarSrc);
-			initializeCropperFromUrl(pendingAvatarSrc);
-			pendingAvatarSrc = null; // Clear it
-		}
-	});
-
-	// Modal cleanup
-	modalEl.addEventListener("hidden.bs.modal", function () {
-		console.log("🚪 Modal closed, cleaning up...");
-		cleanupPreview();
-		pendingAvatarSrc = null;
-	});
-
-	// File input change
-	fileInput.addEventListener("change", async function (e) {
-		clearMessages();
-		console.log("📁 File input changed...");
-
-		const file = e.target.files && e.target.files[0];
-		if (!file) return;
-
-		try {
-			validateFile(file);
-			await initializeCropper(file);
-		} catch (err) {
-			showError(err.message);
-			cleanupPreview();
-		}
-	});
-
-	// Save functionality (minimal): crop -> base64 -> console
-	saveBtn.addEventListener("click", async function () {
-		clearMessages();
-		if (!cropper) return;
-
-		console.log("💾 Saving avatar (minimal)...");
-
-		const originalHTML = saveBtn.innerHTML;
-		saveBtn.disabled = true;
-		saveBtn.innerHTML =
-			'<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
-		showProgress();
-
-		try {
-			updateProgressBar(10);
-
-			const size = CONFIG.cropSize;
-			const cropped = cropper.getCroppedCanvas({
-				width: size,
-				height: size,
-				imageSmoothingEnabled: true,
-				imageSmoothingQuality: "high",
-			});
-
-			updateProgressBar(40);
-
-			if (!cropped) throw new Error("Unable to crop the image.");
-
-			// Composite cropped canvas onto a rectangular background and
-			// export as JPEG so the avatar on the page appears rectangular.
-			const out = document.createElement("canvas");
-			out.width = size;
-			out.height = size;
-			const octx = out.getContext("2d");
-			// Fill background (white) to avoid transparency showing as circle
-			octx.fillStyle = "#ffffff";
-			octx.fillRect(0, 0, size, size);
-			// Draw the cropped image (square) over the background
-			octx.drawImage(cropped, 0, 0, size, size);
-
-			// Export as JPEG so result is a rectangular image
-			const dataUrl = out.toDataURL("image/jpeg", CONFIG.quality);
-			const base64 = dataUrl.split(",")[1];
-
-			console.log("🖼️ Cropped rectangular data URL:", dataUrl);
-
-			updateProgressBar(100);
-
-			// Update the avatar on the page (ensure rectangular display)
-			if (profileAvatar) {
-				profileAvatar.src = dataUrl;
-				// enforce rectangular corner radius to match design
-				profileAvatar.style.borderRadius = "8px";
-			}
-
-			showToast("Cropped image ready (logged to console)");
-			showSuccess("Cropped image logged");
-			setTimeout(() => bsModal.hide(), 800);
-		} catch (err) {
-			console.error("❌ Save error:", err);
-			showError(err.message || "Something went wrong.");
-		} finally {
-			saveBtn.disabled = false;
-			saveBtn.innerHTML = originalHTML;
-			hideProgress();
-		}
-	});
-
-	// No upload functions in minimal mode — cropping + base64 logging only.
-
-	console.log("✅ Avatar Cropper setup complete");
-	console.log(cropperImg);
-})();
-
-// Additional scripts can be added here as needed
+$(document).on("click", 'a[href="#rapid-contact"]', function (e) {
+	const rapidContact = $("#rapid-contact");
+
+	if (!rapidContact.length) return;
+
+	e.preventDefault();
+
+	const header = $(".site__header");
+	const headerOffset = header.length ? header.outerHeight() + 30 : 150;
+
+	$("html, body").animate(
+		{
+			scrollTop: rapidContact.offset().top - headerOffset,
+		},
+		600,
+	);
+});
+
+// // my profile image  js code
+// (function () {
+// 	console.log("🚀 Avatar Cropper initialized");
+
+// 	// DOM Elements
+// 	const profileAvatar = document.getElementById("profileAvatar");
+// 	const openBtn = document.getElementById("openAvatarModalBtn");
+// 	const modalEl = document.getElementById("avatarModal");
+// 	const fileInput = document.getElementById("avatarFile");
+// 	const cropperImg = document.getElementById("cropperImage");
+// 	const controls = document.getElementById("cropperControls");
+// 	const saveBtn = document.getElementById("saveAvatarBtn");
+// 	const errorBox = document.getElementById("avatarError");
+// 	const successBox = document.getElementById("avatarSuccess");
+// 	const dropZone = document.getElementById("dropZone");
+// 	const uploadProgress = document.getElementById("uploadProgress");
+// 	const cropPreview = document.getElementById("cropPreview");
+// 	const previewContainer = document.querySelector(".preview-container");
+// 	const previewLabel = previewContainer
+// 		? previewContainer.querySelector("label")
+// 		: null;
+
+// 	// Bootstrap modal instance
+// 	const bsModal = new bootstrap.Modal(modalEl, { backdrop: "static" });
+
+// 	let cropper = null;
+// 	let objectUrl = null;
+
+// 	// Configuration
+// 	const CONFIG = {
+// 		maxSizeMB: 8,
+// 		minDimensions: 150,
+// 		allowedTypes: ["image/jpeg", "image/jpg", "image/png", "image/webp"],
+// 		cropSize: 512,
+// 		quality: 0.9,
+// 	};
+
+// 	// ---- Helper Functions ----
+// 	function showError(message) {
+// 		console.error("❌ Error:", message);
+// 		errorBox.innerHTML = `<i class="fas fa-exclamation-triangle me-2"></i>${message}`;
+// 		errorBox.classList.remove("d-none");
+// 		hideSuccess();
+// 	}
+
+// 	function showSuccess(message) {
+// 		console.log("✅ Success:", message);
+// 		successBox.innerHTML = `<i class="fas fa-check-circle me-2"></i>${message}`;
+// 		successBox.classList.remove("d-none");
+// 		hideError();
+// 	}
+
+// 	function hideError() {
+// 		errorBox.classList.add("d-none");
+// 	}
+
+// 	function hideSuccess() {
+// 		successBox.classList.add("d-none");
+// 	}
+
+// 	function clearMessages() {
+// 		hideError();
+// 		hideSuccess();
+// 	}
+
+// 	function showToast(message, type = "success") {
+// 		const toastEl = document.getElementById("successToast");
+// 		const toastBody = document.getElementById("successMessage");
+
+// 		if (toastEl && toastBody) {
+// 			toastBody.textContent = message;
+// 			const toast = new bootstrap.Toast(toastEl);
+// 			toast.show();
+// 		}
+// 	}
+
+// 	function updateProgressBar(percent) {
+// 		const progressBar = uploadProgress.querySelector(".progress-bar");
+// 		if (progressBar) {
+// 			progressBar.style.width = percent + "%";
+// 			progressBar.setAttribute("aria-valuenow", percent);
+// 		}
+// 	}
+
+// 	function showProgress() {
+// 		uploadProgress.classList.remove("d-none");
+// 		updateProgressBar(0);
+// 	}
+
+// 	function hideProgress() {
+// 		uploadProgress.classList.add("d-none");
+// 		updateProgressBar(0);
+// 	}
+
+// 	function updatePreview() {
+// 		if (!cropper || !cropPreview) return;
+
+// 		try {
+// 			const size = 100;
+// 			const cropped = cropper.getCroppedCanvas({
+// 				width: size,
+// 				height: size,
+// 				imageSmoothingEnabled: true,
+// 				imageSmoothingQuality: "high",
+// 			});
+
+// 			if (cropped) {
+// 				// Display the cropped image directly (rectangular/square)
+// 				cropPreview.src = cropped.toDataURL("image/png");
+// 				cropPreview.style.display = "block";
+// 				cropPreview.style.borderRadius = "8px"; // Match profile style
+// 				// Hide the static "Preview:" label when actual preview exists
+// 				if (previewLabel) previewLabel.style.display = "none";
+// 			}
+// 		} catch (err) {
+// 			console.warn("Preview update failed:", err);
+// 		}
+// 	}
+
+// 	function cleanupPreview() {
+// 		saveBtn.disabled = true;
+// 		saveBtn.innerHTML = '<i class="fas fa-save me-2"></i>Save';
+// 		controls.classList.add("d-none");
+// 		hideProgress();
+
+// 		// remove loaded-image state so circular mask is hidden
+// 		if (modalEl && modalEl.classList) modalEl.classList.remove("image-loaded");
+
+// 		if (cropper) {
+// 			cropper.destroy();
+// 			cropper = null;
+// 		}
+
+// 		cropperImg.style.display = "none";
+// 		cropperImg.removeAttribute("src");
+
+// 		if (cropPreview) {
+// 			cropPreview.style.display = "none";
+// 			cropPreview.removeAttribute("src");
+// 		}
+
+// 		// Always hide the static preview label when cleaning up
+// 		if (previewLabel) {
+// 			previewLabel.style.display = "none";
+// 		}
+
+// 		if (objectUrl) {
+// 			URL.revokeObjectURL(objectUrl);
+// 			objectUrl = null;
+// 		}
+
+// 		// Reset input
+// 		fileInput.value = "";
+// 		clearMessages();
+// 	}
+
+// 	function validateFile(file) {
+// 		console.log("🔍 Validating file:", file.name, file.type, file.size);
+
+// 		if (!CONFIG.allowedTypes.includes(file.type)) {
+// 			throw new Error("Please select a valid image file (JPEG, PNG, or WebP).");
+// 		}
+
+// 		if (file.size > CONFIG.maxSizeMB * 1024 * 1024) {
+// 			throw new Error(
+// 				`Image is too large. Please upload an image under ${CONFIG.maxSizeMB}MB.`,
+// 			);
+// 		}
+
+// 		return true;
+// 	}
+
+// 	async function validateImageDimensions(file) {
+// 		return new Promise((resolve, reject) => {
+// 			const img = new Image();
+// 			img.onload = function () {
+// 				if (
+// 					img.width < CONFIG.minDimensions ||
+// 					img.height < CONFIG.minDimensions
+// 				) {
+// 					reject(
+// 						new Error(
+// 							`Image is too small. Minimum size is ${CONFIG.minDimensions}×${CONFIG.minDimensions} pixels.`,
+// 						),
+// 					);
+// 				} else {
+// 					console.log("✅ Image dimensions valid:", img.width, "x", img.height);
+// 					resolve(true);
+// 				}
+// 			};
+// 			img.onerror = () => reject(new Error("Invalid image file."));
+// 			img.src = URL.createObjectURL(file);
+// 		});
+// 	}
+
+// 	async function initializeCropper(file) {
+// 		console.log("🔄 Initializing cropper...");
+
+// 		try {
+// 			await validateImageDimensions(file);
+// 		} catch (err) {
+// 			showError(err.message);
+// 			cleanupPreview();
+// 			return;
+// 		}
+
+// 		// Cleanup old cropper
+// 		if (cropper) {
+// 			cropper.destroy();
+// 			cropper = null;
+// 		}
+// 		if (objectUrl) {
+// 			URL.revokeObjectURL(objectUrl);
+// 		}
+
+// 		objectUrl = URL.createObjectURL(file);
+// 		cropperImg.src = objectUrl;
+// 		cropperImg.style.display = "block";
+
+// 		// Wait for image to load
+// 		cropperImg.onload = function () {
+// 			console.log("🖼️ Image loaded, creating cropper...");
+
+// 			cropper = new Cropper(cropperImg, {
+// 				aspectRatio: 1,
+// 				viewMode: 1,
+// 				dragMode: "move",
+// 				autoCropArea: 0.8,
+// 				responsive: true,
+// 				background: false,
+// 				checkOrientation: true,
+// 				guides: true,
+// 				center: true,
+// 				highlight: false,
+// 				cropBoxMovable: true,
+// 				cropBoxResizable: true,
+// 				toggleDragModeOnDblclick: false,
+
+// 				ready() {
+// 					console.log("✅ Cropper ready!");
+// 					controls.classList.remove("d-none");
+// 					saveBtn.disabled = false;
+// 					if (modalEl && modalEl.classList)
+// 						modalEl.classList.add("image-loaded");
+// 					updatePreview();
+// 				},
+
+// 				crop: updatePreview,
+// 				zoom: updatePreview,
+// 				rotate: updatePreview,
+// 			});
+// 		};
+
+// 		cropperImg.onerror = function () {
+// 			showError("Failed to load the selected image.");
+// 			cleanupPreview();
+// 		};
+// 	}
+
+// 	// Initialize cropper from an existing image URL (e.g., already uploaded avatar)
+// 	async function initializeCropperFromUrl(url) {
+// 		console.log("🔄 Initializing cropper from URL...", url);
+
+// 		// Cleanup old cropper
+// 		if (cropper) {
+// 			cropper.destroy();
+// 			cropper = null;
+// 		}
+
+// 		cropperImg.src = url;
+// 		cropperImg.style.display = "block";
+
+// 		cropperImg.onload = function () {
+// 			console.log("🖼️ Image (URL) loaded, creating cropper...");
+
+// 			cropper = new Cropper(cropperImg, {
+// 				aspectRatio: 1,
+// 				viewMode: 1,
+// 				dragMode: "move",
+// 				autoCropArea: 0.8,
+// 				responsive: true,
+// 				background: false,
+// 				checkOrientation: true,
+// 				guides: true,
+// 				center: true,
+// 				highlight: false,
+// 				cropBoxMovable: true,
+// 				cropBoxResizable: true,
+// 				toggleDragModeOnDblclick: false,
+
+// 				ready() {
+// 					console.log("✅ Cropper (URL) ready!");
+// 					controls.classList.remove("d-none");
+// 					saveBtn.disabled = false;
+// 					if (modalEl && modalEl.classList)
+// 						modalEl.classList.add("image-loaded");
+// 					updatePreview();
+// 				},
+
+// 				crop: updatePreview,
+// 				zoom: updatePreview,
+// 				rotate: updatePreview,
+// 			});
+// 		};
+
+// 		cropperImg.onerror = function () {
+// 			showError("Failed to load the selected image.");
+// 			cleanupPreview();
+// 		};
+// 	}
+
+// 	// ---- Event Listeners ----
+
+// 	// Open modal - both button and image click
+// 	let pendingAvatarSrc = null;
+
+// 	function openModal() {
+// 		console.log("📖 Opening avatar modal...");
+// 		cleanupPreview();
+
+// 		// Store the src if we need to initialize from existing avatar
+// 		try {
+// 			const src = profileAvatar && profileAvatar.src ? profileAvatar.src : null;
+// 			if (src && !src.includes("default-avatar.png")) {
+// 				pendingAvatarSrc = src;
+// 			} else {
+// 				pendingAvatarSrc = null;
+// 			}
+// 		} catch (err) {
+// 			console.warn("Unable to check avatar src:", err);
+// 			pendingAvatarSrc = null;
+// 		}
+
+// 		bsModal.show();
+// 	}
+
+// 	if (openBtn) {
+// 		openBtn.addEventListener("click", openModal);
+// 	}
+
+// 	if (profileAvatar) {
+// 		profileAvatar.addEventListener("click", openModal);
+// 		profileAvatar.addEventListener("keydown", function (e) {
+// 			if (e.key === "Enter" || e.key === " ") {
+// 				e.preventDefault();
+// 				openModal();
+// 			}
+// 		});
+// 	}
+
+// 	// Also allow clicking the wrapper (overlay/icon area) to open modal
+// 	const profileWrapper = document.querySelector(".profile-picture-wrapper");
+// 	if (profileWrapper) {
+// 		profileWrapper.style.cursor = "pointer";
+// 		profileWrapper.setAttribute("tabindex", "0");
+// 		profileWrapper.addEventListener("click", function (e) {
+// 			// if click lands on child controls that shouldn't open, let them handle it
+// 			openModal();
+// 		});
+// 		profileWrapper.addEventListener("keydown", function (e) {
+// 			if (e.key === "Enter" || e.key === " ") {
+// 				e.preventDefault();
+// 				openModal();
+// 			}
+// 		});
+// 	}
+
+// 	// On init, mark wrapper as having an image if profileAvatar is not the default avatar
+// 	(function markWrapperIfHasImage() {
+// 		try {
+// 			if (profileAvatar && profileWrapper) {
+// 				const src = profileAvatar.src || "";
+// 				if (src && !src.includes("default-avatar.png")) {
+// 					profileWrapper.classList.add("has-image");
+// 				}
+// 			}
+// 		} catch (err) {
+// 			console.warn("Error checking existing avatar:", err);
+// 		}
+// 	})();
+
+// 	// Modal shown event - initialize cropper if pending
+// 	modalEl.addEventListener("shown.bs.modal", function () {
+// 		console.log("👁️ Modal fully shown");
+// 		if (pendingAvatarSrc) {
+// 			console.log("🔄 Initializing pending avatar:", pendingAvatarSrc);
+// 			initializeCropperFromUrl(pendingAvatarSrc);
+// 			pendingAvatarSrc = null; // Clear it
+// 		}
+// 	});
+
+// 	// Modal cleanup
+// 	modalEl.addEventListener("hidden.bs.modal", function () {
+// 		console.log("🚪 Modal closed, cleaning up...");
+// 		cleanupPreview();
+// 		pendingAvatarSrc = null;
+// 	});
+
+// 	// File input change
+// 	fileInput.addEventListener("change", async function (e) {
+// 		clearMessages();
+// 		console.log("📁 File input changed...");
+
+// 		const file = e.target.files && e.target.files[0];
+// 		if (!file) return;
+
+// 		try {
+// 			validateFile(file);
+// 			await initializeCropper(file);
+// 		} catch (err) {
+// 			showError(err.message);
+// 			cleanupPreview();
+// 		}
+// 	});
+
+// 	// Save functionality (minimal): crop -> base64 -> console
+// 	saveBtn.addEventListener("click", async function () {
+// 		clearMessages();
+// 		if (!cropper) return;
+
+// 		console.log("💾 Saving avatar (minimal)...");
+
+// 		const originalHTML = saveBtn.innerHTML;
+// 		saveBtn.disabled = true;
+// 		saveBtn.innerHTML =
+// 			'<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+// 		showProgress();
+
+// 		try {
+// 			updateProgressBar(10);
+
+// 			const size = CONFIG.cropSize;
+// 			const cropped = cropper.getCroppedCanvas({
+// 				width: size,
+// 				height: size,
+// 				imageSmoothingEnabled: true,
+// 				imageSmoothingQuality: "high",
+// 			});
+
+// 			updateProgressBar(40);
+
+// 			if (!cropped) throw new Error("Unable to crop the image.");
+
+// 			// Composite cropped canvas onto a rectangular background and
+// 			// export as JPEG so the avatar on the page appears rectangular.
+// 			const out = document.createElement("canvas");
+// 			out.width = size;
+// 			out.height = size;
+// 			const octx = out.getContext("2d");
+// 			// Fill background (white) to avoid transparency showing as circle
+// 			octx.fillStyle = "#ffffff";
+// 			octx.fillRect(0, 0, size, size);
+// 			// Draw the cropped image (square) over the background
+// 			octx.drawImage(cropped, 0, 0, size, size);
+
+// 			// Export as JPEG so result is a rectangular image
+// 			const dataUrl = out.toDataURL("image/jpeg", CONFIG.quality);
+// 			const base64 = dataUrl.split(",")[1];
+
+// 			console.log("🖼️ Cropped rectangular data URL:", dataUrl);
+
+// 			updateProgressBar(100);
+
+// 			// Update the avatar on the page (ensure rectangular display)
+// 			if (profileAvatar) {
+// 				profileAvatar.src = dataUrl;
+// 				// enforce rectangular corner radius to match design
+// 				profileAvatar.style.borderRadius = "8px";
+// 			}
+
+// 			showToast("Cropped image ready (logged to console)");
+// 			showSuccess("Cropped image logged");
+// 			setTimeout(() => bsModal.hide(), 800);
+// 		} catch (err) {
+// 			console.error("❌ Save error:", err);
+// 			showError(err.message || "Something went wrong.");
+// 		} finally {
+// 			saveBtn.disabled = false;
+// 			saveBtn.innerHTML = originalHTML;
+// 			hideProgress();
+// 		}
+// 	});
+
+// 	// No upload functions in minimal mode — cropping + base64 logging only.
+
+// 	console.log("✅ Avatar Cropper setup complete");
+// 	console.log(cropperImg);
+// })();
+
+// // Additional scripts can be added here as needed
 
 const steps = document.querySelectorAll(".step");
 const title = document.getElementById("card-title");
@@ -1041,3 +941,141 @@ function updateCard() {
 		}, 150);
 	}
 }
+
+function closeCustomSelect($select) {
+	$select.removeClass("is-open");
+	$select.find("[data-custom-select-menu]").attr("hidden", true);
+	$select.find("[data-custom-select-trigger]").attr("aria-expanded", "false");
+	$select.find(".custom-select__option").removeClass("is-hovered");
+}
+
+function openCustomSelect($select) {
+	$("[data-custom-select]")
+		.not($select)
+		.each(function () {
+			closeCustomSelect($(this));
+		});
+
+	$select.addClass("is-open");
+	$select.find("[data-custom-select-menu]").removeAttr("hidden");
+	$select.find("[data-custom-select-trigger]").attr("aria-expanded", "true");
+}
+
+function selectCustomOption($option) {
+	const $select = $option.closest("[data-custom-select]");
+	const value = $option.data("value");
+	const label = $.trim($option.text());
+
+	$select.find("[data-custom-select-input]").val(value).trigger("change");
+	$select.find("[data-custom-select-label]").text(label);
+	$select
+		.find(".custom-select__option")
+		.removeClass("is-active")
+		.attr("aria-selected", "false");
+	$option.addClass("is-active").attr("aria-selected", "true");
+	closeCustomSelect($select);
+}
+
+$(document).on("click", "[data-custom-select-trigger]", function () {
+	const $select = $(this).closest("[data-custom-select]");
+
+	if ($select.hasClass("is-open")) {
+		closeCustomSelect($select);
+	} else {
+		openCustomSelect($select);
+	}
+});
+
+$(document).on(
+	"mouseenter",
+	"[data-custom-select] .custom-select__option",
+	function () {
+		$(this).addClass("is-hovered");
+	},
+);
+
+$(document).on(
+	"mouseleave",
+	"[data-custom-select] .custom-select__option",
+	function () {
+		$(this).removeClass("is-hovered");
+	},
+);
+
+$(document).on(
+	"click",
+	"[data-custom-select] .custom-select__option",
+	function () {
+		selectCustomOption($(this));
+	},
+);
+
+$(document).on(
+	"keydown",
+	"[data-custom-select-trigger], [data-custom-select] .custom-select__option",
+	function (e) {
+		const $select = $(this).closest("[data-custom-select]");
+
+		if (e.key === "Escape") {
+			closeCustomSelect($select);
+			$select.find("[data-custom-select-trigger]").trigger("focus");
+			return;
+		}
+
+		if (e.key !== "Enter" && e.key !== " ") return;
+
+		e.preventDefault();
+
+		if ($(this).is("[data-custom-select-trigger]")) {
+			openCustomSelect($select);
+			$select.find(".custom-select__option").first().trigger("focus");
+		} else {
+			selectCustomOption($(this));
+			$select.find("[data-custom-select-trigger]").trigger("focus");
+		}
+	},
+);
+
+$(document).on("click", function (e) {
+	if ($(e.target).closest("[data-custom-select]").length) return;
+
+	$("[data-custom-select]").each(function () {
+		closeCustomSelect($(this));
+	});
+});
+
+window.shippingOffcanvas = {
+	show: function (elementId) {
+		const element = document.getElementById(elementId);
+
+		if (!element || !window.bootstrap) {
+			return;
+		}
+
+		const instance = bootstrap.Offcanvas.getOrCreateInstance(element);
+		instance.show();
+	},
+
+	hide: function (elementId) {
+		return new Promise(function (resolve) {
+			const element = document.getElementById(elementId);
+
+			if (!element || !window.bootstrap) {
+				resolve();
+				return;
+			}
+
+			const instance = bootstrap.Offcanvas.getOrCreateInstance(element);
+
+			const handleHidden = function () {
+				element.removeEventListener("hidden.bs.offcanvas", handleHidden);
+
+				resolve();
+			};
+
+			element.addEventListener("hidden.bs.offcanvas", handleHidden);
+
+			instance.hide();
+		});
+	},
+};
