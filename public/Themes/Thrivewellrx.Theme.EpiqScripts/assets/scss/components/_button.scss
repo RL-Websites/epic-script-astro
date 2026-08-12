@@ -354,10 +354,7 @@
     left: 0;
     z-index: 10;
     border-top: 1px solid $gray-dark;
-
-    @media (max-width: 768px) {
-      background-color: $light;
-    }
+    background-color: $light;
 
     @media (max-width: 576px) {
       padding: 12px 0;
