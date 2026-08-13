@@ -276,8 +276,9 @@
 		font-size: $fs-30;
 
 		@media all and (max-width: 767px) {
-			right: 10px;
-			top: 10px;
+			right: 20px;
+			top: 30px;
+			font-size: $fs-24;
 		}
 	}
 
