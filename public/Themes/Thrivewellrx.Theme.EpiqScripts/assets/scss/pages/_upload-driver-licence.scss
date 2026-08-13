@@ -3,10 +3,10 @@
 .upload-licence {
   padding: 0px 0 110px;
 
-  &__content {
-    width: min(100% - 40px, 1260px);
-    margin: 50px auto;
-  }
+  // &__content {
+  //   width: min(100% - 40px, 1260px);
+  //   margin: 50px auto;
+  // }
 
   &__title {
     margin: 0 0 30px;
@@ -481,11 +481,7 @@
   }
 
   @media (max-width: 768px) {
-    padding-top: 24px;
-
-    &__content {
-      width: min(100% - 24px, 1260px);
-    }
+   
 
     &__title {
       font-size: 28px;
