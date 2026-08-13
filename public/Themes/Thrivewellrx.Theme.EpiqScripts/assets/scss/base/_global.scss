@@ -65,7 +65,7 @@ ul {
   // margin: 0 auto;
   padding: 0 15px;
 
-  @media all and (min-width: 576px) {
+  @media all and (max-width: 576px) {
     padding: 0 8px;
   }
 }
