@@ -78,7 +78,6 @@
     }
 
     &--cart-summary {
-      border: 1px solid #aeaeae;
 
       .cart-card__header {
         border-bottom: 1px solid #aeaeae;
@@ -354,6 +353,7 @@
 }
 
 .basic-input {
+
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
@@ -491,7 +491,7 @@
 @media all and (max-width: 768px) {
   .cart-card {
     &__header {
-      border-bottom: 1px solid #e6d4ff !important;
+      border-bottom: 1px solid $gray-lighter6 !important;
     }
   }
 
