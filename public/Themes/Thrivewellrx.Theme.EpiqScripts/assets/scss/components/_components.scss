@@ -477,6 +477,10 @@
     transform: translateY(-50%);
     left: -20%;
     text-align: left;
+
+    @media all and (max-width: 576px) {
+      left: 0;
+    }
   }
 }
 
