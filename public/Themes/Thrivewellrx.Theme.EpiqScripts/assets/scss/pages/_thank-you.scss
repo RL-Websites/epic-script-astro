@@ -1,5 +1,5 @@
 .thank-you {
-  padding-top: 100px;
+  padding-top: 12px;
   padding-bottom: 100px;
   overflow: hidden;
 
@@ -20,8 +20,7 @@
 
 @media only screen and (max-width: 768px) {
   .thank-you {
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 60px;ve
 
     &__actions {
       margin-top: 20px;

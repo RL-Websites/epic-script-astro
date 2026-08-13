@@ -10,6 +10,9 @@
                 th {
                     color: $black;
                     font-size: $fs-16;
+                    @media (max-width: 768px) {
+                        font-size: $fs-14;
+                    }
 
                     &:first-child {
                         padding-left: 15px !important;
@@ -17,7 +20,7 @@
                     }
 
                     &:last-child {
-                        padding-right: 40px !important;
+                        padding-right: 20px !important;
                     }
                 }
             }
