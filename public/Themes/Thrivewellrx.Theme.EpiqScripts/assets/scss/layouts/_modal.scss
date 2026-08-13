@@ -266,19 +266,19 @@
 		position: absolute;
 		z-index: 1;
 		right: 20px;
-		top: 10px;
+		top: 30px;
 		border: 0;
 		outline: 0;
 		box-shadow: none;
 		padding: 0;
 		background-color: transparent;
 		color: white;
-		font-size: $fs-30;
+		font-size: $fs-24;
 
 		@media all and (max-width: 767px) {
 			right: 20px;
 			top: 30px;
-			font-size: $fs-24;
+			font-size: $fs-20;
 		}
 	}
 
