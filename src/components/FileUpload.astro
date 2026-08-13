@@ -1,16 +1,50 @@
-<div class="upload-licence__dropzone">
-	<input id="driver-licence" type="file" />
-	<label for="driver-licence" class="upload-licence__dropzone-area">
+---
+interface Props {
+	id: string;
+	label?: string;
+	hint?: string;
+	accept?: string;
+	removable?: boolean;
+	multiple?: boolean;
+	preview?: boolean;
+}
+
+const {
+	id,
+	label = "Choose a file or drag and drop here",
+	hint = "JPEG & PNG, up to 50 MB.",
+	accept = "image/jpeg,image/png",
+	removable = false,
+	multiple = false,
+	preview = true,
+} = Astro.props;
+---
+
+<div
+	class="upload-licence__dropzone"
+	data-dropzone
+	data-removable={removable}
+	data-preview={preview}
+>
+	<input
+		id={id}
+		type="file"
+		accept={accept}
+		multiple={multiple}
+		data-dropzone-input
+	/>
+	<label for={id} class="upload-licence__dropzone-area" data-dropzone-area>
 		<i class="icon-files1 upload-licence__dropzone-icon"></i>
-		<span class="upload-licence__dropzone-title"
-			>Choose a file or drag and drop here</span
-		>
-		<span class="upload-licence__dropzone-hint"
-			>JPEG, PNG & PDF, up to 50 MB.</span
-		>
+		<span class="upload-licence__dropzone-title">{label}</span>
+		<span class="upload-licence__dropzone-hint">{hint}</span>
 		<span
 			class="theme-btn theme-btn__primary theme-btn__primary__alt upload-licence__dropzone-button"
 			>Browse Files</span
 		>
 	</label>
+	{
+		preview && (
+			<div class="upload-licence__dropzone-preview" data-dropzone-preview />
+		)
+	}
 </div>

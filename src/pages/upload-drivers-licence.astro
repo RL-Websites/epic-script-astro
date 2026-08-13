@@ -1,11 +1,8 @@
 ---
-import CommonAction from "../components/CommonAction.astro";
 import FileUpload from "../components/FileUpload.astro";
 import Header from "../components/Header.astro";
 import NoFileUpload from "../components/NoFileUpload.astro";
 import Layout from "../layouts/Layout.astro";
-
-const documents = Array.from({ length: 3 });
 ---
 
 <Layout>
@@ -13,11 +10,12 @@ const documents = Array.from({ length: 3 });
 
 	<main class="upload-licence">
 		<section class="upload-licence__content mt-150">
-			<!-- <h1 class="upload-licence__title">
+			<h1 class="upload-licence__title">Document <strong>Upload</strong></h1>
+
+			<h2 class="upload-licence__step-title">
 				<span class="numaric">1</span>
 				Verify Your Identity
-			</h1> -->
-			<h1 class="upload-licence__title">Verify Your Identity</h1>
+			</h2>
 
 			<div class="upload-licence__warning">
 				<div class="upload-licence__warning_container">
@@ -32,56 +30,11 @@ const documents = Array.from({ length: 3 });
 			<div class="row g-4">
 				<div class="col-md-6">
 					<p class="upload-licence__subtitle">Front of license</p>
-					<FileUpload />
+					<FileUpload id="driver-licence-front" removable />
 				</div>
 				<div class="col-md-6">
 					<p class="upload-licence__subtitle">Back of license</p>
-					<FileUpload />
-				</div>
-			</div>
-
-			<div class="upload-licence__cards">
-				<NoFileUpload />
-
-				<div class="upload-licence__documents" aria-label="Uploaded documents">
-					{
-						documents.map(() => (
-							<div class="upload-licence__document">
-								<div class="upload-licence__document-info">
-									<i class="icon-attachment upload-licence__document-icon" />
-									<div>
-										<p class="upload-licence__document-name">
-											Dylans Prescription.pdf
-										</p>
-										<div class="upload-licence__document-status">
-											<span>90 KB of 90 KB</span>
-											<i class="icon-ellipse" />
-											<span>
-												<i class="icon-completed" />
-												Completed
-											</span>
-										</div>
-									</div>
-								</div>
-								<button
-									class="upload-licence__delete"
-									type="button"
-									aria-label="Remove Dylans Prescription.pdf"
-								>
-									<i class="icon-delete" />
-								</button>
-								<label class="upload-licence__select">
-									<span class="upload-licence__sr-only">Document type</span>
-									<select>
-										<option value="prescription">
-											Driving license back part
-										</option>
-										<option value="report">Driving license back part</option>
-									</select>
-								</label>
-							</div>
-						))
-					}
+					<FileUpload id="driver-licence-back" removable />
 				</div>
 			</div>
 
@@ -89,74 +42,199 @@ const documents = Array.from({ length: 3 });
 				<i class="icon-info-circle upload-licence__notice-icon"></i>
 				<div class="upload-licence__notice_container">
 					<p class="upload-licence__notice__text">
-						<span>Mandatory Files to Upload:</span> Driving license & Lab report
+						<span>Mandatory Files to Upload:</span> You have to upload these
+						mandatory documents.
 					</p>
-					<p>
-						You can skip this process by clicking on save button, but later on
-						you have to upload these mandatory documents.
+				</div>
+			</aside>
+
+			<hr class="upload-licence__divider" />
+
+			<h2 class="upload-licence__step-title">
+				<span class="numaric">2</span>
+				Upload Lab Report
+			</h2>
+
+			<div class="upload-licence__cards">
+				<FileUpload
+					id="lab-report"
+					accept="image/jpeg,image/png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+					hint="JPEG, PNG, PDF & DOC, up to 50 MB. You can upload multiple files."
+					multiple
+					preview={false}
+				/>
+
+				<div
+					class="upload-licence__documents"
+					aria-label="Uploaded documents"
+					data-lab-report-documents
+					hidden
+				>
+				</div>
+
+				<div data-lab-report-empty>
+					<NoFileUpload />
+				</div>
+			</div>
+
+			<aside class="upload-licence__notice mt-20">
+				<i class="icon-info-circle upload-licence__notice-icon"></i>
+				<div class="upload-licence__notice_container">
+					<p class="upload-licence__notice__text">
+						<span>Mandatory Files to Upload:</span> You can skip this process by
+						clicking on save, but you will have to upload these mandatory
+						documents later.
 					</p>
 				</div>
 			</aside>
 		</section>
 
-		<!-- <footer class="upload-licence__actions">
-      <a class="upload-licence__action upload-licence__action--back" href="#"
-        >Go Back</a
-      >
-      <button
-        class="upload-licence__action upload-licence__action--save"
-        type="button">Save</button
-      >
-    </footer> -->
-		<section class="upload-licence">
-			<div class="upload-licence__content">
-				<div class="upload-licence__cards upload-licence__cards__noContent">
-					<!-- Left Card: Dropzone -->
-					<div class="upload-licence__dropzone">
-						<input id="driver-licence" type="file" />
-						<label for="driver-licence" class="upload-licence__dropzone-area">
-							<i class="icon-files1 upload-licence__dropzone-icon"></i>
-							<span class="upload-licence__dropzone-title"
-								>Choose a file or drag and drop here</span
-							>
-							<span class="upload-licence__dropzone-hint"
-								>JPEG, PNG & PDF, up to 50 MB.</span
-							>
-							<span
-								class="theme-btn theme-btn__primary theme-btn__primary__alt upload-licence__dropzone-button w-50"
-								>Browse Files</span
-							>
-						</label>
-					</div>
+		<footer class="upload-licence__actions">
+			<a class="upload-licence__action upload-licence__action--back" href="#"
+				>Go Back</a
+			>
+			<button
+				class="upload-licence__action upload-licence__action--save"
+				type="button">Save</button
+			>
+		</footer>
+	</main>
 
-					<aside class="upload-licence__notice mt-20">
-						<i class="icon-info-circle upload-licence__notice-icon"></i>
-						<div class="upload-licence__notice_container">
-							<p class="upload-licence__notice__text">
-								<span>Mandatory Files to Upload:</span> Driving license & Lab report
-							</p>
-							<p>
-								You can skip this process by clicking on save button, but later
-								on you have to upload these mandatory documents.
-							</p>
-						</div>
-					</aside>
-					<!-- Right Card: Empty State (No File Has Been Uploaded Yet) -->
-					<!-- <div
-            class="upload-licence__documents upload-licence__documents--empty"
-            aria-label="Uploaded documents"
-          >
-            <div class="upload-licence__empty-state">
-              <i class="icon-file-not-found upload-licence__empty-icon"></i>
-              <p class="upload-licence__empty-text">
-                No File Has Been Uploaded Yet
-              </p>
-            </div>
-          </div> -->
+	<template data-document-row-template>
+	<div class="upload-licence__document">
+		<div class="upload-licence__document-info">
+			<i class="icon-attachment upload-licence__document-icon"></i>
+			<div>
+				<p class="upload-licence__document-name"></p>
+				<div class="upload-licence__document-status">
+					<span data-document-size></span>
+					<i class="icon-ellipse"></i>
+					<span><i class="icon-completed"></i> Completed</span>
 				</div>
 			</div>
-		</section>
+		</div>
+		<button class="upload-licence__delete" type="button" aria-label="Remove file">
+			<i class="icon-delete"></i>
+		</button>
+	</div>
+</template>
 
-		<CommonAction />
-	</main>
+<script>
+	function formatFileSize(bytes: number) {
+		if (bytes < 1024) return `${bytes} B`;
+		if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+		return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+	}
+
+	function wireDropzonePreview(dropzone: HTMLElement) {
+		const input = dropzone.querySelector<HTMLInputElement>(
+			"[data-dropzone-input]"
+		);
+		const preview = dropzone.querySelector<HTMLElement>(
+			"[data-dropzone-preview]"
+		);
+		if (!input || !preview) return;
+
+		const removable = dropzone.dataset.removable === "true";
+		let objectUrl: string | null = null;
+
+		function clearFile() {
+			input!.value = "";
+			preview!.innerHTML = "";
+			dropzone.classList.remove("upload-licence__dropzone--has-file");
+			if (objectUrl) {
+				URL.revokeObjectURL(objectUrl);
+				objectUrl = null;
+			}
+		}
+
+		input.addEventListener("change", () => {
+			const file = input.files?.[0];
+			if (!file) return;
+
+			preview.innerHTML = "";
+
+			if (file.type.startsWith("image/")) {
+				objectUrl = URL.createObjectURL(file);
+				const img = document.createElement("img");
+				img.src = objectUrl;
+				img.alt = file.name;
+				preview.appendChild(img);
+			} else {
+				const name = document.createElement("span");
+				name.className = "upload-licence__dropzone-title";
+				name.textContent = file.name;
+				preview.appendChild(name);
+			}
+
+			if (removable) {
+				const removeButton = document.createElement("button");
+				removeButton.type = "button";
+				removeButton.className = "upload-licence__dropzone-remove";
+				removeButton.setAttribute("aria-label", `Remove ${file.name}`);
+				removeButton.innerHTML = '<i class="icon-delete"></i>';
+				removeButton.addEventListener("click", (event) => {
+					event.preventDefault();
+					clearFile();
+				});
+				preview.appendChild(removeButton);
+			}
+
+			dropzone.classList.add("upload-licence__dropzone--has-file");
+		});
+	}
+
+	document
+		.querySelectorAll<HTMLElement>("[data-dropzone]")
+		.forEach(wireDropzonePreview);
+
+	const labReportInput = document.querySelector<HTMLInputElement>(
+		'#lab-report[data-dropzone-input]'
+	);
+	const documentsList = document.querySelector<HTMLElement>(
+		"[data-lab-report-documents]"
+	);
+	const emptyState = document.querySelector<HTMLElement>(
+		"[data-lab-report-empty]"
+	);
+	const rowTemplate = document.querySelector<HTMLTemplateElement>(
+		"[data-document-row-template]"
+	);
+
+	function addLabReportRow(file: File) {
+		if (!documentsList || !emptyState || !rowTemplate) return;
+
+		const row = rowTemplate.content.firstElementChild?.cloneNode(
+			true
+		) as HTMLElement;
+		row.querySelector(".upload-licence__document-name")!.textContent =
+			file.name;
+		const size = formatFileSize(file.size);
+		row.querySelector<HTMLElement>("[data-document-size]")!.textContent =
+			`${size} of ${size}`;
+		row
+			.querySelector(".upload-licence__delete")
+			?.addEventListener("click", () => {
+				row.remove();
+				if (!documentsList.children.length) {
+					documentsList.hidden = true;
+					emptyState.hidden = false;
+				}
+			});
+
+		documentsList.appendChild(row);
+		documentsList.hidden = false;
+		emptyState.hidden = true;
+	}
+
+	labReportInput?.addEventListener("change", () => {
+		const files = labReportInput.files;
+		if (!files || !files.length) return;
+
+		Array.from(files).forEach(addLabReportRow);
+		// Reset so the same input fires "change" again on the next selection
+		// instead of silently no-oping when the browser sees an unchanged FileList.
+		labReportInput.value = "";
+	});
+	</script>
 </Layout>

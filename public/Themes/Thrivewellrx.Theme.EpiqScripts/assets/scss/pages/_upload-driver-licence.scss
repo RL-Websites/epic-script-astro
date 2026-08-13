@@ -21,6 +21,25 @@
     line-height: 1.5;
   }
 
+  &__step-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 20px;
+    color: $black-deep;
+    font-size: $fs-28;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: capitalize;
+  }
+
+  &__divider {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid $gray-dark;
+    opacity: 0.3;
+  }
+
   &__cards {
     display: grid;
     grid-template-columns: 494px minmax(0, 1fr);
@@ -51,6 +70,7 @@
   }
 
   &__dropzone {
+    position: relative;
     height: 260px;
 
     input {
@@ -59,6 +79,16 @@
 
     &-button {
       margin-top: 36px;
+    }
+
+    &--has-file {
+      .upload-licence__dropzone-area {
+        opacity: 0;
+      }
+
+      .upload-licence__dropzone-preview {
+        display: flex;
+      }
     }
   }
 
@@ -93,6 +123,50 @@
     color: $gray-dark;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  &__dropzone-preview {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px dashed $gray-dark;
+    border-radius: inherit;
+    text-align: center;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__dropzone-remove {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid $primary;
+    border-radius: 100px;
+    background: $green-lighter3;
+    color: $primary;
+    cursor: pointer;
+    transform: translateX(-50%);
+
+    i {
+      font-size: 24px;
+    }
   }
 
   &__browse,
@@ -318,24 +392,26 @@
     display: flex;
     padding: 14px max(40px, calc((100vw - 1170px) / 2));
     justify-content: space-between;
-    border-top: 1px solid $secondary;
+    border-top: 1px solid $gray-dark;
     background: $light;
   }
 
   &__action {
     width: 215px;
     height: 50px;
-    border: 1px solid $secondary;
+    border: 1px solid $primary;
+    border-radius: 100px;
+    font-weight: 700;
     cursor: pointer;
 
     &--back {
       background: transparent;
-      color: $secondary;
+      color: $primary;
     }
 
     &--save {
-      border-color: $secondary;
-      background: $secondary;
+      border-color: $primary;
+      background: $primary;
       color: $light;
     }
   }
