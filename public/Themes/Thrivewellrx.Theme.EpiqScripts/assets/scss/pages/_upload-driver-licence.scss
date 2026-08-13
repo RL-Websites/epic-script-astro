@@ -1,7 +1,6 @@
 @use "../base/variables" as *;
 
 .upload-licence {
-  min-height: calc(100vh - 110px);
   padding: 0px 0 110px;
 
   &__content {
@@ -10,12 +9,16 @@
   }
 
   &__title {
-    margin: 0 0 20px;
-    color: $black-deep;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.25;
+    margin: 0 0 30px;
     text-align: center;
+  }
+
+  &__subtitle {
+    margin: 0 0 10px;
+    color: $black-deep;
+    font-size: $fs-20;
+    font-weight: 500;
+    line-height: 1.5;
   }
 
   &__cards {
@@ -162,10 +165,14 @@
     font-weight: 500;
     // text-overflow: ellipsis;
     // white-space: nowrap;
-    max-width: 150px; /* Set your desired width limit */
-    white-space: nowrap; /* Prevents text from wrapping to next line */
-    overflow: hidden; /* Hides the overflowing text */
-    text-overflow: ellipsis; /* Adds '...' at the end */
+    max-width: 150px;
+    /* Set your desired width limit */
+    white-space: nowrap;
+    /* Prevents text from wrapping to next line */
+    overflow: hidden;
+    /* Hides the overflowing text */
+    text-overflow: ellipsis;
+    /* Adds '...' at the end */
   }
 
   &__document-status {
@@ -175,7 +182,7 @@
     color: $black-deep;
     font-size: 16px;
 
-    > span:first-child {
+    >span:first-child {
       font-size: 16px;
       font-weight: 400;
     }
