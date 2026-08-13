@@ -8,6 +8,10 @@
 			flex-wrap: nowrap;
 			align-items: center;
 
+			@media only screen and (max-width: 576px) {
+				width: 100% !important;
+			}
+
 
 			.form-control {
 				width: 100%;
