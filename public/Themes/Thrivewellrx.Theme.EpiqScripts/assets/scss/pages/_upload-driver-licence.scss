@@ -19,21 +19,27 @@
     font-size: $fs-20;
     font-weight: 500;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &__cards {
     display: grid;
-    grid-template-columns: 494px minmax(0, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 
-    @media all and (max-width: 1280px) {
+    @media all and (max-width: 768px) {
       grid-template-columns: 1fr;
+      gap: 20px;
     }
 
     &__noContent {
       grid-template-columns: 1fr;
     }
   }
+
+
 
   &__dropzone,
   &__documents {
@@ -355,6 +361,7 @@
     background-color: $gray-lighter6;
     padding: 5px 20px 10px;
     overflow-y: auto;
+    height: 260px;
 
     // Modifier when there are no uploaded documents
     &--empty {
