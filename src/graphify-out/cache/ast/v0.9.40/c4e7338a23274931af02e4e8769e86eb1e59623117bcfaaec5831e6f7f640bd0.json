@@ -1,0 +1,1 @@
+{"nodes": [{"id": "$graphify-root$_components_client_astro", "label": "Client.astro", "file_type": "code", "source_file": "components/Client.astro", "source_location": "L1"}], "edges": [], "raw_calls": [], "parse_errors": {"first_error_line": 1, "multiline_error": true}}
