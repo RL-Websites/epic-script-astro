@@ -686,6 +686,10 @@
 	.modal-body,
 	.modal-header {
 		padding: 20px;
+
+		@media all and (max-width: 576px) {
+			padding: 16px 12px;
+		}
 	}
 
 	.divider {
@@ -751,7 +755,7 @@
 		&__actions {
 			&__equal {
 				flex-direction: column-reverse;
-				margin-bottom: 50px !important;
+				margin-bottom: 0 !important;
 
 				button {
 					width: 100% !important;

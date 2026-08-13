@@ -64,6 +64,10 @@ ul {
   // max-width: 100%;
   // margin: 0 auto;
   padding: 0 15px;
+
+  @media all and (min-width: 576px) {
+    padding: 0 8px;
+  }
 }
 
 @media all and (min-width: 1420px) {
