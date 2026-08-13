@@ -221,10 +221,10 @@
   &__inner-container {
     background: $white;
     border-radius: 10px;
-    padding: 20px 0 20px 12px;
+    padding: 20px;
 
     @media (min-width: 576px) {
-      padding: 80px 0 80px 80px;
+      padding: 80px;
     }
   }
 
