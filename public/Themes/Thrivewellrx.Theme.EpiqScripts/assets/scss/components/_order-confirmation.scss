@@ -6,6 +6,11 @@
   &__row {
     margin-top: 24px;
     row-gap: 24px;
+
+    @media all and (max-width: 576px) {
+      margin-top: 20px;
+      row-gap: 20px;
+    }
   }
 
   @media all and (max-width: 768px) {
@@ -147,6 +152,7 @@
     gap: 16px;
     padding: 16px 0;
     border-bottom: 1px solid rgba($white, 0.12);
+
     @media all and (max-width: 576px) {
       gap: 12px;
       padding: 12px 0;
@@ -199,6 +205,7 @@
     align-items: center;
     gap: 100px;
     flex-shrink: 0;
+
     @media all and (max-width: 992px) {
       gap: 36px;
     }
@@ -402,7 +409,7 @@
   }
 
   @media all and (max-width: 576px) {
-     padding: 20px 12px;
+    padding: 20px 12px;
     border-radius: 12px;
 
     &__title {
@@ -426,6 +433,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media all and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .customer-info {
@@ -467,7 +478,7 @@
   }
 
   @media all and (max-width: 576px) {
-     padding: 20px 12px;
+    padding: 20px 12px;
     border-radius: 12px;
 
     &__title {
@@ -517,7 +528,7 @@
   }
 
   @media all and (max-width: 576px) {
-     padding: 20px 12px;
+    padding: 20px 12px;
     border-radius: 12px;
 
     &__title {
@@ -587,6 +598,7 @@
   }
 
   @media all and (max-width: 768px) {
+
     &__list li,
     &__contact {
       font-size: $fs-16;
@@ -594,7 +606,7 @@
   }
 
   @media all and (max-width: 576px) {
-     padding: 20px 12px;
+    padding: 20px 12px;
     border-radius: 12px;
     margin-top: 16px;
 
