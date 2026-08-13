@@ -1,6 +1,5 @@
 ---
 import CommonAction from "../components/CommonAction.astro";
-import FileUpload from "../components/FileUpload.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -12,10 +11,6 @@ const documents = Array.from({ length: 3 });
 
 	<main class="upload-licence">
 		<section class="upload-licence__content mt-150">
-			<!-- <h1 class="upload-licence__title">
-				<span class="numaric">1</span>
-				Verify Your Identity
-			</h1> -->
 			<h1 class="upload-licence__title">Verify Your Identity</h1>
 
 			<div class="upload-licence__warning">
@@ -25,17 +20,6 @@ const documents = Array.from({ length: 3 });
 						license or government-issued ID using the uploader below. <br /> After
 						uploading, use the drop-down menu to label which side is which.
 					</p>
-				</div>
-			</div>
-
-			<div class="row g-4">
-				<div class="col-md-6">
-					<p class="upload-licence__subtitle">Front of license</p>
-					<FileUpload />
-				</div>
-				<div class="col-md-6">
-					<p class="upload-licence__subtitle">Back of license</p>
-					<FileUpload />
 				</div>
 			</div>
 
@@ -170,7 +154,84 @@ const documents = Array.from({ length: 3 });
 				</div>
 			</div>
 		</section>
-
+		<section class="upload-licence">
+			<div class="upload-licence__content">
+				<div class="upload-licence__cards upload-licence__cards__noContent">
+					<!-- Left Card: Dropzone -->
+					<div class="upload-licence__dropzone">
+						<input id="driver-licence" type="file" />
+						<label for="driver-licence" class="upload-licence__dropzone-area">
+							<i class="icon-files1 upload-licence__dropzone-icon"></i>
+							<span class="upload-licence__dropzone-title"
+								>Choose a file or drag and drop here</span
+							>
+							<span class="upload-licence__dropzone-hint"
+								>JPEG, PNG & PDF, up to 50 MB.</span
+							>
+							<span
+								class="theme-btn theme-btn__primary upload-licence__dropzone-button w-50"
+								>Browse Files</span
+							>
+						</label>
+					</div>
+					<aside class="upload-licence__notice">
+						<i class="icon-info-circle upload-licence__notice-icon"></i>
+						<div class="upload-licence__notice_container">
+							<p class="upload-licence__notice__text">
+								<span>Previously Uploaded Driver's License — </span>
+							</p>
+							<p>
+								Your most recent driver's license will be used. You can upload
+								new images above to replace them.
+							</p>
+						</div>
+					</aside>
+					<div
+						class="upload-licence__documents"
+						aria-label="Uploaded documents"
+					>
+						{
+							documents.map(() => (
+								<div class="upload-licence__document">
+									<div class="upload-licence__document-info">
+										<i class="icon-attachment upload-licence__document-icon" />
+										<div>
+											<p class="upload-licence__document-name">
+												Dylans Prescription.pdf
+											</p>
+											<div class="upload-licence__document-status">
+												<span>90 KB of 90 KB</span>
+												<i class="icon-ellipse" />
+												<span>
+													<i class="icon-completed" />
+													Completed
+												</span>
+											</div>
+										</div>
+									</div>
+									<button
+										class="upload-licence__delete"
+										type="button"
+										aria-label="Remove Dylans Prescription.pdf"
+									>
+										<i class="icon-delete" />
+									</button>
+									<label class="upload-licence__select">
+										<span class="upload-licence__sr-only">Document type</span>
+										<select>
+											<option value="prescription">
+												Driving license back part
+											</option>
+											<option value="report">Driving license back part</option>
+										</select>
+									</label>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
 		<CommonAction />
 	</main>
 </Layout>
