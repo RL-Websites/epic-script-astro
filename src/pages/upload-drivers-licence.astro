@@ -2,6 +2,7 @@
 import CommonAction from "../components/CommonAction.astro";
 import FileUpload from "../components/FileUpload.astro";
 import Header from "../components/Header.astro";
+import NoFileUpload from "../components/NoFileUpload.astro";
 import Layout from "../layouts/Layout.astro";
 
 const documents = Array.from({ length: 3 });
@@ -40,22 +41,7 @@ const documents = Array.from({ length: 3 });
 			</div>
 
 			<div class="upload-licence__cards">
-				<div class="upload-licence__dropzone">
-					<input id="driver-licence" type="file" />
-					<label for="driver-licence" class="upload-licence__dropzone-area">
-						<i class="icon-files1 upload-licence__dropzone-icon"></i>
-						<span class="upload-licence__dropzone-title"
-							>Choose a file or drag and drop here</span
-						>
-						<span class="upload-licence__dropzone-hint"
-							>JPEG, PNG & PDF, up to 50 MB.</span
-						>
-						<span
-							class="theme-btn theme-btn__primary upload-licence__dropzone-button w-full"
-							>Browse Files</span
-						>
-					</label>
-				</div>
+				<NoFileUpload />
 
 				<div class="upload-licence__documents" aria-label="Uploaded documents">
 					{
