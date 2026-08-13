@@ -127,6 +127,10 @@ ul {
       box-shadow 0.5s ease-in;
     color: $black-deep;
 
+    @media all and (max-width: 768px) {
+      font-size: $fs-16;
+    }
+
     &:hover {
       border-color: $cyan;
     }

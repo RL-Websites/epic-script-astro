@@ -3,17 +3,13 @@
 .digital-pharmacy {
   &__wrapper {
     padding: 50px 80px;
-    background: url("../img/home/pharmacy-banner-bg.jpg") center / cover
-      no-repeat;
+    background: url("../img/home/pharmacy-banner-bg.jpg") center / cover no-repeat;
     border-radius: 10px;
     margin-bottom: 16px;
   }
 
   &__heading {
     margin-bottom: 32px;
-    color: $cyan;
-    font-size: 56px;
-    font-weight: 700;
     text-align: center;
   }
 
@@ -54,28 +50,22 @@
 
   @media all and (max-width: 991px) {
     &__wrapper {
-      padding: 40px;
+      padding: 40px 15px;
     }
 
-    &__heading {
-      font-size: 46px;
-    }
+
   }
 
   @media all and (max-width: 768px) {
     &__wrapper {
-      padding: 40px 15px;
+      padding: 20px 0;
+      background: none;
     }
 
-    &__heading {
-      font-size: 36px;
-    }
   }
 
   @media all and (max-width: 575px) {
-    &__heading {
-      font-size: 30px;
-    }
+
 
     &__card {
       padding: 20px;

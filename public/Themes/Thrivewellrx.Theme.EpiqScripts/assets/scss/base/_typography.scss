@@ -31,8 +31,10 @@ h1 {
 	line-height: 1.2;
 	letter-spacing: 0;
 
+
+
 	@media all and (max-width: 992px) {
-		font-size: $fs-30;
+		font-size: $fs-32;
 	}
 }
 
@@ -44,7 +46,7 @@ h2 {
 	letter-spacing: 0;
 
 	@media all and (max-width: 992px) {
-		font-size: $fs-30;
+		font-size: $fs-32;
 	}
 }
 
@@ -112,6 +114,10 @@ a {
 	font-weight: 500;
 	line-height: 160%;
 	letter-spacing: 0;
+
+	@media all and (max-width: 768px) {
+		font-size: 16px;
+	}
 }
 
 // Body4 - 16px Medium, 160% line-height
@@ -237,13 +243,7 @@ small,
 
 // Responsive typography
 @media only screen and (max-width: 992px) {
-	h1 {
-		font-size: 48px;
-	}
 
-	h2 {
-		font-size: 28px;
-	}
 
 	h3 {
 		font-size: 22px;
@@ -285,13 +285,8 @@ small,
 }
 
 @media only screen and (max-width: 768px) {
-	h1 {
-		font-size: 30px;
-	}
 
-	h2 {
-		font-size: 24px;
-	}
+
 
 	h3 {
 		font-size: 20px;

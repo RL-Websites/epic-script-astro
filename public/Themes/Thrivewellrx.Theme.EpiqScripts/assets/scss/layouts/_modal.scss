@@ -71,7 +71,7 @@
 			padding: 60px 40px;
 
 			@media all and (max-width: 767px) {
-				padding: 25px 15px 30px 15px;
+				padding: 20px 12px 20px 12px;
 			}
 		}
 	}
@@ -193,7 +193,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 10px;
+		gap: 20px;
 		margin-top: 30px;
 
 
@@ -653,6 +653,7 @@
 
 		&-body {
 			padding: 40px 36px;
+
 			@media (max-width: 576px) {
 				padding: 16px
 			}
@@ -714,8 +715,11 @@
 
 		&__actions {
 			margin: 20px 0 0;
-			flex-direction: column;
 			gap: 20px;
+
+			@media all and (max-width: 576px) {
+				gap: 15px;
+			}
 
 			&--alt {
 				max-width: 320px;

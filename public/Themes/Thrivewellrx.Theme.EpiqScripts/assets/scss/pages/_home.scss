@@ -21,7 +21,7 @@
 
       @media all and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
-        padding: 40px 15px;
+        padding: 20px 12px;
         min-height: unset;
         gap: 0;
         background: none;
@@ -109,6 +109,10 @@
 
     @media all and (max-width: 992px) {
       padding: 30px 8px;
+    }
+
+    @media all and (max-width: 768px) {
+      padding: 20px 12px;
     }
   }
 
@@ -219,6 +223,7 @@
     border-radius: 10px;
 
     @media all and (max-width: 768px) {
+      padding: 20px;
       background-position: 0%;
     }
 
@@ -311,7 +316,7 @@
     border-radius: 10px;
 
     @media all and (max-width: 768px) {
-      padding: 25px 0;
+      padding: 20px 12px;
     }
   }
 
@@ -319,7 +324,7 @@
     padding: 30px;
 
     @media all and (max-width: 768px) {
-      padding: 15px;
+      padding: 0;
     }
 
     &__row {
@@ -340,8 +345,14 @@
       gap: 10px;
 
       h2 {
+        font-size: $fs-48;
+        line-height: 1;
         text-transform: capitalize;
         color: $green-lighter5;
+
+        @media all and (max-width: 768px) {
+          font-size: $fs-26;
+        }
       }
 
       p {
@@ -358,6 +369,10 @@
 
     @media all and (max-width: 992px) {
       padding: 40px 8px;
+    }
+
+    @media all and (max-width: 768px) {
+      padding: 20px;
     }
   }
 
@@ -506,9 +521,7 @@
     h2 {
       color: $cyan;
 
-      @media all and (max-width: 768px) {
-        font-size: $fs-30;
-      }
+
     }
   }
 
@@ -614,7 +627,7 @@
 
   @media all and (max-width: 768px) {
     &__wrapper {
-      padding: 50px 15px;
+      padding: 20px;
       text-align: center;
       border-radius: 15px;
     }
