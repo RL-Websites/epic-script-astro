@@ -91,6 +91,12 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 
+    @media all and (max-width: 768px) {
+      min-height: unset;
+      max-height: unset;
+      -webkit-line-clamp: unset;
+    }
+
     strong {
       font-weight: 500;
       color: $black-deep;
