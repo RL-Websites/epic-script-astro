@@ -467,15 +467,16 @@
   }
 
   &__label {
-    font-size: $fs-12;
+    font-size: $fs-14;
+    font-weight: 400;
     letter-spacing: 1.12px;
     text-transform: uppercase;
-    color: $gray-dark;
+    color: $black-deep;
   }
 
   &__value {
     font-size: $fs-18;
-    font-weight: 600;
+    font-weight: 500;
     color: $black-deep;
   }
 
