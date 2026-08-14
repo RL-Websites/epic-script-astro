@@ -72,7 +72,7 @@
 
   &__summary {
     background: rgba(2, 51, 38, 0.40);
-    border: 1px solid $primary;
+    border: 1px solid #05654E;
     border-radius: 16px;
     padding: 30px;
   }
@@ -335,8 +335,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: $green-light;
-  border: 2px dashed $green;
+  background-color: $green-lighter3;
+  border: 1px dashed $primary;
   border-radius: 16px;
   padding: 20px 24px;
 

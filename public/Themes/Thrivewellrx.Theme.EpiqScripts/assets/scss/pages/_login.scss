@@ -113,4 +113,10 @@
 
 .registration {
   padding-top: 30px;
+  @media only screen and (max-width: 768px) {
+    overflow: hidden;
+  }
+  &__wrapper {
+    padding: 0 14px
+  }
 }
