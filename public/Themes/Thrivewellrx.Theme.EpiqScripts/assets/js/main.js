@@ -974,21 +974,37 @@ function updateCard() {
 
 function closeCustomSelect($select) {
 	$select.removeClass("is-open");
-	$select.find("[data-custom-select-menu]").attr("hidden", true);
-	$select.find("[data-custom-select-trigger]").attr("aria-expanded", "false");
-	$select.find(".custom-select__option").removeClass("is-hovered");
+
+	$select
+		.find("[data-custom-select-menu]")
+		.attr("hidden", true);
+
+	$select
+		.find("[data-custom-select-trigger]")
+		.attr("aria-expanded", "false");
+
+	$select
+		.find(".custom-select__option")
+		.removeClass("is-hovered");
 }
 
 function openCustomSelect($select) {
-	$("[data-custom-select]")
+	// Close all other custom selects first
+	$("[data-custom-select].is-open")
 		.not($select)
 		.each(function () {
 			closeCustomSelect($(this));
 		});
 
 	$select.addClass("is-open");
-	$select.find("[data-custom-select-menu]").removeAttr("hidden");
-	$select.find("[data-custom-select-trigger]").attr("aria-expanded", "true");
+
+	$select
+		.find("[data-custom-select-menu]")
+		.removeAttr("hidden");
+
+	$select
+		.find("[data-custom-select-trigger]")
+		.attr("aria-expanded", "true");
 }
 
 function selectCustomOption($option) {
@@ -996,17 +1012,35 @@ function selectCustomOption($option) {
 	const value = $option.data("value");
 	const label = $.trim($option.text());
 
-	$select.find("[data-custom-select-input]").val(value).trigger("change");
-	$select.find("[data-custom-select-label]").text(label);
+	$select
+		.find("[data-custom-select-input]")
+		.val(value)
+		.trigger("change");
+
+	$select
+		.find("[data-custom-select-label]")
+		.text(label);
+
 	$select
 		.find(".custom-select__option")
 		.removeClass("is-active")
 		.attr("aria-selected", "false");
-	$option.addClass("is-active").attr("aria-selected", "true");
+
+	$option
+		.addClass("is-active")
+		.attr("aria-selected", "true");
+
 	closeCustomSelect($select);
 }
 
-$(document).on("click", "[data-custom-select-trigger]", function () {
+
+/**
+ * Open / close dropdown when trigger is clicked
+ */
+$(document).on("click", "[data-custom-select-trigger]", function (e) {
+	e.preventDefault();
+	e.stopPropagation();
+
 	const $select = $(this).closest("[data-custom-select]");
 
 	if ($select.hasClass("is-open")) {
@@ -1016,6 +1050,10 @@ $(document).on("click", "[data-custom-select-trigger]", function () {
 	}
 });
 
+
+/**
+ * Option mouse enter
+ */
 $(document).on(
 	"mouseenter",
 	"[data-custom-select] .custom-select__option",
@@ -1024,6 +1062,10 @@ $(document).on(
 	},
 );
 
+
+/**
+ * Option mouse leave
+ */
 $(document).on(
 	"mouseleave",
 	"[data-custom-select] .custom-select__option",
@@ -1032,14 +1074,25 @@ $(document).on(
 	},
 );
 
+
+/**
+ * Select option
+ */
 $(document).on(
 	"click",
 	"[data-custom-select] .custom-select__option",
-	function () {
+	function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+
 		selectCustomOption($(this));
 	},
 );
 
+
+/**
+ * Keyboard handling
+ */
 $(document).on(
 	"keydown",
 	"[data-custom-select-trigger], [data-custom-select] .custom-select__option",
@@ -1048,28 +1101,59 @@ $(document).on(
 
 		if (e.key === "Escape") {
 			closeCustomSelect($select);
-			$select.find("[data-custom-select-trigger]").trigger("focus");
+
+			$select
+				.find("[data-custom-select-trigger]")
+				.trigger("focus");
+
 			return;
 		}
 
-		if (e.key !== "Enter" && e.key !== " ") return;
+		if (e.key !== "Enter" && e.key !== " ") {
+			return;
+		}
 
 		e.preventDefault();
 
 		if ($(this).is("[data-custom-select-trigger]")) {
+
+			if ($select.hasClass("is-open")) {
+				closeCustomSelect($select);
+				return;
+			}
+
 			openCustomSelect($select);
-			$select.find(".custom-select__option").first().trigger("focus");
+
+			$select
+				.find(".custom-select__option")
+				.first()
+				.trigger("focus");
+
 		} else {
+
 			selectCustomOption($(this));
-			$select.find("[data-custom-select-trigger]").trigger("focus");
+
+			$select
+				.find("[data-custom-select-trigger]")
+				.trigger("focus");
 		}
 	},
 );
 
-$(document).on("click", function (e) {
-	if ($(e.target).closest("[data-custom-select]").length) return;
 
-	$("[data-custom-select]").each(function () {
+/**
+ * Close dropdown when clicking anywhere outside
+ */
+$(document).on("click", function (e) {
+	const $target = $(e.target);
+
+	// User clicked inside custom select
+	if ($target.closest("[data-custom-select]").length) {
+		return;
+	}
+
+	// Close only currently opened custom selects
+	$("[data-custom-select].is-open").each(function () {
 		closeCustomSelect($(this));
 	});
 });
